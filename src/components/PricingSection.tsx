@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 import { MagneticButton } from "./MagneticButton";
 
 const plans = [
@@ -92,9 +93,10 @@ export const PricingSection = () => {
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="text-xs uppercase tracking-wider px-4 py-1.5 rounded-full bg-primary text-primary-foreground font-medium">
-                    Most Popular
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium shadow-lg">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    Best Value
                   </span>
                 </div>
               )}
