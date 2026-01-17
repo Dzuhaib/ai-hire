@@ -3,22 +3,16 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote: "Our AI Employee handles 80% of customer enquiries now. We've saved countless hours and our customers love the instant responses.",
-    name: "Sarah Mitchell",
-    role: "Owner, The Garden Kitchen",
     industry: "Restaurant",
     location: "Manchester",
   },
   {
     quote: "Setup was incredibly simple. Within 24 hours we had an AI handling property viewings and capturing leads around the clock.",
-    name: "James Patterson",
-    role: "Director, Patterson Properties",
     industry: "Real Estate",
     location: "London",
   },
   {
     quote: "Best investment we've made this year. Our conversion rate increased by 35% since adding the AI Employee to our online store.",
-    name: "Emma Thompson",
-    role: "Founder, Bloom & Co",
     industry: "E-commerce",
     location: "Bristol",
   },
@@ -56,7 +50,7 @@ export const TestimonialsSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
-              key={testimonial.name}
+              key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -82,13 +76,9 @@ export const TestimonialsSection = () => {
                 "{testimonial.quote}"
               </blockquote>
 
-              {/* Author */}
+              {/* Industry & Location */}
               <div className="border-t border-border pt-6">
-                <p className="font-serif font-semibold">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonial.role}
-                </p>
-                <p className="text-xs text-primary mt-1">
+                <p className="text-sm text-primary">
                   {testimonial.industry} • {testimonial.location}
                 </p>
               </div>
