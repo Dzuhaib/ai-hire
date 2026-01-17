@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Choose Your Industry",
-    description: "Select from restaurants, real estate, or e-commerce.",
+    title: "Subscribe to a Plan",
+    description: "Choose the plan that fits your business needs.",
   },
   {
     number: "02",
-    title: "Rent Your AI Employee",
-    description: "Pick a plan that fits your business needs.",
+    title: "Share Your Website Access",
+    description: "Provide your website login details securely.",
   },
   {
     number: "03",
-    title: "Go Live in Minutes",
-    description: "Deploy instantly. No developers needed.",
+    title: "We Install It For You",
+    description: "Our team sets up your AI Employee within 24 hours.",
   },
 ];
 
