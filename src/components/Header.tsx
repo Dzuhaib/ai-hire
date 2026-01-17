@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { MagneticButton } from "./MagneticButton";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 
 const navItems = [
   { label: "Industries", href: "#industries" },
@@ -8,9 +16,12 @@ const navItems = [
 ];
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
   };
 
   return (
@@ -31,6 +42,7 @@ export const Header = () => {
             <span className="text-foreground">Employee</span>
           </motion.a>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
@@ -43,12 +55,52 @@ export const Header = () => {
             ))}
           </nav>
 
+          {/* Desktop CTA */}
           <MagneticButton
-            className="btn-primary text-xs"
+            className="btn-primary text-xs hidden md:flex"
             onClick={() => scrollToSection("#pricing")}
           >
             Rent an AI Employee
           </MagneticButton>
+
+          {/* Mobile Menu */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <button
+                className="p-2 text-foreground hover:text-primary transition-colors"
+                aria-label="Open menu"
+              >
+                <Menu className="h-6 w-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] bg-background/95 backdrop-blur-xl border-l border-border/50">
+              <div className="flex flex-col h-full pt-8">
+                <nav className="flex flex-col gap-6">
+                  {navItems.map((item) => (
+                    <SheetClose asChild key={item.label}>
+                      <button
+                        onClick={() => scrollToSection(item.href)}
+                        className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors text-left"
+                      >
+                        {item.label}
+                      </button>
+                    </SheetClose>
+                  ))}
+                </nav>
+                
+                <div className="mt-auto pb-8">
+                  <SheetClose asChild>
+                    <button
+                      onClick={() => scrollToSection("#pricing")}
+                      className="btn-primary w-full text-center"
+                    >
+                      Rent an AI Employee
+                    </button>
+                  </SheetClose>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </motion.header>
