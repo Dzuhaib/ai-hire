@@ -63,8 +63,9 @@ export const Header = () => {
             className="flex items-center gap-2 text-xl font-serif font-semibold tracking-tight"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-              <Bot className="w-4 h-4 text-primary" />
+            <div className="relative w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-lg bg-primary/20 animate-pulse" />
+              <Bot className="w-4 h-4 text-primary relative z-10" />
             </div>
             <span>
               <span className="text-gradient">AI</span>
