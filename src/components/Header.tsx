@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Menu, Bot } from "lucide-react";
 import { MagneticButton } from "./MagneticButton";
 import {
   Sheet,
@@ -60,11 +60,16 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           <motion.a
             href="/"
-            className="text-xl font-serif font-semibold tracking-tight"
+            className="flex items-center gap-2 text-xl font-serif font-semibold tracking-tight"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="text-gradient">AI</span>
-            <span className="text-foreground">Employee</span>
+            <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+              <Bot className="w-4 h-4 text-primary" />
+            </div>
+            <span>
+              <span className="text-gradient">AI</span>
+              <span className="text-foreground">Employee</span>
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}
