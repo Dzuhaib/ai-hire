@@ -4,7 +4,7 @@ import { MagneticButton } from "./MagneticButton";
 const plans = [
   {
     name: "Starter",
-    price: "£30",
+    price: "£29",
     description: "For small businesses getting started",
     features: [
       "Up to 500 conversations/mo",
@@ -15,7 +15,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "£70",
+    price: "£79",
     description: "For growing businesses",
     features: [
       "Up to 2,500 conversations/mo",
@@ -27,7 +27,7 @@ const plans = [
   },
   {
     name: "Business",
-    price: "£150",
+    price: "£149",
     description: "For established businesses",
     features: [
       "Unlimited conversations",
