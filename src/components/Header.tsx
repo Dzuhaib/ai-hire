@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { MagneticButton } from "./MagneticButton";
 import {
   Sheet,
@@ -8,6 +8,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "Industries", href: "#industries" },
@@ -17,6 +18,30 @@ const navItems = [
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => item.href.substring(1));
+      const scrollPosition = window.scrollY + 150;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(`#${sectionId}`);
+            return;
+          }
+        }
+      }
+      setActiveSection("");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -48,7 +73,12 @@ export const Header = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="magnetic-link text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className={cn(
+                  "magnetic-link text-sm transition-colors",
+                  activeSection === item.href
+                    ? "text-primary font-medium"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
               >
                 {item.label}
               </button>
@@ -80,7 +110,12 @@ export const Header = () => {
                     <SheetClose asChild key={item.label}>
                       <button
                         onClick={() => scrollToSection(item.href)}
-                        className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors text-left"
+                        className={cn(
+                          "text-lg font-medium transition-colors text-left",
+                          activeSection === item.href
+                            ? "text-primary"
+                            : "text-muted-foreground hover:text-foreground"
+                        )}
                       >
                         {item.label}
                       </button>
