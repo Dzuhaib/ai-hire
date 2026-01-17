@@ -88,13 +88,13 @@ export const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-              className={`card-premium p-8 relative ${
-                plan.popular ? "border-primary/50" : ""
+              className={`card-premium relative ${
+                plan.popular ? "border-primary/50 pt-12 p-8" : "p-8"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium shadow-lg">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium shadow-lg whitespace-nowrap">
                     <Sparkles className="w-3.5 h-3.5" />
                     Best Value
                   </span>
