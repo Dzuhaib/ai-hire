@@ -4,10 +4,9 @@ import { MagneticButton } from "./MagneticButton";
 const plans = [
   {
     name: "Starter",
-    price: "£99",
+    price: "£30",
     description: "For small businesses getting started",
     features: [
-      "1 AI Employee",
       "Up to 500 conversations/mo",
       "Basic customisation",
       "Email support",
@@ -16,10 +15,9 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "£249",
+    price: "£70",
     description: "For growing businesses",
     features: [
-      "3 AI Employees",
       "Up to 2,500 conversations/mo",
       "Full customisation",
       "Priority support",
@@ -29,10 +27,9 @@ const plans = [
   },
   {
     name: "Business",
-    price: "£499",
+    price: "£150",
     description: "For established businesses",
     features: [
-      "Unlimited AI Employees",
       "Unlimited conversations",
       "White-label solution",
       "Dedicated account manager",
