@@ -101,6 +101,23 @@
     background-clip: text;
   }
 
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 3s ease infinite;
+  }
+
   .card-premium {
     @apply relative overflow-hidden rounded-2xl border border-border/50 transition-all duration-500;
     background: hsl(var(--card));
