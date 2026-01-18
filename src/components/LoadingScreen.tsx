@@ -29,7 +29,7 @@ export const LoadingScreen = () => {
             <div className="absolute inset-0 rounded-2xl bg-primary/20 animate-pulse" />
             <Bot className="w-7 h-7 text-primary relative z-10" />
           </div>
-          <span className="text-3xl font-serif font-semibold tracking-tight text-gradient">aivized</span>
+          <span className="text-3xl font-serif font-semibold tracking-tight text-gradient">AI Vized</span>
         </motion.div>
 
         {/* Loading indicator */}
