@@ -17,8 +17,8 @@ export const Footer = () => {
                 <Bot className="w-4 h-4 text-primary relative z-10" />
               </div>
               <span>
-                <span className="text-gradient">AI</span>
-                <span className="text-foreground">Employee</span>
+                <span className="text-gradient">Rentlized</span>
+                <span className="text-foreground">AI</span>
               </span>
             </a>
             <span className="text-sm text-muted-foreground">
@@ -38,7 +38,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/30 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} AIEmployee. All rights reserved.
+            © {new Date().getFullYear()} RentlizedAI. All rights reserved.
           </p>
         </div>
       </div>
