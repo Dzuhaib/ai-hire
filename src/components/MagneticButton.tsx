@@ -1,14 +1,15 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useRef, MouseEvent, ReactNode } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useRef, MouseEvent, ReactNode, CSSProperties } from "react";
 
 interface MagneticButtonProps {
   children: ReactNode;
   className?: string;
+  style?: CSSProperties;
   onClick?: () => void;
   disabled?: boolean;
 }
 
-export const MagneticButton = ({ children, className = "", onClick, disabled = false }: MagneticButtonProps) => {
+export const MagneticButton = ({ children, className = "", style, onClick, disabled = false }: MagneticButtonProps) => {
   const ref = useRef<HTMLButtonElement>(null);
   
   const x = useMotionValue(0);
@@ -37,7 +38,7 @@ export const MagneticButton = ({ children, className = "", onClick, disabled = f
     <motion.button
       ref={ref}
       className={`${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
-      style={{ x: xSpring, y: ySpring }}
+      style={{ ...style, x: xSpring, y: ySpring }}
       onMouseMove={disabled ? undefined : handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={disabled ? undefined : onClick}
