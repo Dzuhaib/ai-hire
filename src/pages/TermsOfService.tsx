@@ -35,14 +35,14 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">1. Agreement to Terms</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  By accessing or using aivized's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
+                  By accessing or using AI Vized's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">2. Description of Service</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  aivized provides AI-powered customer service automation solutions for UK businesses. Our platform includes chatbot services, analytics, and integration capabilities designed to enhance your customer engagement.
+                  AI Vized provides AI-powered customer service automation solutions for UK businesses. Our platform includes chatbot services, analytics, and integration capabilities designed to enhance your customer engagement.
                 </p>
               </section>
 
@@ -91,7 +91,7 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">6. Intellectual Property</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  All content, features, and functionality of our services are owned by aivized and protected by UK and international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written consent.
+                  All content, features, and functionality of our services are owned by AI Vized and protected by UK and international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written consent.
                 </p>
               </section>
 
@@ -112,7 +112,7 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">9. Limitation of Liability</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  To the maximum extent permitted by law, aivized shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you in the 12 months preceding the claim.
+                  To the maximum extent permitted by law, AI Vized shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you in the 12 months preceding the claim.
                 </p>
               </section>
 
@@ -144,7 +144,7 @@ const TermsOfService = () => {
                 </p>
                 <p className="text-muted-foreground mt-4">
                   <strong>Email:</strong> legal@aivized.com<br />
-                  <strong>Address:</strong> aivized, United Kingdom
+                  <strong>Address:</strong> AI Vized, United Kingdom
                 </p>
               </section>
             </div>
