@@ -183,7 +183,7 @@ export const IndustriesSection = () => {
                       </div>
                       
                       <div className="flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span>Get Started</span>
+                        <span>Rent Now</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -213,7 +213,7 @@ export const IndustriesSection = () => {
               className="btn-primary text-sm px-6 py-3 whitespace-nowrap"
               onClick={() => scrollToSection("#pricing")}
             >
-              Change That Today
+              Rent Your AI Colleague
               <ArrowRight className="w-4 h-4 ml-2 inline-block" />
             </MagneticButton>
           </div>

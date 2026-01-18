@@ -235,7 +235,7 @@ export const PricingSection = () => {
                           Processing...
                         </span>
                       ) : (
-                        plan.popular ? "Get Started Now" : "Choose Plan"
+                        plan.popular ? "Rent Now" : "Rent This Plan"
                       )}
                     </MagneticButton>
                   </div>

@@ -47,7 +47,7 @@ export const FinalCTASection = () => {
               className="btn-primary text-sm px-12 py-6"
               onClick={() => scrollToSection("#pricing")}
             >
-              Get Started with RentlizedAI
+              Rent Your AI Colleague Now
             </MagneticButton>
           </motion.div>
         </div>
