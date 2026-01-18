@@ -79,7 +79,7 @@ export const PricingSection = () => {
     }
     
     await initiatePayment({
-      planName: `RentlizedAI ${planName}`,
+      planName: `aivized ${planName}`,
       priceAmount,
     });
   };

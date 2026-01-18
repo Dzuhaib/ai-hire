@@ -70,7 +70,7 @@ const handler = async (req: Request): Promise<Response> => {
       "type": "PRODUCT",
       "qty": "1",
       "tangible": "0",
-      "return-url": `${req.headers.get("origin") || "https://rentlizedai.com"}/payment-success`,
+      "return-url": `${req.headers.get("origin") || "https://aivized.com"}/payment-success`,
       "return-type": "redirect",
       "signature": signatureHex,
       "recurring-name": `${planName} Monthly Subscription`,

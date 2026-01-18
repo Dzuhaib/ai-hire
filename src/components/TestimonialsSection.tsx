@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    quote: "Our RentlizedAI handles 80% of customer enquiries now. We've saved countless hours and our customers love the instant responses.",
+    quote: "Our aivized handles 80% of customer enquiries now. We've saved countless hours and our customers love the instant responses.",
     industry: "Restaurant",
     location: "Manchester",
   },
   {
-    quote: "Setup was incredibly simple. Within 24 hours we had RentlizedAI handling property viewings and capturing leads around the clock.",
+    quote: "Setup was incredibly simple. Within 24 hours we had aivized handling property viewings and capturing leads around the clock.",
     industry: "Real Estate",
     location: "London",
   },
   {
-    quote: "Best investment we've made this year. Our conversion rate increased by 35% since adding RentlizedAI to our online store.",
+    quote: "Best investment we've made this year. Our conversion rate increased by 35% since adding aivized to our online store.",
     industry: "E-commerce",
     location: "Bristol",
   },

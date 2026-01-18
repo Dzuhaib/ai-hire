@@ -43,10 +43,7 @@ const AuthPage = () => {
               <div className="absolute inset-0 rounded-xl bg-primary/20 animate-pulse" />
               <Bot className="w-5 h-5 text-primary relative z-10" />
             </div>
-            <span className="text-2xl font-serif font-semibold tracking-tight">
-              <span className="text-gradient">Rentlized</span>
-              <span className="text-foreground">AI</span>
-            </span>
+            <span className="text-2xl font-serif font-semibold tracking-tight text-gradient">aivized</span>
           </Link>
 
         {/* Auth Component */}
@@ -63,8 +60,8 @@ const AuthPage = () => {
               </h1>
               <p className="text-sm text-muted-foreground">
                 {isSignUp 
-                  ? "Start automating your business with RentlizedAI" 
-                  : "Sign in to manage your RentlizedAI dashboard"}
+                  ? "Start automating your business with aivized" 
+                  : "Sign in to manage your aivized dashboard"}
               </p>
             </div>
 
