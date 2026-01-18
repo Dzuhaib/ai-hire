@@ -18,7 +18,7 @@ export const Footer = () => {
                 <div className="absolute inset-0 rounded-lg bg-primary/20 animate-pulse" />
                 <Bot className="w-4 h-4 text-primary relative z-10" />
               </div>
-              <span className="text-gradient font-semibold">aivized</span>
+              <span className="text-gradient font-semibold">AI Vized</span>
             </Link>
             <span className="text-sm text-muted-foreground">
               Built for UK businesses
