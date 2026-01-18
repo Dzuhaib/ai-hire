@@ -1,1 +1,4 @@
 project_id = "pszvkwtfkqjhafvxttjo"
+
+[functions.create-2checkout-session]
+verify_jwt = false

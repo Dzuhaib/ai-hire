@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Loader2 } from "lucide-react";
 import { MagneticButton } from "./MagneticButton";
+import { use2CheckoutPayment } from "@/hooks/use2CheckoutPayment";
 
 const plans = [
   {
     name: "Starter",
     price: "£29",
+    priceAmount: 29,
     description: "For small businesses getting started",
     features: [
       "Up to 500 conversations/mo",
@@ -17,6 +19,7 @@ const plans = [
   {
     name: "Professional",
     price: "£79",
+    priceAmount: 79,
     description: "For growing businesses",
     features: [
       "Up to 2,500 conversations/mo",
@@ -29,6 +32,7 @@ const plans = [
   {
     name: "Business",
     price: "£149",
+    priceAmount: 149,
     description: "For established businesses",
     features: [
       "Unlimited conversations",
@@ -42,6 +46,15 @@ const plans = [
 ];
 
 export const PricingSection = () => {
+  const { initiatePayment, isLoading } = use2CheckoutPayment();
+
+  const handleSubscribe = async (planName: string, priceAmount: number) => {
+    await initiatePayment({
+      planName: `RentMyAI ${planName}`,
+      priceAmount,
+    });
+  };
+
   return (
     <section id="pricing" className="section-padding relative overflow-hidden">
       {/* Background glow */}
@@ -144,8 +157,17 @@ export const PricingSection = () => {
                     ? "btn-primary"
                     : "border border-border hover:border-primary/50 hover:bg-secondary"
                 }`}
+                onClick={() => handleSubscribe(plan.name, plan.priceAmount)}
+                disabled={isLoading}
               >
-                Rent This AI
+                {isLoading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Processing...
+                  </span>
+                ) : (
+                  "Rent This AI"
+                )}
               </MagneticButton>
             </motion.div>
           ))}
