@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "How does the setup process work?",
     answer:
-      "It's simple. After you subscribe to a plan, you'll securely share your website login details with us. Our team then installs and configures your aivized within 24 hours. No technical knowledge required from your side.",
+      "It's simple. After you subscribe to a plan, you'll securely share your website login details with us. Our team then installs and configures your AI Vized within 24 hours. No technical knowledge required from your side.",
   },
   {
     question: "Is my website login information secure?",
@@ -18,9 +18,9 @@ const faqs = [
       "Absolutely. We use bank-level encryption to store your credentials. Our team only accesses your website during the installation process, and you can change your password immediately after setup if you prefer.",
   },
   {
-    question: "How does aivized actually work?",
+    question: "How does AI Vized actually work?",
     answer:
-      "Your aivized is trained specifically for your industry. It understands customer queries, provides accurate responses, captures leads, and handles common tasks 24/7. It learns from your business information to give personalised, relevant answers.",
+      "Your AI Vized is trained specifically for your industry. It understands customer queries, provides accurate responses, captures leads, and handles common tasks 24/7. It learns from your business information to give personalised, relevant answers.",
   },
   {
     question: "Can I customise what the AI says?",
@@ -28,9 +28,9 @@ const faqs = [
       "Yes. You can provide specific information about your business, set the tone of voice, and define how the AI should respond to different types of enquiries. We'll help you configure everything during setup.",
   },
   {
-    question: "What happens if aivized can't answer a question?",
+    question: "What happens if AI Vized can't answer a question?",
     answer:
-      "When your aivized encounters a question it can't confidently answer, it will capture the customer's details and escalate to you via email. You never lose a potential lead.",
+      "When your AI Vized encounters a question it can't confidently answer, it will capture the customer's details and escalate to you via email. You never lose a potential lead.",
   },
   {
     question: "Can I cancel my subscription anytime?",
