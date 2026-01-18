@@ -76,17 +76,25 @@ const AdminDashboard = () => {
     if (!user) return;
     
     try {
+      console.log('Checking admin status for user:', user.id);
       const { data, error } = await supabase.functions.invoke('admin', {
         body: { action: 'check_admin', clerkUserId: user.id }
       });
 
-      if (error) throw error;
+      console.log('Admin check response:', data, error);
+
+      if (error) {
+        console.error('Admin check error:', error);
+        throw error;
+      }
       
-      if (!data.isAdmin) {
+      if (!data?.isAdmin) {
+        console.log('User is not admin, redirecting to dashboard');
         navigate("/dashboard");
         return;
       }
       
+      console.log('User is admin, loading data');
       setIsAdmin(true);
       await loadData();
     } catch (error) {
