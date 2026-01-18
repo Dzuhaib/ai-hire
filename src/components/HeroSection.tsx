@@ -16,7 +16,7 @@ export const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 md:pt-32 lg:pt-36">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
       
@@ -176,7 +176,7 @@ export const HeroSection = () => {
             <div className="hidden sm:block w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-primary" />
-              <span>Setup in 5 minutes</span>
+              <span>Available 24 hours</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
