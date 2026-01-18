@@ -16,10 +16,23 @@ import {
   DollarSign,
   CheckCircle,
   XCircle,
-  Clock
+  Clock,
+  Trash2,
+  AlertTriangle
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { 
+  AlertDialog, 
+  AlertDialogAction, 
+  AlertDialogCancel, 
+  AlertDialogContent, 
+  AlertDialogDescription, 
+  AlertDialogFooter, 
+  AlertDialogHeader, 
+  AlertDialogTitle 
+} from "@/components/ui/alert-dialog";
+import { toast } from "sonner";
 
 interface UserProfile {
   id: string;
@@ -60,6 +73,9 @@ const AdminDashboard = () => {
   const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
   const [activeTab, setActiveTab] = useState("overview");
+  const [terminateDialogOpen, setTerminateDialogOpen] = useState(false);
+  const [userToTerminate, setUserToTerminate] = useState<UserProfile | null>(null);
+  const [terminating, setTerminating] = useState(false);
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -127,6 +143,43 @@ const AdminDashboard = () => {
     } catch (error) {
       console.error('Load data error:', error);
     }
+  };
+
+  const handleTerminateUser = async () => {
+    if (!user || !userToTerminate) return;
+    
+    setTerminating(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('admin', {
+        body: { 
+          action: 'terminate_user', 
+          clerkUserId: user.id,
+          targetUserId: userToTerminate.clerk_user_id
+        }
+      });
+
+      if (error) throw error;
+      
+      if (data?.success) {
+        toast.success('User terminated successfully');
+        setUsers(users.filter(u => u.clerk_user_id !== userToTerminate.clerk_user_id));
+        await loadData(); // Refresh stats
+      } else {
+        throw new Error(data?.error || 'Failed to terminate user');
+      }
+    } catch (error) {
+      console.error('Terminate user error:', error);
+      toast.error('Failed to terminate user');
+    } finally {
+      setTerminating(false);
+      setTerminateDialogOpen(false);
+      setUserToTerminate(null);
+    }
+  };
+
+  const openTerminateDialog = (profile: UserProfile) => {
+    setUserToTerminate(profile);
+    setTerminateDialogOpen(true);
   };
 
   const getStatusBadge = (status: string) => {
@@ -329,6 +382,7 @@ const AdminDashboard = () => {
                         <th className="text-left p-4 text-sm font-medium text-muted-foreground">Email</th>
                         <th className="text-left p-4 text-sm font-medium text-muted-foreground">Roles</th>
                         <th className="text-left p-4 text-sm font-medium text-muted-foreground">Joined</th>
+                        <th className="text-left p-4 text-sm font-medium text-muted-foreground">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -371,6 +425,19 @@ const AdminDashboard = () => {
                               <Calendar className="w-4 h-4" />
                               {new Date(profile.created_at).toLocaleDateString()}
                             </div>
+                          </td>
+                          <td className="p-4">
+                            {!profile.roles.includes('admin') ? (
+                              <button
+                                onClick={() => openTerminateDialog(profile)}
+                                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-colors text-sm"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                                Terminate
+                              </button>
+                            ) : (
+                              <span className="text-xs text-muted-foreground">Protected</span>
+                            )}
                           </td>
                         </tr>
                       ))}
@@ -430,6 +497,44 @@ const AdminDashboard = () => {
           </Tabs>
         </motion.div>
       </main>
+
+      {/* Terminate User Dialog */}
+      <AlertDialog open={terminateDialogOpen} onOpenChange={setTerminateDialogOpen}>
+        <AlertDialogContent className="bg-card border-border">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2 text-red-400">
+              <AlertTriangle className="w-5 h-5" />
+              Terminate User
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-muted-foreground">
+              Are you sure you want to terminate <span className="font-semibold text-foreground">{userToTerminate?.email}</span>? 
+              This will permanently delete their account, subscriptions, and all associated data. This action cannot be undone.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="bg-secondary border-border hover:bg-secondary/80">
+              Cancel
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleTerminateUser}
+              disabled={terminating}
+              className="bg-red-500 hover:bg-red-600 text-white"
+            >
+              {terminating ? (
+                <span className="flex items-center gap-2">
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Terminating...
+                </span>
+              ) : (
+                <span className="flex items-center gap-2">
+                  <Trash2 className="w-4 h-4" />
+                  Terminate User
+                </span>
+              )}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };

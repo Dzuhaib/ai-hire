@@ -6,8 +6,9 @@ const corsHeaders = {
 };
 
 interface AdminRequest {
-  action: 'get_users' | 'get_subscriptions' | 'check_admin' | 'get_stats';
+  action: 'get_users' | 'get_subscriptions' | 'check_admin' | 'get_stats' | 'terminate_user';
   clerkUserId?: string;
+  targetUserId?: string;
 }
 
 Deno.serve(async (req) => {
@@ -22,7 +23,7 @@ Deno.serve(async (req) => {
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     
-    const { action, clerkUserId }: AdminRequest = await req.json();
+    const { action, clerkUserId, targetUserId }: AdminRequest = await req.json();
     
     console.log(`Admin action: ${action}, clerkUserId: ${clerkUserId}`);
     
@@ -139,6 +140,73 @@ Deno.serve(async (req) => {
               monthlyRevenue: totalRevenue
             }
           }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+      
+      case 'terminate_user': {
+        if (!targetUserId) {
+          return new Response(
+            JSON.stringify({ error: 'Target user ID required' }),
+            { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
+        
+        // Prevent admin from terminating themselves
+        if (targetUserId === clerkUserId) {
+          return new Response(
+            JSON.stringify({ error: 'Cannot terminate your own account' }),
+            { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
+        
+        console.log('Terminating user:', targetUserId);
+        
+        // Delete user's subscriptions
+        const { error: subsError } = await supabase
+          .from('subscriptions')
+          .delete()
+          .eq('clerk_user_id', targetUserId);
+        
+        if (subsError) {
+          console.error('Delete subscriptions error:', subsError);
+        }
+        
+        // Delete user's billing history
+        const { error: billingError } = await supabase
+          .from('billing_history')
+          .delete()
+          .eq('clerk_user_id', targetUserId);
+        
+        if (billingError) {
+          console.error('Delete billing history error:', billingError);
+        }
+        
+        // Delete user's roles
+        const { error: rolesError } = await supabase
+          .from('user_roles')
+          .delete()
+          .eq('clerk_user_id', targetUserId);
+        
+        if (rolesError) {
+          console.error('Delete roles error:', rolesError);
+        }
+        
+        // Delete user's profile
+        const { error: profileError } = await supabase
+          .from('profiles')
+          .delete()
+          .eq('clerk_user_id', targetUserId);
+        
+        if (profileError) {
+          console.error('Delete profile error:', profileError);
+          throw profileError;
+        }
+        
+        console.log('User terminated successfully:', targetUserId);
+        
+        return new Response(
+          JSON.stringify({ success: true, message: 'User terminated successfully' }),
           { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
