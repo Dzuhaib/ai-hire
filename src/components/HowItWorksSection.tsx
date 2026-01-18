@@ -14,7 +14,7 @@ const steps = [
   {
     number: "03",
     title: "We Install It For You",
-    description: "Our team sets up your AI Employee within 24 hours.",
+    description: "Our team sets up your RentlizedAI within 24 hours.",
   },
 ];
 

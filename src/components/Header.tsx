@@ -115,7 +115,7 @@ export const Header = () => {
               className="btn-primary text-xs"
               onClick={() => scrollToSection("#pricing")}
             >
-              Rent an AI Employee
+              Get Started
             </MagneticButton>
           </div>
 
@@ -177,7 +177,7 @@ export const Header = () => {
                       onClick={() => scrollToSection("#pricing")}
                       className="btn-primary w-full text-center"
                     >
-                      Rent an AI Employee
+                      Get Started
                     </button>
                   </SheetClose>
                 </div>
