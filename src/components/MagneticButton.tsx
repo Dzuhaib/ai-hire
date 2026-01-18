@@ -7,9 +7,10 @@ interface MagneticButtonProps {
   style?: CSSProperties;
   onClick?: () => void;
   disabled?: boolean;
+  strength?: number;
 }
 
-export const MagneticButton = ({ children, className = "", style, onClick, disabled = false }: MagneticButtonProps) => {
+export const MagneticButton = ({ children, className = "", style, onClick, disabled = false, strength = 0.15 }: MagneticButtonProps) => {
   const ref = useRef<HTMLButtonElement>(null);
   
   const x = useMotionValue(0);
@@ -25,8 +26,8 @@ export const MagneticButton = ({ children, className = "", style, onClick, disab
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
     
-    x.set((e.clientX - centerX) * 0.15);
-    y.set((e.clientY - centerY) * 0.15);
+    x.set((e.clientX - centerX) * strength);
+    y.set((e.clientY - centerY) * strength);
   };
 
   const handleMouseLeave = () => {

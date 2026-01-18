@@ -130,6 +130,7 @@ export const IndustriesSection = () => {
               <MagneticButton
                 className="w-full text-left h-full"
                 onClick={() => scrollToSection("#pricing")}
+                strength={0.075}
               >
                 <div className="relative h-full p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/50 overflow-hidden transition-all duration-500 group-hover:border-primary/30 group-hover:shadow-2xl group-hover:shadow-primary/10">
                   {/* Gradient overlay */}
