@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">1. Introduction</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  aivized ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered customer service platform and related services.
+                  AI Vized ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered customer service platform and related services.
                 </p>
               </section>
 
@@ -118,8 +118,8 @@ const PrivacyPolicy = () => {
                   If you have questions about this Privacy Policy or our data practices, please contact us at:
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  <strong>Email:</strong> privacy@aivized.com<br />
-                  <strong>Address:</strong> aivized, United Kingdom
+                  <strong>Email:</strong> contact@aivized.com<br />
+                  <strong>Address:</strong> AI Vized, United Kingdom
                 </p>
               </section>
             </div>
