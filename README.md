@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+# Aivized
 
-## Project info
+**Hire AI That Works 24/7 — Premium On‑Demand AI Services**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Aivized is a SaaS platform that enables businesses to access and deploy advanced artificial intelligence solutions on demand. Designed for UK and global enterprise use, Aivized lets companies integrate powerful AI services — including conversational AI, automation workflows, and intelligent assistants — without owning or maintaining AI infrastructure.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Overview
 
-**Use Lovable**
+Aivized provides a scalable, flexible approach to leveraging AI:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **24/7 On‑Demand AI Access:** Rent AI capabilities when needed, without long‑term contracts.  
+- **Conversational Interfaces:** Deploy AI‑powered chat solutions for customer support, engagement, and automation.  
+- **Enterprise‑Grade Reliability:** Built for UK businesses and global clients with high performance, security, and compliance.  
+- **Usage‑Based Pricing:** Pay only for what you use — ideal for startups, SMEs, and large enterprises.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📌 Key Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **AI Chat & Conversational Engines**  
+  Deploy intelligent chat systems customizable for industry‑specific use cases.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Automation & Workflow Integration**  
+  Integrate AI into business processes — support tickets, data processing, task orchestration.
 
-Follow these steps:
+- **Scalable Architecture**  
+  Handle spikes in demand with cloud‑ready infrastructure and elastic resource allocation.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Analytics & Insights**  
+  Track performance, engagement, and usage metrics to optimize AI deployments.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Secure & GDPR Compliant**  
+  Designed with data protection and privacy in mind, suitable for UK, EU, and international standards.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🧠 Getting Started
 
-**Edit a file directly in GitHub**
+To build or contribute to the Aivized platform:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Requirements
 
-**Use GitHub Codespaces**
+- Node.js (v16+)  
+- Docker (for local development & services)  
+- Environment variables setup (API keys, service endpoints, secrets)  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Install Dependencies
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+npm install
