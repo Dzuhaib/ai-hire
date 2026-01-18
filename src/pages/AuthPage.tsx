@@ -1,11 +1,13 @@
 import { SignIn, SignUp, useUser } from "@clerk/clerk-react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Bot } from "lucide-react";
 
 const AuthPage = () => {
-  const [isSignUp, setIsSignUp] = useState(false);
+  const [searchParams] = useSearchParams();
+  const initialMode = searchParams.get("mode") === "signup";
+  const [isSignUp, setIsSignUp] = useState(initialMode);
   const { isSignedIn, isLoaded } = useUser();
   const navigate = useNavigate();
 
@@ -38,6 +40,7 @@ const AuthPage = () => {
         <div className="card-premium p-8">
           {isSignUp ? (
             <SignUp
+              routing="virtual"
               appearance={{
                 elements: {
                   rootBox: "w-full",
@@ -52,10 +55,12 @@ const AuthPage = () => {
                   identityPreviewEditButton: "text-primary",
                 },
               }}
-              redirectUrl="/dashboard"
+              signInUrl="/auth"
+              afterSignUpUrl="/dashboard"
             />
           ) : (
             <SignIn
+              routing="virtual"
               appearance={{
                 elements: {
                   rootBox: "w-full",
@@ -70,7 +75,8 @@ const AuthPage = () => {
                   identityPreviewEditButton: "text-primary",
                 },
               }}
-              redirectUrl="/dashboard"
+              signUpUrl="/auth?mode=signup"
+              afterSignInUrl="/dashboard"
             />
           )}
 
