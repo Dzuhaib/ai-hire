@@ -35,7 +35,7 @@ export const SolutionSection = () => {
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-8"
             >
               Replace Missed Opportunities With{" "}
-              <span className="text-gradient">aivized</span>
+              <span className="text-gradient">AI Vized</span>
             </motion.h2>
 
             <div className="space-y-5">
