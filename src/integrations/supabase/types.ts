@@ -14,7 +14,143 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      billing_history: {
+        Row: {
+          amount: number
+          clerk_user_id: string
+          created_at: string
+          currency: string
+          description: string
+          id: string
+          paid_at: string | null
+          status: string
+          subscription_id: string | null
+          twocheckout_ref: string | null
+        }
+        Insert: {
+          amount: number
+          clerk_user_id: string
+          created_at?: string
+          currency?: string
+          description: string
+          id?: string
+          paid_at?: string | null
+          status?: string
+          subscription_id?: string | null
+          twocheckout_ref?: string | null
+        }
+        Update: {
+          amount?: number
+          clerk_user_id?: string
+          created_at?: string
+          currency?: string
+          description?: string
+          id?: string
+          paid_at?: string | null
+          status?: string
+          subscription_id?: string | null
+          twocheckout_ref?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "billing_history_clerk_user_id_fkey"
+            columns: ["clerk_user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["clerk_user_id"]
+          },
+          {
+            foreignKeyName: "billing_history_subscription_id_fkey"
+            columns: ["subscription_id"]
+            isOneToOne: false
+            referencedRelation: "subscriptions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          bio: string | null
+          clerk_user_id: string
+          created_at: string
+          email: string
+          full_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          bio?: string | null
+          clerk_user_id: string
+          created_at?: string
+          email: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          bio?: string | null
+          clerk_user_id?: string
+          created_at?: string
+          email?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      subscriptions: {
+        Row: {
+          cancelled_at: string | null
+          clerk_user_id: string
+          created_at: string
+          expires_at: string | null
+          id: string
+          plan_name: string
+          plan_price: number
+          started_at: string
+          status: string
+          twocheckout_order_ref: string | null
+          updated_at: string
+        }
+        Insert: {
+          cancelled_at?: string | null
+          clerk_user_id: string
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          plan_name: string
+          plan_price: number
+          started_at?: string
+          status?: string
+          twocheckout_order_ref?: string | null
+          updated_at?: string
+        }
+        Update: {
+          cancelled_at?: string | null
+          clerk_user_id?: string
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          plan_name?: string
+          plan_price?: number
+          started_at?: string
+          status?: string
+          twocheckout_order_ref?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "subscriptions_clerk_user_id_fkey"
+            columns: ["clerk_user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["clerk_user_id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, Bot } from "lucide-react";
+import { Menu, Bot, User, LogIn } from "lucide-react";
+import { useUser, SignedIn, SignedOut } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
 import {
   Sheet,
@@ -91,13 +93,31 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <MagneticButton
-            className="btn-primary text-xs hidden md:flex"
-            onClick={() => scrollToSection("#pricing")}
-          >
-            Rent an AI Employee
-          </MagneticButton>
+          {/* Desktop Auth/CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <SignedIn>
+              <Link to="/dashboard">
+                <MagneticButton className="flex items-center gap-2 px-4 py-2 text-sm border border-border rounded-lg hover:border-primary/50 hover:bg-secondary transition-all">
+                  <User className="w-4 h-4" />
+                  Dashboard
+                </MagneticButton>
+              </Link>
+            </SignedIn>
+            <SignedOut>
+              <Link to="/auth">
+                <MagneticButton className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <LogIn className="w-4 h-4" />
+                  Sign In
+                </MagneticButton>
+              </Link>
+            </SignedOut>
+            <MagneticButton
+              className="btn-primary text-xs"
+              onClick={() => scrollToSection("#pricing")}
+            >
+              Rent an AI Employee
+            </MagneticButton>
+          </div>
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -129,7 +149,29 @@ export const Header = () => {
                   ))}
                 </nav>
                 
-                <div className="mt-auto pb-8">
+                <div className="mt-auto pb-8 space-y-3">
+                  <SignedIn>
+                    <SheetClose asChild>
+                      <Link
+                        to="/dashboard"
+                        className="flex items-center gap-2 w-full p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                      >
+                        <User className="w-5 h-5 text-primary" />
+                        <span className="font-medium">Dashboard</span>
+                      </Link>
+                    </SheetClose>
+                  </SignedIn>
+                  <SignedOut>
+                    <SheetClose asChild>
+                      <Link
+                        to="/auth"
+                        className="flex items-center gap-2 w-full p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                      >
+                        <LogIn className="w-5 h-5 text-primary" />
+                        <span className="font-medium">Sign In</span>
+                      </Link>
+                    </SheetClose>
+                  </SignedOut>
                   <SheetClose asChild>
                     <button
                       onClick={() => scrollToSection("#pricing")}
