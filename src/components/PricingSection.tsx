@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Sparkles, Loader2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
 import { use2CheckoutPayment } from "@/hooks/use2CheckoutPayment";
+import { toast } from "sonner";
 
 const plans = [
   {
@@ -46,9 +48,16 @@ const plans = [
 ];
 
 export const PricingSection = () => {
-  const { initiatePayment, isLoading } = use2CheckoutPayment();
+  const { initiatePayment, isLoading, isSignedIn } = use2CheckoutPayment();
+  const navigate = useNavigate();
 
   const handleSubscribe = async (planName: string, priceAmount: number) => {
+    if (!isSignedIn) {
+      toast.info("Please sign in to subscribe");
+      navigate("/auth");
+      return;
+    }
+    
     await initiatePayment({
       planName: `RentMyAI ${planName}`,
       priceAmount,
