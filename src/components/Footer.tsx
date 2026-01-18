@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Bot } from "lucide-react";
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   return (
     <motion.footer
@@ -11,7 +13,7 @@ export const Footer = () => {
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">
-            <a href="/" className="flex items-center gap-2 text-lg font-serif font-semibold">
+            <Link to="/" className="flex items-center gap-2 text-lg font-serif font-semibold">
               <div className="relative w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                 <div className="absolute inset-0 rounded-lg bg-primary/20 animate-pulse" />
                 <Bot className="w-4 h-4 text-primary relative z-10" />
@@ -20,19 +22,19 @@ export const Footer = () => {
                 <span className="text-gradient">Rentlized</span>
                 <span className="text-foreground">AI</span>
               </span>
-            </a>
+            </Link>
             <span className="text-sm text-muted-foreground">
               Built for UK businesses
             </span>
           </div>
 
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="hover:text-foreground transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -8,6 +8,8 @@ import Dashboard from "@/pages/Dashboard";
 import AuthPage from "@/pages/AuthPage";
 import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
 import AdminDashboard from "@/pages/AdminDashboard";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
 import { LoadingScreen } from "@/components/LoadingScreen";
 
 const ClerkProviderWithNavigation = ({ children }: { children: React.ReactNode }) => {
@@ -43,6 +45,8 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ClerkProviderWithNavigation>
