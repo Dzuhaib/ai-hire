@@ -70,8 +70,8 @@ export const Header = () => {
               <Bot className="w-4 h-4 text-primary relative z-10" />
             </div>
             <span>
-              <span className="text-gradient">AI</span>
-              <span className="text-foreground">Employee</span>
+              <span className="text-gradient">Rentlized</span>
+              <span className="text-foreground">AI</span>
             </span>
           </motion.a>
 
