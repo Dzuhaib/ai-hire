@@ -44,7 +44,18 @@ export const HowItWorksSection = () => {
           </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 relative">
+          {/* Connecting lines */}
+          <div className="hidden md:flex absolute top-8 left-0 right-0 items-center justify-center pointer-events-none">
+            <div className="w-full max-w-[calc(100%-4rem)] mx-auto flex">
+              <div className="flex-1" />
+              <div className="w-[calc(33.333%-2rem)] h-px bg-gradient-to-r from-primary/30 to-primary/10" />
+              <div className="w-16" />
+              <div className="w-[calc(33.333%-2rem)] h-px bg-gradient-to-r from-primary/30 to-primary/10" />
+              <div className="flex-1" />
+            </div>
+          </div>
+
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -52,12 +63,8 @@ export const HowItWorksSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.15 }}
-              className="relative"
+              className="relative text-center md:text-left"
             >
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-border to-transparent" />
-              )}
-              
               <div className="text-5xl font-serif text-primary/20 mb-4">
                 {step.number}
               </div>
