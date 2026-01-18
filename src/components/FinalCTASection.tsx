@@ -23,7 +23,7 @@ export const FinalCTASection = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
           >
-            Your AI Employee Is{" "}
+            Your RentlizedAI Is{" "}
             <span className="text-gradient">Ready to Work</span>
           </motion.h2>
 
@@ -47,7 +47,7 @@ export const FinalCTASection = () => {
               className="btn-primary text-sm px-12 py-6"
               onClick={() => scrollToSection("#pricing")}
             >
-              Rent an AI Employee Now
+              Get Started with RentlizedAI
             </MagneticButton>
           </motion.div>
         </div>

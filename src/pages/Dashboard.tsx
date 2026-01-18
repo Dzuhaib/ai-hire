@@ -148,12 +148,13 @@ const Dashboard = () => {
           <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
               <Link to="/" className="flex items-center gap-2">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-primary/30 rounded-full blur-md animate-pulse" />
-                  <Bot className="w-6 h-6 text-primary relative z-10" />
+                <div className="relative w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <div className="absolute inset-0 rounded-lg bg-primary/20 animate-pulse" />
+                  <Bot className="w-4 h-4 text-primary relative z-10" />
                 </div>
                 <span className="text-lg font-serif font-semibold tracking-tight">
-                  Rent<span className="text-primary">My</span>AI
+                  <span className="text-gradient">Rentlized</span>
+                  <span className="text-foreground">AI</span>
                 </span>
               </Link>
 

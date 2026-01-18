@@ -1,6 +1,6 @@
 import { SignIn, SignUp, useUser } from "@clerk/clerk-react";
 import { useState, useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Bot } from "lucide-react";
 
@@ -51,8 +51,8 @@ const AuthPage = () => {
               </h1>
               <p className="text-sm text-muted-foreground">
                 {isSignUp 
-                  ? "Start automating your business with AI employees" 
-                  : "Sign in to manage your AI employees"}
+                  ? "Start automating your business with RentlizedAI" 
+                  : "Sign in to manage your RentlizedAI dashboard"}
               </p>
             </div>
 
@@ -126,7 +126,18 @@ const AuthPage = () => {
               />
             )}
 
-            <div className="mt-8 pt-6 border-t border-border/50 text-center">
+            {!isSignUp && (
+              <div className="mt-4 text-center">
+                <Link
+                  to="/forgot-password"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Forgot your password?
+                </Link>
+              </div>
+            )}
+
+            <div className="mt-6 pt-6 border-t border-border/50 text-center">
               <button
                 onClick={() => setIsSignUp(!isSignUp)}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"

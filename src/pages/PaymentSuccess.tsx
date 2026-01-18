@@ -147,7 +147,7 @@ const PaymentSuccess = () => {
               transition={{ delay: 0.4 }}
               className="text-muted-foreground mb-8"
             >
-              Thank you for subscribing to RentMyAI. Your AI assistant is now ready to transform your customer service.
+              Thank you for subscribing to RentlizedAI. Your AI assistant is now ready to transform your customer service.
             </motion.p>
 
             {orderRef && (

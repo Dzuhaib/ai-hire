@@ -31,7 +31,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="text-sm uppercase tracking-[0.2em] text-primary mb-6"
           >
-            AI Employees on Rent — Not Chatbots
+            RentlizedAI — Not Just Chatbots
           </motion.p>
 
           <motion.h1
@@ -66,7 +66,7 @@ export const HeroSection = () => {
               className="btn-primary text-sm px-10 py-5"
               onClick={() => scrollToSection("#pricing")}
             >
-              Rent an AI Employee Now
+              Get Started with RentlizedAI
             </MagneticButton>
             
             <button
