@@ -2,7 +2,7 @@ import { SignIn, SignUp, useUser } from "@clerk/clerk-react";
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Bot } from "lucide-react";
+import { Bot, ArrowLeft } from "lucide-react";
 
 const AuthPage = () => {
   const [searchParams] = useSearchParams();
@@ -18,24 +18,36 @@ const AuthPage = () => {
   }, [isSignedIn, isLoaded, navigate]);
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="w-full max-w-md"
-      >
-        {/* Logo */}
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="relative w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-xl bg-primary/20 animate-pulse" />
-            <Bot className="w-5 h-5 text-primary relative z-10" />
-          </div>
-          <span className="text-2xl font-serif font-semibold tracking-tight">
-            <span className="text-gradient">Rentlized</span>
-            <span className="text-foreground">AI</span>
-          </span>
-        </div>
+    <div className="min-h-screen bg-background flex flex-col">
+      {/* Back Navigation */}
+      <div className="p-6">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm">Back to Home</span>
+        </Link>
+      </div>
+
+      <div className="flex-1 flex items-center justify-center px-4 pb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full max-w-md"
+        >
+          {/* Logo */}
+          <Link to="/" className="flex items-center justify-center gap-3 mb-8 hover:opacity-80 transition-opacity">
+            <div className="relative w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-xl bg-primary/20 animate-pulse" />
+              <Bot className="w-5 h-5 text-primary relative z-10" />
+            </div>
+            <span className="text-2xl font-serif font-semibold tracking-tight">
+              <span className="text-gradient">Rentlized</span>
+              <span className="text-foreground">AI</span>
+            </span>
+          </Link>
 
         {/* Auth Component */}
         <div className="card-premium p-8 relative overflow-hidden">
@@ -152,7 +164,8 @@ const AuthPage = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
