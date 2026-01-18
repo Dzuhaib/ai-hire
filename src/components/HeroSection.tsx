@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { MagneticButton } from "./MagneticButton";
 import { Sparkles, Zap, Clock, TrendingUp } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const HeroSection = () => {
+  const isMobile = useIsMobile();
+  
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -20,28 +23,46 @@ export const HeroSection = () => {
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
       
-      {/* Animated orbs */}
-      <motion.div
-        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)" }}
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(circle, hsl(var(--accent) / 0.15) 0%, transparent 70%)" }}
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      />
+      {/* Animated orbs - simplified on mobile for performance */}
+      {!isMobile && (
+        <>
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-3xl"
+            style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)" }}
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-3xl"
+            style={{ background: "radial-gradient(circle, hsl(var(--accent) / 0.15) 0%, transparent 70%)" }}
+            animate={{
+              scale: [1.2, 1, 1.2],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          />
+        </>
+      )}
+      
+      {/* Static orbs for mobile - no animation, reduced blur */}
+      {isMobile && (
+        <>
+          <div 
+            className="absolute top-1/4 left-1/4 w-[300px] h-[300px] rounded-full blur-2xl opacity-30"
+            style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)" }}
+          />
+          <div 
+            className="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] rounded-full blur-2xl opacity-30"
+            style={{ background: "radial-gradient(circle, hsl(var(--accent) / 0.15) 0%, transparent 70%)" }}
+          />
+        </>
+      )}
 
-      {/* Floating particles */}
-      {[...Array(20)].map((_, i) => (
+      {/* Floating particles - only on desktop */}
+      {!isMobile && [...Array(10)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 rounded-full bg-primary/30"

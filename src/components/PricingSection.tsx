@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
 import { use2CheckoutPayment } from "@/hooks/use2CheckoutPayment";
 import { toast } from "sonner";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const plans = [
   {
@@ -68,6 +69,7 @@ const guarantees = [
 export const PricingSection = () => {
   const { initiatePayment, isLoading, isSignedIn } = use2CheckoutPayment();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const handleSubscribe = async (planName: string, priceAmount: number) => {
     if (!isSignedIn) {
@@ -86,18 +88,31 @@ export const PricingSection = () => {
     <section id="pricing" className="section-padding relative overflow-hidden">
       {/* Premium background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl animate-glow-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-violet-500/5 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "-1.5s" }} />
       
-      {/* Grid pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.015]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
-        }}
-      />
+      {/* Glow orbs - static on mobile for performance */}
+      {!isMobile ? (
+        <>
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl animate-glow-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-violet-500/5 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "-1.5s" }} />
+        </>
+      ) : (
+        <>
+          <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] bg-primary/5 rounded-full blur-2xl opacity-50" />
+          <div className="absolute bottom-1/4 right-1/4 w-[200px] h-[200px] bg-violet-500/5 rounded-full blur-2xl opacity-50" />
+        </>
+      )}
+      
+      {/* Grid pattern - only on desktop */}
+      {!isMobile && (
+        <div 
+          className="absolute inset-0 opacity-[0.015]"
+          style={{
+            backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
+                             linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px',
+          }}
+        />
+      )}
 
       <div className="container-narrow relative z-10">
         {/* Section Header */}
