@@ -271,7 +271,7 @@ const Dashboard = () => {
                         </p>
                         <Link to="/#pricing">
                           <MagneticButton className="btn-primary px-6 py-3 rounded-lg">
-                            View Plans
+                            Rent a Plan
                           </MagneticButton>
                         </Link>
                       </div>
