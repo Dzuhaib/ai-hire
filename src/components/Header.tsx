@@ -69,10 +69,7 @@ export const Header = () => {
               <div className="absolute inset-0 rounded-lg bg-primary/20 animate-pulse" />
               <Bot className="w-4 h-4 text-primary relative z-10" />
             </div>
-            <span>
-              <span className="text-gradient">Rentlized</span>
-              <span className="text-foreground">AI</span>
-            </span>
+            <span className="text-gradient font-semibold">aivized</span>
           </motion.a>
 
           {/* Desktop Navigation */}

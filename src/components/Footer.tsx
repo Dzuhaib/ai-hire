@@ -18,10 +18,7 @@ export const Footer = () => {
                 <div className="absolute inset-0 rounded-lg bg-primary/20 animate-pulse" />
                 <Bot className="w-4 h-4 text-primary relative z-10" />
               </div>
-              <span>
-                <span className="text-gradient">Rentlized</span>
-                <span className="text-foreground">AI</span>
-              </span>
+              <span className="text-gradient font-semibold">aivized</span>
             </Link>
             <span className="text-sm text-muted-foreground">
               Built for UK businesses
@@ -40,7 +37,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/30 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} RentlizedAI. All rights reserved.
+            © {new Date().getFullYear()} aivized. All rights reserved.
           </p>
         </div>
       </div>

@@ -152,10 +152,7 @@ const Dashboard = () => {
                   <div className="absolute inset-0 rounded-lg bg-primary/20 animate-pulse" />
                   <Bot className="w-4 h-4 text-primary relative z-10" />
                 </div>
-                <span className="text-lg font-serif font-semibold tracking-tight">
-                  <span className="text-gradient">Rentlized</span>
-                  <span className="text-foreground">AI</span>
-                </span>
+                <span className="text-lg font-serif font-semibold tracking-tight text-gradient">aivized</span>
               </Link>
 
               <div className="flex items-center gap-4">

@@ -35,7 +35,7 @@ export const SolutionSection = () => {
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-8"
             >
               Replace Missed Opportunities With{" "}
-              <span className="text-gradient">RentlizedAI</span>
+              <span className="text-gradient">aivized</span>
             </motion.h2>
 
             <div className="space-y-5">
@@ -71,7 +71,7 @@ export const SolutionSection = () => {
                   </svg>
                 </div>
                 <p className="text-2xl font-serif text-foreground">
-                  "Your RentlizedAI assistant is ready to take over."
+                  "Your aivized assistant is ready to take over."
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
                   <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />

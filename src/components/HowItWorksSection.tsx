@@ -23,7 +23,7 @@ const steps = [
   {
     number: "03",
     title: "We Install It For You",
-    description: "Our team sets up your RentlizedAI within 24 hours. No technical knowledge required.",
+    description: "Our team sets up your aivized within 24 hours. No technical knowledge required.",
     icon: Rocket,
     gradient: "from-teal-500/20 to-emerald-500/20",
     iconColor: "text-teal-400",

@@ -304,10 +304,7 @@ const ForgotPasswordPage = () => {
             <div className="absolute inset-0 rounded-xl bg-primary/20 animate-pulse" />
             <Bot className="w-5 h-5 text-primary relative z-10" />
           </div>
-          <span className="text-2xl font-serif font-semibold tracking-tight">
-            <span className="text-gradient">Rentlized</span>
-            <span className="text-foreground">AI</span>
-          </span>
+          <span className="text-2xl font-serif font-semibold tracking-tight text-gradient">aivized</span>
         </div>
 
         {/* Card */}
