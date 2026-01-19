@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Loader2, Check, Zap, Crown, Rocket, Shield, Clock, Headphones } from "lucide-react";
+import { Sparkles, Loader2, Check, Zap, Crown, Rocket, Shield, Clock, Headphones, Building2, MessageSquare } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
 import { use2CheckoutPayment } from "@/hooks/use2CheckoutPayment";
@@ -259,6 +259,75 @@ export const PricingSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Enterprise / Custom Development Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 mb-16"
+        >
+          <div className="relative group">
+            {/* Animated gradient border */}
+            <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-amber-500/30 via-orange-500/20 to-amber-500/30 opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            <div className="relative bg-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 lg:p-12 group-hover:border-transparent transition-all duration-500">
+              {/* Background gradient on hover */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                {/* Icon & Title */}
+                <div className="flex-shrink-0 text-center lg:text-left">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/30 flex items-center justify-center mx-auto lg:mx-0 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Building2 className="w-8 h-8 text-amber-500" />
+                  </div>
+                  <h3 className="text-2xl font-serif font-semibold mb-2">Enterprise & Custom Solutions</h3>
+                  <p className="text-muted-foreground max-w-md">
+                    Need something tailored specifically for your business? We build custom AI solutions from scratch.
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div className="flex-1 grid sm:grid-cols-2 gap-4">
+                  {[
+                    "Bespoke AI development",
+                    "Custom integrations",
+                    "On-premise deployment",
+                    "Dedicated development team",
+                    "Full source code ownership",
+                    "Ongoing maintenance & support",
+                  ].map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-amber-500" />
+                      </div>
+                      <span className="text-sm text-foreground/90">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <div className="flex-shrink-0">
+                  <MagneticButton
+                    className="px-8 py-4 rounded-xl font-semibold text-sm bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all duration-300"
+                    onClick={() => {
+                      window.location.href = "mailto:enterprise@aivized.com?subject=Custom%20AI%20Development%20Inquiry";
+                    }}
+                  >
+                    <span className="flex items-center gap-2">
+                      <MessageSquare className="w-4 h-4" />
+                      Contact Us
+                    </span>
+                  </MagneticButton>
+                  <p className="text-xs text-muted-foreground mt-3 text-center">
+                    Get a quote within 24 hours
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Guarantees */}
         <motion.div
