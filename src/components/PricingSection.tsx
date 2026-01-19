@@ -312,7 +312,7 @@ export const PricingSection = () => {
                   <MagneticButton
                     className="px-8 py-4 rounded-xl font-semibold text-sm bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all duration-300"
                     onClick={() => {
-                      window.location.href = "mailto:enterprise@aivized.com?subject=Custom%20AI%20Development%20Inquiry";
+                      window.location.href = "mailto:myselfzuhaib@gmail.com?subject=Custom%20AI%20Development%20Inquiry";
                     }}
                   >
                     <span className="flex items-center gap-2">
