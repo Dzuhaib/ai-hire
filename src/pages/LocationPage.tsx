@@ -1,19 +1,53 @@
 import { useParams, Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { MapPin, CheckCircle, ArrowRight, Phone, Mail, Clock, Zap, Users, TrendingUp, Shield, Bot } from "lucide-react";
+import { MapPin, CheckCircle, ArrowRight, Phone, Mail, Clock, Zap, Users, TrendingUp, Shield, Bot, Headphones, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getLocationBySlug, ukLocations } from "@/data/locationData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import NotFound from "./NotFound";
-import aiAssistantHero from "@/assets/ai-assistant-hero.png";
+
+// City-specific AI assistant images
+import aiLondon from "@/assets/locations/ai-london.png";
+import aiManchester from "@/assets/locations/ai-manchester.png";
+import aiBirmingham from "@/assets/locations/ai-birmingham.png";
+import aiLeeds from "@/assets/locations/ai-leeds.png";
+import aiLiverpool from "@/assets/locations/ai-liverpool.png";
+import aiBristol from "@/assets/locations/ai-bristol.png";
+import aiGlasgow from "@/assets/locations/ai-glasgow.png";
+import aiEdinburgh from "@/assets/locations/ai-edinburgh.png";
+import aiSheffield from "@/assets/locations/ai-sheffield.png";
+import aiNewcastle from "@/assets/locations/ai-newcastle.png";
+
+// Section images
+import aiSupport from "@/assets/locations/ai-support.png";
+import aiTeam from "@/assets/locations/ai-team.png";
+
+const cityImages: Record<string, string> = {
+  london: aiLondon,
+  manchester: aiManchester,
+  birmingham: aiBirmingham,
+  leeds: aiLeeds,
+  liverpool: aiLiverpool,
+  bristol: aiBristol,
+  glasgow: aiGlasgow,
+  edinburgh: aiEdinburgh,
+  sheffield: aiSheffield,
+  newcastle: aiNewcastle,
+};
 
 const LocationPage = () => {
   const { city } = useParams<{ city: string }>();
   const { pathname } = useLocation();
   const location = city ? getLocationBySlug(city) : undefined;
+  
+  // Get city-specific hero image
+  const heroImage = useMemo(() => {
+    if (!city) return aiLondon;
+    return cityImages[city] || aiLondon;
+  }, [city]);
 
   // Scroll to top on route change
   useEffect(() => {
@@ -208,7 +242,7 @@ const LocationPage = () => {
                 {/* Image container */}
                 <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-card/30 backdrop-blur-sm shadow-2xl">
                   <img
-                    src={aiAssistantHero}
+                    src={heroImage}
                     alt={`AI Employee for ${location.city} businesses - realistic humanoid AI assistant`}
                     className="w-full max-w-md object-cover"
                     loading="eager"
@@ -301,51 +335,81 @@ const LocationPage = () => {
       {/* Why Choose Us Section */}
       <section className="section-padding">
         <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Why AI Vized</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Why {location.city} Businesses Choose Us
-            </h2>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative order-2 lg:order-1"
+            >
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-3xl blur-2xl opacity-50" />
+                <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
+                  <img
+                    src={aiTeam}
+                    alt="AI team supporting your business"
+                    className="w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-xl bg-card/90 backdrop-blur-sm border border-primary/20">
+                    <MessageCircle className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">Your dedicated AI workforce</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {location.whyChooseUs.map((reason, idx) => (
+            {/* Content Column */}
+            <div className="order-1 lg:order-2">
               <motion.div
-                key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="flex items-start gap-3 p-4 rounded-xl bg-card/50 border border-border/50"
+                className="mb-8"
               >
-                <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm">{reason}</span>
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Why AI Vized</p>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                  Why {location.city} Businesses Choose Us
+                </h2>
               </motion.div>
-            ))}
-          </div>
 
-          {/* Trust badges */}
-          <div className="flex flex-wrap justify-center gap-8 mt-12 pt-8 border-t border-border/50">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Shield className="w-5 h-5 text-primary" />
-              <span>GDPR Compliant</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Clock className="w-5 h-5 text-primary" />
-              <span>24-Hour Setup</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Users className="w-5 h-5 text-primary" />
-              <span>UK Support Team</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              <span>30% More Leads</span>
+              <div className="space-y-4">
+                {location.whyChooseUs.map((reason, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex items-start gap-3 p-4 rounded-xl bg-card/50 border border-border/50"
+                  >
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-sm">{reason}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Trust badges */}
+              <div className="flex flex-wrap gap-4 mt-8 pt-6 border-t border-border/50">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Shield className="w-5 h-5 text-primary" />
+                  <span>GDPR Compliant</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Clock className="w-5 h-5 text-primary" />
+                  <span>24-Hour Setup</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Users className="w-5 h-5 text-primary" />
+                  <span>UK Support Team</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                  <span>30% More Leads</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -354,35 +418,65 @@ const LocationPage = () => {
       {/* Service Coverage Section */}
       <section className="section-padding bg-muted/30">
         <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Areas We Serve</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              AI Employee Coverage in {location.city}
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              We serve businesses across {location.city} and the wider {location.region} area. Whether you're in the city centre or surrounding neighbourhoods, our AI employees are ready to help.
-            </p>
-          </motion.div>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {location.serviceAreas.map((area, idx) => (
-              <motion.span
-                key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content Column */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.03 }}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-card border border-border/50 text-sm"
+                className="mb-8"
               >
-                <MapPin className="w-3 h-3 text-primary" />
-                {area}
-              </motion.span>
-            ))}
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Areas We Serve</p>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                  AI Employee Coverage in {location.city}
+                </h2>
+                <p className="text-muted-foreground mt-4">
+                  We serve businesses across {location.city} and the wider {location.region} area. Whether you're in the city centre or surrounding neighbourhoods, our AI employees are ready to help.
+                </p>
+              </motion.div>
+
+              <div className="flex flex-wrap gap-2">
+                {location.serviceAreas.map((area, idx) => (
+                  <motion.span
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.03 }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-card border border-border/50 text-sm"
+                  >
+                    <MapPin className="w-3 h-3 text-primary" />
+                    {area}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-tr from-accent/20 via-transparent to-primary/20 rounded-3xl blur-2xl opacity-50" />
+                <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
+                  <img
+                    src={aiSupport}
+                    alt="AI customer support assistant for your business"
+                    className="w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-xl bg-card/90 backdrop-blur-sm border border-primary/20">
+                    <Headphones className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">Supporting {location.city} businesses 24/7</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
