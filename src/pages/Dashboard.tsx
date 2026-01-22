@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { MagneticButton } from "@/components/MagneticButton";
+import { PageMeta } from "@/components/PageMeta";
 
 interface Subscription {
   id: string;
@@ -143,6 +144,12 @@ const Dashboard = () => {
   return (
     <>
       <SignedIn>
+        <PageMeta
+          title="Dashboard | AI Vized - Manage Your AI Employees"
+          description="Your AI Vized dashboard. Monitor AI employee performance, manage subscriptions, view billing history, and optimize your customer service automation."
+          keywords="AI Vized dashboard, AI employee management, chatbot analytics, subscription management, AI performance metrics"
+          canonical="https://aivized.com/dashboard"
+        />
         <div className="min-h-screen bg-background">
           {/* Header */}
           <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
