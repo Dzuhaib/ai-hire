@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MagneticButton } from "./MagneticButton";
 import { Sparkles, Zap, Clock, TrendingUp } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import aiAssistantHero from "@/assets/ai-assistant-hero.png";
 
 export const HeroSection = () => {
   const isMobile = useIsMobile();
@@ -20,6 +21,17 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 md:pt-32 lg:pt-36">
+      {/* AI Assistant Hero Background Image */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-20 md:opacity-30 pointer-events-none">
+        <img 
+          src={aiAssistantHero} 
+          alt="" 
+          className="w-full h-full object-contain object-right"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-background/50 to-background" />
+      </div>
+      
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
       
