@@ -146,10 +146,10 @@ const LocationPage = () => {
         "offers": {
           "@type": "Offer",
           "priceCurrency": "GBP",
-          "price": "149",
+          "price": "29",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "149",
+            "price": "29",
             "priceCurrency": "GBP",
             "unitText": "month"
           }
@@ -634,7 +634,7 @@ const LocationPage = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-primary" />
-                From £149/month
+                From £29/month
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-primary" />
