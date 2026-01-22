@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { Crown, Zap } from "lucide-react";
+import { motion, useReducedMotion, type Easing } from "framer-motion";
+import { Crown, Zap, MessageCircle } from "lucide-react";
 import { TierVideo } from "@/components/TierVideo";
 import aiSilver from "@/assets/ai-silver.mp4";
 import aiGold from "@/assets/ai-gold.mp4";
@@ -21,6 +21,7 @@ const tiers = [
     borderColor: "border-slate-400/30",
     glowColor: "shadow-slate-400/20",
     description: "Perfect for small businesses getting started with AI",
+    chatBubble: "How can I help you today?",
   },
   {
     name: "Gold",
@@ -33,6 +34,7 @@ const tiers = [
     glowColor: "shadow-amber-400/20",
     description: "For growing businesses needing advanced capabilities",
     popular: true,
+    chatBubble: "I'll handle your leads 24/7!",
   },
   {
     name: "Platinum",
@@ -44,6 +46,7 @@ const tiers = [
     borderColor: "border-cyan-400/30",
     glowColor: "shadow-cyan-400/20",
     description: "Enterprise-grade AI for established businesses",
+    chatBubble: "Let me boost your conversions.",
   },
   {
     name: "Diamond",
@@ -55,13 +58,43 @@ const tiers = [
     borderColor: "border-violet-400/30",
     glowColor: "shadow-violet-400/20",
     description: "Bespoke AI solutions tailored to your needs",
+    chatBubble: "Your dedicated AI partner.",
   },
 ];
 
+// Reduced-motion safe animation variants
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.1 },
+  }),
+};
+
+const bubbleVariants = {
+  hidden: { opacity: 0, scale: 0.8, y: 10 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.4, delay: 0.3 },
+  },
+};
+
+const floatVariants = {
+  float: {
+    y: [0, -6, 0],
+    transition: { duration: 3, repeat: Infinity, ease: "easeInOut" as Easing },
+  },
+};
+
 export const AITiersSection = () => {
+  const prefersReducedMotion = useReducedMotion();
+  
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
   };
 
   return (
@@ -72,7 +105,7 @@ export const AITiersSection = () => {
       <div className="container-narrow relative z-10">
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={prefersReducedMotion ? undefined : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -83,7 +116,7 @@ export const AITiersSection = () => {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? undefined : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -93,7 +126,7 @@ export const AITiersSection = () => {
           </motion.h2>
           
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={prefersReducedMotion ? undefined : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -107,10 +140,11 @@ export const AITiersSection = () => {
           {tiers.map((tier, index) => (
             <motion.div
               key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={index}
+              initial={prefersReducedMotion ? undefined : "hidden"}
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              variants={cardVariants}
               className={`relative group cursor-pointer ${tier.popular ? 'lg:-mt-4 lg:mb-4' : ''}`}
               onClick={() => scrollToSection("#pricing")}
             >
@@ -128,7 +162,7 @@ export const AITiersSection = () => {
                 <div className={`absolute -inset-1 bg-gradient-to-b ${tier.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
                 
                 <div className="relative p-6">
-                  {/* Video */}
+                  {/* Video with floating chat bubble */}
                   <div className="relative mb-4 rounded-2xl overflow-hidden aspect-square">
                     <TierVideo
                       src={tier.video}
@@ -136,6 +170,18 @@ export const AITiersSection = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-t ${tier.color} opacity-10 pointer-events-none`} />
+                    
+                    {/* Floating chat bubble */}
+                    <motion.div
+                      initial={prefersReducedMotion ? undefined : bubbleVariants.hidden}
+                      whileInView={bubbleVariants.visible}
+                      animate={prefersReducedMotion ? undefined : floatVariants.float}
+                      viewport={{ once: true }}
+                      className="absolute bottom-3 left-3 right-3 flex items-center gap-2 px-3 py-2 rounded-xl bg-card/90 backdrop-blur-sm border border-primary/20 shadow-lg"
+                    >
+                      <MessageCircle className="w-4 h-4 text-primary shrink-0" />
+                      <span className="text-xs font-medium truncate">{tier.chatBubble}</span>
+                    </motion.div>
                   </div>
                   
                   {/* Tier badge */}
