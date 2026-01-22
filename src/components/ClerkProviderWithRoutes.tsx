@@ -11,6 +11,7 @@ import AdminDashboard from "@/pages/AdminDashboard";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import LocationPage from "@/pages/LocationPage";
+import LocationsPage from "@/pages/LocationsPage";
 import IndustryPage from "@/pages/IndustryPage";
 import { LoadingScreen } from "@/components/LoadingScreen";
 
@@ -50,6 +51,7 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* Location pages for local SEO */}
+          <Route path="/locations" element={<LocationsPage />} />
           <Route path="/locations/:city" element={<LocationPage />} />
           {/* Industry-specific landing pages */}
           <Route path="/restaurants" element={<IndustryPage />} />

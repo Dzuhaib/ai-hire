@@ -33,7 +33,7 @@ export const ukLocations: LocationData[] = [
       { title: "Scaling Challenges", description: "Growing a London business means managing more customer enquiries without proportionally increasing overhead costs." }
     ],
     solutions: [
-      { title: "Cost-Effective AI Staff", description: "Our AI employees cost a fraction of a London salary—from just £149/month. No employment taxes, no sick days, no holiday pay." },
+      { title: "Cost-Effective AI Staff", description: "Our AI employees cost a fraction of a London salary—from just £29/month. No employment taxes, no sick days, no holiday pay." },
       { title: "Always-On Support", description: "Your AI assistant handles customer queries 24 hours a day, 365 days a year. Perfect for London's round-the-clock business culture." },
       { title: "Instant Response Advantage", description: "Respond to every enquiry within seconds, not hours. Beat competitors to the punch and capture leads before they move on." },
       { title: "Effortless Scaling", description: "Handle unlimited conversations simultaneously. Whether you get 10 or 10,000 enquiries, your AI employee manages them all." }
@@ -53,7 +53,7 @@ export const ukLocations: LocationData[] = [
       { question: "Can the AI handle multiple London locations?", answer: "Yes. If your business operates across multiple London locations, your AI can be trained to direct customers to the right branch and provide location-specific information." },
       { question: "What happens if a customer asks something the AI can't answer?", answer: "Your AI will capture the customer's details and escalate the enquiry to you via email. You never lose a lead—every conversation is an opportunity." },
       { question: "Do you offer on-site support in London?", answer: "Our setup and support is entirely remote, which allows us to keep costs low and pass those savings to you. However, our UK-based team is available via phone and email whenever you need assistance." },
-      { question: "How does AI Vized compare to hiring a receptionist in London?", answer: "A London receptionist costs £28,000-£35,000+ annually, works limited hours, needs holidays, and can only handle one call at a time. AI Vized costs from £149/month, works 24/7, never takes leave, and handles unlimited conversations simultaneously." }
+      { question: "How does AI Vized compare to hiring a receptionist in London?", answer: "A London receptionist costs £28,000-£35,000+ annually, works limited hours, needs holidays, and can only handle one call at a time. AI Vized costs from £29/month, works 24/7, never takes leave, and handles unlimited conversations simultaneously." }
     ],
     coordinates: { lat: 51.5074, lng: -0.1278 }
   },
@@ -113,7 +113,7 @@ export const ukLocations: LocationData[] = [
       { title: "Scaling Without Breaking the Bank", description: "Growing means handling more enquiries, but hiring proportionally more staff erodes profitability." }
     ],
     solutions: [
-      { title: "Slash Operational Costs", description: "Replace expensive staffing with AI that costs from £149/month. Reinvest savings into growing your Birmingham business." },
+      { title: "Slash Operational Costs", description: "Replace expensive staffing with AI that costs from £29/month. Reinvest savings into growing your Birmingham business." },
       { title: "Consistent Brand Experience", description: "Every customer receives the same exceptional service, every time. Your AI never has a bad day." },
       { title: "Never Miss a Lead", description: "Your AI captures enquiries 24/7, ensuring no Birmingham customer slips through the cracks." },
       { title: "Profitable Growth", description: "Scale your customer service capacity without proportionally increasing costs. More revenue, better margins." }
@@ -252,7 +252,7 @@ export const ukLocations: LocationData[] = [
       { question: "How does AI Vized help Bristol restaurants and cafes?", answer: "From Gloucester Road independents to Harbourside dining, our AI manages reservations, handles dietary enquiries, and captures customer information for marketing." },
       { question: "Can the AI represent my brand's unique Bristol personality?", answer: "Yes. We train your AI to match your specific tone of voice and brand values, ensuring it feels like a natural extension of your Bristol business." },
       { question: "Is AI Vized environmentally friendly?", answer: "Our cloud-based AI operates efficiently with minimal environmental impact. It's certainly more sustainable than daily commuting and office energy consumption." },
-      { question: "How does pricing work for Bristol startups and small businesses?", answer: "We offer plans from £149/month with no setup fees or long-term contracts. Perfect for Bristol businesses watching their runway." },
+      { question: "How does pricing work for Bristol startups and small businesses?", answer: "We offer plans from £29/month with no setup fees or long-term contracts. Perfect for Bristol businesses watching their runway." },
       { question: "Can I upgrade or downgrade my plan as my Bristol business evolves?", answer: "Absolutely. Move between plans as your needs change. We grow with your business." }
     ],
     coordinates: { lat: 51.4545, lng: -2.5879 }
@@ -275,7 +275,7 @@ export const ukLocations: LocationData[] = [
     solutions: [
       { title: "Reliable AI Staff", description: "Your AI employee shows up every day, handles every enquiry, and never calls in sick. Solve your staffing challenges permanently." },
       { title: "Surge Capacity Built In", description: "Handle matchday rushes and event peaks without panic hiring. Your AI scales instantly to meet demand." },
-      { title: "Maximum Value", description: "Get 24/7 customer service from £149/month. Unbeatable value for Glasgow businesses." },
+      { title: "Maximum Value", description: "Get 24/7 customer service from £29/month. Unbeatable value for Glasgow businesses." },
       { title: "Consistent Excellence", description: "Every customer receives the same high standard of service, protecting your Glasgow reputation." }
     ],
     whyChooseUs: [
@@ -356,7 +356,7 @@ export const ukLocations: LocationData[] = [
       { title: "Outperform the Competition", description: "Respond faster and more consistently than competitors in larger cities. Distance becomes irrelevant when service is excellent." },
       { title: "Flexible, Always-On Service", description: "Serve Sheffield's student population whenever they're active—which is often not 9-to-5." },
       { title: "Modern Customer Experience", description: "Deliver the instant, intelligent service modern customers expect from forward-thinking businesses." },
-      { title: "Exceptional Value", description: "Get premium customer service from £149/month. Quality that Sheffield customers appreciate at a price that works." }
+      { title: "Exceptional Value", description: "Get premium customer service from £29/month. Quality that Sheffield customers appreciate at a price that works." }
     ],
     whyChooseUs: [
       "Helping Sheffield businesses from independents to established enterprises",
