@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { MagneticButton } from "./MagneticButton";
 import { HeroBackground } from "./HeroBackground";
-import { Sparkles, Zap, Clock, TrendingUp, Bot, MessageCircle } from "lucide-react";
+import { Zap, Clock, TrendingUp, Bot, MessageCircle } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export const HeroSection = () => {
@@ -73,102 +73,49 @@ export const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 md:pt-32 lg:pt-36"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 md:pt-32 lg:pt-36 bg-background"
     >
-      {/* Interactive Neural Network Background */}
-      {!isMobile && !prefersReducedMotion && (
-        <HeroBackground mouseX={mousePos.x} mouseY={mousePos.y} />
-      )}
+      {/* Interactive Neural Network Background - the ONLY background effect */}
+      <HeroBackground mouseX={mousePos.x} mouseY={mousePos.y} />
 
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background/80 to-background pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-50 pointer-events-none" />
-
-      {/* Animated glow orbs that follow cursor slightly */}
-      <motion.div
-        className="absolute w-[600px] h-[600px] rounded-full blur-3xl pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, hsl(var(--primary) / 0.12) 0%, transparent 70%)",
-          left: "20%",
-          top: "20%",
-        }}
-        animate={
-          !prefersReducedMotion
-            ? {
-                x: getParallax(0.03).x,
-                y: getParallax(0.03).y,
-                scale: [1, 1.1, 1],
-                opacity: [0.4, 0.6, 0.4],
-              }
-            : {}
-        }
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute w-[500px] h-[500px] rounded-full blur-3xl pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, hsl(var(--accent) / 0.1) 0%, transparent 70%)",
-          right: "15%",
-          bottom: "25%",
-        }}
-        animate={
-          !prefersReducedMotion
-            ? {
-                x: getParallax(-0.02).x,
-                y: getParallax(-0.02).y,
-                scale: [1.1, 1, 1.1],
-                opacity: [0.3, 0.5, 0.3],
-              }
-            : {}
-        }
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      />
+      {/* Subtle top-to-bottom fade for content readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background pointer-events-none" />
 
       {/* Floating feature cards with parallax */}
       {floatingElements.map((item, index) => {
-        const parallax = getParallax(0.015 + index * 0.005);
+        const parallax = getParallax(0.02 + index * 0.008);
         return (
           <motion.div
             key={index}
-            className="absolute hidden md:flex flex-col items-center justify-center gap-1 px-4 py-3 rounded-2xl bg-card/60 backdrop-blur-md border border-primary/20 shadow-xl"
+            className="absolute hidden md:flex flex-col items-center justify-center gap-1 px-4 py-3 rounded-2xl bg-card/70 backdrop-blur-md border border-primary/30 shadow-xl shadow-primary/10"
             style={{ left: item.x, top: item.y }}
             initial={{ opacity: 0, scale: 0 }}
             animate={{
               opacity: 1,
               scale: 1,
               x: parallax.x,
-              y: prefersReducedMotion ? 0 : [parallax.y, parallax.y - 8, parallax.y],
+              y: prefersReducedMotion ? 0 : [parallax.y, parallax.y - 10, parallax.y],
             }}
             transition={{
               opacity: { delay: item.delay + 0.5, duration: 0.5 },
               scale: { delay: item.delay + 0.5, duration: 0.5, type: "spring" },
-              y: { delay: item.delay + 1, duration: 3, repeat: Infinity, ease: "easeInOut" },
-              x: { duration: 0.3, ease: "easeOut" },
+              y: { delay: item.delay + 1, duration: 4, repeat: Infinity, ease: "easeInOut" },
+              x: { duration: 0.2, ease: "easeOut" },
             }}
           >
             <item.icon className="w-5 h-5 text-primary" />
-            <span className="text-xs font-medium text-foreground/80">{item.label}</span>
+            <span className="text-xs font-medium text-foreground/90">{item.label}</span>
           </motion.div>
         );
       })}
-
-      {/* Grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.015] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: "80px 80px",
-        }}
-      />
 
       {/* Main content */}
       <div className="container-narrow relative z-10">
         <motion.div
           className="max-w-4xl mx-auto text-center"
           style={{
-            x: getParallax(0.01).x,
-            y: getParallax(0.01).y,
+            x: getParallax(0.008).x,
+            y: getParallax(0.008).y,
           }}
         >
           {/* Badge */}
@@ -176,7 +123,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-8 shadow-lg shadow-primary/5"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 backdrop-blur-sm mb-8 shadow-lg shadow-primary/10"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -195,8 +142,8 @@ export const HeroSection = () => {
             <span className="text-gradient relative">
               24/7
               <motion.span
-                className="absolute -inset-1 bg-primary/20 rounded-lg blur-lg -z-10"
-                animate={{ opacity: [0.5, 0.8, 0.5] }}
+                className="absolute -inset-2 bg-primary/25 rounded-xl blur-xl -z-10"
+                animate={{ opacity: [0.4, 0.7, 0.4] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </span>
@@ -281,9 +228,9 @@ export const HeroSection = () => {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
-      {/* Cursor spotlight effect on desktop */}
+      {/* Enhanced cursor spotlight effect */}
       {!isMobile && !prefersReducedMotion && isHovering && (
         <motion.div
           className="absolute pointer-events-none z-20"
@@ -292,11 +239,12 @@ export const HeroSection = () => {
             top: mousePos.y,
             transform: "translate(-50%, -50%)",
           }}
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
+          exit={{ opacity: 0, scale: 0.5 }}
+          transition={{ duration: 0.15 }}
         >
-          <div className="w-64 h-64 rounded-full bg-primary/5 blur-3xl" />
+          <div className="w-80 h-80 rounded-full bg-primary/8 blur-3xl" />
         </motion.div>
       )}
     </section>
