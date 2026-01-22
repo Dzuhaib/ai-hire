@@ -1,17 +1,24 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { MapPin, CheckCircle, ArrowRight, Phone, Mail, Clock, Zap, Users, TrendingUp, Shield } from "lucide-react";
+import { MapPin, CheckCircle, ArrowRight, Phone, Mail, Clock, Zap, Users, TrendingUp, Shield, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getLocationBySlug, ukLocations } from "@/data/locationData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import NotFound from "./NotFound";
+import aiAssistantHero from "@/assets/ai-assistant-hero.png";
 
 const LocationPage = () => {
   const { city } = useParams<{ city: string }>();
+  const { pathname } = useLocation();
   const location = city ? getLocationBySlug(city) : undefined;
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname]);
 
   useEffect(() => {
     if (location) {
@@ -146,44 +153,87 @@ const LocationPage = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-aura">
         <div className="container-narrow relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">{location.city}, {location.region}</span>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">{location.city}, {location.region}</span>
+              </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              {location.heroTagline}
-            </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+                {location.heroTagline}
+              </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-              {location.heroSubtext}
-            </p>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                {location.heroSubtext}
+              </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button 
-                size="lg" 
-                className="btn-primary group"
-                onClick={() => scrollToSection("#pricing-cta")}
-              >
-                Get Your AI Employee
-                <Zap className="w-4 h-4 ml-2 group-hover:animate-pulse" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => scrollToSection("#problems")}
-              >
-                See How It Works
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </motion.div>
+              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
+                <Button 
+                  size="lg" 
+                  className="btn-primary group"
+                  onClick={() => scrollToSection("#pricing-cta")}
+                >
+                  Get Your AI Employee
+                  <Zap className="w-4 h-4 ml-2 group-hover:animate-pulse" />
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => scrollToSection("#problems")}
+                >
+                  See How It Works
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* AI Assistant Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative flex justify-center"
+            >
+              <div className="relative">
+                {/* Glow effect */}
+                <div className="absolute -inset-8 bg-gradient-to-r from-primary/30 via-accent/20 to-primary/30 rounded-full blur-3xl opacity-60" />
+                
+                {/* Image container */}
+                <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-card/30 backdrop-blur-sm shadow-2xl">
+                  <img
+                    src={aiAssistantHero}
+                    alt={`AI Employee for ${location.city} businesses - realistic humanoid AI assistant`}
+                    className="w-full max-w-md object-cover"
+                    loading="eager"
+                  />
+                  
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                  
+                  {/* Floating badge */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-card/90 backdrop-blur-sm border border-primary/20 shadow-lg"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Bot className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium">Your {location.city} AI</span>
+                    </div>
+                    <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-primary font-medium">24/7 Online</span>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -404,11 +454,12 @@ const LocationPage = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {ukLocations
               .filter(loc => loc.slug !== location.slug)
-              .map((loc, idx) => (
+              .map((loc) => (
                 <Link
                   key={loc.slug}
                   to={`/locations/${loc.slug}`}
-                  className="flex items-center gap-2 p-3 rounded-xl bg-card border border-border/50 hover:border-primary/50 hover:bg-primary/1 transition-all group"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+                  className="flex items-center gap-2 p-3 rounded-xl bg-card border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all group"
                 >
                   <MapPin className="w-4 h-4 text-primary shrink-0" />
                   <span className="text-sm font-medium group-hover:text-primary transition-colors">{loc.city}</span>
