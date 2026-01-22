@@ -1,5 +1,6 @@
-import { useEffect, useRef, useCallback, useState } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 function parseHslTriplet(input: string): { h: number; s: number; l: number } | null {
   // Expected formats like: "174 72% 50%" (as stored in CSS variables)
@@ -72,27 +73,19 @@ interface HeroBackgroundProps {
 /**
  * AI Neural Network background with particles that respond to cursor movement.
  * Creates the effect of an interconnected AI brain responding to user interaction.
+ * Respects reduced motion preferences (OS, localStorage, or ?performance=low query param).
  */
 export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>(0);
   const isMobile = useIsMobile();
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const primaryRgbRef = useRef<{ r: number; g: number; b: number }>({ r: 32, g: 211, b: 195 });
 
   const particleCount = isMobile ? 60 : 120;
   const connectionDistance = isMobile ? 100 : 160;
   const mouseInfluenceRadius = 280;
-
-  // Check for reduced motion preference
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
 
   // Pull primary color from the design tokens so the canvas always matches the brand.
   useEffect(() => {

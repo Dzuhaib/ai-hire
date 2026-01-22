@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { MagneticButton } from "./MagneticButton";
 import { HeroBackground } from "./HeroBackground";
 import { Zap, Clock, TrendingUp, Bot, MessageCircle } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const HeroSection = () => {
   const isMobile = useIsMobile();
