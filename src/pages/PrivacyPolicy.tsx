@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageMeta } from "@/components/PageMeta";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageMeta
+        title="Privacy Policy | AI Vized - Data Protection & GDPR Compliance"
+        description="Learn how AI Vized protects your data. Our privacy policy covers GDPR compliance, data collection practices, and your rights as a UK business using our AI employee services."
+        keywords="AI Vized privacy policy, GDPR compliance, UK data protection, AI chatbot privacy, business data security, customer data protection"
+        canonical="https://aivized.com/privacy-policy"
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-narrow">

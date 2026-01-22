@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageMeta } from "@/components/PageMeta";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageMeta
+        title="Terms of Service | AI Vized - AI Employee Rental Agreement"
+        description="Read AI Vized's terms of service. Understand your rights and obligations when renting AI employees for your UK business, including subscription terms and service guarantees."
+        keywords="AI Vized terms of service, AI rental agreement, chatbot terms, UK business AI terms, AI employee subscription, service agreement"
+        canonical="https://aivized.com/terms-of-service"
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-narrow">

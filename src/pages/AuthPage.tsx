@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Bot, ArrowLeft } from "lucide-react";
+import { PageMeta } from "@/components/PageMeta";
 
 const AuthPage = () => {
   const [searchParams] = useSearchParams();
@@ -19,6 +20,18 @@ const AuthPage = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <PageMeta
+        title={isSignUp ? "Sign Up | AI Vized - Start Your AI Employee Trial" : "Login | AI Vized - Access Your AI Dashboard"}
+        description={isSignUp 
+          ? "Create your AI Vized account and start your free trial. Get an AI employee working for your UK business in minutes. No technical skills required."
+          : "Sign in to your AI Vized dashboard. Manage your AI employees, view analytics, and optimize your customer service automation."
+        }
+        keywords={isSignUp 
+          ? "AI Vized sign up, create AI account, AI employee trial, UK business automation signup, chatbot registration"
+          : "AI Vized login, AI dashboard access, manage AI employees, business automation login"
+        }
+        canonical={`https://aivized.com/auth${isSignUp ? "?mode=signup" : ""}`}
+      />
       {/* Back Navigation */}
       <div className="p-6">
         <Link 
