@@ -1,17 +1,16 @@
 import { motion } from "framer-motion";
 import { Crown, Zap } from "lucide-react";
-import { MagneticButton } from "./MagneticButton";
-import aiSilver from "@/assets/ai-silver.png";
-import aiGold from "@/assets/ai-gold.png";
-import aiPlatinum from "@/assets/ai-platinum.png";
-import aiDiamond from "@/assets/ai-diamond.png";
+import aiSilver from "@/assets/ai-silver.mp4";
+import aiGold from "@/assets/ai-gold.mp4";
+import aiPlatinum from "@/assets/ai-platinum.mp4";
+import aiDiamond from "@/assets/ai-diamond.mp4";
 
 const tiers = [
   {
     name: "Silver",
     tier: "Starter",
     price: "£29",
-    image: aiSilver,
+    video: aiSilver,
     color: "from-slate-400 to-slate-300",
     borderColor: "border-slate-400/30",
     glowColor: "shadow-slate-400/20",
@@ -21,7 +20,7 @@ const tiers = [
     name: "Gold",
     tier: "Professional",
     price: "£79",
-    image: aiGold,
+    video: aiGold,
     color: "from-amber-500 to-yellow-400",
     borderColor: "border-amber-400/30",
     glowColor: "shadow-amber-400/20",
@@ -32,7 +31,7 @@ const tiers = [
     name: "Platinum",
     tier: "Business",
     price: "£149",
-    image: aiPlatinum,
+    video: aiPlatinum,
     color: "from-cyan-400 to-teal-300",
     borderColor: "border-cyan-400/30",
     glowColor: "shadow-cyan-400/20",
@@ -42,7 +41,7 @@ const tiers = [
     name: "Diamond",
     tier: "Enterprise",
     price: "Custom",
-    image: aiDiamond,
+    video: aiDiamond,
     color: "from-violet-500 to-purple-400",
     borderColor: "border-violet-400/30",
     glowColor: "shadow-violet-400/20",
@@ -120,14 +119,18 @@ export const AITiersSection = () => {
                 <div className={`absolute -inset-1 bg-gradient-to-b ${tier.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
                 
                 <div className="relative p-6">
-                  {/* Image */}
+                  {/* Video */}
                   <div className="relative mb-4 rounded-2xl overflow-hidden aspect-square">
-                    <img 
-                      src={tier.image} 
-                      alt={`${tier.name} AI Assistant`}
+                    <video 
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${tier.color} opacity-10`} />
+                    >
+                      <source src={tier.video} type="video/mp4" />
+                    </video>
+                    <div className={`absolute inset-0 bg-gradient-to-t ${tier.color} opacity-10 pointer-events-none`} />
                   </div>
                   
                   {/* Tier badge */}
