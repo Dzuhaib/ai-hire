@@ -1,6 +1,60 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+function parseHslTriplet(input: string): { h: number; s: number; l: number } | null {
+  // Expected formats like: "174 72% 50%" (as stored in CSS variables)
+  const parts = input
+    .trim()
+    .split(/\s+/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+  if (parts.length < 3) return null;
+
+  const h = Number(parts[0]);
+  const s = Number(parts[1].replace("%", ""));
+  const l = Number(parts[2].replace("%", ""));
+  if ([h, s, l].some((n) => Number.isNaN(n))) return null;
+  return { h, s, l };
+}
+
+function hslToRgb(h: number, s: number, l: number): { r: number; g: number; b: number } {
+  // h: 0..360, s/l: 0..100
+  const _s = s / 100;
+  const _l = l / 100;
+  const c = (1 - Math.abs(2 * _l - 1)) * _s;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = _l - c / 2;
+  let r1 = 0,
+    g1 = 0,
+    b1 = 0;
+
+  if (h >= 0 && h < 60) {
+    r1 = c;
+    g1 = x;
+  } else if (h >= 60 && h < 120) {
+    r1 = x;
+    g1 = c;
+  } else if (h >= 120 && h < 180) {
+    g1 = c;
+    b1 = x;
+  } else if (h >= 180 && h < 240) {
+    g1 = x;
+    b1 = c;
+  } else if (h >= 240 && h < 300) {
+    r1 = x;
+    b1 = c;
+  } else {
+    r1 = c;
+    b1 = x;
+  }
+
+  return {
+    r: Math.round((r1 + m) * 255),
+    g: Math.round((g1 + m) * 255),
+    b: Math.round((b1 + m) * 255),
+  };
+}
+
 interface Particle {
   x: number;
   y: number;
@@ -25,6 +79,7 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
   const animationRef = useRef<number>(0);
   const isMobile = useIsMobile();
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const primaryRgbRef = useRef<{ r: number; g: number; b: number }>({ r: 32, g: 211, b: 195 });
 
   const particleCount = isMobile ? 60 : 120;
   const connectionDistance = isMobile ? 100 : 160;
@@ -37,6 +92,15 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
     const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  // Pull primary color from the design tokens so the canvas always matches the brand.
+  useEffect(() => {
+    const root = document.documentElement;
+    const cssPrimary = getComputedStyle(root).getPropertyValue("--primary");
+    const parsed = parseHslTriplet(cssPrimary);
+    if (!parsed) return;
+    primaryRgbRef.current = hslToRgb(parsed.h, parsed.s, parsed.l);
   }, []);
 
   const initParticles = useCallback((width: number, height: number) => {
@@ -66,6 +130,7 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
       canvas.style.width = `${rect.width}px`;
       canvas.style.height = `${rect.height}px`;
@@ -110,10 +175,7 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
     const width = rect.width;
     const height = rect.height;
 
-    // Primary color RGB (teal: 32, 211, 195)
-    const primaryR = 32;
-    const primaryG = 211;
-    const primaryB = 195;
+    const { r: primaryR, g: primaryG, b: primaryB } = primaryRgbRef.current;
 
     ctx.clearRect(0, 0, width, height);
 

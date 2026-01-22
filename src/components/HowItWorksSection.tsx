@@ -34,20 +34,9 @@ const steps = [
 export const HowItWorksSection = () => {
   return (
     <section id="how-it-works" className="section-padding relative overflow-hidden">
-      {/* Premium background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-500/5 rounded-full blur-3xl" />
-      
-      {/* Grid pattern overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.015]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
-        }}
-      />
+      {/* Aura background (no grid/squares) */}
+      <div className="absolute inset-0 bg-aura bg-aura-animate" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background pointer-events-none" />
 
       <div className="container-narrow relative z-10">
         {/* Section Header */}
