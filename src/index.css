@@ -154,6 +154,39 @@
 }
 
 @layer utilities {
+  @keyframes aura-drift {
+    0% {
+      background-position: 0% 0%, 100% 0%, 50% 100%;
+    }
+    50% {
+      background-position: 40% 20%, 60% 10%, 50% 60%;
+    }
+    100% {
+      background-position: 0% 0%, 100% 0%, 50% 100%;
+    }
+  }
+
+  /* High-performance “AI aura” backdrop (no grid/squares). */
+  .bg-aura {
+    background-image:
+      radial-gradient(900px circle at 20% 20%, hsl(var(--primary) / 0.10), transparent 55%),
+      radial-gradient(700px circle at 80% 30%, hsl(var(--accent) / 0.08), transparent 60%),
+      radial-gradient(900px circle at 50% 90%, hsl(var(--primary) / 0.06), transparent 60%);
+    background-size: 140% 140%;
+    background-position: 0% 0%, 100% 0%, 50% 100%;
+  }
+
+  .bg-aura-animate {
+    animation: aura-drift 18s ease-in-out infinite;
+    will-change: background-position;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bg-aura-animate {
+      animation: none;
+    }
+  }
+
   .text-balance {
     text-wrap: balance;
   }

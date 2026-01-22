@@ -55,32 +55,9 @@ export const IndustriesSection = () => {
 
   return (
     <section id="industries" className="section-padding relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      
-      {/* Animated background orbs */}
-      <motion.div
-        className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.1) 0%, transparent 70%)" }}
-        animate={{ x: [0, 50, 0], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-1/3 right-0 w-[400px] h-[400px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(circle, hsl(var(--accent) / 0.1) 0%, transparent 70%)" }}
-        animate={{ x: [0, -50, 0], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-      />
-
-      {/* Grid pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
-        }}
-      />
+      {/* Aura background (no grid/squares) */}
+      <div className="absolute inset-0 bg-aura bg-aura-animate" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background pointer-events-none" />
 
       <div className="container-narrow relative z-10">
         <div className="text-center mb-16">
