@@ -64,11 +64,12 @@ export const HeroSection = () => {
     };
   };
 
-  const floatingElements = [
+  // Reduced floating elements for better mobile performance
+  const floatingElements = isMobile ? [] : [
     { icon: Bot, delay: 0, x: "8%", y: "25%", label: "AI Ready" },
-    { icon: MessageCircle, delay: 0.5, x: "88%", y: "20%", label: "24/7 Chat" },
-    { icon: TrendingUp, delay: 1, x: "12%", y: "72%", label: "+30% Leads" },
-    { icon: Zap, delay: 1.5, x: "85%", y: "70%", label: "Instant" },
+    { icon: MessageCircle, delay: 0.3, x: "88%", y: "20%", label: "24/7 Chat" },
+    { icon: TrendingUp, delay: 0.6, x: "12%", y: "72%", label: "+30% Leads" },
+    { icon: Zap, delay: 0.9, x: "85%", y: "70%", label: "Instant" },
   ];
 
   return (
@@ -82,7 +83,7 @@ export const HeroSection = () => {
       {/* Subtle top-to-bottom fade for content readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background pointer-events-none" />
 
-      {/* Floating feature cards with parallax */}
+      {/* Floating feature cards with parallax - desktop only */}
       {floatingElements.map((item, index) => {
         const parallax = getParallax(0.02 + index * 0.008);
         return (
@@ -95,13 +96,13 @@ export const HeroSection = () => {
               opacity: 1,
               scale: 1,
               x: parallax.x,
-              y: prefersReducedMotion ? 0 : [parallax.y, parallax.y - 10, parallax.y],
+              y: parallax.y,
             }}
             transition={{
-              opacity: { delay: item.delay + 0.5, duration: 0.5 },
-              scale: { delay: item.delay + 0.5, duration: 0.5, type: "spring" },
-              y: { delay: item.delay + 1, duration: 4, repeat: Infinity, ease: "easeInOut" },
-              x: { duration: 0.2, ease: "easeOut" },
+              opacity: { delay: item.delay + 0.3, duration: 0.4 },
+              scale: { delay: item.delay + 0.3, duration: 0.4 },
+              x: { duration: 0.15, ease: "easeOut" },
+              y: { duration: 0.15, ease: "easeOut" },
             }}
           >
             <item.icon className="w-5 h-5 text-primary" />
@@ -134,19 +135,14 @@ export const HeroSection = () => {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-[1.1] mb-8 text-balance"
           >
             Hire an AI Employee That Works{" "}
             <span className="text-gradient relative">
               24/7
-              <motion.span
-                className="absolute -inset-2 bg-primary/25 rounded-xl blur-xl -z-10"
-                animate={{ opacity: [0.4, 0.7, 0.4] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
             </span>
             <br />
             <span className="text-gradient-accent">Without Hiring Anyone</span>

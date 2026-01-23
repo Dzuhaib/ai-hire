@@ -83,9 +83,10 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
   const prefersReducedMotion = useReducedMotion();
   const primaryRgbRef = useRef<{ r: number; g: number; b: number }>({ r: 32, g: 211, b: 195 });
 
-  const particleCount = isMobile ? 60 : 120;
-  const connectionDistance = isMobile ? 100 : 160;
-  const mouseInfluenceRadius = 280;
+  // Significantly reduced particles on mobile for better performance
+  const particleCount = isMobile ? 25 : 80;
+  const connectionDistance = isMobile ? 80 : 140;
+  const mouseInfluenceRadius = isMobile ? 0 : 250;
 
   // Pull primary color from the design tokens so the canvas always matches the brand.
   useEffect(() => {

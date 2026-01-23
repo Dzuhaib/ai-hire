@@ -9,10 +9,8 @@ export const FinalCTASection = () => {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.1)_0%,transparent_60%)]" />
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "-2s" }} />
+      {/* Simplified background for performance */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
 
       <div className="container-narrow relative z-10">
         <div className="max-w-3xl mx-auto text-center">
