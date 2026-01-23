@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Bot, MessageCircle, Users } from "lucide-react";
+import { OptimizedVideo } from "@/components/OptimizedVideo";
 import aiAssistantVideo from "@/assets/ai-assistant-talking.mp4";
+import aiAssistantPoster from "@/assets/ai-assistant-hero.png";
 
 export const AIShowcaseSection = () => {
   return (
@@ -14,57 +16,44 @@ export const AIShowcaseSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6"
           >
             <Bot className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Meet Your AI Colleague</span>
           </motion.div>
           
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl md:text-5xl font-serif font-semibold mb-6"
-          >
-            Always Ready to <span className="text-gradient">Help Your Customers</span>
-          </motion.h2>
-          
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Your AI colleague engages with customers naturally, answering questions and capturing leads while you focus on growing your business.
-          </motion.p>
+            <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
+              Always Ready to <span className="text-gradient">Help Your Customers</span>
+            </h2>
+          
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Your AI colleague engages with customers naturally, answering questions and capturing leads while you focus on growing your business.
+            </p>
+          </motion.div>
         </div>
         
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="relative max-w-4xl mx-auto"
         >
-          {/* Video container with glow effect */}
-          <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm shadow-2xl">
-            {/* Glow effect behind video */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-50" />
-            
+          {/* Video container - simplified for performance */}
+          <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-card/50 shadow-xl">
             <div className="relative rounded-3xl overflow-hidden">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full aspect-video object-cover"
-              >
-                <source src={aiAssistantVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <OptimizedVideo
+                src={aiAssistantVideo}
+                poster={aiAssistantPoster}
+                className="w-full aspect-video"
+              />
               
               {/* Overlay gradient for better text visibility */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
