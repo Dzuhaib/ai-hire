@@ -5,6 +5,7 @@ import { MapPin, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageMeta } from "@/components/PageMeta";
 import { ukLocations } from "@/data/locationData";
 
 // City images
@@ -35,32 +36,49 @@ const cityImages: Record<string, string> = {
 const LocationsPage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
-    document.title = "AI Employee Solutions Across the UK | AI Vized";
 
-    const setMeta = (name: string, content: string, isProperty = false) => {
-      const attr = isProperty ? "property" : "name";
-      let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute(attr, name);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", content);
+    // Inject breadcrumb structured data
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aivized.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Locations",
+          "item": "https://aivized.com/locations"
+        }
+      ]
     };
 
-    const description = "AI Vized provides intelligent AI employee solutions across the UK. Find AI-powered customer service, lead generation, and automation for businesses in London, Manchester, Birmingham, and more.";
-    setMeta("description", description);
-    setMeta("keywords", "AI employees UK, AI chatbot UK cities, business automation London Manchester Birmingham, 24/7 AI customer service UK");
-    setMeta("og:title", "AI Employee Solutions Across the UK | AI Vized", true);
-    setMeta("og:description", description, true);
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-breadcrumb-schema", "true");
+    script.textContent = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(script);
 
     return () => {
-      document.title = "AI Vized | Hire AI That Works 24/7 - UK Business Solutions";
+      const scripts = document.querySelectorAll('script[data-breadcrumb-schema]');
+      scripts.forEach(s => s.remove());
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageMeta
+        title="AI Employee Solutions Across the UK | AI Vized"
+        description="AI Vized provides intelligent AI employee solutions across the UK. Find AI-powered customer service, lead generation, and automation for businesses in London, Manchester, Birmingham, and more."
+        keywords="AI employees UK, AI chatbot UK cities, business automation London Manchester Birmingham, 24/7 AI customer service UK"
+        canonical="https://aivized.com/locations"
+        ogTitle="AI Employee Solutions Across the UK | AI Vized"
+        ogDescription="Find AI-powered customer service, lead generation, and automation for businesses across the UK."
+      />
       <Header />
 
       {/* Hero Section */}

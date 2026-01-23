@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
+import { InternalLinksSection } from "@/components/InternalLinksSection";
 
 // Lazy load below-the-fold sections for faster initial load
 const AIShowcaseSection = lazy(() => import("@/components/AIShowcaseSection").then(m => ({ default: m.AIShowcaseSection })));
@@ -51,6 +52,7 @@ const Index = () => {
         <Suspense fallback={<SectionLoader />}>
           <FAQSection />
         </Suspense>
+        <InternalLinksSection />
         <Suspense fallback={<SectionLoader />}>
           <FinalCTASection />
         </Suspense>
