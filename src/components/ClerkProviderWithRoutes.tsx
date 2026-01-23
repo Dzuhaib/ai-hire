@@ -13,6 +13,7 @@ import TermsOfService from "@/pages/TermsOfService";
 import LocationPage from "@/pages/LocationPage";
 import LocationsPage from "@/pages/LocationsPage";
 import IndustryPage from "@/pages/IndustryPage";
+import IndustriesPage from "@/pages/IndustriesPage";
 import { LoadingScreen } from "@/components/LoadingScreen";
 
 const ClerkProviderWithNavigation = ({ children }: { children: React.ReactNode }) => {
@@ -53,6 +54,8 @@ export const ClerkProviderWithRoutes = () => {
           {/* Location pages for local SEO */}
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/locations/:city" element={<LocationPage />} />
+          {/* Industries Index */}
+          <Route path="/industries" element={<IndustriesPage />} />
           {/* Industry-specific landing pages */}
           <Route path="/restaurants" element={<IndustryPage />} />
           <Route path="/real-estate" element={<IndustryPage />} />
