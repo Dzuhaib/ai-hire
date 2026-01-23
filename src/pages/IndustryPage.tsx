@@ -91,6 +91,32 @@ const IndustryPage = () => {
       const existingScripts = document.querySelectorAll('script[data-industry-schema]');
       existingScripts.forEach(s => s.remove());
 
+      // Breadcrumb Schema
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aivized.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Industries",
+            "item": "https://aivized.com/industries"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": industry.industry,
+            "item": `https://aivized.com/${industry.slug}`
+          }
+        ]
+      };
+
       const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -131,7 +157,7 @@ const IndustryPage = () => {
         }))
       };
 
-      [serviceSchema, faqSchema].forEach((schema, idx) => {
+      [breadcrumbSchema, serviceSchema, faqSchema].forEach((schema, idx) => {
         const script = document.createElement("script");
         script.type = "application/ld+json";
         script.setAttribute("data-industry-schema", `schema-${idx}`);

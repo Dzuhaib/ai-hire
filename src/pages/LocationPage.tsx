@@ -82,6 +82,32 @@ const LocationPage = () => {
       const existingScripts = document.querySelectorAll('script[data-location-schema]');
       existingScripts.forEach(s => s.remove());
 
+      // Breadcrumb Schema
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aivized.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Locations",
+            "item": "https://aivized.com/locations"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": location.city,
+            "item": `https://aivized.com/locations/${location.slug}`
+          }
+        ]
+      };
+
       // LocalBusiness Schema
       const localBusinessSchema = {
         "@context": "https://schema.org",
@@ -156,7 +182,7 @@ const LocationPage = () => {
         }
       };
 
-      [localBusinessSchema, faqSchema, serviceSchema].forEach((schema, idx) => {
+      [breadcrumbSchema, localBusinessSchema, faqSchema, serviceSchema].forEach((schema, idx) => {
         const script = document.createElement("script");
         script.type = "application/ld+json";
         script.setAttribute("data-location-schema", `schema-${idx}`);
