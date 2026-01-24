@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ClerkProviderWithRoutes } from "@/components/ClerkProviderWithRoutes";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -12,6 +13,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ClerkProviderWithRoutes />
+      <CookieConsent />
     </TooltipProvider>
   </QueryClientProvider>
 );
