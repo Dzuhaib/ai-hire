@@ -10,32 +10,37 @@ const faqs = [
   {
     question: "How does the setup process work?",
     answer:
-      "It's simple. After you subscribe to a plan, you'll securely share your website login details with us. Our team then installs and configures your AI Vized within 24 hours. No technical knowledge required from your side.",
+      "It's simple. After you subscribe, you securely share your website login details with us. Our team installs and configures your AI chatbot within 24 hours. No technical knowledge required from your side.",
   },
   {
     question: "Is my website login information secure?",
     answer:
-      "Absolutely. We use bank-level encryption to store your credentials. Our team only accesses your website during the installation process, and you can change your password immediately after setup if you prefer.",
+      "Absolutely. We use bank-level encryption to store your credentials. Our team only accesses your website during installation, and you can change your password immediately after setup if you prefer.",
   },
   {
-    question: "How does AI Vized actually work?",
+    question: "What does 'fully managed' mean?",
     answer:
-      "Your AI Vized is trained specifically for your industry. It understands customer queries, provides accurate responses, captures leads, and handles common tasks 24/7. It learns from your business information to give personalised, relevant answers.",
+      "We don't just deliver a chatbot and leave. Our team continuously monitors your chatbot, handles lead optimisation, applies ongoing updates, and resolves any issues immediately—before they impact your website or customers.",
+  },
+  {
+    question: "How does the AI chatbot actually work?",
+    answer:
+      "Your AI chatbot is trained for your industry. It understands customer queries, provides accurate responses, captures leads, and works 24/7. It learns from your business information to give personalised, relevant answers.",
   },
   {
     question: "Can I customise what the AI says?",
     answer:
-      "Yes. You can provide specific information about your business, set the tone of voice, and define how the AI should respond to different types of enquiries. We'll help you configure everything during setup.",
+      "Yes. You can provide specific information about your business, set the tone of voice, and define how the AI responds to different enquiries. We help configure everything during setup.",
   },
   {
-    question: "What happens if AI Vized can't answer a question?",
+    question: "What happens if the AI can't answer a question?",
     answer:
-      "When your AI Vized encounters a question it can't confidently answer, it will capture the customer's details and escalate to you via email. You never lose a potential lead.",
+      "When your chatbot encounters a question it can't confidently answer, it captures the customer's details and escalates to you via email. You never lose a potential lead.",
   },
   {
-    question: "Can I cancel my subscription anytime?",
+    question: "How much does it cost?",
     answer:
-      "Yes, there are no long-term contracts. You can cancel your subscription at any time, and you won't be charged for the following month. We believe in earning your business every month.",
+      "Our fully managed AI chatbot service starts from just €29 per month. No upfront costs, no long-term contracts. Cancel anytime.",
   },
 ];
 
