@@ -141,12 +141,13 @@ export const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-[1.1] mb-8 text-balance"
           >
-            Get a Fully Managed AI Chatbot That Works{" "}
+            Rent a Fully Managed{" "}
             <span className="text-gradient relative">
-              24/7
+              AI Chatbot
             </span>
+            {" "}for Your Business
             <br />
-            <span className="text-gradient-accent">We Handle Everything</span>
+            <span className="text-gradient-accent">We Install & Handle Everything 24/7</span>
           </motion.h1>
 
           <motion.p
@@ -155,8 +156,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed"
           >
-            We install, monitor, and maintain your <Link to="/industries" className="text-primary hover:underline">AI chatbot</Link> so you can focus on your business. 
-            No developers. No technical hassle. No downtime.
+            Rent your AI colleague now—we install, monitor, and maintain everything so you can focus on your business. 
+            No technical skills needed. No developers. No downtime.
           </motion.p>
 
           <motion.p
@@ -178,7 +179,7 @@ export const HeroSection = () => {
               className="btn-primary text-sm px-10 py-5 group"
               onClick={() => scrollToSection("#pricing")}
             >
-              <span>Get Your AI Chatbot Now</span>
+              <span>Rent Now — From £29/month</span>
               <Zap className="w-4 h-4 ml-2 inline-block group-hover:animate-pulse" />
             </MagneticButton>
 

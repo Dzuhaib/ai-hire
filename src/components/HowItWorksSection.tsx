@@ -63,8 +63,8 @@ export const HowItWorksSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
           >
-            Get Started in{" "}
-            <span className="text-gradient">Three Simple Steps</span>
+            How We Install Your{" "}
+            <span className="text-gradient">Managed AI Chatbot</span>
           </motion.h2>
 
           <motion.p
@@ -74,8 +74,7 @@ export const HowItWorksSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            We've made it incredibly easy to get your AI assistant up and running. 
-            No technical knowledge required.
+            Rent now and we install everything for you. No technical skills required—fully managed from day one.
           </motion.p>
         </div>
 

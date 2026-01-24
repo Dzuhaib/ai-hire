@@ -112,8 +112,8 @@ export const PricingSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
           >
-            Choose the Perfect{" "}
-            <span className="text-gradient">Plan for You</span>
+            Rent Your Managed{" "}
+            <span className="text-gradient">AI Chatbot Now</span>
           </motion.h2>
 
           <motion.p
@@ -123,7 +123,7 @@ export const PricingSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            No contracts, no hidden fees. Cancel anytime. Start automating your business today.
+            Fully managed AI chatbot for UK small business. No technical skills needed. We install everything.
           </motion.p>
         </div>
 

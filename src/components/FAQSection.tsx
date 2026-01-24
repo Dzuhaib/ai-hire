@@ -82,7 +82,7 @@ export const FAQSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold"
           >
-            Frequently Asked Questions
+            Managed AI Chatbot <span className="text-gradient">FAQ</span>
           </motion.h2>
         </div>
 

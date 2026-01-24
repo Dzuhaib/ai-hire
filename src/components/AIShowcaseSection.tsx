@@ -30,11 +30,11 @@ export const AIShowcaseSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
-              Always Ready to <span className="text-gradient">Help Your Customers</span>
+              Rent Your <span className="text-gradient">AI Colleague Now</span>
             </h2>
           
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Your AI colleague engages with customers naturally, answering questions and capturing leads while you focus on growing your business.
+              Your fully managed AI chatbot engages with customers naturally, answering questions and capturing leads 24/7. We install and handle everything—no technical skills needed.
             </p>
           </motion.div>
         </div>

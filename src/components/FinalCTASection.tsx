@@ -22,8 +22,8 @@ export const FinalCTASection = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
           >
-            Your aivized Is{" "}
-            <span className="text-gradient">Ready to Work</span>
+            Rent Your AIVized{" "}
+            <span className="text-gradient">AI Colleague Now</span>
           </motion.h2>
 
           <motion.p
@@ -33,7 +33,7 @@ export const FinalCTASection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg text-muted-foreground mb-6"
           >
-            No contracts. Cancel anytime. Live in minutes.
+            Fully managed AI chatbot. No contracts. No technical skills needed. We install everything.
           </motion.p>
 
           <motion.p
@@ -59,7 +59,7 @@ export const FinalCTASection = () => {
               className="btn-primary text-sm px-12 py-6"
               onClick={() => scrollToSection("#pricing")}
             >
-              Rent Your AI Colleague Now
+              Rent Your AI Chatbot Now
             </MagneticButton>
           </motion.div>
         </div>
