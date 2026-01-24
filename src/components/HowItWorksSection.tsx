@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { CreditCard, Share2, Rocket, ArrowRight, Sparkles } from "lucide-react";
 
 const steps = [
@@ -10,6 +11,7 @@ const steps = [
     gradient: "from-primary/20 to-cyan-500/20",
     iconColor: "text-primary",
     borderGradient: "from-primary/50 via-cyan-500/30 to-transparent",
+    link: { text: "View pricing", href: "/#pricing" },
   },
   {
     number: "02",
@@ -19,6 +21,7 @@ const steps = [
     gradient: "from-cyan-500/20 to-teal-500/20",
     iconColor: "text-cyan-400",
     borderGradient: "from-cyan-500/50 via-teal-500/30 to-transparent",
+    link: { text: "Privacy policy", href: "/privacy-policy" },
   },
   {
     number: "03",
@@ -28,6 +31,7 @@ const steps = [
     gradient: "from-teal-500/20 to-emerald-500/20",
     iconColor: "text-teal-400",
     borderGradient: "from-teal-500/50 via-emerald-500/30 to-transparent",
+    link: { text: "See industries", href: "/industries" },
   },
 ];
 
@@ -127,9 +131,12 @@ export const HowItWorksSection = () => {
                       <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-foreground transition-colors">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/70 transition-colors">
+                      <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/70 transition-colors mb-2">
                         {step.description}
                       </p>
+                      <Link to={step.link.href} className="text-sm text-primary hover:underline">
+                        {step.link.text} →
+                      </Link>
 
                       {/* Arrow indicator */}
                       {index < steps.length - 1 && (

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -9,13 +10,19 @@ import {
 const faqs = [
   {
     question: "How does the setup process work?",
-    answer:
-      "It's simple. After you subscribe, you securely share your website login details with us. Our team installs and configures your AI chatbot within 24 hours. No technical knowledge required from your side.",
+    answer: (
+      <>
+        It's simple. After you subscribe, you securely share your website login details with us. Our team installs and configures your AI chatbot within 24 hours. No technical knowledge required from your side. See our <Link to="/#how-it-works" className="text-primary hover:underline">step-by-step process</Link>.
+      </>
+    ),
   },
   {
     question: "Is my website login information secure?",
-    answer:
-      "Absolutely. We use bank-level encryption to store your credentials. Our team only accesses your website during installation, and you can change your password immediately after setup if you prefer.",
+    answer: (
+      <>
+        Absolutely. We use bank-level encryption to store your credentials. Our team only accesses your website during installation, and you can change your password immediately after setup if you prefer. Read our <Link to="/privacy-policy" className="text-primary hover:underline">privacy policy</Link> for details.
+      </>
+    ),
   },
   {
     question: "What does 'fully managed' mean?",
@@ -24,8 +31,11 @@ const faqs = [
   },
   {
     question: "How does the AI chatbot actually work?",
-    answer:
-      "Your AI chatbot is trained for your industry. It understands customer queries, provides accurate responses, captures leads, and works 24/7. It learns from your business information to give personalised, relevant answers.",
+    answer: (
+      <>
+        Your AI chatbot is trained for your industry. It understands customer queries, provides accurate responses, captures leads, and works 24/7. Explore our <Link to="/industries" className="text-primary hover:underline">industry-specific solutions</Link> for restaurants, real estate, and e-commerce.
+      </>
+    ),
   },
   {
     question: "Can I customise what the AI says?",
@@ -39,8 +49,11 @@ const faqs = [
   },
   {
     question: "How much does it cost?",
-    answer:
-      "Our fully managed AI chatbot service starts from just €29 per month. No upfront costs, no long-term contracts. Cancel anytime.",
+    answer: (
+      <>
+        Our fully managed AI chatbot service starts from just £29 per month. No upfront costs, no long-term contracts. Cancel anytime. View our <Link to="/#pricing" className="text-primary hover:underline">pricing plans</Link> or check our <Link to="/refund-policy" className="text-primary hover:underline">refund policy</Link>.
+      </>
+    ),
   },
 ];
 
