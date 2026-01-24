@@ -9,9 +9,9 @@ const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
-        title="Terms of Service | AI Vized - AI Employee Rental Agreement"
-        description="Read AI Vized's terms of service. Understand your rights and obligations when renting AI employees for your UK business, including subscription terms and service guarantees."
-        keywords="AI Vized terms of service, AI rental agreement, chatbot terms, UK business AI terms, AI employee subscription, service agreement"
+        title="Terms of Service | AIVized - AI Service Agreement"
+        description="Read AIVized's terms of service. Understand your rights and obligations when using our AI-powered customer service solutions, including subscription terms and service guarantees."
+        keywords="AIVized terms of service, AI service agreement, chatbot terms, AI subscription, service agreement"
         canonical="https://aivized.com/terms-of-service"
       />
       <Header />
@@ -42,14 +42,14 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">1. Agreement to Terms</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  By accessing or using AI Vized's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services. These Terms constitute a legally binding agreement between you and AI Vized Ltd, a company registered in England and Wales.
+                  By accessing or using AIVized's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services. These Terms constitute a legally binding agreement between you and AIVized, a trading name of a sole proprietorship based in Pakistan.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">2. Description of Service</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  AI Vized provides fully managed AI-powered customer service automation solutions for UK businesses. Our service includes:
+                  AIVized provides fully managed AI-powered customer service automation solutions for businesses worldwide. Our service includes:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li>AI chatbot installation and configuration on your website</li>
@@ -89,7 +89,7 @@ const TermsOfService = () => {
                   <li>Paddle's terms of service also apply to payment transactions</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  By subscribing, you authorise Paddle to charge your chosen payment method on a recurring basis until you cancel your subscription.
+                  By subscribing, you authorise Paddle to charge your chosen payment method on a recurring basis until you cancel your subscription. Paddle handles all payment processing, invoicing, and tax compliance as the Merchant of Record.
                 </p>
               </section>
 
@@ -134,7 +134,7 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">8. Intellectual Property</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  All content, features, and functionality of our services are owned by AI Vized and protected by UK and international copyright, trademark, and other intellectual property laws.
+                  All content, features, and functionality of our services are owned by AIVized and protected by international copyright, trademark, and other intellectual property laws.
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li>You may not reproduce, distribute, or create derivative works without our express written consent</li>
@@ -146,14 +146,14 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">9. Data and Privacy</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Your use of our services is also governed by our <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>. You retain ownership of any data you input into our systems. We process your data in accordance with UK GDPR and our data protection commitments. Our payment processor Paddle may collect additional information necessary for payment processing as outlined in their privacy policy.
+                  Your use of our services is also governed by our <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>. You retain ownership of any data you input into our systems. We process your data in accordance with applicable data protection laws and our privacy commitments. Our payment processor Paddle may collect additional information necessary for payment processing as outlined in their privacy policy.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">10. Service Level and Availability</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  We strive to maintain 99.9% uptime for our services:
+                  We strive to maintain high availability for our services:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li>We do not guarantee uninterrupted access and may suspend services for maintenance, updates, or security reasons</li>
@@ -166,10 +166,10 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">11. Limitation of Liability</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  To the maximum extent permitted by law:
+                  To the maximum extent permitted by applicable law:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li>AI Vized shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services</li>
+                  <li>AIVized shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services</li>
                   <li>Our total liability shall not exceed the amount paid by you in the 12 months preceding the claim</li>
                   <li>We are not liable for any loss of business, revenue, or profits</li>
                   <li>We are not liable for the actions or responses of the AI system in customer interactions</li>
@@ -182,7 +182,7 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">12. Indemnification</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  You agree to indemnify and hold harmless AI Vized, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of our services, your violation of these Terms, or your violation of any rights of a third party.
+                  You agree to indemnify and hold harmless AIVized, its owners, employees, and agents from any claims, damages, losses, or expenses arising from your use of our services, your violation of these Terms, or your violation of any rights of a third party.
                 </p>
               </section>
 
@@ -204,7 +204,7 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">14. Governing Law and Disputes</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  These Terms shall be governed by and construed in accordance with the laws of England and Wales. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales. We encourage you to contact us first to resolve any disputes amicably before pursuing legal action.
+                  These Terms shall be governed by and construed in accordance with the laws of Pakistan. However, for customers purchasing through Paddle, certain consumer protection rights under your local jurisdiction may also apply. Any disputes arising under these Terms shall first be addressed through good faith negotiation. If disputes cannot be resolved amicably, they shall be subject to the jurisdiction of the courts in Pakistan, unless otherwise required by applicable consumer protection laws in your jurisdiction.
                 </p>
               </section>
 
@@ -228,10 +228,10 @@ const TermsOfService = () => {
                   For questions about these Terms of Service, please contact us at:
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  <strong>AI Vized Ltd</strong><br />
+                  <strong>AIVized</strong><br />
                   <strong>Email:</strong> legal@aivized.com<br />
                   <strong>Support:</strong> support@aivized.com<br />
-                  <strong>Address:</strong> United Kingdom
+                  <strong>Location:</strong> Pakistan
                 </p>
                 <p className="text-muted-foreground mt-4">
                   For payment-related enquiries, you may also contact Paddle at{" "}
