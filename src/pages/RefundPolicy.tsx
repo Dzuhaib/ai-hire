@@ -9,9 +9,9 @@ const RefundPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
-        title="Refund Policy | AI Vized - Money-Back Guarantee & Cancellation"
-        description="AI Vized's refund policy outlines our 14-day money-back guarantee, cancellation process, and pro-rata refund options. Fair and transparent refund terms for UK businesses."
-        keywords="AI Vized refund policy, money-back guarantee, chatbot refund, subscription cancellation, UK business refund terms"
+        title="Refund Policy | AIVized - Money-Back Guarantee & Cancellation"
+        description="AIVized's refund policy outlines our 14-day money-back guarantee, cancellation process, and pro-rata refund options. Fair and transparent refund terms for businesses."
+        keywords="AIVized refund policy, money-back guarantee, chatbot refund, subscription cancellation, refund terms"
         canonical="https://aivized.com/refund-policy"
       />
       <Header />
@@ -42,7 +42,7 @@ const RefundPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">1. Our Commitment</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  At AI Vized, we are confident in the value our AI-powered customer service solutions provide to UK businesses. We want you to be completely satisfied with our service, which is why we offer a fair and transparent refund policy. Your satisfaction is our priority.
+                  At AIVized, we are confident in the value our AI-powered customer service solutions provide to businesses. We want you to be completely satisfied with our service, which is why we offer a fair and transparent refund policy. Your satisfaction is our priority.
                 </p>
               </section>
 
@@ -54,7 +54,7 @@ const RefundPolicy = () => {
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li>If you are not satisfied with our service within the first 14 days of your initial subscription, you may request a full refund</li>
                   <li>The 14-day period begins from the date your subscription is activated</li>
-                  <li>This guarantee applies to your first subscription with AI Vized only</li>
+                  <li>This guarantee applies to your first subscription with AIVized only</li>
                   <li>No questions asked – simply contact our support team to request your refund</li>
                   <li>Refunds will be processed within 5-10 business days</li>
                 </ul>
@@ -124,7 +124,7 @@ const RefundPolicy = () => {
                   <li>Refunds are processed through Paddle, our Merchant of Record</li>
                   <li>The refund will be credited to your original payment method</li>
                   <li>Processing time depends on your payment provider (typically 5-10 business days)</li>
-                  <li>Refunds are issued in the original currency of payment (GBP)</li>
+                  <li>Refunds are issued in the original currency of payment</li>
                   <li>You will receive email confirmation when the refund is processed</li>
                 </ul>
               </section>
@@ -169,10 +169,10 @@ const RefundPolicy = () => {
                   If you have questions about our Refund Policy or need assistance with a refund request, please contact us:
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  <strong>AI Vized Ltd</strong><br />
+                  <strong>AIVized</strong><br />
                   <strong>Email:</strong> support@aivized.com<br />
                   <strong>Billing Enquiries:</strong> billing@aivized.com<br />
-                  <strong>Address:</strong> United Kingdom
+                  <strong>Location:</strong> Pakistan
                 </p>
                 <p className="text-muted-foreground mt-4">
                   For payment-related issues, you may also contact Paddle directly at{" "}

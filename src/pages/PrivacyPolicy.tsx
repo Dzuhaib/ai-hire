@@ -9,9 +9,9 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
-        title="Privacy Policy | AI Vized - Data Protection & GDPR Compliance"
-        description="Learn how AI Vized protects your data. Our privacy policy covers GDPR compliance, data collection practices, and your rights as a UK business using our AI employee services."
-        keywords="AI Vized privacy policy, GDPR compliance, UK data protection, AI chatbot privacy, business data security, customer data protection"
+        title="Privacy Policy | AIVized - Data Protection & Privacy"
+        description="Learn how AIVized protects your data. Our privacy policy covers data collection practices, GDPR-aligned principles, and your rights when using our AI-powered services."
+        keywords="AIVized privacy policy, data protection, AI chatbot privacy, business data security, customer data protection"
         canonical="https://aivized.com/privacy-policy"
       />
       <Header />
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">1. Introduction</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  AI Vized Ltd ("AI Vized," "we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered customer service platform and related services. We are registered as a data controller with the Information Commissioner's Office (ICO) in the United Kingdom.
+                  AIVized ("AIVized," "we," "our," or "us") is a trading name of a sole proprietorship based in Pakistan, providing AI-powered customer service solutions to businesses worldwide. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and related services. We operate in accordance with applicable data protection principles and strive to meet international standards including GDPR requirements for our customers in the UK and EEA.
                 </p>
               </section>
 
@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">3. Legal Basis for Processing</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Under UK GDPR, we process your personal data based on the following legal grounds:
+                  For customers in the UK and EEA, we process personal data based on the following legal grounds under GDPR:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li><strong>Contract:</strong> Processing necessary to perform our contract with you (providing our services)</li>
@@ -109,7 +109,7 @@ const PrivacyPolicy = () => {
                   We do not sell your personal information. We may share your information with:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li><strong>Paddle:</strong> Our Merchant of Record for payment processing. Paddle acts as a data controller for payment transactions.</li>
+                  <li><strong>Paddle:</strong> Our Merchant of Record for payment processing. Paddle acts as a data controller for payment transactions and is based in the UK.</li>
                   <li><strong>Service Providers:</strong> Third-party providers who perform services on our behalf (hosting, analytics, customer support tools). These providers are contractually bound to protect your information.</li>
                   <li><strong>AI Model Providers:</strong> We use third-party AI services to power our chatbots. Conversation data may be processed by these providers under strict data protection agreements.</li>
                   <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental authority.</li>
@@ -120,7 +120,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">6. International Data Transfers</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Your data may be transferred to and processed in countries outside the UK. When we transfer data internationally, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses (SCCs) approved by the UK ICO, or transfers to countries with an adequacy decision. Our service providers are required to maintain equivalent levels of data protection.
+                  Your data may be transferred to and processed in countries outside your country of residence, including Pakistan where AIVized is based. When we transfer data internationally, we ensure appropriate safeguards are in place. For UK and EEA customers, this may include Standard Contractual Clauses (SCCs) or other approved mechanisms. Our service providers are required to maintain appropriate levels of data protection.
                 </p>
               </section>
 
@@ -132,7 +132,7 @@ const PrivacyPolicy = () => {
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li>Encryption of data in transit (TLS/SSL) and at rest</li>
                   <li>Secure, access-controlled hosting infrastructure</li>
-                  <li>Regular security assessments and penetration testing</li>
+                  <li>Regular security assessments</li>
                   <li>Employee training on data protection</li>
                   <li>Incident response procedures</li>
                 </ul>
@@ -142,9 +142,9 @@ const PrivacyPolicy = () => {
               </section>
 
               <section>
-                <h2 className="text-2xl font-serif font-semibold mb-4">8. Your Rights (UK GDPR)</h2>
+                <h2 className="text-2xl font-serif font-semibold mb-4">8. Your Rights</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Under UK data protection law, you have the following rights:
+                  Depending on your location, you may have the following rights regarding your personal data:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li><strong>Right of Access:</strong> Request a copy of your personal data</li>
@@ -154,10 +154,9 @@ const PrivacyPolicy = () => {
                   <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format</li>
                   <li><strong>Right to Object:</strong> Object to processing based on legitimate interests or for direct marketing</li>
                   <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent</li>
-                  <li><strong>Right to Lodge a Complaint:</strong> Complain to the ICO if you believe your rights have been violated</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  To exercise your rights, contact us at privacy@aivized.com. We will respond within one month.
+                  To exercise your rights, contact us at privacy@aivized.com. We will respond within 30 days. For UK and EEA residents, you also have the right to lodge a complaint with your local data protection authority.
                 </p>
               </section>
 
@@ -173,7 +172,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements (with your consent)</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  You can manage your cookie preferences through your browser settings. Note that disabling certain cookies may affect website functionality.
+                  You can manage your cookie preferences through your browser settings or our cookie consent banner. Note that disabling certain cookies may affect website functionality.
                 </p>
               </section>
 
@@ -212,21 +211,17 @@ const PrivacyPolicy = () => {
                   If you have questions about this Privacy Policy, wish to exercise your rights, or have concerns about our data practices, please contact us:
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  <strong>AI Vized Ltd</strong><br />
-                  <strong>Data Protection Officer:</strong> privacy@aivized.com<br />
+                  <strong>AIVized</strong><br />
+                  <strong>Privacy Enquiries:</strong> privacy@aivized.com<br />
                   <strong>General Enquiries:</strong> contact@aivized.com<br />
-                  <strong>Address:</strong> United Kingdom
-                </p>
-                <p className="text-muted-foreground mt-4">
-                  You also have the right to lodge a complaint with the Information Commissioner's Office (ICO):{" "}
-                  <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">ico.org.uk</a>
+                  <strong>Location:</strong> Pakistan
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">14. Payment Processor Privacy</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Payments are processed by Paddle.com Market Limited, who acts as the Merchant of Record for all transactions. Paddle collects and processes payment information in accordance with their own privacy policy, available at{" "}
+                  Payments are processed by Paddle.com Market Limited, who acts as the Merchant of Record for all transactions. Paddle is based in the UK and handles all payment-related data processing in compliance with applicable data protection laws. Paddle collects and processes payment information in accordance with their own privacy policy, available at{" "}
                   <a href="https://paddle.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">paddle.com/privacy</a>. 
                   We recommend reviewing their policy to understand how your payment data is handled.
                 </p>
