@@ -66,10 +66,10 @@ export const HeroSection = () => {
 
   // Reduced floating elements for better mobile performance
   const floatingElements = isMobile ? [] : [
-    { icon: Bot, delay: 0, x: "8%", y: "25%", label: "AI Ready" },
+    { icon: Bot, delay: 0, x: "8%", y: "25%", label: "Fully Managed" },
     { icon: MessageCircle, delay: 0.3, x: "88%", y: "20%", label: "24/7 Chat" },
     { icon: TrendingUp, delay: 0.6, x: "12%", y: "72%", label: "+30% Leads" },
-    { icon: Zap, delay: 0.9, x: "85%", y: "70%", label: "Instant" },
+    { icon: Zap, delay: 0.9, x: "85%", y: "70%", label: "€29/mo" },
   ];
 
   return (
@@ -131,7 +131,7 @@ export const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-            <span className="text-sm font-medium text-primary">Your AI Colleague — Works 24/7</span>
+            <span className="text-sm font-medium text-primary">Fully Managed AI Chatbot — From €29/month</span>
           </motion.div>
 
           <motion.h1
@@ -140,12 +140,12 @@ export const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-[1.1] mb-8 text-balance"
           >
-            Hire an AI Employee That Works{" "}
+            Get a Fully Managed AI Chatbot That Works{" "}
             <span className="text-gradient relative">
               24/7
             </span>
             <br />
-            <span className="text-gradient-accent">Without Hiring Anyone</span>
+            <span className="text-gradient-accent">We Handle Everything</span>
           </motion.h1>
 
           <motion.p
@@ -154,8 +154,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed"
           >
-            You don't need to hire another staff member or pay a full salary. Your AI colleague works
-            round the clock for a fraction of the cost.
+            We install, monitor, and maintain your AI chatbot so you can focus on your business. 
+            No developers. No technical hassle. No downtime.
           </motion.p>
 
           <motion.p
@@ -164,7 +164,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-12"
           >
-            No contracts. No complicated setup. No technical skills needed.
+            From just €29/month. No contracts. No complicated setup. Cancel anytime.
           </motion.p>
 
           <motion.div
@@ -177,7 +177,7 @@ export const HeroSection = () => {
               className="btn-primary text-sm px-10 py-5 group"
               onClick={() => scrollToSection("#pricing")}
             >
-              <span>Rent Your AI Colleague Now</span>
+              <span>Get Your AI Chatbot Now</span>
               <Zap className="w-4 h-4 ml-2 inline-block group-hover:animate-pulse" />
             </MagneticButton>
 
@@ -208,7 +208,7 @@ export const HeroSection = () => {
           >
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span>500+ businesses automated</span>
+              <span>We manage everything</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-border" />
             <div className="flex items-center gap-2">

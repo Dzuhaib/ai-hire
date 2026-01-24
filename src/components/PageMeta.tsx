@@ -62,7 +62,7 @@ export function PageMeta({
 
     // Cleanup: restore defaults when component unmounts
     return () => {
-      document.title = "AI Vized | Hire AI That Works 24/7 - UK Business Solutions";
+      document.title = "AI Vized | Fully Managed AI Chatbot for UK Businesses — €29/month";
     };
   }, [title, description, keywords, canonical, ogTitle, ogDescription]);
 

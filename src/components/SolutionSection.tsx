@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 
 const benefits = [
-  "Answers customer questions instantly",
-  "Works 24/7, never sleeps",
-  "Trained for your industry",
-  "Captures leads automatically",
-  "Reduces workload and increases conversions",
+  "Engages visitors and answers questions instantly—24/7",
+  "Captures qualified leads automatically",
+  "Fully managed by our team—zero maintenance for you",
+  "Continuous monitoring & immediate issue resolution",
+  "Ongoing updates and improvements included",
+  "From €29/month—no developers, no contracts",
 ];
 
 export const SolutionSection = () => {
@@ -34,7 +35,7 @@ export const SolutionSection = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-8"
             >
-              Replace Missed Opportunities With{" "}
+              Stop Losing Leads. Start With{" "}
               <span className="text-gradient">AI Vized</span>
             </motion.h2>
 
@@ -71,11 +72,11 @@ export const SolutionSection = () => {
                   </svg>
                 </div>
                 <p className="text-2xl font-serif text-foreground">
-                  "Your AI Vized assistant is ready to take over."
+                  "Your AI chatbot is live and fully managed. We've got it covered."
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
                   <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-sm text-muted-foreground">Online 24/7</span>
+                  <span className="text-sm text-muted-foreground">Monitored 24/7 by our team</span>
                 </div>
               </div>
             </div>
