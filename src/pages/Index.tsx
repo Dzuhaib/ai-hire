@@ -11,6 +11,7 @@ const PainSection = lazy(() => import("@/components/PainSection").then(m => ({ d
 const IndustriesSection = lazy(() => import("@/components/IndustriesSection").then(m => ({ default: m.IndustriesSection })));
 const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection").then(m => ({ default: m.HowItWorksSection })));
 const PricingSection = lazy(() => import("@/components/PricingSection").then(m => ({ default: m.PricingSection })));
+const CostComparisonCalculator = lazy(() => import("@/components/CostComparisonCalculator").then(m => ({ default: m.CostComparisonCalculator })));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })));
 const FAQSection = lazy(() => import("@/components/FAQSection").then(m => ({ default: m.FAQSection })));
 const FinalCTASection = lazy(() => import("@/components/FinalCTASection").then(m => ({ default: m.FinalCTASection })));
@@ -45,6 +46,9 @@ const Index = () => {
         </Suspense>
         <Suspense fallback={<SectionLoader />}>
           <PricingSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <CostComparisonCalculator />
         </Suspense>
         <Suspense fallback={<SectionLoader />}>
           <TestimonialsSection />
