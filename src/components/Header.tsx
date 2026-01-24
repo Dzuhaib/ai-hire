@@ -9,6 +9,8 @@ import {
   SheetContent,
   SheetTrigger,
   SheetClose,
+  SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
@@ -127,6 +129,8 @@ export const Header = () => {
               </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] bg-background/95 backdrop-blur-xl border-l border-border/50">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetDescription className="sr-only">Main navigation links and actions</SheetDescription>
               <div className="flex flex-col h-full pt-8">
                 <nav className="flex flex-col gap-6">
                   {navItems.map((item) => (
