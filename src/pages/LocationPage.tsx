@@ -240,7 +240,7 @@ const LocationPage = () => {
                   className="btn-primary group"
                   onClick={() => scrollToSection("#pricing-cta")}
                 >
-                  Get Your AI Employee
+                  Get Your AI Chatbot
                   <Zap className="w-4 h-4 ml-2 group-hover:animate-pulse" />
                 </Button>
                 <Button 

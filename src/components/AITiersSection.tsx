@@ -122,7 +122,7 @@ export const AITiersSection = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-3xl md:text-5xl font-serif font-semibold mb-6"
           >
-            Meet Your <span className="text-gradient">AI Team</span>
+            Managed AI Chatbot <span className="text-gradient">Service Tiers</span>
           </motion.h2>
           
           <motion.p
@@ -132,7 +132,7 @@ export const AITiersSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Each tier unlocks more powerful capabilities. Choose the AI colleague that fits your business needs.
+            Each tier unlocks more powerful lead generation capabilities. Choose the managed AI chatbot that fits your business needs.
           </motion.p>
         </div>
         

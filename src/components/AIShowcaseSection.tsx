@@ -30,7 +30,7 @@ export const AIShowcaseSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
-              Rent Your <span className="text-gradient">AI Colleague Now</span>
+              Hire Your <span className="text-gradient">AI Colleague Today</span>
             </h2>
           
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

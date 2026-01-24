@@ -43,7 +43,7 @@ export const TestimonialsSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold"
           >
-            UK Businesses <span className="text-gradient">Rent AIVized</span>
+            UK Businesses <span className="text-gradient">Trust AIVized</span>
           </motion.h2>
         </div>
 
