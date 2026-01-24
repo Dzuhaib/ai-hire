@@ -62,7 +62,7 @@ export function PageMeta({
 
     // Cleanup: restore defaults when component unmounts
     return () => {
-      document.title = "AI Vized | Fully Managed AI Chatbot for UK Businesses — €29/month";
+      document.title = "Managed AI Chatbot for Small Business UK — €29/month | AI Vized";
     };
   }, [title, description, keywords, canonical, ogTitle, ogDescription]);
 

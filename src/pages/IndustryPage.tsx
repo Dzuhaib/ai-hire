@@ -66,7 +66,14 @@ const IndustryPage = () => {
 
   useEffect(() => {
     if (industry) {
-      document.title = `${industry.industry} AI Solutions | AI Vized`;
+      // Build keyword-rich title based on industry
+      const industryKeyword = industry.slug === "restaurants" 
+        ? "Restaurant AI Chatbot UK" 
+        : industry.slug === "real-estate" 
+          ? "Real Estate AI Chatbot UK" 
+          : "E-Commerce AI Chatbot UK";
+      
+      document.title = `${industryKeyword} — Lead Generation Chatbot from €29/month | AI Vized`;
 
       const setMeta = (name: string, content: string, isProperty = false) => {
         const attr = isProperty ? "property" : "name";
@@ -79,12 +86,12 @@ const IndustryPage = () => {
         el.setAttribute("content", content);
       };
 
-      const description = `${industry.heroSubtitle} AI-powered automation for ${industry.industry.toLowerCase()} businesses across the UK.`;
-      const keywords = `AI ${industry.industry.toLowerCase()}, ${industry.slug} AI chatbot, ${industry.industry.toLowerCase()} automation UK, 24/7 customer service ${industry.slug}`;
+      const description = `${industry.heroSubtitle} Managed AI chatbot service for ${industry.industry.toLowerCase()} from €29/month. Capture leads 24/7 and automate customer inquiries.`;
+      const keywords = `${industry.slug} AI chatbot, ${industry.industry.toLowerCase()} chatbot UK, lead generation chatbot ${industry.slug}, managed AI chatbot service, 24/7 customer support chatbot UK, Intercom alternatives for small business, affordable AI chatbot for website`;
 
       setMeta("description", description);
       setMeta("keywords", keywords);
-      setMeta("og:title", `${industry.industry} AI Solutions | AI Vized`, true);
+      setMeta("og:title", `${industryKeyword} — Lead Generation Chatbot | AI Vized`, true);
       setMeta("og:description", description, true);
 
       // Inject structured data
@@ -133,12 +140,12 @@ const IndustryPage = () => {
         },
         "offers": {
           "@type": "Offer",
-          "priceCurrency": "GBP",
+          "priceCurrency": "EUR",
           "price": "29",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
             "price": "29",
-            "priceCurrency": "GBP",
+            "priceCurrency": "EUR",
             "unitText": "month"
           }
         }
@@ -166,7 +173,7 @@ const IndustryPage = () => {
       });
 
       return () => {
-        document.title = "AI Vized | Hire AI That Works 24/7 - UK Business Solutions";
+        document.title = "Managed AI Chatbot for Small Business UK — €29/month | AI Vized";
         const scripts = document.querySelectorAll('script[data-industry-schema]');
         scripts.forEach(s => s.remove());
       };
