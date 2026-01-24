@@ -8,7 +8,7 @@ import { toast } from "sonner";
 const plans = [
   {
     name: "Starter",
-    price: "€29",
+    price: "£29",
     priceAmount: 29,
     description: "Affordable AI chatbot for small business UK—capture leads 24/7",
     features: [
@@ -25,7 +25,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "€79",
+    price: "£79",
     priceAmount: 79,
     description: "Lead generation chatbot UK for growing businesses",
     features: [
@@ -42,7 +42,7 @@ const plans = [
   },
   {
     name: "Business",
-    price: "€149",
+    price: "£149",
     priceAmount: 149,
     description: "Managed AI chatbot service with enterprise features",
     features: [

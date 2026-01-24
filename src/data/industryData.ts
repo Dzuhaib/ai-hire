@@ -114,7 +114,7 @@ export const industries: Record<string, IndustryData> = {
       { value: "65%", label: "Faster lead response" },
       { value: "45%", label: "More qualified viewings" },
       { value: "24/7", label: "Lead capture" },
-      { value: "€0", label: "Per viewing scheduled" }
+      { value: "£0", label: "Per viewing scheduled" }
     ],
     faqs: [
       { question: "Can the AI access my current property listings?", answer: "The AI is trained on your property portfolio and can provide detailed information about each listing. When you add new properties or update existing ones, we update the AI's knowledge accordingly." },

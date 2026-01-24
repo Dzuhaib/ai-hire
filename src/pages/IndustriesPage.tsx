@@ -31,7 +31,7 @@ const IndustriesPage = () => {
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
         title="AI Chatbot for Restaurants, Real Estate & E-Commerce UK | AI Vized"
-        description="Industry-trained AI chatbots for restaurants, real estate agents & e-commerce. Capture leads 24/7, answer customer questions instantly. Managed AI chatbot service from €29/month."
+        description="Industry-trained AI chatbots for restaurants, real estate agents & e-commerce. Capture leads 24/7, answer customer questions instantly. Managed AI chatbot service from £29/month."
         keywords="restaurant AI chatbot, real estate AI assistant, ecommerce AI chatbot, lead generation chatbot UK, managed AI chatbot service, 24/7 customer support chatbot UK, Intercom alternatives for small business"
         canonical="https://aivized.com/industries"
       />
@@ -130,7 +130,7 @@ const IndustriesPage = () => {
                       </div>
                       <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{industry.description}</p>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-primary font-semibold">From €29/month</span> • 24-hour setup
+                        <span className="text-primary font-semibold">From £29/month</span> • 24-hour setup
                       </p>
                     </div>
                   </div>

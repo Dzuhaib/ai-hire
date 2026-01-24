@@ -73,7 +73,7 @@ const IndustryPage = () => {
           ? "Real Estate AI Chatbot UK" 
           : "E-Commerce AI Chatbot UK";
       
-      document.title = `${industryKeyword} — Lead Generation Chatbot from €29/month | AI Vized`;
+      document.title = `${industryKeyword} — Lead Generation Chatbot from £29/month | AI Vized`;
 
       const setMeta = (name: string, content: string, isProperty = false) => {
         const attr = isProperty ? "property" : "name";
@@ -86,7 +86,7 @@ const IndustryPage = () => {
         el.setAttribute("content", content);
       };
 
-      const description = `${industry.heroSubtitle} Managed AI chatbot service for ${industry.industry.toLowerCase()} from €29/month. Capture leads 24/7 and automate customer inquiries.`;
+      const description = `${industry.heroSubtitle} Managed AI chatbot service for ${industry.industry.toLowerCase()} from £29/month. Capture leads 24/7 and automate customer inquiries.`;
       const keywords = `${industry.slug} AI chatbot, ${industry.industry.toLowerCase()} chatbot UK, lead generation chatbot ${industry.slug}, managed AI chatbot service, 24/7 customer support chatbot UK, Intercom alternatives for small business, affordable AI chatbot for website`;
 
       setMeta("description", description);
@@ -140,12 +140,12 @@ const IndustryPage = () => {
         },
         "offers": {
           "@type": "Offer",
-          "priceCurrency": "EUR",
+          "priceCurrency": "GBP",
           "price": "29",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
             "price": "29",
-            "priceCurrency": "EUR",
+            "priceCurrency": "GBP",
             "unitText": "month"
           }
         }
@@ -173,7 +173,7 @@ const IndustryPage = () => {
       });
 
       return () => {
-        document.title = "Managed AI Chatbot for Small Business UK — €29/month | AI Vized";
+        document.title = "Managed AI Chatbot for Small Business UK — £29/month | AI Vized";
         const scripts = document.querySelectorAll('script[data-industry-schema]');
         scripts.forEach(s => s.remove());
       };

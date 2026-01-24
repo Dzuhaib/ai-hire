@@ -73,11 +73,11 @@ const LocationsPage = () => {
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
         title="AI Chatbot Service London, Manchester, Birmingham & UK Cities | AI Vized"
-        description="Get a managed AI chatbot for your business in London, Manchester, Birmingham, Leeds, Glasgow & more. Lead generation chatbot UK—capture leads 24/7 from €29/month."
+        description="Get a managed AI chatbot for your business in London, Manchester, Birmingham, Leeds, Glasgow & more. Lead generation chatbot UK—capture leads 24/7 from £29/month."
         keywords="AI chatbot service London, chatbot for business Manchester, AI assistant Birmingham, small business chatbot Leeds, lead gen chatbot Glasgow, 24/7 customer support chatbot UK, managed AI chatbot service"
         canonical="https://aivized.com/locations"
         ogTitle="AI Chatbot Service Across UK Cities | AI Vized"
-        ogDescription="Managed AI chatbot for London, Manchester, Birmingham & 10+ UK cities. Capture leads 24/7 from €29/month."
+        ogDescription="Managed AI chatbot for London, Manchester, Birmingham & 10+ UK cities. Capture leads 24/7 from £29/month."
       />
       <Header />
 
@@ -229,7 +229,7 @@ const LocationsPage = () => {
             </div>
 
             <p className="text-sm text-muted-foreground mt-6">
-              From <span className="text-primary font-semibold">€29/month</span> • No contracts • 24-hour setup
+              From <span className="text-primary font-semibold">£29/month</span> • No contracts • 24-hour setup
             </p>
           </motion.div>
         </div>

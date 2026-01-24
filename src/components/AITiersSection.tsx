@@ -14,7 +14,7 @@ const tiers = [
   {
     name: "Silver",
     tier: "Starter",
-    price: "€29",
+    price: "£29",
     video: aiSilver,
     poster: aiSilverPoster,
     color: "from-slate-400 to-slate-300",
@@ -26,7 +26,7 @@ const tiers = [
   {
     name: "Gold",
     tier: "Professional",
-    price: "€79",
+    price: "£79",
     video: aiGold,
     poster: aiGoldPoster,
     color: "from-amber-500 to-yellow-400",
@@ -39,7 +39,7 @@ const tiers = [
   {
     name: "Platinum",
     tier: "Business",
-    price: "€149",
+    price: "£149",
     video: aiPlatinum,
     poster: aiPlatinumPoster,
     color: "from-cyan-400 to-teal-300",
