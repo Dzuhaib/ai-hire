@@ -25,12 +25,15 @@ export const Footer = () => {
             </span>
           </div>
 
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex items-center gap-4 md:gap-6 text-sm text-muted-foreground flex-wrap justify-center">
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors">
               Privacy Policy
             </Link>
             <Link to="/terms-of-service" className="hover:text-foreground transition-colors">
               Terms of Service
+            </Link>
+            <Link to="/refund-policy" className="hover:text-foreground transition-colors">
+              Refund Policy
             </Link>
           </div>
         </div>

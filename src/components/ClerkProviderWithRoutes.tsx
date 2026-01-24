@@ -10,6 +10,7 @@ import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
 import AdminDashboard from "@/pages/AdminDashboard";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
+import RefundPolicy from "@/pages/RefundPolicy";
 import LocationPage from "@/pages/LocationPage";
 import LocationsPage from "@/pages/LocationsPage";
 import IndustryPage from "@/pages/IndustryPage";
@@ -51,6 +52,7 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
           {/* Location pages for local SEO */}
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/locations/:city" element={<LocationPage />} />
