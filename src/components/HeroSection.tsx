@@ -69,7 +69,7 @@ export const HeroSection = () => {
     { icon: Bot, delay: 0, x: "8%", y: "25%", label: "Fully Managed" },
     { icon: MessageCircle, delay: 0.3, x: "88%", y: "20%", label: "24/7 Chat" },
     { icon: TrendingUp, delay: 0.6, x: "12%", y: "72%", label: "+30% Leads" },
-    { icon: Zap, delay: 0.9, x: "85%", y: "70%", label: "€29/mo" },
+    { icon: Zap, delay: 0.9, x: "85%", y: "70%", label: "£29/mo" },
   ];
 
   return (
@@ -131,7 +131,7 @@ export const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-            <span className="text-sm font-medium text-primary">Fully Managed AI Chatbot — From €29/month</span>
+            <span className="text-sm font-medium text-primary">Fully Managed AI Chatbot — From £29/month</span>
           </motion.div>
 
           <motion.h1
@@ -164,7 +164,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-12"
           >
-            From just €29/month. No contracts. No complicated setup. Cancel anytime.
+            From just £29/month. No contracts. No complicated setup. Cancel anytime.
           </motion.p>
 
           <motion.div
