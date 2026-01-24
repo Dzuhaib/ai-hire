@@ -8,12 +8,12 @@ import { toast } from "sonner";
 const plans = [
   {
     name: "Starter",
-    price: "£29",
+    price: "€29",
     priceAmount: 29,
-    description: "Perfect for small businesses getting started with AI automation",
+    description: "Affordable AI chatbot for small business UK—capture leads 24/7",
     features: [
       { text: "Up to 500 conversations/mo", included: true },
-      { text: "Basic customisation", included: true },
+      { text: "Fully managed & monitored", included: true },
       { text: "Email support", included: true },
       { text: "Analytics dashboard", included: false },
       { text: "Priority support", included: false },
@@ -25,9 +25,9 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "£79",
+    price: "€79",
     priceAmount: 79,
-    description: "For growing businesses that need more power and flexibility",
+    description: "Lead generation chatbot UK for growing businesses",
     features: [
       { text: "Up to 2,500 conversations/mo", included: true },
       { text: "Full customisation", included: true },
@@ -42,9 +42,9 @@ const plans = [
   },
   {
     name: "Business",
-    price: "£149",
+    price: "€149",
     priceAmount: 149,
-    description: "For established businesses requiring enterprise features",
+    description: "Managed AI chatbot service with enterprise features",
     features: [
       { text: "Unlimited conversations", included: true },
       { text: "White-label solution", included: true },
