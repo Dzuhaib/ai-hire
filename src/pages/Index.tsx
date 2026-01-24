@@ -24,8 +24,47 @@ const SectionLoader = () => (
   </div>
 );
 
+// Homepage FAQ data for JSON-LD schema
+const homepageFaqs = [
+  { question: "What is a managed AI chatbot service?", answer: "A managed AI chatbot service means we handle everything—installation, configuration, 24/7 monitoring, and ongoing updates. Unlike DIY chatbot builders, our managed AI chatbot service requires no technical skills from your side. We install, you benefit. Perfect for UK small businesses who want to capture leads 24/7 without the hassle." },
+  { question: "How much does an affordable AI chatbot for website cost?", answer: "Our affordable AI chatbot for website starts from just £29/month—making it the cheapest managed AI chatbot UK businesses can find. No upfront costs, no developers needed, no long-term contracts." },
+  { question: "How can I capture leads on my website 24/7?", answer: "Our lead generation chatbot UK businesses trust works around the clock. It engages visitors, answers questions, and captures qualified leads automatically—even at 3am. Reduce missed leads from your website and never lose another customer enquiry." },
+  { question: "Is this AI chatbot for small business UK suitable for my company?", answer: "Yes! Our AI chatbot for small business UK is designed specifically for SMEs across restaurants, real estate, and e-commerce. Whether you're in London, Manchester, or Birmingham—our managed solution handles customer enquiries so you can focus on running your business." },
+  { question: "How does your AI chatbot provide 24/7 customer support?", answer: "Our 24/7 customer support chatbot UK handles customer queries any time of day or night. It's monitored by our team and continuously improved. When it encounters a question it can't answer, it captures the customer's details and escalates to you immediately—you never lose a lead." },
+  { question: "Can this chatbot help me automate customer inquiries for my small business?", answer: "Absolutely. Our AI is trained to automate customer inquiries for small businesses—answering FAQs, capturing lead details, and providing instant responses. This frees up your time while ensuring every visitor gets immediate attention." },
+  { question: "What makes AIVized the best chatbot for small business UK 2025?", answer: "Unlike basic chatbots, AIVized is a fully managed service. We install everything on your website, monitor performance 24/7, and continuously optimise responses. Combined with our affordable pricing from £29/month, we're proud to be considered among the best chatbot for small business UK in 2025." },
+  { question: "How does AIVized compare to Intercom alternatives for small business?", answer: "Looking for Intercom alternatives for small business? AIVized offers similar AI capabilities at a fraction of the cost—without the complexity. We're fully managed, so there's no setup learning curve. From £29/month vs hundreds with enterprise tools, we're the smart choice for UK SMEs." },
+];
+
 const Index = () => {
   const location = useLocation();
+
+  // Inject homepage FAQPage schema dynamically
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": homepageFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-homepage-schema", "faq");
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      const existing = document.querySelector('script[data-homepage-schema="faq"]');
+      if (existing) existing.remove();
+    };
+  }, []);
 
   // Handle hash-based navigation on initial load and route changes
   useEffect(() => {
