@@ -112,8 +112,8 @@ export const PricingSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
           >
-            Rent Your Managed{" "}
-            <span className="text-gradient">AI Chatbot Now</span>
+            Get Your Managed{" "}
+            <span className="text-gradient">AI Chatbot Today</span>
           </motion.h2>
 
           <motion.p
@@ -227,7 +227,7 @@ export const PricingSection = () => {
                           Processing...
                         </span>
                       ) : (
-                        plan.popular ? "Rent Now" : "Rent This Plan"
+                        plan.popular ? "Get Started Now" : "Subscribe to This Plan"
                       )}
                     </MagneticButton>
                   </div>

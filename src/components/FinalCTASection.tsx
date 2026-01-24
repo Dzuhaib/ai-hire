@@ -22,8 +22,8 @@ export const FinalCTASection = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
           >
-            Rent Your AIVized{" "}
-            <span className="text-gradient">AI Colleague Now</span>
+            Get Your AIVized{" "}
+            <span className="text-gradient">AI Colleague Today</span>
           </motion.h2>
 
           <motion.p
@@ -59,7 +59,7 @@ export const FinalCTASection = () => {
               className="btn-primary text-sm px-12 py-6"
               onClick={() => scrollToSection("#pricing")}
             >
-              Rent Your AI Chatbot Now
+              Get Your AI Chatbot Today
             </MagneticButton>
           </motion.div>
         </div>

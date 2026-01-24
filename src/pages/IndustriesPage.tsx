@@ -88,7 +88,7 @@ const IndustriesPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Our Industries</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Choose Your Vertical</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Lead Generation Chatbot by <span className="text-gradient">Industry</span></h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

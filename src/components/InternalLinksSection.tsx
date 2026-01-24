@@ -9,15 +9,15 @@ import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 export const InternalLinksSection = () => {
   const links = [
     {
-      title: "AI Solutions by Location",
-      description: "Serving businesses across all major UK cities with local AI expertise.",
+      title: "Managed AI Chatbot by Location",
+      description: "Lead generation chatbot for UK small businesses—from London to Glasgow.",
       href: "/locations",
       icon: MapPin,
       items: ["London", "Manchester", "Birmingham", "Leeds", "Glasgow", "Edinburgh"],
     },
     {
-      title: "AI Solutions by Industry",
-      description: "Industry-trained AI employees ready to transform your business.",
+      title: "Managed AI Chatbot by Industry",
+      description: "Industry-trained AI chatbot for lead capture. We install everything.",
       href: "/industries",
       icon: Briefcase,
       items: ["Restaurants", "Real Estate", "E-Commerce"],
@@ -38,7 +38,7 @@ export const InternalLinksSection = () => {
             Explore Our Services
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-            Find the Right AI for <span className="text-gradient">Your Business</span>
+            Find the Right <span className="text-gradient">Managed AI Chatbot</span>
           </h2>
         </motion.div>
 

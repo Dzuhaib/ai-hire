@@ -74,7 +74,7 @@ export const HowItWorksSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Rent now and we install everything for you. No technical skills required—fully managed from day one.
+            Get started today and we install everything for you. No technical skills required—fully managed from day one.
           </motion.p>
         </div>
 

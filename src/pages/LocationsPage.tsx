@@ -96,12 +96,12 @@ const LocationsPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              AI Employees for{" "}
-              <span className="text-gradient">Every UK City</span>
+              Managed AI Chatbot for{" "}
+              <span className="text-gradient">UK Small Businesses</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              From London to Edinburgh, we help businesses across the UK automate customer service, capture more leads, and grow revenue with intelligent AI assistants.
+              From London to Edinburgh—get a fully managed AI chatbot for lead generation. We install everything, no technical skills needed.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
@@ -133,7 +133,7 @@ const LocationsPage = () => {
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Our Locations</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Choose Your City
+              AI Chatbot Service by <span className="text-gradient">City</span>
             </h2>
           </motion.div>
 

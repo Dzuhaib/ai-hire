@@ -141,11 +141,11 @@ export const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-[1.1] mb-8 text-balance"
           >
-            Rent a Fully Managed{" "}
+            Hire a Fully Managed{" "}
             <span className="text-gradient relative">
               AI Chatbot
             </span>
-            {" "}for Your Business
+            {" "}for Your Small Business
             <br />
             <span className="text-gradient-accent">We Install & Handle Everything 24/7</span>
           </motion.h1>
@@ -156,7 +156,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed"
           >
-            Rent your AI colleague now—we install, monitor, and maintain everything so you can focus on your business. 
+            Get your AI colleague today—we install, monitor, and maintain everything so you can focus on lead generation. 
             No technical skills needed. No developers. No downtime.
           </motion.p>
 
@@ -166,7 +166,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-12"
           >
-            From just <Link to="/#pricing" className="text-primary hover:underline">£29/month</Link>. No contracts. No complicated setup. Available across all <Link to="/locations" className="text-primary hover:underline">UK cities</Link>.
+            From just <Link to="/#pricing" className="text-primary hover:underline">£29/month</Link>. Capture leads 24/7. Available across all <Link to="/locations" className="text-primary hover:underline">UK cities</Link>.
           </motion.p>
 
           <motion.div
@@ -179,7 +179,7 @@ export const HeroSection = () => {
               className="btn-primary text-sm px-10 py-5 group"
               onClick={() => scrollToSection("#pricing")}
             >
-              <span>Rent Now — From £29/month</span>
+              <span>Get Started — From £29/month</span>
               <Zap className="w-4 h-4 ml-2 inline-block group-hover:animate-pulse" />
             </MagneticButton>
 
