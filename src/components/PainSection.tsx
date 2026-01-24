@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const painPoints = [
-  "Missed customer messages cost you money.",
-  "Hiring staff is expensive and slow.",
-  "Most chatbots feel robotic and useless.",
+  "Missed leads from your website cost you money every day.",
+  "Hiring 24/7 customer support staff is expensive and slow.",
+  "Most chatbots feel robotic—they don't capture leads or automate customer inquiries.",
 ];
 
 export const PainSection = () => {

@@ -9,51 +9,56 @@ import {
 
 const faqs = [
   {
-    question: "How does the setup process work?",
+    question: "What is a managed AI chatbot service?",
     answer: (
       <>
-        It's simple. After you subscribe, you securely share your website login details with us. Our team installs and configures your AI chatbot within 24 hours. No technical knowledge required from your side. See our <Link to="/#how-it-works" className="text-primary hover:underline">step-by-step process</Link>.
+        A managed AI chatbot service means we handle everything—installation, configuration, 24/7 monitoring, and ongoing updates. Unlike DIY chatbot builders, our managed AI chatbot service requires no technical skills from your side. We install, you benefit. Perfect for UK small businesses who want to capture leads 24/7 without the hassle. See our <Link to="/#how-it-works" className="text-primary hover:underline">step-by-step process</Link>.
       </>
     ),
   },
   {
-    question: "Is my website login information secure?",
+    question: "How much does an affordable AI chatbot for website cost?",
     answer: (
       <>
-        Absolutely. We use bank-level encryption to store your credentials. Our team only accesses your website during installation, and you can change your password immediately after setup if you prefer. Read our <Link to="/privacy-policy" className="text-primary hover:underline">privacy policy</Link> for details.
+        Our affordable AI chatbot for website starts from just £29/month—making it the cheapest managed AI chatbot UK businesses can find. No upfront costs, no developers needed, no long-term contracts. View our <Link to="/#pricing" className="text-primary hover:underline">pricing plans</Link> or check our <Link to="/refund-policy" className="text-primary hover:underline">14-day money-back guarantee</Link>.
       </>
     ),
   },
   {
-    question: "What does 'fully managed' mean?",
+    question: "How can I capture leads on my website 24/7?",
+    answer: (
+      <>
+        Our lead generation chatbot UK businesses trust works around the clock. It engages visitors, answers questions, and captures qualified leads automatically—even at 3am. Reduce missed leads from your website and never lose another customer enquiry. Explore how it works for <Link to="/industries" className="text-primary hover:underline">your industry</Link>.
+      </>
+    ),
+  },
+  {
+    question: "Is this AI chatbot for small business UK suitable for my company?",
     answer:
-      "We don't just deliver a chatbot and leave. Our team continuously monitors your chatbot, handles lead optimisation, applies ongoing updates, and resolves any issues immediately—before they impact your website or customers.",
+      "Yes! Our AI chatbot for small business UK is designed specifically for SMEs across restaurants, real estate, and e-commerce. Whether you're in London, Manchester, or Birmingham—our managed solution handles customer enquiries so you can focus on running your business.",
   },
   {
-    question: "How does the AI chatbot actually work?",
+    question: "How does your AI chatbot provide 24/7 customer support?",
+    answer:
+      "Our 24/7 customer support chatbot UK handles customer queries any time of day or night. It's monitored by our team and continuously improved. When it encounters a question it can't answer, it captures the customer's details and escalates to you immediately—you never lose a lead.",
+  },
+  {
+    question: "Can this chatbot help me automate customer inquiries for my small business?",
+    answer:
+      "Absolutely. Our AI is trained to automate customer inquiries for small businesses—answering FAQs, capturing lead details, and providing instant responses. This frees up your time while ensuring every visitor gets immediate attention.",
+  },
+  {
+    question: "What makes AIVized the best chatbot for small business UK 2025?",
     answer: (
       <>
-        Your AI chatbot is trained for your industry. It understands customer queries, provides accurate responses, captures leads, and works 24/7. Explore our <Link to="/industries" className="text-primary hover:underline">industry-specific solutions</Link> for restaurants, real estate, and e-commerce.
+        Unlike basic chatbots, AIVized is a fully managed service. We install everything on your website, monitor performance 24/7, and continuously optimise responses. Combined with our affordable pricing from £29/month, we're proud to be considered among the best chatbot for small business UK in 2025. <Link to="/locations" className="text-primary hover:underline">Find your local service</Link>.
       </>
     ),
   },
   {
-    question: "Can I customise what the AI says?",
+    question: "How does AIVized compare to Intercom alternatives for small business?",
     answer:
-      "Yes. You can provide specific information about your business, set the tone of voice, and define how the AI responds to different enquiries. We help configure everything during setup.",
-  },
-  {
-    question: "What happens if the AI can't answer a question?",
-    answer:
-      "When your chatbot encounters a question it can't confidently answer, it captures the customer's details and escalates to you via email. You never lose a potential lead.",
-  },
-  {
-    question: "How much does it cost?",
-    answer: (
-      <>
-        Our fully managed AI chatbot service starts from just £29 per month. No upfront costs, no long-term contracts. Cancel anytime. View our <Link to="/#pricing" className="text-primary hover:underline">pricing plans</Link> or check our <Link to="/refund-policy" className="text-primary hover:underline">refund policy</Link>.
-      </>
-    ),
+      "Looking for Intercom alternatives for small business? AIVized offers similar AI capabilities at a fraction of the cost—without the complexity. We're fully managed, so there's no setup learning curve. From £29/month vs hundreds with enterprise tools, we're the smart choice for UK SMEs.",
   },
 ];
 
