@@ -66,14 +66,14 @@ const IndustryPage = () => {
 
   useEffect(() => {
     if (industry) {
-      // Build keyword-rich title based on industry
+      // Build keyword-rich title based on industry (under 60 chars)
       const industryKeyword = industry.slug === "restaurants" 
         ? "Restaurant AI Chatbot UK" 
         : industry.slug === "real-estate" 
           ? "Real Estate AI Chatbot UK" 
           : "E-Commerce AI Chatbot UK";
       
-      document.title = `${industryKeyword} — Lead Generation Chatbot from £29/month | AI Vized`;
+      document.title = `${industryKeyword} | Managed from £29/month`;
 
       const setMeta = (name: string, content: string, isProperty = false) => {
         const attr = isProperty ? "property" : "name";
@@ -86,12 +86,12 @@ const IndustryPage = () => {
         el.setAttribute("content", content);
       };
 
-      const description = `${industry.heroSubtitle} Managed AI chatbot service for ${industry.industry.toLowerCase()} from £29/month. Capture leads 24/7 and automate customer inquiries.`;
-      const keywords = `${industry.slug} AI chatbot, ${industry.industry.toLowerCase()} chatbot UK, lead generation chatbot ${industry.slug}, managed AI chatbot service, 24/7 customer support chatbot UK, Intercom alternatives for small business, affordable AI chatbot for website`;
+      const description = `Managed AI chatbot for ${industry.industry.toLowerCase()}. Capture leads 24/7, automate inquiries. From £29/month, no technical skills needed.`;
+      const keywords = `${industry.slug} AI chatbot UK, ${industry.industry.toLowerCase()} chatbot, managed AI chatbot, lead generation chatbot, 24/7 customer support`;
 
       setMeta("description", description);
       setMeta("keywords", keywords);
-      setMeta("og:title", `${industryKeyword} — Lead Generation Chatbot | AI Vized`, true);
+      setMeta("og:title", `${industryKeyword} | Managed from £29/month`, true);
       setMeta("og:description", description, true);
 
       // Inject structured data
@@ -173,7 +173,7 @@ const IndustryPage = () => {
       });
 
       return () => {
-        document.title = "Managed AI Chatbot for Small Business UK — £29/month | AI Vized";
+        document.title = "Managed AI Chatbot for Small Business UK | £29/month";
         const scripts = document.querySelectorAll('script[data-industry-schema]');
         scripts.forEach(s => s.remove());
       };
