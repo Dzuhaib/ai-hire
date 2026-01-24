@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
@@ -24,6 +25,35 @@ const SectionLoader = () => (
 );
 
 const Index = () => {
+  const location = useLocation();
+
+  // Handle hash-based navigation on initial load and route changes
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      // Try scrolling immediately, then retry with delays for lazy-loaded content
+      const scrollToHash = () => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          return true;
+        }
+        return false;
+      };
+
+      // Immediate attempt
+      if (!scrollToHash()) {
+        // Retry after short delays to wait for lazy-loaded sections
+        const timeouts = [100, 300, 600, 1000];
+        timeouts.forEach((delay) => {
+          setTimeout(() => {
+            scrollToHash();
+          }, delay);
+        });
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
