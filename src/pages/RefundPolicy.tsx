@@ -186,6 +186,47 @@ const RefundPolicy = () => {
                   We stand behind our service and are committed to your success. If you're ever unsatisfied, please reach out to us – we'll do everything we can to make it right. Your trust is important to us, and we aim to be fair and transparent in all our dealings.
                 </p>
               </section>
+
+              {/* Internal Links Section */}
+              <section className="bg-muted/30 border border-border rounded-lg p-6 mt-8">
+                <h2 className="text-2xl font-serif font-semibold mb-4">Related Pages</h2>
+                <p className="text-muted-foreground mb-4">
+                  Learn more about our managed AI chatbot service and policies:
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="font-semibold mb-2">Our Services</h3>
+                    <ul className="space-y-2 text-sm">
+                      <li>
+                        <Link to="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
+                        <span className="text-muted-foreground"> — From £29/month</span>
+                      </li>
+                      <li>
+                        <Link to="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
+                        <span className="text-muted-foreground"> — UK cities</span>
+                      </li>
+                      <li>
+                        <Link to="/industries" className="text-primary hover:underline">AI Chatbot by Industry</Link>
+                        <span className="text-muted-foreground"> — Restaurants, Real Estate, E-Commerce</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Legal</h3>
+                    <ul className="space-y-2 text-sm">
+                      <li>
+                        <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>
+                      </li>
+                      <li>
+                        <Link to="/terms-of-service" className="text-primary hover:underline">Terms of Service</Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="text-primary hover:underline">Back to Homepage</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
             </div>
           </motion.div>
         </div>
