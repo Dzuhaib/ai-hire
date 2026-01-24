@@ -20,6 +20,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://aivized.com/refund-policy</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!-- UK Locations Index Page -->
   <url>
     <loc>https://aivized.com/locations</loc>
