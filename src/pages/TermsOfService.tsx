@@ -9,9 +9,9 @@ const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
-        title="Terms of Service | AIVized - AI Service Agreement"
-        description="Read AIVized's terms of service. Understand your rights and obligations when using our AI-powered customer service solutions, including subscription terms and service guarantees."
-        keywords="AIVized terms of service, AI service agreement, chatbot terms, AI subscription, service agreement"
+        title="Terms of Service | AIVized Managed AI Chatbot"
+        description="AIVized terms of service for managed AI chatbot subscriptions. Understand your rights, service agreement, and subscription terms from £29/month."
+        keywords="AIVized terms of service, managed AI chatbot terms, AI service agreement, chatbot subscription terms, AI chatbot UK terms"
         canonical="https://aivized.com/terms-of-service"
       />
       <Header />
