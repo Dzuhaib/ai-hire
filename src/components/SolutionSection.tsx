@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const benefits = [
-  "Engages visitors and answers questions instantly—24/7",
-  "Captures qualified leads automatically",
-  "Fully managed by our team—zero maintenance for you",
+  "24/7 customer support chatbot that engages visitors instantly",
+  "Lead generation chatbot UK businesses trust—captures qualified leads automatically",
+  "Fully managed AI chatbot service—zero maintenance for you",
   "Continuous monitoring & immediate issue resolution",
   "Ongoing updates and improvements included",
-  "From €29/month—no developers, no contracts",
+  "Affordable AI chatbot for website—from £29/month, no developers, no contracts",
 ];
 
 export const SolutionSection = () => {

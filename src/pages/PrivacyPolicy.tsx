@@ -9,9 +9,9 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
-        title="Privacy Policy | AIVized Managed AI Chatbot"
-        description="AIVized privacy policy for managed AI chatbot services. Learn how we protect your data, GDPR compliance, and your rights. Transparent data practices."
-        keywords="AIVized privacy policy, managed AI chatbot privacy, data protection AI chatbot, GDPR AI service, business data security, AI chatbot data policy"
+        title="Privacy Policy | AIVized Managed AI Chatbot Service UK"
+        description="AIVized privacy policy for managed AI chatbot service. GDPR compliant data protection for UK small business. Learn how we protect your customer data."
+        keywords="AIVized privacy policy, managed AI chatbot service, AI chatbot for small business UK, GDPR AI chatbot, data protection, lead generation chatbot UK"
         canonical="https://aivized.com/privacy-policy"
       />
       <Header />

@@ -9,9 +9,9 @@ const RefundPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
-        title="Refund Policy | AIVized Managed AI Chatbot"
-        description="AIVized refund policy with 14-day money-back guarantee. Fair cancellation terms for managed AI chatbot subscriptions. No questions asked."
-        keywords="AIVized refund policy, managed AI chatbot refund, money-back guarantee AI chatbot, chatbot subscription cancellation, AI service refund UK"
+        title="Refund Policy | AIVized Managed AI Chatbot Service UK"
+        description="AIVized 14-day money-back guarantee for managed AI chatbot service. Fair refund terms for UK small business. Affordable AI chatbot from £29/month."
+        keywords="AIVized refund policy, managed AI chatbot service, AI chatbot for small business UK, affordable AI chatbot refund, money-back guarantee UK"
         canonical="https://aivized.com/refund-policy"
       />
       <Header />

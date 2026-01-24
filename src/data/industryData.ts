@@ -59,12 +59,13 @@ export const industries: Record<string, IndustryData> = {
       { value: "3 sec", label: "Average response time" }
     ],
     faqs: [
-      { question: "Can the AI handle complex dietary requirements?", answer: "Yes, our restaurant AI is trained to provide detailed information about allergens, vegetarian/vegan options, gluten-free dishes, and other dietary needs based on your menu data." },
-      { question: "Will the AI integrate with my existing booking system?", answer: "The AI captures bookings and sends them directly to you via email or your preferred method. It works alongside existing systems like OpenTable, ResDiary, or simple diary systems without requiring technical integration." },
-      { question: "What happens if a customer asks something the AI can't answer?", answer: "The AI will politely capture their details and escalate the enquiry to you. You'll receive an email with the customer's question and contact information so you can follow up personally." },
-      { question: "Can it handle private dining and large group enquiries?", answer: "Absolutely. The AI can collect all necessary details for group bookings, private events, and special occasions, then pass them to your events team for follow-up." },
-      { question: "How do I update the AI when my menu changes?", answer: "Simply let us know when you update your menu, and we'll update your AI's knowledge at no extra cost. Seasonal changes, new dishes, price updates—all covered." },
-      { question: "Does it work for takeaway and delivery orders?", answer: "Yes, the AI can answer questions about your takeaway menu, delivery areas, and ordering process. It can also capture order requests and direct customers to your online ordering system." }
+      { question: "How does a managed AI chatbot service help restaurants capture leads 24/7?", answer: "Our managed AI chatbot service handles bookings and enquiries around the clock. It captures leads from visitors even at 2am, responds instantly, and reduces missed leads from your website—all without any technical skills required from your team." },
+      { question: "Is this an affordable AI chatbot for restaurant websites?", answer: "Yes! Starting from just £29/month, AIVized is the most affordable AI chatbot for restaurant websites in the UK. No developers needed, no setup fees—we install everything for you." },
+      { question: "Can your lead generation chatbot UK handle dietary and allergen questions?", answer: "Absolutely. Our lead generation chatbot UK is trained to provide detailed information about allergens, vegetarian/vegan options, gluten-free dishes, and other dietary needs based on your menu data." },
+      { question: "Will this 24/7 customer support chatbot integrate with my booking system?", answer: "Our 24/7 customer support chatbot captures bookings and sends them directly to you via email. It works alongside existing systems like OpenTable, ResDiary, or simple diary systems without requiring technical integration." },
+      { question: "What happens if a customer asks something the AI chatbot can't answer?", answer: "The AI will politely capture their details and escalate the enquiry to you. You'll receive an email with the customer's question and contact information so you can follow up personally—you never lose a lead." },
+      { question: "How do I update the AI chatbot when my menu changes?", answer: "Simply let us know when you update your menu, and we'll update your AI's knowledge at no extra cost. Seasonal changes, new dishes, price updates—all covered as part of our fully managed service." },
+      { question: "Does this AI chatbot for small business UK work for takeaway orders?", answer: "Yes, our AI chatbot for small business UK can answer questions about your takeaway menu, delivery areas, and ordering process. It can also capture order requests and direct customers to your online ordering system." }
     ],
     testimonial: {
       quote: "Since adding AI Vized, we've captured 40% more reservations—especially those late-night bookings we used to miss completely. It's like having a host who never takes a break.",
@@ -117,12 +118,12 @@ export const industries: Record<string, IndustryData> = {
       { value: "£0", label: "Per viewing scheduled" }
     ],
     faqs: [
-      { question: "Can the AI access my current property listings?", answer: "The AI is trained on your property portfolio and can provide detailed information about each listing. When you add new properties or update existing ones, we update the AI's knowledge accordingly." },
-      { question: "How does the AI qualify buyers?", answer: "Your AI asks key qualifying questions—budget range, chain status, mortgage approval, timeline to move—and captures this information so you know exactly who's worth your time." },
-      { question: "Will it work for both sales and lettings?", answer: "Yes, the AI can be configured to handle sales enquiries, rental enquiries, or both. It understands the different requirements and processes for each." },
-      { question: "Can it handle commercial property enquiries?", answer: "Absolutely. Whether residential or commercial, the AI adapts to your property type and the specific questions your clients typically ask." },
-      { question: "What about GDPR and data protection?", answer: "AI Vized is fully GDPR compliant. All lead data is encrypted, stored securely in the UK, and handled according to property industry data protection requirements." },
-      { question: "How do I know if a lead is hot or cold?", answer: "The AI captures qualification data with each enquiry, so you can see at a glance who's ready to proceed and who's just browsing. This helps you prioritise your follow-up calls." }
+      { question: "How does a lead generation chatbot UK help estate agents?", answer: "Our lead generation chatbot UK qualifies buyers automatically by asking about budget, chain status, and timeline. It captures leads 24/7 and sends qualified enquiries directly to you—so you spend time closing deals, not answering basic questions." },
+      { question: "Is this managed AI chatbot service suitable for real estate?", answer: "Absolutely. Our managed AI chatbot service is trained specifically for UK property. It handles enquiries, schedules viewings, and provides detailed property information around the clock." },
+      { question: "Can the AI chatbot for small business UK access my property listings?", answer: "Yes, your AI chatbot for small business UK is trained on your property portfolio. When you add new properties or update existing ones, we update the AI's knowledge accordingly—all included in your subscription." },
+      { question: "Will your 24/7 customer support chatbot work for both sales and lettings?", answer: "Yes, our 24/7 customer support chatbot can be configured to handle sales enquiries, rental enquiries, or both. It understands the different requirements and processes for each." },
+      { question: "How affordable is this AI chatbot for real estate websites?", answer: "Starting from just £29/month, AIVized offers the most affordable AI chatbot for real estate websites in the UK. Compare that to hiring a receptionist at £28,000+ annually—the savings are substantial." },
+      { question: "Is the chatbot GDPR compliant for handling property leads?", answer: "Yes. AIVized is fully GDPR compliant. All lead data is encrypted, stored securely in the UK, and handled according to property industry data protection requirements." }
     ],
     testimonial: {
       quote: "We're closing more deals because we're spending time with qualified buyers instead of answering basic questions. The AI handles the filtering—we handle the selling.",
@@ -175,12 +176,12 @@ export const industries: Record<string, IndustryData> = {
       { value: "24/7", label: "Customer support" }
     ],
     faqs: [
-      { question: "Can the AI access my product catalogue?", answer: "Yes, your AI is trained on your complete product range and can answer detailed questions about specifications, sizing, materials, and more. We update this when you add new products." },
-      { question: "Does it integrate with my e-commerce platform?", answer: "The AI works via your website and doesn't require complex integrations. It captures enquiries and sends them to you, fitting into your existing workflow whether you use Shopify, WooCommerce, Magento, or custom platforms." },
-      { question: "Can it handle order tracking questions?", answer: "The AI can provide general shipping information and capture order-specific queries for your team to follow up on. For real-time tracking, we can guide customers to your tracking page." },
-      { question: "What about returns and refunds?", answer: "Your AI explains your returns policy, guides customers through the process, and captures return requests for your team to process—reducing support workload significantly." },
-      { question: "Will it match my brand voice?", answer: "Absolutely. We train your AI to match your brand personality—whether that's casual and fun, premium and sophisticated, or anything in between. Every response feels authentically you." },
-      { question: "How does it help with cart abandonment?", answer: "When customers have questions at checkout, your AI provides instant answers—about shipping costs, delivery times, returns—removing the friction that causes abandoned carts." }
+      { question: "How does your lead generation chatbot UK reduce cart abandonment?", answer: "Our lead generation chatbot UK answers questions instantly at checkout—about shipping costs, delivery times, returns—removing the friction that causes 70% of abandoned carts. It captures leads and keeps customers engaged 24/7." },
+      { question: "Is this an affordable AI chatbot for e-commerce websites?", answer: "Yes! Starting from £29/month, AIVized is the most affordable AI chatbot for e-commerce websites in the UK. Handle 80% of customer queries automatically without expensive support staff." },
+      { question: "Can the managed AI chatbot service handle order tracking?", answer: "Our managed AI chatbot service provides general shipping information and captures order-specific queries for your team. For real-time tracking, we guide customers to your tracking page seamlessly." },
+      { question: "How does the 24/7 customer support chatbot UK handle returns?", answer: "Your 24/7 customer support chatbot UK explains your returns policy, guides customers through the process, and captures return requests for your team to process—reducing support workload significantly." },
+      { question: "Will this AI chatbot for small business UK match my brand voice?", answer: "Absolutely. We train your AI chatbot for small business UK to match your brand personality—whether casual, premium, or anything in between. Every response feels authentically you." },
+      { question: "Does the chatbot integrate with Shopify, WooCommerce, or other platforms?", answer: "Our AI works via your website and doesn't require complex integrations. It captures enquiries and sends them to you, fitting into your existing workflow whether you use Shopify, WooCommerce, Magento, or custom platforms." }
     ],
     testimonial: {
       quote: "Our conversion rate jumped 25% after implementing AI Vized. Customers get instant answers to product questions instead of abandoning their carts to 'think about it'.",
