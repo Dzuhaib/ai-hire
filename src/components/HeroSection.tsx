@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
 import { HeroBackground } from "./HeroBackground";
 import { Zap, Clock, TrendingUp, Bot, MessageCircle } from "lucide-react";
@@ -154,7 +155,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed"
           >
-            We install, monitor, and maintain your AI chatbot so you can focus on your business. 
+            We install, monitor, and maintain your <Link to="/industries" className="text-primary hover:underline">AI chatbot</Link> so you can focus on your business. 
             No developers. No technical hassle. No downtime.
           </motion.p>
 
@@ -164,7 +165,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-12"
           >
-            From just £29/month. No contracts. No complicated setup. Cancel anytime.
+            From just <Link to="/#pricing" className="text-primary hover:underline">£29/month</Link>. No contracts. No complicated setup. Available across all <Link to="/locations" className="text-primary hover:underline">UK cities</Link>.
           </motion.p>
 
           <motion.div

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const painPoints = [
   "Missed customer messages cost you money.",
@@ -35,6 +36,17 @@ export const PainSection = () => {
               </motion.p>
             ))}
           </div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-12 text-lg text-muted-foreground"
+          >
+            That's why businesses across <Link to="/locations" className="text-primary hover:underline">UK cities</Link> trust our{" "}
+            <Link to="/industries" className="text-primary hover:underline">managed AI chatbot</Link> to capture leads 24/7.
+          </motion.p>
         </div>
       </div>
     </section>

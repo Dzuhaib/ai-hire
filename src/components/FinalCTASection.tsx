@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
 
 export const FinalCTASection = () => {
@@ -30,9 +31,22 @@ export const FinalCTASection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-muted-foreground mb-10"
+            className="text-lg text-muted-foreground mb-6"
           >
             No contracts. Cancel anytime. Live in minutes.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-sm text-muted-foreground/80 mb-10"
+          >
+            Serving businesses in <Link to="/locations/london" className="text-primary hover:underline">London</Link>,{" "}
+            <Link to="/locations/manchester" className="text-primary hover:underline">Manchester</Link>,{" "}
+            <Link to="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>, and{" "}
+            <Link to="/locations" className="text-primary hover:underline">more UK cities</Link>.
           </motion.p>
 
           <motion.div
