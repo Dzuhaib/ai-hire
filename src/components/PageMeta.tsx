@@ -62,7 +62,7 @@ export function PageMeta({
 
     // Cleanup: restore defaults when component unmounts
     return () => {
-      document.title = "Managed AI Chatbot for Small Business UK | AIVized";
+      document.title = "Managed AI Chatbot for Small Business UK | £29/month";
     };
   }, [title, description, keywords, canonical, ogTitle, ogDescription]);
 
