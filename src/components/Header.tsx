@@ -112,7 +112,7 @@ export const Header = () => {
               className="btn-primary text-xs"
               onClick={() => scrollToSection("#pricing")}
             >
-              Rent Now
+              Get Started
             </MagneticButton>
           </div>
 
@@ -174,7 +174,7 @@ export const Header = () => {
                       onClick={() => scrollToSection("#pricing")}
                       className="btn-primary w-full text-center"
                     >
-                      Rent Now
+                      Get Started
                     </button>
                   </SheetClose>
                 </div>
