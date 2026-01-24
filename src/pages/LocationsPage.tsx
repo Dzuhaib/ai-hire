@@ -72,12 +72,12 @@ const LocationsPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageMeta
-        title="AI Chatbot Service London, Manchester, Birmingham & UK Cities | AI Vized"
-        description="Get a managed AI chatbot for your business in London, Manchester, Birmingham, Leeds, Glasgow & more. Lead generation chatbot UK—capture leads 24/7 from £29/month."
-        keywords="AI chatbot service London, chatbot for business Manchester, AI assistant Birmingham, small business chatbot Leeds, lead gen chatbot Glasgow, 24/7 customer support chatbot UK, managed AI chatbot service"
+        title="AI Chatbot Service UK Cities | Managed from £29/month"
+        description="Managed AI chatbot for London, Manchester, Birmingham & UK cities. 24/7 lead capture, no technical skills needed. Get started from £29/month."
+        keywords="AI chatbot service London, managed AI chatbot Manchester, AI assistant Birmingham, small business chatbot Leeds, lead gen chatbot Glasgow, 24/7 customer support chatbot UK"
         canonical="https://aivized.com/locations"
-        ogTitle="AI Chatbot Service Across UK Cities | AI Vized"
-        ogDescription="Managed AI chatbot for London, Manchester, Birmingham & 10+ UK cities. Capture leads 24/7 from £29/month."
+        ogTitle="AI Chatbot Service Across UK Cities | AIVized"
+        ogDescription="Managed AI chatbot for UK cities. 24/7 lead capture from £29/month."
       />
       <Header />
 

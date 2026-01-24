@@ -57,7 +57,7 @@ const LocationPage = () => {
   useEffect(() => {
     if (location) {
       // Set page meta with researched keywords
-      document.title = `AI Chatbot Service ${location.city} — Managed AI Chatbot from £29/month | AI Vized`;
+      document.title = `Managed AI Chatbot ${location.city} | From £29/month`;
       
       const setMeta = (name: string, content: string, isProperty = false) => {
         const attr = isProperty ? "property" : "name";
@@ -70,12 +70,12 @@ const LocationPage = () => {
         el.setAttribute("content", content);
       };
 
-      const description = `Get a managed AI chatbot for your ${location.city} business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. ${location.city} AI chatbot service with full support.`;
-      const keywords = `AI chatbot service ${location.city}, chatbot for business ${location.city}, ${location.city} lead generation chatbot, managed AI chatbot ${location.region}, 24/7 customer support chatbot ${location.city}, small business chatbot ${location.city}, affordable AI chatbot ${location.city}`;
+      const description = `Managed AI chatbot for ${location.city} businesses from £29/month. 24/7 lead capture, we handle installation and support.`;
+      const keywords = `AI chatbot ${location.city}, managed AI chatbot ${location.city}, lead generation chatbot ${location.region}, 24/7 customer support ${location.city}, small business chatbot UK`;
 
       setMeta("description", description);
       setMeta("keywords", keywords);
-      setMeta("og:title", `AI Chatbot Service ${location.city} — From £29/month | AI Vized`, true);
+      setMeta("og:title", `Managed AI Chatbot ${location.city} | From £29/month`, true);
       setMeta("og:description", description, true);
 
       // Inject structured data
@@ -191,7 +191,7 @@ const LocationPage = () => {
       });
 
       return () => {
-        document.title = "Managed AI Chatbot for Small Business UK — £29/month | AI Vized";
+        document.title = "Managed AI Chatbot for Small Business UK | £29/month";
         const scripts = document.querySelectorAll('script[data-location-schema]');
         scripts.forEach(s => s.remove());
       };
