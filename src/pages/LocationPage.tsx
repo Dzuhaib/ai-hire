@@ -1,6 +1,7 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { MapPin, CheckCircle, ArrowRight, Phone, Mail, Clock, Zap, Users, TrendingUp, Shield, Bot, Headphones, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -8,7 +9,6 @@ import { getLocationBySlug, ukLocations } from "@/data/locationData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import NotFound from "./NotFound";
-
 // City-specific AI assistant images
 import aiLondon from "@/assets/locations/ai-london.png";
 import aiManchester from "@/assets/locations/ai-manchester.png";
@@ -54,149 +54,80 @@ const LocationPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
 
-  useEffect(() => {
-    if (location) {
-      // Set page meta with researched keywords
-      document.title = `Managed AI Chatbot ${location.city} | From £29/month`;
-      
-      const setMeta = (name: string, content: string, isProperty = false) => {
-        const attr = isProperty ? "property" : "name";
-        let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
-        if (!el) {
-          el = document.createElement("meta");
-          el.setAttribute(attr, name);
-          document.head.appendChild(el);
-        }
-        el.setAttribute("content", content);
-      };
+  // Generate structured data schemas
+  const schemas = useMemo(() => {
+    if (!location) return null;
 
-      const description = `Managed AI chatbot for ${location.city} businesses from £29/month. 24/7 lead capture, we handle installation and support.`;
-      const keywords = `AI chatbot ${location.city}, managed AI chatbot ${location.city}, lead generation chatbot ${location.region}, 24/7 customer support ${location.city}, small business chatbot UK`;
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://aivized.com/locations" },
+        { "@type": "ListItem", "position": 3, "name": location.city, "item": `https://aivized.com/locations/${location.slug}` }
+      ]
+    };
 
-      setMeta("description", description);
-      setMeta("keywords", keywords);
-      setMeta("og:title", `Managed AI Chatbot ${location.city} | From £29/month`, true);
-      setMeta("og:description", description, true);
+    const localBusinessSchema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": `AI Vized - ${location.city}`,
+      "description": location.description,
+      "url": `https://aivized.com/locations/${location.slug}`,
+      "telephone": "+44-000-000-0000",
+      "email": "myselfzuhaib@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": location.city,
+        "addressRegion": location.region,
+        "addressCountry": "UK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": location.coordinates.lat,
+        "longitude": location.coordinates.lng
+      },
+      "areaServed": location.serviceAreas.map(area => ({ "@type": "City", "name": area })),
+      "priceRange": "££",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    };
 
-      // Inject structured data
-      const existingScripts = document.querySelectorAll('script[data-location-schema]');
-      existingScripts.forEach(s => s.remove());
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": location.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+      }))
+    };
 
-      // Breadcrumb Schema
-      const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://aivized.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Locations",
-            "item": "https://aivized.com/locations"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": location.city,
-            "item": `https://aivized.com/locations/${location.slug}`
-          }
-        ]
-      };
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "AI Employee Solutions",
+      "provider": { "@type": "Organization", "name": "AI Vized" },
+      "areaServed": { "@type": "City", "name": location.city },
+      "description": `AI-powered customer service and lead generation for ${location.city} businesses`,
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "price": "29",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "month" }
+      }
+    };
 
-      // LocalBusiness Schema
-      const localBusinessSchema = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": `AI Vized - ${location.city}`,
-        "description": location.description,
-        "url": `https://aivized.com/locations/${location.slug}`,
-        "telephone": "+44-000-000-0000",
-        "email": "myselfzuhaib@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": location.city,
-          "addressRegion": location.region,
-          "addressCountry": "UK"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": location.coordinates.lat,
-          "longitude": location.coordinates.lng
-        },
-        "areaServed": location.serviceAreas.map(area => ({
-          "@type": "City",
-          "name": area
-        })),
-        "priceRange": "££",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
-      };
-
-      // FAQ Schema
-      const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": location.faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      };
-
-      // Service Schema
-      const serviceSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "AI Employee Solutions",
-        "provider": {
-          "@type": "Organization",
-          "name": "AI Vized"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": location.city
-        },
-        "description": `AI-powered customer service and lead generation for ${location.city} businesses`,
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "GBP",
-          "price": "29",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "29",
-            "priceCurrency": "GBP",
-            "unitText": "month"
-          }
-        }
-      };
-
-      [breadcrumbSchema, localBusinessSchema, faqSchema, serviceSchema].forEach((schema, idx) => {
-        const script = document.createElement("script");
-        script.type = "application/ld+json";
-        script.setAttribute("data-location-schema", `schema-${idx}`);
-        script.textContent = JSON.stringify(schema);
-        document.head.appendChild(script);
-      });
-
-      return () => {
-        document.title = "Managed AI Chatbot for Small Business UK | £29/month";
-        const scripts = document.querySelectorAll('script[data-location-schema]');
-        scripts.forEach(s => s.remove());
-      };
-    }
+    return { breadcrumbSchema, localBusinessSchema, faqSchema, serviceSchema };
   }, [location]);
+
+  const metaTitle = location ? `Managed AI Chatbot ${location.city} | From £29/month` : "";
+  const metaDescription = location ? `Managed AI chatbot for ${location.city} businesses from £29/month. 24/7 lead capture, we handle installation and support.` : "";
+  const metaKeywords = location ? `AI chatbot ${location.city}, managed AI chatbot ${location.city}, lead generation chatbot ${location.region}, 24/7 customer support ${location.city}, small business chatbot UK` : "";
 
   if (!location) {
     return <NotFound />;
@@ -208,6 +139,21 @@ const LocationPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Helmet>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywords} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        {schemas && (
+          <>
+            <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
+            <script type="application/ld+json">{JSON.stringify(schemas.localBusinessSchema)}</script>
+            <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
+            <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
+          </>
+        )}
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
