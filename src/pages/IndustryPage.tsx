@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
   CheckCircle, ArrowRight, Zap, Users, Shield, Clock, TrendingUp, 
   Bot, MessageCircle, Star, Calendar, UtensilsCrossed, PartyPopper, 
@@ -64,121 +65,57 @@ const IndustryPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
 
-  useEffect(() => {
-    if (industry) {
-      // Build keyword-rich title based on industry (under 60 chars)
-      const industryKeyword = industry.slug === "restaurants" 
-        ? "Restaurant AI Chatbot UK" 
-        : industry.slug === "real-estate" 
-          ? "Real Estate AI Chatbot UK" 
-          : "E-Commerce AI Chatbot UK";
-      
-      document.title = `${industryKeyword} | Managed from £29/month`;
+  // Generate structured data schemas
+  const schemas = useMemo(() => {
+    if (!industry) return null;
 
-      const setMeta = (name: string, content: string, isProperty = false) => {
-        const attr = isProperty ? "property" : "name";
-        let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
-        if (!el) {
-          el = document.createElement("meta");
-          el.setAttribute(attr, name);
-          document.head.appendChild(el);
-        }
-        el.setAttribute("content", content);
-      };
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+        { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://aivized.com/industries" },
+        { "@type": "ListItem", "position": 3, "name": industry.industry, "item": `https://aivized.com/${industry.slug}` }
+      ]
+    };
 
-      const description = `Managed AI chatbot for ${industry.industry.toLowerCase()}. Capture leads 24/7, automate inquiries. From £29/month, no technical skills needed.`;
-      const keywords = `${industry.slug} AI chatbot UK, ${industry.industry.toLowerCase()} chatbot, managed AI chatbot, lead generation chatbot, 24/7 customer support`;
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": `AI Solutions for ${industry.industry}`,
+      "provider": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+      "description": industry.description,
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "price": "29",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "month" }
+      }
+    };
 
-      setMeta("description", description);
-      setMeta("keywords", keywords);
-      setMeta("og:title", `${industryKeyword} | Managed from £29/month`, true);
-      setMeta("og:description", description, true);
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": industry.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+      }))
+    };
 
-      // Inject structured data
-      const existingScripts = document.querySelectorAll('script[data-industry-schema]');
-      existingScripts.forEach(s => s.remove());
-
-      // Breadcrumb Schema
-      const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://aivized.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Industries",
-            "item": "https://aivized.com/industries"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": industry.industry,
-            "item": `https://aivized.com/${industry.slug}`
-          }
-        ]
-      };
-
-      const serviceSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": `AI Solutions for ${industry.industry}`,
-        "provider": {
-          "@type": "Organization",
-          "name": "AI Vized",
-          "url": "https://aivized.com"
-        },
-        "description": industry.description,
-        "areaServed": {
-          "@type": "Country",
-          "name": "United Kingdom"
-        },
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "GBP",
-          "price": "29",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "29",
-            "priceCurrency": "GBP",
-            "unitText": "month"
-          }
-        }
-      };
-
-      const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": industry.faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      };
-
-      [breadcrumbSchema, serviceSchema, faqSchema].forEach((schema, idx) => {
-        const script = document.createElement("script");
-        script.type = "application/ld+json";
-        script.setAttribute("data-industry-schema", `schema-${idx}`);
-        script.textContent = JSON.stringify(schema);
-        document.head.appendChild(script);
-      });
-
-      return () => {
-        document.title = "Managed AI Chatbot for Small Business UK | £29/month";
-        const scripts = document.querySelectorAll('script[data-industry-schema]');
-        scripts.forEach(s => s.remove());
-      };
-    }
+    return { breadcrumbSchema, serviceSchema, faqSchema };
   }, [industry]);
+
+  const industryKeyword = industry?.slug === "restaurants" 
+    ? "Restaurant AI Chatbot UK" 
+    : industry?.slug === "real-estate" 
+      ? "Real Estate AI Chatbot UK" 
+      : "E-Commerce AI Chatbot UK";
+  
+  const metaTitle = industry ? `${industryKeyword} | Managed from £29/month` : "";
+  const metaDescription = industry ? `Managed AI chatbot for ${industry.industry.toLowerCase()}. Capture leads 24/7, automate inquiries. From £29/month, no technical skills needed.` : "";
+  const metaKeywords = industry ? `${industry.slug} AI chatbot UK, ${industry.industry.toLowerCase()} chatbot, managed AI chatbot, lead generation chatbot, 24/7 customer support` : "";
 
   if (!industry) {
     return <NotFound />;
@@ -190,6 +127,20 @@ const IndustryPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Helmet>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywords} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        {schemas && (
+          <>
+            <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
+            <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
+            <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
+          </>
+        )}
+      </Helmet>
       <Header />
 
       {/* Hero Section */}
