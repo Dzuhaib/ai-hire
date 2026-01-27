@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { MapPin, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageMeta } from "@/components/PageMeta";
 import { ukLocations } from "@/data/locationData";
 
 // City images
@@ -36,49 +36,30 @@ const cityImages: Record<string, string> = {
 const LocationsPage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
-
-    // Inject breadcrumb structured data
-    const breadcrumbSchema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://aivized.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Locations",
-          "item": "https://aivized.com/locations"
-        }
-      ]
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-breadcrumb-schema", "true");
-    script.textContent = JSON.stringify(breadcrumbSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      const scripts = document.querySelectorAll('script[data-breadcrumb-schema]');
-      scripts.forEach(s => s.remove());
-    };
   }, []);
+
+  // Breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://aivized.com/locations" }
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageMeta
-        title="AI Chatbot Service UK Cities | Managed from £29/month"
-        description="Managed AI chatbot for London, Manchester, Birmingham & UK cities. 24/7 lead capture, no technical skills needed. Get started from £29/month."
-        keywords="AI chatbot service London, managed AI chatbot Manchester, AI assistant Birmingham, small business chatbot Leeds, lead gen chatbot Glasgow, 24/7 customer support chatbot UK"
-        canonical="https://aivized.com/locations"
-        ogTitle="AI Chatbot Service Across UK Cities | AIVized"
-        ogDescription="Managed AI chatbot for UK cities. 24/7 lead capture from £29/month."
-      />
+      <Helmet>
+        <title>AI Chatbot Service UK Cities | Managed from £29/month</title>
+        <meta name="description" content="Managed AI chatbot for London, Manchester, Birmingham & UK cities. 24/7 lead capture, no technical skills needed. Get started from £29/month." />
+        <meta name="keywords" content="AI chatbot service London, managed AI chatbot Manchester, AI assistant Birmingham, small business chatbot Leeds, lead gen chatbot Glasgow, 24/7 customer support chatbot UK" />
+        <link rel="canonical" href="https://aivized.com/locations" />
+        <meta property="og:url" content="https://aivized.com/locations" />
+        <meta property="og:title" content="AI Chatbot Service Across UK Cities | AIVized" />
+        <meta property="og:description" content="Managed AI chatbot for UK cities. 24/7 lead capture from £29/month." />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      </Helmet>
       <Header />
 
       {/* Hero Section */}

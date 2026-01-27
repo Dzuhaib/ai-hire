@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface PageMetaProps {
   title: string;
@@ -10,8 +10,10 @@ interface PageMetaProps {
 }
 
 /**
- * Sets page-specific meta tags for SEO.
+ * Sets page-specific meta tags for SEO using react-helmet-async.
  * Each page should use unique keywords and descriptions.
+ * 
+ * IMPORTANT: Always provide a canonical URL to avoid "Alternate page with proper canonical tag" errors.
  */
 export function PageMeta({
   title,
@@ -21,50 +23,17 @@ export function PageMeta({
   ogTitle,
   ogDescription,
 }: PageMetaProps) {
-  useEffect(() => {
-    // Set document title
-    document.title = title;
-
-    // Helper to set/update meta tags
-    const setMeta = (name: string, content: string, isProperty = false) => {
-      const attr = isProperty ? "property" : "name";
-      let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute(attr, name);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", content);
-    };
-
-    // Standard meta
-    setMeta("description", description);
-    if (keywords) setMeta("keywords", keywords);
-
-    // Open Graph
-    setMeta("og:title", ogTitle || title, true);
-    setMeta("og:description", ogDescription || description, true);
-
-    // Twitter
-    setMeta("twitter:title", ogTitle || title);
-    setMeta("twitter:description", ogDescription || description);
-
-    // Canonical URL
-    if (canonical) {
-      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-      if (!link) {
-        link = document.createElement("link");
-        link.setAttribute("rel", "canonical");
-        document.head.appendChild(link);
-      }
-      link.setAttribute("href", canonical);
-    }
-
-    // Cleanup: restore defaults when component unmounts
-    return () => {
-      document.title = "Managed AI Chatbot for Small Business UK | £29/month";
-    };
-  }, [title, description, keywords, canonical, ogTitle, ogDescription]);
-
-  return null;
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonical && <link rel="canonical" href={canonical} />}
+      {canonical && <meta property="og:url" content={canonical} />}
+      <meta property="og:title" content={ogTitle || title} />
+      <meta property="og:description" content={ogDescription || description} />
+      <meta name="twitter:title" content={ogTitle || title} />
+      <meta name="twitter:description" content={ogDescription || description} />
+    </Helmet>
+  );
 }

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Layers3, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageMeta } from "@/components/PageMeta";
 import { allIndustries } from "@/data/industryData";
 
 import aiRestaurantHero from "@/assets/industries/ai-restaurant-hero.png";
@@ -27,14 +27,28 @@ const IndustriesPage = () => {
     [],
   );
 
+  // Breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+      { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://aivized.com/industries" }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageMeta
-        title="AI Chatbot for Restaurants, Real Estate & E-Commerce UK"
-        description="Industry-trained managed AI chatbots for restaurants, real estate & e-commerce. Capture leads 24/7, from £29/month. No technical skills needed."
-        keywords="restaurant AI chatbot, real estate AI assistant, ecommerce AI chatbot, lead generation chatbot UK, managed AI chatbot service, 24/7 customer support chatbot UK"
-        canonical="https://aivized.com/industries"
-      />
+      <Helmet>
+        <title>AI Chatbot for Restaurants, Real Estate & E-Commerce UK</title>
+        <meta name="description" content="Industry-trained managed AI chatbots for restaurants, real estate & e-commerce. Capture leads 24/7, from £29/month. No technical skills needed." />
+        <meta name="keywords" content="restaurant AI chatbot, real estate AI assistant, ecommerce AI chatbot, lead generation chatbot UK, managed AI chatbot service, 24/7 customer support chatbot UK" />
+        <link rel="canonical" href="https://aivized.com/industries" />
+        <meta property="og:url" content="https://aivized.com/industries" />
+        <meta property="og:title" content="AI Chatbot for Restaurants, Real Estate & E-Commerce UK" />
+        <meta property="og:description" content="Industry-trained managed AI chatbots for restaurants, real estate & e-commerce. Capture leads 24/7, from £29/month." />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      </Helmet>
 
       <Header />
 
