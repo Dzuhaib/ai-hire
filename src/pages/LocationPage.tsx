@@ -143,6 +143,8 @@ const LocationPage = () => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
+        <link rel="canonical" href={`https://aivized.com/locations/${location.slug}`} />
+        <meta property="og:url" content={`https://aivized.com/locations/${location.slug}`} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         {schemas && (

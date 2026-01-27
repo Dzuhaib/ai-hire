@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageMeta } from "@/components/PageMeta";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageMeta
-        title="Terms of Service | AIVized Managed AI Chatbot Service UK"
-        description="AIVized terms of service for managed AI chatbot subscriptions. Affordable AI chatbot for website from £29/month. UK small business service agreement."
-        keywords="AIVized terms of service, managed AI chatbot service, AI chatbot for small business UK, affordable AI chatbot subscription, 24/7 customer support chatbot UK"
-        canonical="https://aivized.com/terms-of-service"
-      />
+      <Helmet>
+        <title>Terms of Service | AIVized Managed AI Chatbot Service UK</title>
+        <meta name="description" content="AIVized terms of service for managed AI chatbot subscriptions. Affordable AI chatbot for website from £29/month. UK small business service agreement." />
+        <meta name="keywords" content="AIVized terms of service, managed AI chatbot service, AI chatbot for small business UK, affordable AI chatbot subscription, 24/7 customer support chatbot UK" />
+        <link rel="canonical" href="https://aivized.com/terms-of-service" />
+        <meta property="og:url" content="https://aivized.com/terms-of-service" />
+        <meta property="og:title" content="Terms of Service | AIVized Managed AI Chatbot Service UK" />
+        <meta property="og:description" content="AIVized terms of service for managed AI chatbot subscriptions. Affordable AI chatbot for website from £29/month." />
+      </Helmet>
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-narrow">

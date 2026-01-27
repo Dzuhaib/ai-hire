@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageMeta } from "@/components/PageMeta";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const RefundPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageMeta
-        title="Refund Policy | AIVized Managed AI Chatbot Service UK"
-        description="AIVized 14-day money-back guarantee for managed AI chatbot service. Fair refund terms for UK small business. Affordable AI chatbot from £29/month."
-        keywords="AIVized refund policy, managed AI chatbot service, AI chatbot for small business UK, affordable AI chatbot refund, money-back guarantee UK"
-        canonical="https://aivized.com/refund-policy"
-      />
+      <Helmet>
+        <title>Refund Policy | AIVized Managed AI Chatbot Service UK</title>
+        <meta name="description" content="AIVized 14-day money-back guarantee for managed AI chatbot service. Fair refund terms for UK small business. Affordable AI chatbot from £29/month." />
+        <meta name="keywords" content="AIVized refund policy, managed AI chatbot service, AI chatbot for small business UK, affordable AI chatbot refund, money-back guarantee UK" />
+        <link rel="canonical" href="https://aivized.com/refund-policy" />
+        <meta property="og:url" content="https://aivized.com/refund-policy" />
+        <meta property="og:title" content="Refund Policy | AIVized Managed AI Chatbot Service UK" />
+        <meta property="og:description" content="AIVized 14-day money-back guarantee for managed AI chatbot service. Fair refund terms for UK small business." />
+      </Helmet>
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-narrow">

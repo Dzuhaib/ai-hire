@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageMeta } from "@/components/PageMeta";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageMeta
-        title="Privacy Policy | AIVized Managed AI Chatbot Service UK"
-        description="AIVized privacy policy for managed AI chatbot service. GDPR compliant data protection for UK small business. Learn how we protect your customer data."
-        keywords="AIVized privacy policy, managed AI chatbot service, AI chatbot for small business UK, GDPR AI chatbot, data protection, lead generation chatbot UK"
-        canonical="https://aivized.com/privacy-policy"
-      />
+      <Helmet>
+        <title>Privacy Policy | AIVized Managed AI Chatbot Service UK</title>
+        <meta name="description" content="AIVized privacy policy for managed AI chatbot service. GDPR compliant data protection for UK small business. Learn how we protect your customer data." />
+        <meta name="keywords" content="AIVized privacy policy, managed AI chatbot service, AI chatbot for small business UK, GDPR AI chatbot, data protection, lead generation chatbot UK" />
+        <link rel="canonical" href="https://aivized.com/privacy-policy" />
+        <meta property="og:url" content="https://aivized.com/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy | AIVized Managed AI Chatbot Service UK" />
+        <meta property="og:description" content="AIVized privacy policy for managed AI chatbot service. GDPR compliant data protection for UK small business." />
+      </Helmet>
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-narrow">

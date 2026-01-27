@@ -84,6 +84,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
+        <title>Managed AI Chatbot for Small Business UK | AIVized From £29/mo</title>
+        <meta name="description" content="Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed." />
+        <link rel="canonical" href="https://aivized.com/" />
+        <meta property="og:url" content="https://aivized.com/" />
         <script type="application/ld+json">{faqSchemaJson}</script>
       </Helmet>
       <Header />
