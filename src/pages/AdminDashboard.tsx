@@ -18,7 +18,9 @@ import {
   XCircle,
   Clock,
   Trash2,
-  AlertTriangle
+  AlertTriangle,
+  MessageCircle,
+  Check
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -52,6 +54,7 @@ interface Subscription {
   status: string;
   started_at: string;
   expires_at: string | null;
+  created_at: string;
   profiles: {
     email: string;
     full_name: string | null;
@@ -71,11 +74,13 @@ const AdminDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState<UserProfile[]>([]);
   const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
+  const [pendingPayments, setPendingPayments] = useState<Subscription[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
   const [activeTab, setActiveTab] = useState("overview");
   const [terminateDialogOpen, setTerminateDialogOpen] = useState(false);
   const [userToTerminate, setUserToTerminate] = useState<UserProfile | null>(null);
   const [terminating, setTerminating] = useState(false);
+  const [approvingId, setApprovingId] = useState<string | null>(null);
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -125,7 +130,7 @@ const AdminDashboard = () => {
     if (!user) return;
     
     try {
-      const [usersRes, subsRes, statsRes] = await Promise.all([
+      const [usersRes, subsRes, statsRes, pendingRes] = await Promise.all([
         supabase.functions.invoke('admin', {
           body: { action: 'get_users', clerkUserId: user.id }
         }),
@@ -134,14 +139,48 @@ const AdminDashboard = () => {
         }),
         supabase.functions.invoke('admin', {
           body: { action: 'get_stats', clerkUserId: user.id }
+        }),
+        supabase.functions.invoke('admin', {
+          body: { action: 'get_pending_payments', clerkUserId: user.id }
         })
       ]);
 
       if (usersRes.data?.users) setUsers(usersRes.data.users);
       if (subsRes.data?.subscriptions) setSubscriptions(subsRes.data.subscriptions);
       if (statsRes.data?.stats) setStats(statsRes.data.stats);
+      if (pendingRes.data?.pendingPayments) setPendingPayments(pendingRes.data.pendingPayments);
     } catch (error) {
       console.error('Load data error:', error);
+    }
+  };
+
+  const handleApprovePayment = async (subscriptionId: string) => {
+    if (!user) return;
+    
+    setApprovingId(subscriptionId);
+    try {
+      const { data, error } = await supabase.functions.invoke('admin', {
+        body: { 
+          action: 'approve_payment', 
+          clerkUserId: user.id,
+          subscriptionId
+        }
+      });
+
+      if (error) throw error;
+      
+      if (data?.success) {
+        toast.success('Payment approved! Subscription is now active.');
+        setPendingPayments(pendingPayments.filter(p => p.id !== subscriptionId));
+        await loadData(); // Refresh all data
+      } else {
+        throw new Error(data?.error || 'Failed to approve payment');
+      }
+    } catch (error) {
+      console.error('Approve payment error:', error);
+      toast.error('Failed to approve payment');
+    } finally {
+      setApprovingId(null);
     }
   };
 
@@ -190,6 +229,8 @@ const AdminDashboard = () => {
         return <Badge className="bg-red-500/20 text-red-400 border-red-500/30"><XCircle className="w-3 h-3 mr-1" /> Cancelled</Badge>;
       case 'pending':
         return <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30"><Clock className="w-3 h-3 mr-1" /> Pending</Badge>;
+      case 'pending_payment':
+        return <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30"><MessageCircle className="w-3 h-3 mr-1" /> Pending Payment</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>;
     }
@@ -308,6 +349,9 @@ const AdminDashboard = () => {
               <TabsTrigger value="overview" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 Overview
               </TabsTrigger>
+              <TabsTrigger value="pending" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                Pending Payments ({pendingPayments.length})
+              </TabsTrigger>
               <TabsTrigger value="users" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 Users ({users.length})
               </TabsTrigger>
@@ -369,6 +413,78 @@ const AdminDashboard = () => {
                     ))}
                   </div>
                 </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="pending">
+              <div className="card-premium overflow-hidden">
+                {pendingPayments.length === 0 ? (
+                  <div className="p-12 text-center">
+                    <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-2">No Pending Payments</h3>
+                    <p className="text-muted-foreground">All payments have been processed.</p>
+                  </div>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead className="bg-secondary/30 border-b border-border/50">
+                        <tr>
+                          <th className="text-left p-4 text-sm font-medium text-muted-foreground">Customer</th>
+                          <th className="text-left p-4 text-sm font-medium text-muted-foreground">Plan</th>
+                          <th className="text-left p-4 text-sm font-medium text-muted-foreground">Price</th>
+                          <th className="text-left p-4 text-sm font-medium text-muted-foreground">Requested</th>
+                          <th className="text-left p-4 text-sm font-medium text-muted-foreground">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {pendingPayments.map((payment) => (
+                          <tr key={payment.id} className="border-b border-border/30 hover:bg-secondary/20 transition-colors">
+                            <td className="p-4">
+                              <div>
+                                <p className="font-medium">{payment.profiles?.full_name || 'Unknown'}</p>
+                                <p className="text-sm text-muted-foreground">{payment.profiles?.email}</p>
+                              </div>
+                            </td>
+                            <td className="p-4">
+                              <Badge variant="outline">{payment.plan_name}</Badge>
+                            </td>
+                            <td className="p-4">
+                              <div className="flex items-center gap-1">
+                                <DollarSign className="w-4 h-4 text-muted-foreground" />
+                                <span className="font-medium">£{payment.plan_price}/mo</span>
+                              </div>
+                            </td>
+                            <td className="p-4">
+                              <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                                <Calendar className="w-4 h-4" />
+                                {new Date(payment.created_at).toLocaleDateString()}
+                              </div>
+                            </td>
+                            <td className="p-4">
+                              <button
+                                onClick={() => handleApprovePayment(payment.id)}
+                                disabled={approvingId === payment.id}
+                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-colors text-sm font-medium disabled:opacity-50"
+                              >
+                                {approvingId === payment.id ? (
+                                  <>
+                                    <Loader2 className="w-4 h-4 animate-spin" />
+                                    Approving...
+                                  </>
+                                ) : (
+                                  <>
+                                    <Check className="w-4 h-4" />
+                                    Approve Payment
+                                  </>
+                                )}
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
             </TabsContent>
 
