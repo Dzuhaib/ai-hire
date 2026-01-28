@@ -143,7 +143,7 @@ export const PricingSection = () => {
       );
       
       // Open WhatsApp
-      window.open(`https://wa.me/447778081789?text=${whatsappMessage}`, "_blank");
+      window.open(`https://wa.me/923063213951?text=${whatsappMessage}`, "_blank");
       
       toast.success(
         "Subscription created! Please complete payment via WhatsApp. Your plan will be activated once payment is confirmed.",
