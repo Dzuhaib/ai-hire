@@ -6,9 +6,10 @@ const corsHeaders = {
 };
 
 interface AdminRequest {
-  action: 'get_users' | 'get_subscriptions' | 'check_admin' | 'get_stats' | 'terminate_user';
+  action: 'get_users' | 'get_subscriptions' | 'check_admin' | 'get_stats' | 'terminate_user' | 'approve_payment' | 'get_pending_payments';
   clerkUserId?: string;
   targetUserId?: string;
+  subscriptionId?: string;
 }
 
 Deno.serve(async (req) => {
@@ -23,7 +24,7 @@ Deno.serve(async (req) => {
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     
-    const { action, clerkUserId, targetUserId }: AdminRequest = await req.json();
+    const { action, clerkUserId, targetUserId, subscriptionId }: AdminRequest = await req.json();
     
     console.log(`Admin action: ${action}, clerkUserId: ${clerkUserId}`);
     
@@ -207,6 +208,87 @@ Deno.serve(async (req) => {
         
         return new Response(
           JSON.stringify({ success: true, message: 'User terminated successfully' }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+      
+      case 'get_pending_payments': {
+        const { data: pendingSubscriptions, error } = await supabase
+          .from('subscriptions')
+          .select(`
+            *,
+            profiles:clerk_user_id (
+              email,
+              full_name
+            )
+          `)
+          .eq('status', 'pending_payment')
+          .order('created_at', { ascending: false });
+        
+        if (error) {
+          console.error('Get pending payments error:', error);
+          throw error;
+        }
+        
+        return new Response(
+          JSON.stringify({ pendingPayments: pendingSubscriptions }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+      
+      case 'approve_payment': {
+        if (!subscriptionId) {
+          return new Response(
+            JSON.stringify({ error: 'Subscription ID required' }),
+            { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
+        
+        console.log('Approving payment for subscription:', subscriptionId);
+        
+        // Get subscription details first
+        const { data: subscription, error: fetchError } = await supabase
+          .from('subscriptions')
+          .select('*')
+          .eq('id', subscriptionId)
+          .single();
+        
+        if (fetchError || !subscription) {
+          console.error('Fetch subscription error:', fetchError);
+          return new Response(
+            JSON.stringify({ error: 'Subscription not found' }),
+            { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
+        
+        // Update subscription status to active
+        const { error: updateError } = await supabase
+          .from('subscriptions')
+          .update({
+            status: 'active',
+            started_at: new Date().toISOString(),
+          })
+          .eq('id', subscriptionId);
+        
+        if (updateError) {
+          console.error('Update subscription error:', updateError);
+          throw updateError;
+        }
+        
+        // Create billing history record
+        await supabase.from('billing_history').insert({
+          clerk_user_id: subscription.clerk_user_id,
+          amount: subscription.plan_price,
+          currency: 'GBP',
+          description: `${subscription.plan_name} - Monthly subscription (WhatsApp payment)`,
+          status: 'paid',
+          paid_at: new Date().toISOString(),
+        });
+        
+        console.log('Payment approved successfully for subscription:', subscriptionId);
+        
+        return new Response(
+          JSON.stringify({ success: true, message: 'Payment approved successfully' }),
           { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }

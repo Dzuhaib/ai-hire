@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles, Loader2, Check, Zap, Crown, Rocket, Shield, Clock, Headphones, Building2, MessageSquare } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
 import { MagneticButton } from "./MagneticButton";
-import { use2CheckoutPayment } from "@/hooks/use2CheckoutPayment";
+import { PaymentMethodModal } from "./PaymentMethodModal";
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const plans = [
@@ -69,20 +72,92 @@ const guarantees = [
 ];
 
 export const PricingSection = () => {
-  const { initiatePayment, isLoading, isSignedIn } = use2CheckoutPayment();
+  const { user, isSignedIn } = useUser();
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: number } | null>(null);
 
-  const handleSubscribe = async (planName: string, priceAmount: number) => {
+  const handleSubscribe = (planName: string, priceAmount: number) => {
     if (!isSignedIn) {
       toast.info("Please sign in to subscribe");
       navigate("/auth");
       return;
     }
     
-    await initiatePayment({
-      planName: `aivized ${planName}`,
-      priceAmount,
-    });
+    setSelectedPlan({ name: planName, price: priceAmount });
+    setShowPaymentModal(true);
+  };
+
+  const handleOnlinePayment = () => {
+    // Coming soon - disabled
+    toast.info("Online payment is coming soon!");
+  };
+
+  const handleWhatsAppPayment = async () => {
+    if (!user || !selectedPlan) return;
+    
+    setIsLoading(true);
+    try {
+      // Ensure profile exists
+      const { data: existingProfile } = await supabase
+        .from("profiles")
+        .select("clerk_user_id")
+        .eq("clerk_user_id", user.id)
+        .maybeSingle();
+
+      if (!existingProfile) {
+        await supabase.from("profiles").insert({
+          clerk_user_id: user.id,
+          email: user.primaryEmailAddress?.emailAddress || "",
+          full_name: user.fullName || "",
+          avatar_url: user.imageUrl || "",
+        });
+      }
+
+      // Create subscription with pending_payment status
+      const expiresAt = new Date();
+      expiresAt.setMonth(expiresAt.getMonth() + 1);
+
+      const { error: subError } = await supabase.from("subscriptions").insert({
+        clerk_user_id: user.id,
+        plan_name: `aivized ${selectedPlan.name}`,
+        plan_price: selectedPlan.price,
+        status: "pending_payment",
+        expires_at: expiresAt.toISOString(),
+      });
+
+      if (subError) {
+        console.error("Subscription error:", subError);
+        toast.error("Failed to create subscription. Please try again.");
+        return;
+      }
+
+      // Close modal
+      setShowPaymentModal(false);
+      setSelectedPlan(null);
+
+      // Create WhatsApp message
+      const whatsappMessage = encodeURIComponent(
+        `Hi! I'd like to subscribe to the ${selectedPlan.name} plan (£${selectedPlan.price}/month).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
+      );
+      
+      // Open WhatsApp
+      window.open(`https://wa.me/447778081789?text=${whatsappMessage}`, "_blank");
+      
+      toast.success(
+        "Subscription created! Please complete payment via WhatsApp. Your plan will be activated once payment is confirmed.",
+        { duration: 8000 }
+      );
+
+      // Redirect to dashboard
+      navigate("/dashboard");
+    } catch (error) {
+      console.error("Payment error:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -324,6 +399,20 @@ export const PricingSection = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Payment Method Modal */}
+      <PaymentMethodModal
+        isOpen={showPaymentModal}
+        onClose={() => {
+          setShowPaymentModal(false);
+          setSelectedPlan(null);
+        }}
+        planName={selectedPlan?.name || ""}
+        planPrice={selectedPlan?.price || 0}
+        onSelectOnlinePayment={handleOnlinePayment}
+        onSelectWhatsApp={handleWhatsAppPayment}
+        isLoading={isLoading}
+      />
     </section>
   );
 };
