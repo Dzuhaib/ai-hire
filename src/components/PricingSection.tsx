@@ -269,6 +269,7 @@ export const PricingSection = () => {
                         </span>
                         <span className="text-muted-foreground">/month</span>
                       </div>
+                      <p className="text-xs text-muted-foreground mt-1">+ £50 one-time setup fee</p>
                     </div>
 
                     {/* Features */}
@@ -373,7 +374,7 @@ export const PricingSection = () => {
                     </span>
                   </MagneticButton>
                   <p className="text-xs text-muted-foreground mt-3 text-center">
-                    Get a quote within 24 hours
+                    Setup charges applied • Get a quote within 24 hours
                   </p>
                 </div>
               </div>
