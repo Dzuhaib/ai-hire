@@ -139,7 +139,7 @@ export const PricingSection = () => {
 
       // Create WhatsApp message
       const whatsappMessage = encodeURIComponent(
-        `Hi! I'd like to subscribe to the ${selectedPlan.name} plan (£${selectedPlan.price}/month).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
+        `Hi! I'd like to subscribe to the ${selectedPlan.name} plan (£${selectedPlan.price}/month + £50 one-time setup fee).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
       );
       
       // Open WhatsApp
