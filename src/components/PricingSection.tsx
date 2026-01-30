@@ -329,20 +329,24 @@ export const PricingSection = () => {
               {/* Background gradient on hover */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                {/* Icon & Title */}
-                <div className="flex-shrink-0 text-center lg:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/30 flex items-center justify-center mx-auto lg:mx-0 mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Building2 className="w-8 h-8 text-amber-500" />
+              <div className="relative z-10">
+                {/* Top row: Icon, Title, Description */}
+                <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Building2 className="w-8 h-8 text-amber-500" />
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-serif font-semibold mb-2">Enterprise & Custom Solutions</h3>
-                  <p className="text-muted-foreground max-w-md">
-                    Need something tailored specifically for your business? We build custom AI solutions from scratch.
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-serif font-semibold mb-2">Enterprise & Custom Solutions</h3>
+                    <p className="text-muted-foreground max-w-lg">
+                      Need something tailored specifically for your business? We build custom AI solutions from scratch.
+                    </p>
+                  </div>
                 </div>
 
-                {/* Features */}
-                <div className="flex-1 grid sm:grid-cols-2 gap-4">
+                {/* Features Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                   {[
                     "Bespoke AI development",
                     "Custom integrations",
@@ -361,7 +365,7 @@ export const PricingSection = () => {
                 </div>
 
                 {/* CTA */}
-                <div className="flex-shrink-0">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
                   <MagneticButton
                     className="px-8 py-4 rounded-xl font-semibold text-sm bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all duration-300"
                     onClick={() => {
@@ -373,7 +377,7 @@ export const PricingSection = () => {
                       Contact Us
                     </span>
                   </MagneticButton>
-                  <p className="text-xs text-muted-foreground mt-3 text-center">
+                  <p className="text-xs text-muted-foreground">
                     Setup charges applied • Get a quote within 24 hours
                   </p>
                 </div>
