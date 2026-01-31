@@ -63,42 +63,198 @@
     
     <!-- Organization Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "AI Vized",
+      "@id": "https://www.aivized.com/#organization",
+      "name": "Aivized",
       "alternateName": "aivized",
-      "url": "https://aivized.com",
-      "logo": "https://aivized.com/favicon.png",
+      "url": "https://www.aivized.com",
+      "logo": "https://www.aivized.com/favicon.png",
+      "email": "mailto:aivized.com@gmail.com",
       "description": "Fully managed AI chatbot for UK businesses from £29/month. 24/7 customer engagement, lead capture, continuous monitoring, and zero maintenance. We handle everything.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "myselfzuhaib@gmail.com",
-        "contactType": "sales",
-        "availableLanguage": ["English"]
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
-      },
-      "sameAs": [],
+      "foundingDate": "2024",
       "foundingLocation": {
         "@type": "Country",
         "name": "United Kingdom"
       },
+      "sameAs": [
+        "https://www.linkedin.com/company/aivized",
+        "https://twitter.com/aivized",
+        "https://facebook.com/aivized",
+        "https://www.instagram.com/aivized/"
+      ],
       "slogan": "Fully Managed AI Chatbot — We Handle Everything",
-      "knowsAbout": ["AI Chatbot", "Managed AI Services", "Customer Engagement Automation", "Lead Generation", "24/7 Customer Support"],
+      "knowsAbout": [
+        "AI Chatbot",
+        "Managed AI Services",
+        "Customer Engagement Automation",
+        "Lead Generation",
+        "24/7 Customer Support"
+      ],
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "GBP",
         "lowPrice": "29",
         "highPrice": "499",
         "offerCount": "3"
+      },
+      "keywords": [
+        "AI chatbot UK",
+        "chatbot development UK",
+        "managed chatbot services",
+        "AI automation UK",
+        "AI chatbot integration",
+        "lead generation chatbot",
+        "24/7 customer support chatbot",
+        "custom chatbot solutions",
+        "website chatbot UK",
+        "WhatsApp chatbot UK",
+        "Instagram chatbot automation",
+        "AI chatbot London",
+        "AI chatbot Manchester",
+        "AI chatbot Birmingham",
+        "AI automation ecommerce UK",
+        "NLP conversational AI",
+        "sales automation AI",
+        "customer support automation UK",
+        "AI solutions UK",
+        "multi‑channel AI chatbot",
+        "AI chatbot pricing UK",
+        "SME chatbot solutions UK",
+        "AI CRM integration UK",
+        "AI chatbot SEO optimization"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.aivized.com/#website",
+      "url": "https://www.aivized.com",
+      "name": "Aivized – AI Chatbot Solutions UK",
+      "description": "Find the best AI chatbot development and AI automation services with Aivized in London, Manchester, Birmingham, Leeds, Glasgow, and all UK cities.",
+      "publisher": {
+        "@id": "https://www.aivized.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.aivized.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.aivized.com/#localbusiness",
+      "name": "Aivized UK",
+      "url": "https://www.aivized.com",
+      "logo": "https://www.aivized.com/favicon.png",
+      "email": "mailto:aivized.com@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "description": "AI chatbot and automation solutions provider serving businesses across the United Kingdom.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.aivized.com/#service-ai-chatbot",
+      "name": "AI Chatbot Development & Integration",
+      "description": "Custom AI chatbot development, integration, and automation services for UK businesses to boost customer engagement, automate support, and generate leads.",
+      "provider": {
+        "@id": "https://www.aivized.com/#organization"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "London" },
+        { "@type": "City", "name": "Manchester" },
+        { "@type": "City", "name": "Birmingham" },
+        { "@type": "City", "name": "Leeds" },
+        { "@type": "City", "name": "Glasgow" },
+        { "@type": "City", "name": "Edinburgh" },
+        { "@type": "City", "name": "Bristol" },
+        { "@type": "City", "name": "Liverpool" },
+        { "@type": "City", "name": "Sheffield" },
+        { "@type": "City", "name": "Newcastle upon Tyne" }
+      ],
+      "keywords": [
+        "AI chatbot UK",
+        "UK chatbot development",
+        "business automation AI",
+        "AI integration services UK",
+        "custom chatbot UK",
+        "AI lead generation UK"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.aivized.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+        { "@type": "ListItem", "position": 2, "name": "AI Chatbot Services", "item": "https://www.aivized.com/services" },
+        { "@type": "ListItem", "position": 3, "name": "Industries", "item": "https://www.aivized.com/industries" },
+        { "@type": "ListItem", "position": 4, "name": "Locations", "item": "https://www.aivized.com/locations" },
+        { "@type": "ListItem", "position": 5, "name": "Blogs", "item": "https://www.aivized.com/blog" },
+        { "@type": "ListItem", "position": 6, "name": "Contact", "item": "https://www.aivized.com/contact" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.aivized.com/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"What is a managed AI chatbot service?","acceptedAnswer":{"@type":"Answer","text":"A managed AI chatbot service means we handle everything—installation, configuration, 24/7 monitoring, and ongoing updates. Unlike DIY chatbot builders, our managed AI chatbot service requires no technical skills from your side. We install, you benefit. Perfect for UK small businesses who want to capture leads 24/7 without the hassle."}},
+        {"@type":"Question","name":"How much does an affordable AI chatbot for website cost?","acceptedAnswer":{"@type":"Answer","text":"Our affordable AI chatbot for website starts from just £29/month—making it the cheapest managed AI chatbot UK businesses can find. No upfront costs, no developers needed, no long-term contracts."}},
+        {"@type":"Question","name":"How can I capture leads on my website 24/7?","acceptedAnswer":{"@type":"Answer","text":"Our lead generation chatbot UK businesses trust works around the clock. It engages visitors, answers questions, and captures qualified leads automatically—even at 3am. Reduce missed leads from your website and never lose another customer enquiry."}},
+        {"@type":"Question","name":"Is this AI chatbot for small business UK suitable for my company?","acceptedAnswer":{"@type":"Answer","text":"Yes! Our AI chatbot for small business UK is designed specifically for SMEs across restaurants, real estate, and e-commerce. Whether you're in London, Manchester, or Birmingham—our managed solution handles customer enquiries so you can focus on running your business."}},
+        {"@type":"Question","name":"How does your AI chatbot provide 24/7 customer support?","acceptedAnswer":{"@type":"Answer","text":"Our 24/7 customer support chatbot UK handles customer queries any time of day or night. It's monitored by our team and continuously improved. When it encounters a question it can't answer, it captures the customer's details and escalates to you immediately—you never lose a lead."}},
+        {"@type":"Question","name":"Can this chatbot help me automate customer inquiries for my small business?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Our AI is trained to automate customer inquiries for small businesses—answering FAQs, capturing lead details, and providing instant responses. This frees up your time while ensuring every visitor gets immediate attention."}},
+        {"@type":"Question","name":"What makes AIVized the best chatbot for small business UK 2025?","acceptedAnswer":{"@type":"Answer","text":"Unlike basic chatbots, AIVized is a fully managed service. We install everything on your website, monitor performance 24/7, and continuously optimise responses. Combined with our affordable pricing from £29/month, we're proud to be considered among the best chatbot for small business UK in 2025."}},
+        {"@type":"Question","name":"How does AIVized compare to Intercom alternatives for small business?","acceptedAnswer":{"@type":"Answer","text":"Looking for Intercom alternatives for small business? AIVized offers similar AI capabilities at a fraction of the cost—without the complexity. We're fully managed, so there's no setup learning curve. From £29/month vs hundreds with enterprise tools, we're the smart choice for UK SMEs."}},
+        {"@type":"Question","name":"What services does Aivized offer?","acceptedAnswer":{"@type":"Answer","text":"Aivized offers AI chatbot development, customer support automation, lead generation chatbots, personalised AI integration, and custom automation solutions for UK businesses."}},
+        {"@type":"Question","name":"What is an AI chatbot?","acceptedAnswer":{"@type":"Answer","text":"An AI chatbot is intelligent software powered by artificial intelligence and NLP that interacts with users in real time, answering questions and automating tasks."}},
+        {"@type":"Question","name":"How much does an AI chatbot cost in the UK?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on features, but Aivized offers managed chatbot solutions starting from £29/month."}},
+        {"@type":"Question","name":"Can Aivized chatbots integrate with my existing website?","acceptedAnswer":{"@type":"Answer","text":"Yes, Aivized chatbots can be integrated with your website using a simple code snippet or plugin."}},
+        {"@type":"Question","name":"Do AI chatbots work 24/7?","acceptedAnswer":{"@type":"Answer","text":"Yes — AI chatbots operate around the clock, ensuring no customer query goes unanswered."}},
+        {"@type":"Question","name":"Can AI chatbots generate leads?","acceptedAnswer":{"@type":"Answer","text":"AI chatbots capture visitor information and qualify leads automatically, increasing conversion rates."}},
+        {"@type":"Question","name":"Are AI chatbots suitable for small businesses?","acceptedAnswer":{"@type":"Answer","text":"Absolutely — AI chatbots are cost‑effective and help small businesses automate customer inquiries."}},
+        {"@type":"Question","name":"What are the benefits of AI automation?","acceptedAnswer":{"@type":"Answer","text":"AI automation improves efficiency, reduces manual workload, and enhances customer engagement."}},
+        {"@type":"Question","name":"How quickly can I deploy an AI chatbot?","acceptedAnswer":{"@type":"Answer","text":"Deployment can be done within days depending on customisation and integrations."}},
+        {"@type":"Question","name":"Can AI chatbots support multiple languages?","acceptedAnswer":{"@type":"Answer","text":"Yes — advanced chatbots can be configured to support multiple languages."}},
+        {"@type":"Question","name":"Will an AI chatbot reduce customer service costs?","acceptedAnswer":{"@type":"Answer","text":"Yes — by automating common inquiries, AI chatbots reduce reliance on human agents."}},
+        {"@type":"Question","name":"Do Aivized chatbots provide analytics?","acceptedAnswer":{"@type":"Answer","text":"Yes — chatbots can provide insights into user interactions and performance metrics."}},
+        {"@type":"Question","name":"Can AI chatbots handle eCommerce queries?","acceptedAnswer":{"@type":"Answer","text":"Chatbots effectively handle eCommerce questions, product recommendations, and FAQs."}},
+        {"@type":"Question","name":"Is my data secure with Aivized chatbots?","acceptedAnswer":{"@type":"Answer","text":"Yes — data security best practices ensure your customer data remains protected."}},
+        {"@type":"Question","name":"Are Aivized chatbots scalable?","acceptedAnswer":{"@type":"Answer","text":"Yes — chatbots can scale with business growth and increased traffic."}},
+        {"@type":"Question","name":"Can AI chatbots help qualify leads?","acceptedAnswer":{"@type":"Answer","text":"Yes — chatbots pre‑qualify visitors, increasing the quality of leads passed to sales."}},
+        {"@type":"Question","name":"How does AI improve customer engagement?","acceptedAnswer":{"@type":"Answer","text":"AI engages users instantly with personalised responses, reducing response time and improving satisfaction."}},
+        {"@type":"Question","name":"Do AI chatbots improve sales conversions?","acceptedAnswer":{"@type":"Answer","text":"Yes — by guiding visitors through purchase decisions and answering key questions."}},
+        {"@type":"Question","name":"Can AI chatbots integrate with CRM systems?","acceptedAnswer":{"@type":"Answer","text":"Yes — chatbots can integrate with CRM, email, and booking tools to streamline workflows."}}
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.aivized.com/locations/#locations-collection",
+      "name": "Locations",
+      "url": "https://www.aivized.com/locations",
+      "description": "AI chatbot services available across multiple UK cities.",
+      "hasPart": [
+        {"@type":"WebPage","name":"London","url":"https://www.aivized.com/locations/london"},
+        {"@type":"WebPage","name":"Birmingham","url":"https://www.aivized.com/locations/birmingham"},
+        {"@type":"WebPage","name":"Bristol","url":"https://www.aivized.com/locations/bristol"},
+        {"@type":"WebPage","name":"Leeds","url":"https://www.aivized.com/locations/leeds"},
+        {"@type":"WebPage","name":"Manchester","url":"https://www.aivized.com/locations/manchester"},
+        {"@type":"WebPage","name":"Newcastle upon Tyne","url":"https://www.aivized.com/locations/newcastle"},
+        {"@type":"WebPage","name":"Glasgow","url":"https://www.aivized.com/locations/glasgow"},
+        {"@type":"WebPage","name":"Sheffield","url":"https://www.aivized.com/locations/sheffield"},
+        {"@type":"WebPage","name":"Edinburgh","url":"https://www.aivized.com/locations/edinburgh"}
+      ]
     }
-    </script>
-
-    <!-- FAQPage schema is injected dynamically per page to avoid duplicates -->
+  ]
+}
+</script>
   </head>
 
   <body>
