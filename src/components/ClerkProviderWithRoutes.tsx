@@ -15,6 +15,10 @@ import LocationPage from "@/pages/LocationPage";
 import LocationsPage from "@/pages/LocationsPage";
 import IndustryPage from "@/pages/IndustryPage";
 import IndustriesPage from "@/pages/IndustriesPage";
+import BlogsPage from "@/pages/BlogsPage";
+import WhatsAppChatbotBlog from "@/pages/blog/WhatsAppChatbotBlog";
+import WebsiteChatbotBlog from "@/pages/blog/WebsiteChatbotBlog";
+import InstagramChatbotBlog from "@/pages/blog/InstagramChatbotBlog";
 import { LoadingScreen } from "@/components/LoadingScreen";
 
 const ClerkProviderWithNavigation = ({ children }: { children: React.ReactNode }) => {
@@ -62,6 +66,11 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/restaurants" element={<IndustryPage />} />
           <Route path="/real-estate" element={<IndustryPage />} />
           <Route path="/ecommerce" element={<IndustryPage />} />
+          {/* Blog pages */}
+          <Route path="/blog" element={<BlogsPage />} />
+          <Route path="/blog/whatsapp-chatbot-uk-business" element={<WhatsAppChatbotBlog />} />
+          <Route path="/blog/website-chatbot-small-business" element={<WebsiteChatbotBlog />} />
+          <Route path="/blog/instagram-chatbot-social-media" element={<InstagramChatbotBlog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ClerkProviderWithNavigation>

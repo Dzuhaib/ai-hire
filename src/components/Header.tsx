@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, Bot, User, LogIn } from "lucide-react";
 import { useUser, SignedIn, SignedOut } from "@clerk/clerk-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
 import {
   Sheet,
@@ -14,19 +14,27 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const navItems = [
+interface NavItem {
+  label: string;
+  href: string;
+  isRoute?: boolean;
+}
+
+const navItems: NavItem[] = [
   { label: "Industries", href: "#industries" },
   { label: "Pricing", href: "#pricing" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Blog", href: "/blog", isRoute: true },
 ];
 
 export const Header = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
+      const sections = navItems.filter(item => !item.isRoute).map(item => item.href.substring(1));
       const scrollPosition = window.scrollY + 150;
 
       for (const sectionId of sections) {
@@ -46,6 +54,16 @@ export const Header = () => {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (item: NavItem) => {
+    if (item.isRoute) {
+      navigate(item.href);
+    } else {
+      const element = document.querySelector(item.href);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -79,7 +97,7 @@ export const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item)}
                 className={cn(
                   "magnetic-link text-sm transition-colors",
                   activeSection === item.href
@@ -136,7 +154,7 @@ export const Header = () => {
                   {navItems.map((item) => (
                     <SheetClose asChild key={item.label}>
                       <button
-                        onClick={() => scrollToSection(item.href)}
+                        onClick={() => handleNavClick(item)}
                         className={cn(
                           "text-lg font-medium transition-colors text-left",
                           activeSection === item.href
