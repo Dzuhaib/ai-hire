@@ -7,6 +7,7 @@ import { Layers3, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import { allIndustries } from "@/data/industryData";
 
 import aiRestaurantHero from "@/assets/industries/ai-restaurant-hero.png";
@@ -190,6 +191,12 @@ const IndustriesPage = () => {
           </motion.div>
         </div>
       </section>
+
+      <RelatedPagesSection 
+        currentPage="industry"
+        title="Explore More"
+        subtitle="Discover our AI chatbot solutions across UK cities and platforms"
+      />
 
       <Footer />
     </div>

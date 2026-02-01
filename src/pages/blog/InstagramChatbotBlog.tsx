@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
+import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import {
   Accordion,
   AccordionContent,
@@ -267,6 +268,13 @@ const InstagramChatbotBlog = () => {
           </motion.div>
         </article>
       </main>
+      
+      <RelatedPagesSection 
+        currentPage="blog" 
+        currentSlug="instagram-chatbot-social-media"
+        title="Related Resources"
+        subtitle="Explore more AI chatbot solutions for UK businesses"
+      />
       
       <Footer />
     </div>

@@ -6,6 +6,7 @@ import { MapPin, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import { ukLocations } from "@/data/locationData";
 
 // City images
@@ -215,6 +216,12 @@ const LocationsPage = () => {
           </motion.div>
         </div>
       </section>
+
+      <RelatedPagesSection 
+        currentPage="location"
+        title="Explore More"
+        subtitle="Discover our AI chatbot solutions across industries and platforms"
+      />
 
       <Footer />
     </div>

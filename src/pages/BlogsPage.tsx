@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
+import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import { blogPosts } from "@/data/blogData";
 
 // Import blog images
@@ -108,6 +109,12 @@ const BlogsPage = () => {
           </div>
         </div>
       </main>
+      
+      <RelatedPagesSection 
+        currentPage="blog"
+        title="Explore More"
+        subtitle="Discover our AI chatbot solutions across UK cities and industries"
+      />
       
       <Footer />
     </div>
