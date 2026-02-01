@@ -196,7 +196,7 @@ const RefundPolicy = () => {
                 <p className="text-muted-foreground mb-4">
                   Learn more about our managed AI chatbot service and policies:
                 </p>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-3 gap-4">
                   <div>
                     <h3 className="font-semibold mb-2">Our Services</h3>
                     <ul className="space-y-2 text-sm">
@@ -211,6 +211,23 @@ const RefundPolicy = () => {
                       <li>
                         <Link to="/industries" className="text-primary hover:underline">AI Chatbot by Industry</Link>
                         <span className="text-muted-foreground"> — Restaurants, Real Estate, E-Commerce</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Blog & Insights</h3>
+                    <ul className="space-y-2 text-sm">
+                      <li>
+                        <Link to="/blog/whatsapp-chatbot-uk-business" className="text-primary hover:underline">WhatsApp Chatbot Guide</Link>
+                      </li>
+                      <li>
+                        <Link to="/blog/website-chatbot-small-business" className="text-primary hover:underline">Website Chatbot Solutions</Link>
+                      </li>
+                      <li>
+                        <Link to="/blog/instagram-chatbot-social-media" className="text-primary hover:underline">Instagram Chatbot Automation</Link>
+                      </li>
+                      <li>
+                        <Link to="/blog" className="text-primary hover:underline">View All Articles</Link>
                       </li>
                     </ul>
                   </div>

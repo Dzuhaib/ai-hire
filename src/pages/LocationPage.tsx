@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { getLocationBySlug, ukLocations } from "@/data/locationData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import NotFound from "./NotFound";
 // City-specific AI assistant images
 import aiLondon from "@/assets/locations/ai-london.png";
@@ -622,6 +623,13 @@ const LocationPage = () => {
           </motion.div>
         </div>
       </section>
+
+      <RelatedPagesSection 
+        currentPage="location"
+        currentSlug={city}
+        title="Related Resources"
+        subtitle="Explore more AI chatbot solutions for UK businesses"
+      />
 
       <Footer />
     </div>

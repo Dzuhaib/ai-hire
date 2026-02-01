@@ -13,6 +13,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { getIndustryBySlug, allIndustries } from "@/data/industryData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import NotFound from "./NotFound";
 
 // Hero images
@@ -550,6 +551,13 @@ const IndustryPage = () => {
           </motion.div>
         </div>
       </section>
+
+      <RelatedPagesSection 
+        currentPage="industry"
+        currentSlug={industrySlug}
+        title="Related Resources"
+        subtitle="Explore more AI chatbot solutions for UK businesses"
+      />
 
       <Footer />
     </div>
