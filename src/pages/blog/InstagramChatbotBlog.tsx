@@ -260,7 +260,7 @@ const InstagramChatbotBlog = () => {
               Join hundreds of UK businesses already using AIVized's managed Instagram chatbot service. From £29/month with complete setup included.
             </p>
             <Link
-              to="/#pricing"
+              to="/pricing"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
             >
               View Pricing

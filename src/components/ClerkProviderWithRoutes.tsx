@@ -15,6 +15,7 @@ import LocationPage from "@/pages/LocationPage";
 import LocationsPage from "@/pages/LocationsPage";
 import IndustryPage from "@/pages/IndustryPage";
 import IndustriesPage from "@/pages/IndustriesPage";
+import PricingPage from "@/pages/PricingPage";
 import BlogsPage from "@/pages/BlogsPage";
 import WhatsAppChatbotBlog from "@/pages/blog/WhatsAppChatbotBlog";
 import WebsiteChatbotBlog from "@/pages/blog/WebsiteChatbotBlog";
@@ -57,6 +58,7 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/pricing" element={<PricingPage />} />
           {/* Location pages for local SEO */}
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/locations/:city" element={<LocationPage />} />

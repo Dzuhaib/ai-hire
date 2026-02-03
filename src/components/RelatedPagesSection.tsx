@@ -14,7 +14,7 @@ interface RelatedLink {
 
 interface RelatedPagesSectionProps {
   /** Current page type to exclude from suggestions */
-  currentPage?: "home" | "blog" | "location" | "industry" | "legal";
+  currentPage?: "home" | "blog" | "location" | "industry" | "legal" | "pricing";
   /** Current page slug to exclude specific item */
   currentSlug?: string;
   /** Title for the section */
@@ -64,6 +64,15 @@ export const RelatedPagesSection = ({
       href: "/",
       description: "Managed AI chatbot for UK small businesses from £29/month",
       icon: MessageCircle,
+    });
+  }
+  
+  if (currentPage !== "pricing") {
+    primaryLinks.push({
+      title: "Pricing",
+      href: "/pricing",
+      description: "Transparent AI chatbot pricing from £29/month",
+      icon: FileText,
     });
   }
   
