@@ -21,8 +21,8 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Industries", href: "#industries" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Industries", href: "/industries", isRoute: true },
+  { label: "Pricing", href: "/pricing", isRoute: true },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Blog", href: "/blog", isRoute: true },
 ];
