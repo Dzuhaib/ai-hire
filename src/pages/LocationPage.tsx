@@ -81,21 +81,26 @@ const LocationPage = () => {
         "@type": "PostalAddress",
         "addressLocality": location.city,
         "addressRegion": location.region,
-        "addressCountry": "UK"
+        "addressCountry": "GB"
       },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": location.coordinates.lat,
         "longitude": location.coordinates.lng
       },
-      "areaServed": location.serviceAreas.map(area => ({ "@type": "City", "name": area })),
+      "areaServed": {
+        "@type": "City",
+        "name": location.city
+      },
       "priceRange": "££",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ]
     };
 
     const faqSchema = {
@@ -111,15 +116,28 @@ const LocationPage = () => {
     const serviceSchema = {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "AI Employee Solutions",
-      "provider": { "@type": "Organization", "name": "AI Vized" },
-      "areaServed": { "@type": "City", "name": location.city },
+      "name": `AI Chatbot Service ${location.city}`,
+      "serviceType": "AI Chatbot Solutions",
+      "provider": {
+        "@type": "Organization",
+        "name": "AI Vized",
+        "url": "https://aivized.com"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": location.city
+      },
       "description": `AI-powered customer service and lead generation for ${location.city} businesses`,
       "offers": {
         "@type": "Offer",
         "priceCurrency": "GBP",
         "price": "29",
-        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "month" }
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "29",
+          "priceCurrency": "GBP",
+          "unitText": "MONTH"
+        }
       }
     };
 
