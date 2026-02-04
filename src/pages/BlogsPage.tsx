@@ -11,11 +11,17 @@ import { blogPosts } from "@/data/blogData";
 import whatsappHero from "@/assets/blog/whatsapp-chatbot-hero.png";
 import websiteHero from "@/assets/blog/website-chatbot-hero.png";
 import instagramHero from "@/assets/blog/instagram-chatbot-hero.png";
+import outsourcedHero from "@/assets/blog/outsourced-chat-agents-hero.png";
+import aiProvidersHero from "@/assets/blog/ai-service-providers-hero.png";
+import aiPersonalHero from "@/assets/blog/ai-personal-assistant-hero.png";
 
 const imageMap: Record<string, string> = {
   "whatsapp-chatbot-uk-business": whatsappHero,
   "website-chatbot-small-business": websiteHero,
   "instagram-chatbot-social-media": instagramHero,
+  "outsourced-chat-agents-birmingham": outsourcedHero,
+  "ai-service-providers-uk": aiProvidersHero,
+  "ai-personal-assistant-near-me": aiPersonalHero,
 };
 
 const BlogsPage = () => {
