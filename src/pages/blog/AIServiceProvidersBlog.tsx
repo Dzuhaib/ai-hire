@@ -36,38 +36,35 @@ const AIServiceProvidersBlog = () => {
     }
   ];
 
-  const faqSchema = {
+  const combinedSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Top AI Service Providers UK: Manchester, Canary Wharf, Kensington & Leeds",
+        "description": "Compare the best AI service providers across the UK including Manchester, Canary Wharf, Kensington and Leeds. AI consulting services and chatbot solutions for UK businesses.",
+        "author": { "@type": "Organization", "name": "AI Vized" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "datePublished": "2026-02-02",
+        "dateModified": "2026-02-06",
+        "mainEntityOfPage": "https://aivized.com/blog/ai-service-providers-uk"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "AI Service Providers UK" }
+        ]
       }
-    }))
-  };
-
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Top AI Service Providers UK: Manchester, Canary Wharf, Kensington & Leeds",
-    "description": "Compare the best AI service providers across the UK including Manchester, Canary Wharf, Kensington and Leeds. AI consulting services and chatbot solutions for UK businesses.",
-    "author": { "@type": "Organization", "name": "AI Vized" },
-    "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
-    "datePublished": "2026-02-02",
-    "dateModified": "2026-02-04",
-    "mainEntityOfPage": "https://aivized.com/blog/ai-service-providers-uk"
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
-      { "@type": "ListItem", "position": 3, "name": "AI Service Providers UK" }
     ]
   };
 
@@ -80,9 +77,7 @@ const AIServiceProvidersBlog = () => {
         keywords="ai service providers manchester united kingdom, ai service providers canary wharf united kingdom, ai service providers canary wharf, ai service providers kensington united kingdom, ai agency leeds, ai consulting services manchester, ai chatbot for small business uk"
       />
       
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       
       <Header />
       

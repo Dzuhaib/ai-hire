@@ -23,6 +23,8 @@ import InstagramChatbotBlog from "@/pages/blog/InstagramChatbotBlog";
 import OutsourcedChatAgentsBlog from "@/pages/blog/OutsourcedChatAgentsBlog";
 import AIServiceProvidersBlog from "@/pages/blog/AIServiceProvidersBlog";
 import AIPersonalAssistantBlog from "@/pages/blog/AIPersonalAssistantBlog";
+import AIAutomationUKBlog from "@/pages/blog/AIAutomationUKBlog";
+import AIChatbotGuideBlog from "@/pages/blog/AIChatbotGuideBlog";
 import { LoadingScreen } from "@/components/LoadingScreen";
 
 const ClerkProviderWithNavigation = ({ children }: { children: React.ReactNode }) => {
@@ -79,6 +81,8 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/blog/outsourced-chat-agents-birmingham" element={<OutsourcedChatAgentsBlog />} />
           <Route path="/blog/ai-service-providers-uk" element={<AIServiceProvidersBlog />} />
           <Route path="/blog/ai-personal-assistant-near-me" element={<AIPersonalAssistantBlog />} />
+          <Route path="/blog/ai-automation-uk-business" element={<AIAutomationUKBlog />} />
+          <Route path="/blog/ai-chatbot-small-business-uk-guide" element={<AIChatbotGuideBlog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ClerkProviderWithNavigation>

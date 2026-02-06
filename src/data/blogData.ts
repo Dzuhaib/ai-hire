@@ -121,6 +121,46 @@ export const blogPosts: BlogPost[] = [
       "whatsapp chatbot uk"
     ],
     heroImage: "/src/assets/blog/ai-personal-assistant-hero.png"
+  },
+  {
+    slug: "ai-automation-uk-business",
+    title: "AI Business Automation UK: Digital Assistant Services & Virtual Assistants for Birmingham & Beyond",
+    metaTitle: "AI Business Automation UK | Digital Assistant Services | AIVized",
+    metaDescription: "AI business automation with digital assistant services Birmingham. Virtual assistant for HR, tech support & solo entrepreneurs. Intelligent personal assistant market leader.",
+    excerpt: "Discover how AI automation with digital assistant services is transforming UK businesses—from HR virtual assistants to tech support and solo entrepreneur solutions.",
+    publishedDate: "2026-02-05",
+    readTime: "11 min read",
+    category: "Automation",
+    keywords: [
+      "digital assistant services birmingham",
+      "ai virtual assistant for hr birmingham",
+      "tech virtual assistant services birmingham",
+      "technical virtual assistant services birmingham",
+      "virtual assistant services for solo entrepreneurs birmingham",
+      "intelligent personal assistant market birmingham",
+      "ai personal assistant birmingham"
+    ],
+    heroImage: "/src/assets/blog/ai-automation-uk-hero.png"
+  },
+  {
+    slug: "ai-chatbot-small-business-uk-guide",
+    title: "AI Chatbot for Small Business UK: The Complete 2026 Guide to WhatsApp & Website Chatbots",
+    metaTitle: "AI Chatbot Small Business UK | WhatsApp Chatbot Guide | AIVized",
+    metaDescription: "Complete guide to AI chatbot for small business UK. WhatsApp chatbot UK, AI consulting services Manchester, AI agency Leeds. Managed chatbots from £29/month.",
+    excerpt: "Your complete guide to choosing and implementing the right AI chatbot for your UK small business in 2026, covering WhatsApp, website, and social media channels.",
+    publishedDate: "2026-02-06",
+    readTime: "12 min read",
+    category: "Chatbots",
+    keywords: [
+      "ai chatbot for small business uk",
+      "whatsapp chatbot uk",
+      "ai consulting services manchester",
+      "ai agency leeds",
+      "ai service providers kensington united kingdom",
+      "ai service providers canary wharf united kingdom",
+      "ai service providers canary wharf"
+    ],
+    heroImage: "/src/assets/blog/ai-chatbot-guide-hero.png"
   }
 ];
 

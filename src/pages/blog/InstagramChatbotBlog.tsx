@@ -33,18 +33,36 @@ const InstagramChatbotBlog = () => {
     }
   ];
 
-  const faqSchemaJson = JSON.stringify({
+  const combinedSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
+      },
+      {
+        "@type": "Article",
+        "headline": "Instagram Chatbot: AI Service Providers for Social Media Automation",
+        "author": { "@type": "Organization", "name": "AI Vized" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-02-06",
+        "mainEntityOfPage": "https://aivized.com/blog/instagram-chatbot-social-media"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Instagram Chatbot UK" }
+        ]
       }
-    }))
-  });
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -54,7 +72,7 @@ const InstagramChatbotBlog = () => {
         canonical="https://aivized.com/blog/instagram-chatbot-social-media"
         keywords="ai service providers canary wharf, artificial intelligence personal assistant birmingham, ai service providers canary wharf united kingdom, ai chatbot for small business uk"
       />
-      <script type="application/ld+json">{faqSchemaJson}</script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">

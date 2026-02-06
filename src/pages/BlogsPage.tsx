@@ -14,6 +14,8 @@ import instagramHero from "@/assets/blog/instagram-chatbot-hero.png";
 import outsourcedHero from "@/assets/blog/outsourced-chat-agents-hero.png";
 import aiProvidersHero from "@/assets/blog/ai-service-providers-hero.png";
 import aiPersonalHero from "@/assets/blog/ai-personal-assistant-hero.png";
+import aiAutomationHero from "@/assets/blog/ai-automation-uk-hero.png";
+import aiChatbotGuideHero from "@/assets/blog/ai-chatbot-guide-hero.png";
 
 const imageMap: Record<string, string> = {
   "whatsapp-chatbot-uk-business": whatsappHero,
@@ -22,6 +24,8 @@ const imageMap: Record<string, string> = {
   "outsourced-chat-agents-birmingham": outsourcedHero,
   "ai-service-providers-uk": aiProvidersHero,
   "ai-personal-assistant-near-me": aiPersonalHero,
+  "ai-automation-uk-business": aiAutomationHero,
+  "ai-chatbot-small-business-uk-guide": aiChatbotGuideHero,
 };
 
 const BlogsPage = () => {

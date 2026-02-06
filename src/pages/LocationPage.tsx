@@ -59,89 +59,87 @@ const LocationPage = () => {
   const schemas = useMemo(() => {
     if (!location) return null;
 
-    const breadcrumbSchema = {
+    const combinedSchema = {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://aivized.com/locations" },
-        { "@type": "ListItem", "position": 3, "name": location.city, "item": `https://aivized.com/locations/${location.slug}` }
-      ]
-    };
-
-    const localBusinessSchema = {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": `AI Vized - ${location.city}`,
-      "description": location.description,
-      "url": `https://aivized.com/locations/${location.slug}`,
-      "telephone": "+44-000-000-0000",
-      "email": "myselfzuhaib@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": location.city,
-        "addressRegion": location.region,
-        "addressCountry": "GB"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": location.coordinates.lat,
-        "longitude": location.coordinates.lng
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": location.city
-      },
-      "priceRange": "££",
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+            { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://aivized.com/locations" },
+            { "@type": "ListItem", "position": 3, "name": location.city, "item": `https://aivized.com/locations/${location.slug}` }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": `AI Vized - ${location.city}`,
+          "description": location.description,
+          "url": `https://aivized.com/locations/${location.slug}`,
+          "telephone": "+44-000-000-0000",
+          "email": "myselfzuhaib@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": location.city,
+            "addressRegion": location.region,
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": location.coordinates.lat,
+            "longitude": location.coordinates.lng
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": location.city
+          },
+          "priceRange": "££",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": location.faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+          }))
+        },
+        {
+          "@type": "Service",
+          "name": `AI Chatbot Service ${location.city}`,
+          "serviceType": "AI Chatbot Solutions",
+          "provider": {
+            "@type": "Organization",
+            "name": "AI Vized",
+            "url": "https://aivized.com"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": location.city
+          },
+          "description": `AI-powered customer service and lead generation for ${location.city} businesses`,
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "GBP",
+            "price": "29",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "29",
+              "priceCurrency": "GBP",
+              "unitText": "MONTH"
+            }
+          }
         }
       ]
     };
 
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": location.faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-      }))
-    };
-
-    const serviceSchema = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": `AI Chatbot Service ${location.city}`,
-      "serviceType": "AI Chatbot Solutions",
-      "provider": {
-        "@type": "Organization",
-        "name": "AI Vized",
-        "url": "https://aivized.com"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": location.city
-      },
-      "description": `AI-powered customer service and lead generation for ${location.city} businesses`,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "price": "29",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "29",
-          "priceCurrency": "GBP",
-          "unitText": "MONTH"
-        }
-      }
-    };
-
-    return { breadcrumbSchema, localBusinessSchema, faqSchema, serviceSchema };
+    return combinedSchema;
   }, [location]);
 
   const metaTitle = location ? `Managed AI Chatbot ${location.city} | From £29/month` : "";
@@ -167,12 +165,7 @@ const LocationPage = () => {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         {schemas && (
-          <>
-            <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
-            <script type="application/ld+json">{JSON.stringify(schemas.localBusinessSchema)}</script>
-            <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
-            <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
-          </>
+          <script type="application/ld+json">{JSON.stringify(schemas)}</script>
         )}
       </Helmet>
       <Header />
