@@ -36,38 +36,35 @@ const OutsourcedChatAgentsBlog = () => {
     }
   ];
 
-  const faqSchema = {
+  const combinedSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "24/7 Outsourced Chat Agents Birmingham: AI Virtual Assistants for HR & Tech Support",
+        "description": "Discover how 24/7 outsourced chat agents and AI virtual assistants are transforming Birmingham businesses with round-the-clock customer support and HR automation.",
+        "author": { "@type": "Organization", "name": "AI Vized" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "datePublished": "2026-02-01",
+        "dateModified": "2026-02-06",
+        "mainEntityOfPage": "https://aivized.com/blog/outsourced-chat-agents-birmingham"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "24/7 Outsourced Chat Agents Birmingham" }
+        ]
       }
-    }))
-  };
-
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "24/7 Outsourced Chat Agents Birmingham: AI Virtual Assistants for HR & Tech Support",
-    "description": "Discover how 24/7 outsourced chat agents and AI virtual assistants are transforming Birmingham businesses with round-the-clock customer support and HR automation.",
-    "author": { "@type": "Organization", "name": "AI Vized" },
-    "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
-    "datePublished": "2026-02-01",
-    "dateModified": "2026-02-04",
-    "mainEntityOfPage": "https://aivized.com/blog/outsourced-chat-agents-birmingham"
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
-      { "@type": "ListItem", "position": 3, "name": "24/7 Outsourced Chat Agents Birmingham" }
     ]
   };
 
@@ -80,9 +77,7 @@ const OutsourcedChatAgentsBlog = () => {
         keywords="24/7 outsourced chat agents birmingham, ai virtual assistant for hr birmingham, tech virtual assistant services birmingham, technical virtual assistant services birmingham, virtual assistant services for solo entrepreneurs birmingham, ai personal assistant birmingham, intelligent personal assistant market birmingham"
       />
       
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       
       <Header />
       

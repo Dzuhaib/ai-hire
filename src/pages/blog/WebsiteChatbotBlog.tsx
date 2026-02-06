@@ -33,18 +33,36 @@ const WebsiteChatbotBlog = () => {
     }
   ];
 
-  const faqSchemaJson = JSON.stringify({
+  const combinedSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
+      },
+      {
+        "@type": "Article",
+        "headline": "Website Chatbot Solutions: Digital Assistant Services for UK SMEs",
+        "author": { "@type": "Organization", "name": "AI Vized" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "datePublished": "2026-01-29",
+        "dateModified": "2026-02-06",
+        "mainEntityOfPage": "https://aivized.com/blog/website-chatbot-small-business"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Website Chatbot UK" }
+        ]
       }
-    }))
-  });
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -54,7 +72,7 @@ const WebsiteChatbotBlog = () => {
         canonical="https://aivized.com/blog/website-chatbot-small-business"
         keywords="digital assistant services birmingham, ai chatbot for small business uk, ai service providers kensington united kingdom, ai virtual assistant for hr birmingham"
       />
-      <script type="application/ld+json">{faqSchemaJson}</script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">

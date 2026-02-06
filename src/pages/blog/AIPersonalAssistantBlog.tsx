@@ -36,38 +36,35 @@ const AIPersonalAssistantBlog = () => {
     }
   ];
 
-  const faqSchema = {
+  const combinedSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "AI Personal Assistant Near Me: Digital Assistant Services Birmingham & Edinburgh",
+        "description": "Find an artificial intelligence personal assistant near you. AI personal assistants for Birmingham, Edinburgh businesses. WhatsApp chatbot UK & digital assistant services.",
+        "author": { "@type": "Organization", "name": "AI Vized" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "datePublished": "2026-02-03",
+        "dateModified": "2026-02-06",
+        "mainEntityOfPage": "https://aivized.com/blog/ai-personal-assistant-near-me"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "AI Personal Assistant Near Me" }
+        ]
       }
-    }))
-  };
-
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "AI Personal Assistant Near Me: Digital Assistant Services Birmingham & Edinburgh",
-    "description": "Find an artificial intelligence personal assistant near you. AI personal assistants for Birmingham, Edinburgh businesses. WhatsApp chatbot UK & digital assistant services.",
-    "author": { "@type": "Organization", "name": "AI Vized" },
-    "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
-    "datePublished": "2026-02-03",
-    "dateModified": "2026-02-04",
-    "mainEntityOfPage": "https://aivized.com/blog/ai-personal-assistant-near-me"
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
-      { "@type": "ListItem", "position": 3, "name": "AI Personal Assistant Near Me" }
     ]
   };
 
@@ -80,9 +77,7 @@ const AIPersonalAssistantBlog = () => {
         keywords="artificial intelligence personal assistant near me, artificial intelligence personal assistant birmingham, digital assistant services birmingham, ai personal assistant edinburgh, ai virtual assistant for hr edinburgh, whatsapp chatbot uk"
       />
       
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       
       <Header />
       

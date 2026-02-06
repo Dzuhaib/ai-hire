@@ -73,6 +73,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://aivized.com/blog/ai-automation-uk-business</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aivized.com/blog/ai-chatbot-small-business-uk-guide</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
   <!-- UK Location Pages - AI Chatbot Service by City (Local SEO) -->
   <url>
