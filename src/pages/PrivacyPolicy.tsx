@@ -12,8 +12,8 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy | AIVized Managed AI Chatbot Service UK</title>
         <meta name="description" content="AIVized privacy policy for managed AI chatbot service. GDPR compliant data protection for UK small business. Learn how we protect your customer data." />
         <meta name="keywords" content="AIVized privacy policy, managed AI chatbot service, AI chatbot for small business UK, GDPR AI chatbot, data protection, lead generation chatbot UK" />
-        <link rel="canonical" href="https://aivized.com/privacy-policy" />
-        <meta property="og:url" content="https://aivized.com/privacy-policy" />
+        <link rel="canonical" href="https://www.aivized.com/privacy-policy" />
+        <meta property="og:url" content="https://www.aivized.com/privacy-policy" />
         <meta property="og:title" content="Privacy Policy | AIVized Managed AI Chatbot Service UK" />
         <meta property="og:description" content="AIVized privacy policy for managed AI chatbot service. GDPR compliant data protection for UK small business." />
       </Helmet>

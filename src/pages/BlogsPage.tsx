@@ -34,7 +34,7 @@ const BlogsPage = () => {
       <PageMeta
         title="AI Chatbot Blog | UK Business Insights | AIVized"
         description="Expert insights on AI chatbots for UK businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support."
-        canonical="https://aivized.com/blog"
+        canonical="https://www.aivized.com/blog"
         keywords="ai chatbot blog, chatbot insights uk, ai for small business, digital assistant services"
       />
       <Header />

@@ -44,10 +44,10 @@ const AIPersonalAssistantBlog = () => {
         "headline": "AI Personal Assistant Near Me: Digital Assistant Services Birmingham & Edinburgh",
         "description": "Find an artificial intelligence personal assistant near you. AI personal assistants for Birmingham, Edinburgh businesses. WhatsApp chatbot UK & digital assistant services.",
         "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
         "datePublished": "2026-02-03",
         "dateModified": "2026-02-06",
-        "mainEntityOfPage": "https://aivized.com/blog/ai-personal-assistant-near-me"
+        "mainEntityOfPage": "https://www.aivized.com/blog/ai-personal-assistant-near-me"
       },
       {
         "@type": "FAQPage",
@@ -60,8 +60,8 @@ const AIPersonalAssistantBlog = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Personal Assistant Near Me" }
         ]
       }
@@ -73,7 +73,7 @@ const AIPersonalAssistantBlog = () => {
       <PageMeta
         title="AI Personal Assistant Near Me | Birmingham & Edinburgh | AIVized"
         description="Find artificial intelligence personal assistant near me. Digital assistant services Birmingham, AI personal assistant Edinburgh, WhatsApp chatbot UK from £29/month."
-        canonical="https://aivized.com/blog/ai-personal-assistant-near-me"
+        canonical="https://www.aivized.com/blog/ai-personal-assistant-near-me"
         keywords="artificial intelligence personal assistant near me, artificial intelligence personal assistant birmingham, digital assistant services birmingham, ai personal assistant edinburgh, ai virtual assistant for hr edinburgh, whatsapp chatbot uk"
       />
       

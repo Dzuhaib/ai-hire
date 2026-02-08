@@ -154,7 +154,7 @@ const Dashboard = () => {
           title="Dashboard | AI Vized - Manage Your AI Employees"
           description="Your AI Vized dashboard. Monitor AI employee performance, manage subscriptions, view billing history, and optimize your customer service automation."
           keywords="AI Vized dashboard, AI employee management, chatbot analytics, subscription management, AI performance metrics"
-          canonical="https://aivized.com/dashboard"
+          canonical="https://www.aivized.com/dashboard"
         />
         <div className="min-h-screen bg-background">
           {/* Header */}

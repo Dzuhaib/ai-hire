@@ -30,7 +30,7 @@ const AuthPage = () => {
           ? "AI Vized sign up, create AI account, AI employee trial, UK business automation signup, chatbot registration"
           : "AI Vized login, AI dashboard access, manage AI employees, business automation login"
         }
-        canonical={`https://aivized.com/auth${isSignUp ? "?mode=signup" : ""}`}
+        canonical={`https://www.aivized.com/auth${isSignUp ? "?mode=signup" : ""}`}
       />
       {/* Back Navigation */}
       <div className="p-6">

@@ -48,10 +48,10 @@ const AIChatbotGuideBlog = () => {
         "headline": "AI Chatbot for Small Business UK: The Complete 2026 Guide to WhatsApp & Website Chatbots",
         "description": "Complete guide to AI chatbots for UK small businesses. Compare WhatsApp chatbot UK solutions, AI consulting services Manchester, and AI agency Leeds options from £29/month.",
         "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
         "datePublished": "2026-02-06",
         "dateModified": "2026-02-06",
-        "mainEntityOfPage": "https://aivized.com/blog/ai-chatbot-small-business-uk-guide"
+        "mainEntityOfPage": "https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide"
       },
       {
         "@type": "FAQPage",
@@ -64,8 +64,8 @@ const AIChatbotGuideBlog = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Chatbot Small Business UK Guide" }
         ]
       }
@@ -77,7 +77,7 @@ const AIChatbotGuideBlog = () => {
       <PageMeta
         title="AI Chatbot Small Business UK | WhatsApp Chatbot Guide | AIVized"
         description="Complete guide to AI chatbot for small business UK. WhatsApp chatbot UK, AI consulting services Manchester, AI agency Leeds. Managed chatbots from £29/month."
-        canonical="https://aivized.com/blog/ai-chatbot-small-business-uk-guide"
+        canonical="https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide"
         keywords="ai chatbot for small business uk, whatsapp chatbot uk, ai consulting services manchester, ai agency leeds, ai service providers kensington united kingdom, ai service providers canary wharf united kingdom, ai service providers canary wharf"
       />
       

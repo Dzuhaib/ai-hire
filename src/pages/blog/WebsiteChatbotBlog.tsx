@@ -48,16 +48,16 @@ const WebsiteChatbotBlog = () => {
         "@type": "Article",
         "headline": "Website Chatbot Solutions: Digital Assistant Services for UK SMEs",
         "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
         "datePublished": "2026-01-29",
         "dateModified": "2026-02-06",
-        "mainEntityOfPage": "https://aivized.com/blog/website-chatbot-small-business"
+        "mainEntityOfPage": "https://www.aivized.com/blog/website-chatbot-small-business"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "Website Chatbot UK" }
         ]
       }
@@ -69,7 +69,7 @@ const WebsiteChatbotBlog = () => {
       <PageMeta
         title="Website Chatbot UK | Digital Assistant Services Birmingham | AIVized"
         description="Get a managed website chatbot with digital assistant services in Birmingham and Kensington. AI virtual assistant for HR and customer support."
-        canonical="https://aivized.com/blog/website-chatbot-small-business"
+        canonical="https://www.aivized.com/blog/website-chatbot-small-business"
         keywords="digital assistant services birmingham, ai chatbot for small business uk, ai service providers kensington united kingdom, ai virtual assistant for hr birmingham"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
