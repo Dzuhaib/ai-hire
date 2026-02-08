@@ -48,10 +48,10 @@ const AIAutomationUKBlog = () => {
         "headline": "AI Business Automation UK: Digital Assistant Services & Virtual Assistants for Birmingham & Beyond",
         "description": "Discover how AI automation with digital assistant services is transforming UK businesses. Virtual assistant services for HR, tech support, and solo entrepreneurs in Birmingham.",
         "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
         "datePublished": "2026-02-05",
         "dateModified": "2026-02-06",
-        "mainEntityOfPage": "https://aivized.com/blog/ai-automation-uk-business"
+        "mainEntityOfPage": "https://www.aivized.com/blog/ai-automation-uk-business"
       },
       {
         "@type": "FAQPage",
@@ -64,8 +64,8 @@ const AIAutomationUKBlog = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Business Automation UK" }
         ]
       }
@@ -77,7 +77,7 @@ const AIAutomationUKBlog = () => {
       <PageMeta
         title="AI Business Automation UK | Digital Assistant Services | AIVized"
         description="AI business automation with digital assistant services Birmingham. Virtual assistant for HR, tech support & solo entrepreneurs. Intelligent personal assistant market leader."
-        canonical="https://aivized.com/blog/ai-automation-uk-business"
+        canonical="https://www.aivized.com/blog/ai-automation-uk-business"
         keywords="digital assistant services birmingham, ai virtual assistant for hr birmingham, tech virtual assistant services birmingham, technical virtual assistant services birmingham, virtual assistant services for solo entrepreneurs birmingham, intelligent personal assistant market birmingham, ai personal assistant birmingham"
       />
       

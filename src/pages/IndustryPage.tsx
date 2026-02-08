@@ -74,9 +74,9 @@ const IndustryPage = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://aivized.com/industries" },
-        { "@type": "ListItem", "position": 3, "name": industry.industry, "item": `https://aivized.com/${industry.slug}` }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+        { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
+        { "@type": "ListItem", "position": 3, "name": industry.industry, "item": `https://www.aivized.com/${industry.slug}` }
       ]
     };
 
@@ -84,7 +84,7 @@ const IndustryPage = () => {
       "@context": "https://schema.org",
       "@type": "Service",
       "serviceType": `AI Solutions for ${industry.industry}`,
-      "provider": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+      "provider": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
       "description": industry.description,
       "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "offers": {
@@ -132,8 +132,8 @@ const IndustryPage = () => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
-        <link rel="canonical" href={`https://aivized.com/${industry.slug}`} />
-        <meta property="og:url" content={`https://aivized.com/${industry.slug}`} />
+        <link rel="canonical" href={`https://www.aivized.com/${industry.slug}`} />
+        <meta property="og:url" content={`https://www.aivized.com/${industry.slug}`} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         {schemas && (

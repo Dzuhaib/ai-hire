@@ -44,10 +44,10 @@ const OutsourcedChatAgentsBlog = () => {
         "headline": "24/7 Outsourced Chat Agents Birmingham: AI Virtual Assistants for HR & Tech Support",
         "description": "Discover how 24/7 outsourced chat agents and AI virtual assistants are transforming Birmingham businesses with round-the-clock customer support and HR automation.",
         "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://aivized.com" },
+        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
         "datePublished": "2026-02-01",
         "dateModified": "2026-02-06",
-        "mainEntityOfPage": "https://aivized.com/blog/outsourced-chat-agents-birmingham"
+        "mainEntityOfPage": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham"
       },
       {
         "@type": "FAQPage",
@@ -60,8 +60,8 @@ const OutsourcedChatAgentsBlog = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivized.com/blog" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "24/7 Outsourced Chat Agents Birmingham" }
         ]
       }
@@ -73,7 +73,7 @@ const OutsourcedChatAgentsBlog = () => {
       <PageMeta
         title="24/7 Outsourced Chat Agents Birmingham | AI Virtual Assistant HR | AIVized"
         description="Get 24/7 outsourced chat agents in Birmingham. AI virtual assistant for HR, tech support & solo entrepreneurs. Intelligent personal assistant market leader."
-        canonical="https://aivized.com/blog/outsourced-chat-agents-birmingham"
+        canonical="https://www.aivized.com/blog/outsourced-chat-agents-birmingham"
         keywords="24/7 outsourced chat agents birmingham, ai virtual assistant for hr birmingham, tech virtual assistant services birmingham, technical virtual assistant services birmingham, virtual assistant services for solo entrepreneurs birmingham, ai personal assistant birmingham, intelligent personal assistant market birmingham"
       />
       

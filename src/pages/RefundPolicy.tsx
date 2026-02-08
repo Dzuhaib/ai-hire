@@ -12,8 +12,8 @@ const RefundPolicy = () => {
         <title>Refund Policy | AIVized Managed AI Chatbot Service UK</title>
         <meta name="description" content="AIVized 14-day money-back guarantee for managed AI chatbot service. Fair refund terms for UK small business. Affordable AI chatbot from £29/month." />
         <meta name="keywords" content="AIVized refund policy, managed AI chatbot service, AI chatbot for small business UK, affordable AI chatbot refund, money-back guarantee UK" />
-        <link rel="canonical" href="https://aivized.com/refund-policy" />
-        <meta property="og:url" content="https://aivized.com/refund-policy" />
+        <link rel="canonical" href="https://www.aivized.com/refund-policy" />
+        <meta property="og:url" content="https://www.aivized.com/refund-policy" />
         <meta property="og:title" content="Refund Policy | AIVized Managed AI Chatbot Service UK" />
         <meta property="og:description" content="AIVized 14-day money-back guarantee for managed AI chatbot service. Fair refund terms for UK small business." />
       </Helmet>

@@ -15,8 +15,8 @@ const PricingPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://aivized.com/pricing" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.aivized.com/pricing" }
     ]
   };
 
@@ -26,8 +26,8 @@ const PricingPage = () => {
         <title>AI Chatbot Pricing UK | Managed from £29/month | AIVized</title>
         <meta name="description" content="Transparent AI chatbot pricing for UK small businesses. Fully managed from £29/month. No technical skills needed, 24/7 support included." />
         <meta name="keywords" content="AI chatbot pricing UK, managed AI chatbot cost, affordable chatbot service, lead generation chatbot price, small business AI pricing" />
-        <link rel="canonical" href="https://aivized.com/pricing" />
-        <meta property="og:url" content="https://aivized.com/pricing" />
+        <link rel="canonical" href="https://www.aivized.com/pricing" />
+        <meta property="og:url" content="https://www.aivized.com/pricing" />
         <meta property="og:title" content="AI Chatbot Pricing UK | Managed from £29/month | AIVized" />
         <meta property="og:description" content="Transparent AI chatbot pricing for UK small businesses. Fully managed from £29/month." />
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

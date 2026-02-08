@@ -33,8 +33,8 @@ const IndustriesPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-      { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://aivized.com/industries" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+      { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" }
     ]
   };
 
@@ -44,8 +44,8 @@ const IndustriesPage = () => {
         <title>AI Chatbot for Restaurants, Real Estate & E-Commerce UK</title>
         <meta name="description" content="Industry-trained managed AI chatbots for restaurants, real estate & e-commerce. Capture leads 24/7, from £29/month. No technical skills needed." />
         <meta name="keywords" content="restaurant AI chatbot, real estate AI assistant, ecommerce AI chatbot, lead generation chatbot UK, managed AI chatbot service, 24/7 customer support chatbot UK" />
-        <link rel="canonical" href="https://aivized.com/industries" />
-        <meta property="og:url" content="https://aivized.com/industries" />
+        <link rel="canonical" href="https://www.aivized.com/industries" />
+        <meta property="og:url" content="https://www.aivized.com/industries" />
         <meta property="og:title" content="AI Chatbot for Restaurants, Real Estate & E-Commerce UK" />
         <meta property="og:description" content="Industry-trained managed AI chatbots for restaurants, real estate & e-commerce. Capture leads 24/7, from £29/month." />
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

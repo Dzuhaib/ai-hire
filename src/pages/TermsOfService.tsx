@@ -12,8 +12,8 @@ const TermsOfService = () => {
         <title>Terms of Service | AIVized Managed AI Chatbot Service UK</title>
         <meta name="description" content="AIVized terms of service for managed AI chatbot subscriptions. Affordable AI chatbot for website from £29/month. UK small business service agreement." />
         <meta name="keywords" content="AIVized terms of service, managed AI chatbot service, AI chatbot for small business UK, affordable AI chatbot subscription, 24/7 customer support chatbot UK" />
-        <link rel="canonical" href="https://aivized.com/terms-of-service" />
-        <meta property="og:url" content="https://aivized.com/terms-of-service" />
+        <link rel="canonical" href="https://www.aivized.com/terms-of-service" />
+        <meta property="og:url" content="https://www.aivized.com/terms-of-service" />
         <meta property="og:title" content="Terms of Service | AIVized Managed AI Chatbot Service UK" />
         <meta property="og:description" content="AIVized terms of service for managed AI chatbot subscriptions. Affordable AI chatbot for website from £29/month." />
       </Helmet>

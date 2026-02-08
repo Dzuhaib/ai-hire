@@ -65,16 +65,16 @@ const LocationPage = () => {
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivized.com" },
-            { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://aivized.com/locations" },
-            { "@type": "ListItem", "position": 3, "name": location.city, "item": `https://aivized.com/locations/${location.slug}` }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+            { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.aivized.com/locations" },
+            { "@type": "ListItem", "position": 3, "name": location.city, "item": `https://www.aivized.com/locations/${location.slug}` }
           ]
         },
         {
           "@type": "LocalBusiness",
           "name": `AI Vized - ${location.city}`,
           "description": location.description,
-          "url": `https://aivized.com/locations/${location.slug}`,
+          "url": `https://www.aivized.com/locations/${location.slug}`,
           "telephone": "+44-000-000-0000",
           "email": "myselfzuhaib@gmail.com",
           "address": {
@@ -117,7 +117,7 @@ const LocationPage = () => {
           "provider": {
             "@type": "Organization",
             "name": "AI Vized",
-            "url": "https://aivized.com"
+            "url": "https://www.aivized.com"
           },
           "areaServed": {
             "@type": "City",
@@ -160,8 +160,8 @@ const LocationPage = () => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
-        <link rel="canonical" href={`https://aivized.com/locations/${location.slug}`} />
-        <meta property="og:url" content={`https://aivized.com/locations/${location.slug}`} />
+        <link rel="canonical" href={`https://www.aivized.com/locations/${location.slug}`} />
+        <meta property="og:url" content={`https://www.aivized.com/locations/${location.slug}`} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         {schemas && (
