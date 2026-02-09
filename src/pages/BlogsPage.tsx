@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
-import { blogPosts } from "@/data/blogData";
+import { allBlogPosts } from "@/data/blogData";
 
 // Import blog images
 import whatsappHero from "@/assets/blog/whatsapp-chatbot-hero.png";
@@ -17,6 +17,18 @@ import aiPersonalHero from "@/assets/blog/ai-personal-assistant-hero.png";
 import aiAutomationHero from "@/assets/blog/ai-automation-uk-hero.png";
 import aiChatbotGuideHero from "@/assets/blog/ai-chatbot-guide-hero.png";
 
+// City hero images
+import aiLondon from "@/assets/locations/ai-london.png";
+import aiManchester from "@/assets/locations/ai-manchester.png";
+import aiBirmingham from "@/assets/locations/ai-birmingham.png";
+import aiLeeds from "@/assets/locations/ai-leeds.png";
+import aiLiverpool from "@/assets/locations/ai-liverpool.png";
+import aiBristol from "@/assets/locations/ai-bristol.png";
+import aiGlasgow from "@/assets/locations/ai-glasgow.png";
+import aiEdinburgh from "@/assets/locations/ai-edinburgh.png";
+import aiSheffield from "@/assets/locations/ai-sheffield.png";
+import aiNewcastle from "@/assets/locations/ai-newcastle.png";
+
 const imageMap: Record<string, string> = {
   "whatsapp-chatbot-uk-business": whatsappHero,
   "website-chatbot-small-business": websiteHero,
@@ -26,6 +38,16 @@ const imageMap: Record<string, string> = {
   "ai-personal-assistant-near-me": aiPersonalHero,
   "ai-automation-uk-business": aiAutomationHero,
   "ai-chatbot-small-business-uk-guide": aiChatbotGuideHero,
+  "website-chatbot-24-7-london": aiLondon,
+  "website-chatbot-24-7-manchester": aiManchester,
+  "website-chatbot-24-7-birmingham": aiBirmingham,
+  "website-chatbot-24-7-leeds": aiLeeds,
+  "website-chatbot-24-7-liverpool": aiLiverpool,
+  "website-chatbot-24-7-bristol": aiBristol,
+  "website-chatbot-24-7-glasgow": aiGlasgow,
+  "website-chatbot-24-7-edinburgh": aiEdinburgh,
+  "website-chatbot-24-7-sheffield": aiSheffield,
+  "website-chatbot-24-7-newcastle": aiNewcastle,
 };
 
 const BlogsPage = () => {
@@ -62,7 +84,7 @@ const BlogsPage = () => {
 
           {/* Blog Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
+            {allBlogPosts.map((post, index) => (
               <motion.article
                 key={post.slug}
                 initial={{ opacity: 0, y: 20 }}

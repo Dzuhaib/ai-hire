@@ -164,6 +164,27 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
+// City-specific blog posts for "Website Chatbot that runs 24/7 {City}"
+const cityNames = ["London", "Manchester", "Birmingham", "Leeds", "Liverpool", "Bristol", "Glasgow", "Edinburgh", "Sheffield", "Newcastle"];
+
+export const cityBlogEntries: BlogPost[] = cityNames.map(city => {
+  const slug = city.toLowerCase();
+  return {
+    slug: `website-chatbot-24-7-${slug}`,
+    title: `Website Chatbot That Runs 24/7 ${city} | Managed AI Service`,
+    metaTitle: `Website Chatbot 24/7 ${city} | Managed AI Chatbot | AIVized`,
+    metaDescription: `Get a website chatbot that runs 24/7 for your ${city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`,
+    excerpt: `Discover how a 24/7 website chatbot helps ${city} businesses capture more leads, answer customer enquiries instantly, and grow—all fully managed from £29/month.`,
+    publishedDate: "2026-02-08",
+    readTime: "7 min read",
+    category: "Website Chatbot",
+    keywords: [`website chatbot ${city.toLowerCase()}`, `24/7 chatbot ${city.toLowerCase()}`, `managed AI chatbot ${city.toLowerCase()}`, "ai chatbot for small business uk"],
+    heroImage: `/src/assets/locations/ai-${slug}.png`,
+  };
+});
+
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...cityBlogEntries];
+
 export const getBlogBySlug = (slug: string): BlogPost | undefined => {
-  return blogPosts.find(post => post.slug === slug);
+  return allBlogPosts.find(post => post.slug === slug);
 };
