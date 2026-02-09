@@ -41,7 +41,8 @@ const cityHeroImages: Record<string, string> = {
 };
 
 const CityWebsiteChatbotBlog = () => {
-  const { city } = useParams<{ city: string }>();
+  const { slug } = useParams<{ slug: string }>();
+  const city = slug?.replace("website-chatbot-24-7-", "") || "";
   const data = city ? getCityBlogBySlug(city) : undefined;
 
   if (!data) return <NotFound />;

@@ -84,7 +84,7 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/blog/ai-personal-assistant-near-me" element={<AIPersonalAssistantBlog />} />
           <Route path="/blog/ai-automation-uk-business" element={<AIAutomationUKBlog />} />
           <Route path="/blog/ai-chatbot-small-business-uk-guide" element={<AIChatbotGuideBlog />} />
-          <Route path="/blog/website-chatbot-24-7-:city" element={<CityWebsiteChatbotBlog />} />
+          <Route path="/blog/:slug" element={<CityWebsiteChatbotBlog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ClerkProviderWithNavigation>
