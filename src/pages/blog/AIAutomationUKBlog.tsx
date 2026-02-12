@@ -79,10 +79,8 @@ const AIAutomationUKBlog = () => {
         description="AI business automation with digital assistant services Birmingham. Virtual assistant for HR, tech support & solo entrepreneurs. Intelligent personal assistant market leader."
         canonical="https://www.aivized.com/blog/ai-automation-uk-business"
         keywords="digital assistant services birmingham, ai virtual assistant for hr birmingham, tech virtual assistant services birmingham, technical virtual assistant services birmingham, virtual assistant services for solo entrepreneurs birmingham, intelligent personal assistant market birmingham, ai personal assistant birmingham"
+        schema={combinedSchema}
       />
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
-      
       <Header />
       
       <main className="pt-32 pb-20">

@@ -67,45 +67,44 @@ const IndustryPage = () => {
   }, [pathname]);
 
   // Generate structured data schemas
-  const schemas = useMemo(() => {
+    const combinedSchema = useMemo(() => {
     if (!industry) return null;
 
-    const breadcrumbSchema = {
+    return {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
-        { "@type": "ListItem", "position": 3, "name": industry.industry, "item": `https://www.aivized.com/${industry.slug}` }
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+            { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
+            { "@type": "ListItem", "position": 3, "name": industry.industry, "item": `https://www.aivized.com/${industry.slug}` }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": `AI Chatbot Service for ${industry.industry}`,
+          "serviceType": `AI Solutions for ${industry.industry}`,
+          "provider": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+          "description": industry.description,
+          "areaServed": { "@type": "Country", "name": "United Kingdom" },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "GBP",
+            "price": "29",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "MONTH" }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": industry.faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+          }))
+        }
       ]
     };
-
-    const serviceSchema = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": `AI Solutions for ${industry.industry}`,
-      "provider": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
-      "description": industry.description,
-      "areaServed": { "@type": "Country", "name": "United Kingdom" },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "price": "29",
-        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "month" }
-      }
-    };
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": industry.faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-      }))
-    };
-
-    return { breadcrumbSchema, serviceSchema, faqSchema };
   }, [industry]);
 
   const industryKeyword = industry?.slug === "restaurants" 
@@ -136,12 +135,8 @@ const IndustryPage = () => {
         <meta property="og:url" content={`https://www.aivized.com/${industry.slug}`} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        {schemas && (
-          <>
-            <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
-            <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
-            <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
-          </>
+        {combinedSchema && (
+          <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
         )}
       </Helmet>
       <Header />

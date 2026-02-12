@@ -75,10 +75,8 @@ const AIServiceProvidersBlog = () => {
         description="Find top AI service providers in Manchester, Canary Wharf, Kensington & Leeds. AI consulting services, chatbot solutions for small business UK from £29/month."
         canonical="https://www.aivized.com/blog/ai-service-providers-uk"
         keywords="ai service providers manchester united kingdom, ai service providers canary wharf united kingdom, ai service providers canary wharf, ai service providers kensington united kingdom, ai agency leeds, ai consulting services manchester, ai chatbot for small business uk"
+        schema={combinedSchema}
       />
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
-      
       <Header />
       
       <main className="pt-32 pb-20">

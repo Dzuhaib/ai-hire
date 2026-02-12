@@ -71,8 +71,8 @@ const WhatsAppChatbotBlog = () => {
         description="Discover how WhatsApp chatbots with 24/7 outsourced chat agents can transform your Birmingham or Manchester business. AI service providers UK."
         canonical="https://www.aivized.com/blog/whatsapp-chatbot-uk-business"
         keywords="artificial intelligence personal assistant near me, ai service providers manchester united kingdom, 24/7 outsourced chat agents birmingham, ai chatbot for small business uk"
+        schema={combinedSchema}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">

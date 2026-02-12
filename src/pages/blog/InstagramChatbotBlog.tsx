@@ -71,8 +71,8 @@ const InstagramChatbotBlog = () => {
         description="Automate Instagram DMs with AI chatbots. Leading AI service providers in Canary Wharf and Birmingham for social media customer engagement."
         canonical="https://www.aivized.com/blog/instagram-chatbot-social-media"
         keywords="ai service providers canary wharf, artificial intelligence personal assistant birmingham, ai service providers canary wharf united kingdom, ai chatbot for small business uk"
+        schema={combinedSchema}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">
