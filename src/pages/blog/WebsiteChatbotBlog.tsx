@@ -71,8 +71,8 @@ const WebsiteChatbotBlog = () => {
         description="Get a managed website chatbot with digital assistant services in Birmingham and Kensington. AI virtual assistant for HR and customer support."
         canonical="https://www.aivized.com/blog/website-chatbot-small-business"
         keywords="digital assistant services birmingham, ai chatbot for small business uk, ai service providers kensington united kingdom, ai virtual assistant for hr birmingham"
+        schema={combinedSchema}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">

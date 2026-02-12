@@ -89,8 +89,8 @@ const CityWebsiteChatbotBlog = () => {
         description={`Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`}
         canonical={canonicalUrl}
         keywords={`website chatbot ${data.city}, 24/7 chatbot ${data.city}, managed AI chatbot ${data.city}, lead generation chatbot ${data.region}, AI chatbot for small business UK, website chatbot that runs 24/7 ${data.city}`}
+        schema={combinedSchema}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
 
       <main className="pt-32 pb-20">

@@ -75,10 +75,8 @@ const AIPersonalAssistantBlog = () => {
         description="Find artificial intelligence personal assistant near me. Digital assistant services Birmingham, AI personal assistant Edinburgh, WhatsApp chatbot UK from £29/month."
         canonical="https://www.aivized.com/blog/ai-personal-assistant-near-me"
         keywords="artificial intelligence personal assistant near me, artificial intelligence personal assistant birmingham, digital assistant services birmingham, ai personal assistant edinburgh, ai virtual assistant for hr edinburgh, whatsapp chatbot uk"
+        schema={combinedSchema}
       />
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
-      
       <Header />
       
       <main className="pt-32 pb-20">

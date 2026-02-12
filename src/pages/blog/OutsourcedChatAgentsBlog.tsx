@@ -75,10 +75,8 @@ const OutsourcedChatAgentsBlog = () => {
         description="Get 24/7 outsourced chat agents in Birmingham. AI virtual assistant for HR, tech support & solo entrepreneurs. Intelligent personal assistant market leader."
         canonical="https://www.aivized.com/blog/outsourced-chat-agents-birmingham"
         keywords="24/7 outsourced chat agents birmingham, ai virtual assistant for hr birmingham, tech virtual assistant services birmingham, technical virtual assistant services birmingham, virtual assistant services for solo entrepreneurs birmingham, ai personal assistant birmingham, intelligent personal assistant market birmingham"
+        schema={combinedSchema}
       />
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
-      
       <Header />
       
       <main className="pt-32 pb-20">

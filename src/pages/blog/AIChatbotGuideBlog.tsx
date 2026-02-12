@@ -79,10 +79,8 @@ const AIChatbotGuideBlog = () => {
         description="Complete guide to AI chatbot for small business UK. WhatsApp chatbot UK, AI consulting services Manchester, AI agency Leeds. Managed chatbots from £29/month."
         canonical="https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide"
         keywords="ai chatbot for small business uk, whatsapp chatbot uk, ai consulting services manchester, ai agency leeds, ai service providers kensington united kingdom, ai service providers canary wharf united kingdom, ai service providers canary wharf"
+        schema={combinedSchema}
       />
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
-      
       <Header />
       
       <main className="pt-32 pb-20">
