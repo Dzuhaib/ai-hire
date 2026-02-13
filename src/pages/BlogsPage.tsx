@@ -17,6 +17,9 @@ import aiProvidersHero from "@/assets/blog/ai-service-providers-hero.png";
 import aiPersonalHero from "@/assets/blog/ai-personal-assistant-hero.png";
 import aiAutomationHero from "@/assets/blog/ai-automation-uk-hero.png";
 import aiChatbotGuideHero from "@/assets/blog/ai-chatbot-guide-hero.png";
+import reduceMissedLeadsHero from "@/assets/blog/reduce-missed-leads-hero.png";
+import aiChatbotVsLiveChatHero from "@/assets/blog/ai-chatbot-vs-live-chat-hero.png";
+import automateEnquiriesHero from "@/assets/blog/automate-enquiries-personal-touch-hero.png";
 
 // City hero images
 import aiLondon from "@/assets/locations/ai-london.png";
@@ -39,6 +42,9 @@ const imageMap: Record<string, string> = {
   "ai-personal-assistant-near-me": aiPersonalHero,
   "ai-automation-uk-business": aiAutomationHero,
   "ai-chatbot-small-business-uk-guide": aiChatbotGuideHero,
+  "reduce-missed-leads-website": reduceMissedLeadsHero,
+  "ai-chatbot-vs-live-chat-uk": aiChatbotVsLiveChatHero,
+  "automate-customer-enquiries-personal-touch": automateEnquiriesHero,
   "website-chatbot-24-7-london": aiLondon,
   "website-chatbot-24-7-manchester": aiManchester,
   "website-chatbot-24-7-birmingham": aiBirmingham,

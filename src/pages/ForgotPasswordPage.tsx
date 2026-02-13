@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useSignIn } from "@clerk/clerk-react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Bot, ArrowLeft, Mail, Key, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
@@ -292,6 +293,7 @@ const ForgotPasswordPage = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
+      <Helmet><meta name="robots" content="noindex, nofollow" /></Helmet>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

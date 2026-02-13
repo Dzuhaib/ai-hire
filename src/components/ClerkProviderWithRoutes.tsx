@@ -25,6 +25,9 @@ import AIServiceProvidersBlog from "@/pages/blog/AIServiceProvidersBlog";
 import AIPersonalAssistantBlog from "@/pages/blog/AIPersonalAssistantBlog";
 import AIAutomationUKBlog from "@/pages/blog/AIAutomationUKBlog";
 import AIChatbotGuideBlog from "@/pages/blog/AIChatbotGuideBlog";
+import ReduceMissedLeadsBlog from "@/pages/blog/ReduceMissedLeadsBlog";
+import AIChatbotVsLiveChatBlog from "@/pages/blog/AIChatbotVsLiveChatBlog";
+import AutomateEnquiriesBlog from "@/pages/blog/AutomateEnquiriesBlog";
 import CityWebsiteChatbotBlog from "@/pages/blog/CityWebsiteChatbotBlog";
 import { LoadingScreen } from "@/components/LoadingScreen";
 
@@ -84,6 +87,9 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/blog/ai-personal-assistant-near-me" element={<AIPersonalAssistantBlog />} />
           <Route path="/blog/ai-automation-uk-business" element={<AIAutomationUKBlog />} />
           <Route path="/blog/ai-chatbot-small-business-uk-guide" element={<AIChatbotGuideBlog />} />
+          <Route path="/blog/reduce-missed-leads-website" element={<ReduceMissedLeadsBlog />} />
+          <Route path="/blog/ai-chatbot-vs-live-chat-uk" element={<AIChatbotVsLiveChatBlog />} />
+          <Route path="/blog/automate-customer-enquiries-personal-touch" element={<AutomateEnquiriesBlog />} />
           <Route path="/blog/:slug" element={<CityWebsiteChatbotBlog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -161,6 +161,61 @@ export const blogPosts: BlogPost[] = [
       "ai service providers canary wharf"
     ],
     heroImage: "/src/assets/blog/ai-chatbot-guide-hero.png"
+  },
+  {
+    slug: "reduce-missed-leads-website",
+    title: "How to Reduce Missed Leads from Your Website with AI Chatbots",
+    metaTitle: "Reduce Missed Leads from Website | AI Chatbot | AIVized",
+    metaDescription: "Discover why UK small businesses miss up to 60% of website leads and how an AI chatbot captures enquiries 24/7. Practical tips to stop losing customers.",
+    excerpt: "Learn why UK small businesses miss up to 60% of potential website leads and discover practical steps to capture every enquiry with AI chatbots.",
+    publishedDate: "2026-02-10",
+    readTime: "9 min read",
+    category: "Lead Generation",
+    keywords: [
+      "reduce missed leads from website",
+      "lead capture chatbot UK",
+      "website lead generation",
+      "stop losing website leads",
+      "AI chatbot lead capture",
+      "small business lead generation UK"
+    ],
+    heroImage: "/src/assets/blog/reduce-missed-leads-hero.png"
+  },
+  {
+    slug: "ai-chatbot-vs-live-chat-uk",
+    title: "AI Chatbot vs Live Chat: Which Is Better for UK Small Business?",
+    metaTitle: "AI Chatbot vs Live Chat UK | Cost Comparison | AIVized",
+    metaDescription: "AI chatbot or live chat for your UK small business? Compare costs, availability, and customer satisfaction. Find the right solution for 24/7 support.",
+    excerpt: "Compare AI chatbots and live chat agents for UK small businesses—costs, availability, response quality, and which solution delivers the best ROI.",
+    publishedDate: "2026-02-11",
+    readTime: "10 min read",
+    category: "Comparison Guide",
+    keywords: [
+      "AI chatbot vs live chat",
+      "chatbot or live chat small business",
+      "AI chatbot cost comparison UK",
+      "live chat alternative UK",
+      "automated customer support vs human"
+    ],
+    heroImage: "/src/assets/blog/ai-chatbot-vs-live-chat-hero.png"
+  },
+  {
+    slug: "automate-customer-enquiries-personal-touch",
+    title: "How to Automate Customer Enquiries Without Losing the Personal Touch",
+    metaTitle: "Automate Customer Enquiries Personal Touch | AIVized",
+    metaDescription: "Learn how UK small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples.",
+    excerpt: "Discover how to automate customer enquiries with AI chatbots while maintaining the warm, personal touch that keeps customers coming back.",
+    publishedDate: "2026-02-12",
+    readTime: "8 min read",
+    category: "Customer Experience",
+    keywords: [
+      "automate customer enquiries small business",
+      "automated customer service UK",
+      "AI chatbot personal touch",
+      "customer service automation tips",
+      "personalised AI chatbot"
+    ],
+    heroImage: "/src/assets/blog/automate-enquiries-personal-touch-hero.png"
   }
 ];
 
