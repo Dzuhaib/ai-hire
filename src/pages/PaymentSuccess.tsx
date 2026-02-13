@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight, Loader2 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link, useSearchParams } from "react-router-dom";
 import { useUser } from "@clerk/clerk-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -101,6 +102,7 @@ const PaymentSuccess = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
+      <Helmet><meta name="robots" content="noindex, nofollow" /></Helmet>
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
