@@ -37,19 +37,29 @@ const homepageFaqs = [
   { question: "How does AIVized compare to Intercom alternatives for small business?", answer: "Looking for Intercom alternatives for small business? AIVized offers similar AI capabilities at a fraction of the cost—without the complexity. We're fully managed, so there's no setup learning curve. From £29/month vs hundreds with enterprise tools, we're the smart choice for UK SMEs." },
 ];
 
-// Generate FAQ schema JSON
-const faqSchemaJson = JSON.stringify({
+// Generate consolidated @graph schema to prevent duplicate field errors in Google Search Console
+const homepageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": homepageFaqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": homepageFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    },
+    {
+      "@type": "WebSite",
+      "name": "AIVized",
+      "url": "https://www.aivized.com",
+      "description": "Managed AI chatbot service for UK small businesses from £29/month."
     }
-  }))
-});
+  ]
+};
 
 const Index = () => {
   const location = useLocation();
@@ -88,7 +98,7 @@ const Index = () => {
         <meta name="description" content="Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed." />
         <link rel="canonical" href="https://www.aivized.com/" />
         <meta property="og:url" content="https://www.aivized.com/" />
-        <script type="application/ld+json">{faqSchemaJson}</script>
+        <script type="application/ld+json">{JSON.stringify(homepageSchema)}</script>
       </Helmet>
       <Header />
       <main>
