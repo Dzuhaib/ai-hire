@@ -1,7 +1,7 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { PageMeta } from "@/components/PageMeta";
 import { MapPin, CheckCircle, ArrowRight, Phone, Mail, Clock, Zap, Users, TrendingUp, Shield, Bot, Headphones, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -156,18 +156,13 @@ const LocationPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={metaKeywords} />
-        <link rel="canonical" href={`https://www.aivized.com/locations/${location.slug}`} />
-        <meta property="og:url" content={`https://www.aivized.com/locations/${location.slug}`} />
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        {schemas && (
-          <script type="application/ld+json">{JSON.stringify(schemas)}</script>
-        )}
-      </Helmet>
+      <PageMeta
+        title={metaTitle}
+        description={metaDescription}
+        keywords={metaKeywords}
+        canonical={`https://www.aivized.com/locations/${location.slug}`}
+        schema={schemas || undefined}
+      />
       <Header />
       
       {/* Hero Section */}
