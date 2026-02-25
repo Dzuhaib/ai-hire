@@ -80,13 +80,84 @@ export const PricingSection = () => {
 
   const handleSubscribe = (planName: string, priceAmount: number) => {
     if (!isSignedIn) {
-      toast.info("Please sign in to subscribe");
+      toast.info("Please sign in to start your free trial");
       navigate("/auth");
       return;
     }
     
     setSelectedPlan({ name: planName, price: priceAmount });
-    setShowPaymentModal(true);
+    handleStartTrial(planName, priceAmount);
+  };
+
+  const handleStartTrial = async (planName: string, priceAmount: number) => {
+    if (!user) return;
+    
+    setIsLoading(true);
+    try {
+      // Ensure profile exists
+      const { data: existingProfile } = await supabase
+        .from("profiles")
+        .select("clerk_user_id")
+        .eq("clerk_user_id", user.id)
+        .maybeSingle();
+
+      if (!existingProfile) {
+        await supabase.from("profiles").insert({
+          clerk_user_id: user.id,
+          email: user.primaryEmailAddress?.emailAddress || "",
+          full_name: user.fullName || "",
+          avatar_url: user.imageUrl || "",
+        });
+      }
+
+      // Check if user already has an active trial or subscription
+      const { data: existingSub } = await supabase
+        .from("subscriptions")
+        .select("id, status")
+        .eq("clerk_user_id", user.id)
+        .in("status", ["active", "trial", "pending_payment"])
+        .maybeSingle();
+
+      if (existingSub) {
+        toast.info("You already have an active plan or trial. Visit your dashboard to manage it.");
+        navigate("/dashboard");
+        return;
+      }
+
+      // Create trial subscription (3 days)
+      const trialEndsAt = new Date();
+      trialEndsAt.setDate(trialEndsAt.getDate() + 3);
+
+      const expiresAt = new Date();
+      expiresAt.setMonth(expiresAt.getMonth() + 1);
+
+      const { error: subError } = await supabase.from("subscriptions").insert({
+        clerk_user_id: user.id,
+        plan_name: `aivized ${planName}`,
+        plan_price: priceAmount,
+        status: "trial",
+        trial_ends_at: trialEndsAt.toISOString(),
+        expires_at: expiresAt.toISOString(),
+      });
+
+      if (subError) {
+        console.error("Trial error:", subError);
+        toast.error("Failed to start trial. Please try again.");
+        return;
+      }
+
+      toast.success(
+        `Your 3-day free trial for the ${planName} plan has started! No payment required until the trial ends.`,
+        { duration: 6000 }
+      );
+
+      navigate("/dashboard");
+    } catch (error) {
+      console.error("Trial error:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleOnlinePayment = () => {
@@ -269,7 +340,7 @@ export const PricingSection = () => {
                         </span>
                         <span className="text-muted-foreground">/month</span>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-1">+ £50 one-time setup fee</p>
+                      <p className="text-xs text-muted-foreground mt-1">3-day free trial • then + £50 setup</p>
                     </div>
 
                     {/* Features */}
@@ -300,10 +371,10 @@ export const PricingSection = () => {
                       {isLoading ? (
                         <span className="flex items-center justify-center gap-2">
                           <Loader2 className="w-4 h-4 animate-spin" />
-                          Processing...
+                          Starting Trial...
                         </span>
                       ) : (
-                        plan.popular ? "Get Started Now" : "Subscribe to This Plan"
+                        plan.popular ? "Start 3-Day Free Trial" : "Start Free Trial"
                       )}
                     </MagneticButton>
                   </div>
