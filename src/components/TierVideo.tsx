@@ -40,7 +40,7 @@ export function TierVideo({ src, srcWebm, poster, className }: TierVideoProps) {
           observer.disconnect();
         }
       },
-      { rootMargin: "250px 0px" }
+      { rootMargin: "400px 0px" }
     );
 
     observer.observe(el);
@@ -74,7 +74,7 @@ export function TierVideo({ src, srcWebm, poster, className }: TierVideoProps) {
       loop
       muted
       playsInline
-      preload="none"
+      preload="metadata"
       disablePictureInPicture
       className={className}
       aria-label="AI colleague preview"

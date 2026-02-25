@@ -38,7 +38,7 @@ export function OptimizedVideo({
           observer.disconnect();
         }
       },
-      { rootMargin: "300px 0px" }
+      { rootMargin: "400px 0px" }
     );
 
     if (ref.current) {
