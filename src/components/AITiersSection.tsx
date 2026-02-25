@@ -197,7 +197,7 @@ export const AITiersSection = () => {
                   {/* CTA */}
                   <button className="w-full py-2.5 px-4 rounded-xl bg-primary/10 border border-primary/20 text-primary text-sm font-medium hover:bg-primary/20 transition-colors flex items-center justify-center gap-2">
                     <Zap className="w-4 h-4" />
-                    Rent Now
+                    Start Free Trial
                   </button>
                 </div>
               </div>

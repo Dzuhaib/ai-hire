@@ -166,7 +166,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-12"
           >
-            From just <Link to="/#pricing" className="text-primary hover:underline">£29/month</Link>. Capture leads 24/7. Available across all <Link to="/locations" className="text-primary hover:underline">UK cities</Link>.
+            3-day free trial, then from just <Link to="/#pricing" className="text-primary hover:underline">£29/month</Link>. Capture leads 24/7. Available across all <Link to="/locations" className="text-primary hover:underline">UK cities</Link>.
           </motion.p>
 
           <motion.div
@@ -179,7 +179,7 @@ export const HeroSection = () => {
               className="btn-primary text-sm px-10 py-5 group"
               onClick={() => scrollToSection("#pricing")}
             >
-              <span>Get Started — From £29/month</span>
+              <span>Start 3-Day Free Trial</span>
               <Zap className="w-4 h-4 ml-2 inline-block group-hover:animate-pulse" />
             </MagneticButton>
 
