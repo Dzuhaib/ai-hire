@@ -1,5 +1,5 @@
 # AI Vized - UK AI Employee Solutions
-# https://aivized.com
+# https://www.aivized.com
 
 User-agent: Googlebot
 Allow: /
@@ -28,4 +28,4 @@ Disallow: /payment-success
 Disallow: /forgot-password
 
 # Sitemap location
-Sitemap: https://aivized.com/sitemap.xml
+Sitemap: https://www.aivized.com/sitemap.xml

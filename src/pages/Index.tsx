@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { PageMeta } from "@/components/PageMeta";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
@@ -93,13 +93,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Managed AI Chatbot for Small Business UK | AIVized From £29/mo</title>
-        <meta name="description" content="Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed." />
-        <link rel="canonical" href="https://www.aivized.com/" />
-        <meta property="og:url" content="https://www.aivized.com/" />
-        <script type="application/ld+json">{JSON.stringify(homepageSchema)}</script>
-      </Helmet>
+      <PageMeta
+        title="Managed AI Chatbot for Small Business UK | AIVized From £29/mo"
+        description="Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed."
+        canonical="https://www.aivized.com/"
+        keywords="managed AI chatbot service, AI chatbot for small business UK, lead generation chatbot UK, 24/7 customer support chatbot, affordable AI chatbot, fully managed chatbot, AIVized"
+        schema={homepageSchema}
+      />
       <Header />
       <main>
         <HeroSection />
