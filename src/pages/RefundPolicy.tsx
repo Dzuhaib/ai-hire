@@ -69,7 +69,7 @@ const RefundPolicy = () => {
                   You may cancel your subscription at any time:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li><strong>How to Cancel:</strong> Through your account dashboard or by contacting support@aivized.com</li>
+                  <li><strong>How to Cancel:</strong> Through your account dashboard or by contacting aivized.com@gmail.com</li>
                   <li><strong>Effective Date:</strong> Cancellations take effect at the end of your current billing period</li>
                   <li><strong>Continued Access:</strong> You will retain full access to the service until your paid period ends</li>
                   <li><strong>No Automatic Refund:</strong> Cancellation does not automatically entitle you to a refund for the current billing period (except within the 14-day guarantee period)</li>
@@ -110,7 +110,7 @@ const RefundPolicy = () => {
                   To request a refund, please follow these steps:
                 </p>
                 <ol className="list-decimal list-inside text-muted-foreground space-y-2 ml-4">
-                  <li><strong>Contact Us:</strong> Email support@aivized.com with the subject line "Refund Request"</li>
+                  <li><strong>Contact Us:</strong> Email aivized.com@gmail.com with the subject line "Refund Request"</li>
                   <li><strong>Provide Details:</strong> Include your account email, subscription details, and reason for the refund request</li>
                   <li><strong>Review:</strong> Our team will review your request within 2 business days</li>
                   <li><strong>Confirmation:</strong> You will receive email confirmation of the decision</li>
@@ -173,8 +173,8 @@ const RefundPolicy = () => {
                 </p>
                 <p className="text-muted-foreground mt-4">
                   <strong>AIVized</strong><br />
-                  <strong>Email:</strong> support@aivized.com<br />
-                  <strong>Billing Enquiries:</strong> billing@aivized.com<br />
+                  <strong>Email:</strong> aivized.com@gmail.com<br />
+                  <strong>Billing Enquiries:</strong> aivized.com@gmail.com<br />
                   <strong>Location:</strong> Pakistan
                 </p>
                 <p className="text-muted-foreground mt-4">

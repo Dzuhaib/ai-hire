@@ -159,7 +159,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  To exercise your rights, contact us at privacy@aivized.com. We will respond within 30 days. For UK and EEA residents, you also have the right to lodge a complaint with your local data protection authority.
+                  To exercise your rights, contact us at aivized.com@gmail.com. We will respond within 30 days. For UK and EEA residents, you also have the right to lodge a complaint with your local data protection authority.
                 </p>
               </section>
 
@@ -215,8 +215,8 @@ const PrivacyPolicy = () => {
                 </p>
                 <p className="text-muted-foreground mt-4">
                   <strong>AIVized</strong><br />
-                  <strong>Privacy Enquiries:</strong> privacy@aivized.com<br />
-                  <strong>General Enquiries:</strong> contact@aivized.com<br />
+                  <strong>Privacy Enquiries:</strong> aivized.com@gmail.com<br />
+                  <strong>General Enquiries:</strong> aivized.com@gmail.com<br />
                   <strong>Location:</strong> Pakistan
                 </p>
               </section>
