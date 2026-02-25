@@ -1,37 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
-    <!-- AI Vized Factory Widget -->
-    <script>
-      (function() {
-        var script = document.createElement('script');
-        script.src = 'https://ai-vized-chatbot-factory-production.up.railway.app/static/widget.js';
-        script.setAttribute('data-chatbot-id', 'cb_U105bdQa12RU');
-        script.setAttribute('data-api-url', 'https://ai-vized-chatbot-factory-production.up.railway.app');
-        script.async = true;
-        document.head.appendChild(script);
-      })();
-    </script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZX9HS9282"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-YZX9HS9282');
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N99PDZ9Q');</script>
-    <!-- End Google Tag Manager -->
-        
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -39,8 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
+    <!-- Preload fonts for speed (non-render-blocking) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" /></noscript>
+
     <!-- DNS prefetch for analytics/external resources -->
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     
     <title>Managed AI Chatbot for Small Business UK | AIVized From £29/mo</title>
     <meta name="description" content="Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed." />
@@ -50,7 +25,7 @@
     <meta property="og:title" content="Managed AI Chatbot for Small Business UK | AIVized" />
     <meta property="og:description" content="Get a fully managed AI chatbot from £29/month. 24/7 lead generation. We install everything—no technical skills needed." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.aivized.com" />
+    <meta property="og:url" content="https://www.aivized.com/" />
     <meta property="og:image" content="https://www.aivized.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -72,18 +47,42 @@
     <meta name="msapplication-TileImage" content="/favicon.png">
     <meta name="theme-color" content="#7C3AED" />
     <meta name="google-site-verification" content="ue_nVigpxJNzbxs35ZA6amCJ77riHY9NQg7-26dMUGw" />
-    
-    <!-- Organization Structured Data -->
-   
   </head>
 
   <body>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N99PDZ9Q"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Deferred: Analytics & third-party scripts (non-blocking) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZX9HS9282"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YZX9HS9282');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N99PDZ9Q');</script>
+
+    <!-- AI Vized Chatbot Widget (deferred) -->
+    <script>
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.src = 'https://ai-vized-chatbot-factory-production.up.railway.app/static/widget.js';
+        script.setAttribute('data-chatbot-id', 'cb_U105bdQa12RU');
+        script.setAttribute('data-api-url', 'https://ai-vized-chatbot-factory-production.up.railway.app');
+        script.async = true;
+        document.body.appendChild(script);
+      });
+    </script>
   </body>
 </html>
