@@ -81,7 +81,7 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
   const animationRef = useRef<number>(0);
   const isMobile = useIsMobile();
   const prefersReducedMotion = useReducedMotion();
-  const primaryRgbRef = useRef<{ r: number; g: number; b: number }>({ r: 32, g: 211, b: 195 });
+  const primaryRgbRef = useRef<{ r: number; g: number; b: number }>({ r: 124, g: 58, b: 237 });
 
   // Significantly reduced particles on mobile for better performance
   const particleCount = isMobile ? 25 : 80;
@@ -103,10 +103,10 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        radius: Math.random() * 2.5 + 1,
-        opacity: Math.random() * 0.6 + 0.3,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        radius: Math.random() * 2 + 0.8,
+        opacity: Math.random() * 0.4 + 0.15,
       });
     }
     particlesRef.current = particles;
@@ -223,7 +223,7 @@ export function HeroBackground({ mouseX, mouseY }: HeroBackgroundProps) {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < connectionDistance) {
-          const opacity = (1 - dist / connectionDistance) * 0.25;
+          const opacity = (1 - dist / connectionDistance) * 0.15;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
