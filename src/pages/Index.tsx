@@ -104,13 +104,13 @@ const Index = () => {
       <main>
         <HeroSection />
         <Suspense fallback={<SectionLoader />}>
+          <PainSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
           <AIShowcaseSection />
         </Suspense>
         <Suspense fallback={<SectionLoader />}>
           <AITiersSection />
-        </Suspense>
-        <Suspense fallback={<SectionLoader />}>
-          <PainSection />
         </Suspense>
         <Suspense fallback={<SectionLoader />}>
           <IndustriesSection />
