@@ -112,6 +112,7 @@ export type Database = {
           plan_price: number
           started_at: string
           status: string
+          trial_ends_at: string | null
           twocheckout_order_ref: string | null
           updated_at: string
         }
@@ -125,6 +126,7 @@ export type Database = {
           plan_price: number
           started_at?: string
           status?: string
+          trial_ends_at?: string | null
           twocheckout_order_ref?: string | null
           updated_at?: string
         }
@@ -138,6 +140,7 @@ export type Database = {
           plan_price?: number
           started_at?: string
           status?: string
+          trial_ends_at?: string | null
           twocheckout_order_ref?: string | null
           updated_at?: string
         }

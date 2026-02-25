@@ -16,6 +16,7 @@ interface Subscription {
   started_at: string;
   expires_at: string | null;
   cancelled_at: string | null;
+  trial_ends_at: string | null;
 }
 
 interface BillingRecord {
@@ -57,12 +58,12 @@ const Dashboard = () => {
           });
         }
 
-        // Fetch subscription (active or pending_payment)
+        // Fetch subscription (active, trial, or pending_payment)
         const { data: subData } = await supabase
           .from("subscriptions")
           .select("*")
           .eq("clerk_user_id", user.id)
-          .in("status", ["active", "pending_payment"])
+          .in("status", ["active", "pending_payment", "trial"])
           .order("created_at", { ascending: false })
           .limit(1)
           .maybeSingle();
@@ -132,6 +133,8 @@ const Dashboard = () => {
     switch (status) {
       case "active":
         return <CheckCircle className="w-4 h-4 text-green-500" />;
+      case "trial":
+        return <Clock className="w-4 h-4 text-primary" />;
       case "cancelled":
         return <XCircle className="w-4 h-4 text-red-500" />;
       case "pending":
@@ -144,7 +147,16 @@ const Dashboard = () => {
 
   const getStatusLabel = (status: string) => {
     if (status === "pending_payment") return "Pending Payment";
+    if (status === "trial") return "Free Trial";
     return status;
+  };
+
+  const getTrialDaysRemaining = () => {
+    if (!subscription?.trial_ends_at) return 0;
+    const now = new Date();
+    const trialEnd = new Date(subscription.trial_ends_at);
+    const diff = Math.ceil((trialEnd.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    return Math.max(0, diff);
   };
 
   return (
@@ -257,10 +269,27 @@ const Dashboard = () => {
                           </div>
                         )}
 
+                        {/* Trial Notice */}
+                        {subscription.status === "trial" && (
+                          <div className="p-4 rounded-lg bg-primary/10 border border-primary/20">
+                            <div className="flex items-start gap-3">
+                              <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                              <div>
+                                <p className="font-medium text-primary mb-1">
+                                  Free Trial — {getTrialDaysRemaining()} day{getTrialDaysRemaining() !== 1 ? "s" : ""} remaining
+                                </p>
+                                <p className="text-sm text-muted-foreground">
+                                  Your trial ends on {formatDate(subscription.trial_ends_at)}. Contact us via WhatsApp to activate your plan and continue using the service.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
                         <div className="grid sm:grid-cols-2 gap-4 pt-4 border-t border-border">
                           <div>
                             <p className="text-sm text-muted-foreground mb-1">
-                              {subscription.status === "pending_payment" ? "Requested" : "Started"}
+                              {subscription.status === "pending_payment" ? "Requested" : subscription.status === "trial" ? "Trial Started" : "Started"}
                             </p>
                             <p className="font-medium">{formatDate(subscription.started_at)}</p>
                           </div>
@@ -279,7 +308,7 @@ const Dashboard = () => {
                           ) : null}
                         </div>
 
-                        {subscription.status === "active" && (
+                        {(subscription.status === "active" || subscription.status === "trial") && (
                           <div className="pt-4 border-t border-border">
                             <button
                               onClick={handleCancelSubscription}
