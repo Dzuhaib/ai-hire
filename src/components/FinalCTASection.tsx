@@ -59,7 +59,7 @@ export const FinalCTASection = () => {
               className="btn-primary text-sm px-12 py-6"
               onClick={() => scrollToSection("#pricing")}
             >
-              Get Your AI Chatbot Today
+              Start Your 3-Day Free Trial
             </MagneticButton>
           </motion.div>
         </div>
