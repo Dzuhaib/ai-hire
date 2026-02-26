@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { PageMeta } from "@/components/PageMeta";
 import { MapPin, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -51,16 +51,15 @@ const LocationsPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>AI Chatbot Service UK Cities | Managed from £29/month</title>
-        <meta name="description" content="Managed AI chatbot for London, Manchester, Birmingham & UK cities. 24/7 lead capture, no technical skills needed. Get started from £29/month." />
-        <meta name="keywords" content="AI chatbot service London, managed AI chatbot Manchester, AI assistant Birmingham, small business chatbot Leeds, lead gen chatbot Glasgow, 24/7 customer support chatbot UK" />
-        <link rel="canonical" href="https://www.aivized.com/locations" />
-        <meta property="og:url" content="https://www.aivized.com/locations" />
-        <meta property="og:title" content="AI Chatbot Service Across UK Cities | AIVized" />
-        <meta property="og:description" content="Managed AI chatbot for UK cities. 24/7 lead capture from £29/month." />
-        <script type="application/ld+json" id="page-structured-data">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+      <PageMeta
+        title="AI Chatbot Service UK Cities | Managed from £29/month"
+        description="Managed AI chatbot for London, Manchester, Birmingham & UK cities. 24/7 lead capture, no technical skills needed. Get started from £29/month."
+        keywords="AI chatbot service London, managed AI chatbot Manchester, AI assistant Birmingham, small business chatbot Leeds, lead gen chatbot Glasgow, 24/7 customer support chatbot UK"
+        canonical="https://www.aivized.com/locations"
+        ogTitle="AI Chatbot Service Across UK Cities | AIVized"
+        ogDescription="Managed AI chatbot for UK cities. 24/7 lead capture from £29/month."
+        schema={breadcrumbSchema}
+      />
       <Header />
 
       {/* Hero Section */}

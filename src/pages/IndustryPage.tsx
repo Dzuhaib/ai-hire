@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { PageMeta } from "@/components/PageMeta";
 import { 
   CheckCircle, ArrowRight, Zap, Users, Shield, Clock, TrendingUp, 
   Bot, MessageCircle, Star, Calendar, UtensilsCrossed, PartyPopper, 
@@ -82,20 +82,6 @@ const IndustryPage = () => {
           ]
         },
         {
-          "@type": "Service",
-          "name": `AI Chatbot Service for ${industry.industry}`,
-          "serviceType": `AI Solutions for ${industry.industry}`,
-          "provider": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
-          "description": industry.description,
-          "areaServed": { "@type": "Country", "name": "United Kingdom" },
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "GBP",
-            "price": "29",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "MONTH" }
-          }
-        },
-        {
           "@type": "FAQPage",
           "mainEntity": industry.faqs.map(faq => ({
             "@type": "Question",
@@ -127,18 +113,13 @@ const IndustryPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={metaKeywords} />
-        <link rel="canonical" href={`https://www.aivized.com/${industry.slug}`} />
-        <meta property="og:url" content={`https://www.aivized.com/${industry.slug}`} />
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        {combinedSchema && (
-          <script type="application/ld+json" id="page-structured-data">{JSON.stringify(combinedSchema)}</script>
-        )}
-      </Helmet>
+      <PageMeta
+        title={metaTitle}
+        description={metaDescription}
+        keywords={metaKeywords}
+        canonical={`https://www.aivized.com/${industry.slug}`}
+        schema={combinedSchema || undefined}
+      />
       <Header />
 
       {/* Hero Section */}

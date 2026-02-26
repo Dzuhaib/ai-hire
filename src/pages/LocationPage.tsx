@@ -110,32 +110,6 @@ const LocationPage = () => {
             "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
           }))
         },
-        {
-          "@type": "Service",
-          "name": `AI Chatbot Service ${location.city}`,
-          "serviceType": "AI Chatbot Solutions",
-          "provider": {
-            "@type": "Organization",
-            "name": "AI Vized",
-            "url": "https://www.aivized.com"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": location.city
-          },
-          "description": `AI-powered customer service and lead generation for ${location.city} businesses`,
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "GBP",
-            "price": "29",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "29",
-              "priceCurrency": "GBP",
-              "unitText": "MONTH"
-            }
-          }
-        }
       ]
     };
 
