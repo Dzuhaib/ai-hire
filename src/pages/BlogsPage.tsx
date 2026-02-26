@@ -86,10 +86,6 @@ const blogIndexSchema = {
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com/" },
         { "@type": "ListItem", "position": 2, "name": "Blog" }
       ]
-    },
-    {
-      "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", ".blog-description"]
     }
   ]
 };

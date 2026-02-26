@@ -65,10 +65,6 @@ const combinedSchema = {
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
         { "@type": "ListItem", "position": 3, "name": "Reduce Missed Leads" }
       ]
-    },
-    {
-      "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", ".lead"]
     }
   ]
 };
