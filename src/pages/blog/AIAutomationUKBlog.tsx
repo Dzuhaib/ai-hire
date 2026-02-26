@@ -47,10 +47,11 @@ const AIAutomationUKBlog = () => {
         "@type": "Article",
         "headline": "AI Business Automation UK: Digital Assistant Services & Virtual Assistants for Birmingham & Beyond",
         "description": "Discover how AI automation with digital assistant services is transforming UK businesses. Virtual assistant services for HR, tech support, and solo entrepreneurs in Birmingham.",
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-02-05",
-        "dateModified": "2026-02-06",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": "https://www.aivized.com/blog/ai-automation-uk-business"
       },
       {
@@ -68,6 +69,10 @@ const AIAutomationUKBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Business Automation UK" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -79,6 +84,9 @@ const AIAutomationUKBlog = () => {
         description="AI business automation with digital assistant services Birmingham. Virtual assistant for HR, tech support & solo entrepreneurs. Intelligent personal assistant market leader."
         canonical="https://www.aivized.com/blog/ai-automation-uk-business"
         keywords="digital assistant services birmingham, ai virtual assistant for hr birmingham, tech virtual assistant services birmingham, technical virtual assistant services birmingham, virtual assistant services for solo entrepreneurs birmingham, intelligent personal assistant market birmingham, ai personal assistant birmingham"
+        ogType="article"
+        publishedTime="2026-02-05"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />

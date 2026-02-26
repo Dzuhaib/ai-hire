@@ -43,10 +43,11 @@ const AIServiceProvidersBlog = () => {
         "@type": "Article",
         "headline": "Top AI Service Providers UK: Manchester, Canary Wharf, Kensington & Leeds",
         "description": "Compare the best AI service providers across the UK including Manchester, Canary Wharf, Kensington and Leeds. AI consulting services and chatbot solutions for UK businesses.",
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-02-02",
-        "dateModified": "2026-02-06",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": "https://www.aivized.com/blog/ai-service-providers-uk"
       },
       {
@@ -64,6 +65,10 @@ const AIServiceProvidersBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Service Providers UK" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -75,6 +80,9 @@ const AIServiceProvidersBlog = () => {
         description="Find top AI service providers in Manchester, Canary Wharf, Kensington & Leeds. AI consulting services, chatbot solutions for small business UK from £29/month."
         canonical="https://www.aivized.com/blog/ai-service-providers-uk"
         keywords="ai service providers manchester united kingdom, ai service providers canary wharf united kingdom, ai service providers canary wharf, ai service providers kensington united kingdom, ai agency leeds, ai consulting services manchester, ai chatbot for small business uk"
+        ogType="article"
+        publishedTime="2026-02-02"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />

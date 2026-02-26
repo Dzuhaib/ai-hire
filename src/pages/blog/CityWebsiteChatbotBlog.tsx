@@ -65,10 +65,12 @@ const CityWebsiteChatbotBlog = () => {
       {
         "@type": "Article",
         "headline": `Website Chatbot That Runs 24/7 ${data.city} | Managed AI Service`,
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "description": `Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`,
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-02-08",
-        "dateModified": "2026-02-08",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": canonicalUrl
       },
       {
@@ -78,6 +80,10 @@ const CityWebsiteChatbotBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": `Website Chatbot 24/7 ${data.city}` }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -89,6 +95,9 @@ const CityWebsiteChatbotBlog = () => {
         description={`Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`}
         canonical={canonicalUrl}
         keywords={`website chatbot ${data.city}, 24/7 chatbot ${data.city}, managed AI chatbot ${data.city}, lead generation chatbot ${data.region}, AI chatbot for small business UK, website chatbot that runs 24/7 ${data.city}`}
+        ogType="article"
+        publishedTime="2026-02-08"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />
