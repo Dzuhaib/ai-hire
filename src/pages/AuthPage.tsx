@@ -16,17 +16,21 @@ const quotes = [
 const clerkAppearance = {
   elements: {
     rootBox: "w-full",
-    card: "bg-transparent shadow-none p-0",
+    card: "bg-transparent shadow-none p-0 space-y-4",
     header: "hidden",
     headerTitle: "hidden",
     headerSubtitle: "hidden",
-    socialButtonsBlockButton: "bg-secondary border-border hover:bg-secondary/80 text-foreground font-medium rounded-lg transition-all",
+    socialButtonsBlockButton: "bg-secondary border border-border hover:bg-secondary/80 text-foreground font-medium rounded-xl transition-all h-12",
     socialButtonsBlockButtonText: "text-foreground font-medium",
+    socialButtonsProviderIcon: "w-5 h-5",
     dividerLine: "bg-border",
     dividerText: "text-muted-foreground text-xs",
-    formFieldInput: "bg-secondary/50 border-border text-foreground placeholder:text-muted-foreground rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all",
-    formFieldLabel: "text-foreground font-medium text-sm",
-    formButtonPrimary: "bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg shadow-lg shadow-primary/20 transition-all",
+    dividerRow: "my-5",
+    form: "space-y-4",
+    formFieldRow: "mb-4",
+    formFieldInput: "bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground rounded-xl h-12 px-4 focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-sm",
+    formFieldLabel: "text-foreground font-medium text-sm mb-1.5",
+    formButtonPrimary: "bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl shadow-lg shadow-primary/20 transition-all h-12 mt-2",
     footerAction: "hidden",
     footerActionLink: "hidden",
     identityPreviewText: "text-foreground",
@@ -35,12 +39,12 @@ const clerkAppearance = {
     footer: "hidden",
     logoBox: "hidden",
     logoImage: "hidden",
-    otpCodeFieldInput: "!bg-secondary !border-2 !border-primary/50 !text-foreground !text-2xl !font-bold !rounded-lg !w-12 !h-14 focus:!ring-2 focus:!ring-primary focus:!border-primary !transition-all",
+    otpCodeFieldInput: "!bg-secondary/30 !border-2 !border-primary/50 !text-foreground !text-2xl !font-bold !rounded-xl !w-12 !h-14 focus:!ring-2 focus:!ring-primary focus:!border-primary !transition-all",
     otpCodeField: "gap-3",
     otpCodeFieldInputs: "gap-3",
     formResendCodeLink: "text-primary hover:text-primary/80 font-medium",
     verificationLinkStatusText: "text-foreground",
-    verificationLinkStatusBox: "bg-secondary/50 border-border rounded-lg p-4",
+    verificationLinkStatusBox: "bg-secondary/30 border-border rounded-xl p-4",
     formHeaderTitle: "text-xl font-serif font-semibold text-foreground",
     formHeaderSubtitle: "text-muted-foreground text-sm mt-2",
     backLink: "text-primary hover:text-primary/80",
@@ -137,8 +141,8 @@ const AuthPage = () => {
           </Link>
         </div>
 
-        <div className="flex-1 flex items-center justify-center px-6 pb-12">
-          <div className="w-full max-w-md">
+        <div className="flex-1 flex items-center justify-center px-8 sm:px-12 lg:px-16 pb-12">
+          <div className="w-full max-w-[420px]">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 mb-8 hover:opacity-80 transition-opacity">
               <div className="relative w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
