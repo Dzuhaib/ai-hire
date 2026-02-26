@@ -13,8 +13,12 @@ import { getIndustryBySlug } from "@/data/industryData";
 import NotFound from "./NotFound";
 import {
   Bot, ArrowRight, Zap, CheckCircle, Users, Shield, Clock,
-  MessageCircle, MapPin
+  MessageCircle, MapPin, ChevronRight
 } from "lucide-react";
+import {
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink,
+  BreadcrumbPage, BreadcrumbSeparator
+} from "@/components/ui/breadcrumb";
 
 const IndustryCityPage = () => {
   const { industry: industrySlug, city: citySlug } = useParams<{ industry: string; city: string }>();
@@ -77,6 +81,27 @@ const IndustryCityPage = () => {
       {/* Hero */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-aura">
         <div className="container-narrow relative z-10">
+          {/* Breadcrumb */}
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to="/industries">Industries</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link to={`/industries/${industrySlug}`}>{parentIndustry.industry}</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{cityData.cityName}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
