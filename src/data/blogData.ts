@@ -220,7 +220,7 @@ export const blogPosts: BlogPost[] = [
 ];
 
 // City-specific blog posts for "Website Chatbot that runs 24/7 {City}"
-const cityNames = ["London", "Manchester", "Birmingham", "Leeds", "Liverpool", "Bristol", "Glasgow", "Edinburgh", "Sheffield", "Newcastle"];
+const cityNames = ["London", "Manchester", "Birmingham", "Leeds", "Liverpool", "Bristol", "Glasgow", "Edinburgh", "Sheffield", "Newcastle", "Nottingham", "Cardiff", "Leicester", "Brighton", "Southampton", "Oxford", "Cambridge", "Coventry", "Belfast", "Aberdeen"];
 
 export const cityBlogEntries: BlogPost[] = cityNames.map(city => {
   const slug = city.toLowerCase();
