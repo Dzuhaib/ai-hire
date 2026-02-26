@@ -77,6 +77,10 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/restaurants" element={<IndustryPage />} />
           <Route path="/real-estate" element={<IndustryPage />} />
           <Route path="/ecommerce" element={<IndustryPage />} />
+          <Route path="/healthcare" element={<IndustryPage />} />
+          <Route path="/legal" element={<IndustryPage />} />
+          <Route path="/fitness" element={<IndustryPage />} />
+          <Route path="/travel" element={<IndustryPage />} />
           {/* Blog pages */}
           <Route path="/blog" element={<BlogsPage />} />
           <Route path="/blog/whatsapp-chatbot-uk-business" element={<WhatsAppChatbotBlog />} />
