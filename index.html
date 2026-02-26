@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Prevent SEO fallback flash for JS-enabled browsers -->
+    <style>
+      html.js #root .seo-fallback { display: none !important; }
+    </style>
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
     
     <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,6 +66,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="root">
+      <div class="seo-fallback">
       <!-- Static content for SEO, AI bots, and crawlers that cannot execute JavaScript -->
       <header style="max-width:900px;margin:0 auto;padding:40px 20px;font-family:system-ui,-apple-system,sans-serif;color:#1a1a2e">
         <nav>
@@ -208,6 +217,7 @@
           <p>&copy; 2025 AIVized. All rights reserved.</p>
         </footer>
       </main>
+      </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
 
