@@ -67,20 +67,32 @@ export function TierVideo({ src, srcWebm, poster, className }: TierVideoProps) {
   }
 
   return (
-    <video
-      ref={ref}
-      poster={poster}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      disablePictureInPicture
-      className={className}
-      aria-label="AI colleague preview"
-    >
-      {shouldLoad && srcWebm && <source src={srcWebm} type="video/webm" />}
-      {shouldLoad && <source src={src} type="video/mp4" />}
-    </video>
+    <div className={`relative overflow-hidden ${className}`}>
+      {/* Poster shown instantly as background */}
+      {poster && (
+        <img
+          src={poster}
+          alt="AI colleague preview"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+      )}
+      <video
+        ref={ref}
+        poster={poster}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        disablePictureInPicture
+        className="relative w-full h-full object-cover"
+        aria-label="AI colleague preview"
+      >
+        {shouldLoad && srcWebm && <source src={srcWebm} type="video/webm" />}
+        {shouldLoad && <source src={src} type="video/mp4" />}
+      </video>
+    </div>
   );
 }
