@@ -238,7 +238,9 @@ export const cityBlogEntries: BlogPost[] = cityNames.map(city => {
   };
 });
 
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...cityBlogEntries];
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...cityBlogEntries].sort(
+  (a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+);
 
 export const getBlogBySlug = (slug: string): BlogPost | undefined => {
   return allBlogPosts.find(post => post.slug === slug);
