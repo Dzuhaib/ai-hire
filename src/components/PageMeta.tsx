@@ -51,7 +51,7 @@ export function PageMeta({
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
-      {schema && <script type="application/ld+json">{JSON.stringify(schema)}</script>}
+      {schema && <script type="application/ld+json" id="page-structured-data">{JSON.stringify(schema)}</script>}
     </Helmet>
   );
 }
