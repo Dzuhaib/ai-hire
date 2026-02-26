@@ -189,6 +189,238 @@ export const industries: Record<string, IndustryData> = {
       role: "Founder",
       company: "Urban Lifestyle Co, Bristol"
     }
+  },
+  healthcare: {
+    slug: "healthcare",
+    industry: "Healthcare & Clinics",
+    tagline: "AI for Healthcare",
+    heroTitle: "Never Miss a Patient Enquiry",
+    heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7—while your team focuses on delivering exceptional care.",
+    description: "AI-powered appointment booking and patient communication for dental practices, GP surgeries, private clinics, and healthcare businesses across the UK.",
+    problems: [
+      { title: "Missed Calls During Appointments", description: "When staff are busy with patients, phones go unanswered. Every missed call could be a new patient worth £500+ annually." },
+      { title: "Out-of-Hours Enquiries", description: "Patients search for healthcare providers evenings and weekends. Without 24/7 availability, they register with competitors." },
+      { title: "Repetitive Admin Questions", description: "Reception staff waste hours answering the same questions about opening times, NHS vs private fees, and registration processes." },
+      { title: "Patient No-Shows", description: "Missed appointments cost the NHS £1 billion annually. Private practices lose significant revenue to no-shows too." }
+    ],
+    solutions: [
+      { title: "24/7 Patient Reception", description: "Your AI receptionist handles enquiries any time, booking requests and new patient registrations—even at midnight." },
+      { title: "Instant Service Information", description: "Patients get immediate answers about treatments, fees, NHS availability, and registration without waiting on hold." },
+      { title: "Automated Appointment Reminders", description: "Reduce no-shows with intelligent reminders and easy rebooking options for your patients." },
+      { title: "New Patient Capture", description: "Never lose a potential patient—your AI captures details and registration interest 24/7." }
+    ],
+    features: [
+      { title: "Appointment Requests", description: "Accept booking requests 24/7 and send them to your reception team", icon: "Calendar" },
+      { title: "Treatment Info", description: "Answer questions about services, treatments, and pricing accurately", icon: "Heart" },
+      { title: "New Patient Registration", description: "Capture new patient details and registration interest automatically", icon: "Users" },
+      { title: "Emergency Triage", description: "Direct urgent cases to appropriate emergency services immediately", icon: "AlertTriangle" },
+      { title: "Insurance & Fees", description: "Provide clear information about NHS, private fees, and insurance accepted", icon: "CreditCard" },
+      { title: "Multi-Practice Support", description: "Direct patients to the right branch or specialist practitioner", icon: "Building" }
+    ],
+    useCases: [
+      "Dental practices",
+      "GP surgeries",
+      "Private clinics",
+      "Physiotherapy practices",
+      "Opticians",
+      "Veterinary clinics",
+      "Cosmetic clinics",
+      "Mental health practices"
+    ],
+    stats: [
+      { value: "35%", label: "More new patients" },
+      { value: "40%", label: "Fewer no-shows" },
+      { value: "24/7", label: "Patient reception" },
+      { value: "5 sec", label: "Average response time" }
+    ],
+    faqs: [
+      { question: "How does a managed AI chatbot service help healthcare clinics?", answer: "Our managed AI chatbot service handles patient enquiries 24/7, captures new patient registrations, answers treatment questions, and reduces the admin burden on your reception team—all from £29/month." },
+      { question: "Is this AI chatbot for small business UK suitable for dental practices?", answer: "Absolutely. Our AI chatbot for small business UK handles appointment requests, answers questions about treatments and fees, and captures new patient details—perfect for busy dental practices." },
+      { question: "Can the lead generation chatbot UK handle sensitive medical enquiries?", answer: "Our lead generation chatbot UK provides general service information and captures patient details securely. It does not provide medical advice but directs urgent cases to appropriate services." },
+      { question: "Is the 24/7 customer support chatbot UK GDPR compliant for patient data?", answer: "Yes. Our 24/7 customer support chatbot UK is fully GDPR compliant with bank-level encryption. Patient data is stored securely in the UK and handled according to healthcare data protection requirements." },
+      { question: "How does this affordable AI chatbot for website reduce no-shows?", answer: "Our affordable AI chatbot for website sends appointment reminders and makes rebooking easy, reducing no-shows by up to 40% for healthcare practices." },
+      { question: "Can the chatbot handle NHS and private patient enquiries separately?", answer: "Yes. Your managed AI chatbot can distinguish between NHS and private enquiries, providing appropriate information and directing patients to the right service pathway." }
+    ],
+    testimonial: {
+      quote: "We've captured 35% more new patient registrations since adding AI Vized. The AI handles out-of-hours enquiries beautifully—patients love getting instant responses about our services.",
+      author: "Dr Patel",
+      role: "Practice Owner",
+      company: "Smile Dental, Birmingham"
+    }
+  },
+  legal: {
+    slug: "legal",
+    industry: "Legal & Law Firms",
+    tagline: "AI for Law Firms",
+    heroTitle: "Capture Every Client Enquiry",
+    heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7—so your solicitors can focus on billable work.",
+    description: "AI-powered client intake and enquiry management for solicitors, law firms, and legal practices across the UK.",
+    problems: [
+      { title: "Missed Client Calls", description: "When solicitors are in meetings or court, potential clients call competitors. First response wins in legal services." },
+      { title: "Evening & Weekend Enquiries", description: "Legal emergencies don't wait for office hours. Domestic disputes, arrests, and accidents happen at all hours." },
+      { title: "Unqualified Consultations", description: "Solicitors waste billable hours on initial consultations with prospects who can't afford services or need different expertise." },
+      { title: "High Reception Costs", description: "Legal receptionists in the UK cost £24,000-£30,000+ annually, plus recruitment and training expenses." }
+    ],
+    solutions: [
+      { title: "24/7 Client Intake", description: "Capture every potential client enquiry instantly, day or night. Never lose a case to a faster-responding competitor." },
+      { title: "Intelligent Client Qualification", description: "Your AI asks the right questions to qualify prospects by case type, urgency, and budget before involving solicitors." },
+      { title: "Professional First Impression", description: "Every enquiry receives a polished, professional response that reflects your firm's standards." },
+      { title: "Cost-Effective Reception", description: "Replace expensive reception staffing with AI from £29/month—redirect savings to fee-earning work." }
+    ],
+    features: [
+      { title: "Client Intake", description: "Capture case details, contact information, and urgency level automatically", icon: "FileText" },
+      { title: "Case Qualification", description: "Pre-qualify clients by practice area, budget, and case merit", icon: "Filter" },
+      { title: "Appointment Booking", description: "Schedule initial consultations based on solicitor availability", icon: "Calendar" },
+      { title: "Practice Areas", description: "Direct enquiries to the right department—family, conveyancing, personal injury, etc.", icon: "Building" },
+      { title: "Fee Guidance", description: "Provide general fee information and funding options to qualified prospects", icon: "CreditCard" },
+      { title: "Confidentiality", description: "Handle all communications with legal-grade data protection and GDPR compliance", icon: "Shield" }
+    ],
+    useCases: [
+      "High street solicitors",
+      "Family law practices",
+      "Conveyancing firms",
+      "Personal injury lawyers",
+      "Employment law specialists",
+      "Criminal defence solicitors",
+      "Immigration lawyers",
+      "Commercial law firms"
+    ],
+    stats: [
+      { value: "50%", label: "More qualified leads" },
+      { value: "24/7", label: "Client intake" },
+      { value: "£25k+", label: "Annual savings vs receptionist" },
+      { value: "8 sec", label: "Average response time" }
+    ],
+    faqs: [
+      { question: "How does a managed AI chatbot service help law firms?", answer: "Our managed AI chatbot service captures client enquiries 24/7, qualifies prospects by case type and budget, and schedules consultations—so your solicitors focus on billable work, not answering phones." },
+      { question: "Is this AI chatbot for small business UK suitable for solicitors?", answer: "Yes. Our AI chatbot for small business UK is trained for legal intake—handling enquiries about practice areas, fees, and availability with the professionalism your firm requires." },
+      { question: "Can the lead generation chatbot UK qualify legal clients?", answer: "Absolutely. Our lead generation chatbot UK asks about case type, urgency, budget, and location to ensure only qualified prospects reach your solicitors." },
+      { question: "Is the 24/7 customer support chatbot UK compliant with SRA regulations?", answer: "Our 24/7 customer support chatbot UK provides general information only and does not give legal advice. All data is handled with GDPR compliance and legal-grade security." },
+      { question: "How does this affordable AI chatbot for website handle confidential enquiries?", answer: "Our affordable AI chatbot for website uses bank-level encryption. All client communications are stored securely in the UK with strict data protection policies." },
+      { question: "Can the chatbot direct enquiries to different practice areas?", answer: "Yes. Your managed AI chatbot identifies the type of legal matter and routes enquiries to the appropriate department—family, property, injury, criminal, or commercial." }
+    ],
+    testimonial: {
+      quote: "We've increased qualified consultations by 50% while reducing reception costs. The AI captures evening and weekend enquiries we used to miss entirely.",
+      author: "Richard",
+      role: "Managing Partner",
+      company: "Clarke & Associates, Leeds"
+    }
+  },
+  fitness: {
+    slug: "fitness",
+    industry: "Fitness & Gyms",
+    tagline: "AI for Fitness",
+    heroTitle: "Convert More Gym Enquiries",
+    heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7—turning curious browsers into committed members.",
+    description: "AI-powered membership sales and customer service for gyms, personal trainers, yoga studios, and fitness businesses across the UK.",
+    problems: [
+      { title: "Lost Membership Enquiries", description: "Potential members browse gym websites at 10pm but can't get answers. By morning, they've joined a competitor." },
+      { title: "Peak Time Reception Overload", description: "Reception staff are overwhelmed during busy periods—signing in members while potential new ones walk away." },
+      { title: "Class Booking Confusion", description: "Members call repeatedly to check schedules, book classes, and ask about availability—tying up staff time." },
+      { title: "Trial-to-Member Conversion", description: "Without proper follow-up, trial visitors often don't convert to full memberships." }
+    ],
+    solutions: [
+      { title: "24/7 Membership Sales", description: "Your AI answers pricing, facility, and membership questions at any hour—capturing leads when motivation is highest." },
+      { title: "Automated Class Info", description: "Provide instant schedule information, class descriptions, and availability without staff involvement." },
+      { title: "Trial Booking Capture", description: "Convert website visitors into trial bookings automatically, with immediate confirmation and details." },
+      { title: "Lead Follow-Up", description: "Capture every enquiry with contact details so your sales team can follow up with warm leads." }
+    ],
+    features: [
+      { title: "Membership Info", description: "Answer questions about pricing, contracts, and membership options", icon: "CreditCard" },
+      { title: "Class Schedules", description: "Provide real-time class information and booking guidance", icon: "Calendar" },
+      { title: "Trial Bookings", description: "Capture trial session requests and send confirmations automatically", icon: "Users" },
+      { title: "Facility Info", description: "Answer questions about equipment, amenities, parking, and opening hours", icon: "Building" },
+      { title: "PT Enquiries", description: "Capture personal training enquiries and match with available trainers", icon: "TrendingUp" },
+      { title: "Multi-Location", description: "Direct enquiries to the right gym location or studio", icon: "MapPin" }
+    ],
+    useCases: [
+      "Commercial gyms",
+      "Boutique fitness studios",
+      "Yoga and pilates studios",
+      "CrossFit boxes",
+      "Personal training studios",
+      "Swimming pools and leisure centres",
+      "Martial arts academies",
+      "Dance studios"
+    ],
+    stats: [
+      { value: "30%", label: "More trial bookings" },
+      { value: "45%", label: "Better trial conversion" },
+      { value: "24/7", label: "Membership enquiries" },
+      { value: "£0", label: "Per enquiry handled" }
+    ],
+    faqs: [
+      { question: "How does a managed AI chatbot service help gyms and fitness businesses?", answer: "Our managed AI chatbot service handles membership enquiries, class information, and trial bookings 24/7. It captures leads when motivation is highest—even at 10pm when your gym might be unstaffed." },
+      { question: "Is this AI chatbot for small business UK suitable for boutique fitness studios?", answer: "Absolutely. Our AI chatbot for small business UK works perfectly for yoga studios, pilates studios, CrossFit boxes, and any boutique fitness concept." },
+      { question: "Can the lead generation chatbot UK handle class schedule questions?", answer: "Yes. Your lead generation chatbot UK provides class schedules, describes sessions, and guides potential members to the right classes for their goals." },
+      { question: "How does the 24/7 customer support chatbot UK help with membership sales?", answer: "Our 24/7 customer support chatbot UK answers pricing questions, explains membership options, and captures trial bookings—converting website visitors into gym members around the clock." },
+      { question: "Is this affordable AI chatbot for website good for personal trainers?", answer: "Yes. Our affordable AI chatbot for website captures PT enquiries, shares your availability, and qualifies leads by training goals—from just £29/month." },
+      { question: "Can the chatbot handle multiple gym locations?", answer: "Yes. Your managed AI chatbot directs enquiries to the correct location, provides location-specific class schedules, and captures leads for each branch." }
+    ],
+    testimonial: {
+      quote: "Trial bookings are up 30% since we added AI Vized. The chatbot captures those late-night 'I should join a gym' moments that we used to miss completely.",
+      author: "Emma",
+      role: "Studio Owner",
+      company: "FlexFit Studios, Brighton"
+    }
+  },
+  travel: {
+    slug: "travel",
+    industry: "Travel & Tourism",
+    tagline: "AI for Travel",
+    heroTitle: "Book More Holidays, Automatically",
+    heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7—turning dreamers into bookers while you sleep.",
+    description: "AI-powered booking support and customer service for travel agents, tour operators, and tourism businesses across the UK.",
+    problems: [
+      { title: "Complex Enquiry Volume", description: "Travel enquiries are detailed and time-consuming. Each customer wants personalised recommendations, quotes, and itinerary help." },
+      { title: "Seasonal Booking Surges", description: "January and summer bring massive enquiry spikes that overwhelm small travel teams." },
+      { title: "After-Hours Research", description: "Customers research holidays in the evening. Without 24/7 responses, they book directly with OTAs instead." },
+      { title: "Quote Follow-Up Gaps", description: "Without systematic follow-up, interested customers drift to competitors or online booking platforms." }
+    ],
+    solutions: [
+      { title: "24/7 Destination Expertise", description: "Your AI answers destination questions, provides travel information, and captures booking interest at any hour." },
+      { title: "Surge-Ready Service", description: "Handle January booking rushes and summer peaks without temporary staff—your AI scales instantly." },
+      { title: "Instant Engagement", description: "Capture evening browsers before they default to online booking platforms." },
+      { title: "Lead Qualification", description: "Pre-qualify travellers by destination, budget, dates, and party size before involving your team." }
+    ],
+    features: [
+      { title: "Destination Info", description: "Answer questions about destinations, visa requirements, and travel advice", icon: "MapPin" },
+      { title: "Quote Requests", description: "Capture detailed booking requests with dates, budget, and preferences", icon: "FileText" },
+      { title: "Package Information", description: "Present holiday packages, tours, and special offers to interested travellers", icon: "Package" },
+      { title: "Booking Support", description: "Handle post-booking questions about itineraries, documents, and requirements", icon: "Calendar" },
+      { title: "Group Travel", description: "Manage group enquiries, hen/stag parties, and corporate travel requests", icon: "Users" },
+      { title: "Reviews & Recommendations", description: "Share customer reviews and personalised destination recommendations", icon: "Star" }
+    ],
+    useCases: [
+      "Independent travel agents",
+      "Tour operators",
+      "Holiday companies",
+      "Adventure travel specialists",
+      "Cruise specialists",
+      "Corporate travel managers",
+      "Wedding & honeymoon planners",
+      "Activity holiday providers"
+    ],
+    stats: [
+      { value: "40%", label: "More booking enquiries" },
+      { value: "60%", label: "Faster response times" },
+      { value: "24/7", label: "Travel advice" },
+      { value: "3x", label: "More evening leads" }
+    ],
+    faqs: [
+      { question: "How does a managed AI chatbot service help travel agents?", answer: "Our managed AI chatbot service captures holiday enquiries 24/7, answers destination questions, and qualifies travellers by budget, dates, and preferences—so your team focuses on creating perfect itineraries, not answering basic questions." },
+      { question: "Is this AI chatbot for small business UK suitable for independent travel agents?", answer: "Absolutely. Our AI chatbot for small business UK is perfect for independent agents who can't afford 24/7 reception staff but need to compete with large OTAs." },
+      { question: "Can the lead generation chatbot UK handle complex travel enquiries?", answer: "Our lead generation chatbot UK captures detailed requirements—destinations, dates, budgets, party sizes—and sends qualified leads to your team for personalised quotes." },
+      { question: "How does the 24/7 customer support chatbot UK compete with online booking platforms?", answer: "Our 24/7 customer support chatbot UK engages customers instantly when they're browsing—before they default to impersonal online booking platforms. The personal touch starts from the first interaction." },
+      { question: "Is this affordable AI chatbot for website good for tour operators?", answer: "Yes. Our affordable AI chatbot for website handles tour enquiries, presents itineraries, and captures booking requests—from just £29/month." },
+      { question: "Can the chatbot handle ATOL and ABTA questions?", answer: "Yes. Your managed AI chatbot provides information about your ATOL/ABTA protection, giving customers confidence in booking with your travel business." }
+    ],
+    testimonial: {
+      quote: "Evening enquiries have tripled since adding AI Vized. Customers research holidays at night—now we capture those leads instead of losing them to Booking.com.",
+      author: "Lisa",
+      role: "Director",
+      company: "Horizon Travel, Edinburgh"
+    }
   }
 };
 

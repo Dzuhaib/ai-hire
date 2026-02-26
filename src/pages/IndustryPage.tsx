@@ -6,7 +6,7 @@ import {
   CheckCircle, ArrowRight, Zap, Users, Shield, Clock, TrendingUp, 
   Bot, MessageCircle, Star, Calendar, UtensilsCrossed, PartyPopper, 
   Plug, MapPin, Filter, Home, FileText, Building, Package, Truck, 
-  RotateCcw, Box, ShoppingCart, Quote, Headphones 
+  RotateCcw, Box, ShoppingCart, Quote, Headphones, Heart, AlertTriangle, CreditCard
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -20,28 +20,45 @@ import NotFound from "./NotFound";
 import aiRestaurantHero from "@/assets/industries/ai-restaurant-hero.png";
 import aiRealEstateHero from "@/assets/industries/ai-realestate-hero.png";
 import aiEcommerceHero from "@/assets/industries/ai-ecommerce-hero.png";
+import aiHealthcareHero from "@/assets/industries/ai-healthcare-hero.png";
+import aiLegalHero from "@/assets/industries/ai-legal-hero.png";
+import aiFitnessHero from "@/assets/industries/ai-fitness-hero.png";
+import aiTravelHero from "@/assets/industries/ai-travel-hero.png";
 
 // Scene images
 import restaurantScene from "@/assets/industries/restaurant-scene.png";
 import realestateScene from "@/assets/industries/realestate-scene.png";
 import ecommerceScene from "@/assets/industries/ecommerce-scene.png";
+import healthcareScene from "@/assets/industries/healthcare-scene.png";
+import legalScene from "@/assets/industries/legal-scene.png";
+import fitnessScene from "@/assets/industries/fitness-scene.png";
+import travelScene from "@/assets/industries/travel-scene.png";
 
 const heroImages: Record<string, string> = {
   restaurants: aiRestaurantHero,
   "real-estate": aiRealEstateHero,
   ecommerce: aiEcommerceHero,
+  healthcare: aiHealthcareHero,
+  legal: aiLegalHero,
+  fitness: aiFitnessHero,
+  travel: aiTravelHero,
 };
 
 const sceneImages: Record<string, string> = {
   restaurants: restaurantScene,
   "real-estate": realestateScene,
   ecommerce: ecommerceScene,
+  healthcare: healthcareScene,
+  legal: legalScene,
+  fitness: fitnessScene,
+  travel: travelScene,
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Calendar, UtensilsCrossed, PartyPopper, Users, MapPin, Plug,
   Filter, Home, FileText, Building, Package, Truck, RotateCcw,
-  Box, TrendingUp, ShoppingCart,
+  Box, TrendingUp, ShoppingCart, Heart, AlertTriangle, CreditCard,
+  Shield, Star,
 };
 
 const IndustryPage = () => {
@@ -93,11 +110,16 @@ const IndustryPage = () => {
     };
   }, [industry]);
 
-  const industryKeyword = industry?.slug === "restaurants" 
-    ? "Restaurant AI Chatbot UK" 
-    : industry?.slug === "real-estate" 
-      ? "Real Estate AI Chatbot UK" 
-      : "E-Commerce AI Chatbot UK";
+  const industryKeywords: Record<string, string> = {
+    restaurants: "Restaurant AI Chatbot UK",
+    "real-estate": "Real Estate AI Chatbot UK",
+    ecommerce: "E-Commerce AI Chatbot UK",
+    healthcare: "Healthcare AI Chatbot UK",
+    legal: "Law Firm AI Chatbot UK",
+    fitness: "Gym AI Chatbot UK",
+    travel: "Travel Agent AI Chatbot UK",
+  };
+  const industryKeyword = industryKeywords[industrySlug] || `${industry?.industry} AI Chatbot UK`;
   
   const metaTitle = industry ? `${industryKeyword} | Managed from £29/month` : "";
   const metaDescription = industry ? `Managed AI chatbot for ${industry.industry.toLowerCase()}. Capture leads 24/7, automate inquiries. From £29/month, no technical skills needed.` : "";
