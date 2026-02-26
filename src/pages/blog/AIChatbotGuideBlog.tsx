@@ -47,10 +47,11 @@ const AIChatbotGuideBlog = () => {
         "@type": "Article",
         "headline": "AI Chatbot for Small Business UK: The Complete 2026 Guide to WhatsApp & Website Chatbots",
         "description": "Complete guide to AI chatbots for UK small businesses. Compare WhatsApp chatbot UK solutions, AI consulting services Manchester, and AI agency Leeds options from £29/month.",
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-02-06",
-        "dateModified": "2026-02-06",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": "https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide"
       },
       {
@@ -68,6 +69,10 @@ const AIChatbotGuideBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Chatbot Small Business UK Guide" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -79,6 +84,9 @@ const AIChatbotGuideBlog = () => {
         description="Complete guide to AI chatbot for small business UK. WhatsApp chatbot UK, AI consulting services Manchester, AI agency Leeds. Managed chatbots from £29/month."
         canonical="https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide"
         keywords="ai chatbot for small business uk, whatsapp chatbot uk, ai consulting services manchester, ai agency leeds, ai service providers kensington united kingdom, ai service providers canary wharf united kingdom, ai service providers canary wharf"
+        ogType="article"
+        publishedTime="2026-02-06"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />

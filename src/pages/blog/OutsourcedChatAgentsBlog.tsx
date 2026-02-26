@@ -43,10 +43,11 @@ const OutsourcedChatAgentsBlog = () => {
         "@type": "Article",
         "headline": "24/7 Outsourced Chat Agents Birmingham: AI Virtual Assistants for HR & Tech Support",
         "description": "Discover how 24/7 outsourced chat agents and AI virtual assistants are transforming Birmingham businesses with round-the-clock customer support and HR automation.",
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-02-01",
-        "dateModified": "2026-02-06",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham"
       },
       {
@@ -64,6 +65,10 @@ const OutsourcedChatAgentsBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "24/7 Outsourced Chat Agents Birmingham" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -75,6 +80,9 @@ const OutsourcedChatAgentsBlog = () => {
         description="Get 24/7 outsourced chat agents in Birmingham. AI virtual assistant for HR, tech support & solo entrepreneurs. Intelligent personal assistant market leader."
         canonical="https://www.aivized.com/blog/outsourced-chat-agents-birmingham"
         keywords="24/7 outsourced chat agents birmingham, ai virtual assistant for hr birmingham, tech virtual assistant services birmingham, technical virtual assistant services birmingham, virtual assistant services for solo entrepreneurs birmingham, ai personal assistant birmingham, intelligent personal assistant market birmingham"
+        ogType="article"
+        publishedTime="2026-02-01"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />

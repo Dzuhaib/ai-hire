@@ -59,6 +59,41 @@ const imageMap: Record<string, string> = {
 
 const POSTS_PER_PAGE = 9;
 
+// Blog index JSON-LD schema
+const blogIndexSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "AI Chatbot Blog | UK Business Insights",
+      "description": "Expert insights on AI chatbots for UK businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support.",
+      "url": "https://www.aivized.com/blog",
+      "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": allBlogPosts.length,
+        "itemListElement": allBlogPosts.slice(0, 9).map((post, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": `https://www.aivized.com/blog/${post.slug}`,
+          "name": post.title
+        }))
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog" }
+      ]
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".blog-description"]
+    }
+  ]
+};
+
 const BlogsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(allBlogPosts.length / POSTS_PER_PAGE);
@@ -79,6 +114,7 @@ const BlogsPage = () => {
         description="Expert insights on AI chatbots for UK businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support."
         canonical="https://www.aivized.com/blog"
         keywords="ai chatbot blog, chatbot insights uk, ai for small business, digital assistant services"
+        schema={blogIndexSchema}
       />
       <Header />
       
@@ -98,7 +134,7 @@ const BlogsPage = () => {
               AI Chatbot Insights for{" "}
               <span className="text-gradient">UK Businesses</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="blog-description text-lg text-muted-foreground max-w-2xl mx-auto">
               Expert guides on implementing AI chatbots for WhatsApp, websites, and social media to transform your customer engagement.
             </p>
           </motion.div>
@@ -118,6 +154,7 @@ const BlogsPage = () => {
                     <img
                       src={imageMap[post.slug]}
                       alt={post.title}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4">
@@ -129,14 +166,14 @@ const BlogsPage = () => {
                   
                   <div className="space-y-3">
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <span className="flex items-center gap-1">
+                      <time dateTime={post.publishedDate} className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         {new Date(post.publishedDate).toLocaleDateString('en-GB', {
                           day: 'numeric',
                           month: 'short',
                           year: 'numeric'
                         })}
-                      </span>
+                      </time>
                       <span className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
                         {post.readTime}
@@ -163,7 +200,7 @@ const BlogsPage = () => {
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 mt-16">
+            <nav aria-label="Blog pagination" className="flex items-center justify-center gap-2 mt-16">
               <button
                 onClick={() => goToPage(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -176,6 +213,7 @@ const BlogsPage = () => {
                 <button
                   key={page}
                   onClick={() => goToPage(page)}
+                  aria-current={page === currentPage ? "page" : undefined}
                   className={`w-10 h-10 rounded-lg font-medium text-sm transition-colors ${
                     page === currentPage
                       ? "bg-primary text-primary-foreground"
@@ -193,7 +231,7 @@ const BlogsPage = () => {
               >
                 <ChevronRightIcon className="w-5 h-5" />
               </button>
-            </div>
+            </nav>
           )}
         </div>
       </main>

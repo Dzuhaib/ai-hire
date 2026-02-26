@@ -47,10 +47,12 @@ const WebsiteChatbotBlog = () => {
       {
         "@type": "Article",
         "headline": "Website Chatbot Solutions: Digital Assistant Services for UK SMEs",
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "description": "Get a managed website chatbot with digital assistant services in Birmingham and Kensington. AI virtual assistant for HR and customer support.",
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-01-29",
-        "dateModified": "2026-02-06",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": "https://www.aivized.com/blog/website-chatbot-small-business"
       },
       {
@@ -60,6 +62,10 @@ const WebsiteChatbotBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "Website Chatbot UK" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -71,6 +77,9 @@ const WebsiteChatbotBlog = () => {
         description="Get a managed website chatbot with digital assistant services in Birmingham and Kensington. AI virtual assistant for HR and customer support."
         canonical="https://www.aivized.com/blog/website-chatbot-small-business"
         keywords="digital assistant services birmingham, ai chatbot for small business uk, ai service providers kensington united kingdom, ai virtual assistant for hr birmingham"
+        ogType="article"
+        publishedTime="2026-01-29"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />

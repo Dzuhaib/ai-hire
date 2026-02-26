@@ -7,6 +7,10 @@ interface PageMetaProps {
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
+  ogType?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  ogImage?: string;
   /** JSON-LD structured data schema. Must be a single @graph object to avoid duplicate field errors in Google Search Console. */
   schema?: Record<string, unknown>;
 }
@@ -26,6 +30,10 @@ export function PageMeta({
   canonical,
   ogTitle,
   ogDescription,
+  ogType,
+  publishedTime,
+  modifiedTime,
+  ogImage,
   schema,
 }: PageMetaProps) {
   return (
@@ -35,8 +43,12 @@ export function PageMeta({
       {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
       {canonical && <meta property="og:url" content={canonical} />}
+      <meta property="og:type" content={ogType || "website"} />
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
       {schema && <script type="application/ld+json">{JSON.stringify(schema)}</script>}

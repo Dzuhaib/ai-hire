@@ -43,10 +43,11 @@ const AIPersonalAssistantBlog = () => {
         "@type": "Article",
         "headline": "AI Personal Assistant Near Me: Digital Assistant Services Birmingham & Edinburgh",
         "description": "Find an artificial intelligence personal assistant near you. AI personal assistants for Birmingham, Edinburgh businesses. WhatsApp chatbot UK & digital assistant services.",
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-02-03",
-        "dateModified": "2026-02-06",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": "https://www.aivized.com/blog/ai-personal-assistant-near-me"
       },
       {
@@ -64,6 +65,10 @@ const AIPersonalAssistantBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Personal Assistant Near Me" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -75,6 +80,9 @@ const AIPersonalAssistantBlog = () => {
         description="Find artificial intelligence personal assistant near me. Digital assistant services Birmingham, AI personal assistant Edinburgh, WhatsApp chatbot UK from £29/month."
         canonical="https://www.aivized.com/blog/ai-personal-assistant-near-me"
         keywords="artificial intelligence personal assistant near me, artificial intelligence personal assistant birmingham, digital assistant services birmingham, ai personal assistant edinburgh, ai virtual assistant for hr edinburgh, whatsapp chatbot uk"
+        ogType="article"
+        publishedTime="2026-02-03"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />

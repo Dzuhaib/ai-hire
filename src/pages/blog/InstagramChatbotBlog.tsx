@@ -47,10 +47,12 @@ const InstagramChatbotBlog = () => {
       {
         "@type": "Article",
         "headline": "Instagram Chatbot: AI Service Providers for Social Media Automation",
-        "author": { "@type": "Organization", "name": "AI Vized" },
-        "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+        "description": "Automate Instagram DMs with AI chatbots. Leading AI service providers in Canary Wharf and Birmingham for social media customer engagement.",
+        "image": "https://www.aivized.com/og-image.png",
+        "author": { "@type": "Organization", "name": "AIVized" },
+        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
         "datePublished": "2026-01-30",
-        "dateModified": "2026-02-06",
+        "dateModified": "2026-02-26",
         "mainEntityOfPage": "https://www.aivized.com/blog/instagram-chatbot-social-media"
       },
       {
@@ -60,6 +62,10 @@ const InstagramChatbotBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "Instagram Chatbot UK" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
@@ -71,6 +77,9 @@ const InstagramChatbotBlog = () => {
         description="Automate Instagram DMs with AI chatbots. Leading AI service providers in Canary Wharf and Birmingham for social media customer engagement."
         canonical="https://www.aivized.com/blog/instagram-chatbot-social-media"
         keywords="ai service providers canary wharf, artificial intelligence personal assistant birmingham, ai service providers canary wharf united kingdom, ai chatbot for small business uk"
+        ogType="article"
+        publishedTime="2026-01-30"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />

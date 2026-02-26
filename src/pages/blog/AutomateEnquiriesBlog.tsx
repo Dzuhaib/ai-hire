@@ -50,10 +50,12 @@ const combinedSchema = {
     {
       "@type": "Article",
       "headline": "How to Automate Customer Enquiries Without Losing the Personal Touch",
-      "author": { "@type": "Organization", "name": "AI Vized" },
-      "publisher": { "@type": "Organization", "name": "AI Vized", "url": "https://www.aivized.com" },
+      "description": "Learn how UK small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples.",
+      "image": "https://www.aivized.com/og-image.png",
+      "author": { "@type": "Organization", "name": "AIVized" },
+      "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-12",
-      "dateModified": "2026-02-13",
+      "dateModified": "2026-02-26",
       "mainEntityOfPage": "https://www.aivized.com/blog/automate-customer-enquiries-personal-touch"
     },
     {
@@ -63,6 +65,10 @@ const combinedSchema = {
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
         { "@type": "ListItem", "position": 3, "name": "Automate Enquiries" }
       ]
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".lead"]
     }
   ]
 };
@@ -75,6 +81,9 @@ const AutomateEnquiriesBlog = () => {
         description="Learn how UK small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples."
         canonical="https://www.aivized.com/blog/automate-customer-enquiries-personal-touch"
         keywords="automate customer enquiries small business, automated customer service UK, AI chatbot personal touch, customer service automation tips, personalised AI chatbot, small business customer support automation"
+        ogType="article"
+        publishedTime="2026-02-12"
+        modifiedTime="2026-02-26"
         schema={combinedSchema}
       />
       <Header />
