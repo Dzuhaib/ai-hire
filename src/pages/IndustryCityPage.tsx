@@ -15,6 +15,25 @@ import {
   Bot, ArrowRight, Zap, CheckCircle, Users, Shield, Clock,
   MessageCircle, MapPin, ChevronRight
 } from "lucide-react";
+
+// Industry hero images
+import aiRestaurantHero from "@/assets/industries/ai-restaurant-hero.png";
+import aiRealEstateHero from "@/assets/industries/ai-realestate-hero.png";
+import aiEcommerceHero from "@/assets/industries/ai-ecommerce-hero.png";
+import aiHealthcareHero from "@/assets/industries/ai-healthcare-hero.png";
+import aiLegalHero from "@/assets/industries/ai-legal-hero.png";
+import aiFitnessHero from "@/assets/industries/ai-fitness-hero.png";
+import aiTravelHero from "@/assets/industries/ai-travel-hero.png";
+
+const industryHeroImages: Record<string, string> = {
+  restaurants: aiRestaurantHero,
+  "real-estate": aiRealEstateHero,
+  ecommerce: aiEcommerceHero,
+  healthcare: aiHealthcareHero,
+  legal: aiLegalHero,
+  fitness: aiFitnessHero,
+  travel: aiTravelHero,
+};
 import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink,
   BreadcrumbPage, BreadcrumbSeparator
@@ -102,11 +121,12 @@ const IndustryCityPage = () => {
             </BreadcrumbList>
           </Breadcrumb>
 
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center lg:text-left"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
               <MapPin className="w-4 h-4 text-primary" />
@@ -142,6 +162,40 @@ const IndustryCityPage = () => {
               <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-primary" />GDPR compliant</span>
             </div>
           </motion.div>
+
+            {/* Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative flex justify-center"
+            >
+              <div className="relative">
+                <div className="absolute -inset-8 bg-gradient-to-r from-primary/30 via-accent/20 to-primary/30 rounded-full blur-3xl opacity-60" />
+                <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-card/30 backdrop-blur-sm shadow-2xl">
+                  <img
+                    src={industryHeroImages[industrySlug!] || aiRestaurantHero}
+                    alt={`AI assistant for ${parentIndustry.industry} in ${cityData.cityName}`}
+                    className="w-full max-w-md object-cover"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-card/90 backdrop-blur-sm border border-primary/20 shadow-lg"
+                  >
+                    <div className="flex items-center gap-2">
+                      <MessageCircle className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium">{cityData.cityName} {parentIndustry.industry} AI</span>
+                    </div>
+                    <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-primary font-medium">24/7 Active</span>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
