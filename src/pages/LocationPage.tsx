@@ -503,6 +503,11 @@ const LocationPage = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {ukLocations
               .filter(loc => loc.slug !== location.slug)
+              .sort((a, b) => {
+                const distA = Math.hypot(a.coordinates.lat - location.coordinates.lat, a.coordinates.lng - location.coordinates.lng);
+                const distB = Math.hypot(b.coordinates.lat - location.coordinates.lat, b.coordinates.lng - location.coordinates.lng);
+                return distA - distB;
+              })
               .map((loc) => (
                 <Link
                   key={loc.slug}
