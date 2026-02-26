@@ -59,7 +59,7 @@ export const Footer = () => {
               aivized.com@gmail.com
             </a>
             <span className="hidden sm:inline">·</span>
-            <span className="hidden sm:inline">United Kingdom</span>
+            <span className="hidden sm:inline">United Kingdom & Pakistan</span>
           </div>
         </div>
       </div>
