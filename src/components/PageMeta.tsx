@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 interface PageMetaProps {
@@ -36,6 +37,30 @@ export function PageMeta({
   ogImage,
   schema,
 }: PageMetaProps) {
+  useEffect(() => {
+    const scriptId = "page-structured-data";
+    const existingScript = document.getElementById(scriptId);
+
+    if (!schema) {
+      if (existingScript) {
+        existingScript.remove();
+      }
+      return;
+    }
+
+    const script = existingScript instanceof HTMLScriptElement
+      ? existingScript
+      : document.createElement("script");
+
+    script.id = scriptId;
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(schema);
+
+    if (!existingScript) {
+      document.head.appendChild(script);
+    }
+  }, [schema]);
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -51,7 +76,7 @@ export function PageMeta({
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
-      {schema && <script type="application/ld+json" id="page-structured-data">{JSON.stringify(schema)}</script>}
+      
     </Helmet>
   );
 }
