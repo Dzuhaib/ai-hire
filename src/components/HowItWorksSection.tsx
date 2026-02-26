@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CreditCard, Share2, Rocket, ArrowRight, Sparkles } from "lucide-react";
+import howItWorksHero from "@/assets/how-it-works-hero.png";
 
 const steps = [
   {
@@ -38,44 +39,71 @@ const steps = [
 export const HowItWorksSection = () => {
   return (
     <section id="how-it-works" className="section-padding relative overflow-hidden">
-      {/* Aura background (no grid/squares) */}
+      {/* Aura background */}
       <div className="absolute inset-0 bg-aura bg-aura-animate" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background pointer-events-none" />
 
       <div className="container-narrow relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-20">
+        {/* Section Header with Image */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+            >
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Simple Process</span>
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
+            >
+              How We Install Your{" "}
+              <span className="text-gradient">Managed AI Chatbot</span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg text-muted-foreground"
+            >
+              Get started today and we install everything for you. No technical skills required—fully managed from day one.
+            </motion.p>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
           >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Simple Process</span>
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-3xl blur-2xl opacity-50" />
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
+                <img
+                  src={howItWorksHero}
+                  alt="Professional showing AI chatbot setup on tablet"
+                  className="w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-xl bg-card/90 backdrop-blur-sm border border-primary/20">
+                  <Rocket className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">Setup in under 24 hours</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
-          >
-            How We Install Your{" "}
-            <span className="text-gradient">Managed AI Chatbot</span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-          >
-            Get started today and we install everything for you. No technical skills required—fully managed from day one.
-          </motion.p>
         </div>
 
         {/* Steps Grid */}
@@ -101,18 +129,13 @@ export const HowItWorksSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
                 className="relative group"
               >
-                {/* Card */}
                 <div className="relative h-full">
-                  {/* Gradient border effect */}
                   <div className={`absolute -inset-px rounded-2xl bg-gradient-to-b ${step.borderGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                   
-                  {/* Card content */}
                   <div className="relative h-full bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 group-hover:border-transparent transition-colors duration-500">
-                    {/* Background gradient */}
                     <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${step.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                     
                     <div className="relative z-10">
-                      {/* Step number badge */}
                       <div className="flex items-center justify-between mb-6">
                         <motion.div
                           whileHover={{ scale: 1.05 }}
@@ -126,7 +149,6 @@ export const HowItWorksSection = () => {
                         </span>
                       </div>
 
-                      {/* Content */}
                       <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-foreground transition-colors">
                         {step.title}
                       </h3>
@@ -137,7 +159,6 @@ export const HowItWorksSection = () => {
                         {step.link.text} →
                       </Link>
 
-                      {/* Arrow indicator */}
                       {index < steps.length - 1 && (
                         <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 translate-x-full z-20">
                           <motion.div
@@ -155,7 +176,6 @@ export const HowItWorksSection = () => {
                   </div>
                 </div>
 
-                {/* Mobile connector */}
                 {index < steps.length - 1 && (
                   <div className="lg:hidden flex justify-center py-4">
                     <motion.div
