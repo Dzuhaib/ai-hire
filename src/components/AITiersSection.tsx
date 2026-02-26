@@ -5,10 +5,6 @@ import aiSilver from "@/assets/ai-silver.mp4";
 import aiGold from "@/assets/ai-gold.mp4";
 import aiPlatinum from "@/assets/ai-platinum.mp4";
 import aiDiamond from "@/assets/ai-diamond.mp4";
-import aiSilverPoster from "@/assets/ai-silver.png";
-import aiGoldPoster from "@/assets/ai-gold.png";
-import aiPlatinumPoster from "@/assets/ai-platinum.png";
-import aiDiamondPoster from "@/assets/ai-diamond.png";
 
 const tiers = [
   {
@@ -16,7 +12,6 @@ const tiers = [
     tier: "Starter",
     price: "£29",
     video: aiSilver,
-    poster: aiSilverPoster,
     color: "from-slate-400 to-slate-300",
     borderColor: "border-slate-400/30",
     glowColor: "shadow-slate-400/20",
@@ -28,7 +23,6 @@ const tiers = [
     tier: "Professional",
     price: "£79",
     video: aiGold,
-    poster: aiGoldPoster,
     color: "from-amber-500 to-yellow-400",
     borderColor: "border-amber-400/30",
     glowColor: "shadow-amber-400/20",
@@ -41,7 +35,6 @@ const tiers = [
     tier: "Business",
     price: "£149",
     video: aiPlatinum,
-    poster: aiPlatinumPoster,
     color: "from-cyan-400 to-teal-300",
     borderColor: "border-cyan-400/30",
     glowColor: "shadow-cyan-400/20",
@@ -53,7 +46,6 @@ const tiers = [
     tier: "Enterprise",
     price: "Custom",
     video: aiDiamond,
-    poster: aiDiamondPoster,
     color: "from-violet-500 to-purple-400",
     borderColor: "border-violet-400/30",
     glowColor: "shadow-violet-400/20",
@@ -166,7 +158,6 @@ export const AITiersSection = () => {
                   <div className="relative mb-4 rounded-2xl overflow-hidden aspect-square">
                     <TierVideo
                       src={tier.video}
-                      poster={tier.poster}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-t ${tier.color} opacity-10 pointer-events-none`} />

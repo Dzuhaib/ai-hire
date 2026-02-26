@@ -3,116 +3,59 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface OptimizedVideoProps {
   src: string;
-  poster?: string;
   className?: string;
   /** Priority loading for above-the-fold videos */
   priority?: boolean;
 }
 
 /**
- * Highly optimized video component:
- * - Lazy loads video only when near viewport
- * - Respects reduced motion preferences
- * - Falls back to static poster for accessibility
- * - Minimal DOM until needed
+ * Simplified video component — no poster images, loads video directly.
+ * Respects reduced motion preferences.
  */
 export function OptimizedVideo({
   src,
-  poster,
   className = "",
   priority = false,
 }: OptimizedVideoProps) {
-  const ref = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [shouldLoad, setShouldLoad] = useState(priority);
-  const [isPlaying, setIsPlaying] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (priority) return;
+    const video = videoRef.current;
+    if (!video || prefersReducedMotion) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "400px 0px" }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [priority]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video || !shouldLoad || prefersReducedMotion) return;
-
-    // Play video when it enters viewport
-    const playObserver = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]?.isIntersecting) {
           video.play().catch(() => undefined);
-          setIsPlaying(true);
         } else {
           video.pause();
-          setIsPlaying(false);
         }
       },
       { threshold: 0.25 }
     );
 
-    playObserver.observe(video);
-    return () => playObserver.disconnect();
-  }, [shouldLoad, prefersReducedMotion]);
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [prefersReducedMotion]);
 
-  // Show static image if reduced motion is preferred
-  if (prefersReducedMotion && poster) {
-    return (
-      <img
-        src={poster}
-        alt="Video preview"
-        className={className}
-        loading="lazy"
-        decoding="async"
-      />
-    );
+  if (prefersReducedMotion) {
+    return <div className={`${className} bg-muted/30`} />;
   }
 
   return (
-    <div ref={ref} className={`relative overflow-hidden ${className}`}>
-      {/* Poster always rendered as instant placeholder */}
-      {poster && (
-        <img
-          src={poster}
-          alt="Video preview"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
-        />
-      )}
-      {!poster && !shouldLoad && (
-        <div className="absolute inset-0 w-full h-full bg-muted/30" />
-      )}
-      {shouldLoad && (
-        <video
-          ref={videoRef}
-          poster={poster}
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          disablePictureInPicture
-          className="relative w-full h-full object-cover"
-          aria-label="Video content"
-        >
-          <source src={src} type="video/mp4" />
-        </video>
-      )}
-    </div>
+    <video
+      ref={videoRef}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload={priority ? "auto" : "metadata"}
+      disablePictureInPicture
+      className={`${className} object-cover`}
+      aria-label="Video content"
+    >
+      <source src={src} type="video/mp4" />
+    </video>
   );
 }
