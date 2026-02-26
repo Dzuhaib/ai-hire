@@ -166,7 +166,7 @@ const AuthPage = () => {
             </div>
 
             {/* Clerk Form inside a card */}
-            <div className="rounded-2xl border border-border bg-card px-6 py-4 shadow-sm">
+            <div className="rounded-2xl border border-border bg-card px-6 py-4">
               {isSignUp ? (
                 <SignUp
                   routing="virtual"
