@@ -84,8 +84,21 @@ export function OptimizedVideo({
   }
 
   return (
-    <div ref={ref} className={className}>
-      {shouldLoad ? (
+    <div ref={ref} className={`relative overflow-hidden ${className}`}>
+      {/* Poster always rendered as instant placeholder */}
+      {poster && (
+        <img
+          src={poster}
+          alt="Video preview"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+        />
+      )}
+      {!poster && !shouldLoad && (
+        <div className="absolute inset-0 w-full h-full bg-muted/30" />
+      )}
+      {shouldLoad && (
         <video
           ref={videoRef}
           poster={poster}
@@ -94,20 +107,11 @@ export function OptimizedVideo({
           playsInline
           preload="metadata"
           disablePictureInPicture
-          className="w-full h-full object-cover"
+          className="relative w-full h-full object-cover"
           aria-label="Video content"
         >
           <source src={src} type="video/mp4" />
         </video>
-      ) : poster ? (
-        <img
-          src={poster}
-          alt="Video preview"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
-      ) : (
-        <div className="w-full h-full bg-muted/30" />
       )}
     </div>
   );
