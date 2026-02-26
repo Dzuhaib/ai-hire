@@ -58,8 +58,6 @@ export const Footer = () => {
             <a href="mailto:aivized.com@gmail.com" className="hover:text-foreground transition-colors">
               aivized.com@gmail.com
             </a>
-            <span className="hidden sm:inline">·</span>
-            <span className="hidden sm:inline">United Kingdom & Pakistan</span>
           </div>
         </div>
       </div>
