@@ -48,7 +48,7 @@ const IndustriesPage = () => {
         <meta property="og:url" content="https://www.aivized.com/industries" />
         <meta property="og:title" content="AI Chatbot for Restaurants, Real Estate & E-Commerce UK" />
         <meta property="og:description" content="Industry-trained managed AI chatbots for restaurants, real estate & e-commerce. Capture leads 24/7, from £29/month." />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json" id="page-structured-data">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Header />

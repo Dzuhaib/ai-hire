@@ -30,7 +30,7 @@ const PricingPage = () => {
         <meta property="og:url" content="https://www.aivized.com/pricing" />
         <meta property="og:title" content="AI Chatbot Pricing UK | Managed from £29/month | AIVized" />
         <meta property="og:description" content="Transparent AI chatbot pricing for UK small businesses. Fully managed from £29/month." />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json" id="page-structured-data">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
       <Header />
       

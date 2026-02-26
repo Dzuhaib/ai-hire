@@ -136,7 +136,7 @@ const IndustryPage = () => {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         {combinedSchema && (
-          <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
+          <script type="application/ld+json" id="page-structured-data">{JSON.stringify(combinedSchema)}</script>
         )}
       </Helmet>
       <Header />

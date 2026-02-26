@@ -59,7 +59,7 @@ const LocationsPage = () => {
         <meta property="og:url" content="https://www.aivized.com/locations" />
         <meta property="og:title" content="AI Chatbot Service Across UK Cities | AIVized" />
         <meta property="og:description" content="Managed AI chatbot for UK cities. 24/7 lead capture from £29/month." />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json" id="page-structured-data">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
       <Header />
 
