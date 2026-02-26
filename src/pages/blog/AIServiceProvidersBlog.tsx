@@ -65,10 +65,6 @@ const AIServiceProvidersBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "AI Service Providers UK" }
         ]
-      },
-      {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".lead"]
       }
     ]
   };

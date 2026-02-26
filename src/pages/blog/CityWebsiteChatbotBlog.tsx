@@ -80,10 +80,6 @@ const CityWebsiteChatbotBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": `Website Chatbot 24/7 ${data.city}` }
         ]
-      },
-      {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".lead"]
       }
     ]
   };

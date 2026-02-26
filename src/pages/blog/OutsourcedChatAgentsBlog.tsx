@@ -65,10 +65,6 @@ const OutsourcedChatAgentsBlog = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
           { "@type": "ListItem", "position": 3, "name": "24/7 Outsourced Chat Agents Birmingham" }
         ]
-      },
-      {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".lead"]
       }
     ]
   };
