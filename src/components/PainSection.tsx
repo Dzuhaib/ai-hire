@@ -17,10 +17,20 @@ export const PainSection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-sm uppercase tracking-[0.2em] text-primary/70 mb-16"
+            className="text-sm uppercase tracking-[0.2em] text-primary/70 mb-6"
           >
             The Problem
           </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-16"
+          >
+            UK Small Businesses <span className="text-gradient">Lose Leads</span> Every Day
+          </motion.h2>
 
           <div className="space-y-8">
             {painPoints.map((point, index) => (
