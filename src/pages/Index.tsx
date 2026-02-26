@@ -71,10 +71,10 @@ const homepageSchema = {
       "email": "aivized.com@gmail.com",
       "description": "Fully managed AI chatbot service for UK small businesses. 24/7 lead generation from £29/month.",
       "foundingDate": "2025",
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
-      },
+      "areaServed": [
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "Pakistan" }
+      ],
       "sameAs": []
     },
     {
@@ -90,6 +90,8 @@ const homepageSchema = {
         "addressCountry": "GB"
       },
       "areaServed": [
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "Pakistan" },
         { "@type": "City", "name": "London" },
         { "@type": "City", "name": "Manchester" },
         { "@type": "City", "name": "Birmingham" },
@@ -114,7 +116,10 @@ const homepageSchema = {
       "provider": { "@type": "Organization", "name": "AIVized" },
       "serviceType": "AI Chatbot Service",
       "description": "Fully managed AI chatbot for UK small businesses. Installation, 24/7 monitoring, lead capture, and continuous optimisation included.",
-      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "areaServed": [
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "Pakistan" }
+      ],
       "offers": {
         "@type": "AggregateOffer",
         "lowPrice": "29",
