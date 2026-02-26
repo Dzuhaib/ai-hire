@@ -19,7 +19,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "restaurants",
     industry: "Restaurants & Hospitality",
     tagline: "AI for Restaurants",
-    heroTitle: "Never Miss Another Reservation",
+    heroTitle: "Restaurant AI Chatbot That Never Misses a Reservation",
     heroSubtitle: "Your AI hostess handles bookings, answers menu questions, and captures guest details 24/7—while your staff focus on delivering exceptional dining experiences.",
     description: "AI-powered reservation management and customer service for restaurants, cafés, and hospitality businesses across the UK.",
     problems: [
@@ -78,7 +78,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "real-estate",
     industry: "Real Estate & Property",
     tagline: "AI for Real Estate",
-    heroTitle: "Qualify Leads While You Close Deals",
+    heroTitle: "Real Estate AI Chatbot That Qualifies Leads 24/7",
     heroSubtitle: "Your AI property assistant handles enquiries, schedules viewings, and qualifies buyers 24/7—so you can focus on closing sales instead of answering repetitive questions.",
     description: "AI-powered lead qualification and customer service for estate agents, letting agents, and property developers across the UK.",
     problems: [
@@ -136,7 +136,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "ecommerce",
     industry: "E-Commerce & Retail",
     tagline: "AI for E-Commerce",
-    heroTitle: "Turn Browsers Into Buyers",
+    heroTitle: "E-Commerce AI Chatbot That Turns Browsers Into Buyers",
     heroSubtitle: "Your AI shopping assistant answers product questions, handles order enquiries, and recovers abandoned carts 24/7—boosting conversions while you sleep.",
     description: "AI-powered customer service and sales support for online retailers, DTC brands, and e-commerce businesses across the UK.",
     problems: [
@@ -194,7 +194,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "healthcare",
     industry: "Healthcare & Clinics",
     tagline: "AI for Healthcare",
-    heroTitle: "Never Miss a Patient Enquiry",
+    heroTitle: "Healthcare AI Chatbot That Never Misses a Patient Enquiry",
     heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7—while your team focuses on delivering exceptional care.",
     description: "AI-powered appointment booking and patient communication for dental practices, GP surgeries, private clinics, and healthcare businesses across the UK.",
     problems: [
@@ -252,7 +252,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "legal",
     industry: "Legal & Law Firms",
     tagline: "AI for Law Firms",
-    heroTitle: "Capture Every Client Enquiry",
+    heroTitle: "Law Firm AI Chatbot That Captures Every Client Enquiry",
     heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7—so your solicitors can focus on billable work.",
     description: "AI-powered client intake and enquiry management for solicitors, law firms, and legal practices across the UK.",
     problems: [
@@ -310,7 +310,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "fitness",
     industry: "Fitness & Gyms",
     tagline: "AI for Fitness",
-    heroTitle: "Convert More Gym Enquiries",
+    heroTitle: "Gym & Fitness AI Chatbot That Converts More Enquiries",
     heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7—turning curious browsers into committed members.",
     description: "AI-powered membership sales and customer service for gyms, personal trainers, yoga studios, and fitness businesses across the UK.",
     problems: [
@@ -368,7 +368,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "travel",
     industry: "Travel & Tourism",
     tagline: "AI for Travel",
-    heroTitle: "Book More Holidays, Automatically",
+    heroTitle: "Travel Agent AI Chatbot That Books More Holidays Automatically",
     heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7—turning dreamers into bookers while you sleep.",
     description: "AI-powered booking support and customer service for travel agents, tour operators, and tourism businesses across the UK.",
     problems: [
