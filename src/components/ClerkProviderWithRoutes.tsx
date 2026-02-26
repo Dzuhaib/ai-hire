@@ -15,6 +15,7 @@ import LocationPage from "@/pages/LocationPage";
 import LocationsPage from "@/pages/LocationsPage";
 import IndustryPage from "@/pages/IndustryPage";
 import IndustriesPage from "@/pages/IndustriesPage";
+import IndustryCityPage from "@/pages/IndustryCityPage";
 import PricingPage from "@/pages/PricingPage";
 import BlogsPage from "@/pages/BlogsPage";
 import WhatsAppChatbotBlog from "@/pages/blog/WhatsAppChatbotBlog";
@@ -68,19 +69,13 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/pricing" element={<PricingPage />} />
-          {/* Location pages for local SEO */}
+          {/* Location pages (kept live but removed from navigation) */}
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/locations/:city" element={<LocationPage />} />
-          {/* Industries Index */}
+          {/* Industries */}
           <Route path="/industries" element={<IndustriesPage />} />
-          {/* Industry-specific landing pages */}
-          <Route path="/restaurants" element={<IndustryPage />} />
-          <Route path="/real-estate" element={<IndustryPage />} />
-          <Route path="/ecommerce" element={<IndustryPage />} />
-          <Route path="/healthcare" element={<IndustryPage />} />
-          <Route path="/legal" element={<IndustryPage />} />
-          <Route path="/fitness" element={<IndustryPage />} />
-          <Route path="/travel" element={<IndustryPage />} />
+          <Route path="/industries/:industry" element={<IndustryPage />} />
+          <Route path="/industries/:industry/:city" element={<IndustryCityPage />} />
           {/* Blog pages */}
           <Route path="/blog" element={<BlogsPage />} />
           <Route path="/blog/whatsapp-chatbot-uk-business" element={<WhatsAppChatbotBlog />} />

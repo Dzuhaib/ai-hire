@@ -1,26 +1,19 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MapPin, Briefcase, ArrowRight, BookOpen, MessageCircle, Globe, Instagram } from "lucide-react";
+import { Briefcase, ArrowRight, BookOpen, MessageCircle, Globe, Instagram } from "lucide-react";
 
 /**
  * Internal links section for homepage SEO.
- * Strengthens crawl paths to /locations, /industries, and /blog hubs.
+ * Strengthens crawl paths to /industries and /blog hubs.
  */
 export const InternalLinksSection = () => {
   const links = [
-    {
-      title: "Managed AI Chatbot by Location",
-      description: "Lead generation chatbot for UK small businesses—from London to Glasgow.",
-      href: "/locations",
-      icon: MapPin,
-      items: ["London", "Manchester", "Birmingham", "Leeds", "Glasgow", "Edinburgh"],
-    },
     {
       title: "Managed AI Chatbot by Industry",
       description: "Industry-trained AI chatbot for lead capture. We install everything.",
       href: "/industries",
       icon: Briefcase,
-      items: ["Restaurants", "Real Estate", "E-Commerce"],
+      items: ["Restaurants", "Real Estate", "E-Commerce", "Healthcare", "Legal", "Fitness", "Travel"],
     },
     {
       title: "AI Chatbot Blog & Insights",
@@ -70,7 +63,7 @@ export const InternalLinksSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           {links.map((link, index) => (
             <motion.div
               key={link.href}
@@ -126,7 +119,7 @@ export const InternalLinksSection = () => {
             Latest AI Chatbot Insights
           </h3>
           <div className="grid sm:grid-cols-3 gap-4">
-            {blogArticles.map((article, idx) => (
+            {blogArticles.map((article) => (
               <Link
                 key={article.href}
                 to={article.href}

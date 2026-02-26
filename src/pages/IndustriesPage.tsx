@@ -123,7 +123,7 @@ const IndustriesPage = () => {
                 transition={{ delay: idx * 0.05 }}
               >
                 <Link
-                  to={`/${industry.slug}`}
+                  to={`/industries/${industry.slug}`}
                   className="group block h-full"
                   onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
                 >
