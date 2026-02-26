@@ -191,3 +191,20 @@
     text-wrap: balance;
   }
 }
+
+/* Force Clerk component styles to prevent FOUC on refresh */
+.cl-card,
+.cl-rootBox .cl-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.cl-internal-b3fm6y,
+.cl-headerTitle,
+.cl-headerSubtitle,
+.cl-footer,
+.cl-footerAction {
+  display: none !important;
+}
