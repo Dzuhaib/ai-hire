@@ -56,7 +56,82 @@ const homepageSchema = {
       "@type": "WebSite",
       "name": "AIVized",
       "url": "https://www.aivized.com",
-      "description": "Managed AI chatbot service for UK small businesses from £29/month."
+      "description": "Managed AI chatbot service for UK small businesses from £29/month.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.aivized.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "AIVized",
+      "url": "https://www.aivized.com",
+      "logo": "https://www.aivized.com/favicon.png",
+      "email": "aivized.com@gmail.com",
+      "description": "Fully managed AI chatbot service for UK small businesses. 24/7 lead generation from £29/month.",
+      "foundingDate": "2025",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AIVized - Managed AI Chatbot Service",
+      "url": "https://www.aivized.com",
+      "email": "aivized.com@gmail.com",
+      "description": "Fully managed AI chatbot service for UK small businesses. We install, monitor, and optimise your chatbot 24/7.",
+      "priceRange": "£29 - £149/month",
+      "image": "https://www.aivized.com/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "London" },
+        { "@type": "City", "name": "Manchester" },
+        { "@type": "City", "name": "Birmingham" },
+        { "@type": "City", "name": "Leeds" },
+        { "@type": "City", "name": "Glasgow" },
+        { "@type": "City", "name": "Edinburgh" },
+        { "@type": "City", "name": "Liverpool" },
+        { "@type": "City", "name": "Bristol" },
+        { "@type": "City", "name": "Sheffield" },
+        { "@type": "City", "name": "Newcastle" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Managed AI Chatbot Service",
+      "provider": { "@type": "Organization", "name": "AIVized" },
+      "serviceType": "AI Chatbot Service",
+      "description": "Fully managed AI chatbot for UK small businesses. Installation, 24/7 monitoring, lead capture, and continuous optimisation included.",
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "29",
+        "highPrice": "149",
+        "priceCurrency": "GBP",
+        "offerCount": "4"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com/" }
+      ]
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".hero-description", "#faq"]
     }
   ]
 };

@@ -18,6 +18,28 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
+# AI Bot Crawlers - Explicitly allow for AI SEO
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 User-agent: *
 Allow: /
 
@@ -26,6 +48,7 @@ Disallow: /dashboard
 Disallow: /admin
 Disallow: /payment-success
 Disallow: /forgot-password
+Disallow: /auth
 
 # Sitemap location
 Sitemap: https://www.aivized.com/sitemap.xml
