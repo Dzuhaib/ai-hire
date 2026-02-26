@@ -1,25 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 
 type TierVideoProps = {
-  /** MP4 source */
   src: string;
-  /** Optional WebM source for better compression */
   srcWebm?: string;
-  poster?: string;
   className?: string;
 };
 
 /**
- * Lazy-loads the video only when it gets close to the viewport.
- * Supports WebM + MP4 fallback for faster loading.
+ * Simplified tier video — no poster, loads directly for speed.
  * Respects prefers-reduced-motion.
  */
-export function TierVideo({ src, srcWebm, poster, className }: TierVideoProps) {
+export function TierVideo({ src, srcWebm, className }: TierVideoProps) {
   const ref = useRef<HTMLVideoElement | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
-  // Check for reduced motion preference
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     setPrefersReducedMotion(mq.matches);
@@ -34,8 +29,7 @@ export function TierVideo({ src, srcWebm, poster, className }: TierVideoProps) {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const entry = entries[0];
-        if (entry?.isIntersecting) {
+        if (entries[0]?.isIntersecting) {
           setShouldLoad(true);
           observer.disconnect();
         }
@@ -50,49 +44,27 @@ export function TierVideo({ src, srcWebm, poster, className }: TierVideoProps) {
   useEffect(() => {
     const el = ref.current;
     if (!el || !shouldLoad || prefersReducedMotion) return;
-    // best-effort play (autoplay can be blocked in edge cases)
     void el.play().catch(() => undefined);
   }, [shouldLoad, prefersReducedMotion]);
 
-  // If user prefers reduced motion, show static poster only
-  if (prefersReducedMotion && poster) {
-    return (
-      <img
-        src={poster}
-        alt="AI colleague preview"
-        className={className}
-        loading="lazy"
-      />
-    );
+  if (prefersReducedMotion) {
+    return <div className={`${className} bg-muted/30`} />;
   }
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {/* Poster shown instantly as background */}
-      {poster && (
-        <img
-          src={poster}
-          alt="AI colleague preview"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="eager"
-          decoding="async"
-        />
-      )}
-      <video
-        ref={ref}
-        poster={poster}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        disablePictureInPicture
-        className="relative w-full h-full object-cover"
-        aria-label="AI colleague preview"
-      >
-        {shouldLoad && srcWebm && <source src={srcWebm} type="video/webm" />}
-        {shouldLoad && <source src={src} type="video/mp4" />}
-      </video>
-    </div>
+    <video
+      ref={ref}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      disablePictureInPicture
+      className={className}
+      aria-label="AI colleague preview"
+    >
+      {shouldLoad && srcWebm && <source src={srcWebm} type="video/webm" />}
+      {shouldLoad && <source src={src} type="video/mp4" />}
+    </video>
   );
 }

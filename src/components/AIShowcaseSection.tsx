@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Bot, MessageCircle, Users } from "lucide-react";
 import { OptimizedVideo } from "@/components/OptimizedVideo";
 import aiAssistantVideo from "@/assets/ai-assistant-talking.mp4";
-import aiAssistantPoster from "@/assets/ai-assistant-hero.png";
 
 export const AIShowcaseSection = () => {
   return (
@@ -51,7 +50,6 @@ export const AIShowcaseSection = () => {
             <div className="relative rounded-3xl overflow-hidden">
               <OptimizedVideo
                 src={aiAssistantVideo}
-                poster={aiAssistantPoster}
                 className="w-full aspect-video"
               />
               
