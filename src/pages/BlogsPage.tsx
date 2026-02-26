@@ -32,6 +32,16 @@ import aiGlasgow from "@/assets/locations/ai-glasgow.png";
 import aiEdinburgh from "@/assets/locations/ai-edinburgh.png";
 import aiSheffield from "@/assets/locations/ai-sheffield.png";
 import aiNewcastle from "@/assets/locations/ai-newcastle.png";
+import aiNottingham from "@/assets/locations/ai-nottingham.png";
+import aiCardiff from "@/assets/locations/ai-cardiff.png";
+import aiLeicester from "@/assets/locations/ai-leicester.png";
+import aiBrighton from "@/assets/locations/ai-brighton.png";
+import aiSouthampton from "@/assets/locations/ai-southampton.png";
+import aiOxford from "@/assets/locations/ai-oxford.png";
+import aiCambridge from "@/assets/locations/ai-cambridge.png";
+import aiCoventry from "@/assets/locations/ai-coventry.png";
+import aiBelfast from "@/assets/locations/ai-belfast.png";
+import aiAberdeen from "@/assets/locations/ai-aberdeen.png";
 
 const imageMap: Record<string, string> = {
   "whatsapp-chatbot-uk-business": whatsappHero,
@@ -55,6 +65,16 @@ const imageMap: Record<string, string> = {
   "website-chatbot-24-7-edinburgh": aiEdinburgh,
   "website-chatbot-24-7-sheffield": aiSheffield,
   "website-chatbot-24-7-newcastle": aiNewcastle,
+  "website-chatbot-24-7-nottingham": aiNottingham,
+  "website-chatbot-24-7-cardiff": aiCardiff,
+  "website-chatbot-24-7-leicester": aiLeicester,
+  "website-chatbot-24-7-brighton": aiBrighton,
+  "website-chatbot-24-7-southampton": aiSouthampton,
+  "website-chatbot-24-7-oxford": aiOxford,
+  "website-chatbot-24-7-cambridge": aiCambridge,
+  "website-chatbot-24-7-coventry": aiCoventry,
+  "website-chatbot-24-7-belfast": aiBelfast,
+  "website-chatbot-24-7-aberdeen": aiAberdeen,
 };
 
 const POSTS_PER_PAGE = 9;

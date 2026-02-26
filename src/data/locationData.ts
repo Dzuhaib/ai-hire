@@ -416,6 +416,406 @@ export const ukLocations: LocationData[] = [
       { question: "How quickly can Newcastle businesses get started with the managed AI chatbot?", answer: "Within 24 hours of subscribing, your managed AI chatbot service will be live. Quick setup means you're ready for your next busy period without delay—no technical skills needed." }
     ],
     coordinates: { lat: 54.9783, lng: -1.6178 }
+  },
+  {
+    slug: "nottingham",
+    city: "Nottingham",
+    region: "East Midlands",
+    population: "830,000",
+    description: "A vibrant university city with a thriving creative, retail, and tech sector in the heart of England.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77000!2d-1.1581!3d52.9548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c3e82aaaaa7%3A0x63c tried%21!2sNottingham!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Nottingham — Managed AI Chatbot Service",
+    heroSubtext: "Get a managed AI chatbot for your Nottingham business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Lace Market to Hockley—we handle everything.",
+    problems: [
+      { title: "University City Competition", description: "With two major universities, Nottingham businesses compete fiercely for student and local trade year-round." },
+      { title: "Seasonal Student Fluctuations", description: "Term-time surges and holiday lulls make staffing consistently a real headache for Nottingham businesses." },
+      { title: "Budget-Conscious Customers", description: "Nottingham's market demands value-driven service without compromising on quality." },
+      { title: "Growing Digital Expectations", description: "A tech-savvy population expects instant online responses from local businesses." }
+    ],
+    solutions: [
+      { title: "Always Competitive", description: "Your AI responds instantly to every enquiry, giving you the edge over slower competitors." },
+      { title: "Consistent Year-Round", description: "Handle term-time rushes and quiet periods with the same AI—no hiring or firing cycles." },
+      { title: "Exceptional Value", description: "Enterprise-quality customer service from just £29/month—perfect for Nottingham's value-driven market." },
+      { title: "Instant Digital Presence", description: "Meet the expectations of Nottingham's tech-savvy customers with immediate, intelligent responses." }
+    ],
+    whyChooseUs: [
+      "Supporting Nottingham businesses across hospitality, retail, and property sectors",
+      "AI trained for the East Midlands market and customer expectations",
+      "Full deployment within 24 hours—minimal disruption to operations",
+      "Transparent pricing with no hidden fees or long-term contracts",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Nottingham City Centre", "Lace Market", "Hockley", "West Bridgford", "Beeston", "Long Eaton", "Arnold", "Carlton", "Mapperley", "Sherwood", "Sneinton", "Bulwell", "Wollaton", "Gedling", "Radcliffe-on-Trent"],
+    cityDescription: "Nottingham is one of the East Midlands' most dynamic cities, home to two major universities, a celebrated creative quarter, and a growing tech and startup ecosystem. From legendary nightlife to world-class sport, Nottingham businesses operate in a city that punches well above its weight. AI Vized helps Nottingham companies capture every opportunity with intelligent automation that works around the clock.",
+    faqs: [
+      { question: "How can a managed AI chatbot service help my Nottingham business?", answer: "Our managed AI chatbot service captures leads 24/7, answers customer questions instantly, and handles enquiries even when you're closed—perfect for Nottingham's busy business scene." },
+      { question: "Is the AI chatbot for small business UK good for Nottingham restaurants?", answer: "Absolutely. Our AI chatbot for small business UK handles bookings, menu enquiries, dietary questions, and captures customer details for follow-up—ideal for Nottingham's thriving food scene." },
+      { question: "How much does the lead generation chatbot UK cost for Nottingham businesses?", answer: "Our lead generation chatbot UK starts from just £29/month with no setup fees or contracts. It's the most affordable option for Nottingham SMEs." },
+      { question: "Can the 24/7 customer support chatbot UK handle student enquiries?", answer: "Yes. Your 24/7 customer support chatbot UK handles high volumes efficiently, perfect for Nottingham's student-driven peaks." },
+      { question: "How quickly can I set up an affordable AI chatbot for website in Nottingham?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live and serving your Nottingham customers." },
+      { question: "Does AIVized offer support for Nottingham businesses?", answer: "Our UK-based support team is available via phone and email to help your Nottingham business get the most from our managed AI chatbot service." }
+    ],
+    coordinates: { lat: 52.9548, lng: -1.1581 }
+  },
+  {
+    slug: "cardiff",
+    city: "Cardiff",
+    region: "Wales",
+    population: "480,000",
+    description: "The Welsh capital and a growing hub for media, technology, and professional services.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79600!2d-3.1791!3d51.4816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e02d434ec53f5%3A0x143406db6586670e!2sCardiff!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Cardiff — Managed AI Chatbot Service",
+    heroSubtext: "Get a managed AI chatbot for your Cardiff business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Cardiff Bay to the city centre—we handle everything.",
+    problems: [
+      { title: "Bilingual Customer Base", description: "Cardiff businesses serve both Welsh and English-speaking customers, requiring flexible communication approaches." },
+      { title: "Event-Driven Surges", description: "Principality Stadium events and Six Nations weekends create massive spikes in customer enquiries." },
+      { title: "Growing Competition", description: "Cardiff's rapid development means more businesses competing for the same customers." },
+      { title: "Limited Evening Coverage", description: "Many Cardiff SMEs can't afford evening staff but lose leads after hours." }
+    ],
+    solutions: [
+      { title: "Multilingual Ready", description: "Your AI communicates naturally in English and can be configured for basic Welsh language support." },
+      { title: "Event-Ready Capacity", description: "Handle matchday and event surges effortlessly—your AI scales to any volume instantly." },
+      { title: "Stand Out from Competitors", description: "Beat Cardiff competitors with instant 24/7 responses while they're still checking voicemails." },
+      { title: "Round-the-Clock Coverage", description: "Capture every lead evening, weekend, and bank holiday—your AI never clocks off." }
+    ],
+    whyChooseUs: [
+      "Trusted by Cardiff businesses across hospitality, property, and professional services",
+      "AI trained for the Welsh market and customer communication styles",
+      "Complete setup within 24 hours with zero technical requirements",
+      "Month-to-month flexibility with no lock-in contracts",
+      "UK-based support team available when you need help"
+    ],
+    serviceAreas: ["Cardiff City Centre", "Cardiff Bay", "Canton", "Roath", "Cathays", "Pontcanna", "Llandaff", "Whitchurch", "Heath", "Splott", "Grangetown", "Penarth", "Barry", "Caerphilly", "Newport"],
+    cityDescription: "Cardiff has transformed into one of the UK's most exciting cities, combining Welsh heritage with modern innovation. As home to the BBC, a thriving startup scene, and world-class sporting venues, Cardiff businesses operate in a dynamic and growing market. AI Vized helps Cardiff companies deliver exceptional customer service while keeping costs manageable.",
+    faqs: [
+      { question: "Can the managed AI chatbot service handle Cardiff's bilingual customer base?", answer: "Our managed AI chatbot service primarily operates in English but can be configured to handle basic Welsh language enquiries, helping you serve Cardiff's diverse community." },
+      { question: "Is this AI chatbot for small business UK suitable for Cardiff hospitality?", answer: "Absolutely. Our AI chatbot for small business UK handles bookings, menu enquiries, and event information—perfect for Cardiff's bustling restaurant and bar scene." },
+      { question: "How does the lead generation chatbot UK help Cardiff businesses during rugby weekends?", answer: "Your lead generation chatbot UK handles the surge in enquiries during Six Nations and international matches, capturing every lead while you focus on service." },
+      { question: "What's the setup process for the affordable AI chatbot for website in Cardiff?", answer: "Subscribe, share your website access, and we install your affordable AI chatbot for website within 24 hours. No technical skills needed." },
+      { question: "Can the 24/7 customer support chatbot UK integrate with my Cardiff business website?", answer: "Yes. Our 24/7 customer support chatbot UK installs directly on your existing website with no redesign needed." },
+      { question: "Is there a contract for the managed AI chatbot in Cardiff?", answer: "No long-term contracts. Our managed AI chatbot service runs month-to-month, so you can cancel anytime." }
+    ],
+    coordinates: { lat: 51.4816, lng: -3.1791 }
+  },
+  {
+    slug: "leicester",
+    city: "Leicester",
+    region: "East Midlands",
+    population: "920,000",
+    description: "One of the UK's most diverse cities, a hub for textiles, food manufacturing, and retail.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77200!2d-1.1398!3d52.6369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877614c77000001%3A0x5e4a755a574d2b1c!2sLeicester!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Leicester — Lead Generation Chatbot",
+    heroSubtext: "Get a managed AI chatbot for your Leicester business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Golden Mile to the Cultural Quarter—we handle everything.",
+    problems: [
+      { title: "Diverse Customer Needs", description: "Leicester's multicultural market requires flexible, inclusive customer communication." },
+      { title: "Retail Competition", description: "From independent shops to High Street chains, Leicester businesses compete fiercely for footfall and online enquiries." },
+      { title: "After-Hours Demand", description: "Leicester's vibrant evening economy means customers expect responses outside traditional hours." },
+      { title: "Cost Pressures", description: "Rising business costs in Leicester make efficient customer service essential for survival." }
+    ],
+    solutions: [
+      { title: "Inclusive Communication", description: "Your AI handles enquiries from Leicester's diverse community with professionalism and respect." },
+      { title: "Competitive Edge Online", description: "Capture online leads faster than competitors with instant AI responses 24/7." },
+      { title: "Evening & Weekend Coverage", description: "Never miss a Leicester lead again—your AI works evenings, weekends, and bank holidays." },
+      { title: "Cost-Effective Service", description: "Get 24/7 customer service from £29/month—a fraction of hiring additional staff." }
+    ],
+    whyChooseUs: [
+      "Supporting Leicester businesses across food, retail, property, and professional services",
+      "AI trained for diverse customer communication and cultural sensitivity",
+      "Full deployment within 24 hours—start capturing leads immediately",
+      "Affordable pricing that works for Leicester's SME community",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Leicester City Centre", "Golden Mile", "Cultural Quarter", "Highfields", "Oadby", "Wigston", "Birstall", "Beaumont Leys", "Braunstone", "Evington", "Knighton", "Stoneygate", "Clarendon Park", "Narborough", "Enderby"],
+    cityDescription: "Leicester is one of England's most vibrant and diverse cities, renowned for its rich cultural heritage, thriving food scene, and strong business community. From the famous Golden Mile to the innovative Cultural Quarter, Leicester businesses operate in a market that values quality service and community connection. AI Vized helps Leicester companies serve their diverse customer base 24/7.",
+    faqs: [
+      { question: "How can a managed AI chatbot service help my Leicester business?", answer: "Our managed AI chatbot service captures leads around the clock, answers customer questions instantly, and handles enquiries even when your Leicester shop or office is closed." },
+      { question: "Is this AI chatbot for small business UK suitable for Leicester restaurants?", answer: "Yes. Our AI chatbot for small business UK handles reservations, dietary enquiries, and menu questions—perfect for Leicester's celebrated food scene." },
+      { question: "How much does the lead generation chatbot UK cost?", answer: "Our lead generation chatbot UK starts from just £29/month. No setup fees, no contracts—ideal for Leicester SMEs." },
+      { question: "Can the 24/7 customer support chatbot UK handle multiple languages?", answer: "Our 24/7 customer support chatbot UK primarily operates in English but can handle basic enquiries in other languages, helping serve Leicester's diverse community." },
+      { question: "How quickly can I get started in Leicester?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live on your Leicester business website." },
+      { question: "Is there a long-term contract?", answer: "No. Our managed AI chatbot service runs month-to-month with no lock-in, so you can cancel anytime." }
+    ],
+    coordinates: { lat: 52.6369, lng: -1.1398 }
+  },
+  {
+    slug: "brighton",
+    city: "Brighton",
+    region: "South East England",
+    population: "290,000",
+    description: "A creative, independent-spirited seaside city known for digital innovation and tourism.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81200!2d-0.1363!3d50.8225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48758550bd6f41c5%3A0xd1e8b64a4b5b8f0a!2sBrighton!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Brighton — Managed AI Chatbot Service",
+    heroSubtext: "Get a managed AI chatbot for your Brighton business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From The Lanes to the seafront—we handle everything.",
+    problems: [
+      { title: "Seasonal Tourism Peaks", description: "Brighton's summer brings massive footfall but staffing for peaks is expensive and temporary workers lack expertise." },
+      { title: "Digital-First Customers", description: "Brighton's tech-savvy population expects instant online interactions from local businesses." },
+      { title: "Independent Business Pressures", description: "Competing against chains while maintaining Brighton's unique independent character is challenging." },
+      { title: "Weekend & Evening Rush", description: "Brighton's nightlife and weekend tourism mean enquiries peak when businesses are busiest." }
+    ],
+    solutions: [
+      { title: "Season-Proof Service", description: "Handle summer rushes and winter quiet with the same consistent AI—no seasonal hiring headaches." },
+      { title: "Instant Digital Response", description: "Meet Brighton's digital-first customers with immediate, intelligent online responses." },
+      { title: "Indie Quality, AI Efficiency", description: "Maintain your unique Brighton personality with AI that's trained on your specific brand voice." },
+      { title: "Peak-Time Support", description: "Your AI handles online enquiries while your team focuses on in-person Brighton visitors." }
+    ],
+    whyChooseUs: [
+      "Supporting Brighton's creative and independent business community",
+      "AI that matches Brighton's innovative, friendly communication style",
+      "Live within 24 hours with zero technical requirements",
+      "Ethical pricing with no lock-in contracts",
+      "GDPR compliant and UK-based support"
+    ],
+    serviceAreas: ["Brighton City Centre", "The Lanes", "North Laine", "Kemptown", "Hove", "Portslade", "Rottingdean", "Saltdean", "Peacehaven", "Lewes", "Shoreham-by-Sea", "Worthing", "Burgess Hill", "Haywards Heath", "Newhaven"],
+    cityDescription: "Brighton is the UK's most vibrant seaside city, famous for its creative energy, digital innovation scene, and fiercely independent business community. From the iconic pier to the bustling Lanes, Brighton attracts visitors and entrepreneurs who value originality and quality. AI Vized helps Brighton businesses deliver exceptional service year-round while managing the unique challenges of a seasonal, tourism-driven economy.",
+    faqs: [
+      { question: "Can a managed AI chatbot service handle Brighton's summer tourism peak?", answer: "Absolutely. Our managed AI chatbot service handles unlimited enquiries at no extra cost, making it perfect for Brighton's busy summer season." },
+      { question: "Is this AI chatbot for small business UK good for Brighton's independent shops?", answer: "Yes. Our AI chatbot for small business UK maintains your unique brand voice while handling product enquiries, opening hours, and customer questions 24/7." },
+      { question: "How does the lead generation chatbot UK help Brighton accommodation businesses?", answer: "Your lead generation chatbot UK handles booking enquiries, answers questions about Brighton attractions, and captures guest details—essential for hotels and B&Bs." },
+      { question: "Can the 24/7 customer support chatbot UK handle weekend enquiry surges?", answer: "Yes. Your 24/7 customer support chatbot UK manages any volume of weekend enquiries while your team focuses on in-person service." },
+      { question: "Is the affordable AI chatbot for website suitable for Brighton startups?", answer: "Perfect for startups. Our affordable AI chatbot for website starts from £29/month with no setup fees—ideal for Brighton's growing tech scene." },
+      { question: "How quickly can Brighton businesses get started?", answer: "Within 24 hours of subscribing, your managed AI chatbot will be live and capturing leads for your Brighton business." }
+    ],
+    coordinates: { lat: 50.8225, lng: -0.1363 }
+  },
+  {
+    slug: "southampton",
+    city: "Southampton",
+    region: "Hampshire",
+    population: "260,000",
+    description: "A major port city with a strong maritime heritage and growing digital and creative sectors.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80600!2d-1.4044!3d50.9097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487476b4b92301f7%3A0xdc0f515de4530fce!2sSouthampton!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Southampton — Lead Generation Chatbot",
+    heroSubtext: "Get a managed AI chatbot for your Southampton business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the docks to the city centre—we handle everything.",
+    problems: [
+      { title: "Port & Tourism Demands", description: "Cruise ship arrivals create unpredictable surges in local business enquiries that are hard to staff for." },
+      { title: "Student Market Fluctuations", description: "Two universities mean seasonal swings in customer demand that challenge consistent service." },
+      { title: "Matchday Pressures", description: "Saints matchdays bring spikes in hospitality enquiries that overwhelm small teams." },
+      { title: "Cost-Conscious Market", description: "Southampton businesses need efficient customer service without premium city costs." }
+    ],
+    solutions: [
+      { title: "Cruise-Ready Service", description: "Handle the surge when ships dock—your AI manages any volume of enquiries instantly." },
+      { title: "Year-Round Consistency", description: "Maintain excellent service whether students are in town or away—no staffing adjustments needed." },
+      { title: "Matchday Managed", description: "Capture every pre and post-match enquiry without additional staff or overtime." },
+      { title: "Maximum Efficiency", description: "Get 24/7 customer service from £29/month—smart spending for Southampton businesses." }
+    ],
+    whyChooseUs: [
+      "Supporting Southampton businesses across hospitality, maritime, retail, and property",
+      "AI trained for the Hampshire market and customer expectations",
+      "Full deployment within 24 hours—no technical skills needed",
+      "Transparent pricing with no hidden costs",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Southampton City Centre", "Ocean Village", "Shirley", "Portswood", "Bitterne", "Woolston", "Totton", "Hedge End", "Eastleigh", "Chandlers Ford", "Romsey", "Winchester", "Fareham", "Hythe", "Marchwood"],
+    cityDescription: "Southampton is one of the South Coast's most important cities, renowned as a global cruise port, home to two major universities, and a growing centre for digital and creative industries. The city's mix of maritime heritage and modern innovation creates exciting opportunities for businesses. AI Vized helps Southampton companies capitalise on every opportunity with 24/7 intelligent customer engagement.",
+    faqs: [
+      { question: "How can a managed AI chatbot service help my Southampton business?", answer: "Our managed AI chatbot service captures leads 24/7, handles customer enquiries instantly, and works around cruise ship arrivals and matchdays—keeping your Southampton business responsive at all times." },
+      { question: "Is the AI chatbot for small business UK suitable for Southampton hospitality?", answer: "Yes. Our AI chatbot for small business UK handles bookings, menu enquiries, and tourist information—perfect for Southampton's busy hospitality scene." },
+      { question: "How much does the lead generation chatbot UK cost?", answer: "Our lead generation chatbot UK starts from just £29/month with no setup fees or long-term contracts." },
+      { question: "Can the 24/7 customer support chatbot UK handle cruise season peaks?", answer: "Absolutely. Your 24/7 customer support chatbot UK manages unlimited enquiries, perfect for when ships dock in Southampton." },
+      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live on your Southampton business website." },
+      { question: "Is there a contract?", answer: "No long-term contracts. Our managed AI chatbot service is month-to-month." }
+    ],
+    coordinates: { lat: 50.9097, lng: -1.4044 }
+  },
+  {
+    slug: "oxford",
+    city: "Oxford",
+    region: "Oxfordshire",
+    population: "160,000",
+    description: "A world-famous university city with a thriving tourism, education, and technology sector.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79200!2d-1.2578!3d51.7520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9f0efb617%3A0x4c85c1c9a4739b1e!2sOxford!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Oxford — Managed AI Chatbot Service",
+    heroSubtext: "Get a managed AI chatbot for your Oxford business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Dreaming Spires to Jericho—we handle everything.",
+    problems: [
+      { title: "Premium Service Expectations", description: "Oxford's discerning clientele expects polished, knowledgeable responses—anything less damages your reputation." },
+      { title: "Tourist Volume Pressure", description: "Millions of annual visitors create enquiry volumes that overwhelm small Oxford businesses." },
+      { title: "Academic Calendar Swings", description: "Term times and conferences create peaks; vacations bring lulls—staffing is a constant balancing act." },
+      { title: "High Operating Costs", description: "Oxford's property and staffing costs are among the highest outside London." }
+    ],
+    solutions: [
+      { title: "Polished Communication", description: "Your AI delivers articulate, knowledgeable responses that match Oxford's premium expectations." },
+      { title: "Tourist-Ready Capacity", description: "Handle peak tourist season enquiries without breaking a sweat—or your budget." },
+      { title: "Calendar-Proof Service", description: "Consistent excellence whether it's Freshers' Week or the long vacation." },
+      { title: "Cost-Smart Operations", description: "Cut customer service costs dramatically while improving response quality and speed." }
+    ],
+    whyChooseUs: [
+      "Supporting Oxford businesses across tourism, hospitality, property, and education",
+      "AI trained for Oxford's premium communication standards",
+      "Full deployment within 24 hours—no technical skills required",
+      "Transparent pricing that helps manage Oxford's high operating costs",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Oxford City Centre", "Jericho", "Summertown", "Cowley", "Headington", "Iffley", "Botley", "Wolvercote", "Marston", "Abingdon", "Didcot", "Witney", "Bicester", "Kidlington", "Woodstock"],
+    cityDescription: "Oxford is one of the world's most prestigious cities, home to the University of Oxford and a magnet for millions of tourists annually. Beyond academia, Oxford has a thriving tech sector, celebrated dining scene, and competitive property market. AI Vized helps Oxford businesses deliver the polished, knowledgeable service their discerning clientele expects—24 hours a day.",
+    faqs: [
+      { question: "Can a managed AI chatbot service match Oxford's premium service standards?", answer: "Yes. Our managed AI chatbot service is trained on your specific business and delivers articulate, knowledgeable responses that meet Oxford's high expectations." },
+      { question: "Is the AI chatbot for small business UK good for Oxford's tourism sector?", answer: "Perfect. Our AI chatbot for small business UK handles visitor enquiries, booking requests, and local information—ideal for Oxford's busy tourism businesses." },
+      { question: "How does the lead generation chatbot UK help Oxford property agents?", answer: "Your lead generation chatbot UK answers property questions, schedules viewings, qualifies leads, and provides area information for Oxford's competitive market." },
+      { question: "Can the 24/7 customer support chatbot UK handle conference season?", answer: "Absolutely. Your 24/7 customer support chatbot UK manages unlimited enquiries during Oxford's busy conference and events calendar." },
+      { question: "Is there a contract for the affordable AI chatbot for website?", answer: "No contracts. Our affordable AI chatbot for website runs month-to-month from just £29." },
+      { question: "How quickly can Oxford businesses get started?", answer: "Within 24 hours of subscribing, your managed AI chatbot will be live and working for your Oxford business." }
+    ],
+    coordinates: { lat: 51.7520, lng: -1.2578 }
+  },
+  {
+    slug: "cambridge",
+    city: "Cambridge",
+    region: "Cambridgeshire",
+    population: "150,000",
+    description: "A world-renowned university city and the heart of the UK's tech and biotech innovation corridor.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78000!2d0.1218!3d52.2053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d85d89f32b012d%3A0x63a320e1a35e3d21!2sCambridge!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Cambridge — Lead Generation Chatbot",
+    heroSubtext: "Get a managed AI chatbot for your Cambridge business from £29/month. Capture leads 24/7, reduce missed enquiries, and automate customer engagement. From King's Parade to the Science Park—we handle everything.",
+    problems: [
+      { title: "Tech-Savvy Clientele", description: "Cambridge's innovation-driven customers expect cutting-edge digital experiences from every business." },
+      { title: "International Visitor Volume", description: "Millions of international tourists visit annually, creating language and volume challenges." },
+      { title: "Startup Competition", description: "Cambridge's thriving startup scene means businesses compete fiercely for attention and leads." },
+      { title: "Premium Market Costs", description: "Cambridge's high property and staffing costs squeeze business margins." }
+    ],
+    solutions: [
+      { title: "Innovation-Ready Service", description: "Meet Cambridge's tech-savvy expectations with instant, intelligent AI-powered customer engagement." },
+      { title: "Global Communication", description: "Handle international visitor enquiries with professional, clear responses around the clock." },
+      { title: "Competitive Advantage", description: "Outpace Cambridge competitors with 24/7 instant response capability." },
+      { title: "Cost Efficiency", description: "Reduce customer service costs from thousands to just £29/month." }
+    ],
+    whyChooseUs: [
+      "Supporting Cambridge businesses across tech, tourism, hospitality, and education sectors",
+      "AI trained for Cambridge's premium, innovation-focused market",
+      "Full deployment within 24 hours—no technical requirements",
+      "Transparent pricing that helps manage Cambridge's high costs",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Cambridge City Centre", "King's Parade", "Mill Road", "Chesterton", "Cherry Hinton", "Trumpington", "Newnham", "Cambridge Science Park", "Girton", "Histon", "Milton", "Ely", "Newmarket", "St Ives", "Huntingdon"],
+    cityDescription: "Cambridge is synonymous with academic excellence and technological innovation. Home to the University of Cambridge and Silicon Fen—Europe's largest tech cluster—the city attracts talent, tourists, and entrepreneurs from around the world. AI Vized helps Cambridge businesses deliver the sophisticated, efficient service their discerning clients expect, while keeping costs manageable in one of the UK's most expensive cities.",
+    faqs: [
+      { question: "How can a managed AI chatbot service help my Cambridge tech business?", answer: "Our managed AI chatbot service handles product enquiries, captures demo requests, qualifies leads, and provides instant technical information—perfect for Cambridge's fast-moving tech sector." },
+      { question: "Is the AI chatbot for small business UK suitable for Cambridge tourism?", answer: "Absolutely. Our AI chatbot for small business UK handles visitor enquiries, booking requests, and local information in multiple languages." },
+      { question: "How does the lead generation chatbot UK work for Cambridge startups?", answer: "Your lead generation chatbot UK captures and qualifies leads 24/7, so your Cambridge startup never misses a potential customer or investor enquiry." },
+      { question: "Can the 24/7 customer support chatbot UK handle international visitors?", answer: "Yes. Your 24/7 customer support chatbot UK communicates clearly in English with international visitors and can handle basic enquiries in other languages." },
+      { question: "Is there a long-term contract?", answer: "No. Our affordable AI chatbot for website runs month-to-month from £29—perfect for Cambridge startups and SMEs." },
+      { question: "How quickly can I get started?", answer: "Within 24 hours, your managed AI chatbot will be live on your Cambridge business website." }
+    ],
+    coordinates: { lat: 52.2053, lng: 0.1218 }
+  },
+  {
+    slug: "coventry",
+    city: "Coventry",
+    region: "West Midlands",
+    population: "380,000",
+    description: "A historic city reborn as a UK City of Culture, with growing automotive, tech, and creative sectors.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77800!2d-1.5197!3d52.4068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877eaff1e84c07d%3A0x5060f1e61e102c04!2sCoventry!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Coventry — Managed AI Chatbot Service",
+    heroSubtext: "Get a managed AI chatbot for your Coventry business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the cathedral to the tech park—we handle everything.",
+    problems: [
+      { title: "Post-City of Culture Momentum", description: "Coventry businesses need to maintain momentum and attract customers in the post-2021 era." },
+      { title: "Student Economy Fluctuations", description: "Two universities mean seasonal demand swings that make consistent staffing challenging." },
+      { title: "Manufacturing Heritage Shift", description: "Transitioning businesses need modern customer engagement to match their evolving offerings." },
+      { title: "Budget Constraints", description: "Coventry businesses need affordable solutions that deliver real results." }
+    ],
+    solutions: [
+      { title: "Keep the Momentum", description: "Maintain excellent customer service and capture every lead as Coventry continues to grow." },
+      { title: "Year-Round Excellence", description: "Consistent AI service whether students are in town or not—no seasonal staffing worries." },
+      { title: "Modern Customer Engagement", description: "Show customers your business is forward-thinking with instant, intelligent AI responses." },
+      { title: "Incredible Value", description: "Enterprise-quality service from just £29/month—unbeatable for Coventry SMEs." }
+    ],
+    whyChooseUs: [
+      "Supporting Coventry businesses across automotive, hospitality, retail, and education",
+      "AI trained for the West Midlands market",
+      "Full deployment within 24 hours",
+      "No contracts, no setup fees, transparent pricing",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Coventry City Centre", "Earlsdon", "Chapelfields", "Stoke", "Hillfields", "Coundon", "Binley", "Walsgrave", "Tile Hill", "Canley", "Allesley", "Kenilworth", "Bedworth", "Nuneaton", "Rugby"],
+    cityDescription: "Coventry has undergone a remarkable transformation, from its automotive heritage to becoming the UK City of Culture. With two thriving universities, a growing tech sector, and renewed cultural confidence, Coventry businesses operate in one of the Midlands' most exciting markets. AI Vized helps Coventry companies deliver modern, responsive customer service that matches the city's forward-thinking identity.",
+    faqs: [
+      { question: "How can a managed AI chatbot service help my Coventry business grow?", answer: "Our managed AI chatbot service captures leads 24/7, handles customer enquiries instantly, and ensures your Coventry business never misses an opportunity." },
+      { question: "Is the AI chatbot for small business UK suitable for Coventry's automotive sector?", answer: "Yes. Our AI chatbot for small business UK handles product enquiries, booking requests, and captures leads for automotive businesses across Coventry." },
+      { question: "How much does the lead generation chatbot UK cost?", answer: "Our lead generation chatbot UK starts from just £29/month with no setup fees or contracts." },
+      { question: "Can the 24/7 customer support chatbot UK handle student enquiries?", answer: "Absolutely. Your 24/7 customer support chatbot UK handles high volumes efficiently during term time." },
+      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live." },
+      { question: "Is there a contract?", answer: "No contracts. Our managed AI chatbot service is month-to-month." }
+    ],
+    coordinates: { lat: 52.4068, lng: -1.5197 }
+  },
+  {
+    slug: "belfast",
+    city: "Belfast",
+    region: "Northern Ireland",
+    population: "640,000",
+    description: "Northern Ireland's capital, a thriving hub for tech, tourism, and creative industries.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73200!2d-5.9301!3d54.5973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4860fffdd7d08a3b%3A0x2e57162cefc7c531!2sBelfast!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Belfast — Managed AI Chatbot Service",
+    heroSubtext: "Get a managed AI chatbot for your Belfast business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Titanic Quarter to Cathedral Quarter—we handle everything.",
+    problems: [
+      { title: "Tourism Growth Demands", description: "Belfast's tourism boom (Titanic, Game of Thrones) creates surges that overwhelm small business teams." },
+      { title: "Cross-Border Customer Base", description: "Serving customers from both Northern Ireland and the Republic requires flexible, always-available communication." },
+      { title: "Tech Sector Competition", description: "Belfast's growing tech scene means businesses compete for talent and customers alike." },
+      { title: "Evening Economy Pressure", description: "Belfast's vibrant nightlife and dining scene means enquiries come at all hours." }
+    ],
+    solutions: [
+      { title: "Tourism-Ready AI", description: "Handle Titanic Quarter tourist surges and Game of Thrones fans without additional staff." },
+      { title: "Cross-Border Service", description: "Your AI serves customers from both sides of the border 24/7 with consistent excellence." },
+      { title: "Tech-Forward Service", description: "Show Belfast's tech community you mean business with instant, intelligent AI responses." },
+      { title: "All-Hours Coverage", description: "Capture every lead from Belfast's evening and weekend economy—your AI never sleeps." }
+    ],
+    whyChooseUs: [
+      "Supporting Belfast businesses across tourism, hospitality, tech, and property",
+      "AI trained for Northern Irish customer communication and market needs",
+      "Full deployment within 24 hours—no technical skills needed",
+      "Transparent pricing with no hidden fees",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Belfast City Centre", "Cathedral Quarter", "Titanic Quarter", "Queen's Quarter", "Botanic", "Stranmillis", "Ormeau", "East Belfast", "West Belfast", "North Belfast", "South Belfast", "Lisburn", "Bangor", "Holywood", "Newtownards"],
+    cityDescription: "Belfast has undergone a remarkable transformation, emerging as one of the UK's most exciting cities for business, tourism, and technology. From the world-famous Titanic Quarter to the buzzing Cathedral Quarter, Belfast combines rich heritage with forward-thinking innovation. AI Vized helps Belfast businesses capitalise on the city's growth with intelligent customer service that works around the clock.",
+    faqs: [
+      { question: "Can a managed AI chatbot service help my Belfast tourism business?", answer: "Absolutely. Our managed AI chatbot service handles tourist enquiries, booking requests, and local information 24/7—perfect for Belfast's booming tourism sector." },
+      { question: "Is the AI chatbot for small business UK suitable for Belfast hospitality?", answer: "Yes. Our AI chatbot for small business UK manages reservations, menu enquiries, and event bookings for Belfast's thriving restaurant and bar scene." },
+      { question: "How does the lead generation chatbot UK help Belfast property agents?", answer: "Your lead generation chatbot UK answers property questions, schedules viewings, and qualifies leads 24/7—essential for Belfast's competitive property market." },
+      { question: "Can the 24/7 customer support chatbot UK serve cross-border customers?", answer: "Yes. Your 24/7 customer support chatbot UK serves customers from Northern Ireland and the Republic with consistent, professional responses." },
+      { question: "How quickly can Belfast businesses get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live." },
+      { question: "Is there a long-term contract?", answer: "No. Our managed AI chatbot service runs month-to-month with no lock-in." }
+    ],
+    coordinates: { lat: 54.5973, lng: -5.9301 }
+  },
+  {
+    slug: "aberdeen",
+    city: "Aberdeen",
+    region: "Scotland",
+    population: "230,000",
+    description: "The Granite City—Scotland's energy capital with a diversifying economy and strong professional services sector.",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69500!2d-2.0943!3d57.1497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48840e55ce4bdb8d%3A0x3b8e24bde53d2ec4!2sAberdeen!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
+    heroTagline: "AI Chatbot Aberdeen — Lead Generation Chatbot",
+    heroSubtext: "Get a managed AI chatbot for your Aberdeen business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Union Street to the harbour—we handle everything.",
+    problems: [
+      { title: "Energy Sector Transitions", description: "Aberdeen businesses navigating the shift from oil & gas to renewables need efficient, cost-effective operations." },
+      { title: "Remote Working Challenges", description: "With many offshore and remote workers, businesses need 24/7 communication that doesn't depend on office hours." },
+      { title: "Seasonal Tourism Growth", description: "Growing tourism to Scotland's northeast creates new opportunities that require responsive service." },
+      { title: "Cost Management", description: "In a diversifying economy, managing operational costs is critical for Aberdeen businesses." }
+    ],
+    solutions: [
+      { title: "Lean Operations", description: "Cut customer service costs while improving quality—essential for businesses navigating industry transitions." },
+      { title: "Always Available", description: "Your AI responds to offshore workers, remote teams, and customers at any hour—no timezone limitations." },
+      { title: "Tourism-Ready", description: "Capture tourist enquiries and bookings 24/7 as Aberdeen's tourism sector continues to grow." },
+      { title: "Smart Cost Control", description: "Enterprise-quality customer service from just £29/month—smart spending for Aberdeen businesses." }
+    ],
+    whyChooseUs: [
+      "Supporting Aberdeen businesses across energy, hospitality, property, and professional services",
+      "AI trained for Scottish business communication and market needs",
+      "Full deployment within 24 hours—no disruption to operations",
+      "Transparent pricing with no hidden fees or contracts",
+      "GDPR compliant with UK-based support"
+    ],
+    serviceAreas: ["Aberdeen City Centre", "Union Street", "Old Aberdeen", "Rubislaw", "Rosemount", "Torry", "Dyce", "Bridge of Don", "Cove Bay", "Westhill", "Stonehaven", "Inverurie", "Ellon", "Peterhead", "Portlethen"],
+    cityDescription: "Aberdeen, the Granite City, has been Scotland's energy capital for decades and is now at the forefront of the UK's renewable energy transition. With a strong professional services sector, growing tourism industry, and resilient business community, Aberdeen companies are adapting and thriving. AI Vized helps Aberdeen businesses stay competitive with intelligent automation that delivers exceptional customer service at a fraction of traditional costs.",
+    faqs: [
+      { question: "How can a managed AI chatbot service help my Aberdeen business?", answer: "Our managed AI chatbot service captures leads 24/7, handles customer enquiries instantly, and works around the clock—perfect for Aberdeen's diverse business landscape." },
+      { question: "Is the AI chatbot for small business UK suitable for Aberdeen's energy sector?", answer: "Yes. Our AI chatbot for small business UK handles technical enquiries, quote requests, and client communication for energy and professional services businesses." },
+      { question: "How does the lead generation chatbot UK help Aberdeen property agents?", answer: "Your lead generation chatbot UK answers property questions, schedules viewings, and qualifies leads 24/7 in Aberdeen's competitive market." },
+      { question: "Can the 24/7 customer support chatbot UK handle offshore worker schedules?", answer: "Absolutely. Your 24/7 customer support chatbot UK responds at any hour, perfect for Aberdeen's workforce on varied shift patterns." },
+      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live on your Aberdeen business website." },
+      { question: "Is there a contract?", answer: "No contracts. Our managed AI chatbot service is month-to-month with no lock-in." }
+    ],
+    coordinates: { lat: 57.1497, lng: -2.0943 }
   }
 ];
 
