@@ -192,19 +192,36 @@
   }
 }
 
-/* Force Clerk component styles to prevent FOUC on refresh */
+/* Force Clerk component styles to prevent FOUC and remove shadows */
 .cl-card,
-.cl-rootBox .cl-card {
+.cl-rootBox .cl-card,
+.cl-signIn-root .cl-card,
+.cl-signUp-root .cl-card,
+.cl-rootBox,
+.cl-signIn-root,
+.cl-signUp-root {
   background: transparent !important;
   box-shadow: none !important;
   padding: 0 !important;
   border: none !important;
 }
 
+/* Remove all Clerk internal shadows */
+[class^="cl-"] {
+  box-shadow: none !important;
+}
+
+/* Keep intended shadows on specific elements */
+.cl-formButtonPrimary {
+  box-shadow: 0 4px 14px -4px hsl(263 84% 58% / 0.3) !important;
+}
+
 .cl-internal-b3fm6y,
 .cl-headerTitle,
 .cl-headerSubtitle,
 .cl-footer,
-.cl-footerAction {
+.cl-footerAction,
+.cl-footer__action,
+.cl-logoBox {
   display: none !important;
 }
