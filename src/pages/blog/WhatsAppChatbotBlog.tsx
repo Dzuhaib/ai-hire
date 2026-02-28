@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import whatsappHero from "@/assets/blog/whatsapp-chatbot-hero.png";
+import whatsappInline1 from "@/assets/blog/whatsapp-inline-1.png";
+import whatsappInline2 from "@/assets/blog/whatsapp-inline-2.png";
+import whatsappInline3 from "@/assets/blog/whatsapp-inline-3.png";
 
 const WhatsAppChatbotBlog = () => {
   const faqs = [
@@ -146,6 +150,9 @@ const WhatsAppChatbotBlog = () => {
             <p>
               When searching for an artificial intelligence personal assistant near you, it's essential to find a provider that understands your local market. UK businesses have unique needs—from handling enquiries in British English to understanding local business customs and operating hours.
             </p>
+
+            <BlogInlineImage src={whatsappInline1} alt="WhatsApp business messaging on smartphone in modern UK office" />
+
             <p>
               A WhatsApp chatbot acts as your personal AI assistant, available 24/7 to answer customer questions, capture leads, and even process simple transactions. Unlike generic solutions, locally-focused AI assistants are trained on UK-specific data, ensuring your customers receive relevant, contextually appropriate responses.
             </p>
@@ -162,6 +169,9 @@ const WhatsAppChatbotBlog = () => {
               <li>Seamless integration with local delivery and service providers</li>
               <li>Support for Manchester's diverse, multicultural customer base</li>
             </ul>
+
+            <BlogInlineImage src={whatsappInline2} alt="Manchester UK cityscape with modern tech business district" />
+
             <p>
               Leading AI service providers in Manchester understand the unique rhythm of the city's business landscape, from the bustling Northern Quarter independents to enterprise clients in Spinningfields.
             </p>
@@ -196,6 +206,9 @@ const WhatsAppChatbotBlog = () => {
             <p>
               Small businesses across the UK often feel left behind when it comes to AI adoption. The perception that AI is only for large enterprises with deep pockets is rapidly changing. Today, an AI chatbot for small business UK is not just accessible—it's affordable.
             </p>
+
+            <BlogInlineImage src={whatsappInline3} alt="Small business owner reviewing customer engagement analytics" />
+
             <p>
               From corner shops in London to boutique hotels in Edinburgh, small businesses are discovering that WhatsApp chatbots can:
             </p>

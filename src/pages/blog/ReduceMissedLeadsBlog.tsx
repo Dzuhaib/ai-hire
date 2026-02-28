@@ -11,7 +11,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/reduce-missed-leads-hero.png";
+import reduceInline1 from "@/assets/blog/reduce-leads-inline-1.png";
+import reduceInline2 from "@/assets/blog/reduce-leads-inline-2.png";
+import reduceInline3 from "@/assets/blog/reduce-leads-inline-3.png";
 
 const faqs = [
   {
@@ -123,6 +127,8 @@ const ReduceMissedLeadsBlog = () => {
               The reasons are straightforward. Contact forms feel impersonal. Phone lines are only open during business hours. And visitors who have a quick question simply don't want to wait until Monday morning for an answer. Every unanswered question is a lost opportunity.
             </p>
 
+            <BlogInlineImage src={reduceInline1} alt="Website analytics dashboard showing bounced visitors and missed leads" />
+
             <h2 id="why-it-happens">Why Traditional Lead Capture Fails</h2>
             <p>
               Traditional lead capture methods—contact forms, email addresses on your website, "call us" buttons—all rely on the visitor taking action. But modern consumers expect instant responses. If they don't get one, they move on to a competitor who does.
@@ -143,6 +149,8 @@ const ReduceMissedLeadsBlog = () => {
             <p>
               An AI chatbot sits on your website and engages every visitor the moment they arrive. It doesn't sleep, take breaks, or go on holiday. It asks the right questions, provides instant answers, and captures contact details—even at 3am on a bank holiday.
             </p>
+
+            <BlogInlineImage src={reduceInline2} alt="AI chatbot capturing customer contact details on website" />
 
             <div className="not-prose my-8 grid gap-4">
               {[
@@ -167,6 +175,8 @@ const ReduceMissedLeadsBlog = () => {
             <p>
               For a business spending £500 per month on Google Ads or SEO, capturing even 10 more leads per month from existing traffic can dramatically improve return on investment. The chatbot doesn't replace your marketing—it makes your existing marketing work harder.
             </p>
+
+            <BlogInlineImage src={reduceInline3} alt="Before and after comparison showing increase in captured leads" />
 
             <h2 id="getting-started">Five Steps to Stop Missing Leads Today</h2>
             <ol>

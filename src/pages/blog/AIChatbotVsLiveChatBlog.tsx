@@ -11,7 +11,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/ai-chatbot-vs-live-chat-hero.png";
+import vsInline1 from "@/assets/blog/vs-livechat-inline-1.png";
+import vsInline2 from "@/assets/blog/vs-livechat-inline-2.png";
+import vsInline3 from "@/assets/blog/vs-livechat-inline-3.png";
 
 const faqs = [
   {
@@ -123,6 +127,8 @@ const AIChatbotVsLiveChatBlog = () => {
               An AI chatbot like AIVized starts at <strong>£29 per month</strong>. It covers every hour of every day, handles unlimited conversations simultaneously, and never calls in sick. For a small business watching every penny, the maths speaks for itself.
             </p>
 
+            <BlogInlineImage src={vsInline1} alt="Split screen comparing AI chatbot and human live chat agent" />
+
             <h2 id="availability">Availability: The 24/7 Factor</h2>
             <p>
               This is where AI chatbots have an undeniable advantage. Over 40% of website enquiries happen outside standard business hours—evenings, weekends, and bank holidays. Live chat agents simply can't cover these hours without significant additional cost.
@@ -130,6 +136,8 @@ const AIChatbotVsLiveChatBlog = () => {
             <p>
               An AI chatbot doesn't have off-hours. Whether a customer lands on your website at 2pm or 2am, they get an instant response. For businesses in hospitality, property, and e-commerce—where customers shop around the clock—this constant availability directly translates to more captured leads.
             </p>
+
+            <BlogInlineImage src={vsInline2} alt="Clock showing 3am with glowing chat notification bubbles" />
 
             <h2 id="quality">Response Quality: Where Each Excels</h2>
             <p>
@@ -194,6 +202,8 @@ const AIChatbotVsLiveChatBlog = () => {
             <p>
               As your business grows, you can layer in human support for high-value interactions. But for most enquiries, an AI chatbot isn't just a cheaper alternative—it's a better one.
             </p>
+
+            <BlogInlineImage src={vsInline3} alt="Cost savings concept with reduced expenses on digital screens" />
 
             <div className="not-prose my-8 p-6 rounded-lg bg-primary/10 border border-primary/20">
               <h3 className="text-lg font-semibold mb-4">Quick Decision Guide</h3>

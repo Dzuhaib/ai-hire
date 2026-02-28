@@ -5,8 +5,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImage from "@/assets/blog/outsourced-chat-agents-hero.png";
+import outsourcedInline1 from "@/assets/blog/outsourced-inline-1.png";
+import outsourcedInline2 from "@/assets/blog/outsourced-inline-2.png";
+import outsourcedInline3 from "@/assets/blog/outsourced-inline-3.png";
 
 const OutsourcedChatAgentsBlog = () => {
   const faqs = [
@@ -146,6 +150,8 @@ const OutsourcedChatAgentsBlog = () => {
               The modern customer expects instant responses. Research shows that 79% of consumers prefer live chat because of the immediate answers it provides. For Birmingham businesses competing in today's market, having <strong>24/7 outsourced chat agents Birmingham</strong> isn't a luxury—it's a necessity.
             </p>
 
+            <BlogInlineImage src={outsourcedInline1} alt="24/7 customer support concept with clock and chat bubbles" />
+
             <div className="grid md:grid-cols-3 gap-6 my-8">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border">
                 <MessageSquare className="w-10 h-10 text-primary mb-4" />
@@ -174,6 +180,8 @@ const OutsourcedChatAgentsBlog = () => {
             <p className="text-muted-foreground mb-6">
               Imagine a system that can answer "What's the holiday policy?" at midnight, pre-qualify job applicants before they reach your recruiters, and schedule interviews automatically. That's the power of modern <strong>AI personal assistant Birmingham</strong> technology working for your HR department.
             </p>
+
+            <BlogInlineImage src={outsourcedInline2} alt="HR recruitment process with AI-powered candidate screening" />
 
             <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-8">
               <h3 className="font-semibold text-lg mb-4">HR Automation Benefits</h3>
@@ -213,6 +221,8 @@ const OutsourcedChatAgentsBlog = () => {
             <p className="text-muted-foreground mb-6">
               Starting from just £29 per month, solo entrepreneurs can access professional-grade customer engagement tools that qualify leads, answer FAQs, and book appointments—all while you focus on what you do best.
             </p>
+
+            <BlogInlineImage src={outsourcedInline3} alt="Solo entrepreneur working from modern home office with multiple screens" />
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               The Intelligent Personal Assistant Market in Birmingham
