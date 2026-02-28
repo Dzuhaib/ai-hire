@@ -186,7 +186,7 @@ const AIChatbotGuideBlog = () => {
               WhatsApp Chatbot UK: The Channel Your Customers Prefer
             </h2>
             <p className="text-muted-foreground mb-6">
-              With over 35 million active users in the UK, WhatsApp is where your customers already spend their time. A <strong>WhatsApp chatbot UK</strong> meets them there, providing instant responses in a channel they trust and use daily.
+              With over 35 million active users in the UK, WhatsApp is where your customers already spend their time. A <Link to="/blog/whatsapp-chatbot-uk-business" className="text-primary hover:underline"><strong>WhatsApp chatbot UK</strong></Link> meets them there, providing instant responses in a channel they trust and use daily.
             </p>
             <p className="text-muted-foreground mb-6">
               Unlike email (which averages 20% open rates) or phone calls (which 75% of millennials avoid entirely), WhatsApp messages achieve a staggering 98% open rate. For UK small businesses, this means your marketing messages, appointment reminders, and follow-ups are actually being read.
@@ -215,7 +215,7 @@ const AIChatbotGuideBlog = () => {
               AI Consulting Services Manchester: Expert Guidance for Your Chatbot Strategy
             </h2>
             <p className="text-muted-foreground mb-6">
-              Manchester has established itself as the UK's second tech city, and <strong>AI consulting services Manchester</strong> are at the forefront of helping businesses adopt intelligent automation. From the Northern Quarter's creative agencies to Spinningfields' financial firms, Manchester businesses are turning to AI consultants to map their customer journeys and identify automation opportunities.
+              <Link to="/locations/manchester" className="text-primary hover:underline">Manchester</Link> has established itself as the UK's second tech city, and <strong>AI consulting services Manchester</strong> are at the forefront of helping businesses adopt intelligent automation. From the Northern Quarter's creative agencies to Spinningfields' financial firms, Manchester businesses are turning to <Link to="/blog/ai-service-providers-uk" className="text-primary hover:underline">AI consultants</Link> to map their customer journeys and identify automation opportunities.
             </p>
             <p className="text-muted-foreground mb-6">
               A good AI consulting service doesn't just sell you technology—it understands your business first. What are your customers asking? Where are you losing leads? When do enquiries peak? These insights shape a chatbot strategy that delivers measurable results, not just a fancy widget on your website.
@@ -227,7 +227,7 @@ const AIChatbotGuideBlog = () => {
               AI Agency Leeds: Yorkshire's Growing AI Ecosystem
             </h2>
             <p className="text-muted-foreground mb-6">
-              Leeds is emerging as a significant player in the UK's AI landscape. An <strong>AI agency Leeds</strong> serves businesses across Yorkshire and beyond, providing chatbot solutions tailored to the region's diverse economy—from financial services in the city centre to manufacturing in the wider West Yorkshire area.
+              <Link to="/locations/leeds" className="text-primary hover:underline">Leeds</Link> is emerging as a significant player in the UK's AI landscape. An <strong>AI agency Leeds</strong> serves businesses across Yorkshire and beyond, providing chatbot solutions tailored to the region's diverse economy—from financial services in the city centre to manufacturing in the wider West Yorkshire area.
             </p>
             <p className="text-muted-foreground mb-6">
               What makes Leeds-focused AI services particularly effective is their understanding of the local market. Yorkshire businesses value straightforward communication and tangible results. The best AI agencies in Leeds deliver exactly that: no-nonsense chatbot solutions that start working from day one, with clear metrics showing the impact on lead generation and customer satisfaction.
@@ -237,7 +237,7 @@ const AIChatbotGuideBlog = () => {
               AI Service Providers Canary Wharf & Kensington: Premium Solutions for London
             </h2>
             <p className="text-muted-foreground mb-6">
-              London's business districts demand premium service, and <strong>AI service providers Canary Wharf</strong> and <strong>AI service providers Kensington United Kingdom</strong> deliver exactly that. From fintech startups in Canary Wharf's towers to luxury boutiques on Kensington High Street, London businesses require chatbot solutions that match their brand's sophistication.
+              <Link to="/locations/london" className="text-primary hover:underline">London's</Link> business districts demand premium service, and <strong>AI service providers Canary Wharf</strong> and <strong>AI service providers Kensington United Kingdom</strong> deliver exactly that. From fintech startups in Canary Wharf's towers to luxury boutiques on Kensington High Street, London businesses require chatbot solutions that match their brand's sophistication.
             </p>
             <p className="text-muted-foreground mb-6">
               For Canary Wharf's financial services sector, AI chatbots handle client onboarding queries, compliance documentation, and appointment scheduling with the precision and professionalism these firms require. In Kensington, AI assistants serve the luxury retail market with personalised product recommendations, VIP appointment booking, and multilingual support for the area's international clientele.

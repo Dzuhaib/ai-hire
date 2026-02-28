@@ -137,9 +137,9 @@ const ReduceMissedLeadsBlog = () => {
               Consider these common scenarios:
             </p>
             <ul>
-              <li>A potential customer visits your restaurant website at 9pm to ask about group booking availability. Your phone line is closed. They book elsewhere.</li>
-              <li>A homeowner browses your estate agency site on a Sunday afternoon, wondering about a property. No one responds until Monday. They've already contacted three other agents.</li>
-              <li>A shopper finds your e-commerce store but has a question about sizing. They can't find the answer quickly, so they abandon their basket.</li>
+              <li>A potential customer visits your <Link to="/industries/restaurant" className="text-primary hover:underline">restaurant</Link> website at 9pm to ask about group booking availability. Your phone line is closed. They book elsewhere.</li>
+              <li>A homeowner browses your <Link to="/industries/real-estate" className="text-primary hover:underline">estate agency</Link> site on a Sunday afternoon, wondering about a property. No one responds until Monday. They've already contacted three other agents.</li>
+              <li>A shopper finds your <Link to="/industries/ecommerce" className="text-primary hover:underline">e-commerce store</Link> but has a question about sizing. They can't find the answer quickly, so they abandon their basket.</li>
             </ul>
             <p>
               In each case, the business had the visitor's attention—and lost it because there was no way to respond in real time.
@@ -182,7 +182,7 @@ const ReduceMissedLeadsBlog = () => {
             <ol>
               <li><strong>Audit your current lead capture:</strong> Check how many website visitors actually convert. If it's below 3%, you're leaving money on the table.</li>
               <li><strong>Identify peak missed hours:</strong> Use analytics to find when visitors arrive but don't convert. Often it's evenings and weekends.</li>
-              <li><strong>Choose a managed AI chatbot:</strong> Don't waste time building your own. A managed service like AIVized handles everything for you.</li>
+              <li><strong>Choose a managed AI chatbot:</strong> Don't waste time building your own. A <Link to="/#how-it-works" className="text-primary hover:underline">managed service</Link> like AIVized handles everything for you.</li>
               <li><strong>Train it on your business:</strong> Share your FAQs, services, and common questions. We configure the chatbot to sound like your brand.</li>
               <li><strong>Review and optimise:</strong> Check captured leads weekly and refine the chatbot's responses for even better results.</li>
             </ol>
@@ -190,7 +190,7 @@ const ReduceMissedLeadsBlog = () => {
             <div className="not-prose my-8 p-6 rounded-lg bg-primary/10 border border-primary/20">
               <h3 className="text-lg font-semibold mb-4">The Bottom Line</h3>
               <p className="text-muted-foreground">
-                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings—24 hours a day, 7 days a week. Starting from just £29/month with AIVized, it's one of the highest-ROI investments a UK small business can make.
+                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings—24 hours a day, 7 days a week. Starting from just <Link to="/pricing" className="text-primary hover:underline">£29/month</Link> with AIVized, it's one of the highest-ROI investments a UK small business can make. Read our <Link to="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link> to learn more.
               </p>
             </div>
           </motion.div>

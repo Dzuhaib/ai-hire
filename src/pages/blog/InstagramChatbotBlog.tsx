@@ -109,7 +109,7 @@ const InstagramChatbotBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              Instagram has evolved from a photo-sharing app to a powerful business platform. With over 30 million UK users, it's where your customers discover, research, and connect with brands. But managing DMs, comments, and enquiries manually is time-consuming and often impossible to scale.
+              Instagram has evolved from a photo-sharing app to a powerful business platform. With over 30 million UK users, it's where your customers discover, research, and connect with brands. But managing DMs, comments, and enquiries manually is time-consuming and often impossible to scale. Learn how to <Link to="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">automate enquiries without losing the personal touch</Link>.
             </p>
 
             <h2 id="ai-service-providers-canary-wharf">AI Service Providers Canary Wharf</h2>
@@ -128,7 +128,7 @@ const InstagramChatbotBlog = () => {
             <p>Whether you're a fintech startup or an established professional services firm, Instagram automation can transform how you engage with your audience.</p>
 
             <h2 id="artificial-intelligence-personal-assistant-birmingham">Artificial Intelligence Personal Assistant Birmingham</h2>
-            <p>Birmingham's vibrant business scene spans everything from manufacturing to creative industries. An artificial intelligence personal assistant in Birmingham can manage your Instagram engagement while you focus on running your business.</p>
+            <p><Link to="/locations/birmingham" className="text-primary hover:underline">Birmingham's</Link> vibrant business scene spans everything from manufacturing to creative industries. An <Link to="/blog/ai-personal-assistant-near-me" className="text-primary hover:underline">artificial intelligence personal assistant</Link> in Birmingham can manage your Instagram engagement while you focus on running your business.</p>
 
             <BlogInlineImage src={instagramInline2} alt="London Canary Wharf financial district at dusk" />
 
@@ -153,9 +153,9 @@ const InstagramChatbotBlog = () => {
             <p>The concentration of AI service providers in Canary Wharf, United Kingdom reflects the demand for sophisticated business automation solutions. These providers specialise in:</p>
             <ul>
               <li><strong>Financial Services:</strong> Compliant chatbot solutions for regulated industries</li>
-              <li><strong>Professional Services:</strong> Lead qualification for law firms, accountants, and consultancies</li>
-              <li><strong>Real Estate:</strong> Property enquiry handling and viewing bookings</li>
-              <li><strong>Luxury Retail:</strong> VIP customer identification and priority service</li>
+              <li><strong><Link to="/industries/legal" className="text-primary hover:underline">Professional Services</Link>:</strong> Lead qualification for law firms, accountants, and consultancies</li>
+              <li><strong><Link to="/industries/real-estate" className="text-primary hover:underline">Real Estate</Link>:</strong> Property enquiry handling and viewing bookings</li>
+              <li><strong><Link to="/industries/ecommerce" className="text-primary hover:underline">Luxury Retail</Link>:</strong> VIP customer identification and priority service</li>
             </ul>
             <p>The expertise available in Canary Wharf ensures that businesses receive solutions tailored to their specific industry requirements and customer expectations.</p>
 
@@ -165,7 +165,7 @@ const InstagramChatbotBlog = () => {
             </div>
 
             <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
-            <p>Instagram chatbots aren't just for big brands. An AI chatbot for small business UK can level the playing field, allowing independents and SMEs to compete with larger competitors.</p>
+            <p>Instagram chatbots aren't just for big brands. An <Link to="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">AI chatbot for small business UK</Link> can level the playing field, allowing independents and SMEs to compete with larger competitors.</p>
 
             <BlogInlineImage src={instagramInline3} alt="Marketing team reviewing Instagram engagement analytics" />
 
