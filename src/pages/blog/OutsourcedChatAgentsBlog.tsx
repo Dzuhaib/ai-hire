@@ -140,7 +140,7 @@ const OutsourcedChatAgentsBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              Birmingham businesses are discovering the power of <strong>24/7 outsourced chat agents</strong> to handle customer enquiries around the clock. Whether you're running a growing SME or you're a solo entrepreneur, AI-powered virtual assistants are revolutionising how Midlands companies engage with customers and manage internal operations.
+              <Link to="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link> businesses are discovering the power of <strong>24/7 outsourced chat agents</strong> to handle customer enquiries around the clock. Whether you're running a growing SME or you're a solo entrepreneur, AI-powered virtual assistants are revolutionising how Midlands companies engage with customers and manage internal operations. See our <Link to="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">complete guide to AI chatbots for UK small businesses</Link>.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
@@ -219,7 +219,7 @@ const OutsourcedChatAgentsBlog = () => {
             </p>
             
             <p className="text-muted-foreground mb-6">
-              Starting from just £29 per month, solo entrepreneurs can access professional-grade customer engagement tools that qualify leads, answer FAQs, and book appointments—all while you focus on what you do best.
+              Starting from just <Link to="/pricing" className="text-primary hover:underline">£29 per month</Link>, solo entrepreneurs can access professional-grade customer engagement tools that qualify leads, answer FAQs, and book appointments—all while you focus on what you do best. Explore how AI chatbots help <Link to="/blog/reduce-missed-leads-website" className="text-primary hover:underline">reduce missed leads from your website</Link>.
             </p>
 
             <BlogInlineImage src={outsourcedInline3} alt="Solo entrepreneur working from modern home office with multiple screens" />

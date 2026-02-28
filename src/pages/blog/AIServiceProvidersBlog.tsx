@@ -147,7 +147,7 @@ const AIServiceProvidersBlog = () => {
               AI Service Providers Manchester United Kingdom
             </h2>
             <p className="text-muted-foreground mb-6">
-              Manchester has emerged as the UK's second city for AI innovation. <strong>AI service providers Manchester United Kingdom</strong> serve a diverse range of industries, from the city's thriving creative sector to established manufacturing and logistics businesses. The combination of world-class universities, a growing tech talent pool, and competitive operating costs makes Manchester an attractive base for AI companies.
+              <Link to="/locations/manchester" className="text-primary hover:underline">Manchester</Link> has emerged as the UK's second city for AI innovation. <strong>AI service providers Manchester United Kingdom</strong> serve a diverse range of <Link to="/industries" className="text-primary hover:underline">industries</Link>, from the city's thriving creative sector to established manufacturing and logistics businesses. The combination of world-class universities, a growing tech talent pool, and competitive operating costs makes Manchester an attractive base for AI companies.
             </p>
             
             <p className="text-muted-foreground mb-6">
@@ -219,7 +219,7 @@ const AIServiceProvidersBlog = () => {
               AI Agency Leeds: Yorkshire's Growing Tech Hub
             </h2>
             <p className="text-muted-foreground mb-6">
-              Leeds has rapidly established itself as a major UK tech hub, and the local <strong>AI agency Leeds</strong> ecosystem is thriving. With a strong presence of financial services, legal firms, and healthcare organisations, Leeds-based AI providers have developed expertise across multiple sectors.
+              <Link to="/locations/leeds" className="text-primary hover:underline">Leeds</Link> has rapidly established itself as a major UK tech hub, and the local <strong>AI agency Leeds</strong> ecosystem is thriving. With a strong presence of financial services, <Link to="/industries/legal" className="text-primary hover:underline">legal firms</Link>, and <Link to="/industries/healthcare" className="text-primary hover:underline">healthcare organisations</Link>, Leeds-based AI providers have developed expertise across multiple sectors.
             </p>
             
             <p className="text-muted-foreground mb-6">
@@ -236,7 +236,7 @@ const AIServiceProvidersBlog = () => {
             </p>
             
             <p className="text-muted-foreground mb-6">
-              With managed AI chatbot services starting from just £29 per month, small businesses across the UK can now access the same 24/7 customer engagement capabilities that were once reserved for companies with dedicated tech teams and substantial budgets.
+              With managed AI chatbot services starting from just <Link to="/pricing" className="text-primary hover:underline">£29 per month</Link>, small businesses across the UK can now access the same 24/7 customer engagement capabilities that were once reserved for companies with dedicated tech teams and substantial budgets. Learn how our <Link to="/#how-it-works" className="text-primary hover:underline">simple setup process</Link> works.
             </p>
 
             <div className="bg-secondary/50 border border-border rounded-xl p-6 my-8">

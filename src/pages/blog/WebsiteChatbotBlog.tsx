@@ -109,11 +109,11 @@ const WebsiteChatbotBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              Your website is often the first touchpoint potential customers have with your business. In an era where instant gratification is the norm, making visitors wait for answers can mean losing them forever. Website chatbots are transforming how UK businesses engage visitors and convert them into customers.
+              Your website is often the first touchpoint potential customers have with your business. In an era where instant gratification is the norm, making visitors wait for answers can mean losing them forever. Website chatbots are transforming how <Link to="/locations" className="text-primary hover:underline">UK businesses</Link> engage visitors and convert them into customers. See how chatbots help <Link to="/blog/reduce-missed-leads-website" className="text-primary hover:underline">reduce missed leads</Link>.
             </p>
 
             <h2 id="digital-assistant-services-birmingham">Digital Assistant Services Birmingham</h2>
-            <p>Birmingham, the UK's second-largest city, is home to over 40,000 businesses competing for customer attention. Digital assistant services in Birmingham have become essential for companies looking to stand out in this crowded marketplace.</p>
+            <p><Link to="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>, the UK's second-largest city, is home to over 40,000 businesses competing for customer attention. Digital assistant services in Birmingham have become essential for companies looking to stand out in this crowded marketplace.</p>
 
             <BlogInlineImage src={websiteInline1} alt="Website chatbot widget on laptop screen in modern office" />
 
@@ -128,7 +128,7 @@ const WebsiteChatbotBlog = () => {
             <p>For Birmingham businesses, this means never missing an opportunity—whether a customer visits your site at 3pm or 3am.</p>
 
             <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
-            <p>The perception that AI technology is only for large corporations is outdated. Today's AI chatbot for small business UK is designed with SMEs in mind—affordable, easy to implement, and requiring no technical expertise.</p>
+            <p>The perception that AI technology is only for large corporations is outdated. Today's <Link to="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">AI chatbot for small business UK</Link> is designed with SMEs in mind—affordable, easy to implement, and requiring no technical expertise.</p>
 
             <BlogInlineImage src={websiteInline2} alt="Birmingham UK city skyline at golden hour" />
 
@@ -147,7 +147,7 @@ const WebsiteChatbotBlog = () => {
             </div>
 
             <h2 id="ai-service-providers-kensington-united-kingdom">AI Service Providers Kensington United Kingdom</h2>
-            <p>Kensington represents one of London's most prestigious business districts, where client expectations are exceptionally high. AI service providers in Kensington, United Kingdom cater to luxury brands, professional services, and high-net-worth clientele.</p>
+            <p>Kensington represents one of <Link to="/locations/london" className="text-primary hover:underline">London's</Link> most prestigious business districts, where client expectations are exceptionally high. <Link to="/blog/ai-service-providers-uk" className="text-primary hover:underline">AI service providers</Link> in Kensington, United Kingdom cater to luxury brands, professional services, and high-net-worth clientele.</p>
             <p>Premium website chatbot solutions for Kensington businesses include:</p>
             <div className="not-prose my-8 grid gap-4">
               {[
@@ -180,7 +180,7 @@ const WebsiteChatbotBlog = () => {
             <p>This frees your HR team to focus on strategic initiatives while ensuring employees get immediate answers to routine questions.</p>
 
             <h2>Implementing a Website Chatbot</h2>
-            <p>Getting started with a website chatbot is simpler than you might think. With AIVized's managed service:</p>
+            <p>Getting started with a website chatbot is simpler than you might think. With AIVized's <Link to="/#how-it-works" className="text-primary hover:underline">managed service</Link>:</p>
             <ol>
               <li><strong>We Install Everything:</strong> A single line of code added to your website—we handle the rest</li>
               <li><strong>Custom Configuration:</strong> Your chatbot is tailored to your business, products, and tone of voice</li>

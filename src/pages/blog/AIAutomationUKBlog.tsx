@@ -144,7 +144,7 @@ const AIAutomationUKBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              The way UK businesses operate is changing. From Birmingham's bustling Bullring district to Manchester's thriving tech corridor, companies are embracing <strong>AI business automation</strong> to streamline operations, reduce costs, and deliver exceptional customer experiences around the clock. But what does automation actually look like for a small or mid-sized UK business? Let's break it down.
+              The way UK businesses operate is changing. From <Link to="/locations/birmingham" className="text-primary hover:underline">Birmingham's</Link> bustling Bullring district to <Link to="/locations/manchester" className="text-primary hover:underline">Manchester's</Link> thriving tech corridor, companies are embracing <strong>AI business automation</strong> to streamline operations, reduce costs, and deliver exceptional customer experiences around the clock. But what does automation actually look like for a small or mid-sized UK business? Let's break it down.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
@@ -154,7 +154,7 @@ const AIAutomationUKBlog = () => {
               When we talk about <strong>digital assistant services Birmingham</strong>, we're not referring to science fiction robots. We're talking about practical, affordable AI tools that handle the repetitive tasks draining your team's time and energy. From answering the same customer questions for the hundredth time to qualifying leads at 2am, digital assistants work tirelessly so your human team doesn't have to.
             </p>
             <p className="text-muted-foreground mb-6">
-              Birmingham has always been a city of industry and innovation. Today, that innovation extends to how local businesses engage with customers. Whether you run a restaurant in the Balti Triangle, a professional services firm in Colmore Row, or a retail shop in the Mailbox, <strong>digital assistant services</strong> can transform your customer engagement without requiring any technical expertise from your side.
+              Birmingham has always been a city of industry and innovation. Today, that innovation extends to how local businesses engage with customers. Whether you run a <Link to="/industries/restaurant" className="text-primary hover:underline">restaurant</Link> in the Balti Triangle, a professional services firm in Colmore Row, or a <Link to="/industries/ecommerce" className="text-primary hover:underline">retail shop</Link> in the Mailbox, <strong>digital assistant services</strong> can transform your customer engagement without requiring any technical expertise from your side.
             </p>
 
             <BlogInlineImage src={automationInline1} alt="Modern warehouse with robotic automation and AI workflow screens" />
@@ -236,7 +236,7 @@ const AIAutomationUKBlog = () => {
               Imagine you're a freelance consultant based in Birmingham's Innovation Campus. You're in a client meeting that runs over by an hour. During that time, three potential clients visit your website, send enquiries, and leave. Without automation, those leads are lost. With an AI virtual assistant, each enquiry receives an instant, personalised response, the leads are qualified, and meetings are booked into your calendar—all before you've left your current meeting.
             </p>
             <p className="text-muted-foreground mb-6">
-              Starting from just £29 per month, solo entrepreneurs get enterprise-level customer engagement without the enterprise-level price tag. No staff to manage, no software to maintain, no technical skills required.
+              Starting from just <Link to="/pricing" className="text-primary hover:underline">£29 per month</Link>, solo entrepreneurs get enterprise-level customer engagement without the enterprise-level price tag. No staff to manage, no software to maintain, no technical skills required. See how our <Link to="/#how-it-works" className="text-primary hover:underline">simple setup process</Link> works.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">

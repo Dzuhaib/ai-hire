@@ -178,7 +178,7 @@ const AIPersonalAssistantBlog = () => {
               Artificial Intelligence Personal Assistant Birmingham
             </h2>
             <p className="text-muted-foreground mb-6">
-              Birmingham businesses are embracing AI at a remarkable pace. An <strong>artificial intelligence personal assistant Birmingham</strong> helps local companies—from Bullring retailers to professional services in Colmore Row—deliver exceptional customer experiences without expanding their teams.
+              <Link to="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link> businesses are embracing AI at a remarkable pace. An <strong>artificial intelligence personal assistant Birmingham</strong> helps local companies—from Bullring retailers to <Link to="/industries/legal" className="text-primary hover:underline">professional services</Link> in Colmore Row—deliver exceptional customer experiences without expanding their teams.
             </p>
             
             <p className="text-muted-foreground mb-6">
@@ -206,7 +206,7 @@ const AIPersonalAssistantBlog = () => {
               AI Personal Assistant Edinburgh: Scotland's Digital Transformation
             </h2>
             <p className="text-muted-foreground mb-6">
-              Edinburgh's diverse economy—spanning finance, tourism, technology, and creative industries—creates unique opportunities for AI adoption. An <strong>AI personal assistant Edinburgh</strong> helps businesses across Scotland's capital deliver world-class customer service around the clock.
+              <Link to="/locations/edinburgh" className="text-primary hover:underline">Edinburgh's</Link> diverse economy—spanning finance, <Link to="/industries/travel" className="text-primary hover:underline">tourism</Link>, technology, and creative industries—creates unique opportunities for AI adoption. An <strong>AI personal assistant Edinburgh</strong> helps businesses across Scotland's capital deliver world-class customer service around the clock.
             </p>
 
             <BlogInlineImage src={personalInline2} alt="Edinburgh Scotland skyline with castle at sunset" />
@@ -219,7 +219,7 @@ const AIPersonalAssistantBlog = () => {
               WhatsApp Chatbot UK: Meeting Customers Where They Are
             </h2>
             <p className="text-muted-foreground mb-6">
-              With over 70% of UK adults using WhatsApp regularly, a <strong>WhatsApp chatbot UK</strong> solution puts your business in your customers' most-used messaging app. Instead of forcing customers to visit your website or call during office hours, they can get instant answers through a platform they already trust.
+              With over 70% of UK adults using WhatsApp regularly, a <Link to="/blog/whatsapp-chatbot-uk-business" className="text-primary hover:underline"><strong>WhatsApp chatbot UK</strong></Link> solution puts your business in your customers' most-used messaging app. Instead of forcing customers to visit your website or call during office hours, they can get instant answers through a platform they already trust.
             </p>
             
             <p className="text-muted-foreground mb-6">
@@ -258,7 +258,7 @@ const AIPersonalAssistantBlog = () => {
             </p>
             
             <p className="text-muted-foreground mb-6">
-              With plans starting from £29 per month, UK businesses of all sizes can now access enterprise-grade AI assistants. Whether you're a solo consultant in Birmingham or a growing company in Edinburgh, there's a solution that fits your needs and budget.
+              With plans starting from <Link to="/pricing" className="text-primary hover:underline">£29 per month</Link>, UK businesses of all sizes can now access enterprise-grade AI assistants. Whether you're a solo consultant in Birmingham or a growing company in Edinburgh, there's a solution that fits your needs and budget.
             </p>
 
             {/* FAQ Section */}

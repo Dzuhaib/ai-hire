@@ -124,7 +124,7 @@ const AIChatbotVsLiveChatBlog = () => {
               Let's start with the numbers, because for a small business, cost matters. A full-time live chat agent in the UK costs between <strong>£1,800 and £2,500 per month</strong>. That's just for one person covering standard office hours. Want 24/7 coverage? You'll need at least three agents, pushing costs above £5,000 monthly.
             </p>
             <p>
-              An AI chatbot like AIVized starts at <strong>£29 per month</strong>. It covers every hour of every day, handles unlimited conversations simultaneously, and never calls in sick. For a small business watching every penny, the maths speaks for itself.
+              An AI chatbot like AIVized starts at <Link to="/pricing" className="text-primary hover:underline"><strong>£29 per month</strong></Link>. It covers every hour of every day, handles unlimited conversations simultaneously, and never calls in sick. For a small business watching every penny, the maths speaks for itself.
             </p>
 
             <BlogInlineImage src={vsInline1} alt="Split screen comparing AI chatbot and human live chat agent" />
@@ -134,7 +134,7 @@ const AIChatbotVsLiveChatBlog = () => {
               This is where AI chatbots have an undeniable advantage. Over 40% of website enquiries happen outside standard business hours—evenings, weekends, and bank holidays. Live chat agents simply can't cover these hours without significant additional cost.
             </p>
             <p>
-              An AI chatbot doesn't have off-hours. Whether a customer lands on your website at 2pm or 2am, they get an instant response. For businesses in hospitality, property, and e-commerce—where customers shop around the clock—this constant availability directly translates to more captured leads.
+              An AI chatbot doesn't have off-hours. Whether a customer lands on your website at 2pm or 2am, they get an instant response. For businesses in <Link to="/industries/restaurant" className="text-primary hover:underline">hospitality</Link>, <Link to="/industries/real-estate" className="text-primary hover:underline">property</Link>, and <Link to="/industries/ecommerce" className="text-primary hover:underline">e-commerce</Link>—where customers shop around the clock—this constant availability directly translates to more captured leads.
             </p>
 
             <BlogInlineImage src={vsInline2} alt="Clock showing 3am with glowing chat notification bubbles" />
@@ -197,7 +197,7 @@ const AIChatbotVsLiveChatBlog = () => {
 
             <h2 id="verdict">The Verdict for UK Small Businesses</h2>
             <p>
-              If you're a small business with limited budget and no existing customer support team, <strong>start with an AI chatbot</strong>. It gives you instant 24/7 coverage, captures leads you're currently missing, and costs less than a single day of a live chat agent's salary.
+              If you're a small business with limited budget and no existing customer support team, <strong>start with an AI chatbot</strong>. It gives you instant 24/7 coverage, captures <Link to="/blog/reduce-missed-leads-website" className="text-primary hover:underline">leads you're currently missing</Link>, and costs less than a single day of a live chat agent's salary. Read our <Link to="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">complete guide</Link> to get started.
             </p>
             <p>
               As your business grows, you can layer in human support for high-value interactions. But for most enquiries, an AI chatbot isn't just a cheaper alternative—it's a better one.
