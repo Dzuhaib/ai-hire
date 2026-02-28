@@ -6,7 +6,11 @@ import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/ai-automation-uk-hero.png";
+import automationInline1 from "@/assets/blog/ai-automation-inline-1.png";
+import automationInline2 from "@/assets/blog/ai-automation-inline-2.png";
+import automationInline3 from "@/assets/blog/ai-automation-inline-3.png";
 
 const AIAutomationUKBlog = () => {
   const faqs = [
@@ -153,6 +157,8 @@ const AIAutomationUKBlog = () => {
               Birmingham has always been a city of industry and innovation. Today, that innovation extends to how local businesses engage with customers. Whether you run a restaurant in the Balti Triangle, a professional services firm in Colmore Row, or a retail shop in the Mailbox, <strong>digital assistant services</strong> can transform your customer engagement without requiring any technical expertise from your side.
             </p>
 
+            <BlogInlineImage src={automationInline1} alt="Modern warehouse with robotic automation and AI workflow screens" />
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 my-8 not-prose">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border text-center">
                 <Zap className="w-10 h-10 text-primary mx-auto mb-4" />
@@ -214,6 +220,8 @@ const AIAutomationUKBlog = () => {
             <p className="text-muted-foreground mb-6">
               <strong>Tech virtual assistant services Birmingham</strong> are particularly valuable for managed service providers (MSPs), SaaS companies, and businesses with remote workforces. When your developer can't access their environment at 11pm before a deadline, an AI assistant can walk them through the solution in minutes rather than hours.
             </p>
+
+            <BlogInlineImage src={automationInline2} alt="IT support helpdesk with AI chatbot interface on multiple monitors" />
             <p className="text-muted-foreground mb-6">
               The beauty of these systems is their learning capability. Every interaction makes them smarter. Over time, your <strong>technical virtual assistant</strong> builds a comprehensive knowledge base specific to your systems, reducing resolution times and improving first-contact fix rates.
             </p>
@@ -243,6 +251,8 @@ const AIAutomationUKBlog = () => {
             <p className="text-muted-foreground mb-6">
               Local businesses from Edgbaston to Erdington are discovering that AI automation doesn't just save money—it generates revenue. By capturing leads outside business hours, qualifying prospects automatically, and providing instant customer support, these intelligent systems pay for themselves many times over.
             </p>
+
+            <BlogInlineImage src={automationInline3} alt="Business growth chart showing rising trend with celebrating entrepreneur" />
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               Getting Started with AI Business Automation

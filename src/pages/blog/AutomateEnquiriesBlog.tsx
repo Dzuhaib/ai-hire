@@ -11,7 +11,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/automate-enquiries-personal-touch-hero.png";
+import automateInline1 from "@/assets/blog/automate-enquiries-inline-1.png";
+import automateInline2 from "@/assets/blog/automate-enquiries-inline-2.png";
+import automateInline3 from "@/assets/blog/automate-enquiries-inline-3.png";
 
 const faqs = [
   {
@@ -123,6 +127,8 @@ const AutomateEnquiriesBlog = () => {
               But those bad experiences come from poorly implemented automation, not from automation itself. Done right, an AI chatbot can make customers feel heard, helped, and valued—often faster than a human team can manage during busy periods.
             </p>
 
+            <BlogInlineImage src={automateInline1} alt="Customer smiling while receiving personalized chatbot response" />
+
             <h2 id="the-reality">The Reality: Good Automation Feels Personal</h2>
             <p>
               Think about it from the customer's perspective. They land on your website with a question. What feels more personal:
@@ -185,6 +191,8 @@ const AutomateEnquiriesBlog = () => {
             <p>
               After installing an AIVized chatbot, every visitor gets an instant response. The chatbot asks what type of property they're looking for, their budget range, and preferred areas—then sends the qualified lead directly to the agent's WhatsApp. The agent follows up personally within minutes, armed with all the context.
             </p>
+
+            <BlogInlineImage src={automateInline2} alt="Estate agent office with AI chatbot handling property enquiries" />
             <p>
               The result? <strong>35% more captured leads</strong> and customers consistently comment on how quick and helpful the service feels. That's automation with a personal touch.
             </p>
@@ -193,6 +201,8 @@ const AutomateEnquiriesBlog = () => {
             <p>
               Automating customer enquiries doesn't mean removing the human element—it means adding speed and consistency while preserving warmth. With a managed AI chatbot from AIVized, you get both: instant 24/7 responses that reflect your brand, with seamless escalation to your team for the conversations that need a human touch.
             </p>
+
+            <BlogInlineImage src={automateInline3} alt="Customers receiving quick helpful responses on mobile phones" />
 
             <div className="not-prose my-8 p-6 rounded-lg bg-primary/10 border border-primary/20">
               <h3 className="text-lg font-semibold mb-4">The Key Takeaway</h3>

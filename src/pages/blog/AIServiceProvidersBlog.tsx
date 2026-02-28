@@ -5,8 +5,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImage from "@/assets/blog/ai-service-providers-hero.png";
+import providersInline1 from "@/assets/blog/ai-providers-inline-1.png";
+import providersInline2 from "@/assets/blog/ai-providers-inline-2.png";
+import providersInline3 from "@/assets/blog/ai-providers-inline-3.png";
 
 const AIServiceProvidersBlog = () => {
   const faqs = [
@@ -150,6 +154,8 @@ const AIServiceProvidersBlog = () => {
               When evaluating <strong>AI consulting services Manchester</strong>, look for providers who understand the specific challenges of Northern businesses—whether that's integrating with legacy systems, handling high-volume customer enquiries, or scaling operations across the North West region.
             </p>
 
+            <BlogInlineImage src={providersInline1} alt="UK business hub skyline with AI digital network overlay" />
+
             <div className="grid md:grid-cols-3 gap-6 my-8">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border">
                 <Building2 className="w-10 h-10 text-primary mb-4" />
@@ -202,6 +208,8 @@ const AIServiceProvidersBlog = () => {
             <p className="text-muted-foreground mb-6">
               <strong>AI service providers Kensington United Kingdom</strong> cater to a premium market including luxury retail, high-end property, and private client services. These providers excel at creating sophisticated conversational experiences that match the elevated expectations of affluent customers.
             </p>
+
+            <BlogInlineImage src={providersInline2} alt="Kensington London luxury high street with premium boutiques" />
             
             <p className="text-muted-foreground mb-6">
               From Chelsea boutiques to Notting Hill estate agents, Kensington-area AI providers understand that every interaction must reflect brand prestige. Solutions often include multilingual capabilities to serve international clients and integration with concierge-style services.
@@ -217,6 +225,8 @@ const AIServiceProvidersBlog = () => {
             <p className="text-muted-foreground mb-6">
               Yorkshire businesses benefit from working with local AI partners who understand the region's economic landscape, offer competitive pricing compared to London-based alternatives, and can provide hands-on support when needed.
             </p>
+
+            <BlogInlineImage src={providersInline3} alt="Leeds UK city center with modern financial buildings" />
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               AI Chatbot for Small Business UK: Affordable Solutions

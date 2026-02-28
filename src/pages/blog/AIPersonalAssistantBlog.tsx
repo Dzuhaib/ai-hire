@@ -6,7 +6,11 @@ import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/ai-personal-assistant-hero.png";
+import personalInline1 from "@/assets/blog/ai-personal-inline-1.png";
+import personalInline2 from "@/assets/blog/ai-personal-inline-2.png";
+import personalInline3 from "@/assets/blog/ai-personal-inline-3.png";
 
 const AIPersonalAssistantBlog = () => {
   const faqs = [
@@ -150,6 +154,8 @@ const AIPersonalAssistantBlog = () => {
               Unlike traditional chatbots that feel robotic and frustrating, today's AI personal assistants hold natural conversations, remember context, and can handle complex multi-step requests. Whether a customer is asking about your services at 2am or during your busiest hours, they receive the same high-quality interaction.
             </p>
 
+            <BlogInlineImage src={personalInline1} alt="Person using AI personal assistant on tablet in modern café" />
+
             <div className="grid md:grid-cols-3 gap-6 my-8">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border">
                 <Smartphone className="w-10 h-10 text-primary mb-4" />
@@ -202,6 +208,8 @@ const AIPersonalAssistantBlog = () => {
             <p className="text-muted-foreground mb-6">
               Edinburgh's diverse economy—spanning finance, tourism, technology, and creative industries—creates unique opportunities for AI adoption. An <strong>AI personal assistant Edinburgh</strong> helps businesses across Scotland's capital deliver world-class customer service around the clock.
             </p>
+
+            <BlogInlineImage src={personalInline2} alt="Edinburgh Scotland skyline with castle at sunset" />
             
             <p className="text-muted-foreground mb-6">
               For HR departments in particular, an <strong>AI virtual assistant for HR Edinburgh</strong> automates recruitment processes, answers employee queries, and ensures consistent policy communication. Scottish businesses benefit from AI that understands UK employment law while respecting Scotland's distinct business culture.
@@ -217,6 +225,8 @@ const AIPersonalAssistantBlog = () => {
             <p className="text-muted-foreground mb-6">
               WhatsApp chatbots are particularly effective for appointment-based businesses, e-commerce, and any company that wants to provide quick, convenient customer support. The familiar interface means customers engage more readily than they might with traditional website chat.
             </p>
+
+            <BlogInlineImage src={personalInline3} alt="WhatsApp business chat interface with green messaging bubbles" />
 
             <div className="bg-secondary/50 border border-border rounded-xl p-6 my-8">
               <h3 className="font-semibold text-lg mb-4">WhatsApp Chatbot Benefits</h3>

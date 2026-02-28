@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import {
   Accordion,
   AccordionContent,
@@ -26,6 +27,9 @@ import aiGlasgow from "@/assets/locations/ai-glasgow.png";
 import aiEdinburgh from "@/assets/locations/ai-edinburgh.png";
 import aiSheffield from "@/assets/locations/ai-sheffield.png";
 import aiNewcastle from "@/assets/locations/ai-newcastle.png";
+import cityInline1 from "@/assets/blog/city-chatbot-inline-1.png";
+import cityInline2 from "@/assets/blog/city-chatbot-inline-2.png";
+import cityInline3 from "@/assets/blog/city-chatbot-inline-3.png";
 
 const cityHeroImages: Record<string, string> = {
   london: aiLondon,
@@ -164,10 +168,14 @@ const CityWebsiteChatbotBlog = () => {
             </h2>
             <p>{data.whyNeed}</p>
 
+            <BlogInlineImage src={cityInline1} alt={`UK high street businesses using AI chatbot technology in ${data.city}`} />
+
             <h2 id="how-it-works">
               How Our Managed Website Chatbot Works in {data.city}
             </h2>
             <p>{data.howItWorks}</p>
+
+            <BlogInlineImage src={cityInline2} alt={`Website chatbot greeting visitors and capturing enquiries for ${data.city} business`} />
 
             <h2 id="benefits">
               Key Benefits for {data.city} Businesses
@@ -185,6 +193,8 @@ const CityWebsiteChatbotBlog = () => {
               Industries We Serve in {data.city}
             </h2>
             <p>{data.industries}</p>
+
+            <BlogInlineImage src={cityInline3} alt={`Happy small business owner in ${data.city} using AI chatbot for leads`} />
             <ul>
               {data.industryExamples.map((example, index) => (
                 <li key={index}>{example}</li>

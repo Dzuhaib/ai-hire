@@ -6,7 +6,11 @@ import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
 import { RelatedPagesSection } from "@/components/RelatedPagesSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/ai-chatbot-guide-hero.png";
+import guideInline1 from "@/assets/blog/ai-guide-inline-1.png";
+import guideInline2 from "@/assets/blog/ai-guide-inline-2.png";
+import guideInline3 from "@/assets/blog/ai-guide-inline-3.png";
 
 const AIChatbotGuideBlog = () => {
   const faqs = [
@@ -153,6 +157,8 @@ const AIChatbotGuideBlog = () => {
               An <strong>AI chatbot for small business UK</strong> bridges that gap. It doesn't take lunch breaks, doesn't call in sick, and doesn't need training for months before becoming productive. From the moment it's deployed, it's answering questions, capturing leads, and representing your brand—consistently, professionally, and around the clock.
             </p>
 
+            <BlogInlineImage src={guideInline1} alt="Multi-channel chatbot on website, WhatsApp and social media devices" />
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 my-8 not-prose">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border text-center">
                 <MessageCircle className="w-10 h-10 text-primary mx-auto mb-4" />
@@ -215,6 +221,8 @@ const AIChatbotGuideBlog = () => {
               A good AI consulting service doesn't just sell you technology—it understands your business first. What are your customers asking? Where are you losing leads? When do enquiries peak? These insights shape a chatbot strategy that delivers measurable results, not just a fancy widget on your website.
             </p>
 
+            <BlogInlineImage src={guideInline2} alt="Business consultant explaining AI strategy on whiteboard" />
+
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               AI Agency Leeds: Yorkshire's Growing AI Ecosystem
             </h2>
@@ -244,6 +252,8 @@ const AIChatbotGuideBlog = () => {
             <p className="text-muted-foreground mb-6">
               Not all chatbot solutions are created equal. Here's what to look for when choosing an <strong>AI chatbot for small business UK</strong>:
             </p>
+
+            <BlogInlineImage src={guideInline3} alt="Pricing comparison interface on laptop showing chatbot plans" />
             <ol className="text-muted-foreground space-y-3 mb-6">
               <li><strong>1. Managed vs. DIY:</strong> Managed services like AIVized handle everything, while DIY builders require your time and technical knowledge. For most small businesses, managed is the better investment.</li>
               <li><strong>2. Multi-channel support:</strong> Your chatbot should work across WhatsApp, your website, and social media—not just one platform.</li>
