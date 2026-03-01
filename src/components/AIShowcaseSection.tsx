@@ -1,95 +1,53 @@
-import { motion } from "framer-motion";
 import { Bot, MessageCircle, Users } from "lucide-react";
-import { OptimizedVideo } from "@/components/OptimizedVideo";
-import aiAssistantVideo from "@/assets/ai-assistant-talking.mp4";
+import aiShowcaseHero from "@/assets/ai-showcase-hero.png";
 
 export const AIShowcaseSection = () => {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
       <div className="container-narrow relative z-10">
         <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6"
-          >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Bot className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Meet Your AI Colleague</span>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
-              Hire Your <span className="text-gradient">AI Colleague Today</span>
-            </h2>
-          
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Your fully managed AI chatbot engages with customers naturally, answering questions and capturing leads 24/7. We install and handle everything—no technical skills needed.
-            </p>
-          </motion.div>
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
+            Hire Your <span className="text-gradient">AI Colleague Today</span>
+          </h2>
+        
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Your fully managed AI chatbot engages with customers naturally, answering questions and capturing leads 24/7. We install and handle everything—no technical skills needed.
+          </p>
         </div>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative max-w-4xl mx-auto"
-        >
-          {/* Video container - simplified for performance */}
+        <div className="relative max-w-4xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-card/50 shadow-xl">
             <div className="relative rounded-3xl overflow-hidden">
-              <OptimizedVideo
-                src={aiAssistantVideo}
-                className="w-full aspect-video"
+              <img
+                src={aiShowcaseHero}
+                alt="AI chatbot assistant on laptop screen engaging with customers"
+                className="w-full aspect-video object-cover"
+                loading="lazy"
               />
               
-              {/* Overlay gradient for better text visibility */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
               
-              {/* Floating chat bubbles */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute bottom-8 left-8 flex items-center gap-3 px-4 py-3 rounded-2xl bg-card/90 backdrop-blur-sm border border-primary/20 shadow-lg"
-              >
+              <div className="absolute bottom-8 left-8 flex items-center gap-3 px-4 py-3 rounded-2xl bg-card/90 backdrop-blur-sm border border-primary/20 shadow-lg">
                 <MessageCircle className="w-5 h-5 text-primary" />
                 <span className="text-sm font-medium">"Hi! How can I help you today?"</span>
-              </motion.div>
+              </div>
               
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                className="absolute bottom-8 right-8 flex items-center gap-2 px-3 py-2 rounded-xl bg-primary/20 backdrop-blur-sm border border-primary/30"
-              >
+              <div className="absolute bottom-8 right-8 flex items-center gap-2 px-3 py-2 rounded-xl bg-primary/20 backdrop-blur-sm border border-primary/30">
                 <Users className="w-4 h-4 text-primary" />
                 <span className="text-xs font-medium text-primary">24/7 Available</span>
-              </motion.div>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
         
-        {/* Feature highlights below video */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
           {[
             { label: "Instant Responses", desc: "No waiting, no delays" },
             { label: "Natural Conversation", desc: "Feels like talking to a human" },
@@ -101,7 +59,7 @@ export const AIShowcaseSection = () => {
               <p className="text-sm text-muted-foreground">{item.desc}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

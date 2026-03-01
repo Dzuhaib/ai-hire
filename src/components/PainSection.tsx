@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import painHero from "@/assets/pain-section-hero.png";
 
@@ -14,13 +13,7 @@ export const PainSection = () => {
       <div className="container-narrow">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="relative order-2 lg:order-1"
-          >
+          <div className="relative order-2 lg:order-1">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-destructive/15 via-transparent to-primary/15 rounded-3xl blur-2xl opacity-50" />
               <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-xl">
@@ -36,55 +29,28 @@ export const PainSection = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Text Column */}
           <div className="order-1 lg:order-2">
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-sm uppercase tracking-[0.2em] text-primary/70 mb-6"
-            >
-              The Problem
-            </motion.p>
+            <p className="text-sm uppercase tracking-[0.2em] text-primary/70 mb-6">The Problem</p>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-10"
-            >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-10">
               UK Small Businesses <span className="text-gradient">Lose Leads</span> Every Day
-            </motion.h2>
+            </h2>
 
             <div className="space-y-6">
               {painPoints.map((point, index) => (
-                <motion.p
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  className="text-xl md:text-2xl font-serif text-muted-foreground leading-relaxed"
-                >
+                <p key={index} className="text-xl md:text-2xl font-serif text-muted-foreground leading-relaxed">
                   {point}
-                </motion.p>
+                </p>
               ))}
             </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-8 text-lg text-muted-foreground"
-            >
+            <p className="mt-8 text-lg text-muted-foreground">
               That's why businesses across <Link to="/locations" className="text-primary hover:underline">UK cities</Link> trust our{" "}
               <Link to="/industries" className="text-primary hover:underline">managed AI chatbot</Link> to capture leads 24/7.
-            </motion.p>
+            </p>
           </div>
         </div>
       </div>
