@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CreditCard, Share2, Rocket, ArrowRight, Sparkles } from "lucide-react";
 import howItWorksHero from "@/assets/how-it-works-hero.png";
@@ -39,7 +38,6 @@ const steps = [
 export const HowItWorksSection = () => {
   return (
     <section id="how-it-works" className="section-padding relative overflow-hidden">
-      {/* Aura background */}
       <div className="absolute inset-0 bg-aura bg-aura-animate" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background pointer-events-none" />
 
@@ -47,46 +45,22 @@ export const HowItWorksSection = () => {
         {/* Section Header with Image */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Simple Process</span>
-            </motion.div>
+            </div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
-            >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6">
               How We Install Your{" "}
               <span className="text-gradient">Managed AI Chatbot</span>
-            </motion.h2>
+            </h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg text-muted-foreground"
-            >
+            <p className="text-lg text-muted-foreground">
               Get started today and we install everything for you. No technical skills required—fully managed from day one.
-            </motion.p>
+            </p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-3xl blur-2xl opacity-50" />
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
@@ -103,32 +77,18 @@ export const HowItWorksSection = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Steps Grid */}
         <div className="relative">
-          {/* Connecting line for desktop */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 -translate-y-1/2 h-px">
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
-              className="w-full h-full bg-gradient-to-r from-transparent via-border to-transparent origin-left"
-            />
+            <div className="w-full h-full bg-gradient-to-r from-transparent via-border to-transparent" />
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
             {steps.map((step, index) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-                className="relative group"
-              >
+              <div key={step.number} className="relative group">
                 <div className="relative h-full">
                   <div className={`absolute -inset-px rounded-2xl bg-gradient-to-b ${step.borderGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                   
@@ -137,12 +97,9 @@ export const HowItWorksSection = () => {
                     
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-6">
-                        <motion.div
-                          whileHover={{ scale: 1.05 }}
-                          className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.gradient} border border-border/50 flex items-center justify-center group-hover:shadow-lg transition-all duration-300`}
-                        >
+                        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.gradient} border border-border/50 flex items-center justify-center group-hover:shadow-lg transition-all duration-300`}>
                           <step.icon className={`w-6 h-6 ${step.iconColor}`} />
-                        </motion.div>
+                        </div>
                         
                         <span className="text-6xl font-serif font-bold text-foreground/5 group-hover:text-foreground/10 transition-colors duration-300">
                           {step.number}
@@ -161,15 +118,9 @@ export const HowItWorksSection = () => {
 
                       {index < steps.length - 1 && (
                         <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 translate-x-full z-20">
-                          <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: 0.6 + index * 0.2 }}
-                            className="w-8 h-8 rounded-full bg-background border border-border flex items-center justify-center shadow-lg"
-                          >
+                          <div className="w-8 h-8 rounded-full bg-background border border-border flex items-center justify-center shadow-lg">
                             <ArrowRight className="w-4 h-4 text-primary" />
-                          </motion.div>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -178,28 +129,16 @@ export const HowItWorksSection = () => {
 
                 {index < steps.length - 1 && (
                   <div className="lg:hidden flex justify-center py-4">
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      whileInView={{ opacity: 1, height: 32 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                      className="w-px bg-gradient-to-b from-border to-transparent"
-                    />
+                    <div className="w-px h-8 bg-gradient-to-b from-border to-transparent" />
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
+        <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-secondary/50 border border-border/50">
             <div className="flex -space-x-2">
               {[...Array(3)].map((_, i) => (
@@ -215,7 +154,7 @@ export const HowItWorksSection = () => {
               <span className="text-foreground font-medium">500+</span> businesses already automated
             </span>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
