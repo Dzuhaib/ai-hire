@@ -39,26 +39,30 @@ export function PageMeta({
 }: PageMetaProps) {
   useEffect(() => {
     const scriptId = "page-structured-data";
+
+    // Remove any existing script first to prevent duplicates during SPA transitions
     const existingScript = document.getElementById(scriptId);
+    if (existingScript) {
+      existingScript.remove();
+    }
 
     if (!schema) {
-      if (existingScript) {
-        existingScript.remove();
-      }
       return;
     }
 
-    const script = existingScript instanceof HTMLScriptElement
-      ? existingScript
-      : document.createElement("script");
-
+    const script = document.createElement("script");
     script.id = scriptId;
     script.type = "application/ld+json";
     script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
 
-    if (!existingScript) {
-      document.head.appendChild(script);
-    }
+    // Cleanup: remove script when component unmounts (page navigation)
+    return () => {
+      const scriptToRemove = document.getElementById(scriptId);
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
   }, [schema]);
 
   return (
