@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowLeft, CheckCircle2, Building2, TrendingUp, Globe 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { BlogInlineImage } from "@/components/BlogInlineImage";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImage from "@/assets/blog/ai-service-providers-hero.png";
@@ -299,12 +299,6 @@ const AIServiceProvidersBlog = () => {
         </article>
       </main>
       
-      <RelatedPagesSection 
-        currentPage="blog"
-        currentSlug="ai-service-providers-uk"
-        title="Explore More Resources"
-        subtitle="Discover AI chatbot solutions across UK cities and industries"
-      />
       
       <Footer />
     </div>

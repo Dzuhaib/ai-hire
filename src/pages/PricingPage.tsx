@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PricingSection } from "@/components/PricingSection";
 import { CostComparisonCalculator } from "@/components/CostComparisonCalculator";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { Zap } from "lucide-react";
 import pricingHero from "@/assets/pricing-hero.png";
 
@@ -86,11 +86,6 @@ const PricingPage = () => {
         <CostComparisonCalculator />
       </main>
 
-      <RelatedPagesSection 
-        currentPage="pricing"
-        title="Explore Our Services"
-        subtitle="Discover AI chatbot solutions across UK cities and industries"
-      />
       
       <Footer />
     </div>

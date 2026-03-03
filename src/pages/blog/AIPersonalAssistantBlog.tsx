@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowLeft, CheckCircle2, Smartphone, MapPin, MessageCi
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/ai-personal-assistant-hero.png";
@@ -299,12 +299,6 @@ const AIPersonalAssistantBlog = () => {
         </article>
       </main>
       
-      <RelatedPagesSection 
-        currentPage="blog"
-        currentSlug="ai-personal-assistant-near-me"
-        title="Explore More Resources"
-        subtitle="Discover AI chatbot solutions across UK cities and industries"
-      />
       
       <Footer />
     </div>

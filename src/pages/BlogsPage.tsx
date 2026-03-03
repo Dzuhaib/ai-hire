@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowRight, ChevronLeft, ChevronRight as ChevronRightI
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { allBlogPosts } from "@/data/blogData";
 
 // Import blog images
@@ -251,12 +251,6 @@ const BlogsPage = () => {
           )}
         </div>
       </main>
-      
-      <RelatedPagesSection 
-        currentPage="blog"
-        title="Explore More"
-        subtitle="Discover our AI chatbot solutions across UK cities and industries"
-      />
       
       <Footer />
     </div>

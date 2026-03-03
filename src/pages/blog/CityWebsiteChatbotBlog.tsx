@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { BlogInlineImage } from "@/components/BlogInlineImage";
 import {
   Accordion,
@@ -270,12 +270,6 @@ const CityWebsiteChatbotBlog = () => {
         </article>
       </main>
 
-      <RelatedPagesSection
-        currentPage="blog"
-        currentSlug={blogSlug}
-        title="Related Resources"
-        subtitle={`Explore more AI chatbot solutions for ${data.city} and UK businesses`}
-      />
 
       <Footer />
     </div>

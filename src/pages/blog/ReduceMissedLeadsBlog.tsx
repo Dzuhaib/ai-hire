@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import {
   Accordion,
   AccordionContent,
@@ -223,7 +223,7 @@ const ReduceMissedLeadsBlog = () => {
         </article>
       </main>
 
-      <RelatedPagesSection currentPage="blog" currentSlug="reduce-missed-leads-website" title="Related Resources" subtitle="More insights on AI chatbots and lead generation for UK businesses" />
+      
       <Footer />
     </div>
   );
