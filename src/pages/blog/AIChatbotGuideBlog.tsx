@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowLeft, CheckCircle2, MessageCircle, Globe, Smartph
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/ai-chatbot-guide-hero.png";
@@ -311,12 +311,6 @@ const AIChatbotGuideBlog = () => {
         </article>
       </main>
       
-      <RelatedPagesSection 
-        currentPage="blog"
-        currentSlug="ai-chatbot-small-business-uk-guide"
-        title="Explore More Resources"
-        subtitle="Discover AI chatbot solutions across UK cities and industries"
-      />
       
       <Footer />
     </div>

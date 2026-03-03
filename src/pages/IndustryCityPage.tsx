@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { PageMeta } from "@/components/PageMeta";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getIndustryCityData, getCitiesForIndustry } from "@/data/industryCityData";
@@ -331,7 +331,7 @@ const IndustryCityPage = () => {
         </div>
       </section>
 
-      <RelatedPagesSection currentPage="industry" currentSlug={industrySlug} />
+      
       <Footer />
     </div>
   );

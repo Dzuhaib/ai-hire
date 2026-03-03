@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowLeft, CheckCircle2, Zap, Settings, BarChart3, Cpu
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageMeta } from "@/components/PageMeta";
-import { RelatedPagesSection } from "@/components/RelatedPagesSection";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlogInlineImage } from "@/components/BlogInlineImage";
 import heroImage from "@/assets/blog/ai-automation-uk-hero.png";
@@ -305,12 +305,6 @@ const AIAutomationUKBlog = () => {
         </article>
       </main>
       
-      <RelatedPagesSection 
-        currentPage="blog"
-        currentSlug="ai-automation-uk-business"
-        title="Explore More Resources"
-        subtitle="Discover AI chatbot solutions across UK cities and industries"
-      />
       
       <Footer />
     </div>
