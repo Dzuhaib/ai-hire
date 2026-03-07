@@ -142,48 +142,32 @@ export const PricingSection = () => {
     
     setIsLoading(true);
     try {
-      // Ensure profile exists
-      const { data: existingProfile } = await supabase
-        .from("profiles")
-        .select("clerk_user_id")
-        .eq("clerk_user_id", user.id)
-        .maybeSingle();
-
-      if (!existingProfile) {
-        await supabase.from("profiles").insert({
-          clerk_user_id: user.id,
+      const { data, error } = await supabase.functions.invoke("create-whatsapp-subscription", {
+        body: {
+          clerkUserId: user.id,
           email: user.primaryEmailAddress?.emailAddress || "",
-          full_name: user.fullName || "",
-          avatar_url: user.imageUrl || "",
-        });
-      }
-
-      // Create subscription with pending_payment status
-      const expiresAt = new Date();
-      expiresAt.setMonth(expiresAt.getMonth() + 1);
-
-      const { error: subError } = await supabase.from("subscriptions").insert({
-        clerk_user_id: user.id,
-        plan_name: `aivized ${selectedPlan.name}`,
-        plan_price: selectedPlan.price,
-        status: "pending_payment",
-        expires_at: expiresAt.toISOString(),
+          fullName: user.fullName || "",
+          avatarUrl: user.imageUrl || "",
+          planName: selectedPlan.name,
+          priceAmount: selectedPlan.price,
+        },
       });
 
-      if (subError) {
-        console.error("Subscription error:", subError);
+      if (error) {
+        console.error("Subscription error:", error);
         toast.error("Failed to create subscription. Please try again.");
         return;
       }
 
       // Close modal
       setShowPaymentModal(false);
-      setSelectedPlan(null);
 
       // Create WhatsApp message
       const whatsappMessage = encodeURIComponent(
         `Hi! I'd like to subscribe to the ${selectedPlan.name} plan (£${selectedPlan.price}/month + £50 one-time setup fee).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
       );
+      
+      setSelectedPlan(null);
       
       // Open WhatsApp
       window.open(`https://wa.me/923063213951?text=${whatsappMessage}`, "_blank");
