@@ -38,47 +38,21 @@ const Dashboard = () => {
   const [cancelling, setCancelling] = useState(false);
 
   useEffect(() => {
-    const syncUserAndFetchData = async () => {
+    const fetchDashboardData = async () => {
       if (!user) return;
 
       try {
-        // Sync user profile
-        const { data: existingProfile } = await supabase
-          .from("profiles")
-          .select("*")
-          .eq("clerk_user_id", user.id)
-          .maybeSingle();
+        const { data, error } = await supabase.functions.invoke("get-dashboard-data", {
+          body: { clerkUserId: user.id },
+        });
 
-        if (!existingProfile) {
-          await supabase.from("profiles").insert({
-            clerk_user_id: user.id,
-            email: user.primaryEmailAddress?.emailAddress || "",
-            full_name: user.fullName || "",
-            avatar_url: user.imageUrl || "",
-          });
+        if (error) {
+          console.error("Error fetching dashboard data:", error);
+          return;
         }
 
-        // Fetch subscription (active, trial, or pending_payment)
-        const { data: subData } = await supabase
-          .from("subscriptions")
-          .select("*")
-          .eq("clerk_user_id", user.id)
-          .in("status", ["active", "pending_payment", "trial"])
-          .order("created_at", { ascending: false })
-          .limit(1)
-          .maybeSingle();
-
-        setSubscription(subData);
-
-        // Fetch billing history
-        const { data: billingData } = await supabase
-          .from("billing_history")
-          .select("*")
-          .eq("clerk_user_id", user.id)
-          .order("created_at", { ascending: false })
-          .limit(10);
-
-        setBillingHistory(billingData || []);
+        setSubscription(data?.subscription || null);
+        setBillingHistory(data?.billingHistory || []);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -87,7 +61,7 @@ const Dashboard = () => {
     };
 
     if (isLoaded && user) {
-      syncUserAndFetchData();
+      fetchDashboardData();
     }
   }, [user, isLoaded]);
 
