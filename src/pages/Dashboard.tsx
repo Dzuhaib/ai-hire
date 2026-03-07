@@ -121,12 +121,16 @@ const Dashboard = () => {
     return status;
   };
 
-  const getTrialDaysRemaining = () => {
-    if (!subscription?.trial_ends_at) return 0;
+  const getTrialTimeRemaining = () => {
+    if (!subscription?.trial_ends_at) return "0 days";
     const now = new Date();
     const trialEnd = new Date(subscription.trial_ends_at);
-    const diff = Math.ceil((trialEnd.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
-    return Math.max(0, diff);
+    const diffMs = trialEnd.getTime() - now.getTime();
+    if (diffMs <= 0) return "Expired";
+    const diffHours = Math.ceil(diffMs / (1000 * 60 * 60));
+    if (diffHours < 24) return `${diffHours} hour${diffHours !== 1 ? "s" : ""}`;
+    const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+    return `${diffDays} day${diffDays !== 1 ? "s" : ""}`;
   };
 
   return (
