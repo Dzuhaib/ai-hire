@@ -66,17 +66,13 @@ const Dashboard = () => {
   }, [user, isLoaded]);
 
   const handleCancelSubscription = async () => {
-    if (!subscription) return;
+    if (!subscription || !user) return;
 
     setCancelling(true);
     try {
-      const { error } = await supabase
-        .from("subscriptions")
-        .update({
-          status: "cancelled",
-          cancelled_at: new Date().toISOString(),
-        })
-        .eq("id", subscription.id);
+      const { error } = await supabase.functions.invoke("cancel-subscription", {
+        body: { clerkUserId: user.id, subscriptionId: subscription.id },
+      });
 
       if (error) throw error;
 
