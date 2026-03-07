@@ -38,47 +38,21 @@ const Dashboard = () => {
   const [cancelling, setCancelling] = useState(false);
 
   useEffect(() => {
-    const syncUserAndFetchData = async () => {
+    const fetchDashboardData = async () => {
       if (!user) return;
 
       try {
-        // Sync user profile
-        const { data: existingProfile } = await supabase
-          .from("profiles")
-          .select("*")
-          .eq("clerk_user_id", user.id)
-          .maybeSingle();
+        const { data, error } = await supabase.functions.invoke("get-dashboard-data", {
+          body: { clerkUserId: user.id },
+        });
 
-        if (!existingProfile) {
-          await supabase.from("profiles").insert({
-            clerk_user_id: user.id,
-            email: user.primaryEmailAddress?.emailAddress || "",
-            full_name: user.fullName || "",
-            avatar_url: user.imageUrl || "",
-          });
+        if (error) {
+          console.error("Error fetching dashboard data:", error);
+          return;
         }
 
-        // Fetch subscription (active, trial, or pending_payment)
-        const { data: subData } = await supabase
-          .from("subscriptions")
-          .select("*")
-          .eq("clerk_user_id", user.id)
-          .in("status", ["active", "pending_payment", "trial"])
-          .order("created_at", { ascending: false })
-          .limit(1)
-          .maybeSingle();
-
-        setSubscription(subData);
-
-        // Fetch billing history
-        const { data: billingData } = await supabase
-          .from("billing_history")
-          .select("*")
-          .eq("clerk_user_id", user.id)
-          .order("created_at", { ascending: false })
-          .limit(10);
-
-        setBillingHistory(billingData || []);
+        setSubscription(data?.subscription || null);
+        setBillingHistory(data?.billingHistory || []);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -87,22 +61,18 @@ const Dashboard = () => {
     };
 
     if (isLoaded && user) {
-      syncUserAndFetchData();
+      fetchDashboardData();
     }
   }, [user, isLoaded]);
 
   const handleCancelSubscription = async () => {
-    if (!subscription) return;
+    if (!subscription || !user) return;
 
     setCancelling(true);
     try {
-      const { error } = await supabase
-        .from("subscriptions")
-        .update({
-          status: "cancelled",
-          cancelled_at: new Date().toISOString(),
-        })
-        .eq("id", subscription.id);
+      const { error } = await supabase.functions.invoke("cancel-subscription", {
+        body: { clerkUserId: user.id, subscriptionId: subscription.id },
+      });
 
       if (error) throw error;
 
@@ -151,12 +121,16 @@ const Dashboard = () => {
     return status;
   };
 
-  const getTrialDaysRemaining = () => {
-    if (!subscription?.trial_ends_at) return 0;
+  const getTrialTimeRemaining = () => {
+    if (!subscription?.trial_ends_at) return "0 days";
     const now = new Date();
     const trialEnd = new Date(subscription.trial_ends_at);
-    const diff = Math.ceil((trialEnd.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
-    return Math.max(0, diff);
+    const diffMs = trialEnd.getTime() - now.getTime();
+    if (diffMs <= 0) return "Expired";
+    const diffHours = Math.ceil(diffMs / (1000 * 60 * 60));
+    if (diffHours < 24) return `${diffHours} hour${diffHours !== 1 ? "s" : ""}`;
+    const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+    return `${diffDays} day${diffDays !== 1 ? "s" : ""}`;
   };
 
   return (
@@ -276,7 +250,7 @@ const Dashboard = () => {
                               <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                               <div>
                                 <p className="font-medium text-primary mb-1">
-                                  Free Trial — {getTrialDaysRemaining()} day{getTrialDaysRemaining() !== 1 ? "s" : ""} remaining
+                                  Free Trial — {getTrialTimeRemaining()} remaining
                                 </p>
                                 <p className="text-sm text-muted-foreground">
                                   Your trial ends on {formatDate(subscription.trial_ends_at)}. Contact us via WhatsApp to activate your plan and continue using the service.

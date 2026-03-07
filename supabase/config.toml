@@ -11,3 +11,9 @@ verify_jwt = false
 
 [functions.create-whatsapp-subscription]
 verify_jwt = false
+
+[functions.get-dashboard-data]
+verify_jwt = false
+
+[functions.cancel-subscription]
+verify_jwt = false
