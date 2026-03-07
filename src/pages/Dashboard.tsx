@@ -256,7 +256,7 @@ const Dashboard = () => {
                                   Your trial ends on {formatDate(subscription.trial_ends_at)}. Share your website details with us on WhatsApp to get your AI employee set up.
                                 </p>
                                 <a
-                                  href="https://wa.me/447538636372?text=Hi%2C%20I%20just%20started%20a%20free%20trial%20on%20AI%20Vized.%20Here%20are%20my%20website%20details%3A"
+                                  href="https://wa.me/923063213951?text=Hi%2C%20I%20just%20started%20a%20free%20trial%20on%20AI%20Vized.%20Here%20are%20my%20website%20details%3A"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium transition-colors"
