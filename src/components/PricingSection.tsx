@@ -94,55 +94,27 @@ export const PricingSection = () => {
     
     setIsLoading(true);
     try {
-      // Ensure profile exists
-      const { data: existingProfile } = await supabase
-        .from("profiles")
-        .select("clerk_user_id")
-        .eq("clerk_user_id", user.id)
-        .maybeSingle();
-
-      if (!existingProfile) {
-        await supabase.from("profiles").insert({
-          clerk_user_id: user.id,
+      const { data, error } = await supabase.functions.invoke("start-trial", {
+        body: {
+          clerkUserId: user.id,
           email: user.primaryEmailAddress?.emailAddress || "",
-          full_name: user.fullName || "",
-          avatar_url: user.imageUrl || "",
-        });
-      }
+          fullName: user.fullName || "",
+          avatarUrl: user.imageUrl || "",
+          planName,
+          priceAmount,
+        },
+      });
 
-      // Check if user already has an active trial or subscription
-      const { data: existingSub } = await supabase
-        .from("subscriptions")
-        .select("id, status")
-        .eq("clerk_user_id", user.id)
-        .in("status", ["active", "trial", "pending_payment"])
-        .maybeSingle();
-
-      if (existingSub) {
-        toast.info("You already have an active plan or trial. Visit your dashboard to manage it.");
-        navigate("/dashboard");
+      if (error) {
+        console.error("Trial error:", error);
+        toast.error("Failed to start trial. Please try again.");
         return;
       }
 
-      // Create trial subscription (3 days)
-      const trialEndsAt = new Date();
-      trialEndsAt.setDate(trialEndsAt.getDate() + 3);
-
-      const expiresAt = new Date();
-      expiresAt.setMonth(expiresAt.getMonth() + 1);
-
-      const { error: subError } = await supabase.from("subscriptions").insert({
-        clerk_user_id: user.id,
-        plan_name: `aivized ${planName}`,
-        plan_price: priceAmount,
-        status: "trial",
-        trial_ends_at: trialEndsAt.toISOString(),
-        expires_at: expiresAt.toISOString(),
-      });
-
-      if (subError) {
-        console.error("Trial error:", subError);
-        toast.error("Failed to start trial. Please try again.");
+      // Check for already subscribed
+      if (data?.error === "already_subscribed") {
+        toast.info("You already have an active plan or trial. Visit your dashboard to manage it.");
+        navigate("/dashboard");
         return;
       }
 

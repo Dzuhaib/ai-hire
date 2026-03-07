@@ -5,3 +5,9 @@ verify_jwt = false
 
 [functions.admin]
 verify_jwt = false
+
+[functions.start-trial]
+verify_jwt = false
+
+[functions.create-whatsapp-subscription]
+verify_jwt = false
