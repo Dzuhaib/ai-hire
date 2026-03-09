@@ -36,10 +36,12 @@ interface BillingRecord {
 const Dashboard = () => {
   const { user, isLoaded } = useUser();
   const { signOut } = useClerk();
+  const navigate = useNavigate();
   const [subscription, setSubscription] = useState<Subscription | null>(null);
   const [billingHistory, setBillingHistory] = useState<BillingRecord[]>([]);
   const [loading, setLoading] = useState(true);
   const [cancelling, setCancelling] = useState(false);
+  const [payingWhatsApp, setPayingWhatsApp] = useState(false);
 
   const notifiedRef = useRef(false);
 
