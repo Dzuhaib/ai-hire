@@ -118,6 +118,50 @@ const Dashboard = () => {
     }
   };
 
+  const handlePayViaWhatsApp = async () => {
+    if (!subscription || !user) return;
+    
+    setPayingWhatsApp(true);
+    try {
+      const { error } = await supabase.functions.invoke("create-whatsapp-subscription", {
+        body: {
+          clerkUserId: user.id,
+          planName: subscription.plan_name,
+          priceAmount: subscription.plan_price,
+        },
+      });
+
+      if (error) {
+        toast.error("Failed to submit payment request. Please try again.");
+        return;
+      }
+
+      // Open WhatsApp
+      const whatsappMessage = encodeURIComponent(
+        `Hi! I'd like to pay for my ${subscription.plan_name} plan (£${subscription.plan_price}/month + £50 one-time setup fee).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
+      );
+      window.open(`https://wa.me/923063213951?text=${whatsappMessage}`, "_blank");
+
+      // Update local state
+      setSubscription({ ...subscription, status: "pending_payment" });
+      toast.success("Payment request sent! Please complete payment via WhatsApp.", { duration: 8000 });
+      
+      // Refresh data
+      const { data } = await supabase.functions.invoke("get-dashboard-data", {
+        body: { clerkUserId: user.id },
+      });
+      if (data) {
+        setSubscription(data.subscription);
+        setBillingHistory(data.billingHistory || []);
+      }
+    } catch (error) {
+      console.error("WhatsApp payment error:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setPayingWhatsApp(false);
+    }
+  };
+
   const handleSignOut = async () => {
     await signOut();
   };
