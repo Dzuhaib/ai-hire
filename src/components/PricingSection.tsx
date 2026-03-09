@@ -79,22 +79,18 @@ export const PricingSection = () => {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: number } | null>(null);
 
-  const handleSubscribe = (planName: string, priceAmount: number) => {
-    if (!isSignedIn) {
+  const handleSubscribe = async (planName: string, priceAmount: number) => {
+    if (!isSignedIn || !user) {
       toast.info("Please sign in to start your free trial");
       navigate("/auth");
       return;
     }
     
     setSelectedPlan({ name: planName, price: priceAmount });
-    handleStartTrial(planName, priceAmount);
-  };
-
-  const handleStartTrial = async (planName: string, priceAmount: number) => {
-    if (!user) return;
-    
     setIsLoading(true);
+    
     try {
+      // Step 1: Start the free trial first
       const { data, error } = await supabase.functions.invoke("start-trial", {
         body: {
           clerkUserId: user.id,
@@ -108,37 +104,33 @@ export const PricingSection = () => {
 
       if (error) {
         console.error("Trial invoke error:", error);
-        console.error("Trial invoke error message:", error.message);
-        console.error("Trial invoke error context:", JSON.stringify(error.context));
-        // Check if response body has more info
-        if (data) {
-          console.log("Trial response data despite error:", JSON.stringify(data));
-        }
-        
-        // Handle already_subscribed from 409
         if (data?.error === "already_subscribed") {
           toast.info("You already have an active plan or trial. Visit your dashboard to manage it.");
           navigate("/dashboard");
           return;
         }
-        
         toast.error("Failed to start trial. Please try again.");
         return;
       }
 
-      // Check for already subscribed
       if (data?.error === "already_subscribed") {
         toast.info("You already have an active plan or trial. Visit your dashboard to manage it.");
         navigate("/dashboard");
         return;
       }
 
+      // Send email notifications for trial start
+      const userEmail = user.primaryEmailAddress?.emailAddress || "";
+      const userName = user.fullName || "";
+      notifyAdminNewTrial(userName, userEmail, planName, data?.trialEndsAt || "");
+
       toast.success(
-        `Your 3-day free trial for the ${planName} plan has started! No payment required until the trial ends.`,
+        `Your 3-day free trial for the ${planName} plan has started! Now choose how you'd like to pay after the trial.`,
         { duration: 6000 }
       );
 
-      navigate("/dashboard");
+      // Step 2: Show payment modal for post-trial payment setup
+      setShowPaymentModal(true);
     } catch (error) {
       console.error("Trial error:", error);
       toast.error("An error occurred. Please try again.");
