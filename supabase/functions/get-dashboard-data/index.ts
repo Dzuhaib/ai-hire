@@ -23,12 +23,41 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Fetch active subscription
+    // Auto-expire trials that have passed their trial_ends_at
+    const now = new Date().toISOString();
+    const { data: expiredTrials } = await supabase
+      .from("subscriptions")
+      .select("id, clerk_user_id, plan_name, trial_ends_at")
+      .eq("clerk_user_id", clerkUserId)
+      .eq("status", "trial")
+      .lt("trial_ends_at", now);
+
+    if (expiredTrials && expiredTrials.length > 0) {
+      for (const trial of expiredTrials) {
+        // Update subscription to expired
+        await supabase
+          .from("subscriptions")
+          .update({ status: "expired" })
+          .eq("id", trial.id);
+
+        // Add billing history record for trial ended
+        await supabase.from("billing_history").insert({
+          clerk_user_id: trial.clerk_user_id,
+          amount: 0,
+          currency: "GBP",
+          description: `${trial.plan_name} - Free Trial Ended`,
+          status: "expired",
+          paid_at: trial.trial_ends_at,
+        });
+      }
+    }
+
+    // Fetch subscription (including expired ones so user can see status)
     const { data: subscription } = await supabase
       .from("subscriptions")
       .select("*")
       .eq("clerk_user_id", clerkUserId)
-      .in("status", ["active", "pending_payment", "trial"])
+      .in("status", ["active", "pending_payment", "trial", "expired"])
       .order("created_at", { ascending: false })
       .limit(1)
       .maybeSingle();
