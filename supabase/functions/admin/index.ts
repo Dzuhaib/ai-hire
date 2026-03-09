@@ -5,6 +5,30 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+const EMAILJS_SERVICE_ID = "service_57jwo4o";
+const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
+const EMAILJS_ADMIN_TEMPLATE = "template_uoosd5n";
+const EMAILJS_USER_TEMPLATE = "template_62owekc";
+const ADMIN_EMAIL = "admin@aivized.com";
+
+async function sendEmailNotification(templateId: string, params: Record<string, string>) {
+  try {
+    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: templateId,
+        user_id: EMAILJS_PUBLIC_KEY,
+        template_params: params,
+      }),
+    });
+    console.log("[EmailJS] Send result:", res.status, await res.text());
+  } catch (e) {
+    console.error("[EmailJS] Failed:", e);
+  }
+}
+
 interface AdminRequest {
   action: 'get_users' | 'get_subscriptions' | 'check_admin' | 'get_stats' | 'terminate_user' | 'approve_payment' | 'get_pending_payments';
   clerkUserId?: string;
@@ -286,6 +310,30 @@ Deno.serve(async (req) => {
         });
         
         console.log('Payment approved successfully for subscription:', subscriptionId);
+        
+        // Send email notifications
+        // Get user profile for email
+        const { data: userProfile } = await supabase
+          .from('profiles')
+          .select('email, full_name')
+          .eq('clerk_user_id', subscription.clerk_user_id)
+          .maybeSingle();
+        
+        if (userProfile) {
+          // Notify admin
+          await sendEmailNotification(EMAILJS_ADMIN_TEMPLATE, {
+            to_email: ADMIN_EMAIL,
+            subject: `💰 Subscription Activated - ${userProfile.full_name || "Unknown"}`,
+            message_body: `${userProfile.full_name || "Unknown"} (${userProfile.email}) subscription activated.\nPlan: ${subscription.plan_name}\nAmount: £${subscription.plan_price}`,
+          });
+          
+          // Notify user
+          await sendEmailNotification(EMAILJS_USER_TEMPLATE, {
+            to_email: userProfile.email,
+            subject: `✅ Subscription Confirmed - ${subscription.plan_name}`,
+            message_body: `Hi ${userProfile.full_name || "there"},\n\nYour ${subscription.plan_name} subscription (£${subscription.plan_price}/month) is now active.\nThank you for choosing aivized!`,
+          });
+        }
         
         return new Response(
           JSON.stringify({ success: true, message: 'Payment approved successfully' }),

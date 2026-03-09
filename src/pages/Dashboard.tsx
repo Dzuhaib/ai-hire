@@ -153,8 +153,14 @@ const Dashboard = () => {
 
   const getStatusLabel = (status: string) => {
     if (status === "pending_payment") return "Pending Payment";
+    if (status === "pending") return "Pending";
     if (status === "trial") return "Free Trial";
-    return status;
+    if (status === "paid") return "Paid";
+    if (status === "active") return "Active";
+    if (status === "cancelled") return "Cancelled";
+    if (status === "expired") return "Expired";
+    if (status === "failed") return "Failed";
+    return status.charAt(0).toUpperCase() + status.slice(1);
   };
 
   const getTrialTimeRemaining = () => {
@@ -440,7 +446,7 @@ const Dashboard = () => {
                                     }`}
                                   >
                                     {getStatusIcon(record.status)}
-                                    {record.status}
+                                    {getStatusLabel(record.status)}
                                   </span>
                                 </td>
                                 <td className="py-3 px-4 text-sm text-right font-medium">
