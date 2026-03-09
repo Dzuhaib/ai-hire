@@ -6,6 +6,29 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
+const EMAILJS_SERVICE_ID = "service_57jwo4o";
+const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
+const EMAILJS_ADMIN_TEMPLATE = "template_uoosd5n";
+const ADMIN_EMAIL = "admin@aivized.com";
+
+async function sendEmailNotification(templateId: string, params: Record<string, string>) {
+  try {
+    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: templateId,
+        user_id: EMAILJS_PUBLIC_KEY,
+        template_params: params,
+      }),
+    });
+    console.log("[EmailJS] Send result:", res.status, await res.text());
+  } catch (e) {
+    console.error("[EmailJS] Failed:", e);
+  }
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -87,6 +110,13 @@ serve(async (req) => {
       description: `${planName} - Free Trial Started (3 days)`,
       status: "trial",
       paid_at: new Date().toISOString(),
+    });
+
+    // Send admin email notification
+    await sendEmailNotification(EMAILJS_ADMIN_TEMPLATE, {
+      to_email: ADMIN_EMAIL,
+      subject: `🚀 New Trial Started - ${fullName || "Unknown"}`,
+      message_body: `${fullName || "Unknown"} (${email}) just started a free trial.\nPlan: ${planName}\nTrial ends: ${trialEndsAt.toLocaleDateString("en-GB")}`,
     });
 
     return new Response(

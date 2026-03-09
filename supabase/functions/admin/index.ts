@@ -5,6 +5,30 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+const EMAILJS_SERVICE_ID = "service_57jwo4o";
+const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
+const EMAILJS_ADMIN_TEMPLATE = "template_uoosd5n";
+const EMAILJS_USER_TEMPLATE = "template_62owekc";
+const ADMIN_EMAIL = "admin@aivized.com";
+
+async function sendEmailNotification(templateId: string, params: Record<string, string>) {
+  try {
+    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: templateId,
+        user_id: EMAILJS_PUBLIC_KEY,
+        template_params: params,
+      }),
+    });
+    console.log("[EmailJS] Send result:", res.status, await res.text());
+  } catch (e) {
+    console.error("[EmailJS] Failed:", e);
+  }
+}
+
 interface AdminRequest {
   action: 'get_users' | 'get_subscriptions' | 'check_admin' | 'get_stats' | 'terminate_user' | 'approve_payment' | 'get_pending_payments';
   clerkUserId?: string;
