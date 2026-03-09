@@ -106,7 +106,21 @@ export const PricingSection = () => {
       });
 
       if (error) {
-        console.error("Trial error:", error);
+        console.error("Trial invoke error:", error);
+        console.error("Trial invoke error message:", error.message);
+        console.error("Trial invoke error context:", JSON.stringify(error.context));
+        // Check if response body has more info
+        if (data) {
+          console.log("Trial response data despite error:", JSON.stringify(data));
+        }
+        
+        // Handle already_subscribed from 409
+        if (data?.error === "already_subscribed") {
+          toast.info("You already have an active plan or trial. Visit your dashboard to manage it.");
+          navigate("/dashboard");
+          return;
+        }
+        
         toast.error("Failed to start trial. Please try again.");
         return;
       }
