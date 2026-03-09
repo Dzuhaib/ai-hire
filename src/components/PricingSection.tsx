@@ -74,8 +74,6 @@ export const PricingSection = () => {
   const { user, isSignedIn } = useUser();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  const [showPaymentModal, setShowPaymentModal] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: number } | null>(null);
 
   const handleSubscribe = async (planName: string, priceAmount: number) => {
     if (!isSignedIn || !user) {
