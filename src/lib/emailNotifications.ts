@@ -31,11 +31,10 @@ const sendEmail = async (templateId: string, params: Record<string, string>) => 
 // ── Admin Notifications ──
 
 export const notifyAdminNewSignup = async (userName: string, userEmail: string) => {
-  await sendEmail(TEMPLATES.ADMIN_NEW_SIGNUP, {
+  await sendEmail(TEMPLATES.ADMIN, {
     to_email: ADMIN_EMAIL,
-    user_name: userName || "Unknown",
-    user_email: userEmail,
-    signup_date: new Date().toLocaleDateString("en-GB"),
+    subject: `👤 New User Signup - ${userName || "Unknown"}`,
+    message_body: `New signup:\nName: ${userName || "Unknown"}\nEmail: ${userEmail}\nDate: ${new Date().toLocaleDateString("en-GB")}`,
   });
 };
 
@@ -45,12 +44,10 @@ export const notifyAdminNewTrial = async (
   planName: string,
   trialEndsAt: string
 ) => {
-  await sendEmail(TEMPLATES.ADMIN_NEW_TRIAL, {
+  await sendEmail(TEMPLATES.ADMIN, {
     to_email: ADMIN_EMAIL,
-    user_name: userName || "Unknown",
-    user_email: userEmail,
-    plan_name: planName,
-    trial_ends_at: new Date(trialEndsAt).toLocaleDateString("en-GB"),
+    subject: `🚀 New Trial Started - ${userName || "Unknown"}`,
+    message_body: `${userName || "Unknown"} (${userEmail}) just started a free trial.\nPlan: ${planName}\nTrial ends: ${new Date(trialEndsAt).toLocaleDateString("en-GB")}`,
   });
 };
 
@@ -60,12 +57,10 @@ export const notifyAdminSubscriptionActivated = async (
   planName: string,
   amount: string
 ) => {
-  await sendEmail(TEMPLATES.ADMIN_SUBSCRIPTION_ACTIVATED, {
+  await sendEmail(TEMPLATES.ADMIN, {
     to_email: ADMIN_EMAIL,
-    user_name: userName || "Unknown",
-    user_email: userEmail,
-    plan_name: planName,
-    amount: amount,
+    subject: `💰 Subscription Activated - ${userName || "Unknown"}`,
+    message_body: `${userName || "Unknown"} (${userEmail}) activated a subscription.\nPlan: ${planName}\nAmount: £${amount}`,
   });
 };
 
@@ -77,11 +72,10 @@ export const notifyUserTrialEnding = async (
   planName: string,
   trialEndsAt: string
 ) => {
-  await sendEmail(TEMPLATES.USER_TRIAL_ENDING, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
-    trial_ends_at: new Date(trialEndsAt).toLocaleDateString("en-GB"),
+    subject: `⏰ Your aivized trial is ending soon`,
+    message_body: `Hi ${userName || "there"},\n\nYour ${planName} trial ends on ${new Date(trialEndsAt).toLocaleDateString("en-GB")}.\nSubscribe now to keep your AI employee running!\n\nVisit your dashboard to upgrade.`,
   });
 };
 
@@ -91,11 +85,10 @@ export const notifyUserSubscriptionSuccess = async (
   planName: string,
   amount: string
 ) => {
-  await sendEmail(TEMPLATES.USER_SUBSCRIPTION_SUCCESS, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
-    amount: amount,
+    subject: `✅ Subscription Confirmed - ${planName}`,
+    message_body: `Hi ${userName || "there"},\n\nYour ${planName} subscription (£${amount}/month) is now active.\nThank you for choosing aivized!`,
   });
 };
 
@@ -104,10 +97,10 @@ export const notifyUserSubscriptionFailed = async (
   userName: string,
   planName: string
 ) => {
-  await sendEmail(TEMPLATES.USER_SUBSCRIPTION_FAILED, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
+    subject: `❌ Payment Failed - ${planName}`,
+    message_body: `Hi ${userName || "there"},\n\nYour payment for the ${planName} plan failed.\nPlease update your payment method to continue your subscription.`,
   });
 };
 
@@ -117,10 +110,9 @@ export const notifyUserSubscriptionExpiring = async (
   planName: string,
   expiresAt: string
 ) => {
-  await sendEmail(TEMPLATES.USER_SUBSCRIPTION_EXPIRING, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
-    expires_at: new Date(expiresAt).toLocaleDateString("en-GB"),
+    subject: `⚠️ Subscription Expiring Soon`,
+    message_body: `Hi ${userName || "there"},\n\nYour ${planName} subscription expires on ${new Date(expiresAt).toLocaleDateString("en-GB")}.\nRenew now to avoid interruption.`,
   });
 };
