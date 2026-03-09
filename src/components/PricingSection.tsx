@@ -86,11 +86,9 @@ export const PricingSection = () => {
       return;
     }
     
-    setSelectedPlan({ name: planName, price: priceAmount });
     setIsLoading(true);
     
     try {
-      // Step 1: Start the free trial first
       const { data, error } = await supabase.functions.invoke("start-trial", {
         body: {
           clerkUserId: user.id,
@@ -119,75 +117,14 @@ export const PricingSection = () => {
         return;
       }
 
-      // Send email notifications for trial start
-      const userEmail = user.primaryEmailAddress?.emailAddress || "";
-      const userName = user.fullName || "";
-      notifyAdminNewTrial(userName, userEmail, planName, data?.trialEndsAt || "");
-
       toast.success(
-        `Your 3-day free trial for the ${planName} plan has started! Now choose how you'd like to pay after the trial.`,
+        `Your 3-day free trial for the ${planName} plan has started! Head to your dashboard to manage it.`,
         { duration: 6000 }
       );
 
-      // Step 2: Show payment modal for post-trial payment setup
-      setShowPaymentModal(true);
-    } catch (error) {
-      console.error("Trial error:", error);
-      toast.error("An error occurred. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleOnlinePayment = () => {
-    // Coming soon - disabled
-    toast.info("Online payment is coming soon!");
-  };
-
-  const handleWhatsAppPayment = async () => {
-    if (!user || !selectedPlan) return;
-    
-    setIsLoading(true);
-    try {
-      const { data, error } = await supabase.functions.invoke("create-whatsapp-subscription", {
-        body: {
-          clerkUserId: user.id,
-          email: user.primaryEmailAddress?.emailAddress || "",
-          fullName: user.fullName || "",
-          avatarUrl: user.imageUrl || "",
-          planName: selectedPlan.name,
-          priceAmount: selectedPlan.price,
-        },
-      });
-
-      if (error) {
-        console.error("Subscription error:", error);
-        toast.error("Failed to create subscription. Please try again.");
-        return;
-      }
-
-      // Close modal
-      setShowPaymentModal(false);
-
-      // Create WhatsApp message
-      const whatsappMessage = encodeURIComponent(
-        `Hi! I'd like to subscribe to the ${selectedPlan.name} plan (£${selectedPlan.price}/month + £50 one-time setup fee).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
-      );
-      
-      setSelectedPlan(null);
-      
-      // Open WhatsApp
-      window.open(`https://wa.me/923063213951?text=${whatsappMessage}`, "_blank");
-      
-      toast.success(
-        "Subscription created! Please complete payment via WhatsApp. Your plan will be activated once payment is confirmed.",
-        { duration: 8000 }
-      );
-
-      // Redirect to dashboard
       navigate("/dashboard");
     } catch (error) {
-      console.error("Payment error:", error);
+      console.error("Trial error:", error);
       toast.error("An error occurred. Please try again.");
     } finally {
       setIsLoading(false);
