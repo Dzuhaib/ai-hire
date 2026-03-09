@@ -1,27 +1,18 @@
 import emailjs from "@emailjs/browser";
 
-// EmailJS Configuration - Replace these with your actual values from emailjs.com
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // e.g., "service_abc123"
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // e.g., "abc123xyz"
+const EMAILJS_SERVICE_ID = "service_57jwo4o";
+const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
 
-// Template IDs for different notification types
 const TEMPLATES = {
-  ADMIN_NEW_SIGNUP: "YOUR_ADMIN_SIGNUP_TEMPLATE_ID",
-  ADMIN_NEW_TRIAL: "YOUR_ADMIN_TRIAL_TEMPLATE_ID",
-  ADMIN_SUBSCRIPTION_ACTIVATED: "YOUR_ADMIN_SUB_ACTIVATED_TEMPLATE_ID",
-  USER_TRIAL_ENDING: "YOUR_USER_TRIAL_ENDING_TEMPLATE_ID",
-  USER_SUBSCRIPTION_SUCCESS: "YOUR_USER_SUB_SUCCESS_TEMPLATE_ID",
-  USER_SUBSCRIPTION_FAILED: "YOUR_USER_SUB_FAILED_TEMPLATE_ID",
-  USER_SUBSCRIPTION_EXPIRING: "YOUR_USER_SUB_EXPIRING_TEMPLATE_ID",
+  ADMIN: "template_uoosd5n",
+  USER: "template_62owekc",
 };
 
-// Admin email to receive notifications
 const ADMIN_EMAIL = "admin@aivized.com";
 
-// Initialize EmailJS
 let initialized = false;
 const initEmailJS = () => {
-  if (!initialized && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+  if (!initialized) {
     emailjs.init(EMAILJS_PUBLIC_KEY);
     initialized = true;
   }
@@ -30,10 +21,6 @@ const initEmailJS = () => {
 const sendEmail = async (templateId: string, params: Record<string, string>) => {
   try {
     initEmailJS();
-    if (EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
-      console.log("[EmailJS] Not configured. Skipping email:", templateId, params);
-      return;
-    }
     await emailjs.send(EMAILJS_SERVICE_ID, templateId, params);
     console.log("[EmailJS] Email sent:", templateId);
   } catch (error) {
