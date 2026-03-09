@@ -33,13 +33,13 @@ serve(async (req) => {
       .limit(1)
       .maybeSingle();
 
-    // Fetch billing history
+    // Fetch billing history (all records)
     const { data: billingHistory } = await supabase
       .from("billing_history")
       .select("*")
       .eq("clerk_user_id", clerkUserId)
       .order("created_at", { ascending: false })
-      .limit(10);
+      .limit(50);
 
     return new Response(
       JSON.stringify({ subscription, billingHistory: billingHistory || [] }),

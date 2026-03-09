@@ -133,11 +133,16 @@ const Dashboard = () => {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case "active":
+      case "paid":
         return <CheckCircle className="w-4 h-4 text-green-500" />;
       case "trial":
-        return <Clock className="w-4 h-4 text-primary" />;
+        return <Clock className="w-4 h-4 text-blue-500" />;
       case "cancelled":
+        return <XCircle className="w-4 h-4 text-muted-foreground" />;
+      case "failed":
         return <XCircle className="w-4 h-4 text-red-500" />;
+      case "expired":
+        return <AlertTriangle className="w-4 h-4 text-orange-500" />;
       case "pending":
       case "pending_payment":
         return <Clock className="w-4 h-4 text-yellow-500" />;
