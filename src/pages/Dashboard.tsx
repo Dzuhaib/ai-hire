@@ -440,7 +440,7 @@ const Dashboard = () => {
                                     }`}
                                   >
                                     {getStatusIcon(record.status)}
-                                    {record.status}
+                                    {getStatusLabel(record.status)}
                                   </span>
                                 </td>
                                 <td className="py-3 px-4 text-sm text-right font-medium">
