@@ -1,12 +1,17 @@
 import { useUser, useClerk, SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Bot, CreditCard, Calendar, Settings, LogOut, Crown, Clock, CheckCircle, XCircle, Loader2 } from "lucide-react";
+import { Bot, CreditCard, Calendar, Settings, LogOut, Crown, Clock, CheckCircle, XCircle, Loader2, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { MagneticButton } from "@/components/MagneticButton";
 import { PageMeta } from "@/components/PageMeta";
+import {
+  notifyAdminNewSignup,
+  notifyUserTrialEnding,
+  notifyUserSubscriptionExpiring,
+} from "@/lib/emailNotifications";
 
 interface Subscription {
   id: string;
