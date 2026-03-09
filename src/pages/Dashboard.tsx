@@ -421,11 +421,20 @@ const Dashboard = () => {
                                     className={`inline-flex items-center gap-1.5 text-xs px-2 py-1 rounded-full capitalize ${
                                       record.status === "paid"
                                         ? "bg-green-500/10 text-green-500"
+                                        : record.status === "trial"
+                                        ? "bg-blue-500/10 text-blue-500"
                                         : record.status === "pending"
                                         ? "bg-yellow-500/10 text-yellow-500"
+                                        : record.status === "failed"
+                                        ? "bg-red-500/10 text-red-500"
+                                        : record.status === "expired"
+                                        ? "bg-orange-500/10 text-orange-500"
+                                        : record.status === "cancelled"
+                                        ? "bg-muted text-muted-foreground"
                                         : "bg-red-500/10 text-red-500"
                                     }`}
                                   >
+                                    {getStatusIcon(record.status)}
                                     {record.status}
                                   </span>
                                 </td>
