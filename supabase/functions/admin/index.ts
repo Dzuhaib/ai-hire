@@ -311,6 +311,30 @@ Deno.serve(async (req) => {
         
         console.log('Payment approved successfully for subscription:', subscriptionId);
         
+        // Send email notifications
+        // Get user profile for email
+        const { data: userProfile } = await supabase
+          .from('profiles')
+          .select('email, full_name')
+          .eq('clerk_user_id', subscription.clerk_user_id)
+          .maybeSingle();
+        
+        if (userProfile) {
+          // Notify admin
+          await sendEmailNotification(EMAILJS_ADMIN_TEMPLATE, {
+            to_email: ADMIN_EMAIL,
+            subject: `💰 Subscription Activated - ${userProfile.full_name || "Unknown"}`,
+            message_body: `${userProfile.full_name || "Unknown"} (${userProfile.email}) subscription activated.\nPlan: ${subscription.plan_name}\nAmount: £${subscription.plan_price}`,
+          });
+          
+          // Notify user
+          await sendEmailNotification(EMAILJS_USER_TEMPLATE, {
+            to_email: userProfile.email,
+            subject: `✅ Subscription Confirmed - ${subscription.plan_name}`,
+            message_body: `Hi ${userProfile.full_name || "there"},\n\nYour ${subscription.plan_name} subscription (£${subscription.plan_price}/month) is now active.\nThank you for choosing aivized!`,
+          });
+        }
+        
         return new Response(
           JSON.stringify({ success: true, message: 'Payment approved successfully' }),
           { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
