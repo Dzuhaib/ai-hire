@@ -374,19 +374,7 @@ export const PricingSection = () => {
         </motion.div>
       </div>
 
-      {/* Payment Method Modal */}
-      <PaymentMethodModal
-        isOpen={showPaymentModal}
-        onClose={() => {
-          setShowPaymentModal(false);
-          setSelectedPlan(null);
-        }}
-        planName={selectedPlan?.name || ""}
-        planPrice={selectedPlan?.price || 0}
-        onSelectOnlinePayment={handleOnlinePayment}
-        onSelectWhatsApp={handleWhatsAppPayment}
-        isLoading={isLoading}
-      />
+      {/* Payment modal removed - payment happens from dashboard after trial */}
     </section>
   );
 };
