@@ -1,27 +1,18 @@
 import emailjs from "@emailjs/browser";
 
-// EmailJS Configuration - Replace these with your actual values from emailjs.com
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // e.g., "service_abc123"
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // e.g., "abc123xyz"
+const EMAILJS_SERVICE_ID = "service_57jwo4o";
+const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
 
-// Template IDs for different notification types
 const TEMPLATES = {
-  ADMIN_NEW_SIGNUP: "YOUR_ADMIN_SIGNUP_TEMPLATE_ID",
-  ADMIN_NEW_TRIAL: "YOUR_ADMIN_TRIAL_TEMPLATE_ID",
-  ADMIN_SUBSCRIPTION_ACTIVATED: "YOUR_ADMIN_SUB_ACTIVATED_TEMPLATE_ID",
-  USER_TRIAL_ENDING: "YOUR_USER_TRIAL_ENDING_TEMPLATE_ID",
-  USER_SUBSCRIPTION_SUCCESS: "YOUR_USER_SUB_SUCCESS_TEMPLATE_ID",
-  USER_SUBSCRIPTION_FAILED: "YOUR_USER_SUB_FAILED_TEMPLATE_ID",
-  USER_SUBSCRIPTION_EXPIRING: "YOUR_USER_SUB_EXPIRING_TEMPLATE_ID",
+  ADMIN: "template_uoosd5n",
+  USER: "template_62owekc",
 };
 
-// Admin email to receive notifications
 const ADMIN_EMAIL = "admin@aivized.com";
 
-// Initialize EmailJS
 let initialized = false;
 const initEmailJS = () => {
-  if (!initialized && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+  if (!initialized) {
     emailjs.init(EMAILJS_PUBLIC_KEY);
     initialized = true;
   }
@@ -30,10 +21,6 @@ const initEmailJS = () => {
 const sendEmail = async (templateId: string, params: Record<string, string>) => {
   try {
     initEmailJS();
-    if (EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
-      console.log("[EmailJS] Not configured. Skipping email:", templateId, params);
-      return;
-    }
     await emailjs.send(EMAILJS_SERVICE_ID, templateId, params);
     console.log("[EmailJS] Email sent:", templateId);
   } catch (error) {
@@ -44,11 +31,10 @@ const sendEmail = async (templateId: string, params: Record<string, string>) => 
 // ── Admin Notifications ──
 
 export const notifyAdminNewSignup = async (userName: string, userEmail: string) => {
-  await sendEmail(TEMPLATES.ADMIN_NEW_SIGNUP, {
+  await sendEmail(TEMPLATES.ADMIN, {
     to_email: ADMIN_EMAIL,
-    user_name: userName || "Unknown",
-    user_email: userEmail,
-    signup_date: new Date().toLocaleDateString("en-GB"),
+    subject: `👤 New User Signup - ${userName || "Unknown"}`,
+    message_body: `New signup:\nName: ${userName || "Unknown"}\nEmail: ${userEmail}\nDate: ${new Date().toLocaleDateString("en-GB")}`,
   });
 };
 
@@ -58,12 +44,10 @@ export const notifyAdminNewTrial = async (
   planName: string,
   trialEndsAt: string
 ) => {
-  await sendEmail(TEMPLATES.ADMIN_NEW_TRIAL, {
+  await sendEmail(TEMPLATES.ADMIN, {
     to_email: ADMIN_EMAIL,
-    user_name: userName || "Unknown",
-    user_email: userEmail,
-    plan_name: planName,
-    trial_ends_at: new Date(trialEndsAt).toLocaleDateString("en-GB"),
+    subject: `🚀 New Trial Started - ${userName || "Unknown"}`,
+    message_body: `${userName || "Unknown"} (${userEmail}) just started a free trial.\nPlan: ${planName}\nTrial ends: ${new Date(trialEndsAt).toLocaleDateString("en-GB")}`,
   });
 };
 
@@ -73,12 +57,10 @@ export const notifyAdminSubscriptionActivated = async (
   planName: string,
   amount: string
 ) => {
-  await sendEmail(TEMPLATES.ADMIN_SUBSCRIPTION_ACTIVATED, {
+  await sendEmail(TEMPLATES.ADMIN, {
     to_email: ADMIN_EMAIL,
-    user_name: userName || "Unknown",
-    user_email: userEmail,
-    plan_name: planName,
-    amount: amount,
+    subject: `💰 Subscription Activated - ${userName || "Unknown"}`,
+    message_body: `${userName || "Unknown"} (${userEmail}) activated a subscription.\nPlan: ${planName}\nAmount: £${amount}`,
   });
 };
 
@@ -90,11 +72,10 @@ export const notifyUserTrialEnding = async (
   planName: string,
   trialEndsAt: string
 ) => {
-  await sendEmail(TEMPLATES.USER_TRIAL_ENDING, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
-    trial_ends_at: new Date(trialEndsAt).toLocaleDateString("en-GB"),
+    subject: `⏰ Your aivized trial is ending soon`,
+    message_body: `Hi ${userName || "there"},\n\nYour ${planName} trial ends on ${new Date(trialEndsAt).toLocaleDateString("en-GB")}.\nSubscribe now to keep your AI employee running!\n\nVisit your dashboard to upgrade.`,
   });
 };
 
@@ -104,11 +85,10 @@ export const notifyUserSubscriptionSuccess = async (
   planName: string,
   amount: string
 ) => {
-  await sendEmail(TEMPLATES.USER_SUBSCRIPTION_SUCCESS, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
-    amount: amount,
+    subject: `✅ Subscription Confirmed - ${planName}`,
+    message_body: `Hi ${userName || "there"},\n\nYour ${planName} subscription (£${amount}/month) is now active.\nThank you for choosing aivized!`,
   });
 };
 
@@ -117,10 +97,10 @@ export const notifyUserSubscriptionFailed = async (
   userName: string,
   planName: string
 ) => {
-  await sendEmail(TEMPLATES.USER_SUBSCRIPTION_FAILED, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
+    subject: `❌ Payment Failed - ${planName}`,
+    message_body: `Hi ${userName || "there"},\n\nYour payment for the ${planName} plan failed.\nPlease update your payment method to continue your subscription.`,
   });
 };
 
@@ -130,10 +110,9 @@ export const notifyUserSubscriptionExpiring = async (
   planName: string,
   expiresAt: string
 ) => {
-  await sendEmail(TEMPLATES.USER_SUBSCRIPTION_EXPIRING, {
+  await sendEmail(TEMPLATES.USER, {
     to_email: userEmail,
-    user_name: userName || "there",
-    plan_name: planName,
-    expires_at: new Date(expiresAt).toLocaleDateString("en-GB"),
+    subject: `⚠️ Subscription Expiring Soon`,
+    message_body: `Hi ${userName || "there"},\n\nYour ${planName} subscription expires on ${new Date(expiresAt).toLocaleDateString("en-GB")}.\nRenew now to avoid interruption.`,
   });
 };
