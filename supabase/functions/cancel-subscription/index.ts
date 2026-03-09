@@ -35,6 +35,13 @@ serve(async (req) => {
       throw new Error("Subscription not found");
     }
 
+    // Get full subscription details for billing record
+    const { data: fullSub } = await supabase
+      .from("subscriptions")
+      .select("plan_name, plan_price")
+      .eq("id", subscriptionId)
+      .single();
+
     const { error } = await supabase
       .from("subscriptions")
       .update({
@@ -44,6 +51,18 @@ serve(async (req) => {
       .eq("id", subscriptionId);
 
     if (error) throw error;
+
+    // Record cancellation in billing history
+    if (fullSub) {
+      await supabase.from("billing_history").insert({
+        clerk_user_id: clerkUserId,
+        amount: 0,
+        currency: "GBP",
+        description: `${fullSub.plan_name} - Subscription Cancelled`,
+        status: "cancelled",
+        paid_at: new Date().toISOString(),
+      });
+    }
 
     return new Response(
       JSON.stringify({ success: true }),

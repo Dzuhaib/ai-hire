@@ -1,12 +1,17 @@
 import { useUser, useClerk, SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Bot, CreditCard, Calendar, Settings, LogOut, Crown, Clock, CheckCircle, XCircle, Loader2 } from "lucide-react";
+import { Bot, CreditCard, Calendar, Settings, LogOut, Crown, Clock, CheckCircle, XCircle, Loader2, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { MagneticButton } from "@/components/MagneticButton";
 import { PageMeta } from "@/components/PageMeta";
+import {
+  notifyAdminNewSignup,
+  notifyUserTrialEnding,
+  notifyUserSubscriptionExpiring,
+} from "@/lib/emailNotifications";
 
 interface Subscription {
   id: string;
@@ -37,6 +42,8 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [cancelling, setCancelling] = useState(false);
 
+  const notifiedRef = useRef(false);
+
   useEffect(() => {
     const fetchDashboardData = async () => {
       if (!user) return;
@@ -51,8 +58,32 @@ const Dashboard = () => {
           return;
         }
 
-        setSubscription(data?.subscription || null);
+        const sub = data?.subscription || null;
+        setSubscription(sub);
         setBillingHistory(data?.billingHistory || []);
+
+        // Send email notifications based on subscription state (once per session)
+        if (sub && !notifiedRef.current) {
+          notifiedRef.current = true;
+          const userEmail = user.primaryEmailAddress?.emailAddress || "";
+          const userName = user.fullName || "";
+
+          // Trial ending notification (less than 24 hours remaining)
+          if (sub.status === "trial" && sub.trial_ends_at) {
+            const hoursLeft = (new Date(sub.trial_ends_at).getTime() - Date.now()) / (1000 * 60 * 60);
+            if (hoursLeft > 0 && hoursLeft < 24) {
+              notifyUserTrialEnding(userEmail, userName, sub.plan_name, sub.trial_ends_at);
+            }
+          }
+
+          // Subscription expiring soon (less than 3 days)
+          if (sub.status === "active" && sub.expires_at) {
+            const daysLeft = (new Date(sub.expires_at).getTime() - Date.now()) / (1000 * 60 * 60 * 24);
+            if (daysLeft > 0 && daysLeft < 3) {
+              notifyUserSubscriptionExpiring(userEmail, userName, sub.plan_name, sub.expires_at);
+            }
+          }
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -102,11 +133,16 @@ const Dashboard = () => {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case "active":
+      case "paid":
         return <CheckCircle className="w-4 h-4 text-green-500" />;
       case "trial":
-        return <Clock className="w-4 h-4 text-primary" />;
+        return <Clock className="w-4 h-4 text-blue-500" />;
       case "cancelled":
+        return <XCircle className="w-4 h-4 text-muted-foreground" />;
+      case "failed":
         return <XCircle className="w-4 h-4 text-red-500" />;
+      case "expired":
+        return <AlertTriangle className="w-4 h-4 text-orange-500" />;
       case "pending":
       case "pending_payment":
         return <Clock className="w-4 h-4 text-yellow-500" />;
@@ -390,11 +426,20 @@ const Dashboard = () => {
                                     className={`inline-flex items-center gap-1.5 text-xs px-2 py-1 rounded-full capitalize ${
                                       record.status === "paid"
                                         ? "bg-green-500/10 text-green-500"
+                                        : record.status === "trial"
+                                        ? "bg-blue-500/10 text-blue-500"
                                         : record.status === "pending"
                                         ? "bg-yellow-500/10 text-yellow-500"
+                                        : record.status === "failed"
+                                        ? "bg-red-500/10 text-red-500"
+                                        : record.status === "expired"
+                                        ? "bg-orange-500/10 text-orange-500"
+                                        : record.status === "cancelled"
+                                        ? "bg-muted text-muted-foreground"
                                         : "bg-red-500/10 text-red-500"
                                     }`}
                                   >
+                                    {getStatusIcon(record.status)}
                                     {record.status}
                                   </span>
                                 </td>

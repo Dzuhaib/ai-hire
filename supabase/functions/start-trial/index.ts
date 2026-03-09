@@ -79,8 +79,18 @@ serve(async (req) => {
       throw new Error("Failed to create trial subscription");
     }
 
+    // Record trial start in billing history
+    await supabase.from("billing_history").insert({
+      clerk_user_id: clerkUserId,
+      amount: 0,
+      currency: "GBP",
+      description: `${planName} - Free Trial Started (3 days)`,
+      status: "trial",
+      paid_at: new Date().toISOString(),
+    });
+
     return new Response(
-      JSON.stringify({ success: true }),
+      JSON.stringify({ success: true, trialEndsAt: trialEndsAt.toISOString() }),
       { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   } catch (error: any) {
