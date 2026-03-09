@@ -53,8 +53,8 @@ serve(async (req) => {
 
     if (existingSub) {
       return new Response(
-        JSON.stringify({ error: "already_subscribed", message: "You already have an active plan or trial." }),
-        { status: 409, headers: { "Content-Type": "application/json", ...corsHeaders } }
+        JSON.stringify({ success: false, error: "already_subscribed", message: "You already have an active plan or trial." }),
+        { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
