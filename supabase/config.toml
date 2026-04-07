@@ -1,0 +1,19 @@
+project_id = "pszvkwtfkqjhafvxttjo"
+
+[functions.create-2checkout-session]
+verify_jwt = false
+
+[functions.admin]
+verify_jwt = false
+
+[functions.start-trial]
+verify_jwt = false
+
+[functions.create-whatsapp-subscription]
+verify_jwt = false
+
+[functions.get-dashboard-data]
+verify_jwt = false
+
+[functions.cancel-subscription]
+verify_jwt = false

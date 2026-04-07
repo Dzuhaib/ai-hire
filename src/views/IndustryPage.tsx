@@ -1,0 +1,442 @@
+"use client";
+
+import Image from 'next/image';
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useEffect, useMemo } from "react";
+import { motion } from "framer-motion";
+import { 
+  CheckCircle, ArrowRight, Zap, Users, Shield, Clock, TrendingUp, 
+  Bot, MessageCircle, Star, Calendar, UtensilsCrossed, PartyPopper, 
+  Plug, MapPin, Filter, Home, FileText, Building, Package, Truck, 
+  RotateCcw, Box, ShoppingCart, Quote, Headphones, Heart, AlertTriangle, CreditCard
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { getIndustryBySlug, allIndustries } from "@/data/industryData";
+import { getCitiesForIndustry } from "@/data/industryCityData";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
+import NotFound from "./NotFound";
+
+// Hero images
+const aiRestaurantHero = "/assets/industries/ai-restaurant-hero.png";
+const aiRealEstateHero = "/assets/industries/ai-realestate-hero.png";
+const aiEcommerceHero = "/assets/industries/ai-ecommerce-hero.png";
+const aiHealthcareHero = "/assets/industries/ai-healthcare-hero.png";
+const aiLegalHero = "/assets/industries/ai-legal-hero.png";
+const aiFitnessHero = "/assets/industries/ai-fitness-hero.png";
+const aiTravelHero = "/assets/industries/ai-travel-hero.png";
+
+// Scene images
+const restaurantScene = "/assets/industries/restaurant-scene.png";
+const realestateScene = "/assets/industries/realestate-scene.png";
+const ecommerceScene = "/assets/industries/ecommerce-scene.png";
+const healthcareScene = "/assets/industries/healthcare-scene.png";
+const legalScene = "/assets/industries/legal-scene.png";
+const fitnessScene = "/assets/industries/fitness-scene.png";
+const travelScene = "/assets/industries/travel-scene.png";
+
+const heroImages: Record<string, string> = {
+  restaurants: aiRestaurantHero,
+  "real-estate": aiRealEstateHero,
+  ecommerce: aiEcommerceHero,
+  healthcare: aiHealthcareHero,
+  legal: aiLegalHero,
+  fitness: aiFitnessHero,
+  travel: aiTravelHero,
+};
+
+const sceneImages: Record<string, string> = {
+  restaurants: restaurantScene,
+  "real-estate": realestateScene,
+  ecommerce: ecommerceScene,
+  healthcare: healthcareScene,
+  legal: legalScene,
+  fitness: fitnessScene,
+  travel: travelScene,
+};
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Calendar, UtensilsCrossed, PartyPopper, Users, MapPin, Plug,
+  Filter, Home, FileText, Building, Package, Truck, RotateCcw,
+  Box, TrendingUp, ShoppingCart, Heart, AlertTriangle, CreditCard,
+  Shield, Star,
+};
+
+const IndustryPage = () => {
+  const { industry: industrySlug } = useParams();
+  const industry = industrySlug ? getIndustryBySlug(industrySlug) : undefined;
+  const industryCities = useMemo(() => industrySlug ? getCitiesForIndustry(industrySlug) : [], [industrySlug]);
+
+  const heroImage = useMemo(() => {
+    if (!industrySlug) return aiRestaurantHero;
+    return heroImages[industrySlug] || aiRestaurantHero;
+  }, [industrySlug]);
+
+  const sceneImage = useMemo(() => {
+    if (!industrySlug) return restaurantScene;
+    return sceneImages[industrySlug] || restaurantScene;
+  }, [industrySlug]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [industrySlug]);
+
+  const combinedSchema = useMemo(() => {
+    if (!industry) return null;
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+            { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
+            { "@type": "ListItem", "position": 3, "name": industry.industry, "item": `https://www.aivized.com/industries/${industry.slug}` }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": industry.faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+          }))
+        }
+      ]
+    };
+  }, [industry]);
+
+  const industryKeywords: Record<string, string> = {
+    restaurants: "Restaurant AI Chatbot UK",
+    "real-estate": "Real Estate AI Chatbot UK",
+    ecommerce: "E-Commerce AI Chatbot UK",
+    healthcare: "Healthcare AI Chatbot UK",
+    legal: "Law Firm AI Chatbot UK",
+    fitness: "Gym AI Chatbot UK",
+    travel: "Travel Agent AI Chatbot UK",
+  };
+  const industryKeyword = industrySlug ? industryKeywords[industrySlug] || `${industry?.industry} AI Chatbot UK` : "";
+  
+  const metaTitle = industry ? `${industryKeyword} | Managed from £29/month` : "";
+  const metaDescription = industry ? `Managed AI chatbot for ${industry.industry.toLowerCase()}. Capture leads 24/7, automate inquiries. From £29/month, no technical skills needed.` : "";
+  const metaKeywords = industry ? `${industry.slug} AI chatbot UK, ${industry.industry.toLowerCase()} chatbot, managed AI chatbot, lead generation chatbot, 24/7 customer support` : "";
+
+  if (!industry || !industrySlug) {
+    return <NotFound />;
+  }
+
+  const scrollToSection = (id: string) => {
+    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
+      <Header />
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-secondary/20">
+        <div className="container-narrow relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
+                <Bot className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">{industry.tagline}</span>
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+                {industry.heroTitle}
+              </h1>
+
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                {industry.heroSubtitle}
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
+                <Button size="lg" className="btn-primary group" onClick={() => scrollToSection("#pricing-cta")}>
+                  Get Started Today
+                  <Zap className="w-4 h-4 ml-2 " />
+                </Button>
+                <Button variant="outline" size="lg" onClick={() => scrollToSection("#features")}>
+                  See Features
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-10 pt-8 border-t border-border/50">
+                {industry.stats.map((stat, idx) => (
+                  <div key={idx} className="text-center lg:text-left">
+                    <div className="text-2xl font-bold text-primary">{stat.value}</div>
+                    <div className="text-xs text-muted-foreground">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative flex justify-center"
+            >
+              <div className="relative">
+                <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
+                  <Image src={heroImage} alt={`AI assistant for ${industry.industry}`} width={600} height={500} priority className="w-full max-w-md object-cover" />
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-card/95 border border-border/80"
+                  >
+                    <div className="flex items-center gap-2">
+                      <MessageCircle className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium">Your {industry.industry} AI</span>
+                    </div>
+                    <span className="text-xs px-2 py-1 rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">24/7 Active</span>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Problems & Solutions */}
+      <section id="problems" className="section-padding bg-muted/30">
+        <div className="container-narrow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Real Challenges, Real Solutions</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Problems {industry.industry} Businesses Face</h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-destructive/80 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center text-destructive">✕</span>
+                The Challenges
+              </h3>
+              {industry.problems.map((problem, idx) => (
+                <motion.div key={idx} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }} className="card-premium p-6">
+                  <h4 className="font-semibold mb-2">{problem.title}</h4>
+                  <p className="text-muted-foreground text-sm">{problem.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-primary flex items-center gap-2">
+                <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">✓</span>
+                Our Solutions
+              </h3>
+              {industry.solutions.map((solution, idx) => (
+                <motion.div key={idx} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }} className="card-premium p-6 border-primary/30">
+                  <h4 className="font-semibold mb-2 text-primary">{solution.title}</h4>
+                  <p className="text-muted-foreground text-sm">{solution.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section id="features" className="section-padding">
+        <div className="container-narrow">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative order-2 lg:order-1">
+              <div className="relative">
+                <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
+                  <Image src={sceneImage} alt={`AI assistant working in ${industry.industry}`} width={1200} height={675} className="w-full object-cover" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-xl bg-card/95 border border-border/80">
+                    <Headphones className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">AI-powered {industry.industry.toLowerCase()} support</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="order-1 lg:order-2">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Powerful Features</p>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold">Built for {industry.industry}</h2>
+                <p className="text-muted-foreground mt-4">Every feature designed specifically for the unique challenges of {industry.industry.toLowerCase()} businesses.</p>
+              </motion.div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                {industry.features.map((feature, idx) => {
+                  const IconComponent = iconMap[feature.icon] || CheckCircle;
+                  return (
+                    <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.05 }} className="p-4 rounded-xl bg-card/50 border border-border/50">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <IconComponent className="w-4 h-4 text-primary" />
+                        </div>
+                        <h4 className="font-semibold text-sm">{feature.title}</h4>
+                      </div>
+                      <p className="text-muted-foreground text-xs">{feature.description}</p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-narrow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Perfect For</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Who Uses AI Vized for {industry.industry}?</h2>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {industry.useCases.map((useCase, idx) => (
+              <motion.span key={idx} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: idx * 0.05 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border/50 text-sm">
+                <CheckCircle className="w-4 h-4 text-primary" />
+                {useCase}
+              </motion.span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="section-padding">
+        <div className="container-narrow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto text-center">
+            <Quote className="w-12 h-12 text-primary/30 mx-auto mb-6" />
+            <blockquote className="text-xl md:text-2xl font-serif italic text-foreground mb-6">
+              "{industry.testimonial.quote}"
+            </blockquote>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <div className="text-left">
+                <div className="font-semibold">{industry.testimonial.author}</div>
+                <div className="text-sm text-muted-foreground">{industry.testimonial.role}, {industry.testimonial.company}</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-narrow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Common Questions About AI for {industry.industry}</h2>
+          </motion.div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {industry.faqs.map((faq, idx) => (
+                <AccordionItem key={idx} value={`faq-${idx}`} className="card-premium px-6 border-border/50">
+                  <AccordionTrigger className="text-left font-medium hover:text-primary transition-colors py-5">{faq.question}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* City Pages for this Industry */}
+      {industryCities.length > 0 && (
+        <section className="section-padding">
+          <div className="container-narrow">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">By City</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                {industry.industry} AI Chatbot <span className="text-gradient">Across the UK</span>
+              </h2>
+            </motion.div>
+
+            <div className="flex flex-wrap justify-center gap-3">
+              {industryCities.map(c => (
+                <Link
+                  key={c.citySlug}
+                  href={`/industries/${industrySlug}/${c.citySlug}`}
+                  className="px-4 py-2 text-sm rounded-full bg-card border border-border/50 hover:border-primary/30 hover:text-primary transition-all"
+                >
+                  {c.cityName}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Other Industries */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-narrow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Explore More</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">AI Solutions for Other Industries</h2>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {allIndustries
+              .filter(ind => ind.slug !== industry.slug)
+              .map((ind) => (
+                <Link key={ind.slug} href={`/industries/${ind.slug}`} className="group p-6 rounded-xl bg-card border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all">
+                  <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">{ind.industry}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{ind.heroTitle}</p>
+                  <span className="text-sm text-primary flex items-center gap-1">Learn more <ArrowRight className="w-4 h-4" /></span>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section id="pricing-cta" className="section-padding bg-secondary/20">
+        <div className="container-narrow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6">
+              Ready to Transform Your {industry.industry} Business?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Join hundreds of UK {industry.industry.toLowerCase()} businesses already using AI Vized to deliver exceptional customer service 24/7.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <Link href="/#pricing">
+                <Button size="lg" className="btn-primary group">
+                  View Pricing Plans <Zap className="w-4 h-4 ml-2 " />
+                </Button>
+              </Link>
+              <a href="mailto:aivized.com@gmail.com">
+                <Button variant="outline" size="lg">
+                  Contact Sales <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />From £29/month</span>
+              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />No long-term contracts</span>
+              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />24-hour setup</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default IndustryPage;

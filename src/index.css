@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts loaded via layout.tsx <link> tags */
+
+@layer base {
+  :root {
+    /* ── Warm cream canvas ── */
+    --background: 40 22% 97%;
+    --foreground: 215 22% 12%;
+
+    --card: 40 18% 99%;
+    --card-foreground: 215 22% 12%;
+
+    --popover: 40 22% 97%;
+    --popover-foreground: 215 22% 12%;
+
+    /* Terracotta — warm, human, grounded */
+    --primary: 16 60% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 14% 93%;
+    --secondary-foreground: 215 22% 12%;
+
+    --muted: 40 12% 93%;
+    --muted-foreground: 215 8% 50%;
+
+    /* Forest sage — natural, trustworthy */
+    --accent: 158 36% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 10% 87%;
+    --input: 40 10% 87%;
+    --ring: 16 60% 46%;
+
+    --radius: 0.5rem;
+
+    /* Flat tokens — no gradients */
+    --shadow-card: 0 1px 3px hsl(215 22% 12% / 0.05), 0 4px 12px hsl(215 22% 12% / 0.04);
+    --shadow-lift: 0 6px 28px hsl(215 22% 12% / 0.10);
+    --shadow-primary: 0 4px 20px hsl(16 60% 46% / 0.22);
+  }
+
+  .dark {
+    --background: 215 22% 9%;
+    --foreground: 40 18% 92%;
+    --card: 215 20% 11%;
+    --card-foreground: 40 18% 92%;
+    --muted: 215 14% 16%;
+    --muted-foreground: 40 8% 58%;
+    --border: 215 14% 19%;
+    --input: 215 14% 19%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wide transition-all duration-200;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border-radius: var(--radius);
+    letter-spacing: 0.03em;
+  }
+
+  .btn-primary:hover {
+    background: hsl(16 60% 40%);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-primary);
+  }
+
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-all duration-200 border border-border hover:border-primary/60 rounded-lg;
+    color: hsl(var(--foreground));
+  }
+
+  .btn-secondary:hover {
+    background: hsl(var(--secondary));
+  }
+
+  /* Gradient text replaced with flat primary colour */
+  .text-gradient {
+    color: hsl(var(--primary));
+  }
+
+  .text-gradient-accent {
+    color: hsl(var(--accent));
+  }
+
+  /* ── Cards ── */
+  .card-premium {
+    @apply relative overflow-hidden rounded-xl border border-border/70 transition-all duration-300;
+    background: hsl(var(--card));
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-premium:hover {
+    border-color: hsl(var(--primary) / 0.35);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lift);
+  }
+
+  /* ── Underline link animation ── */
+  .magnetic-link {
+    @apply relative inline-block transition-colors duration-300;
+  }
+
+  .magnetic-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-primary scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .magnetic-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* ── Layout ── */
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto px-6 md:px-8;
+  }
+
+  /* ── Small section label ── */
+  .label-tag {
+    @apply inline-block text-xs font-medium uppercase tracking-[0.18em] text-primary/75;
+  }
+
+  /* ── Pill badge (flat, no glow) ── */
+  .pill-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-secondary text-xs font-medium text-muted-foreground;
+  }
+
+  /* ── Stat pill (horizontal footer stripe) ── */
+  .stat-strip {
+    @apply flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Very subtle grain — adds "craft" quality without being distracting */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  }
+}
+
+/* ── Clerk overrides ── */
+.cl-card,
+.cl-rootBox .cl-card,
+.cl-signIn-root .cl-card,
+.cl-signUp-root .cl-card,
+.cl-rootBox,
+.cl-signIn-root,
+.cl-signUp-root {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+[class^="cl-"] {
+  box-shadow: none !important;
+}
+
+.cl-formButtonPrimary {
+  box-shadow: 0 4px 14px -4px hsl(16 60% 46% / 0.30) !important;
+}
+
+.cl-internal-b3fm6y,
+.cl-headerTitle,
+.cl-headerSubtitle,
+.cl-footer,
+.cl-footerAction,
+.cl-footer__action,
+.cl-logoBox {
+  display: none !important;
+}

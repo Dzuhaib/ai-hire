@@ -1,0 +1,2 @@
+ALTER TABLE billing_history DROP CONSTRAINT billing_history_status_check;
+ALTER TABLE billing_history ADD CONSTRAINT billing_history_status_check CHECK (status = ANY (ARRAY['paid', 'pending', 'failed', 'refunded', 'trial', 'expired']));

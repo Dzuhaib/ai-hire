@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.aivized.com/</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://www.aivized.com/pricing</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  
+  <!-- Hub Pages -->
+  <url>
+    <loc>https://www.aivized.com/industries</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aivized.com/blog</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  
+  <!-- Industry Pages -->
+  <url>
+    <loc>https://www.aivized.com/industries/restaurants</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aivized.com/industries/real-estate</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aivized.com/industries/ecommerce</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aivized.com/industries/healthcare</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aivized.com/industries/legal</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aivized.com/industries/fitness</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aivized.com/industries/travel</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  
+  <!-- Industry + City Pages (70 total) -->
+  <!-- Restaurants -->
+  <url><loc>https://www.aivized.com/industries/restaurants/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/restaurants/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <!-- Real Estate -->
+  <url><loc>https://www.aivized.com/industries/real-estate/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/real-estate/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <!-- E-Commerce -->
+  <url><loc>https://www.aivized.com/industries/ecommerce/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/ecommerce/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <!-- Healthcare -->
+  <url><loc>https://www.aivized.com/industries/healthcare/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/healthcare/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <!-- Legal -->
+  <url><loc>https://www.aivized.com/industries/legal/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/legal/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <!-- Fitness -->
+  <url><loc>https://www.aivized.com/industries/fitness/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/fitness/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <!-- Travel -->
+  <url><loc>https://www.aivized.com/industries/travel/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/industries/travel/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  
+  <!-- Blog Posts -->
+  <url><loc>https://www.aivized.com/blog/whatsapp-chatbot-uk-business</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-small-business</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/instagram-chatbot-social-media</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/outsourced-chat-agents-birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/ai-service-providers-uk</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/ai-personal-assistant-near-me</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/ai-automation-uk-business</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/reduce-missed-leads-website</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/automate-customer-enquiries-personal-touch</loc><lastmod>2026-04-05</lastmod></url>
+  
+  <!-- City Blog Posts -->
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-nottingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-cardiff</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-leicester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-brighton</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-southampton</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-oxford</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-cambridge</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-coventry</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-belfast</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/blog/website-chatbot-24-7-aberdeen</loc><lastmod>2026-04-05</lastmod></url>
+  
+  <!-- Location Pages (kept live) -->
+  <url><loc>https://www.aivized.com/locations</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/london</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/manchester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/birmingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/leeds</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/liverpool</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/bristol</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/glasgow</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/edinburgh</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/sheffield</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/newcastle</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/nottingham</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/cardiff</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/leicester</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/brighton</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/southampton</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/oxford</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/cambridge</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/coventry</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/belfast</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/locations/aberdeen</loc><lastmod>2026-04-05</lastmod></url>
+  
+  <!-- Legal Pages -->
+  <url><loc>https://www.aivized.com/privacy-policy</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/terms-of-service</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://www.aivized.com/refund-policy</loc><lastmod>2026-04-05</lastmod></url>
+</urlset>
