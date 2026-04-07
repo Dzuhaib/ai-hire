@@ -3,6 +3,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Providers } from "./providers";
 import "@/index.css";
 
+const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "";
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -104,9 +106,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <ClerkProvider>
+        {clerkPublishableKey ? (
+          <ClerkProvider publishableKey={clerkPublishableKey}>
+            <Providers>{children}</Providers>
+          </ClerkProvider>
+        ) : (
           <Providers>{children}</Providers>
-        </ClerkProvider>
+        )}
       </body>
     </html>
   );
