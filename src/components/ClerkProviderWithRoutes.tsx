@@ -1,0 +1,98 @@
+import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/clerk-react";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { CLERK_PUBLISHABLE_KEY } from "@/lib/clerk";
+import Index from "@/pages/Index";
+import NotFound from "@/pages/NotFound";
+import PaymentSuccess from "@/pages/PaymentSuccess";
+import Dashboard from "@/pages/Dashboard";
+import AuthPage from "@/pages/AuthPage";
+import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
+import AdminDashboard from "@/pages/AdminDashboard";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
+import RefundPolicy from "@/pages/RefundPolicy";
+import LocationPage from "@/pages/LocationPage";
+import LocationsPage from "@/pages/LocationsPage";
+import IndustryPage from "@/pages/IndustryPage";
+import IndustriesPage from "@/pages/IndustriesPage";
+import IndustryCityPage from "@/pages/IndustryCityPage";
+import PricingPage from "@/pages/PricingPage";
+import BlogsPage from "@/pages/BlogsPage";
+import WhatsAppChatbotBlog from "@/pages/blog/WhatsAppChatbotBlog";
+import WebsiteChatbotBlog from "@/pages/blog/WebsiteChatbotBlog";
+import InstagramChatbotBlog from "@/pages/blog/InstagramChatbotBlog";
+import OutsourcedChatAgentsBlog from "@/pages/blog/OutsourcedChatAgentsBlog";
+import AIServiceProvidersBlog from "@/pages/blog/AIServiceProvidersBlog";
+import AIPersonalAssistantBlog from "@/pages/blog/AIPersonalAssistantBlog";
+import AIAutomationUKBlog from "@/pages/blog/AIAutomationUKBlog";
+import AIChatbotGuideBlog from "@/pages/blog/AIChatbotGuideBlog";
+import ReduceMissedLeadsBlog from "@/pages/blog/ReduceMissedLeadsBlog";
+import AIChatbotVsLiveChatBlog from "@/pages/blog/AIChatbotVsLiveChatBlog";
+import AutomateEnquiriesBlog from "@/pages/blog/AutomateEnquiriesBlog";
+import CityWebsiteChatbotBlog from "@/pages/blog/CityWebsiteChatbotBlog";
+import { LoadingScreen } from "@/components/LoadingScreen";
+
+const ClerkProviderWithNavigation = ({ children }: { children: React.ReactNode }) => {
+  const navigate = useNavigate();
+
+  return (
+    <ClerkProvider
+      publishableKey={CLERK_PUBLISHABLE_KEY}
+      routerPush={(to) => navigate(to)}
+      routerReplace={(to) => navigate(to, { replace: true })}
+      signInUrl="/auth"
+      signUpUrl="/auth"
+      afterSignOutUrl="/"
+    >
+      <ClerkLoading>
+        <LoadingScreen />
+      </ClerkLoading>
+      <ClerkLoaded>
+        {children}
+      </ClerkLoaded>
+    </ClerkProvider>
+  );
+};
+
+export const ClerkProviderWithRoutes = () => {
+  return (
+    <BrowserRouter>
+      <ClerkProviderWithNavigation>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/payment-success" element={<PaymentSuccess />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          {/* Location pages (kept live but removed from navigation) */}
+          <Route path="/locations" element={<LocationsPage />} />
+          <Route path="/locations/:city" element={<LocationPage />} />
+          {/* Industries */}
+          <Route path="/industries" element={<IndustriesPage />} />
+          <Route path="/industries/:industry" element={<IndustryPage />} />
+          <Route path="/industries/:industry/:city" element={<IndustryCityPage />} />
+          {/* Blog pages */}
+          <Route path="/blog" element={<BlogsPage />} />
+          <Route path="/blog/whatsapp-chatbot-uk-business" element={<WhatsAppChatbotBlog />} />
+          <Route path="/blog/website-chatbot-small-business" element={<WebsiteChatbotBlog />} />
+          <Route path="/blog/instagram-chatbot-social-media" element={<InstagramChatbotBlog />} />
+          <Route path="/blog/outsourced-chat-agents-birmingham" element={<OutsourcedChatAgentsBlog />} />
+          <Route path="/blog/ai-service-providers-uk" element={<AIServiceProvidersBlog />} />
+          <Route path="/blog/ai-personal-assistant-near-me" element={<AIPersonalAssistantBlog />} />
+          <Route path="/blog/ai-automation-uk-business" element={<AIAutomationUKBlog />} />
+          <Route path="/blog/ai-chatbot-small-business-uk-guide" element={<AIChatbotGuideBlog />} />
+          <Route path="/blog/reduce-missed-leads-website" element={<ReduceMissedLeadsBlog />} />
+          <Route path="/blog/ai-chatbot-vs-live-chat-uk" element={<AIChatbotVsLiveChatBlog />} />
+          <Route path="/blog/automate-customer-enquiries-personal-touch" element={<AutomateEnquiriesBlog />} />
+          <Route path="/blog/:slug" element={<CityWebsiteChatbotBlog />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ClerkProviderWithNavigation>
+    </BrowserRouter>
+  );
+};
