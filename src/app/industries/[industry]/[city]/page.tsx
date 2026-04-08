@@ -1,8 +1,9 @@
 export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import IndustryCityPage from "@/views/IndustryCityPage";
-import { allIndustries } from "@/data/industryData";
+import { allIndustries, getIndustryBySlug } from "@/data/industryData";
 import { ukLocations } from "@/data/locationData";
+import { getIndustryCityData } from "@/data/industryCityData";
 
 export async function generateStaticParams() {
   const params: { industry: string; city: string }[] = [];
@@ -37,6 +38,47 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
-  return <IndustryCityPage />;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ industry: string; city: string }>;
+}) {
+  const { industry, city } = await params;
+  const cityData = getIndustryCityData(industry, city);
+  const parentIndustry = getIndustryBySlug(industry);
+
+  const schema =
+    cityData && parentIndustry
+      ? {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
+                { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
+                { "@type": "ListItem", "position": 3, "name": parentIndustry.industry, "item": `https://www.aivized.com/industries/${industry}` },
+                { "@type": "ListItem", "position": 4, "name": cityData.cityName, "item": `https://www.aivized.com/industries/${industry}/${city}` },
+              ],
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": cityData.faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+              })),
+            },
+          ],
+        }
+      : null;
+
+  return (
+    <>
+      {schema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      )}
+      <IndustryCityPage />
+    </>
+  );
 }

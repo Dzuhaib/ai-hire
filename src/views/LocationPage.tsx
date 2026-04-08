@@ -78,67 +78,6 @@ const LocationPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
 
-  // Generate structured data schemas
-  const schemas = useMemo(() => {
-    if (!location) return null;
-
-    const combinedSchema = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-            { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.aivized.com/locations" },
-            { "@type": "ListItem", "position": 3, "name": location.city, "item": `https://www.aivized.com/locations/${location.slug}` }
-          ]
-        },
-        {
-          "@type": "LocalBusiness",
-          "name": `AI Vized - ${location.city}`,
-          "description": location.description,
-          "url": `https://www.aivized.com/locations/${location.slug}`,
-          "email": "aivized.com@gmail.com",
-          "telephone": "+923063213951",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": location.city,
-            "addressRegion": location.region,
-            "addressCountry": "GB"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": location.coordinates.lat,
-            "longitude": location.coordinates.lng
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": location.city
-          },
-          "priceRange": "£29-£149",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-              "opens": "00:00",
-              "closes": "23:59"
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": location.faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-          }))
-        },
-      ]
-    };
-
-    return combinedSchema;
-  }, [location]);
-
   const metaTitle = location ? `Managed AI Chatbot ${location.city} | From £29/month` : "";
   const metaDescription = location ? `Managed AI chatbot for ${location.city} businesses from £29/month. 24/7 lead capture, we handle installation and support.` : "";
   const metaKeywords = location ? `AI chatbot ${location.city}, managed AI chatbot ${location.city}, lead generation chatbot ${location.region}, 24/7 customer support ${location.city}, small business chatbot UK` : "";
@@ -153,7 +92,6 @@ const LocationPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {schemas && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }} />}
       <Header />
       
       {/* Hero Section */}

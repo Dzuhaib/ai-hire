@@ -43,7 +43,7 @@ const homepageFaqs = [
 ];
 
 // Homepage @graph schema — consolidated to prevent duplicate field errors in Google Search Console
-const homepageSchema = {
+export const homepageSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -212,7 +212,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }} />
       <Header />
       <main>
         <HeroSection />

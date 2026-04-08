@@ -84,31 +84,6 @@ const IndustryPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [industrySlug]);
 
-  const combinedSchema = useMemo(() => {
-    if (!industry) return null;
-    return {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-            { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
-            { "@type": "ListItem", "position": 3, "name": industry.industry, "item": `https://www.aivized.com/industries/${industry.slug}` }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": industry.faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-          }))
-        }
-      ]
-    };
-  }, [industry]);
-
   const industryKeywords: Record<string, string> = {
     restaurants: "Restaurant AI Chatbot UK",
     "real-estate": "Real Estate AI Chatbot UK",
@@ -134,7 +109,6 @@ const IndustryPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
 
       {/* Hero Section */}

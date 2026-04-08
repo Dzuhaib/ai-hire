@@ -43,42 +43,8 @@ const OutsourcedChatAgentsBlog = () => {
     }
   ];
 
-  const combinedSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BlogPosting",
-        "headline": "24/7 Outsourced Chat Agents Birmingham: AI Virtual Assistants for HR & Tech Support",
-        "description": "Discover how 24/7 outsourced chat agents and AI virtual assistants are transforming Birmingham businesses with round-the-clock customer support and HR automation.",
-        "image": "https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png",
-        "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
-        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-        "datePublished": "2026-02-01",
-        "dateModified": "2026-02-26",
-        "mainEntityOfPage": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-        }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "24/7 Outsourced Chat Agents Birmingham" }
-        ]
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">

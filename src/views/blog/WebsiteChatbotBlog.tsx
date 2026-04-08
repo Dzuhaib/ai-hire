@@ -40,44 +40,10 @@ const WebsiteChatbotBlog = () => {
     }
   ];
 
-  const combinedSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-        }))
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Website Chatbot Solutions: Digital Assistant Services for UK SMEs",
-        "description": "Get a managed website chatbot with digital assistant services in Birmingham and Kensington. AI virtual assistant for HR and customer support.",
-        "image": "https://www.aivized.com/assets/blog/website-chatbot-hero.png",
-        "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
-        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-        "datePublished": "2026-01-29",
-        "dateModified": "2026-02-26",
-        "mainEntityOfPage": "https://www.aivized.com/blog/website-chatbot-small-business"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "Website Chatbot UK" }
-        ]
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
-      
+
       <main className="pt-32 pb-20">
         <article className="container-narrow">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-8">

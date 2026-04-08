@@ -43,42 +43,8 @@ const AIServiceProvidersBlog = () => {
     }
   ];
 
-  const combinedSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BlogPosting",
-        "headline": "Top AI Service Providers UK: Manchester, Canary Wharf, Kensington & Leeds",
-        "description": "Compare the best AI service providers across the UK including Manchester, Canary Wharf, Kensington and Leeds. AI consulting services and chatbot solutions for UK businesses.",
-        "image": "https://www.aivized.com/assets/blog/ai-service-providers-hero.png",
-        "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
-        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-        "datePublished": "2026-02-02",
-        "dateModified": "2026-02-26",
-        "mainEntityOfPage": "https://www.aivized.com/blog/ai-service-providers-uk"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-        }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "AI Service Providers UK" }
-        ]
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">

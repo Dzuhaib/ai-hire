@@ -58,42 +58,8 @@ const CityWebsiteChatbotBlog = () => {
   const blogSlug = `website-chatbot-24-7-${data.slug}`;
   const canonicalUrl = `https://www.aivized.com/blog/${blogSlug}`;
 
-  const combinedSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "FAQPage",
-        "mainEntity": data.faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-        }))
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": `Website Chatbot That Runs 24/7 ${data.city} | Managed AI Service`,
-        "description": `Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`,
-        "image": heroImage.startsWith("http") ? heroImage : `https://www.aivized.com${heroImage}`,
-        "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
-        "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-        "datePublished": "2026-02-08",
-        "dateModified": "2026-02-26",
-        "mainEntityOfPage": canonicalUrl
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": `Website Chatbot 24/7 ${data.city}` }
-        ]
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
 
       <main className="pt-32 pb-20">

@@ -65,32 +65,8 @@ const IndustryCityPage = () => {
 
   if (!cityData || !parentIndustry) return <NotFound />;
 
-  const combinedSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.aivized.com" },
-          { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.aivized.com/industries" },
-          { "@type": "ListItem", position: 3, name: parentIndustry.industry, item: `https://www.aivized.com/industries/${industrySlug}` },
-          { "@type": "ListItem", position: 4, name: cityData.cityName, item: `https://www.aivized.com/industries/${industrySlug}/${citySlug}` },
-        ],
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: cityData.faqs.map(faq => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: { "@type": "Answer", text: faq.answer },
-        })),
-      },
-    ],
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
       <Header />
 
       {/* Hero */}

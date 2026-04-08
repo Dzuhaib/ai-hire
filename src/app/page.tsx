@@ -1,6 +1,6 @@
 export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
-import IndexPage from "@/views/Index";
+import IndexPage, { homepageSchema } from "@/views/Index";
 
 export const metadata: Metadata = {
   title: "Managed AI Chatbot for Small Business UK | AIVized From £29/mo",
@@ -18,5 +18,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <IndexPage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }} />
+      <IndexPage />
+    </>
+  );
 }
