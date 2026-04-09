@@ -68,6 +68,7 @@ export default async function Page({
             "datePublished": "2026-02-08",
             "dateModified": "2026-02-26",
             "mainEntityOfPage": canonicalUrl,
+            "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
           },
           {
             "@type": "FAQPage",

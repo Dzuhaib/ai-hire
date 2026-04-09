@@ -20,7 +20,8 @@ const schema = {
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-01",
       "dateModified": "2026-02-26",
-      "mainEntityOfPage": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham"
+      "mainEntityOfPage": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
     {
       "@type": "FAQPage",

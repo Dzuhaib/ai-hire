@@ -20,7 +20,8 @@ const schema = {
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-02",
       "dateModified": "2026-02-26",
-      "mainEntityOfPage": "https://www.aivized.com/blog/ai-service-providers-uk"
+      "mainEntityOfPage": "https://www.aivized.com/blog/ai-service-providers-uk",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
     {
       "@type": "FAQPage",

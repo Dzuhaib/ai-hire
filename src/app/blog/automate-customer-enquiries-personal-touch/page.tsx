@@ -20,7 +20,8 @@ const schema = {
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-12",
       "dateModified": "2026-02-26",
-      "mainEntityOfPage": "https://www.aivized.com/blog/automate-customer-enquiries-personal-touch"
+      "mainEntityOfPage": "https://www.aivized.com/blog/automate-customer-enquiries-personal-touch",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
     {
       "@type": "FAQPage",

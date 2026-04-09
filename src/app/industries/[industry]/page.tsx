@@ -50,6 +50,21 @@ export default async function Page({
             ],
           },
           {
+            "@type": "Service",
+            "name": `AI Chatbot for ${industryData.industry}`,
+            "description": industryData.description,
+            "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
+            "serviceType": "AI Chatbot Management",
+            "areaServed": { "@type": "Country", "name": "United Kingdom" },
+            "url": `https://www.aivized.com/industries/${industryData.slug}`,
+            "offers": {
+              "@type": "Offer",
+              "price": "29",
+              "priceCurrency": "GBP",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
+            }
+          },
+          {
             "@type": "FAQPage",
             "mainEntity": industryData.faqs.map((faq) => ({
               "@type": "Question",

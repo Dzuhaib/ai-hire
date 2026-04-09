@@ -75,6 +75,21 @@ export default async function Page({
             ],
           },
           {
+            "@type": "Service",
+            "name": `Managed AI Chatbot Service — ${location.city}`,
+            "description": `Fully managed AI chatbot for ${location.city} businesses. 24/7 lead capture, customer enquiry automation, and ongoing optimisation from £29/month.`,
+            "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
+            "serviceType": "AI Chatbot Management",
+            "areaServed": { "@type": "City", "name": location.city },
+            "url": `https://www.aivized.com/locations/${location.slug}`,
+            "offers": {
+              "@type": "Offer",
+              "price": "29",
+              "priceCurrency": "GBP",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
+            }
+          },
+          {
             "@type": "FAQPage",
             "mainEntity": location.faqs.map((faq) => ({
               "@type": "Question",

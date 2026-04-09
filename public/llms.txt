@@ -6,12 +6,16 @@ AIVized builds and fully manages AI chatbots for UK small and medium-sized busin
 
 The service captures website leads automatically, answers customer questions instantly, and escalates complex queries to the business owner — even at 3am on weekends and bank holidays.
 
+AIVized serves businesses across multiple channels: website chat widget, WhatsApp Business API, and Instagram DMs. All channels are managed from a single dashboard.
+
 ## Pricing Plans
 All plans include a 3-day free trial and a one-time £50 setup fee.
 
-- **Starter — £29/month**: Basic lead capture and FAQ handling. Ideal for businesses with straightforward customer enquiries.
-- **Professional — £79/month**: Advanced customisation, priority managed support, up to 2,500 conversations/month.
-- **Business — £149/month**: Enterprise-grade AI, dedicated account manager, unlimited conversations, custom integrations, and SLA guarantee.
+- **Starter — £29/month**: Basic lead capture and FAQ handling. Ideal for businesses with straightforward customer enquiries. Up to 500 conversations/month.
+- **Professional — £79/month**: Advanced customisation, priority managed support, up to 2,500 conversations/month. Ideal for growing SMEs.
+- **Business — £149/month**: Enterprise-grade AI, dedicated account manager, unlimited conversations, custom integrations, and SLA guarantee. Ideal for established businesses with high enquiry volumes.
+
+No long-term contracts. Cancel anytime. Price includes full setup, training, monitoring, and ongoing optimisation.
 
 ## Key Pages
 - [Home](https://www.aivized.com/): Full service overview, pricing, testimonials, and FAQ
@@ -20,30 +24,245 @@ All plans include a 3-day free trial and a one-time £50 setup fee.
 - [Locations](https://www.aivized.com/locations): UK city coverage — London, Manchester, Birmingham, Leeds, Glasgow, Edinburgh, Liverpool, Bristol, Sheffield, Newcastle and 15+ more cities
 - [Blog](https://www.aivized.com/blog): Guides and resources on AI chatbots for UK small businesses
 
-## Key Facts
-- Pricing: from £29/month — no long-term contracts
-- Trial: 3-day free trial on every plan
-- Setup: one-time £50 fee, installation within 24 hours
-- Channels: website chatbot, WhatsApp, Instagram
+## Key Facts & Statistics
+- Pricing starts from £29/month — no long-term contracts required
+- 3-day free trial on every plan
+- One-time £50 setup fee; installation completed within 24 hours
+- Channels supported: website chatbot, WhatsApp, Instagram DMs
 - 67% of website visitors leave without making contact — AIVized captures those leads automatically
-- Businesses typically save £2,000+/month vs outsourced live chat agents
-- AI handles 80% of enquiries automatically; escalates the rest to the business owner
+- Businesses typically save £2,000+ per month compared to outsourced live chat agents
+- AI handles 80% of enquiries automatically; escalates the remaining 20% to the business owner
+- Average response time: under 3 seconds (vs 10+ minutes for email, 24+ hours for forms)
+- Businesses see a 30% increase in captured leads within the first month
 - Industries served: restaurants, real estate, e-commerce, healthcare, legal, fitness, travel
 - UK service area: nationwide remote-managed service
+- AI chatbot operates 24 hours a day, 365 days a year including bank holidays
+- GDPR compliant; all data encrypted and stored in the UK
 
-## Blog Articles
-- [AI Chatbot for Small Business UK: Complete 2026 Guide](https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide)
-- [AI Chatbot vs Live Chat: Which is Better for UK Businesses?](https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk)
-- [WhatsApp Chatbot for UK Business](https://www.aivized.com/blog/whatsapp-chatbot-uk-business)
-- [AI Automation for UK Business](https://www.aivized.com/blog/ai-automation-uk-business)
-- [Website Chatbot for Small Business](https://www.aivized.com/blog/website-chatbot-small-business)
-- [Instagram Chatbot for Social Media](https://www.aivized.com/blog/instagram-chatbot-social-media)
-- [How to Reduce Missed Leads on Your Website](https://www.aivized.com/blog/reduce-missed-leads-website)
-- [Automate Customer Enquiries Without Losing the Personal Touch](https://www.aivized.com/blog/automate-customer-enquiries-personal-touch)
-- [AI Service Providers UK: Complete Guide](https://www.aivized.com/blog/ai-service-providers-uk)
-- [AI Personal Assistant Near Me](https://www.aivized.com/blog/ai-personal-assistant-near-me)
-- [Outsourced Chat Agents Birmingham](https://www.aivized.com/blog/outsourced-chat-agents-birmingham)
+## Frequently Asked Questions
+
+**Q: What is a managed AI chatbot service?**
+A: A managed AI chatbot service means the provider handles everything — installation, configuration, AI training, 24/7 monitoring, and ongoing updates. AIVized's managed service requires no technical skills from the business owner. Unlike DIY chatbot builders like Tidio or ManyChat, AIVized installs and maintains the chatbot on your behalf.
+
+**Q: How much does AIVized cost?**
+A: AIVized starts from £29/month for the Starter plan. The Professional plan is £79/month and the Business plan is £149/month. All plans include a one-time £50 setup fee and a 3-day free trial. There are no long-term contracts.
+
+**Q: How quickly can AIVized set up a chatbot for my business?**
+A: AIVized installs and launches a fully trained AI chatbot within 24 hours of receiving your business information. No coding or technical involvement is required from the client.
+
+**Q: What industries does AIVized serve?**
+A: AIVized serves restaurants and hospitality, real estate and estate agents, e-commerce and retail, healthcare and clinics, legal services, fitness and gyms, and travel businesses across the UK.
+
+**Q: Does AIVized work in my city?**
+A: Yes. AIVized is a remote-managed service operating nationwide across all UK cities including London, Manchester, Birmingham, Leeds, Liverpool, Bristol, Glasgow, Edinburgh, Sheffield, Newcastle, Nottingham, Cardiff, Leicester, Brighton, Southampton, Oxford, Cambridge, Coventry, Belfast, and Aberdeen.
+
+**Q: What makes AIVized different from other chatbot services?**
+A: AIVized is a fully managed service — not a DIY tool. The team installs, trains, monitors, and continuously optimises the chatbot. Competitors like Tidio, Intercom, and ManyChat require business owners to build and maintain the chatbot themselves. AIVized's managed approach means the chatbot gets smarter over time without any work from the client.
+
+**Q: Can AIVized capture leads outside business hours?**
+A: Yes. The AI chatbot operates 24/7/365 — including weekends and bank holidays. It captures visitor details, qualifies leads, and sends instant notifications to the business owner whenever a high-intent lead is identified.
+
+**Q: Is the AIVized chatbot GDPR compliant?**
+A: Yes. All data collected by AIVized chatbots is encrypted, stored securely in the UK, and handled in full compliance with UK GDPR regulations.
+
+**Q: Can the chatbot handle multiple conversations simultaneously?**
+A: Yes. Unlike human agents, the AI chatbot handles unlimited concurrent conversations without delays, ensuring every website visitor receives an instant response regardless of traffic volume.
+
+**Q: What channels does AIVized support?**
+A: AIVized supports website chat (embeddable widget), WhatsApp Business API, and Instagram DMs. All channels are managed from a single dashboard.
+
+**Q: How does AI chatbot compare to live chat for small businesses?**
+A: AI chatbots are available 24/7, cost significantly less (from £29/month vs £2,000+/month for live chat agents), handle unlimited conversations simultaneously, and never take sick days or holidays. Live chat provides a human touch for complex issues, but AI handles 80% of standard enquiries better due to instant response times. AIVized uses AI for routine queries and escalates complex issues to human agents.
+
+**Q: What is the ROI of an AI chatbot for small business?**
+A: Businesses using AIVized typically see a 30% increase in leads captured, a 60% reduction in response times, and save £2,000+ per month compared to outsourced live chat agents. ROI is typically achieved within 2–3 months of deployment.
+
+**Q: How does an AI chatbot help restaurants?**
+A: Restaurant AI chatbots handle reservation requests 24/7, answer menu and allergen questions, confirm bookings automatically, and reduce no-shows by sending reminders. UK restaurants lose an estimated £16 billion per year to no-shows — AI chatbots reduce no-shows by up to 30%.
+
+**Q: Can an AI chatbot book appointments?**
+A: Yes. AIVized chatbots can capture appointment requests, qualify the type of appointment needed, and pass details to the business owner or integrate with booking systems. Automated confirmations reduce no-shows and improve the customer experience.
+
+**Q: What is WhatsApp Business AI chatbot?**
+A: A WhatsApp Business AI chatbot connects to the WhatsApp Business API and responds to customer messages automatically. With over 70% of UK adults using WhatsApp, it meets customers on their preferred platform. AIVized manages WhatsApp chatbots as part of its managed service from £29/month.
+
+**Q: What is an Instagram DM chatbot?**
+A: An Instagram DM chatbot automatically replies to direct messages on Instagram, qualifying leads, answering product questions, and capturing customer details. It helps businesses respond instantly to enquiries received through Instagram without manually managing DMs.
+
+## Topic Cluster: AI Chatbots for UK Small Business
+Core topic: Managed AI chatbot services for UK SMEs
+- Best AI chatbot for small business UK
+- Affordable AI chatbot for website UK
+- Lead generation chatbot UK
+- 24/7 customer support chatbot UK
+- Managed chatbot service UK
+- DIY vs managed AI chatbot
+- AI chatbot vs live chat UK
+- How to reduce missed leads on website
+- Chatbot for website installation UK
+- AI customer service for small business
+
+## Topic Cluster: AI Business Automation UK
+Core topic: AI automation for UK business operations
+- AI business automation UK
+- Digital assistant services UK
+- Virtual assistant for UK business
+- AI personal assistant UK
+- Automate customer enquiries UK
+- AI tools for small business UK
+- Outsourced chat agents UK
+- AI virtual assistant for HR
+- Technical virtual assistant services UK
+- Intelligent personal assistant market UK
+
+## Topic Cluster: Industry-Specific AI Chatbots
+Core topic: Sector-specific AI chatbot solutions
+- AI chatbot for restaurants UK
+- Real estate AI chatbot UK
+- E-commerce chatbot UK
+- Healthcare chatbot UK
+- Legal AI chatbot UK
+- Fitness chatbot UK
+- Travel chatbot UK
+- AI receptionist for small business
+
+## Topic Cluster: Location-Specific AI Chatbots
+Core topic: UK city and regional AI chatbot services
+- AI chatbot London
+- AI chatbot Manchester
+- AI chatbot Birmingham
+- AI chatbot Leeds
+- AI chatbot Glasgow
+- AI chatbot Edinburgh
+- AI chatbot Liverpool
+- AI chatbot Bristol
+- Website chatbot 24/7 UK cities
+- Local business AI chatbot UK
+
+## Industries Served
+
+### Restaurants & Hospitality
+AIVized provides AI chatbots for restaurants, cafés, pubs, and hospitality businesses across the UK. Key capabilities: 24/7 reservation handling, menu and allergen enquiries, event bookings, no-show reduction via automated reminders, multi-location support.
+Page: https://www.aivized.com/industries/restaurants
+
+### Real Estate & Estate Agents
+AI chatbots for estate agents, letting agents, and property developers. Key capabilities: property viewing qualification, instant valuation enquiries, tenant screening, 24/7 availability for property hunters, CRM integration.
+Page: https://www.aivized.com/industries/real-estate
+
+### E-commerce & Retail
+AI chatbots for online retailers and e-commerce stores. Key capabilities: order tracking enquiries, product recommendations, returns handling, abandoned cart recovery, out-of-hours customer support.
+Page: https://www.aivized.com/industries/ecommerce
+
+### Healthcare & Clinics
+AI chatbots for GP practices, private clinics, dentists, and healthcare providers. Key capabilities: appointment booking, patient triage, FAQ handling, out-of-hours signposting, GDPR-compliant data handling.
+Page: https://www.aivized.com/industries/healthcare
+
+### Legal Services
+AI chatbots for solicitors, law firms, and legal service providers. Key capabilities: initial enquiry qualification, consultation scheduling, document request handling, 24/7 availability for urgent legal matters.
+Page: https://www.aivized.com/industries/legal
+
+### Fitness & Gyms
+AI chatbots for gyms, personal trainers, yoga studios, and fitness centres. Key capabilities: membership enquiries, class bookings, personal training consultations, opening hours and facility questions.
+Page: https://www.aivized.com/industries/fitness
+
+### Travel & Tourism
+AI chatbots for travel agents, tour operators, and holiday companies. Key capabilities: package enquiries, booking assistance, destination FAQs, visa and travel requirement information.
+Page: https://www.aivized.com/industries/travel
+
+## UK Locations Covered
+
+AIVized serves businesses nationwide via remote management. City-specific pages with local context:
+
+- **London** (pop. 8.8m): https://www.aivized.com/locations/london — UK's largest business hub; high staffing costs make AI chatbots particularly cost-effective
+- **Manchester** (pop. 2.8m): https://www.aivized.com/locations/manchester — Northern England's tech and business centre
+- **Birmingham** (pop. 1.1m): https://www.aivized.com/locations/birmingham — UK's second city; strong manufacturing and service sector
+- **Leeds** (pop. 800k): https://www.aivized.com/locations/leeds — Financial services and legal hub
+- **Liverpool** (pop. 500k): https://www.aivized.com/locations/liverpool — Growing tech scene and hospitality sector
+- **Bristol** (pop. 470k): https://www.aivized.com/locations/bristol — Tech-forward city with strong startup ecosystem
+- **Glasgow** (pop. 630k): https://www.aivized.com/locations/glasgow — Scotland's largest city and commercial centre
+- **Edinburgh** (pop. 540k): https://www.aivized.com/locations/edinburgh — Scotland's capital; financial services and tourism
+- **Sheffield** (pop. 580k): https://www.aivized.com/locations/sheffield — Manufacturing heritage with growing digital economy
+- **Newcastle** (pop. 300k): https://www.aivized.com/locations/newcastle — North East England's commercial hub
+- **Nottingham**: https://www.aivized.com/locations/nottingham
+- **Cardiff**: https://www.aivized.com/locations/cardiff — Wales' capital
+- **Leicester**: https://www.aivized.com/locations/leicester
+- **Brighton**: https://www.aivized.com/locations/brighton
+- **Southampton**: https://www.aivized.com/locations/southampton
+- **Oxford**: https://www.aivized.com/locations/oxford
+- **Cambridge**: https://www.aivized.com/locations/cambridge
+- **Coventry**: https://www.aivized.com/locations/coventry
+- **Belfast**: https://www.aivized.com/locations/belfast — Northern Ireland's capital
+- **Aberdeen**: https://www.aivized.com/locations/aberdeen
+
+## Blog Articles with Summaries
+
+### AI Chatbot for Small Business UK: Complete 2026 Guide
+URL: https://www.aivized.com/blog/ai-chatbot-small-business-uk-guide
+Summary: Comprehensive guide covering what an AI chatbot is, how it works for UK SMEs, pricing comparison, setup process, and use cases across industries. Covers website chatbots, WhatsApp chatbots, and Instagram chatbots. Explains the difference between DIY tools and fully managed services like AIVized.
+Key facts: Managed chatbots from £29/month; 24-hour setup; no technical skills required.
+
+### AI Chatbot vs Live Chat: Which Is Better for UK Small Business?
+URL: https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk
+Summary: Compares AI chatbots against traditional live chat agents for UK SMEs. Analysis covers cost (AI from £29/month vs live agents at £2,000+/month), availability (AI 24/7 vs agents 9–5), scalability, and customer satisfaction. Conclusion: AI chatbots win for most small businesses due to cost and availability; human escalation handles complex cases.
+
+### WhatsApp Chatbot for UK Businesses
+URL: https://www.aivized.com/blog/whatsapp-chatbot-uk-business
+Summary: Explains how WhatsApp Business API chatbots work for UK businesses. Covers setup, use cases, benefits (98% message open rates, preferred by UK customers), and how AIVized manages WhatsApp chatbot deployments.
+Key facts: 70%+ of UK adults use WhatsApp daily; 98% message open rate vs 20% for email.
+
+### How to Reduce Missed Leads from Your Website
+URL: https://www.aivized.com/blog/reduce-missed-leads-website
+Summary: Explains why 67% of website visitors leave without making contact and how AI chatbots solve this. Covers lead capture strategies, chatbot placement, and proactive engagement tactics to convert passive visitors into qualified leads.
+
+### How to Automate Customer Enquiries Without Losing the Personal Touch
+URL: https://www.aivized.com/blog/automate-customer-enquiries-personal-touch
+Summary: Addresses the concern that AI chatbots feel impersonal. Explains how well-trained AI maintains brand voice, escalates emotional or complex queries to humans, and actually improves customer experience through instant responses.
+
+### Website Chatbot Solutions for UK SMEs
+URL: https://www.aivized.com/blog/website-chatbot-small-business
+Summary: Covers website chatbot implementation for UK small businesses. Topics include chatbot widget placement, mobile optimisation, integration with existing websites, and measuring chatbot ROI.
+
+### Instagram Chatbot for Social Media
+URL: https://www.aivized.com/blog/instagram-chatbot-social-media
+Summary: Explains how Instagram DM automation works using AI chatbots. Covers Instagram Business API, automated replies, lead capture through social media, and how AIVized manages Instagram chatbot deployments.
+
+### AI Business Automation UK: Digital Assistant Services
+URL: https://www.aivized.com/blog/ai-automation-uk-business
+Summary: Covers AI automation for UK businesses including digital assistant services, HR automation, technical virtual assistant services, and solo entrepreneur use cases. Focused on Birmingham and UK-wide AI adoption.
+
+### 24/7 Outsourced Chat Agents Birmingham
+URL: https://www.aivized.com/blog/outsourced-chat-agents-birmingham
+Summary: Covers outsourced AI chat agents for Birmingham businesses. Explains AI virtual assistants for HR, technical support automation, and virtual assistant services for solo entrepreneurs in Birmingham.
+
+### Top AI Service Providers UK
+URL: https://www.aivized.com/blog/ai-service-providers-uk
+Summary: Overview of AI service providers across UK hubs including Manchester, Canary Wharf, Kensington, and Leeds. Covers what to look for in an AI provider, sector specialisations, and affordable chatbot options for small businesses.
+
+### AI Personal Assistant Near Me: Birmingham & Edinburgh
+URL: https://www.aivized.com/blog/ai-personal-assistant-near-me
+Summary: Covers AI personal assistant services for UK businesses. Explains how AI assistants work for local businesses in Birmingham and Edinburgh, including WhatsApp chatbot integration and multi-channel support.
+
+### Website Chatbot 24/7 — City-Specific Guides
+URLs: https://www.aivized.com/blog/website-chatbot-24-7-london, /manchester, /birmingham, /leeds, /liverpool, /bristol, /glasgow, /edinburgh, /sheffield, /newcastle
+Summary: City-specific guides explaining how 24/7 website chatbots benefit businesses in each UK city. Covers local business context, industry use cases, and getting started with AIVized in each location.
+
+## Competitive Positioning
+- vs Tidio: Tidio requires DIY setup and self-management. AIVized is fully managed — no setup required from the client.
+- vs Intercom: Intercom targets enterprise with complex pricing. AIVized starts at £29/month and focuses on UK SMEs.
+- vs ManyChat: ManyChat is a self-service tool primarily for social media. AIVized covers website, WhatsApp, and Instagram with full management.
+- vs Drift: Drift is expensive and enterprise-focused. AIVized provides similar AI capabilities at SME-friendly pricing.
+- vs hiring live chat agents: Live chat agents cost £2,000+/month per agent and work only business hours. AIVized AI works 24/7 for £29–149/month.
+
+## How AIVized Works (Step-by-Step)
+1. **Subscribe**: Choose a plan (Starter £29, Professional £79, Business £149). Start with a 3-day free trial.
+2. **Onboarding call**: Share details about your business, products/services, common customer questions, and brand voice.
+3. **AI training**: AIVized trains the chatbot on your specific business knowledge and configures responses.
+4. **Installation**: The chatbot widget is installed on your website within 24 hours. No technical work required from you.
+5. **Go live**: The chatbot starts capturing leads and answering enquiries immediately.
+6. **Ongoing optimisation**: AIVized monitors conversations, improves responses, and updates the AI as your business evolves.
 
 ## Contact
 - Email: aivized.com@gmail.com
 - Website: https://www.aivized.com
+- Pricing: https://www.aivized.com/pricing
+- Free trial: Available on all plans

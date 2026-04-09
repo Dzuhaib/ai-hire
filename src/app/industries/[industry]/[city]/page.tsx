@@ -62,6 +62,21 @@ export default async function Page({
               ],
             },
             {
+              "@type": "Service",
+              "name": `AI Chatbot for ${parentIndustry.industry} in ${cityData.cityName}`,
+              "description": `Fully managed AI chatbot for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation from £29/month.`,
+              "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
+              "serviceType": "AI Chatbot Management",
+              "areaServed": { "@type": "City", "name": cityData.cityName },
+              "url": `https://www.aivized.com/industries/${industry}/${city}`,
+              "offers": {
+                "@type": "Offer",
+                "price": "29",
+                "priceCurrency": "GBP",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
+              }
+            },
+            {
               "@type": "FAQPage",
               "mainEntity": cityData.faqs.map((faq) => ({
                 "@type": "Question",

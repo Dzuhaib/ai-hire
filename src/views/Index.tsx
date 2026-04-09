@@ -178,6 +178,58 @@ export const homepageSchema = {
         "closes": "23:59"
       },
       "parentOrganization": { "@id": "https://www.aivized.com/#organization" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.aivized.com/#service",
+      "name": "Managed AI Chatbot Service",
+      "description": "Fully managed AI chatbot installation, training, monitoring, and optimisation for UK small businesses. 24/7 lead capture and customer enquiry automation from £29/month.",
+      "provider": { "@id": "https://www.aivized.com/#organization" },
+      "serviceType": "AI Chatbot Management",
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AIVized Chatbot Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter Plan",
+            "description": "Basic lead capture and FAQ handling for UK small businesses. Up to 500 conversations/month.",
+            "price": "29",
+            "priceCurrency": "GBP",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Professional Plan",
+            "description": "Advanced customisation with priority support, up to 2,500 conversations/month.",
+            "price": "79",
+            "priceCurrency": "GBP",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "GBP", "unitCode": "MON" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Business Plan",
+            "description": "Enterprise-grade AI with dedicated account manager, unlimited conversations, and SLA guarantee.",
+            "price": "149",
+            "priceCurrency": "GBP",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "GBP", "unitCode": "MON" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.aivized.com/#webpage",
+      "url": "https://www.aivized.com",
+      "name": "Managed AI Chatbot for Small Business UK | AIVized",
+      "description": "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed.",
+      "isPartOf": { "@id": "https://www.aivized.com/#website" },
+      "about": { "@id": "https://www.aivized.com/#service" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["#faq", "#how-it-works", "#pricing"]
+      }
     }
   ]
 };
