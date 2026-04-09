@@ -13,17 +13,21 @@ export async function generateMetadata({
   params: Promise<{ industry: string }>;
 }): Promise<Metadata> {
   const { industry } = await params;
-  const industryName = industry
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
+  const industryData = getIndustryBySlug(industry);
+  // Use industry-specific heroTitle and description for unique metadata
+  const title = industryData
+    ? `${industryData.heroTitle} | AIVized`
+    : `AI Chatbot for ${industry} UK | AI Vized`;
+  const description = industryData
+    ? `${industryData.description} From £29/month, fully managed.`
+    : `Managed AI chatbot for ${industry} businesses in the UK. 24/7 customer support and lead generation from £29/month.`;
   return {
-    title: `AI Chatbot for ${industryName} UK | AI Vized`,
-    description: `Managed AI chatbot for ${industryName} businesses in the UK. 24/7 customer support and lead generation from £29/month.`,
+    title,
+    description,
     alternates: { canonical: `https://www.aivized.com/industries/${industry}` },
     openGraph: {
-      title: `AI Chatbot for ${industryName} UK | AI Vized`,
-      description: `Managed AI chatbot for ${industryName} businesses in the UK. 24/7 customer support and lead generation from £29/month.`,
+      title,
+      description,
       url: `https://www.aivized.com/industries/${industry}`,
     },
   };

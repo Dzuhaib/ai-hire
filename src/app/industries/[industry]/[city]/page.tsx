@@ -21,18 +21,19 @@ export async function generateMetadata({
   params: Promise<{ industry: string; city: string }>;
 }): Promise<Metadata> {
   const { industry, city } = await params;
-  const industryName = industry
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-  const cityName = city.charAt(0).toUpperCase() + city.slice(1);
+  const data = getIndustryCityData(industry, city);
+  // Use pre-crafted unique metadata from data if available; fallback to template
+  const title = data?.metaTitle ?? `AI Chatbot for ${industry} in ${city} | AI Vized`;
+  const description = data?.metaDescription ?? `Managed AI chatbot for ${industry} businesses in ${city}. 24/7 lead generation from £29/month.`;
+  const keywords = data?.metaKeywords;
   return {
-    title: `AI Chatbot for ${industryName} in ${cityName} | AI Vized`,
-    description: `Managed AI chatbot for ${industryName} businesses in ${cityName}. 24/7 lead generation and customer support from £29/month.`,
+    title,
+    description,
+    ...(keywords && { keywords }),
     alternates: { canonical: `https://www.aivized.com/industries/${industry}/${city}` },
     openGraph: {
-      title: `AI Chatbot for ${industryName} in ${cityName} | AI Vized`,
-      description: `Managed AI chatbot for ${industryName} businesses in ${cityName}. 24/7 lead generation and customer support from £29/month.`,
+      title,
+      description,
       url: `https://www.aivized.com/industries/${industry}/${city}`,
     },
   };

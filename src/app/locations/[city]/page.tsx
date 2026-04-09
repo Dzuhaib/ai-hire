@@ -13,14 +13,21 @@ export async function generateMetadata({
   params: Promise<{ city: string }>;
 }): Promise<Metadata> {
   const { city } = await params;
-  const cityName = city.charAt(0).toUpperCase() + city.slice(1);
+  const location = getLocationBySlug(city);
+  // Use city-specific heroTagline/heroSubtext for unique titles and descriptions
+  const title = location
+    ? `${location.heroTagline} | AIVized`
+    : `AI Chatbot ${city} | Managed AI Service`;
+  const description = location
+    ? location.heroSubtext.slice(0, 160)
+    : `Get a fully managed AI chatbot for your ${city} business from £29/month. 24/7 lead generation and customer support.`;
   return {
-    title: `AI Chatbot ${cityName} | Managed AI Service for ${cityName} Businesses`,
-    description: `Get a fully managed AI chatbot for your ${cityName} business from £29/month. 24/7 lead generation and customer support.`,
+    title,
+    description,
     alternates: { canonical: `https://www.aivized.com/locations/${city}` },
     openGraph: {
-      title: `AI Chatbot ${cityName} | Managed AI Service for ${cityName} Businesses`,
-      description: `Get a fully managed AI chatbot for your ${cityName} business from £29/month. 24/7 lead generation and customer support.`,
+      title,
+      description,
       url: `https://www.aivized.com/locations/${city}`,
     },
   };
