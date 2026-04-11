@@ -33,14 +33,6 @@ const homepageSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "FAQPage",
-      "mainEntity": homepageFaqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-      }))
-    },
-    {
       "@type": "WebSite",
       "@id": "https://www.aivized.com/#website",
       "name": "AIVized",
@@ -132,14 +124,19 @@ const homepageSchema = {
       }
     },
     {
-      "@type": "WebPage",
+      "@type": ["WebPage", "FAQPage"],
       "@id": "https://www.aivized.com/#webpage",
       "url": "https://www.aivized.com",
       "name": "Managed AI Chatbot for Small Business UK | AIVized",
       "description": "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed.",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "about": { "@id": "https://www.aivized.com/#service" },
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#faq", "#how-it-works", "#pricing"] }
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#faq", "#how-it-works", "#pricing"] },
+      "mainEntity": homepageFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+      }))
     }
   ]
 };

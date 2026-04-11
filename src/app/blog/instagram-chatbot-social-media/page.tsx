@@ -24,7 +24,10 @@ const schema = {
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
     {
-      "@type": "FAQPage",
+      "@type": ["WebPage", "FAQPage"],
+      "@id": "https://www.aivized.com/blog/instagram-chatbot-social-media#webpage",
+      "url": "https://www.aivized.com/blog/instagram-chatbot-social-media",
+      "isPartOf": { "@type": "WebSite", "url": "https://www.aivized.com" },
       "mainEntity": [
         { "@type": "Question", "name": "What do AI service providers Canary Wharf offer for Instagram?", "acceptedAnswer": { "@type": "Answer", "text": "AI service providers in Canary Wharf offer sophisticated Instagram automation solutions tailored for financial services, professional firms, and enterprise clients. These solutions include DM automation, comment management, lead qualification, and integration with existing CRM systems used by London's business elite." } },
         { "@type": "Question", "name": "How can an artificial intelligence personal assistant Birmingham help with Instagram?", "acceptedAnswer": { "@type": "Answer", "text": "An artificial intelligence personal assistant in Birmingham can manage your Instagram presence around the clock. It responds to DMs instantly, qualifies leads by asking the right questions, and ensures no potential customer slips through the cracks—even when your team is offline or focused on other tasks." } },
