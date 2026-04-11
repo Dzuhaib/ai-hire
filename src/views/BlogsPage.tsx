@@ -82,36 +82,6 @@ const imageMap: Record<string, string> = {
 
 const POSTS_PER_PAGE = 9;
 
-// Blog index JSON-LD schema
-const blogIndexSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "name": "AI Chatbot Blog | UK Business Insights",
-      "description": "Expert insights on AI chatbots for UK businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support.",
-      "url": "https://www.aivized.com/blog",
-      "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
-      "mainEntity": {
-        "@type": "ItemList",
-        "numberOfItems": allBlogPosts.length,
-        "itemListElement": allBlogPosts.slice(0, 9).map((post, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "url": `https://www.aivized.com/blog/${post.slug}`,
-          "name": post.title
-        }))
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" }
-      ]
-    }
-  ]
-};
 
 const BlogsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -133,7 +103,6 @@ const BlogsPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogIndexSchema) }} />
       <Header />
       
       <main className="pt-32 pb-20">

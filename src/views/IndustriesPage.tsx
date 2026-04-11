@@ -38,38 +38,8 @@ const IndustriesPage = () => {
     [],
   );
 
-  const industriesSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-          { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" }
-        ]
-      },
-      {
-        "@type": "CollectionPage",
-        "name": "AI Chatbot by Industry — AIVized",
-        "description": "Industry-trained AI chatbot solutions for UK small businesses. Covering restaurants, real estate, e-commerce, healthcare, legal, fitness, and travel.",
-        "url": "https://www.aivized.com/industries",
-        "publisher": { "@id": "https://www.aivized.com/#organization" },
-        "mainEntity": {
-          "@type": "ItemList",
-          "itemListElement": allIndustries.map((ind, i) => ({
-            "@type": "ListItem",
-            "position": i + 1,
-            "name": `AI Chatbot for ${ind.industry}`,
-            "url": `https://www.aivized.com/industries/${ind.slug}`
-          }))
-        }
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(industriesSchema) }} />
       <Header />
 
       {/* Hero */}
