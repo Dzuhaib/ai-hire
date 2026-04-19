@@ -39,7 +39,7 @@ const AIServiceProvidersBlog = () => {
     },
     {
       question: "Is there an affordable AI chatbot for small business UK?",
-      answer: "Yes, AI chatbot for small business UK solutions start from as little as £29/month with AI Vized. These managed services require no technical skills, include full setup and training, and provide enterprise-grade capabilities at SME-friendly prices. Small businesses can compete with larger competitors by offering 24/7 customer engagement."
+      answer: "Yes, AI chatbot for small business UK solutions start from as little as £29/month with AIVized. These managed services require no technical skills, include full setup and training, and provide enterprise-grade capabilities at SME-friendly prices. Small businesses can compete with larger competitors by offering 24/7 customer engagement."
     }
   ];
 
@@ -242,7 +242,7 @@ const AIServiceProvidersBlog = () => {
                 Looking for an AI Service Provider You Can Trust?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                AI Vized provides managed AI chatbot services to businesses across the UK. From Manchester to Canary Wharf, we deliver enterprise-grade solutions at SME-friendly prices.
+                AIVized provides managed AI chatbot services to businesses across the UK. From Manchester to Canary Wharf, we deliver enterprise-grade solutions at SME-friendly prices.
               </p>
               <Link
                 href="/pricing"

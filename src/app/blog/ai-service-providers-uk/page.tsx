@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import AIServiceProvidersBlog from "@/views/blog/AIServiceProvidersBlog";
 
 export const metadata: Metadata = {
-  title: "AI Service Providers UK | AI Vized",
+  title: "AI Service Providers UK | AIVized",
   description: "Top AI service providers for UK businesses. Compare managed AI chatbot services and choose the best for your business.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-service-providers-uk" },
 };
@@ -31,7 +31,7 @@ const schema = {
         { "@type": "Question", "name": "What should I look for in AI service providers in Kensington United Kingdom?", "acceptedAnswer": { "@type": "Answer", "text": "When choosing AI service providers Kensington United Kingdom, look for experience with luxury and premium brands, multilingual capabilities, sophisticated conversation design, and a track record with high-net-worth client engagement. The best providers offer white-glove onboarding and dedicated account management." } },
         { "@type": "Question", "name": "How can an AI agency in Leeds help my Yorkshire business grow?", "acceptedAnswer": { "@type": "Answer", "text": "An AI agency Leeds provides localised AI chatbot solutions that understand Yorkshire's business landscape. From manufacturing to retail, Leeds-based businesses benefit from AI that can handle regional enquiries, integrate with local payment systems, and scale with your growth ambitions." } },
         { "@type": "Question", "name": "What AI consulting services are available in Manchester?", "acceptedAnswer": { "@type": "Answer", "text": "AI consulting services Manchester include strategy development, technology selection, implementation planning, and ongoing optimisation. Consultants help businesses identify the best AI use cases, calculate ROI, and create roadmaps for successful AI adoption without the need for in-house technical expertise." } },
-        { "@type": "Question", "name": "Is there an affordable AI chatbot for small business UK?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, AI chatbot for small business UK solutions start from as little as £29/month with AI Vized. These managed services require no technical skills, include full setup and training, and provide enterprise-grade capabilities at SME-friendly prices. Small businesses can compete with larger competitors by offering 24/7 customer engagement." } }
+        { "@type": "Question", "name": "Is there an affordable AI chatbot for small business UK?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, AI chatbot for small business UK solutions start from as little as £29/month with AIVized. These managed services require no technical skills, include full setup and training, and provide enterprise-grade capabilities at SME-friendly prices. Small businesses can compete with larger competitors by offering 24/7 customer engagement." } }
       ]
     },
     {

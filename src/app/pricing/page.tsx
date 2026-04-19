@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import PricingPage from "@/views/PricingPage";
 
 export const metadata: Metadata = {
-  title: "Pricing | AI Vized - Affordable AI Chatbot Plans from £29/mo",
+  title: "Pricing | AIVized - Managed AI Chatbot Plans from £29/mo",
   description:
-    "View AI Vized pricing plans. Managed AI chatbot for UK small businesses from just £29/month. No upfront costs, no long-term contracts.",
+    "AIVized managed AI chatbot plans from £29/month. Includes installation, training, and ongoing support. No long-term contracts. 3-day free trial.",
   alternates: { canonical: "https://www.aivized.com/pricing" },
 };
 
@@ -68,6 +68,16 @@ const pricingSchema = {
           }
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is there a setup fee?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, there is a one-time £50 setup fee on the Starter, Professional, and Business plans. This covers installation, training, and initial configuration." } },
+        { "@type": "Question", "name": "Can I cancel at any time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All AIVized plans are month to month with no minimum commitment. You can cancel any time from your account." } },
+        { "@type": "Question", "name": "Is VAT included in the prices shown?", "acceptedAnswer": { "@type": "Answer", "text": "Prices shown are exclusive of VAT. Standard UK VAT applies." } },
+        { "@type": "Question", "name": "What happens after the 3-day free trial?", "acceptedAnswer": { "@type": "Answer", "text": "If you continue, the monthly plan fee plus the £50 setup charge applies. If you cancel within the trial period, no payment is taken." } },
+        { "@type": "Question", "name": "Can I upgrade or downgrade my plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can change your plan at any time. Upgrades take effect immediately. Downgrades apply from the next billing cycle." } }
+      ]
     }
   ]
 };

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import AIPersonalAssistantBlog from "@/views/blog/AIPersonalAssistantBlog";
 
 export const metadata: Metadata = {
-  title: "AI Personal Assistant Near Me | AI Vized",
+  title: "AI Personal Assistant Near Me | AIVized",
   description: "Find an AI personal assistant for your UK business. Managed AI chatbots that work 24/7.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-personal-assistant-near-me" },
 };
@@ -26,7 +26,7 @@ const schema = {
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "How do I find an artificial intelligence personal assistant near me?", "acceptedAnswer": { "@type": "Answer", "text": "Finding an artificial intelligence personal assistant near me is easier than ever. AI Vized serves businesses across the UK with managed chatbot services. Simply visit our pricing page to see plans starting from £29/month—no matter where you're located, you'll receive the same high-quality service with local understanding of UK business practices." } },
+        { "@type": "Question", "name": "How do I find an artificial intelligence personal assistant near me?", "acceptedAnswer": { "@type": "Answer", "text": "Finding an artificial intelligence personal assistant near me is easier than ever. AIVized serves businesses across the UK with managed chatbot services. Simply visit our pricing page to see plans starting from £29/month—no matter where you're located, you'll receive the same high-quality service with local understanding of UK business practices." } },
         { "@type": "Question", "name": "What can an artificial intelligence personal assistant in Birmingham do for my business?", "acceptedAnswer": { "@type": "Answer", "text": "An artificial intelligence personal assistant Birmingham can handle customer enquiries 24/7, qualify leads, book appointments, answer FAQs, and integrate with your existing systems. Birmingham businesses use AI assistants for everything from retail customer service to professional services client management." } },
         { "@type": "Question", "name": "What digital assistant services are available in Birmingham?", "acceptedAnswer": { "@type": "Answer", "text": "Digital assistant services Birmingham include AI-powered chatbots for websites, WhatsApp automation, Instagram DM management, and integrated multi-channel support. These services help Birmingham businesses respond instantly to customer enquiries across all their communication channels." } },
         { "@type": "Question", "name": "How does an AI personal assistant in Edinburgh differ from other solutions?", "acceptedAnswer": { "@type": "Answer", "text": "AI personal assistant Edinburgh solutions are tailored to Scotland's business environment, understanding local terminology and preferences. Whether you're in financial services on George Street or hospitality on the Royal Mile, Edinburgh AI assistants are configured to meet your specific industry needs." } },

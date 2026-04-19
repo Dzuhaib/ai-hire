@@ -59,16 +59,16 @@ export const industries: Record<string, IndustryData> = {
       { value: "3 sec", label: "Average response time" }
     ],
     faqs: [
-      { question: "How does a managed AI chatbot service help restaurants capture leads 24/7?", answer: "Our managed AI chatbot service handles bookings and enquiries around the clock. It captures leads from visitors even at 2am, responds instantly, and reduces missed leads from your website—all without any technical skills required from your team." },
-      { question: "Is this an affordable AI chatbot for restaurant websites?", answer: "Yes! Starting from just £29/month, AIVized is the most affordable AI chatbot for restaurant websites in the UK. No developers needed, no setup fees—we install everything for you." },
-      { question: "Can your lead generation chatbot UK handle dietary and allergen questions?", answer: "Absolutely. Our lead generation chatbot UK is trained to provide detailed information about allergens, vegetarian/vegan options, gluten-free dishes, and other dietary needs based on your menu data." },
-      { question: "Will this 24/7 customer support chatbot integrate with my booking system?", answer: "Our 24/7 customer support chatbot captures bookings and sends them directly to you via email. It works alongside existing systems like OpenTable, ResDiary, or simple diary systems without requiring technical integration." },
-      { question: "What happens if a customer asks something the AI chatbot can't answer?", answer: "The AI will politely capture their details and escalate the enquiry to you. You'll receive an email with the customer's question and contact information so you can follow up personally—you never lose a lead." },
-      { question: "How do I update the AI chatbot when my menu changes?", answer: "Simply let us know when you update your menu, and we'll update your AI's knowledge at no extra cost. Seasonal changes, new dishes, price updates—all covered as part of our fully managed service." },
-      { question: "Does this AI chatbot for small business UK work for takeaway orders?", answer: "Yes, our AI chatbot for small business UK can answer questions about your takeaway menu, delivery areas, and ordering process. It can also capture order requests and direct customers to your online ordering system." }
+      { question: "How does a managed AI chatbot service help restaurants capture leads 24/7?", answer: "The chatbot sits on your website and takes reservations, answers menu questions, and collects guest contact details at any hour. During busy service hours or late at night when staff are unavailable, it continues working without interruption." },
+      { question: "Is this an affordable AI chatbot for restaurant websites?", answer: "Plans start from £29 per month with a one-off £50 setup fee. There are no long-term contracts and a 3-day free trial is available." },
+      { question: "Can your lead generation chatbot UK handle dietary and allergen questions?", answer: "Yes. We train the chatbot on your menu, ingredients, and allergen information during setup. It gives accurate answers to dietary queries without needing staff involvement." },
+      { question: "Will this 24/7 customer support chatbot integrate with my booking system?", answer: "The AIVized chatbot works alongside your existing booking system. We configure the integration during setup so reservations flow through to your current process automatically." },
+      { question: "What happens if a customer asks something the AI chatbot cannot answer?", answer: "The chatbot recognises when a question falls outside its knowledge and either collects the customer's contact details for a follow-up or escalates to you directly via email or your preferred channel." },
+      { question: "How do I update the AI chatbot when my menu changes?", answer: "Contact us and we update the chatbot training within your monthly maintenance window. Urgent updates are handled within 24 hours on all plans." },
+      { question: "Does this AI chatbot for small business UK work for takeaway orders?", answer: "Yes. The chatbot can guide customers through your takeaway menu, take order details, and pass them to your kitchen or POS system depending on your setup." }
     ],
     testimonial: {
-      quote: "Since adding AI Vized, we've captured 40% more reservations—especially those late-night bookings we used to miss completely. It's like having a host who never takes a break.",
+      quote: "Since adding AIVized, we've captured 40% more reservations—especially those late-night bookings we used to miss completely. It's like having a host who never takes a break.",
       author: "Marco",
       role: "Owner",
       company: "Trattoria Milano, London"
@@ -184,7 +184,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "Does the chatbot integrate with Shopify, WooCommerce, or other platforms?", answer: "Our AI works via your website and doesn't require complex integrations. It captures enquiries and sends them to you, fitting into your existing workflow whether you use Shopify, WooCommerce, Magento, or custom platforms." }
     ],
     testimonial: {
-      quote: "Our conversion rate jumped 25% after implementing AI Vized. Customers get instant answers to product questions instead of abandoning their carts to 'think about it'.",
+      quote: "Our conversion rate jumped 25% after implementing AIVized. Customers get instant answers to product questions instead of abandoning their carts to 'think about it'.",
       author: "James",
       role: "Founder",
       company: "Urban Lifestyle Co, Bristol"
@@ -242,7 +242,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "Can the chatbot handle NHS and private patient enquiries separately?", answer: "Yes. Your managed AI chatbot can distinguish between NHS and private enquiries, providing appropriate information and directing patients to the right service pathway." }
     ],
     testimonial: {
-      quote: "We've captured 35% more new patient registrations since adding AI Vized. The AI handles out-of-hours enquiries beautifully—patients love getting instant responses about our services.",
+      quote: "We've captured 35% more new patient registrations since adding AIVized. The AI handles out-of-hours enquiries beautifully—patients love getting instant responses about our services.",
       author: "Dr Patel",
       role: "Practice Owner",
       company: "Smile Dental, Birmingham"
@@ -358,7 +358,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "Can the chatbot handle multiple gym locations?", answer: "Yes. Your managed AI chatbot directs enquiries to the correct location, provides location-specific class schedules, and captures leads for each branch." }
     ],
     testimonial: {
-      quote: "Trial bookings are up 30% since we added AI Vized. The chatbot captures those late-night 'I should join a gym' moments that we used to miss completely.",
+      quote: "Trial bookings are up 30% since we added AIVized. The chatbot captures those late-night 'I should join a gym' moments that we used to miss completely.",
       author: "Emma",
       role: "Studio Owner",
       company: "FlexFit Studios, Brighton"
@@ -416,7 +416,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "Can the chatbot handle ATOL and ABTA questions?", answer: "Yes. Your managed AI chatbot provides information about your ATOL/ABTA protection, giving customers confidence in booking with your travel business." }
     ],
     testimonial: {
-      quote: "Evening enquiries have tripled since adding AI Vized. Customers research holidays at night—now we capture those leads instead of losing them to Booking.com.",
+      quote: "Evening enquiries have tripled since adding AIVized. Customers research holidays at night—now we capture those leads instead of losing them to Booking.com.",
       author: "Lisa",
       role: "Director",
       company: "Horizon Travel, Edinburgh"

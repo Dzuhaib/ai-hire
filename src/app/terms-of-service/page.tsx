@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import TermsOfService from "@/views/TermsOfService";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | AI Vized",
-  description: "Read the AI Vized terms of service and usage agreement.",
+  title: "Terms of Service | AIVized",
+  description: "Read the AIVized terms of service and usage agreement.",
   alternates: { canonical: "https://www.aivized.com/terms-of-service" },
 };
 

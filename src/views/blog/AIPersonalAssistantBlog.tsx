@@ -19,7 +19,7 @@ const AIPersonalAssistantBlog = () => {
   const faqs = [
     {
       question: "How do I find an artificial intelligence personal assistant near me?",
-      answer: "Finding an artificial intelligence personal assistant near me is easier than ever. AI Vized serves businesses across the UK with managed chatbot services. Simply visit our pricing page to see plans starting from £29/month—no matter where you're located, you'll receive the same high-quality service with local understanding of UK business practices."
+      answer: "Finding an artificial intelligence personal assistant near me is easier than ever. AIVized serves businesses across the UK with managed chatbot services. Simply visit our pricing page to see plans starting from £29/month—no matter where you're located, you'll receive the same high-quality service with local understanding of UK business practices."
     },
     {
       question: "What can an artificial intelligence personal assistant in Birmingham do for my business?",
@@ -242,7 +242,7 @@ const AIPersonalAssistantBlog = () => {
                 Ready to Find Your AI Personal Assistant?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Whether you're in Birmingham, Edinburgh, or anywhere in the UK, AI Vized provides managed AI chatbot services that transform how you engage with customers.
+                Whether you're in Birmingham, Edinburgh, or anywhere in the UK, AIVized provides managed AI chatbot services that transform how you engage with customers.
               </p>
               <Link
                 href="/pricing"

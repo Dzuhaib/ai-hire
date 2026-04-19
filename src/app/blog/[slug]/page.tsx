@@ -37,7 +37,7 @@ export async function generateMetadata({
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
   return {
-    title: `${title} | AI Vized`,
+    title: `${title} | AIVized`,
     description: `AI chatbot services for UK businesses. Read our guide on ${title.toLowerCase()}.`,
     alternates: { canonical: `https://www.aivized.com/blog/${slug}` },
   };

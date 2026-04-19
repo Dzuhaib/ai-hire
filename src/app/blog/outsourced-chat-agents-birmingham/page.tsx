@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import OutsourcedChatAgentsBlog from "@/views/blog/OutsourcedChatAgentsBlog";
 
 export const metadata: Metadata = {
-  title: "Outsourced Chat Agents Birmingham | AI Vized",
+  title: "Outsourced Chat Agents Birmingham | AIVized",
   description: "Why Birmingham businesses are switching from outsourced chat agents to managed AI chatbots.",
   alternates: { canonical: "https://www.aivized.com/blog/outsourced-chat-agents-birmingham" },
 };

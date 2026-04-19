@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N99PDZ9Q');`,
           }}
         />
-        {/* AI Vized Widget */}
+        {/* AIVized Widget */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function() {

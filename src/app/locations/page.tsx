@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import LocationsPage from "@/views/LocationsPage";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot UK Locations | AI Vized",
+  title: "AI Chatbot UK Locations | AIVized",
   description:
-    "AI Vized managed AI chatbot services across all major UK cities. Find your local AI chatbot service.",
+    "AIVized managed AI chatbot services across all major UK cities. Find your local AI chatbot service.",
   alternates: { canonical: "https://www.aivized.com/locations" },
 };
 

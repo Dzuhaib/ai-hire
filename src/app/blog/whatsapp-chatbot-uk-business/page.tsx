@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import WhatsAppChatbotBlog from "@/views/blog/WhatsAppChatbotBlog";
 
 export const metadata: Metadata = {
-  title: "WhatsApp Chatbot for UK Business | AI Vized",
+  title: "WhatsApp Chatbot for UK Business | AIVized",
   description: "How a WhatsApp chatbot can help UK businesses capture leads and provide 24/7 customer support.",
   alternates: { canonical: "https://www.aivized.com/blog/whatsapp-chatbot-uk-business" },
 };

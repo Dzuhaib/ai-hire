@@ -10,8 +10,8 @@ import { Bot, ArrowLeft, Quote } from "lucide-react";
 const authSideImage = "/assets/auth-side-image.png";
 
 const quotes = [
-  { text: "AI Vized cut our response time from hours to seconds. Our customers love it.", author: "Sarah M.", role: "E-commerce Owner, London" },
-  { text: "We saved over £2,000/month by replacing our outsourced chat team with AI Vized.", author: "James T.", role: "Restaurant Manager, Manchester" },
+  { text: "AIVized cut our response time from hours to seconds. Our customers love it.", author: "Sarah M.", role: "E-commerce Owner, London" },
+  { text: "We saved over £2,000/month by replacing our outsourced chat team with AIVized.", author: "James T.", role: "Restaurant Manager, Manchester" },
   { text: "Setup took 10 minutes. Our AI employee handles 80% of enquiries automatically.", author: "Priya K.", role: "Real Estate Agent, Birmingham" },
   { text: "The best investment we've made this year. It never sleeps and never misses a lead.", author: "David L.", role: "Salon Owner, Leeds" },
 ];
@@ -139,7 +139,7 @@ const AuthPage = () => {
               <div className="relative w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                 <Bot className="w-5 h-5 text-primary relative z-10" />
               </div>
-              <span className="text-2xl font-serif font-semibold tracking-tight text-gradient">AI Vized</span>
+              <span className="text-2xl font-serif font-semibold tracking-tight text-gradient">AIVized</span>
             </Link>
 
             {/* Header */}
@@ -149,8 +149,8 @@ const AuthPage = () => {
               </h1>
               <p className="text-muted-foreground text-sm">
                 {isSignUp
-                  ? "Start automating your business with AI Vized"
-                  : "Sign in to manage your AI Vized dashboard"}
+                  ? "Start automating your business with AIVized"
+                  : "Sign in to manage your AIVized dashboard"}
               </p>
             </div>
 

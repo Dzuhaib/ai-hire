@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import AIAutomationUKBlog from "@/views/blog/AIAutomationUKBlog";
 
 export const metadata: Metadata = {
-  title: "AI Business Automation UK | AI Vized",
+  title: "AI Business Automation UK | AIVized",
   description: "How AI business automation is transforming UK SMEs. Digital assistant services and virtual assistants for Birmingham businesses.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-automation-uk-business" },
 };

@@ -265,7 +265,7 @@ const LocationPage = () => {
                 viewport={{ once: true }}
                 className="mb-8"
               >
-                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Why AI Vized</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Why AIVized</p>
                 <h2 className="text-3xl md:text-4xl font-serif font-semibold">
                   Why {location.city} Businesses Choose Us
                 </h2>
@@ -468,7 +468,7 @@ const LocationPage = () => {
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Questions About AI Vized in {location.city}
+              Questions About AIVized in {location.city}
             </h2>
           </motion.div>
 
@@ -506,7 +506,7 @@ const LocationPage = () => {
               Ready to Transform Your {location.city} Business?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join hundreds of UK businesses already using AI Vized to deliver exceptional customer service 24/7. 
+              Join hundreds of UK businesses already using AIVized to deliver exceptional customer service 24/7. 
               No contracts, no technical skills needed, setup in under 24 hours.
             </p>
 

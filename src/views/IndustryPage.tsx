@@ -270,7 +270,7 @@ const IndustryPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Perfect For</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Who Uses AI Vized for {industry.industry}?</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Who Uses AIVized for {industry.industry}?</h2>
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-3">
@@ -382,7 +382,7 @@ const IndustryPage = () => {
               Ready to Transform Your {industry.industry} Business?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join hundreds of UK {industry.industry.toLowerCase()} businesses already using AI Vized to deliver exceptional customer service 24/7.
+              Join hundreds of UK {industry.industry.toLowerCase()} businesses already using AIVized to deliver exceptional customer service 24/7.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

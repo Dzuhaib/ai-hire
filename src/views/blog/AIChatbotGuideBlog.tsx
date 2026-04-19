@@ -26,16 +26,12 @@ const AIChatbotGuideBlog = () => {
       answer: "A WhatsApp chatbot UK automatically engages customers on WhatsApp—the UK's most popular messaging app. It answers enquiries instantly, qualifies leads by asking relevant questions, collects contact details, and books appointments. Because WhatsApp messages have 98% open rates compared to 20% for email, it's one of the most effective lead generation channels available."
     },
     {
-      question: "What AI consulting services are available in Manchester?",
-      answer: "AI consulting services Manchester include chatbot strategy development, customer journey mapping, AI implementation planning, and ROI analysis. AIVized provides end-to-end AI consulting for Manchester businesses, from initial assessment through deployment and optimisation, with plans starting from £29/month."
+      question: "What is a managed AI chatbot service vs a DIY chatbot builder?",
+      answer: "A managed AI chatbot service means the provider handles installation, training, monitoring, and updates on your behalf. You subscribe and the service is live within 24 hours. A DIY chatbot builder gives you the tools to build it yourself, which requires technical knowledge, ongoing maintenance, and significant time investment. For most UK small businesses, managed is the better choice because it removes the technical burden entirely."
     },
     {
-      question: "How can an AI agency Leeds help my business grow?",
-      answer: "An AI agency Leeds helps businesses automate customer engagement, capture more leads, and provide 24/7 support. Leeds businesses particularly benefit from AI chatbots for handling enquiries from the wider Yorkshire region, integrating with local delivery services, and providing multilingual support for the city's diverse customer base."
-    },
-    {
-      question: "What AI service providers are in Kensington, United Kingdom?",
-      answer: "AI service providers Kensington United Kingdom cater to the area's premium business market with sophisticated chatbot solutions for luxury retail, professional services, and high-end hospitality. AIVized serves Kensington businesses with white-label AI chatbots that match the premium brand experience their customers expect."
+      question: "What questions should I ask before signing up to a chatbot service?",
+      answer: "Ask: Is the chatbot trained on my specific business, or is it generic? Who handles updates when my products or services change? What happens when the chatbot cannot answer a question? Is there a contract, and what are the cancellation terms? Is the service GDPR compliant and where is my customer data stored? How is performance reported, and what metrics will I see?"
     },
     {
       question: "Do I need technical skills to set up an AI chatbot for my UK business?",
@@ -167,39 +163,25 @@ const AIChatbotGuideBlog = () => {
               </ul>
             </div>
 
-            <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
-              AI Consulting Services Manchester: Expert Guidance for Your Chatbot Strategy
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              <Link href="/locations/manchester" className="text-primary hover:underline">Manchester</Link> has established itself as the UK's second tech city, and <strong>AI consulting services Manchester</strong> are at the forefront of helping businesses adopt intelligent automation. From the Northern Quarter's creative agencies to Spinningfields' financial firms, Manchester businesses are turning to <Link href="/blog/ai-service-providers-uk" className="text-primary hover:underline">AI consultants</Link> to map their customer journeys and identify automation opportunities.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              A good AI consulting service doesn't just sell you technology—it understands your business first. What are your customers asking? Where are you losing leads? When do enquiries peak? These insights shape a chatbot strategy that delivers measurable results, not just a fancy widget on your website.
-            </p>
-
-            <BlogInlineImage src={guideInline2} alt="Business consultant explaining AI strategy on whiteboard" />
+            <BlogInlineImage src={guideInline2} alt="Business owner reviewing chatbot analytics on laptop" />
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
-              AI Agency Leeds: Yorkshire's Growing AI Ecosystem
+              How to Evaluate Any AI Chatbot Service for Your UK Business
             </h2>
             <p className="text-muted-foreground mb-6">
-              <Link href="/locations/leeds" className="text-primary hover:underline">Leeds</Link> is emerging as a significant player in the UK's AI landscape. An <strong>AI agency Leeds</strong> serves businesses across Yorkshire and beyond, providing chatbot solutions tailored to the region's diverse economy—from financial services in the city centre to manufacturing in the wider West Yorkshire area.
+              Choosing the right chatbot service matters more than choosing a chatbot. Most UK small businesses fail with chatbots not because the technology is bad, but because they picked the wrong type of service for their situation.
             </p>
             <p className="text-muted-foreground mb-6">
-              What makes Leeds-focused AI services particularly effective is their understanding of the local market. Yorkshire businesses value straightforward communication and tangible results. The best AI agencies in Leeds deliver exactly that: no-nonsense chatbot solutions that start working from day one, with clear metrics showing the impact on lead generation and customer satisfaction.
-            </p>
-
-            <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
-              AI Service Providers Canary Wharf & Kensington: Premium Solutions for London
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              <Link href="/locations/london" className="text-primary hover:underline">London's</Link> business districts demand premium service, and <strong>AI service providers Canary Wharf</strong> and <strong>AI service providers Kensington United Kingdom</strong> deliver exactly that. From fintech startups in Canary Wharf's towers to luxury boutiques on Kensington High Street, London businesses require chatbot solutions that match their brand's sophistication.
+              <strong>Managed vs DIY:</strong> A managed service means the provider installs the chatbot, trains it on your business, and handles ongoing maintenance. A DIY builder gives you tools to configure it yourself. Managed works better for most small businesses because the time cost of DIY is rarely accounted for up front. If you have no technical staff, managed is almost always the better value.
             </p>
             <p className="text-muted-foreground mb-6">
-              For Canary Wharf's financial services sector, AI chatbots handle client onboarding queries, compliance documentation, and appointment scheduling with the precision and professionalism these firms require. In Kensington, AI assistants serve the luxury retail market with personalised product recommendations, VIP appointment booking, and multilingual support for the area's international clientele.
+              <strong>Questions to ask before signing up:</strong> Is the chatbot trained on your specific products, services, and policies—or is it a generic template? Who updates it when your offerings change? What happens when the chatbot cannot answer a question? Is there a contract, and what are the exit terms? Where is your customer data stored, and is the service GDPR compliant? How do you see performance data, and what does the reporting look like?
             </p>
             <p className="text-muted-foreground mb-6">
-              Whether you're an <strong>AI service provider in Canary Wharf</strong> serving enterprise clients or a boutique consultancy in Kensington, the right chatbot solution adapts to your specific market position and customer expectations.
+              <strong>Red flags to watch for:</strong> Providers who cannot show you example chatbot conversations. Contracts of 12 months or more before you have seen results. No clear answer on data storage location. Pricing that increases significantly once you need updates. Providers who promise specific traffic or lead numbers without knowing anything about your business.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              <strong>Assessing whether the price is fair:</strong> A managed chatbot service that handles installation, training, monitoring, and updates should cost somewhere between £29 and £150 per month for most small business needs. If a provider charges more than £200 per month for a basic website chatbot, ask exactly what is included and whether those extras are things you actually need. If a provider charges less than £20 per month for a fully managed service, ask what is not included.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
@@ -226,7 +208,7 @@ const AIChatbotGuideBlog = () => {
               With AIVized's managed service, getting an AI chatbot is as simple as subscribing to a plan. We handle the entire process—from understanding your business to deploying your chatbot across your chosen channels. No developers, no code, no headaches. Most businesses are live within 24 hours.
             </p>
             <p className="text-muted-foreground mb-6">
-              Whether you're searching for <strong>AI consulting services Manchester</strong>, looking for an <strong>AI agency Leeds</strong>, or need <strong>AI service providers Canary Wharf</strong> quality without the Canary Wharf price tag, AIVized's plans start from just £29/month with a 14-day money-back guarantee.
+              AIVized works with small businesses across the UK—restaurants, estate agents, clinics, law firms, gyms, and travel agencies. Plans start from just £29/month with a 3-day free trial and no long-term contract.
             </p>
 
             {/* FAQ Section */}
