@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
 import { InternalLinksSection } from "@/components/InternalLinksSection";
+import { ServicesSection } from "@/components/ServicesSection";
 import {
   PainSkeleton,
   AIShowcaseSkeleton,
@@ -76,6 +77,7 @@ const Index = () => {
         <Suspense fallback={<IndustriesSkeleton />}>
           <IndustriesSection />
         </Suspense>
+        <ServicesSection />
         <Suspense fallback={<HowItWorksSkeleton />}>
           <HowItWorksSection />
         </Suspense>
