@@ -28,19 +28,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: BASE_URL,
       lastModified: NOW,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/about`,
       lastModified: NOW,
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/pricing`,
       lastModified: NOW,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.9,
     },
     {
@@ -52,13 +52,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/industries`,
       lastModified: NOW,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/locations`,
       lastModified: NOW,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.8,
     },
   ];
@@ -67,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticBlogPages: MetadataRoute.Sitemap = staticBlogSlugs.map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,
     lastModified: NOW,
-    changeFrequency: "monthly" as const,
+    changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
 
@@ -75,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const cityBlogPages: MetadataRoute.Sitemap = cityBlogPosts.map((post) => ({
     url: `${BASE_URL}/blog/website-chatbot-24-7-${post.slug}`,
     lastModified: NOW,
-    changeFrequency: "monthly" as const,
+    changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
 
@@ -83,7 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const industryPages: MetadataRoute.Sitemap = Object.values(industries).map((industry) => ({
     url: `${BASE_URL}/industries/${industry.slug}`,
     lastModified: NOW,
-    changeFrequency: "monthly" as const,
+    changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
@@ -91,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const industryCityPages: MetadataRoute.Sitemap = allIndustryCities.map((entry) => ({
     url: `${BASE_URL}/industries/${entry.industrySlug}/${entry.citySlug}`,
     lastModified: NOW,
-    changeFrequency: "monthly" as const,
+    changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
 
@@ -99,7 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locationPages: MetadataRoute.Sitemap = ukLocations.map((loc) => ({
     url: `${BASE_URL}/locations/${loc.slug}`,
     lastModified: NOW,
-    changeFrequency: "monthly" as const,
+    changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
 
