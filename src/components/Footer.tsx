@@ -1,8 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot } from "lucide-react";
+import { Bot, Facebook, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
+
+const socials = [
+  { label: "Facebook", href: "https://www.facebook.com/aivized", icon: Facebook },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/ai-vized/", icon: Linkedin },
+  { label: "Instagram", href: "https://www.instagram.com/aivizedofficial?igsh=NTZqdHE0dmN3MDA3", icon: Instagram },
+];
 
 export const Footer = () => {
   return (
@@ -59,6 +65,20 @@ export const Footer = () => {
             <a href="mailto:aivized.com@gmail.com" className="hover:text-foreground transition-colors">
               aivized.com@gmail.com
             </a>
+            <div className="flex items-center gap-2">
+              {socials.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-8 h-8 rounded-lg border border-border/60 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-200"
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
