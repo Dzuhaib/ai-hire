@@ -164,19 +164,9 @@ const IndustryCityPage = () => {
         </div>
       </section>
 
-      {/* Why section */}
+      {/* Stats section */}
       <section className="section-padding bg-muted/30">
         <div className="container-narrow">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Why {cityData.cityName}?</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              {parentIndustry.industry} AI Chatbot <span className="text-gradient">Built for {cityData.cityName}</span>
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              {cityData.localFact} Our managed AI chatbot is trained for {parentIndustry.industry.toLowerCase()} businesses and handles customer enquiries around the clock.
-            </p>
-          </motion.div>
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {parentIndustry.stats.map((stat, idx) => (
               <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.05 }}
@@ -211,6 +201,20 @@ const IndustryCityPage = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* City-specific unique content */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-narrow max-w-3xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
+              {parentIndustry.industry} businesses in {cityData.cityName} and why AIVized fits
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              {cityData.localFact}
+            </p>
+          </motion.div>
         </div>
       </section>
 

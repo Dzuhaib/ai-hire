@@ -13,6 +13,47 @@ const pricingSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Product",
+      "name": "AIVized Managed AI Chatbot Service",
+      "description": "Fully managed AI chatbot installation and maintenance for UK small businesses.",
+      "brand": {
+        "@type": "Brand",
+        "name": "AIVized"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Starter",
+          "price": "29",
+          "priceCurrency": "GBP",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "MONTH" },
+          "description": "Managed AI chatbot for small businesses. Up to 500 conversations per month.",
+          "availability": "https://schema.org/InStock",
+          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" }
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional",
+          "price": "79",
+          "priceCurrency": "GBP",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "GBP", "unitText": "MONTH" },
+          "description": "Lead generation chatbot for growing businesses. Up to 2,500 conversations per month.",
+          "availability": "https://schema.org/InStock",
+          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" }
+        },
+        {
+          "@type": "Offer",
+          "name": "Business",
+          "price": "149",
+          "priceCurrency": "GBP",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "GBP", "unitText": "MONTH" },
+          "description": "Enterprise-grade managed AI chatbot with dedicated account manager. Unlimited conversations.",
+          "availability": "https://schema.org/InStock",
+          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" }
+        }
+      ]
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
