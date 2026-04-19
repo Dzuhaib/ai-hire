@@ -7,15 +7,14 @@ export const AIShowcaseSection = () => {
     <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/30">
       <div className="container-narrow">
         <div className="text-center mb-12">
-          <p className="label-tag mb-3">Meet Your AI Colleague</p>
+          <p className="label-tag mb-3">Managed AI Services</p>
 
           <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
-            Hire Your <span className="text-gradient">AI Colleague</span> Today
+            Your Business, <span className="text-gradient">Fully Automated</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Your fully managed AI chatbot engages with customers naturally, answering questions and
-            capturing leads 24/7. We install and handle everything—no technical skills needed.
+            AIVized manages AI chatbots, social media automation, and business workflow automation for UK small businesses. We handle setup, training, and ongoing maintenance — no technical skills needed.
           </p>
         </div>
 
@@ -43,9 +42,9 @@ export const AIShowcaseSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
           {[
-            { label: "Instant Responses", desc: "No waiting, no delays" },
-            { label: "Natural Conversation", desc: "Feels like talking to a human" },
-            { label: "Never Takes a Break", desc: "Works while you sleep" },
+            { label: "AI Chatbot", desc: "Captures leads and answers enquiries 24/7" },
+            { label: "Social Media", desc: "DM automation across Instagram, Facebook, LinkedIn" },
+            { label: "Workflow Automation", desc: "Follow-ups, reminders, onboarding — all handled" },
           ].map((item, index) => (
             <div key={index} className="text-center p-4">
               <div className="w-2 h-2 rounded-full bg-primary mx-auto mb-3" />
