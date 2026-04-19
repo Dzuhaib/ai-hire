@@ -27,6 +27,9 @@ export const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4 md:gap-6 text-sm text-muted-foreground flex-wrap justify-center">
+            <Link href="/about" className="hover:text-foreground transition-colors">
+              About
+            </Link>
             <Link href="/pricing" className="hover:text-foreground transition-colors">
               Pricing
             </Link>
@@ -50,7 +53,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} aivized. All rights reserved.
+            © {new Date().getFullYear()} AIVized. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <a href="mailto:aivized.com@gmail.com" className="hover:text-foreground transition-colors">

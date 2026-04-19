@@ -25,19 +25,19 @@ export const InternalLinksSection = () => {
       title: "WhatsApp Chatbot for UK Businesses",
       href: "/blog/whatsapp-chatbot-uk-business",
       icon: MessageCircle,
-      keyword: "24/7 outsourced chat agents Birmingham",
+      keyword: "24/7 AI messaging from £29/month",
     },
     {
-      title: "Website Chatbot Solutions",
+      title: "Website Chatbot for UK Small Businesses",
       href: "/blog/website-chatbot-small-business",
       icon: Globe,
-      keyword: "digital assistant services Birmingham",
+      keyword: "How managed AI chatbots work",
     },
     {
       title: "Instagram Chatbot Automation",
       href: "/blog/instagram-chatbot-social-media",
       icon: Instagram,
-      keyword: "AI service providers Canary Wharf",
+      keyword: "Automate DMs and capture leads 24/7",
     },
   ];
 

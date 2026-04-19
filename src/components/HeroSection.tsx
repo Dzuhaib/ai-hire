@@ -78,7 +78,7 @@ export const HeroSection = () => {
             {[
               "We manage everything",
               "Available 24 hours a day",
-              "30% more conversions",
+              "Leads captured overnight",
               "GDPR compliant",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
