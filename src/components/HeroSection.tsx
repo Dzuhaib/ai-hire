@@ -32,15 +32,14 @@ export const HeroSection = () => {
 
         {/* Main heading — Cormorant Garamond at full expression */}
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-8 max-w-4xl text-balance">
-          Your Business{" "}
-          <em className="not-italic text-primary">Deserves</em> a{" "}
-          24/7 AI&nbsp;Colleague
+          Managed AI Chatbot{" "}
+          for <em className="not-italic text-primary">UK Small</em>{" "}
+          Businesses
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-4 leading-relaxed">
-          We install, monitor, and maintain your AI chatbot so you can focus on running your business.
-          No technical skills needed. No contracts. No downtime.
+        <p className="lead text-lg md:text-xl text-muted-foreground max-w-xl mb-4 leading-relaxed">
+          AIVized is a managed AI chatbot service for UK small businesses. From £29/month, we install and maintain a chatbot on your website that captures leads and answers enquiries 24/7. No technical skills required.
         </p>
 
         <p className="text-sm text-muted-foreground/75 max-w-lg mb-12">
