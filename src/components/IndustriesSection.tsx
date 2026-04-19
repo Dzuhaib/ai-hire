@@ -13,7 +13,7 @@ const industries = [
       "Answer menu & allergy questions instantly",
       "Process takeaway orders automatically",
     ],
-    stat: "40% more bookings",
+    stat: "Bookings handled overnight",
   },
   {
     title: "Real Estate",
@@ -26,7 +26,7 @@ const industries = [
       "Schedule viewings 24/7",
       "Answer property questions instantly",
     ],
-    stat: "3x more viewings",
+    stat: "Leads qualified around the clock",
   },
   {
     title: "E-commerce",
@@ -39,7 +39,7 @@ const industries = [
       "Track orders automatically",
       "Reduce cart abandonment",
     ],
-    stat: "25% more sales",
+    stat: "Enquiries answered 24/7",
   },
 ];
 
@@ -60,7 +60,7 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.4 }}
             className="label-tag mb-3"
           >
-            Trained For Your Industry
+            Built for Your Industry
           </motion.p>
 
           <motion.h2
@@ -70,7 +70,7 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.4, delay: 0.05 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4"
           >
-            This Is <span className="text-gradient">Your AI Colleague</span>
+            Automation Tailored to <span className="text-gradient">Your Business</span>
           </motion.h2>
 
           <motion.p
@@ -80,7 +80,7 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Not just a chatbot. A real team member trained for your business, your customers, and your industry.
+            Every industry has different workflows and customer questions. AIVized sets up and manages automation that fits how your business actually works.
           </motion.p>
         </div>
 
@@ -147,7 +147,7 @@ export const IndustriesSection = () => {
               className="btn-primary text-sm px-6 py-3 whitespace-nowrap"
               onClick={() => scrollToSection("#pricing")}
             >
-              Rent Your AI Colleague
+              See Pricing
               <ArrowRight className="w-4 h-4 ml-2 inline-block" />
             </button>
           </div>
