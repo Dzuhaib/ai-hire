@@ -34,7 +34,7 @@ const schema = {
           "areaServed": "GB"
         },
         "sameAs": [
-          "https://www.linkedin.com/company/aivized"
+          "https://www.linkedin.com/company/ai-vized/"
         ]
       }
     },

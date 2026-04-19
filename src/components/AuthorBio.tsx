@@ -35,7 +35,7 @@ export function AuthorBio({
             </Link>
             <span className="text-muted-foreground/40">·</span>
             <a
-              href="https://www.linkedin.com/company/aivized"
+              href="https://www.linkedin.com/company/ai-vized/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-primary transition-colors underline"

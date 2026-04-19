@@ -53,7 +53,7 @@ const homepageSchema = {
       "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "aivized.com@gmail.com", "availableLanguage": "English", "areaServed": "GB" },
       "sameAs": [
-        "https://www.linkedin.com/company/aivized",
+        "https://www.linkedin.com/company/ai-vized/",
         "https://twitter.com/aivized",
         "https://www.facebook.com/aivized",
         "https://www.instagram.com/aivized"
