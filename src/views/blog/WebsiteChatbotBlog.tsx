@@ -23,20 +23,20 @@ const websiteInline3 = "/assets/blog/website-inline-3.png";
 const WebsiteChatbotBlog = () => {
   const faqs = [
     {
-      question: "What are digital assistant services Birmingham?",
-      answer: "Digital assistant services in Birmingham encompass AI-powered chatbots and virtual assistants that automate customer interactions on your website. These services help Birmingham businesses provide instant support, qualify leads, and handle enquiries 24/7 without hiring additional staff."
+      question: "How does a managed website chatbot differ from a DIY chatbot builder?",
+      answer: "With a DIY chatbot builder, you configure the chatbot yourself, write the conversation flows, handle the installation, and maintain it whenever your content changes. A managed service like AIVized does all of that for you. You share your business details and we install, train, and maintain the chatbot on your behalf."
     },
     {
-      question: "How does an AI chatbot for small business UK work on websites?",
-      answer: "An AI chatbot for small business UK works by embedding an intelligent chat widget on your website. When visitors arrive, the chatbot greets them, answers common questions, captures contact details, and can even book appointments—all automatically. It's trained on your specific business information for relevant, helpful responses."
+      question: "How does an AI chatbot for small business UK work on a website?",
+      answer: "An AI chatbot for small business UK works by embedding a chat widget on your website. When visitors arrive, the chatbot greets them, answers common questions, captures contact details, and can guide them toward booking or purchasing — all automatically, based on the knowledge base we build from your business information."
     },
     {
-      question: "What do AI service providers Kensington United Kingdom offer?",
-      answer: "AI service providers in Kensington, United Kingdom offer premium chatbot solutions tailored for high-end businesses. Services include custom AI development, integration with existing CRM systems, multilingual support for international clientele, and white-glove installation with ongoing optimisation."
+      question: "Will a website chatbot work on my existing site without a rebuild?",
+      answer: "Yes. AIVized installs the chatbot by adding a single script tag to your website. This works with any website platform — WordPress, Shopify, Wix, Squarespace, or a custom-built site. No rebuild or technical work is required from your side."
     },
     {
-      question: "Can I use an AI virtual assistant for HR Birmingham?",
-      answer: "Absolutely! An AI virtual assistant for HR in Birmingham can handle employee queries about policies, holiday requests, and onboarding processes. This reduces HR workload while ensuring staff get instant answers to routine questions, improving satisfaction and productivity across your Birmingham-based team."
+      question: "What happens when the chatbot can't answer a question?",
+      answer: "When a visitor asks something outside the chatbot's knowledge base, it escalates the conversation to your team with the full conversation context attached. Your team sees exactly what was asked and can follow up with everything they need to help."
     }
   ];
 
@@ -56,104 +56,80 @@ const WebsiteChatbotBlog = () => {
           <motion.header initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-amber-500/10 text-amber-600 text-sm font-medium mb-6">Website</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
-              Website Chatbot Solutions: Digital Assistant Services for UK SMEs
+              Website Chatbot for UK Small Businesses: How Managed AI Works
             </h1>
             <div className="flex items-center gap-6 text-muted-foreground mb-8">
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />29 January 2026</span>
               <span className="flex items-center gap-2"><Clock className="w-4 h-4" />7 min read</span>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-video bg-secondary relative">
-              <Image src={websiteHero} alt="Website Chatbot for UK Business" fill className="object-cover" priority />
+              <Image src={websiteHero} alt="Website Chatbot for UK Small Business" fill className="object-cover" priority />
             </div>
           </motion.header>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              Your website is often the first touchpoint potential customers have with your business. In an era where instant gratification is the norm, making visitors wait for answers can mean losing them forever. According to{" "}
-              <a href="https://www.salesforce.com/uk/resources/research-reports/state-of-the-connected-customer/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Salesforce research</a>,{" "}
-              83% of customers expect an immediate response when they contact a company. Website chatbots are transforming how <Link href="/locations" className="text-primary hover:underline">UK businesses</Link> engage visitors and convert them into customers. See how chatbots help <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">reduce missed leads</Link>.
+              Your website is often the first place a potential customer tries to contact you. If they land on your site at 8pm with a question and find no way to get an instant answer, most will leave and try a competitor. A managed website chatbot solves this by providing an instant, accurate response every time — with no action required from you. See how chatbots help <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">reduce missed leads from your website</Link>.
             </p>
 
-            <h2 id="digital-assistant-services-birmingham">Digital Assistant Services Birmingham</h2>
-            <p><Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>, the UK's second-largest city, is home to over 40,000 businesses competing for customer attention. Digital assistant services in Birmingham have become essential for companies looking to stand out in this crowded marketplace.</p>
+            <h2 id="what-a-managed-website-chatbot-does">What a Managed Website Chatbot Does</h2>
+            <p>A website chatbot sits in the corner of your site and responds to visitor messages automatically. Unlike a basic FAQ widget, a managed AI chatbot holds a real conversation — it can ask clarifying questions, collect contact details, and guide visitors toward the outcome you want, whether that's a booking, a quote request, or a direct purchase.</p>
 
-            <BlogInlineImage src={websiteInline1} alt="Website chatbot widget on laptop screen in modern office" />
+            <BlogInlineImage src={websiteInline1} alt="Website chatbot widget on laptop screen in modern UK office" />
 
-            <p>A website chatbot serves as your digital assistant, working tirelessly to:</p>
-            <ul>
-              <li>Greet every visitor with a personalised welcome</li>
-              <li>Answer product and service questions instantly</li>
-              <li>Guide customers through your offerings</li>
-              <li>Capture leads with intelligent qualification</li>
-              <li>Book appointments and consultations</li>
-            </ul>
-            <p>For Birmingham businesses, this means never missing an opportunity—whether a customer visits your site at 3pm or 3am.</p>
-
-            <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
-            <p>The perception that AI technology is only for large corporations is outdated. Today's <Link href="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">AI chatbot for small business UK</Link> is designed with SMEs in mind—affordable, easy to implement, and requiring no technical expertise.</p>
-
-            <BlogInlineImage src={websiteInline2} alt="Birmingham UK city skyline at golden hour" />
-
-            <p>Consider the typical journey of a website visitor:</p>
-            <ol>
-              <li>They land on your homepage with a specific question</li>
-              <li>They can't find the answer quickly enough</li>
-              <li>They leave to check a competitor's site</li>
-              <li>You've lost a potential customer</li>
-            </ol>
-            <p>A website chatbot intercepts this journey at step 2, providing instant answers and keeping visitors engaged. For small businesses, this can mean the difference between growth and stagnation.</p>
-
-            <div className="not-prose my-8 p-6 rounded-lg bg-amber-500/10 border border-amber-400/20">
-              <h3 className="text-lg font-semibold mb-4">Research Insight</h3>
-              <p className="text-muted-foreground">
-                Businesses that implement AI chatbots see significant improvements in lead capture and response times. According to{" "}
-                <a href="https://www.ibm.com/think/insights/artificial-intelligence/conversational-ai" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">IBM research on conversational AI</a>,{" "}
-                chatbots can handle up to 80% of routine customer enquiries, freeing teams to focus on high-value interactions.
-              </p>
-            </div>
-
-            <h2 id="ai-service-providers-kensington-united-kingdom">AI Service Providers Kensington United Kingdom</h2>
-            <p>Kensington represents one of <Link href="/locations/london" className="text-primary hover:underline">London's</Link> most prestigious business districts, where client expectations are exceptionally high. <Link href="/blog/ai-service-providers-uk" className="text-primary hover:underline">AI service providers</Link> in Kensington, United Kingdom cater to luxury brands, professional services, and high-net-worth clientele.</p>
-            <p>Premium website chatbot solutions for Kensington businesses include:</p>
+            <p>During setup, we train your chatbot on your products, pricing, services, and the most common questions your customers ask. Once live, it handles:</p>
             <div className="not-prose my-8 grid gap-4">
               {[
-                "Sophisticated, brand-aligned chat interfaces",
-                "Multilingual support for international visitors",
-                "Integration with premium CRM platforms",
-                "VIP detection and prioritised responses",
-                "Seamless handover to personal account managers"
+                "Greets visitors and answers questions within seconds",
+                "Handles pricing, availability, and service enquiries automatically",
+                "Captures contact details from interested visitors",
+                "Books appointments and guides customers toward next steps",
+                "Escalates complex enquiries to your team with full context"
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                   <span>{feature}</span>
                 </div>
               ))}
             </div>
 
-            <h2 id="ai-virtual-assistant-for-hr-birmingham">AI Virtual Assistant for HR Birmingham</h2>
-            <p>Beyond customer-facing applications, AI virtual assistants are revolutionising internal operations. An AI virtual assistant for HR in Birmingham can transform how your human resources department operates.</p>
+            <h2 id="managed-vs-diy">Managed AI vs DIY Chatbot Builders</h2>
+            <p>DIY chatbot platforms advertise low monthly fees. What they don't advertise is the time cost. Building a functional chatbot on a DIY platform requires 10–20 hours upfront to build and test conversation flows, then 2–4 hours per month to keep content updated.</p>
 
-            <BlogInlineImage src={websiteInline3} alt="Customer service dashboard showing live chat analytics and lead metrics" />
+            <BlogInlineImage src={websiteInline2} alt="UK small business owner reviewing website chatbot conversations on a laptop" />
 
-            <p>Internal HR chatbots can handle:</p>
+            <p>For a business owner whose time is worth £30–£50 per hour, the "free" DIY option costs several hundred pounds in the first month alone. A managed service at £29 per month that handles installation, training, and ongoing updates is significantly cheaper in practice.</p>
+
+            <div className="not-prose my-8 p-6 rounded-lg bg-amber-500/10 border border-amber-400/20">
+              <h3 className="text-lg font-semibold mb-4">Research Insight</h3>
+              <p className="text-muted-foreground">
+                Chatbots can handle up to 80% of routine customer enquiries automatically, freeing your team to focus on high-value interactions. For small businesses without a dedicated support team, this means every visitor gets a response — not just those who contact you during office hours.
+              </p>
+            </div>
+
+            <h2 id="website-chatbot-for-small-business">Website Chatbots for UK Small Businesses</h2>
+            <p>The most common customer journey on a small business website looks like this: a visitor arrives with a specific question, can't find the answer quickly enough, and leaves to check a competitor. A website chatbot intercepts that journey and keeps the visitor engaged.</p>
+
+            <BlogInlineImage src={websiteInline3} alt="Customer service analytics dashboard showing improved engagement metrics" />
+
+            <p>For UK small businesses, the benefit is direct:</p>
             <ul>
-              <li>Employee policy queries and handbook questions</li>
-              <li>Holiday booking and balance enquiries</li>
-              <li>Onboarding information for new starters</li>
-              <li>Expense submission guidance</li>
-              <li>Training and development queries</li>
+              <li>Visitors outside office hours get instant answers instead of empty contact forms</li>
+              <li>Common questions are answered automatically, reducing time your team spends on repetitive enquiries</li>
+              <li>Lead details are captured and sent to you before a visitor leaves</li>
+              <li>The chatbot works on any website platform with a single line of code</li>
             </ul>
-            <p>This frees your HR team to focus on strategic initiatives while ensuring employees get immediate answers to routine questions.</p>
+            <p>Learn more in our <Link href="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">complete guide to AI chatbots for UK small businesses</Link>.</p>
 
-            <h2>Implementing a Website Chatbot</h2>
-            <p>Getting started with a website chatbot is simpler than you might think. With AIVized's <Link href="/#how-it-works" className="text-primary hover:underline">managed service</Link>:</p>
+            <h2>How AIVized Installs Your Website Chatbot</h2>
+            <p>Getting a website chatbot live requires no technical skills from your side. Here's how the managed service works:</p>
             <ol>
-              <li><strong>We Install Everything:</strong> A single line of code added to your website—we handle the rest</li>
-              <li><strong>Custom Configuration:</strong> Your chatbot is tailored to your business, products, and tone of voice</li>
-              <li><strong>Ongoing Optimisation:</strong> We monitor conversations and continuously improve responses</li>
-              <li><strong>No Technical Skills Required:</strong> Our team manages all technical aspects</li>
+              <li><strong>We learn about your business:</strong> Products, services, pricing, FAQs, and brand voice</li>
+              <li><strong>We build and test the chatbot:</strong> Trained on your specific business, verified before launch</li>
+              <li><strong>We install it on your site:</strong> A single script tag — no rebuild required</li>
+              <li><strong>We monitor and update it:</strong> Ongoing improvements and updates when your content changes</li>
             </ol>
-            <p>Whether you're running digital assistant services in Birmingham or premium AI solutions in Kensington, a website chatbot can transform your online presence.</p>
+            <p>Plans start from <Link href="/pricing" className="text-primary hover:underline">£29 per month</Link> with no long-term contracts.</p>
           </motion.div>
 
           <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 pt-12 border-t border-border">
@@ -170,14 +146,13 @@ const WebsiteChatbotBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-border text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Ready to Add a Chatbot to Your Website?</h3>
-            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">Join hundreds of UK businesses already using AIVized's managed website chatbot service. From £29/month with complete installation included.</p>
+            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">AIVized handles everything — installation, training, and monitoring. From £29/month with complete setup included.</p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">View Pricing</Link>
           </motion.div>
-                  <AuthorBio />
+          <AuthorBio />
         </article>
       </main>
-      
-      
+
       <Footer />
     </div>
   );

@@ -23,20 +23,20 @@ const whatsappInline3 = "/assets/blog/whatsapp-inline-3.png";
 const WhatsAppChatbotBlog = () => {
   const faqs = [
     {
-      question: "What is an artificial intelligence personal assistant near me?",
-      answer: "An artificial intelligence personal assistant near you is a locally-deployed AI solution that understands your business context. At AIVized, we provide managed AI assistants specifically configured for UK businesses, offering 24/7 support without the need for in-house technical expertise."
+      question: "How does a WhatsApp chatbot work for a UK business?",
+      answer: "A WhatsApp chatbot connects to your business number via the official Meta Business API. When a customer sends a message, the chatbot responds instantly using a knowledge base we build from your products, services, and FAQs. It handles enquiries 24 hours a day without any action required from you."
     },
     {
-      question: "How do AI service providers Manchester United Kingdom help businesses?",
-      answer: "AI service providers in Manchester, United Kingdom like AIVized help local businesses automate customer communications through WhatsApp chatbots. We handle installation, monitoring, and continuous optimisation so Manchester businesses can focus on growth while their AI assistant captures leads around the clock."
+      question: "Do I need technical skills to set up a WhatsApp chatbot?",
+      answer: "No. AIVized's managed service handles the full setup — connecting to the WhatsApp Business API, training the chatbot on your business, and installing it on your number. You share your business details and we deliver a working chatbot within 24 hours."
     },
     {
-      question: "What are 24/7 outsourced chat agents Birmingham?",
-      answer: "24/7 outsourced chat agents in Birmingham refer to AI-powered chatbot services that handle customer enquiries at any hour. Unlike traditional outsourcing, our AI chatbots provide instant responses without human delays, perfect for Birmingham businesses that can't afford to miss leads outside office hours."
+      question: "What kinds of messages can a WhatsApp chatbot handle?",
+      answer: "A WhatsApp chatbot handles the most common customer messages — questions about pricing, services, opening hours, bookings, and availability. It can collect contact details, send automated follow-ups, and escalate complex enquiries to your team with full conversation context."
     },
     {
-      question: "Is an AI chatbot for small business UK affordable?",
-      answer: "Yes! An AI chatbot for small business UK is now more affordable than ever. AIVized offers managed WhatsApp chatbots from just £29/month—making enterprise-grade AI accessible to UK SMEs without the typical £10,000+ development costs."
+      question: "Is an AI chatbot for small business UK affordable on WhatsApp?",
+      answer: "Yes. AIVized offers managed WhatsApp chatbots from £29 per month. This includes setup, training, monitoring, and ongoing updates. There is no large upfront cost and no technical work required on your part."
     }
   ];
 
@@ -46,14 +46,13 @@ const WhatsAppChatbotBlog = () => {
 
       <main className="pt-32 pb-20">
         <article className="container-narrow">
-          {/* Back Link */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="mb-8"
           >
-            <Link 
-              href="/blog" 
+            <Link
+              href="/blog"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -61,7 +60,6 @@ const WhatsAppChatbotBlog = () => {
             </Link>
           </motion.div>
 
-          {/* Hero */}
           <motion.header
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +70,7 @@ const WhatsAppChatbotBlog = () => {
               WhatsApp
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
-              WhatsApp Chatbot for UK Businesses: Your AI Personal Assistant
+              WhatsApp Chatbot for UK Businesses: 24/7 AI Messaging
             </h1>
             <div className="flex items-center gap-6 text-muted-foreground mb-8">
               <span className="flex items-center gap-2">
@@ -89,7 +87,6 @@ const WhatsAppChatbotBlog = () => {
             </div>
           </motion.header>
 
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -97,105 +94,68 @@ const WhatsAppChatbotBlog = () => {
             className="prose prose-lg dark:prose-invert max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              In today's fast-paced digital landscape, UK businesses are turning to WhatsApp chatbots as their secret weapon for customer engagement. With{" "}
-              <a href="https://www.statista.com/statistics/255778/number-of-monthly-active-whatsapp-users/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">over 2 billion monthly active users globally</a>{" "}
-              and massive adoption across the UK, <a href="https://en.wikipedia.org/wiki/WhatsApp" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">WhatsApp</a> has become the preferred communication channel for businesses seeking to connect with customers instantly. If you're wondering how chatbots compare to traditional support, check our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link>.
+              Over 33 million people in the UK use WhatsApp regularly, and many of them prefer to contact businesses through messaging rather than phone or email. A managed WhatsApp chatbot means every message gets an instant response — whether it arrives at noon on a Tuesday or 11pm on a Sunday. If you want to understand how chatbots compare to traditional support, see our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link>.
             </p>
 
-            <h2 id="artificial-intelligence-personal-assistant-near-me">
-              Artificial Intelligence Personal Assistant Near Me
-            </h2>
-            <p>
-              When searching for an artificial intelligence personal assistant near you, it's essential to find a provider that understands your local market. UK businesses have unique needs—from handling enquiries in British English to understanding local business customs and operating hours.
-            </p>
+            <h2 id="how-whatsapp-chatbots-work">How WhatsApp Chatbots Work for UK Businesses</h2>
+            <p>A WhatsApp chatbot connects to your business number via the official Meta Business API. When a customer sends a message, the chatbot responds instantly from a knowledge base built during setup. Unlike manual replies, the chatbot is available at all hours and handles multiple conversations simultaneously — so a busy Saturday evening doesn't mean a queue of unanswered messages on Monday morning.</p>
 
             <BlogInlineImage src={whatsappInline1} alt="WhatsApp business messaging on smartphone in modern UK office" />
 
-            <p>
-              A WhatsApp chatbot acts as your personal AI assistant, available 24/7 to answer customer questions, capture leads, and even process simple transactions. Unlike generic solutions, locally-focused AI assistants are trained on UK-specific data, ensuring your customers receive relevant, contextually appropriate responses.
-            </p>
-
-            <h2 id="ai-service-providers-manchester-united-kingdom">
-              AI Service Providers Manchester United Kingdom
-            </h2>
-            <p>
-              <Link href="/locations/manchester" className="text-primary hover:underline">Manchester</Link> has emerged as a major tech hub in the UK, with numerous <Link href="/blog/ai-service-providers-uk" className="text-primary hover:underline">AI service providers</Link> offering cutting-edge solutions. For Manchester businesses, implementing a WhatsApp chatbot means:
-            </p>
-            <ul>
-              <li>Instant response to customer enquiries from the Greater Manchester area</li>
-              <li>Lead capture during peak shopping hours on Market Street and beyond</li>
-              <li>Seamless integration with local delivery and service providers</li>
-              <li>Support for Manchester's diverse, multicultural customer base</li>
-            </ul>
-
-            <BlogInlineImage src={whatsappInline2} alt="Manchester UK cityscape with modern tech business district" />
-
-            <p>
-              Leading AI service providers in Manchester understand the unique rhythm of the city's business landscape, from the bustling Northern Quarter independents to enterprise clients in Spinningfields.
-            </p>
-
-            <h2 id="24-7-outsourced-chat-agents-birmingham">
-              24/7 Outsourced Chat Agents Birmingham
-            </h2>
-            <p>
-              Birmingham's thriving business community generates thousands of customer enquiries daily. Traditional call centres and outsourced chat agents come with significant costs and inconsistent quality. This is where 24/7 outsourced chat agents in Birmingham powered by AI make the difference.
-            </p>
-            <p>
-              AI-powered WhatsApp chatbots provide Birmingham businesses with:
-            </p>
+            <p>During setup, we train your chatbot on your products, pricing, and the most common questions your customers ask. Once live, it handles:</p>
             <div className="not-prose my-8 grid gap-4">
               {[
-                "Round-the-clock availability without overtime costs",
-                "Consistent, on-brand messaging every time",
-                "Instant scalability during busy periods",
-                "Detailed analytics on customer interactions",
-                "Seamless handover to human agents when needed"
-              ].map((benefit, index) => (
+                "Responds to messages within seconds, 24 hours a day",
+                "Answers questions about services, pricing, and availability",
+                "Collects contact details from interested leads",
+                "Guides customers toward booking or purchasing",
+                "Escalates complex enquiries to your team with full conversation context"
+              ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>{benefit}</span>
+                  <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span>{feature}</span>
                 </div>
               ))}
             </div>
 
-            <h2 id="ai-chatbot-for-small-business-uk">
-              AI Chatbot for Small Business UK
-            </h2>
-            <p>
-              Small businesses across the UK often feel left behind when it comes to AI adoption. The perception that AI is only for large enterprises with deep pockets is rapidly changing. Today, an AI chatbot for small business UK is not just accessible—it's affordable.
-            </p>
+            <h2 id="why-whatsapp-for-uk-businesses">Why WhatsApp Is the Right Channel for UK Businesses</h2>
+            <p>WhatsApp has a message open rate above 90%, compared to around 20% for email. Customers are already using it daily — they don't need to download an app, create an account, or visit your website. They send a message the same way they'd text a friend, and the chatbot responds with the same speed.</p>
 
-            <BlogInlineImage src={whatsappInline3} alt="Small business owner reviewing customer engagement analytics" />
+            <BlogInlineImage src={whatsappInline2} alt="Customer messaging a UK business on WhatsApp and receiving instant reply" />
 
-            <p>
-              From corner shops in <Link href="/locations/london" className="text-primary hover:underline">London</Link> to boutique hotels in <Link href="/locations/edinburgh" className="text-primary hover:underline">Edinburgh</Link>, small businesses are discovering that WhatsApp chatbots can:
-            </p>
+            <p>For UK small businesses, this matters because most enquiries arrive outside office hours — evenings, weekends, and lunch breaks. A WhatsApp chatbot captures those enquiries without requiring you or your team to be available. Every message gets a response, every lead gets captured.</p>
+
+            <div className="not-prose my-8 p-6 rounded-lg bg-green-500/10 border border-green-500/20">
+              <h3 className="text-lg font-semibold mb-4">WhatsApp in the UK</h3>
+              <p className="text-muted-foreground">Over 33 million UK users check WhatsApp daily. Businesses that respond within a minute convert significantly more enquiries than those that reply the next working day. Automation closes that gap without requiring 24/7 staffing.</p>
+            </div>
+
+            <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
+            <p>Small businesses benefit most from WhatsApp automation because every missed enquiry matters. A missed DM is a missed sale — there's no reception team to catch it. With AIVized's managed service, your WhatsApp number has a trained AI chatbot handling enquiries from the moment the service goes live.</p>
+
+            <BlogInlineImage src={whatsappInline3} alt="Small business owner reviewing customer engagement analytics on a laptop" />
+
+            <p>From corner shops to local service providers, UK small businesses that add WhatsApp automation typically see:</p>
             <ul>
-              <li>Handle 80% of common customer queries automatically</li>
-              <li>Reduce response times from hours to seconds</li>
-              <li>Capture leads that would otherwise be lost outside business hours</li>
-              <li>Free up staff to focus on high-value interactions</li>
+              <li>Responses to every message, regardless of time or volume</li>
+              <li>More leads captured from out-of-hours enquiries</li>
+              <li>Less time spent on repetitive questions about pricing, availability, and hours</li>
+              <li>Qualified leads passed to the team with full conversation context</li>
             </ul>
             <p>
-              With managed solutions starting from just <Link href="/pricing" className="text-primary hover:underline">£29/month</Link>, there's never been a better time for UK small businesses to embrace WhatsApp chatbot technology. Learn more about <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">how to reduce missed leads</Link> from your website.
+              With managed solutions starting from <Link href="/pricing" className="text-primary hover:underline">£29/month</Link>, there's no large upfront cost and no technical skills required. Learn more about <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">how to reduce missed leads</Link> across your website and messaging channels.
             </p>
 
-            <h2>Getting Started with WhatsApp Chatbots</h2>
-            <p>
-              Implementing a WhatsApp chatbot for your UK business doesn't have to be complicated. With AIVized's fully managed service, you get:
-            </p>
+            <h2>Getting Started with a WhatsApp Chatbot</h2>
+            <p>Getting a WhatsApp chatbot live takes less than 24 hours with AIVized's managed service:</p>
             <ol>
-              <li><strong>Complete Setup:</strong> We handle all technical installation and configuration</li>
-              <li><strong>Custom Training:</strong> Your chatbot is trained on your specific business, products, and FAQs</li>
-              <li><strong>24/7 Monitoring:</strong> Our team ensures your chatbot performs optimally</li>
-              <li><strong>Continuous Improvement:</strong> Regular updates based on real customer interactions</li>
+              <li><strong>Share your business details:</strong> Products, services, pricing, common questions, and your brand voice</li>
+              <li><strong>We build and connect the chatbot:</strong> Trained on your business, connected to your WhatsApp Business number</li>
+              <li><strong>Go live:</strong> Your chatbot starts responding to messages immediately</li>
+              <li><strong>We monitor and update:</strong> Ongoing improvements based on real conversations</li>
             </ol>
-            <p>
-              Whether you're in Manchester, Birmingham, or anywhere across the UK, a WhatsApp chatbot could be the competitive advantage your business needs.
-            </p>
           </motion.div>
 
-          {/* FAQ Section */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -219,7 +179,6 @@ const WhatsAppChatbotBlog = () => {
             </Accordion>
           </motion.section>
 
-          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -230,7 +189,7 @@ const WhatsAppChatbotBlog = () => {
               Ready to Get Your WhatsApp Chatbot?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Join hundreds of UK businesses already using AIVized's managed WhatsApp chatbot service. From £29/month with no technical skills required.
+              AIVized manages everything — connection, training, and monitoring. From £29/month with no technical skills required.
             </p>
             <Link
               href="/pricing"
@@ -239,11 +198,10 @@ const WhatsAppChatbotBlog = () => {
               View Pricing
             </Link>
           </motion.div>
-                  <AuthorBio />
+          <AuthorBio />
         </article>
       </main>
-      
-      
+
       <Footer />
     </div>
   );

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import WhatsAppChatbotBlog from "@/views/blog/WhatsAppChatbotBlog";
 
 export const metadata: Metadata = {
-  title: "WhatsApp Chatbot for UK Business | AIVized",
-  description: "How a WhatsApp chatbot can help UK businesses capture leads and provide 24/7 customer support.",
+  title: "WhatsApp Chatbot for UK Business | 24/7 AI Messaging | AIVized",
+  description: "Set up a WhatsApp chatbot for your UK business. AIVized manages installation, training, and 24/7 monitoring. Handles customer enquiries automatically. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/whatsapp-chatbot-uk-business" },
 };
 
@@ -13,23 +13,23 @@ const schema = {
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "WhatsApp Chatbot for UK Businesses: Your AI Personal Assistant",
-      "description": "Discover how WhatsApp chatbots with 24/7 outsourced chat agents can transform your Birmingham or Manchester business. AI service providers UK.",
+      "headline": "WhatsApp Chatbot for UK Businesses: 24/7 AI Messaging",
+      "description": "Learn how a managed WhatsApp chatbot helps UK businesses capture leads and answer customer enquiries 24/7 without needing a dedicated support team.",
       "image": "https://www.aivized.com/assets/blog/whatsapp-chatbot-hero.png",
       "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-01-28",
-      "dateModified": "2026-02-26",
+      "dateModified": "2026-04-20",
       "mainEntityOfPage": "https://www.aivized.com/blog/whatsapp-chatbot-uk-business",
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "What is an artificial intelligence personal assistant near me?", "acceptedAnswer": { "@type": "Answer", "text": "An artificial intelligence personal assistant near you is a locally-deployed AI solution that understands your business context. At AIVized, we provide managed AI assistants specifically configured for UK businesses, offering 24/7 support without the need for in-house technical expertise." } },
-        { "@type": "Question", "name": "How do AI service providers Manchester United Kingdom help businesses?", "acceptedAnswer": { "@type": "Answer", "text": "AI service providers in Manchester, United Kingdom like AIVized help local businesses automate customer communications through WhatsApp chatbots. We handle installation, monitoring, and continuous optimisation so Manchester businesses can focus on growth while their AI assistant captures leads around the clock." } },
-        { "@type": "Question", "name": "What are 24/7 outsourced chat agents Birmingham?", "acceptedAnswer": { "@type": "Answer", "text": "24/7 outsourced chat agents in Birmingham refer to AI-powered chatbot services that handle customer enquiries at any hour. Unlike traditional outsourcing, our AI chatbots provide instant responses without human delays, perfect for Birmingham businesses that can't afford to miss leads outside office hours." } },
-        { "@type": "Question", "name": "Is an AI chatbot for small business UK affordable?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! An AI chatbot for small business UK is now more affordable than ever. AIVized offers managed WhatsApp chatbots from just £29/month—making enterprise-grade AI accessible to UK SMEs without the typical £10,000+ development costs." } }
+        { "@type": "Question", "name": "How does a WhatsApp chatbot work for a UK business?", "acceptedAnswer": { "@type": "Answer", "text": "A WhatsApp chatbot connects to your business number via the official Meta Business API. When a customer sends a message, the chatbot responds instantly using a knowledge base we build from your products, services, and FAQs. It handles enquiries 24 hours a day without any action required from you." } },
+        { "@type": "Question", "name": "Do I need technical skills to set up a WhatsApp chatbot?", "acceptedAnswer": { "@type": "Answer", "text": "No. AIVized's managed service handles the full setup — connecting to the WhatsApp Business API, training the chatbot on your business, and installing it on your number. You share your business details and we deliver a working chatbot within 24 hours." } },
+        { "@type": "Question", "name": "What kinds of messages can a WhatsApp chatbot handle?", "acceptedAnswer": { "@type": "Answer", "text": "A WhatsApp chatbot handles the most common customer messages — questions about pricing, services, opening hours, bookings, and availability. It can collect contact details, send automated follow-ups, and escalate complex enquiries to your team with full conversation context." } },
+        { "@type": "Question", "name": "Is an AI chatbot for small business UK affordable on WhatsApp?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. AIVized offers managed WhatsApp chatbots from £29 per month. This includes setup, training, monitoring, and ongoing updates. There is no large upfront cost and no technical work required on your part." } }
       ]
     },
     {
