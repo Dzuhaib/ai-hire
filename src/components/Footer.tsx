@@ -65,7 +65,7 @@ export const Footer = () => {
             <a href="mailto:aivized.com@gmail.com" className="hover:text-foreground transition-colors">
               aivized.com@gmail.com
             </a>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 lg:hidden">
               {socials.map(({ label, href, icon: Icon }) => (
                 <a
                   key={label}
