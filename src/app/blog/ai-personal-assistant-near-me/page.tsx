@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import AIPersonalAssistantBlog from "@/views/blog/AIPersonalAssistantBlog";
 
 export const metadata: Metadata = {
-  title: "AI Personal Assistant for UK Business | Managed Service | AIVized",
-  description: "Looking for an AI personal assistant for your business? AIVized provides fully managed AI chatbots for UK businesses. No technical skills required. From £29/month.",
+  title: "Managed AI Personal Assistant for UK Businesses | AIVized",
+  description: "AIVized provides a fully managed AI personal assistant for your UK business. Handles enquiries, captures leads, and automates responses 24/7. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-personal-assistant-near-me" },
 };
 

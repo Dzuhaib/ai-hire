@@ -5,7 +5,7 @@ import PricingPage from "@/views/PricingPage";
 export const metadata: Metadata = {
   title: "Pricing | AIVized - Managed AI Chatbot Plans from £29/mo",
   description:
-    "AIVized managed AI chatbot plans from £29/month. Includes installation, training, and ongoing support. No long-term contracts. 3-day free trial.",
+    "AIVized managed AI chatbot plans start from £29/month. Includes installation, training, and ongoing support. No long-term contracts. 3-day free trial.",
   alternates: { canonical: "https://www.aivized.com/pricing" },
 };
 

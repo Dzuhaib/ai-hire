@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import ReduceMissedLeadsBlog from "@/views/blog/ReduceMissedLeadsBlog";
 
 export const metadata: Metadata = {
-  title: "Reduce Missed Leads from Your Website | AIVized",
-  description: "How to stop losing leads from your website with a managed AI chatbot. 24/7 lead capture for UK businesses.",
+  title: "How to Reduce Missed Leads from Your Website | AIVized",
+  description: "Learn how to reduce missed leads from your website using a managed AI chatbot. AIVized captures enquiries 24/7 so you never lose a potential customer.",
   alternates: { canonical: "https://www.aivized.com/blog/reduce-missed-leads-website" },
 };
 

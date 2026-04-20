@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import InstagramChatbotBlog from "@/views/blog/InstagramChatbotBlog";
 
 export const metadata: Metadata = {
-  title: "Instagram Chatbot for UK Business | Automate DMs 24/7 | AIVized",
-  description: "Automate Instagram DMs for your UK business with an AI chatbot. AIVized manages setup and 24/7 monitoring so you never miss an enquiry. From £29/month.",
+  title: "Managed Instagram Chatbot for UK Businesses | AIVized",
+  description: "AIVized manages a dedicated Instagram chatbot for your UK business, automating DM responses and enquiry handling 24/7. Full setup included. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/instagram-chatbot-social-media" },
 };
 

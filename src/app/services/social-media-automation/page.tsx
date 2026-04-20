@@ -4,7 +4,7 @@ import SocialMediaAutomationPage from "@/views/services/SocialMediaAutomationPag
 
 export const metadata: Metadata = {
   title: "Social Media Automation for UK Businesses | AIVized",
-  description: "AIVized manages your Instagram, Facebook, and LinkedIn — automating DM responses, scheduling content, and keeping your audience engaged 24/7. Get in touch to find out more.",
+  description: "AIVized offers social media automation for UK businesses — managing Instagram, Facebook, and LinkedIn DMs, content scheduling, and audience engagement 24/7.",
   alternates: { canonical: "https://www.aivized.com/services/social-media-automation" },
 };
 

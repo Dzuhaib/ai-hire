@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import BusinessAutomationPage from "@/views/services/BusinessAutomationPage";
 
 export const metadata: Metadata = {
-  title: "Business Process Automation for UK Small Businesses | AIVized",
-  description: "AIVized automates your repetitive workflows — lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. Get in touch to find out more.",
+  title: "Business Process Automation for UK Businesses | AIVized",
+  description: "AIVized delivers business process automation for UK businesses — automating follow-ups, appointment reminders, and customer onboarding. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/services/business-automation" },
 };
 

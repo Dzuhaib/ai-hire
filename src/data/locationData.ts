@@ -25,7 +25,7 @@ export const ukLocations: LocationData[] = [
     description: "The UK's capital and largest city, a global hub for business, finance, and technology.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158857.72810623145!2d-0.24168144457754!3d51.52873519515656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Service London — Lead Generation Chatbot",
-    heroSubtext: "Get a fully managed AI chatbot for your London business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Canary Wharf to Camden—we handle everything.",
+    heroSubtext: "Get a fully managed AI chatbot for your London business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "High Staff Costs in London", description: "London wages are among the highest in the UK. Hiring customer service staff costs £35,000+ per year, plus recruitment fees and training time." },
       { title: "24/7 Customer Expectations", description: "In a city that never sleeps, customers expect instant responses at all hours. Missing enquiries outside business hours means losing sales to competitors." },
@@ -65,7 +65,7 @@ export const ukLocations: LocationData[] = [
     description: "The beating heart of the North, a powerhouse of industry, innovation, and enterprise.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76219.64587995544!2d-2.3028623!3d53.4723272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2sManchester!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "Chatbot for Business Manchester — Managed AI Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Manchester business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Northern Quarter to MediaCityUK—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Manchester business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Growing Competition in Manchester", description: "Manchester's business scene is booming. Standing out requires exceptional customer service that many businesses struggle to maintain consistently." },
       { title: "Staff Recruitment Challenges", description: "Finding reliable customer service staff in Manchester's competitive job market is increasingly difficult and time-consuming." },
@@ -105,7 +105,7 @@ export const ukLocations: LocationData[] = [
     description: "England's second city and the UK's manufacturing and business services hub.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77925.59628890326!2d-1.9537!3d52.4862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2sBirmingham!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Assistant Birmingham — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Birmingham business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Bullring to the Jewellery Quarter—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Birmingham business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Rising Operational Costs", description: "Birmingham businesses face increasing pressure to deliver more while spending less. Traditional staffing models are becoming unsustainable." },
       { title: "Inconsistent Customer Service", description: "Staff turnover and varying skill levels mean customers receive inconsistent experiences, damaging your reputation." },
@@ -145,7 +145,7 @@ export const ukLocations: LocationData[] = [
     description: "Yorkshire's largest city and a major centre for financial, legal, and digital services.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75441.42127098876!2d-1.6014!3d53.8008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c6e8b8c6b8d%3A0x1d0296e9b7b7b7b7!2sLeeds!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "Small Business Chatbot Leeds — Lead Generation",
-    heroSubtext: "Get a managed AI chatbot for your Leeds business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the legal quarter to the Calls—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Leeds business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Professional Service Demands", description: "Leeds' professional services sector demands impeccable client communication. Delays or missed messages damage reputations." },
       { title: "Out-of-Hours Enquiries", description: "Clients and customers increasingly expect responses outside traditional 9-5 hours, especially for urgent matters." },
@@ -185,7 +185,7 @@ export const ukLocations: LocationData[] = [
     description: "A UNESCO World Heritage city with a vibrant culture, tourism industry, and growing business sector.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75637.69214673!2d-3.0185!3d53.4084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b212d473d8f0f%3A0x53e7f7b8a0fa9a0a!2sLiverpool!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Liverpool — 24/7 Customer Support Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Liverpool business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Albert Dock to Bold Street—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Liverpool business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Tourism and Hospitality Demands", description: "Liverpool's booming tourism means peaks and troughs in enquiries that are hard to staff for efficiently." },
       { title: "Matchday Madness", description: "Football matchdays bring surges of enquiries that overwhelm traditional customer service capacity." },
@@ -225,7 +225,7 @@ export const ukLocations: LocationData[] = [
     description: "A creative, tech-savvy city with a thriving independent business scene and strong economy.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79508.08127098876!2d-2.6544!3d51.4545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7aae8b8b8d%3A0x1d0296e9b7b7b7b7!2sBristol!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Bristol — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Bristol business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Clifton to Temple Meads—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Bristol business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Tech-Savvy Customer Expectations", description: "Bristol's customers expect modern, instant service. Traditional slow responses don't cut it in this innovative city." },
       { title: "Indie Business Challenges", description: "Bristol's vibrant independent business scene means competing without corporate resources." },
@@ -265,7 +265,7 @@ export const ukLocations: LocationData[] = [
     description: "Scotland's largest city and a powerhouse of commerce, culture, and hospitality.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71718.84127098876!2d-4.3011!3d55.8642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "Lead Gen Chatbot Glasgow — Managed AI Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Glasgow business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Buchanan Street to the West End—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Glasgow business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Hospitality Staffing Shortages", description: "Glasgow's hospitality sector faces chronic staffing challenges, making consistent customer service difficult to maintain." },
       { title: "Event-Driven Demand Spikes", description: "From Celtic and Rangers matchdays to SECC events, Glasgow businesses face unpredictable surges in enquiries." },
@@ -305,7 +305,7 @@ export const ukLocations: LocationData[] = [
     description: "Scotland's historic capital, a world-famous tourist destination and financial services hub.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71499.84127098876!2d-3.2207!3d55.9533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b800a5982623%3A0x64f2147b7ce71727!2sEdinburgh!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Edinburgh — Lead Generation Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Edinburgh business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Royal Mile to the New Town—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Edinburgh business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Festival Season Chaos", description: "Edinburgh's famous festivals bring millions of visitors but create enormous pressure on local businesses to handle enquiry volumes." },
       { title: "Premium Customer Expectations", description: "Edinburgh's affluent visitors and residents expect premium service that matches the city's world-class reputation." },
@@ -345,7 +345,7 @@ export const ukLocations: LocationData[] = [
     description: "The Steel City, now a centre for advanced manufacturing, digital innovation, and student life.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75828.84127098876!2d-1.5101!3d53.3811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48798283ab8a6d33%3A0xba21c7ade766f6c!2sSheffield!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Sheffield — Affordable AI Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Sheffield business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Kelham Island to Ecclesall Road—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Sheffield business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Competing with Larger Cities", description: "Sheffield businesses often compete with Leeds and Manchester for customers, requiring standout service to win." },
       { title: "Student Market Dynamics", description: "With two major universities, Sheffield's market has unique patterns and expectations that require flexible service." },
@@ -385,7 +385,7 @@ export const ukLocations: LocationData[] = [
     description: "The heart of North East England, famous for hospitality, culture, and business innovation.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73042.84127098876!2d-1.6778!3d54.9783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d857e0c6f64cd%3A0xbe252b072a76191!2sNewcastle%20upon%20Tyne!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Newcastle — Managed AI Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Newcastle business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Quayside to Jesmond—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Newcastle business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Legendary Hospitality Pressure", description: "Newcastle's famous hospitality culture sets high expectations. Meeting them consistently requires significant resources." },
       { title: "Matchday Madness", description: "St James' Park matchdays create surges that overwhelm traditional customer service capacity." },
@@ -425,7 +425,7 @@ export const ukLocations: LocationData[] = [
     description: "A vibrant university city with a thriving creative, retail, and tech sector in the heart of England.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77000!2d-1.1581!3d52.9548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c3e82aaaaa7%3A0x63c tried%21!2sNottingham!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Nottingham — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Nottingham business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Lace Market to Hockley—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Nottingham business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "University City Competition", description: "With two major universities, Nottingham businesses compete fiercely for student and local trade year-round." },
       { title: "Seasonal Student Fluctuations", description: "Term-time surges and holiday lulls make staffing consistently a real headache for Nottingham businesses." },
@@ -465,7 +465,7 @@ export const ukLocations: LocationData[] = [
     description: "The Welsh capital and a growing hub for media, technology, and professional services.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79600!2d-3.1791!3d51.4816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e02d434ec53f5%3A0x143406db6586670e!2sCardiff!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Cardiff — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Cardiff business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Cardiff Bay to the city centre—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Cardiff business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Bilingual Customer Base", description: "Cardiff businesses serve both Welsh and English-speaking customers, requiring flexible communication approaches." },
       { title: "Event-Driven Surges", description: "Principality Stadium events and Six Nations weekends create massive spikes in customer enquiries." },
@@ -505,7 +505,7 @@ export const ukLocations: LocationData[] = [
     description: "One of the UK's most diverse cities, a hub for textiles, food manufacturing, and retail.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77200!2d-1.1398!3d52.6369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877614c77000001%3A0x5e4a755a574d2b1c!2sLeicester!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Leicester — Lead Generation Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Leicester business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Golden Mile to the Cultural Quarter—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Leicester business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Diverse Customer Needs", description: "Leicester's multicultural market requires flexible, inclusive customer communication." },
       { title: "Retail Competition", description: "From independent shops to High Street chains, Leicester businesses compete fiercely for footfall and online enquiries." },
@@ -545,7 +545,7 @@ export const ukLocations: LocationData[] = [
     description: "A creative, independent-spirited seaside city known for digital innovation and tourism.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81200!2d-0.1363!3d50.8225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48758550bd6f41c5%3A0xd1e8b64a4b5b8f0a!2sBrighton!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Brighton — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Brighton business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From The Lanes to the seafront—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Brighton business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Seasonal Tourism Peaks", description: "Brighton's summer brings massive footfall but staffing for peaks is expensive and temporary workers lack expertise." },
       { title: "Digital-First Customers", description: "Brighton's tech-savvy population expects instant online interactions from local businesses." },
@@ -585,7 +585,7 @@ export const ukLocations: LocationData[] = [
     description: "A major port city with a strong maritime heritage and growing digital and creative sectors.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80600!2d-1.4044!3d50.9097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487476b4b92301f7%3A0xdc0f515de4530fce!2sSouthampton!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Southampton — Lead Generation Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Southampton business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the docks to the city centre—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Southampton business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Port & Tourism Demands", description: "Cruise ship arrivals create unpredictable surges in local business enquiries that are hard to staff for." },
       { title: "Student Market Fluctuations", description: "Two universities mean seasonal swings in customer demand that challenge consistent service." },
@@ -625,7 +625,7 @@ export const ukLocations: LocationData[] = [
     description: "A world-famous university city with a thriving tourism, education, and technology sector.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79200!2d-1.2578!3d51.7520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9f0efb617%3A0x4c85c1c9a4739b1e!2sOxford!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Oxford — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Oxford business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Dreaming Spires to Jericho—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Oxford business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Premium Service Expectations", description: "Oxford's discerning clientele expects polished, knowledgeable responses—anything less damages your reputation." },
       { title: "Tourist Volume Pressure", description: "Millions of annual visitors create enquiry volumes that overwhelm small Oxford businesses." },
@@ -665,7 +665,7 @@ export const ukLocations: LocationData[] = [
     description: "A world-renowned university city and the heart of the UK's tech and biotech innovation corridor.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78000!2d0.1218!3d52.2053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d85d89f32b012d%3A0x63a320e1a35e3d21!2sCambridge!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Cambridge — Lead Generation Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Cambridge business from £29/month. Capture leads 24/7, reduce missed enquiries, and automate customer engagement. From King's Parade to the Science Park—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Cambridge business from £29/month. Capture leads 24/7, reduce missed enquiries, and automate customer engagement.",
     problems: [
       { title: "Tech-Savvy Clientele", description: "Cambridge's innovation-driven customers expect cutting-edge digital experiences from every business." },
       { title: "International Visitor Volume", description: "Millions of international tourists visit annually, creating language and volume challenges." },
@@ -705,7 +705,7 @@ export const ukLocations: LocationData[] = [
     description: "A historic city reborn as a UK City of Culture, with growing automotive, tech, and creative sectors.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77800!2d-1.5197!3d52.4068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877eaff1e84c07d%3A0x5060f1e61e102c04!2sCoventry!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Coventry — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Coventry business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the cathedral to the tech park—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Coventry business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Post-City of Culture Momentum", description: "Coventry businesses need to maintain momentum and attract customers in the post-2021 era." },
       { title: "Student Economy Fluctuations", description: "Two universities mean seasonal demand swings that make consistent staffing challenging." },
@@ -745,7 +745,7 @@ export const ukLocations: LocationData[] = [
     description: "Northern Ireland's capital, a thriving hub for tech, tourism, and creative industries.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73200!2d-5.9301!3d54.5973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4860fffdd7d08a3b%3A0x2e57162cefc7c531!2sBelfast!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Belfast — Managed AI Chatbot Service",
-    heroSubtext: "Get a managed AI chatbot for your Belfast business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From the Titanic Quarter to Cathedral Quarter—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Belfast business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Tourism Growth Demands", description: "Belfast's tourism boom (Titanic, Game of Thrones) creates surges that overwhelm small business teams." },
       { title: "Cross-Border Customer Base", description: "Serving customers from both Northern Ireland and the Republic requires flexible, always-available communication." },
@@ -785,7 +785,7 @@ export const ukLocations: LocationData[] = [
     description: "The Granite City—Scotland's energy capital with a diversifying economy and strong professional services sector.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69500!2d-2.0943!3d57.1497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48840e55ce4bdb8d%3A0x3b8e24bde53d2ec4!2sAberdeen!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
     heroTagline: "AI Chatbot Aberdeen — Lead Generation Chatbot",
-    heroSubtext: "Get a managed AI chatbot for your Aberdeen business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement. From Union Street to the harbour—we handle everything.",
+    heroSubtext: "Get a managed AI chatbot for your Aberdeen business from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
     problems: [
       { title: "Energy Sector Transitions", description: "Aberdeen businesses navigating the shift from oil & gas to renewables need efficient, cost-effective operations." },
       { title: "Remote Working Challenges", description: "With many offshore and remote workers, businesses need 24/7 communication that doesn't depend on office hours." },

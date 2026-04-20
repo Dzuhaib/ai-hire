@@ -4,7 +4,7 @@ import AIServiceProvidersBlog from "@/views/blog/AIServiceProvidersBlog";
 
 export const metadata: Metadata = {
   title: "How to Choose an AI Service Provider UK | AIVized Guide",
-  description: "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services work. From £29/month.",
+  description: "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-service-providers-uk" },
 };
 

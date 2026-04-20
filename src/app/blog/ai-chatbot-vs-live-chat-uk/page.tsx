@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import AIChatbotVsLiveChatBlog from "@/views/blog/AIChatbotVsLiveChatBlog";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot vs Live Chat UK | AIVized",
-  description: "AI chatbot vs live chat for UK businesses. Compare costs, performance and which is better for your business.",
+  title: "AI Chatbot vs Live Chat for UK Businesses | AIVized",
+  description: "Compare AI chatbot vs live chat for UK businesses. Understand costs, performance, and which solution is best for your small business customer service.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk" },
 };
 

@@ -4,7 +4,7 @@ import AIAutomationUKBlog from "@/views/blog/AIAutomationUKBlog";
 
 export const metadata: Metadata = {
   title: "AI Business Automation for UK Small Business | AIVized",
-  description: "Automate your UK business with a managed AI chatbot. AIVized handles installation, training, and 24/7 monitoring. Capture leads and automate enquiries from £29/month.",
+  description: "A practical guide to AI business automation for UK small businesses. AIVized manages setup and monitoring — capture leads and automate enquiries from £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-automation-uk-business" },
 };
 
