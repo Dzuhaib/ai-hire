@@ -30,7 +30,7 @@ const RefundPolicy = () => {
             </h1>
             
             <p className="text-muted-foreground mb-8">
-              Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+              Last updated: 20 April 2026
             </p>
 
             <div className="prose prose-invert max-w-none space-y-8">

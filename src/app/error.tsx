@@ -18,9 +18,14 @@ export default function Error({
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center px-4">
       <div className="text-center max-w-md">
         <h1 className="text-3xl font-serif font-semibold mb-4">Something went wrong</h1>
-        <p className="text-muted-foreground mb-8">
+        <p className="text-muted-foreground mb-6">
           An unexpected error occurred. Please try again or return to the homepage.
         </p>
+        {error.digest && (
+          <p className="text-xs text-muted-foreground/50 mb-6 font-mono">
+            Error ID: {error.digest}
+          </p>
+        )}
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button
             onClick={reset}
