@@ -12,11 +12,11 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
+      "@type": ["BlogPosting", "Article"],
       "headline": "AI Personal Assistant for Your UK Business: What It Does and How to Get One",
       "description": "Find out how a managed AI personal assistant can handle customer enquiries, capture leads, and support your UK business around the clock.",
       "image": "https://www.aivized.com/assets/blog/ai-personal-assistant-hero.png",
-      "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
+      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-03",
       "dateModified": "2026-04-20",

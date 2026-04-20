@@ -12,11 +12,11 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
+      "@type": ["BlogPosting", "Article"],
       "headline": "Instagram Chatbot for UK Businesses: Automate DMs and Capture Leads 24/7",
       "description": "Discover how an Instagram chatbot helps UK businesses automate DM responses, capture leads, and engage customers at any hour.",
       "image": "https://www.aivized.com/assets/blog/instagram-chatbot-hero.png",
-      "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
+      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-01-30",
       "dateModified": "2026-04-20",

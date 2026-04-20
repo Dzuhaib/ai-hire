@@ -12,11 +12,11 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
+      "@type": ["BlogPosting", "Article"],
       "headline": "24/7 AI Chat Agents for Birmingham Businesses",
       "description": "Discover how Birmingham businesses use managed AI chat agents to handle customer enquiries 24/7 without hiring additional staff.",
       "image": "https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png",
-      "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
+      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-01",
       "dateModified": "2026-04-20",

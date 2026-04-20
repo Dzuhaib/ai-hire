@@ -12,11 +12,11 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
+      "@type": ["BlogPosting", "Article"],
       "headline": "AI Chatbot vs Live Chat: Which Is Better for UK Small Business?",
       "description": "AI chatbot or live chat for your UK small business? Compare costs, availability, and customer satisfaction. Find the right solution for 24/7 support.",
       "image": "https://www.aivized.com/assets/blog/ai-chatbot-vs-live-chat-hero.png",
-      "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
+      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-11",
       "dateModified": "2026-02-26",

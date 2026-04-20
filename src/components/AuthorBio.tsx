@@ -4,12 +4,14 @@ interface AuthorBioProps {
   name?: string;
   role?: string;
   bio?: string;
+  linkedIn?: string;
 }
 
 export function AuthorBio({
-  name = "AIVized Editorial Team",
-  role = "AI Chatbot Specialists",
-  bio = "The AIVized team specialises in managed AI chatbot solutions for UK small businesses. With hands-on experience deploying chatbots across restaurants, real estate, healthcare, and e-commerce, we write from direct expertise in what works for UK SMEs.",
+  name = "Zuhaib Ahmed",
+  role = "Founder, AIVized",
+  bio = "Zuhaib Ahmed is the founder of AIVized, a managed AI chatbot service for UK small businesses. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, he writes from direct expertise in what works for UK SMEs.",
+  linkedIn = "https://www.linkedin.com/in/zuhaibah/",
 }: AuthorBioProps) {
   return (
     <div className="not-prose mt-12 pt-8 border-t border-border/50">
@@ -28,14 +30,14 @@ export function AuthorBio({
           <p className="text-sm text-muted-foreground leading-relaxed">{bio}</p>
           <div className="flex items-center gap-3 mt-3">
             <Link
-              href="/"
+              href="/blog"
               className="text-xs text-muted-foreground hover:text-primary transition-colors underline"
             >
-              More from AIVized
+              More articles
             </Link>
             <span className="text-muted-foreground/40">·</span>
             <a
-              href="https://www.linkedin.com/company/ai-vized/"
+              href={linkedIn}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-primary transition-colors underline"

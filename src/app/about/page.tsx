@@ -35,8 +35,25 @@ const schema = {
         },
         "sameAs": [
           "https://www.linkedin.com/company/ai-vized/"
-        ]
+        ],
+        "founder": {
+          "@type": "Person",
+          "@id": "https://www.aivized.com/#founder",
+          "name": "Zuhaib Ahmed",
+          "jobTitle": "Founder",
+          "url": "https://www.linkedin.com/in/zuhaibah/",
+          "sameAs": ["https://www.linkedin.com/in/zuhaibah/"]
+        }
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.aivized.com/#founder",
+      "name": "Zuhaib Ahmed",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
+      "url": "https://www.linkedin.com/in/zuhaibah/",
+      "sameAs": ["https://www.linkedin.com/in/zuhaibah/"]
     },
     {
       "@type": "BreadcrumbList",

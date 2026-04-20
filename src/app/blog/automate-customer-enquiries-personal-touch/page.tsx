@@ -12,11 +12,11 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
+      "@type": ["BlogPosting", "Article"],
       "headline": "How to Automate Customer Enquiries Without Losing the Personal Touch",
       "description": "Learn how UK small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples.",
       "image": "https://www.aivized.com/assets/blog/automate-enquiries-personal-touch-hero.png",
-      "author": { "@type": "Person", "name": "AIVized Editorial Team", "url": "https://www.aivized.com/blog" },
+      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-12",
       "dateModified": "2026-02-26",

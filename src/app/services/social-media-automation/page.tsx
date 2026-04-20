@@ -32,6 +32,11 @@ const schema = {
       ]
     },
     {
+      "@type": "WebPage",
+      "url": "https://www.aivized.com/services/social-media-automation",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] }
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },

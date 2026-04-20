@@ -59,7 +59,7 @@ export default async function Page({
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "BlogPosting",
+            "@type": ["BlogPosting", "Article"],
             "headline": `Website Chatbot That Runs 24/7 ${data.city} | Managed AI Service`,
             "description": `Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`,
             "image": `https://www.aivized.com/assets/locations/ai-${data.slug}.png`,

@@ -261,6 +261,11 @@ Summary: City-specific guides explaining how 24/7 website chatbots benefit busin
 5. **Go live**: The chatbot starts capturing leads and answering enquiries immediately.
 6. **Ongoing optimisation**: AIVized monitors conversations, improves responses, and updates the AI as your business evolves.
 
+## Founder & Team
+- **Founder**: Zuhaib Ahmed — [LinkedIn](https://www.linkedin.com/in/zuhaibah/)
+- Zuhaib Ahmed founded AIVized to give UK small businesses access to genuinely managed AI. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, he leads product development and client onboarding personally.
+- [About AIVized](https://www.aivized.com/about): Company background, mission, and team
+
 ## Contact
 - Email: aivized.com@gmail.com
 - Website: https://www.aivized.com

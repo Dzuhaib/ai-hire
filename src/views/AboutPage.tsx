@@ -103,11 +103,41 @@ const AboutPage = () => {
             </p>
           </motion.section>
 
-          {/* Pricing transparency */}
+          {/* Founder */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who Runs AIVized</h2>
+            <div className="flex items-start gap-5 p-6 rounded-2xl bg-card border border-border">
+              <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                <span className="text-xl font-serif font-bold text-primary">ZA</span>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground text-lg">Zuhaib Ahmed</p>
+                <p className="text-sm text-primary mb-3">Founder, AIVized</p>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
+                  Zuhaib Ahmed founded AIVized to give UK small businesses access to genuinely managed AI — not another self-service tool that requires a technical team to maintain. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, Zuhaib leads product development and client onboarding personally.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/zuhaibah/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-3 text-sm text-primary hover:underline"
+                >
+                  LinkedIn profile →
+                </a>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Pricing transparency */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="mb-16"
           >
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Transparent Pricing</h2>

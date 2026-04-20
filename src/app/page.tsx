@@ -57,7 +57,15 @@ const homepageSchema = {
         "https://twitter.com/aivized",
         "https://www.facebook.com/aivized",
         "https://www.instagram.com/aivized"
-      ]
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://www.aivized.com/#founder",
+        "name": "Zuhaib Ahmed",
+        "jobTitle": "Founder",
+        "url": "https://www.linkedin.com/in/zuhaibah/",
+        "sameAs": ["https://www.linkedin.com/in/zuhaibah/"]
+      }
     },
     {
       "@type": "SoftwareApplication",
@@ -131,7 +139,7 @@ const homepageSchema = {
       "description": "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed.",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "about": { "@id": "https://www.aivized.com/#service" },
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#faq", "#how-it-works", "#pricing"] },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#services", "#how-it-works", "#pricing", "#faq"] },
       "mainEntity": homepageFaqs.map(faq => ({
         "@type": "Question",
         "name": faq.question,
