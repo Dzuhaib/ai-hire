@@ -174,7 +174,7 @@ export const Header = () => {
                   <SignedIn>
                     <SheetClose asChild>
                       <Link
-                        to="/dashboard"
+                        href="/dashboard"
                         className="flex items-center gap-2 w-full p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
                       >
                         <User className="w-5 h-5 text-primary" />
@@ -185,7 +185,7 @@ export const Header = () => {
                   <SignedOut>
                     <SheetClose asChild>
                       <Link
-                        to="/auth"
+                        href="/auth"
                         className="flex items-center gap-2 w-full p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
                       >
                         <LogIn className="w-5 h-5 text-primary" />
