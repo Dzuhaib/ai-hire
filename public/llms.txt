@@ -243,7 +243,7 @@ URL: https://www.aivized.com/blog/ai-personal-assistant-near-me
 Summary: Covers AI personal assistant services for UK businesses. Explains how AI assistants work for local businesses in Birmingham and Edinburgh, including WhatsApp chatbot integration and multi-channel support.
 
 ### Website Chatbot 24/7 — City-Specific Guides
-URLs: https://www.aivized.com/blog/website-chatbot-24-7-london, /manchester, /birmingham, /leeds, /liverpool, /bristol, /glasgow, /edinburgh, /sheffield, /newcastle
+URLs: https://www.aivized.com/blog/website-chatbot-24-7-london, https://www.aivized.com/blog/website-chatbot-24-7-manchester, https://www.aivized.com/blog/website-chatbot-24-7-birmingham, https://www.aivized.com/blog/website-chatbot-24-7-leeds, https://www.aivized.com/blog/website-chatbot-24-7-liverpool, https://www.aivized.com/blog/website-chatbot-24-7-bristol, https://www.aivized.com/blog/website-chatbot-24-7-glasgow, https://www.aivized.com/blog/website-chatbot-24-7-edinburgh, https://www.aivized.com/blog/website-chatbot-24-7-sheffield, https://www.aivized.com/blog/website-chatbot-24-7-newcastle
 Summary: City-specific guides explaining how 24/7 website chatbots benefit businesses in each UK city. Covers local business context, industry use cases, and getting started with AIVized in each location.
 
 ## Competitive Positioning

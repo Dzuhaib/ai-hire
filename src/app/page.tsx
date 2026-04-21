@@ -14,8 +14,10 @@ export const metadata: Metadata = {
     title: "Managed AI Chatbot for UK Small Businesses | AIVized",
     description:
       "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything—no technical skills needed.",
+    type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
   },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
 // Defined here (server component) — NOT in "use client" Index.tsx — to avoid client reference serialization issues

@@ -22,6 +22,8 @@ const pricingSchema = {
   "@graph": [
     {
       "@type": "Product",
+      "@id": "https://www.aivized.com/pricing#product",
+      "url": "https://www.aivized.com/pricing",
       "name": "AIVized Managed AI Chatbot Service",
       "description": "Fully managed AI chatbot installation and maintenance for UK small businesses.",
       "brand": {

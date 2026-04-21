@@ -16,22 +16,22 @@ export default function GlobalError({
   return (
     <html lang="en-GB">
       <body>
-        <div className="min-h-screen flex items-center justify-center px-4 bg-white text-black">
+        <div className="min-h-screen flex items-center justify-center px-4 bg-background text-foreground">
           <div className="text-center max-w-md">
             <h1 className="text-3xl font-semibold mb-4">Something went wrong</h1>
-            <p className="text-gray-500 mb-8">
+            <p className="text-muted-foreground mb-8">
               An unexpected error occurred. Please try again or return to the homepage.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={reset}
-                className="px-6 py-3 rounded-full bg-violet-600 text-white font-medium hover:bg-violet-700 transition-colors"
+                className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
               >
                 Try again
               </button>
               <a
                 href="/"
-                className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+                className="px-6 py-3 rounded-full border border-border text-foreground font-medium hover:bg-secondary transition-colors"
               >
                 Go home
               </a>

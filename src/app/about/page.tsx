@@ -21,6 +21,7 @@ const schema = {
   "@graph": [
     {
       "@type": "AboutPage",
+      "@id": "https://www.aivized.com/about",
       "name": "About AIVized",
       "description": "AIVized is a managed AI chatbot service for UK small businesses. We install, train, and maintain chatbots on websites and WhatsApp so business owners can focus on running their business.",
       "url": "https://www.aivized.com/about",

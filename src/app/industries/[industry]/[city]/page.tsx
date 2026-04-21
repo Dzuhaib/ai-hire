@@ -35,7 +35,10 @@ export async function generateMetadata({
       title,
       description,
       url: `https://www.aivized.com/industries/${industry}/${city}`,
+      type: "website",
+      images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
     },
+    twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
   };
 }
 
@@ -91,7 +94,7 @@ export default async function Page({
               "url": `https://www.aivized.com/industries/${industry}/${city}`,
               "description": `Managed AI chatbot service for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
               "email": "aivized.com@gmail.com",
-              "priceRange": "££",
+              "priceRange": "£29-£149",
               "areaServed": {
                 "@type": "City",
                 "name": cityData.cityName,
