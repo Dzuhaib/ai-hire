@@ -70,7 +70,7 @@ const AIChatbotVsLiveChatBlog = () => {
               <span className="flex items-center gap-2"><Clock className="w-4 h-4" />10 min read</span>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-video bg-secondary relative">
-              <Image src={heroImage} alt="Blog hero image" fill className="object-cover" priority />
+              <Image src={heroImage} alt="AI chatbot versus live chat comparison for UK small businesses" fill className="object-cover" priority />
             </div>
           </motion.header>
 

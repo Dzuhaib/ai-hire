@@ -30,7 +30,9 @@ export async function generateMetadata({
       title,
       description,
       url: `https://www.aivized.com/industries/${industry}`,
+      images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
     },
+    twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
   };
 }
 

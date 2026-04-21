@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Privacy Policy | AIVized",
   description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UK GDPR.",
   alternates: { canonical: "https://www.aivized.com/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy | AIVized",
+    description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UK GDPR.",
+    url: "https://www.aivized.com/privacy-policy",
+    type: "website",
+    images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
 const schema = {

@@ -246,7 +246,7 @@ const IndustryCityPage = () => {
       </section>
 
       {/* Other cities for this industry */}
-      <section className="section-padding">
+      <section className="section-padding bg-muted/30">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">More Cities</p>

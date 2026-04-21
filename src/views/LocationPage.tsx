@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { MapPin, CheckCircle, ArrowRight, Phone, Mail, Clock, Zap, Users, TrendingUp, Shield, Bot, Headphones, MessageCircle } from "lucide-react";
+import { MapPin, CheckCircle, ArrowRight, Mail, Clock, Zap, Users, TrendingUp, Shield, Bot, Headphones, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getLocationBySlug, ukLocations } from "@/data/locationData";

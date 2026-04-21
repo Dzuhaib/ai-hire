@@ -84,17 +84,6 @@ const IndustryPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [industrySlug]);
 
-  const industryKeywords: Record<string, string> = {
-    restaurants: "Restaurant AI Chatbot UK",
-    "real-estate": "Real Estate AI Chatbot UK",
-    ecommerce: "E-Commerce AI Chatbot UK",
-    healthcare: "Healthcare AI Chatbot UK",
-    legal: "Law Firm AI Chatbot UK",
-    fitness: "Gym AI Chatbot UK",
-    travel: "Travel Agent AI Chatbot UK",
-  };
-  const industryKeyword = industrySlug ? industryKeywords[industrySlug] || `${industry?.industry} AI Chatbot UK` : "";
-  
   if (!industry || !industrySlug) {
     return <NotFound />;
   }

@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Refund Policy | AIVized",
   description: "Read the AIVized refund and cancellation policy for managed AI chatbot subscriptions.",
   alternates: { canonical: "https://www.aivized.com/refund-policy" },
+  openGraph: {
+    title: "Refund Policy | AIVized",
+    description: "Read the AIVized refund and cancellation policy for managed AI chatbot subscriptions.",
+    url: "https://www.aivized.com/refund-policy",
+    type: "website",
+    images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
 const schema = {

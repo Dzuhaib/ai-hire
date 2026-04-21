@@ -83,16 +83,17 @@ export const Header = () => {
     >
       <div className="container-narrow">
         <div className="flex items-center justify-between h-20">
-          <motion.a
-            href="/"
-            className="flex items-center gap-2 text-xl font-serif font-semibold tracking-tight"
-            whileHover={{ scale: 1.02 }}
-          >
-            <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-              <Bot className="w-4 h-4 text-primary" />
-            </div>
-            <span className="font-serif font-semibold text-foreground">AIVized</span>
-          </motion.a>
+          <Link href="/" className="flex items-center gap-2 text-xl font-serif font-semibold tracking-tight">
+            <motion.div
+              className="flex items-center gap-2"
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                <Bot className="w-4 h-4 text-primary" />
+              </div>
+              <span className="font-serif font-semibold text-foreground">AIVized</span>
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">

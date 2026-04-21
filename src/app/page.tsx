@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: "Managed AI Chatbot for UK Small Businesses | AIVized",
     description:
       "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything—no technical skills needed.",
+    images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
   },
 };
 

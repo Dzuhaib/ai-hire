@@ -84,7 +84,7 @@ const AIChatbotGuideBlog = () => {
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-video bg-secondary">
-              <Image src={heroImage} alt="Blog hero image" fill className="object-cover" priority />
+              <Image src={heroImage} alt="Complete guide to AI chatbots for UK small businesses" fill className="object-cover" priority />
             </div>
           </motion.header>
 

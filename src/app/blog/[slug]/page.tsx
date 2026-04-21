@@ -26,8 +26,12 @@ export async function generateMetadata({
         title: post.metaTitle,
         description: post.metaDescription,
         url: `https://www.aivized.com/blog/${slug}`,
+        type: "article",
+        publishedTime: "2026-02-08",
+        modifiedTime: "2026-04-20",
         images: [{ url: post.heroImage }],
       },
+      twitter: { card: "summary_large_image", images: [post.heroImage] },
     };
   }
 
@@ -66,7 +70,7 @@ export default async function Page({
             "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
             "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
             "datePublished": "2026-02-08",
-            "dateModified": "2026-04-21",
+            "dateModified": "2026-04-20",
             "mainEntityOfPage": canonicalUrl,
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
           },
