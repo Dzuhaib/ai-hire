@@ -19,7 +19,8 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      
+
+      <main>
       {/* Hero Banner */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden bg-secondary/20">
         <div className="container-narrow relative z-10">
@@ -65,12 +66,10 @@ const PricingPage = () => {
         </div>
       </section>
 
-      <main>
         <PricingSection />
         <CostComparisonCalculator />
       </main>
 
-      
       <Footer />
     </div>
   );

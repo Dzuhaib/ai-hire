@@ -111,7 +111,7 @@ const IndustriesPage = () => {
                 >
                   <div className="relative h-full card-premium overflow-hidden transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[var(--shadow-lift)]">
                     <div className="relative h-48 overflow-hidden">
-                      <Image src={industryImages[industry.slug] || aiRestaurantHero} alt="" width={600} height={400} className="w-full object-cover" />
+                      <Image src={industryImages[industry.slug] || aiRestaurantHero} alt={`AI chatbot for ${industry.industry} businesses`} width={600} height={400} className="w-full object-cover" />
                       <div className="absolute bottom-3 left-3 flex items-center gap-2">
                         <span className="px-2 py-1 text-xs rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">
                           {industry.tagline}

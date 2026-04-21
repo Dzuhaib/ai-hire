@@ -104,7 +104,7 @@ const CityWebsiteChatbotBlog = () => {
               </span>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-video bg-secondary">
-              <Image src={heroImage} alt="" fill className="object-cover" />
+              <Image src={heroImage} alt={`AI website chatbot running 24/7 for businesses in ${data?.city ?? "your city"}`} fill className="object-cover" />
             </div>
           </motion.header>
 

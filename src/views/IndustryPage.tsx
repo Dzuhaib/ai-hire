@@ -95,10 +95,6 @@ const IndustryPage = () => {
   };
   const industryKeyword = industrySlug ? industryKeywords[industrySlug] || `${industry?.industry} AI Chatbot UK` : "";
   
-  const metaTitle = industry ? `${industryKeyword} | Managed from £29/month` : "";
-  const metaDescription = industry ? `Managed AI chatbot for ${industry.industry.toLowerCase()}. Capture leads 24/7, automate inquiries. From £29/month, no technical skills needed.` : "";
-  const metaKeywords = industry ? `${industry.slug} AI chatbot UK, ${industry.industry.toLowerCase()} chatbot, managed AI chatbot, lead generation chatbot, 24/7 customer support` : "";
-
   if (!industry || !industrySlug) {
     return <NotFound />;
   }

@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "24/7 AI Chat Agents for Birmingham Businesses | AIVized",
   description: "Managed 24/7 AI chat agents for your Birmingham business. AIVized installs and maintains your chatbot. Enquiries and bookings handled automatically. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/outsourced-chat-agents-birmingham" },
+  openGraph: {
+    title: "24/7 AI Chat Agents for Birmingham Businesses | AIVized",
+    description: "Managed 24/7 AI chat agents for your Birmingham business. AIVized installs and maintains your chatbot. Enquiries and bookings handled automatically. From £29/month.",
+    url: "https://www.aivized.com/blog/outsourced-chat-agents-birmingham",
+    type: "article",
+    publishedTime: "2026-02-13",
+    modifiedTime: "2026-04-21",
+    images: [{ url: "https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png"] },
 };
 
 const schema = {
@@ -39,7 +49,7 @@ const schema = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "24/7 AI Chat Agents Birmingham" }
+        { "@type": "ListItem", "position": 3, "name": "24/7 AI Chat Agents Birmingham", "item": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham" }
       ]
     }
   ]

@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Social Media Automation for UK Businesses | AIVized",
   description: "AIVized offers social media automation for UK businesses — managing Instagram, Facebook, and LinkedIn DMs, content scheduling, and audience engagement 24/7.",
   alternates: { canonical: "https://www.aivized.com/services/social-media-automation" },
+  openGraph: {
+    title: "Social Media Automation for UK Businesses | AIVized",
+    description: "AIVized offers social media automation for UK businesses — managing Instagram, Facebook, and LinkedIn DMs, content scheduling, and audience engagement 24/7.",
+    url: "https://www.aivized.com/services/social-media-automation",
+    type: "website",
+    images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
 const schema = {

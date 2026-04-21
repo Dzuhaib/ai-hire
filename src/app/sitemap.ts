@@ -5,7 +5,7 @@ import { allIndustryCities } from "@/data/industryCityData";
 import { cityBlogPosts } from "@/data/cityBlogData";
 
 const BASE_URL = "https://www.aivized.com";
-const NOW = new Date().toISOString();
+const NOW = "2026-04-21T00:00:00.000Z";
 
 // Static blog slugs (non-city-specific)
 const staticBlogSlugs = [

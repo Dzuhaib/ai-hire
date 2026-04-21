@@ -154,11 +154,11 @@ const BusinessAutomationPage = () => {
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
               Frequently Asked Questions
             </h2>
-            <Accordion type="single" collapsible className="w-full max-w-2xl">
+            <Accordion type="single" collapsible className="w-full max-w-2xl space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+                <AccordionItem key={index} value={`item-${index}`} className="card-premium px-6 border-border/50">
+                  <AccordionTrigger className="text-left font-medium hover:text-primary transition-colors py-5 hover:no-underline">{faq.question}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">{faq.answer}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>

@@ -78,10 +78,6 @@ const LocationPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
 
-  const metaTitle = location ? `Managed AI Chatbot ${location.city} | From £29/month` : "";
-  const metaDescription = location ? `Managed AI chatbot for ${location.city} businesses from £29/month. 24/7 lead capture, we handle installation and support.` : "";
-  const metaKeywords = location ? `AI chatbot ${location.city}, managed AI chatbot ${location.city}, lead generation chatbot ${location.region}, 24/7 customer support ${location.city}, small business chatbot UK` : "";
-
   if (!location) {
     return <NotFound />;
   }

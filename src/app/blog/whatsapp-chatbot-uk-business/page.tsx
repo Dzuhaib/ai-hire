@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "Managed WhatsApp Chatbot for UK Businesses | AIVized",
   description: "Set up a WhatsApp chatbot for your UK business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/whatsapp-chatbot-uk-business" },
+  openGraph: {
+    title: "Managed WhatsApp Chatbot for UK Businesses | AIVized",
+    description: "Set up a WhatsApp chatbot for your UK business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From £29/month.",
+    url: "https://www.aivized.com/blog/whatsapp-chatbot-uk-business",
+    type: "article",
+    publishedTime: "2026-02-09",
+    modifiedTime: "2026-04-21",
+    images: [{ url: "https://www.aivized.com/assets/blog/whatsapp-chatbot-hero.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/whatsapp-chatbot-hero.png"] },
 };
 
 const schema = {
@@ -37,7 +47,7 @@ const schema = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "WhatsApp Chatbot UK" }
+        { "@type": "ListItem", "position": 3, "name": "WhatsApp Chatbot UK", "item": "https://www.aivized.com/blog/whatsapp-chatbot-uk-business" }
       ]
     }
   ]

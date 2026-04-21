@@ -96,20 +96,35 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavClick(item)}
-                className={cn(
-                  "magnetic-link text-sm transition-colors",
-                  activeSection === item.href
-                    ? "text-primary font-medium"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) =>
+              item.isRoute ? (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={cn(
+                    "magnetic-link text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm",
+                    activeSection === item.href
+                      ? "text-primary font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavClick(item)}
+                  className={cn(
+                    "magnetic-link text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm",
+                    activeSection === item.href
+                      ? "text-primary font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {item.label}
+                </button>
+              )
+            )}
           </nav>
 
           {/* Desktop Auth/CTA */}
@@ -153,21 +168,37 @@ export const Header = () => {
               <SheetDescription className="sr-only">Main navigation links and actions</SheetDescription>
               <div className="flex flex-col h-full pt-8">
                 <nav className="flex flex-col gap-6">
-                  {navItems.map((item) => (
-                    <SheetClose asChild key={item.label}>
-                      <button
-                        onClick={() => handleNavClick(item)}
-                        className={cn(
-                          "text-lg font-medium transition-colors text-left",
-                          activeSection === item.href
-                            ? "text-primary"
-                            : "text-muted-foreground hover:text-foreground"
-                        )}
-                      >
-                        {item.label}
-                      </button>
-                    </SheetClose>
-                  ))}
+                  {navItems.map((item) =>
+                    item.isRoute ? (
+                      <SheetClose asChild key={item.label}>
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "text-lg font-medium transition-colors text-left",
+                            activeSection === item.href
+                              ? "text-primary"
+                              : "text-muted-foreground hover:text-foreground"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      </SheetClose>
+                    ) : (
+                      <SheetClose asChild key={item.label}>
+                        <button
+                          onClick={() => handleNavClick(item)}
+                          className={cn(
+                            "text-lg font-medium transition-colors text-left",
+                            activeSection === item.href
+                              ? "text-primary"
+                              : "text-muted-foreground hover:text-foreground"
+                          )}
+                        >
+                          {item.label}
+                        </button>
+                      </SheetClose>
+                    )
+                  )}
                 </nav>
                 
                 <div className="mt-auto pb-8 space-y-3">

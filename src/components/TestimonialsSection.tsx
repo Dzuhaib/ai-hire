@@ -3,16 +3,19 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote: "Our AIVized handles 80% of customer enquiries now. We've saved countless hours and our customers love the instant responses.",
+    name: "James R.",
     industry: "Restaurant",
     location: "Manchester",
   },
   {
     quote: "Setup was incredibly simple. Within 24 hours we had AIVized handling property viewings and capturing leads around the clock.",
+    name: "Sarah T.",
     industry: "Real Estate",
     location: "London",
   },
   {
     quote: "Best investment we've made this year. Our conversion rate increased by 35% since adding AIVized to our online store.",
+    name: "Daniel M.",
     industry: "E-commerce",
     location: "Bristol",
   },
@@ -68,9 +71,10 @@ export const TestimonialsSection = () => {
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
-              {/* Industry & Location */}
+              {/* Name, Industry & Location */}
               <div className="pt-5 border-t border-border/60">
-                <p className="text-sm font-medium text-primary">
+                <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
+                <p className="text-sm font-medium text-primary mt-0.5">
                   {testimonial.industry}
                 </p>
                 <p className="text-xs text-muted-foreground mt-0.5">{testimonial.location}</p>

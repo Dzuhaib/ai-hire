@@ -65,16 +65,6 @@ const LocationsPage = () => {
     setIsLoading(false);
   }, []);
 
-  // Breadcrumb schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.aivized.com/locations" }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />

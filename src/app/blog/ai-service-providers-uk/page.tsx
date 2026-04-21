@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "How to Choose an AI Service Provider UK | AIVized Guide",
   description: "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-service-providers-uk" },
+  openGraph: {
+    title: "How to Choose an AI Service Provider UK | AIVized Guide",
+    description: "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.",
+    url: "https://www.aivized.com/blog/ai-service-providers-uk",
+    type: "article",
+    publishedTime: "2026-02-15",
+    modifiedTime: "2026-04-21",
+    images: [{ url: "https://www.aivized.com/assets/blog/ai-service-providers-hero.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/ai-service-providers-hero.png"] },
 };
 
 const schema = {
@@ -39,7 +49,7 @@ const schema = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "AI Service Providers UK" }
+        { "@type": "ListItem", "position": 3, "name": "AI Service Providers UK", "item": "https://www.aivized.com/blog/ai-service-providers-uk" }
       ]
     }
   ]

@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "Managed AI Personal Assistant for UK Businesses | AIVized",
   description: "AIVized provides a fully managed AI personal assistant for your UK business. Handles enquiries, captures leads, and automates responses 24/7. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-personal-assistant-near-me" },
+  openGraph: {
+    title: "Managed AI Personal Assistant for UK Businesses | AIVized",
+    description: "AIVized provides a fully managed AI personal assistant for your UK business. Handles enquiries, captures leads, and automates responses 24/7. From £29/month.",
+    url: "https://www.aivized.com/blog/ai-personal-assistant-near-me",
+    type: "article",
+    publishedTime: "2026-02-18",
+    modifiedTime: "2026-04-21",
+    images: [{ url: "https://www.aivized.com/assets/blog/ai-personal-assistant-hero.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/ai-personal-assistant-hero.png"] },
 };
 
 const schema = {
@@ -39,7 +49,7 @@ const schema = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "AI Personal Assistant UK Business" }
+        { "@type": "ListItem", "position": 3, "name": "AI Personal Assistant UK Business", "item": "https://www.aivized.com/blog/ai-personal-assistant-near-me" }
       ]
     }
   ]

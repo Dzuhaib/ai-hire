@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Business Process Automation for UK Businesses | AIVized",
   description: "AIVized delivers business process automation for UK businesses — automating follow-ups, appointment reminders, and customer onboarding. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/services/business-automation" },
+  openGraph: {
+    title: "Business Process Automation for UK Businesses | AIVized",
+    description: "AIVized delivers business process automation for UK businesses — automating follow-ups, appointment reminders, and customer onboarding. From £29/month.",
+    url: "https://www.aivized.com/services/business-automation",
+    type: "website",
+    images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
 const schema = {

@@ -4,8 +4,16 @@ import AboutPage from "@/views/AboutPage";
 
 export const metadata: Metadata = {
   title: "Managed AI Chatbot Service for UK Businesses | AIVized",
-  description: "AIVized is a managed AI chatbot service for UK small businesses. We install, train, and maintain your chatbot — no technical skills needed. From £29/month.",
+  description: "AIVized is a UK-based managed AI chatbot service founded by Zuhaib Ahmed. We install, train, and maintain your chatbot so you can focus on running your business.",
   alternates: { canonical: "https://www.aivized.com/about" },
+  openGraph: {
+    title: "About AIVized — Managed AI Chatbot for UK Small Businesses",
+    description: "AIVized is a UK-based managed AI chatbot service founded by Zuhaib Ahmed. We install, train, and maintain your chatbot so you can focus on running your business.",
+    url: "https://www.aivized.com/about",
+    type: "website",
+    images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
 const schema = {
@@ -34,7 +42,10 @@ const schema = {
           "areaServed": "GB"
         },
         "sameAs": [
-          "https://www.linkedin.com/company/ai-vized/"
+          "https://www.linkedin.com/company/ai-vized/",
+          "https://twitter.com/aivized",
+          "https://www.facebook.com/aivized",
+          "https://www.instagram.com/aivized"
         ],
         "founder": {
           "@type": "Person",

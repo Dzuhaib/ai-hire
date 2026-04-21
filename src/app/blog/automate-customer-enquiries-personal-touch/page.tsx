@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "Automate Customer Enquiries with a Personal Touch | AIVized",
   description: "Learn how to automate customer enquiries while keeping the personal touch. AIVized manages AI chatbots for UK small businesses — no technical setup needed.",
   alternates: { canonical: "https://www.aivized.com/blog/automate-customer-enquiries-personal-touch" },
+  openGraph: {
+    title: "Automate Customer Enquiries with a Personal Touch | AIVized",
+    description: "Learn how to automate customer enquiries while keeping the personal touch. AIVized manages AI chatbots for UK small businesses — no technical setup needed.",
+    url: "https://www.aivized.com/blog/automate-customer-enquiries-personal-touch",
+    type: "article",
+    publishedTime: "2026-02-12",
+    modifiedTime: "2026-04-21",
+    images: [{ url: "https://www.aivized.com/assets/blog/automate-enquiries-personal-touch-hero.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/automate-enquiries-personal-touch-hero.png"] },
 };
 
 const schema = {
@@ -19,7 +29,7 @@ const schema = {
       "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
       "datePublished": "2026-02-12",
-      "dateModified": "2026-02-26",
+      "dateModified": "2026-04-21",
       "mainEntityOfPage": "https://www.aivized.com/blog/automate-customer-enquiries-personal-touch",
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
@@ -38,7 +48,7 @@ const schema = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "Automate Enquiries" }
+        { "@type": "ListItem", "position": 3, "name": "Automate Customer Enquiries with a Personal Touch", "item": "https://www.aivized.com/blog/automate-customer-enquiries-personal-touch" }
       ]
     }
   ]

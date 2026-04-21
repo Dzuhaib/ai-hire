@@ -240,7 +240,7 @@ const Dashboard = () => {
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3">
                   {user?.imageUrl && (
-                    <Image src={user.imageUrl} alt="" width={40} height={40} className="rounded-full" />
+                    <Image src={user.imageUrl} alt={`${user.fullName ?? "User"}'s profile photo`} width={40} height={40} className="rounded-full" />
                   )}
                   <span className="text-sm font-medium hidden sm:block">
                     {user?.fullName || user?.primaryEmailAddress?.emailAddress}

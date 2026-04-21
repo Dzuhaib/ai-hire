@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "AI Business Automation for UK Small Business | AIVized",
   description: "A practical guide to AI business automation for UK small businesses. AIVized manages setup and monitoring — capture leads and automate enquiries from £29/month.",
   alternates: { canonical: "https://www.aivized.com/blog/ai-automation-uk-business" },
+  openGraph: {
+    title: "AI Business Automation for UK Small Business | AIVized",
+    description: "A practical guide to AI business automation for UK small businesses. AIVized manages setup and monitoring — capture leads and automate enquiries from £29/month.",
+    url: "https://www.aivized.com/blog/ai-automation-uk-business",
+    type: "article",
+    publishedTime: "2026-02-05",
+    modifiedTime: "2026-04-21",
+    images: [{ url: "https://www.aivized.com/assets/blog/ai-automation-uk-hero.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/ai-automation-uk-hero.png"] },
 };
 
 const schema = {
@@ -39,7 +49,7 @@ const schema = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "AI Business Automation UK" }
+        { "@type": "ListItem", "position": 3, "name": "AI Business Automation UK", "item": "https://www.aivized.com/blog/ai-automation-uk-business" }
       ]
     }
   ]
