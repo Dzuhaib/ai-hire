@@ -19,11 +19,11 @@ const AIChatbotGuideBlog = () => {
   const faqs = [
     {
       question: "What is the best AI chatbot for small business UK in 2026?",
-      answer: "The best AI chatbot for small business UK combines affordability, ease of use, and multi-channel support. AIVized offers a fully managed chatbot service from £29/month that works across your website, WhatsApp, and social media—no technical skills required. Unlike DIY builders, we handle installation, training, and ongoing optimisation."
+      answer: "The best AI chatbot for small business UK combines affordability, ease of use, and multi-channel support. AIVized offers a fully managed chatbot service from £29/month that works across your website, WhatsApp, and social media with no technical skills required. Unlike DIY builders, we handle installation, training, and ongoing optimisation."
     },
     {
       question: "How does a WhatsApp chatbot UK work for lead generation?",
-      answer: "A WhatsApp chatbot UK automatically engages customers on WhatsApp—the UK's most popular messaging app. It answers enquiries instantly, qualifies leads by asking relevant questions, collects contact details, and books appointments. Because WhatsApp messages have 98% open rates compared to 20% for email, it's one of the most effective lead generation channels available."
+      answer: "A WhatsApp chatbot UK automatically engages customers on WhatsApp, the UK's most popular messaging app. It answers enquiries instantly, qualifies leads by asking relevant questions, collects contact details, and books appointments. Because WhatsApp messages have 98% open rates compared to 20% for email, it's one of the most effective lead generation channels available."
     },
     {
       question: "What is a managed AI chatbot service vs a DIY chatbot builder?",
@@ -35,7 +35,7 @@ const AIChatbotGuideBlog = () => {
     },
     {
       question: "Do I need technical skills to set up an AI chatbot for my UK business?",
-      answer: "No. With AIVized's managed service, you need zero technical skills. We handle everything—from chatbot design and installation to training, monitoring, and updates. You simply tell us about your business, and we build and deploy your AI chatbot within 24 hours. It's truly a hands-off experience."
+      answer: "No. With AIVized's managed service, you need zero technical skills. We handle everything, from chatbot design and installation to training, monitoring, and updates. You simply tell us about your business, and we build and deploy your AI chatbot within 24 hours. It's truly a hands-off experience."
     },
     {
       question: "How much does an AI chatbot cost for a small business in the UK?",
@@ -96,7 +96,7 @@ const AIChatbotGuideBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              If you're a UK small business owner wondering whether an <strong>AI chatbot</strong> is worth the investment, the short answer is yes—and you're not alone. Thousands of SMEs across Britain are already using chatbots to capture leads, support customers, and grow their businesses. This comprehensive guide covers everything you need to know about choosing and implementing the right chatbot solution in 2026.
+              If you're a UK small business owner wondering whether an <strong>AI chatbot</strong> is worth the investment, the short answer is yes, and you're not alone. Thousands of SMEs across Britain are already using chatbots to capture leads, support customers, and grow their businesses. This comprehensive guide covers everything you need to know about choosing and implementing the right chatbot solution in 2026.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
@@ -106,7 +106,7 @@ const AIChatbotGuideBlog = () => {
               The UK small business landscape has changed dramatically. Customers expect instant responses. According to recent surveys, 82% of consumers expect a reply within 10 minutes of reaching out to a business online. If you can't meet that expectation, your competitor will.
             </p>
             <p className="text-muted-foreground mb-6">
-              An <strong>AI chatbot for small business UK</strong> bridges that gap. It doesn't take lunch breaks, doesn't call in sick, and doesn't need training for months before becoming productive. From the moment it's deployed, it's answering questions, capturing leads, and representing your brand—consistently, professionally, and around the clock.
+              An <strong>AI chatbot for small business UK</strong> bridges that gap. It doesn't take lunch breaks, doesn't call in sick, and doesn't need training for months before becoming productive. From the moment it's deployed, it's answering questions, capturing leads, and representing your brand consistently, professionally, and around the clock.
             </p>
 
             <BlogInlineImage src={guideInline1} alt="Multi-channel chatbot on website, WhatsApp and social media devices" />
@@ -175,7 +175,7 @@ const AIChatbotGuideBlog = () => {
               <strong>Managed vs DIY:</strong> A managed service means the provider installs the chatbot, trains it on your business, and handles ongoing maintenance. A DIY builder gives you tools to configure it yourself. Managed works better for most small businesses because the time cost of DIY is rarely accounted for up front. If you have no technical staff, managed is almost always the better value.
             </p>
             <p className="text-muted-foreground mb-6">
-              <strong>Questions to ask before signing up:</strong> Is the chatbot trained on your specific products, services, and policies—or is it a generic template? Who updates it when your offerings change? What happens when the chatbot cannot answer a question? Is there a contract, and what are the exit terms? Where is your customer data stored, and is the service GDPR compliant? How do you see performance data, and what does the reporting look like?
+              <strong>Questions to ask before signing up:</strong> Is the chatbot trained on your specific products, services, and policies, or is it a generic template? Who updates it when your offerings change? What happens when the chatbot cannot answer a question? Is there a contract, and what are the exit terms? Where is your customer data stored, and is the service GDPR compliant? How do you see performance data, and what does the reporting look like?
             </p>
             <p className="text-muted-foreground mb-6">
               <strong>Red flags to watch for:</strong> Providers who cannot show you example chatbot conversations. Contracts of 12 months or more before you have seen results. No clear answer on data storage location. Pricing that increases significantly once you need updates. Providers who promise specific traffic or lead numbers without knowing anything about your business.
@@ -194,7 +194,7 @@ const AIChatbotGuideBlog = () => {
             <BlogInlineImage src={guideInline3} alt="Pricing comparison interface on laptop showing chatbot plans" />
             <ol className="text-muted-foreground space-y-3 mb-6">
               <li><strong>1. Managed vs. DIY:</strong> Managed services like AIVized handle everything, while DIY builders require your time and technical knowledge. For most small businesses, managed is the better investment.</li>
-              <li><strong>2. Multi-channel support:</strong> Your chatbot should work across WhatsApp, your website, and social media—not just one platform.</li>
+              <li><strong>2. Multi-channel support:</strong> Your chatbot should work across WhatsApp, your website, and social media, not just one platform.</li>
               <li><strong>3. Customisation:</strong> It should be trained on your specific products, services, and brand voice, not generic responses.</li>
               <li><strong>4. Analytics:</strong> You need clear reporting on conversations, leads captured, and customer satisfaction to measure ROI.</li>
               <li><strong>5. UK compliance:</strong> Ensure the provider is GDPR-compliant and understands UK data protection requirements.</li>
@@ -205,10 +205,10 @@ const AIChatbotGuideBlog = () => {
               Getting Started: Your AI Chatbot in Under 24 Hours
             </h2>
             <p className="text-muted-foreground mb-6">
-              With AIVized's managed service, getting an AI chatbot is as simple as subscribing to a plan. We handle the entire process—from understanding your business to deploying your chatbot across your chosen channels. No developers, no code, no headaches. Most businesses are live within 24 hours.
+              With AIVized's managed service, getting an AI chatbot is as simple as subscribing to a plan. We handle the entire process, from understanding your business to deploying your chatbot across your chosen channels. No developers, no code, no headaches. Most businesses are live within 24 hours.
             </p>
             <p className="text-muted-foreground mb-6">
-              AIVized works with small businesses across the UK—restaurants, estate agents, clinics, law firms, gyms, and travel agencies. Plans start from just £29/month with a 3-day free trial and no long-term contract.
+              AIVized works with small businesses across the UK, including restaurants, estate agents, clinics, law firms, gyms, and travel agencies. Plans start from just £29/month with a 3-day free trial and no long-term contract.
             </p>
 
             {/* FAQ Section */}

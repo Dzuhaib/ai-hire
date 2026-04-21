@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "AIVized is a UK-based managed AI chatbot service founded by Zuhaib Ahmed. We install, train, and maintain your chatbot so you can focus on running your business.",
   alternates: { canonical: "https://www.aivized.com/about" },
   openGraph: {
-    title: "About AIVized — Managed AI Chatbot for UK Small Businesses",
+    title: "About AIVized: Managed AI Chatbot for UK Small Businesses",
     description: "AIVized is a UK-based managed AI chatbot service founded by Zuhaib Ahmed. We install, train, and maintain your chatbot so you can focus on running your business.",
     url: "https://www.aivized.com/about",
     type: "website",

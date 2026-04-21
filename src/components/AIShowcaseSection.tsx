@@ -14,7 +14,7 @@ export const AIShowcaseSection = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            AIVized manages AI chatbots, social media automation, and business workflow automation for UK small businesses. We handle setup, training, and ongoing maintenance — no technical skills needed.
+            AIVized manages AI chatbots, social media automation, and business workflow automation for UK small businesses. We handle setup, training, and ongoing maintenance. No technical skills needed.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export const AIShowcaseSection = () => {
           {[
             { label: "AI Chatbot", desc: "Captures leads and answers enquiries 24/7" },
             { label: "Social Media", desc: "DM automation across Instagram, Facebook, LinkedIn" },
-            { label: "Workflow Automation", desc: "Follow-ups, reminders, onboarding — all handled" },
+            { label: "Workflow Automation", desc: "Follow-ups, reminders, onboarding. All handled" },
           ].map((item, index) => (
             <div key={index} className="text-center p-4">
               <div className="w-2 h-2 rounded-full bg-primary mx-auto mb-3" />

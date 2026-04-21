@@ -20,7 +20,7 @@ const services = [
     label: "New",
     title: "Social Media Automation",
     description:
-      "We manage your Instagram, Facebook, and LinkedIn — automating DM responses, scheduling content, and keeping your audience engaged without you having to be online.",
+      "We manage your Instagram, Facebook, and LinkedIn, automating DM responses, scheduling content, and keeping your audience engaged without you having to be online.",
     features: ["DM automation across platforms", "Content scheduling", "Engagement monitoring"],
     cta: "Learn More",
     href: "/services/social-media-automation",
@@ -32,7 +32,7 @@ const services = [
     label: "New",
     title: "Business Process Automation",
     description:
-      "We automate the repetitive workflows that drain your team's time — lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications.",
+      "We automate the repetitive workflows that drain your team's time: lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications.",
     features: ["Lead follow-up sequences", "Appointment reminders", "Workflow automation"],
     cta: "Learn More",
     href: "/services/business-automation",
@@ -57,7 +57,7 @@ export const ServicesSection = () => {
             Managed Automation <span className="text-gradient">Services</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Every service is fully managed — we handle setup, training, and ongoing maintenance so you can focus on running your business.
+            Every service is fully managed. We handle setup, training, and ongoing maintenance so you can focus on running your business.
           </p>
         </motion.div>
 

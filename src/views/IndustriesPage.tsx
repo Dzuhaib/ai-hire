@@ -61,7 +61,7 @@ const IndustriesPage = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Choose an industry solution built around your customers’ questions and your team’s workflow—then launch in 24 hours.
+              Choose an industry solution built around your customers’ questions and your team’s workflow, and launch in 24 hours.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">

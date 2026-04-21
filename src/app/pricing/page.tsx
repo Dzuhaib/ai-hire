@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Compare AIVized managed AI chatbot plans from £29/month. Starter, Professional, and Business plans include full installation and support. 3-day free trial, no contracts.",
   alternates: { canonical: "https://www.aivized.com/pricing" },
   openGraph: {
-    title: "AIVized Pricing — Managed AI Chatbot Plans from £29/month",
+    title: "AIVized Pricing: Managed AI Chatbot Plans from £29/month",
     description: "Compare AIVized managed AI chatbot plans from £29/month. Starter, Professional, and Business plans include full installation and support. 3-day free trial, no contracts.",
     url: "https://www.aivized.com/pricing",
     type: "website",

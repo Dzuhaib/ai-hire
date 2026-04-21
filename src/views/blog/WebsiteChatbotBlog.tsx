@@ -28,11 +28,11 @@ const WebsiteChatbotBlog = () => {
     },
     {
       question: "How does an AI chatbot for small business UK work on a website?",
-      answer: "An AI chatbot for small business UK works by embedding a chat widget on your website. When visitors arrive, the chatbot greets them, answers common questions, captures contact details, and can guide them toward booking or purchasing — all automatically, based on the knowledge base we build from your business information."
+      answer: "An AI chatbot for small business UK works by embedding a chat widget on your website. When visitors arrive, the chatbot greets them, answers common questions, captures contact details, and can guide them toward booking or purchasing, all automatically, based on the knowledge base we build from your business information."
     },
     {
       question: "Will a website chatbot work on my existing site without a rebuild?",
-      answer: "Yes. AIVized installs the chatbot by adding a single script tag to your website. This works with any website platform — WordPress, Shopify, Wix, Squarespace, or a custom-built site. No rebuild or technical work is required from your side."
+      answer: "Yes. AIVized installs the chatbot by adding a single script tag to your website. This works with any website platform, including WordPress, Shopify, Wix, Squarespace, or a custom-built site. No rebuild or technical work is required from your side."
     },
     {
       question: "What happens when the chatbot can't answer a question?",
@@ -69,11 +69,11 @@ const WebsiteChatbotBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              Your website is often the first place a potential customer tries to contact you. If they land on your site at 8pm with a question and find no way to get an instant answer, most will leave and try a competitor. A managed website chatbot solves this by providing an instant, accurate response every time — with no action required from you. See how chatbots help <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">reduce missed leads from your website</Link>.
+              Your website is often the first place a potential customer tries to contact you. If they land on your site at 8pm with a question and find no way to get an instant answer, most will leave and try a competitor. A managed website chatbot solves this by providing an instant, accurate response every time, with no action required from you. See how chatbots help <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">reduce missed leads from your website</Link>.
             </p>
 
             <h2 id="what-a-managed-website-chatbot-does">What a Managed Website Chatbot Does</h2>
-            <p>A website chatbot sits in the corner of your site and responds to visitor messages automatically. Unlike a basic FAQ widget, a managed AI chatbot holds a real conversation — it can ask clarifying questions, collect contact details, and guide visitors toward the outcome you want, whether that's a booking, a quote request, or a direct purchase.</p>
+            <p>A website chatbot sits in the corner of your site and responds to visitor messages automatically. Unlike a basic FAQ widget, a managed AI chatbot holds a real conversation. It can ask clarifying questions, collect contact details, and guide visitors toward the outcome you want, whether that's a booking, a quote request, or a direct purchase.</p>
 
             <BlogInlineImage src={websiteInline1} alt="Website chatbot widget on laptop screen in modern UK office" />
 
@@ -103,7 +103,7 @@ const WebsiteChatbotBlog = () => {
             <div className="not-prose my-8 p-6 rounded-lg bg-amber-500/10 border border-amber-400/20">
               <h3 className="text-lg font-semibold mb-4">Research Insight</h3>
               <p className="text-muted-foreground">
-                Chatbots can handle up to 80% of routine customer enquiries automatically, freeing your team to focus on high-value interactions. For small businesses without a dedicated support team, this means every visitor gets a response — not just those who contact you during office hours.
+                Chatbots can handle up to 80% of routine customer enquiries automatically, freeing your team to focus on high-value interactions. For small businesses without a dedicated support team, this means every visitor gets a response, not just those who contact you during office hours.
               </p>
             </div>
 
@@ -126,7 +126,7 @@ const WebsiteChatbotBlog = () => {
             <ol>
               <li><strong>We learn about your business:</strong> Products, services, pricing, FAQs, and brand voice</li>
               <li><strong>We build and test the chatbot:</strong> Trained on your specific business, verified before launch</li>
-              <li><strong>We install it on your site:</strong> A single script tag — no rebuild required</li>
+              <li><strong>We install it on your site:</strong> A single script tag, no rebuild required</li>
               <li><strong>We monitor and update it:</strong> Ongoing improvements and updates when your content changes</li>
             </ol>
             <p>Plans start from <Link href="/pricing" className="text-primary hover:underline">£29 per month</Link> with no long-term contracts.</p>
@@ -146,7 +146,7 @@ const WebsiteChatbotBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-border text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Ready to Add a Chatbot to Your Website?</h3>
-            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">AIVized handles everything — installation, training, and monitoring. From £29/month with complete setup included.</p>
+            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">AIVized handles everything: installation, training, and monitoring. From £29/month with complete setup included.</p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">View Pricing</Link>
           </motion.div>
           <AuthorBio />

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | AIVized",
   },
   description:
-    "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed.",
+    "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
   keywords:
     "managed AI chatbot service, AI chatbot for small business UK, lead generation chatbot UK, 24/7 customer support chatbot, affordable AI chatbot, fully managed chatbot, AIVized",
   authors: [{ name: "aivized" }],

@@ -19,7 +19,7 @@ const AIServiceProvidersBlog = () => {
   const faqs = [
     {
       question: "What should I look for in an AI service provider for my UK business?",
-      answer: "Look for a provider that handles the full setup for you — not just software you configure yourself. A good provider will train the AI on your specific business, monitor it after launch, and update it when your services change. Ask how they handle errors and what their response time is when something goes wrong."
+      answer: "Look for a provider that handles the full setup for you, not just software you configure yourself. A good provider will train the AI on your specific business, monitor it after launch, and update it when your services change. Ask how they handle errors and what their response time is when something goes wrong."
     },
     {
       question: "What is the difference between a managed AI service and a DIY chatbot builder?",
@@ -102,7 +102,7 @@ const AIServiceProvidersBlog = () => {
 
             <div className="not-prose my-8 grid gap-4">
               {[
-                "Installation on your website — no code required from you",
+                "Installation on your website with no code required from you",
                 "Training the AI on your specific products, services, and FAQs",
                 "Testing before launch to verify responses are accurate",
                 "24/7 monitoring so errors are caught before customers see them",
@@ -117,14 +117,14 @@ const AIServiceProvidersBlog = () => {
             </div>
 
             <p className="text-muted-foreground mb-6">
-              If a provider gives you a login, a drag-and-drop editor, and a tutorial video, that is a DIY tool — not a managed service. The distinction matters because the time you spend configuring and maintaining a DIY chatbot is the time you were trying to save in the first place.
+              If a provider gives you a login, a drag-and-drop editor, and a tutorial video, that is a DIY tool, not a managed service. The distinction matters because the time you spend configuring and maintaining a DIY chatbot is the time you were trying to save in the first place.
             </p>
 
             <BlogInlineImage src={providersInline1} alt="Small business owner working with an AI chatbot setup on a laptop" />
 
             <h2 id="diy-vs-managed">DIY vs Managed: The Real Cost Comparison</h2>
             <p className="text-muted-foreground mb-6">
-              DIY chatbot platforms typically advertise low monthly fees — sometimes free tiers. What they do not advertise is the time cost. Building a functional chatbot on a DIY platform requires:
+              DIY chatbot platforms typically advertise low monthly fees, sometimes free tiers. What they do not advertise is the time cost. Building a functional chatbot on a DIY platform requires:
             </p>
             <ul className="text-muted-foreground">
               <li>Initial setup: 10–20 hours to build and test conversation flows</li>
@@ -143,12 +143,12 @@ const AIServiceProvidersBlog = () => {
               Use these questions to separate genuine managed services from self-service platforms with managed branding:
             </p>
             <ol className="text-muted-foreground">
-              <li><strong>Who trains the chatbot on my business?</strong> — If the answer involves you uploading content or writing responses, it is not managed.</li>
-              <li><strong>How long does setup take?</strong> — A managed service should be live within 24–48 hours after you share your business details.</li>
-              <li><strong>What happens when I change my prices or services?</strong> — You should be able to contact support and have updates applied for you.</li>
-              <li><strong>Is there a free trial before I pay?</strong> — Any provider confident in their service offers a trial. Avoid those that do not.</li>
-              <li><strong>Can I cancel month to month?</strong> — Long contract lock-ins before you have seen results are a red flag.</li>
-              <li><strong>What is the support response time?</strong> — If the chatbot goes wrong at 2am and affects customer enquiries, how quickly do they respond?</li>
+              <li><strong>Who trains the chatbot on my business?</strong> If the answer involves you uploading content or writing responses, it is not managed.</li>
+              <li><strong>How long does setup take?</strong> A managed service should be live within 24–48 hours after you share your business details.</li>
+              <li><strong>What happens when I change my prices or services?</strong> You should be able to contact support and have updates applied for you.</li>
+              <li><strong>Is there a free trial before I pay?</strong> Any provider confident in their service offers a trial. Avoid those that do not.</li>
+              <li><strong>Can I cancel month to month?</strong> Long contract lock-ins before you have seen results are a red flag.</li>
+              <li><strong>What is the support response time?</strong> If the chatbot goes wrong at 2am and affects customer enquiries, how quickly do they respond?</li>
             </ol>
 
             <BlogInlineImage src={providersInline3} alt="Business owner reviewing AI chatbot analytics and performance dashboard" />
@@ -158,16 +158,16 @@ const AIServiceProvidersBlog = () => {
               Based on what businesses report after switching providers, these are the most common red flags:
             </p>
             <ul className="text-muted-foreground">
-              <li><strong>No demo or trial</strong> — Legitimate services let you see the product before committing.</li>
-              <li><strong>Setup fees in the thousands</strong> — High upfront costs before you have seen results shift all the risk onto you.</li>
-              <li><strong>Vague about what "managed" means</strong> — If they cannot explain exactly who does what after signup, you are likely doing it yourself.</li>
-              <li><strong>Generic case studies</strong> — Case studies that do not mention the industry, business size, or measurable result are not evidence of anything.</li>
-              <li><strong>No named support contact</strong> — "Submit a ticket" with no SLA is not adequate support for a tool that handles your customer enquiries.</li>
+              <li><strong>No demo or trial:</strong> Legitimate services let you see the product before committing.</li>
+              <li><strong>Setup fees in the thousands:</strong> High upfront costs before you have seen results shift all the risk onto you.</li>
+              <li><strong>Vague about what "managed" means:</strong> If they cannot explain exactly who does what after signup, you are likely doing it yourself.</li>
+              <li><strong>Generic case studies:</strong> Case studies that do not mention the industry, business size, or measurable result are not evidence of anything.</li>
+              <li><strong>No named support contact:</strong> "Submit a ticket" with no SLA is not adequate support for a tool that handles your customer enquiries.</li>
             </ul>
 
             <h2 id="how-to-assess-pricing">How to Assess Whether the Pricing Is Fair</h2>
             <p className="text-muted-foreground mb-6">
-              A managed AI chatbot for a UK small business should cost between £29 and £149 per month depending on conversation volume and support level. Within that range, the key question is not the headline price — it is what is included.
+              A managed AI chatbot for a UK small business should cost between £29 and £149 per month depending on conversation volume and support level. Within that range, the key question is not the headline price but what is included.
             </p>
             <p className="text-muted-foreground mb-6">
               Specifically, verify whether the monthly fee includes training updates, or whether those are charged separately. A £29/month plan that charges £150 every time you update your menu is not a £29 plan.

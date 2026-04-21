@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "Can a chatbot really capture leads as well as a human?",
-    answer: "A well-configured AI chatbot can actually capture more leads than a human team because it works 24/7 without breaks. It instantly engages every visitor, asks qualifying questions, and collects contact details—something even the best human teams struggle to do consistently."
+    answer: "A well-configured AI chatbot can actually capture more leads than a human team because it works 24/7 without breaks. It instantly engages every visitor, asks qualifying questions, and collects contact details. Even the best human teams struggle to do this consistently."
   },
   {
     question: "How quickly can I start reducing missed leads?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: "Do I need technical skills to set up a lead capture chatbot?",
-    answer: "Not at all. AIVized is a fully managed service—we handle everything from installation to configuration to ongoing optimisation. You just tell us about your business and we do the rest."
+    answer: "Not at all. AIVized is a fully managed service. We handle everything from installation to configuration to ongoing optimisation. You just tell us about your business and we do the rest."
   },
   {
     question: "What happens when the chatbot can't answer a question?",
@@ -77,12 +77,12 @@ const ReduceMissedLeadsBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              Your website is your hardest-working salesperson—but what happens when a potential customer visits at 10pm on a Tuesday? If no one's there to engage them, that lead walks away. For UK small businesses, this silent loss of potential customers costs thousands every year. Here's how to fix it.
+              Your website is your hardest-working salesperson, but what happens when a potential customer visits at 10pm on a Tuesday? If no one's there to engage them, that lead walks away. For UK small businesses, this silent loss of potential customers costs thousands every year. Here's how to fix it.
             </p>
 
             <h2 id="the-problem">The Hidden Cost of Missed Website Leads</h2>
             <p>
-              Most small business owners know their website gets traffic, but few realise how many of those visitors leave without ever making contact. Studies suggest that <strong>up to 60% of website visitors who are genuinely interested in your product or service never fill in a contact form</strong>. They browse, they consider—and then they leave.
+              Most small business owners know their website gets traffic, but few realise how many of those visitors leave without ever making contact. Studies suggest that <strong>up to 60% of website visitors who are genuinely interested in your product or service never fill in a contact form</strong>. They browse, they consider, and then they leave.
             </p>
             <p>
               The reasons are straightforward. Contact forms feel impersonal. Phone lines are only open during business hours. And visitors who have a quick question simply don't want to wait until Monday morning for an answer. Every unanswered question is a lost opportunity.
@@ -92,7 +92,7 @@ const ReduceMissedLeadsBlog = () => {
 
             <h2 id="why-it-happens">Why Traditional Lead Capture Fails</h2>
             <p>
-              Traditional lead capture methods—contact forms, email addresses on your website, "call us" buttons—all rely on the visitor taking action. But modern consumers expect instant responses. If they don't get one, they move on to a competitor who does.
+              Traditional lead capture methods (contact forms, email addresses on your website, "call us" buttons) all rely on the visitor taking action. But modern consumers expect instant responses. If they don't get one, they move on to a competitor who does.
             </p>
             <p>
               Consider these common scenarios:
@@ -103,19 +103,19 @@ const ReduceMissedLeadsBlog = () => {
               <li>A shopper finds your <Link href="/industries/ecommerce" className="text-primary hover:underline">e-commerce store</Link> but has a question about sizing. They can't find the answer quickly, so they abandon their basket.</li>
             </ul>
             <p>
-              In each case, the business had the visitor's attention—and lost it because there was no way to respond in real time.
+              In each case, the business had the visitor's attention and lost it because there was no way to respond in real time.
             </p>
 
             <h2 id="ai-solution">How an AI Chatbot Stops the Leak</h2>
             <p>
-              An AI chatbot sits on your website and engages every visitor the moment they arrive. It doesn't sleep, take breaks, or go on holiday. It asks the right questions, provides instant answers, and captures contact details—even at 3am on a bank holiday.
+              An AI chatbot sits on your website and engages every visitor the moment they arrive. It doesn't sleep, take breaks, or go on holiday. It asks the right questions, provides instant answers, and captures contact details, even at 3am on a bank holiday.
             </p>
 
             <BlogInlineImage src={reduceInline2} alt="AI chatbot capturing customer contact details on website" />
 
             <div className="not-prose my-8 grid gap-4">
               {[
-                "Engages visitors instantly—no waiting, no friction",
+                "Engages visitors instantly, with no waiting and no friction",
                 "Works 24/7, including weekends and bank holidays",
                 "Asks qualifying questions to capture genuine leads",
                 "Forwards hot leads to you via email or WhatsApp immediately",
@@ -131,10 +131,10 @@ const ReduceMissedLeadsBlog = () => {
 
             <h2 id="real-results">What Real UK Businesses Are Seeing</h2>
             <p>
-              UK small businesses that add an AI chatbot to their website typically see a <strong>25–40% increase in captured leads</strong> within the first month. That's not because they're getting more traffic—it's because they're finally converting the traffic they already have.
+              UK small businesses that add an AI chatbot to their website typically see a <strong>25–40% increase in captured leads</strong> within the first month. That's not because they're getting more traffic. It's because they're finally converting the traffic they already have.
             </p>
             <p>
-              For a business spending £500 per month on Google Ads or SEO, capturing even 10 more leads per month from existing traffic can dramatically improve return on investment. The chatbot doesn't replace your marketing—it makes your existing marketing work harder.
+              For a business spending £500 per month on Google Ads or SEO, capturing even 10 more leads per month from existing traffic can dramatically improve return on investment. The chatbot doesn't replace your marketing. It makes your existing marketing work harder.
             </p>
 
             <BlogInlineImage src={reduceInline3} alt="Before and after comparison showing increase in captured leads" />
@@ -151,7 +151,7 @@ const ReduceMissedLeadsBlog = () => {
             <div className="not-prose my-8 p-6 rounded-lg bg-primary/10 border border-primary/20">
               <h3 className="text-lg font-semibold mb-4">The Bottom Line</h3>
               <p className="text-muted-foreground">
-                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings—24 hours a day, 7 days a week. Starting from just <Link href="/pricing" className="text-primary hover:underline">£29/month</Link> with AIVized, it's one of the highest-ROI investments a UK small business can make. Read our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link> to learn more.
+                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings, 24 hours a day, 7 days a week. Starting from just <Link href="/pricing" className="text-primary hover:underline">£29/month</Link> with AIVized, it's one of the highest-ROI investments a UK small business can make. Read our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link> to learn more.
               </p>
             </div>
           </motion.div>
@@ -175,7 +175,7 @@ const ReduceMissedLeadsBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Stop Missing Leads Today</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get a fully managed AI chatbot on your website from £29/month. We install everything—no technical skills needed.
+              Get a fully managed AI chatbot on your website from £29/month. We install everything with no technical skills needed.
             </p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
               View Pricing

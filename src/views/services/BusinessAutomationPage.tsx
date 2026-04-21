@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     question: "Do I need technical skills to set up business process automation?",
-    answer: "No. AIVized handles the full setup — identifying which workflows to automate, connecting the tools, configuring the triggers, and testing before go-live. You describe how your business currently works and we build the automation around it.",
+    answer: "No. AIVized handles the full setup, identifying which workflows to automate, connecting the tools, configuring the triggers, and testing before go-live. You describe how your business currently works and we build the automation around it.",
   },
   {
     question: "How is business process automation different from your AI chatbot service?",
-    answer: "The AI chatbot focuses on customer-facing conversations — answering enquiries on your website or WhatsApp in real time. Business process automation handles the behind-the-scenes workflows — what happens after a lead arrives, how customers are followed up, and how your team is notified. The two services complement each other.",
+    answer: "The AI chatbot focuses on customer-facing conversations, answering enquiries on your website or WhatsApp in real time. Business process automation handles the behind-the-scenes workflows: what happens after a lead arrives, how customers are followed up, and how your team is notified. The two services complement each other.",
   },
   {
     question: "How long does it take to get automation running?",
@@ -62,7 +62,7 @@ const BusinessAutomationPage = () => {
               Business Process Automation for UK Small Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
-              AIVized automates the repetitive workflows that drain your team's time — lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. We handle the setup and keep it running so you don't have to.
+              AIVized automates the repetitive workflows that drain your team's time: lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. We handle the setup and keep it running so you don't have to.
             </p>
           </motion.div>
 
@@ -76,10 +76,10 @@ const BusinessAutomationPage = () => {
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">Workflows We Automate</h2>
             <div className="grid sm:grid-cols-2 gap-5">
               {[
-                { icon: MessageSquare, name: "Lead Follow-Up", desc: "Automatically follow up with new enquiries via email or WhatsApp — immediately when they arrive and again after 24 and 48 hours if there is no reply." },
+                { icon: MessageSquare, name: "Lead Follow-Up", desc: "Automatically follow up with new enquiries via email or WhatsApp, immediately when they arrive and again after 24 and 48 hours if there is no reply." },
                 { icon: Bell, name: "Appointment Reminders", desc: "Send automated reminders to customers before their booking. Reduce no-shows and free your team from manual reminder calls." },
-                { icon: UserCheck, name: "Customer Onboarding", desc: "Trigger a welcome sequence when a new customer signs up or books — sending relevant information, next steps, and useful links automatically." },
-                { icon: RefreshCw, name: "Internal Notifications", desc: "Alert your team instantly when a new lead, booking, or enquiry arrives — via email, WhatsApp, or Slack — without anyone having to check a dashboard." },
+                { icon: UserCheck, name: "Customer Onboarding", desc: "Trigger a welcome sequence when a new customer signs up or books, sending relevant information, next steps, and useful links automatically." },
+                { icon: RefreshCw, name: "Internal Notifications", desc: "Alert your team instantly when a new lead, booking, or enquiry arrives via email, WhatsApp, or Slack, without anyone having to check a dashboard." },
               ].map(({ icon: Icon, name, desc }) => (
                 <div key={name} className="p-6 rounded-xl bg-card border border-border">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
@@ -102,7 +102,7 @@ const BusinessAutomationPage = () => {
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">What Is Included</h2>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
               {[
-                "Full workflow setup — no technical skills required from you",
+                "Full workflow setup with no technical skills required from you",
                 "Custom triggers based on your existing tools and processes",
                 "Testing before every automation goes live",
                 "Monitoring and error alerts so nothing breaks silently",

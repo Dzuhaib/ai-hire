@@ -24,7 +24,7 @@ const schema = {
     {
       "@type": ["BlogPosting", "Article"],
       "headline": "How to Choose an AI Service Provider for Your UK Business",
-      "description": "A practical guide to evaluating AI service providers for UK small businesses — what to look for, what to ask, and how to avoid common pitfalls.",
+      "description": "A practical guide to evaluating AI service providers for UK small businesses: what to look for, what to ask, and how to avoid common pitfalls.",
       "image": "https://www.aivized.com/assets/blog/ai-service-providers-hero.png",
       "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
       "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
@@ -36,7 +36,7 @@ const schema = {
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "What should I look for in an AI service provider for my UK business?", "acceptedAnswer": { "@type": "Answer", "text": "Look for a provider that handles the full setup for you — not just software you configure yourself. A good provider will train the AI on your specific business, monitor it after launch, and update it when your services change. Ask how they handle errors and what their response time is when something goes wrong." } },
+        { "@type": "Question", "name": "What should I look for in an AI service provider for my UK business?", "acceptedAnswer": { "@type": "Answer", "text": "Look for a provider that handles the full setup for you, not just software you configure yourself. A good provider will train the AI on your specific business, monitor it after launch, and update it when your services change. Ask how they handle errors and what their response time is when something goes wrong." } },
         { "@type": "Question", "name": "What is the difference between a managed AI service and a DIY chatbot builder?", "acceptedAnswer": { "@type": "Answer", "text": "With a DIY chatbot builder, you configure the chatbot yourself, write the conversation flows, handle the integration, and maintain it when your content changes. A managed service like AIVized does all of that for you. You subscribe, share your business details, and the provider installs and maintains the chatbot on your behalf." } },
         { "@type": "Question", "name": "How much should AI services cost for a UK small business?", "acceptedAnswer": { "@type": "Answer", "text": "A managed AI chatbot service for a UK small business should cost between £29 and £149 per month depending on the volume of conversations and the level of support included. Be cautious of providers that charge setup fees in the thousands or lock you into annual contracts before you have seen the results." } },
         { "@type": "Question", "name": "What questions should I ask before signing up with an AI provider?", "acceptedAnswer": { "@type": "Answer", "text": "Ask: Who trains the chatbot on my business? How long does setup take? What happens when I change my prices or services? How do I contact support if something goes wrong? Is there a free trial? What is the cancellation policy? The answers tell you whether the provider is genuinely managed or a self-service platform with a managed label." } },

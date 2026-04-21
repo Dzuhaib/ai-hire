@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     question: "What if a customer asks something the chatbot can't answer?",
-    answer: "The chatbot gracefully captures the customer's name, email, and question, then forwards it to you immediately. The customer gets a response like 'Great question—let me get one of our team to come back to you personally.' It feels helpful, not frustrating."
+    answer: "The chatbot gracefully captures the customer's name, email, and question, then forwards it to you immediately. The customer gets a response like 'Great question. Let me get one of our team to come back to you personally.' It feels helpful, not frustrating."
   },
   {
     question: "Can automated customer service work for service-based businesses?",
-    answer: "Absolutely. Service businesses like plumbers, accountants, and consultants benefit hugely from automation. The chatbot handles appointment enquiries, pricing questions, and availability checks—freeing you to focus on delivering your service."
+    answer: "Absolutely. Service businesses like plumbers, accountants, and consultants benefit hugely from automation. The chatbot handles appointment enquiries, pricing questions, and availability checks, freeing you to focus on delivering your service."
   },
   {
     question: "How do I measure if automation is working for my business?",
@@ -76,15 +76,15 @@ const AutomateEnquiriesBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              "But won't it feel robotic?" That's the number one concern UK business owners have about automating customer enquiries. The good news? With the right approach, AI-powered customer service can feel more personal than a generic contact form—and far more responsive than a voicemail box. Curious how AI compares to human support? Read our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat guide</Link>.
+              "But won't it feel robotic?" That's the number one concern UK business owners have about automating customer enquiries. The good news? With the right approach, AI-powered customer service can feel more personal than a generic contact form, and far more responsive than a voicemail box. Curious how AI compares to human support? Read our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat guide</Link>.
             </p>
 
             <h2 id="the-fear">The Fear: Automation Equals Impersonal</h2>
             <p>
-              Let's be honest—we've all had terrible experiences with automated systems. Endless phone menus, chatbots that don't understand basic questions, generic responses that miss the point entirely. No wonder small business owners worry that automation will drive customers away.
+              Let's be honest: we've all had terrible experiences with automated systems. Endless phone menus, chatbots that don't understand basic questions, generic responses that miss the point entirely. No wonder small business owners worry that automation will drive customers away.
             </p>
             <p>
-              But those bad experiences come from poorly implemented automation, not from automation itself. Done right, an AI chatbot can make customers feel heard, helped, and valued—often faster than a human team can manage during busy periods.
+              But those bad experiences come from poorly implemented automation, not from automation itself. Done right, an AI chatbot can make customers feel heard, helped, and valued, often faster than a human team can manage during busy periods.
             </p>
 
             <BlogInlineImage src={automateInline1} alt="Customer smiling while receiving personalized chatbot response" />
@@ -98,7 +98,7 @@ const AutomateEnquiriesBlog = () => {
               <li>Or an instant, friendly response that addresses their specific question in seconds?</li>
             </ul>
             <p>
-              Speed is a form of respect. When you respond instantly to a customer's enquiry, you're telling them their time matters. That's personal—even if it's AI delivering the message.
+              Speed is a form of respect. When you respond instantly to a customer's enquiry, you're telling them their time matters. That's personal, even if it's AI delivering the message.
             </p>
 
             <h2 id="principles">Five Principles for Personal Automation</h2>
@@ -110,12 +110,12 @@ const AutomateEnquiriesBlog = () => {
 
             <h3>2. Be Transparent</h3>
             <p>
-              Don't pretend the chatbot is human. Customers appreciate honesty. A simple introduction like "Hi! I'm the AI assistant for [Your Business]. I can help with most questions instantly—and if I can't, I'll connect you with our team." builds trust immediately.
+              Don't pretend the chatbot is human. Customers appreciate honesty. A simple introduction like "Hi! I'm the AI assistant for [Your Business]. I can help with most questions instantly. If I can't, I'll connect you with our team." builds trust immediately.
             </p>
 
             <h3>3. Know When to Hand Over</h3>
             <p>
-              The best AI chatbots know their limits. When a customer has a complex complaint or an unusual request, the chatbot should gracefully collect their details and escalate. The handover message matters: "That's a great question—let me get someone from our team to help you personally" feels caring, not cold.
+              The best AI chatbots know their limits. When a customer has a complex complaint or an unusual request, the chatbot should gracefully collect their details and escalate. The handover message matters: "That's a great question. Let me get someone from our team to help you personally" feels caring, not cold.
             </p>
 
             <h3>4. Remember Context</h3>
@@ -131,7 +131,7 @@ const AutomateEnquiriesBlog = () => {
             <div className="not-prose my-8 grid gap-4">
               {[
                 "Configure your chatbot with your brand's unique tone and language",
-                "Be upfront that it's an AI assistant—customers respect honesty",
+                "Be upfront that it's an AI assistant, customers respect honesty",
                 "Set clear escalation paths so complex queries reach a human fast",
                 "Use conversation context to avoid repetitive questions",
                 "Combine instant AI capture with personal human follow-up",
@@ -149,7 +149,7 @@ const AutomateEnquiriesBlog = () => {
               Consider a small <Link href="/industries/real-estate" className="text-primary hover:underline">estate agency</Link> in <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>. Before adding an AI chatbot, they received most enquiries via a contact form. Average response time? 6–8 hours during the week, longer on weekends. Many leads went cold before anyone replied.
             </p>
             <p>
-              After installing an AIVized chatbot, every visitor gets an instant response. The chatbot asks what type of property they're looking for, their budget range, and preferred areas—then sends the qualified lead directly to the agent's WhatsApp. The agent follows up personally within minutes, armed with all the context.
+              After installing an AIVized chatbot, every visitor gets an instant response. The chatbot asks what type of property they're looking for, their budget range, and preferred areas, then sends the qualified lead directly to the agent's WhatsApp. The agent follows up personally within minutes, armed with all the context.
             </p>
 
             <BlogInlineImage src={automateInline2} alt="Estate agent office with AI chatbot handling property enquiries" />
@@ -159,7 +159,7 @@ const AutomateEnquiriesBlog = () => {
 
             <h2 id="getting-started">Start Automating the Right Way</h2>
             <p>
-              Automating customer enquiries doesn't mean removing the human element—it means adding speed and consistency while preserving warmth. With a <Link href="/#how-it-works" className="text-primary hover:underline">managed AI chatbot</Link> from AIVized, you get both: instant 24/7 responses that reflect your brand, with seamless escalation to your team for the conversations that need a human touch. Plans start from <Link href="/pricing" className="text-primary hover:underline">£29/month</Link>.
+              Automating customer enquiries doesn't mean removing the human element. It means adding speed and consistency while preserving warmth. With a <Link href="/#how-it-works" className="text-primary hover:underline">managed AI chatbot</Link> from AIVized, you get both: instant 24/7 responses that reflect your brand, with seamless escalation to your team for the conversations that need a human touch. Plans start from <Link href="/pricing" className="text-primary hover:underline">£29/month</Link>.
             </p>
 
             <BlogInlineImage src={automateInline3} alt="Customers receiving quick helpful responses on mobile phones" />
@@ -167,7 +167,7 @@ const AutomateEnquiriesBlog = () => {
             <div className="not-prose my-8 p-6 rounded-lg bg-primary/10 border border-primary/20">
               <h3 className="text-lg font-semibold mb-4">The Key Takeaway</h3>
               <p className="text-muted-foreground">
-                Automation doesn't replace the personal touch—it enables it. By handling routine enquiries instantly, your AI chatbot frees you to focus your personal attention on the customers and conversations that matter most. That's not impersonal. That's smart.
+                Automation doesn't replace the personal touch. It enables it. By handling routine enquiries instantly, your AI chatbot frees you to focus your personal attention on the customers and conversations that matter most. That's not impersonal. That's smart.
               </p>
             </div>
           </motion.div>
@@ -189,7 +189,7 @@ const AutomateEnquiriesBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Automate Without Losing Your Personal Touch</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get a fully managed AI chatbot that sounds like your brand. From £29/month—we install everything for you.
+              Get a fully managed AI chatbot that sounds like your brand. From £29/month. We install everything for you.
             </p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
               View Pricing

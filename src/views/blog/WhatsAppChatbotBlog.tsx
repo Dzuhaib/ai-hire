@@ -28,11 +28,11 @@ const WhatsAppChatbotBlog = () => {
     },
     {
       question: "Do I need technical skills to set up a WhatsApp chatbot?",
-      answer: "No. AIVized's managed service handles the full setup — connecting to the WhatsApp Business API, training the chatbot on your business, and installing it on your number. You share your business details and we deliver a working chatbot within 24 hours."
+      answer: "No. AIVized's managed service handles the full setup, including connecting to the WhatsApp Business API, training the chatbot on your business, and installing it on your number. You share your business details and we deliver a working chatbot within 24 hours."
     },
     {
       question: "What kinds of messages can a WhatsApp chatbot handle?",
-      answer: "A WhatsApp chatbot handles the most common customer messages — questions about pricing, services, opening hours, bookings, and availability. It can collect contact details, send automated follow-ups, and escalate complex enquiries to your team with full conversation context."
+      answer: "A WhatsApp chatbot handles the most common customer messages: questions about pricing, services, opening hours, bookings, and availability. It can collect contact details, send automated follow-ups, and escalate complex enquiries to your team with full conversation context."
     },
     {
       question: "Is an AI chatbot for small business UK affordable on WhatsApp?",
@@ -94,11 +94,11 @@ const WhatsAppChatbotBlog = () => {
             className="prose prose-lg dark:prose-invert max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              Over 33 million people in the UK use WhatsApp regularly, and many of them prefer to contact businesses through messaging rather than phone or email. A managed WhatsApp chatbot means every message gets an instant response — whether it arrives at noon on a Tuesday or 11pm on a Sunday. If you want to understand how chatbots compare to traditional support, see our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link>.
+              Over 33 million people in the UK use WhatsApp regularly, and many of them prefer to contact businesses through messaging rather than phone or email. A managed WhatsApp chatbot means every message gets an instant response, whether it arrives at noon on a Tuesday or 11pm on a Sunday. If you want to understand how chatbots compare to traditional support, see our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link>.
             </p>
 
             <h2 id="how-whatsapp-chatbots-work">How WhatsApp Chatbots Work for UK Businesses</h2>
-            <p>A WhatsApp chatbot connects to your business number via the official Meta Business API. When a customer sends a message, the chatbot responds instantly from a knowledge base built during setup. Unlike manual replies, the chatbot is available at all hours and handles multiple conversations simultaneously — so a busy Saturday evening doesn't mean a queue of unanswered messages on Monday morning.</p>
+            <p>A WhatsApp chatbot connects to your business number via the official Meta Business API. When a customer sends a message, the chatbot responds instantly from a knowledge base built during setup. Unlike manual replies, the chatbot is available at all hours and handles multiple conversations simultaneously, so a busy Saturday evening doesn't mean a queue of unanswered messages on Monday morning.</p>
 
             <BlogInlineImage src={whatsappInline1} alt="WhatsApp business messaging on smartphone in modern UK office" />
 
@@ -119,11 +119,11 @@ const WhatsAppChatbotBlog = () => {
             </div>
 
             <h2 id="why-whatsapp-for-uk-businesses">Why WhatsApp Is the Right Channel for UK Businesses</h2>
-            <p>WhatsApp has a message open rate above 90%, compared to around 20% for email. Customers are already using it daily — they don't need to download an app, create an account, or visit your website. They send a message the same way they'd text a friend, and the chatbot responds with the same speed.</p>
+            <p>WhatsApp has a message open rate above 90%, compared to around 20% for email. Customers are already using it daily. They don't need to download an app, create an account, or visit your website. They send a message the same way they'd text a friend, and the chatbot responds with the same speed.</p>
 
             <BlogInlineImage src={whatsappInline2} alt="Customer messaging a UK business on WhatsApp and receiving instant reply" />
 
-            <p>For UK small businesses, this matters because most enquiries arrive outside office hours — evenings, weekends, and lunch breaks. A WhatsApp chatbot captures those enquiries without requiring you or your team to be available. Every message gets a response, every lead gets captured.</p>
+            <p>For UK small businesses, this matters because most enquiries arrive outside office hours, including evenings, weekends, and lunch breaks. A WhatsApp chatbot captures those enquiries without requiring you or your team to be available. Every message gets a response, every lead gets captured.</p>
 
             <div className="not-prose my-8 p-6 rounded-lg bg-green-500/10 border border-green-500/20">
               <h3 className="text-lg font-semibold mb-4">WhatsApp in the UK</h3>
@@ -131,7 +131,7 @@ const WhatsAppChatbotBlog = () => {
             </div>
 
             <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
-            <p>Small businesses benefit most from WhatsApp automation because every missed enquiry matters. A missed DM is a missed sale — there's no reception team to catch it. With AIVized's managed service, your WhatsApp number has a trained AI chatbot handling enquiries from the moment the service goes live.</p>
+            <p>Small businesses benefit most from WhatsApp automation because every missed enquiry matters. A missed DM is a missed sale with no reception team to catch it. With AIVized's managed service, your WhatsApp number has a trained AI chatbot handling enquiries from the moment the service goes live.</p>
 
             <BlogInlineImage src={whatsappInline3} alt="Small business owner reviewing customer engagement analytics on a laptop" />
 
@@ -189,7 +189,7 @@ const WhatsAppChatbotBlog = () => {
               Ready to Get Your WhatsApp Chatbot?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              AIVized manages everything — connection, training, and monitoring. From £29/month with no technical skills required.
+              AIVized manages everything: connection, training, and monitoring. From £29/month with no technical skills required.
             </p>
             <Link
               href="/pricing"

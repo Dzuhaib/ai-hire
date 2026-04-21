@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://www.aivized.com/",
     title: "Managed AI Chatbot for UK Small Businesses | AIVized",
     description:
-      "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything—no technical skills needed.",
+      "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
   },
@@ -139,7 +139,7 @@ const homepageSchema = {
       "@id": "https://www.aivized.com/#webpage",
       "url": "https://www.aivized.com",
       "name": "Managed AI Chatbot for Small Business UK | AIVized",
-      "description": "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation, we install everything—no technical skills needed.",
+      "description": "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "about": { "@id": "https://www.aivized.com/#service" },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#services", "#how-it-works", "#pricing", "#faq"] },

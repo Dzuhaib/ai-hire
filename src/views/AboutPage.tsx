@@ -29,7 +29,7 @@ const AboutPage = () => {
               A Managed AI Chatbot Service Built for UK Small Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
-              AIVized is a UK-based managed AI chatbot service. We install, train, and maintain AI chatbots for small businesses across the UK — handling everything from the initial setup to ongoing updates, so business owners can focus on running their business rather than managing software.
+              AIVized is a UK-based managed AI chatbot service. We install, train, and maintain AI chatbots for small businesses across the UK, handling everything from the initial setup to ongoing updates so business owners can focus on running their business rather than managing software.
             </p>
           </motion.div>
 
@@ -49,7 +49,7 @@ const AboutPage = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
               {[
-                "We install the chatbot — no code required from you",
+                "We install the chatbot with no code required from you",
                 "We train it on your products, services, and FAQs",
                 "We test it before going live",
                 "We monitor it 24/7 and catch errors before customers do",
@@ -73,7 +73,7 @@ const AboutPage = () => {
           >
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who We Serve</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl">
-              AIVized works with UK small businesses that receive customer enquiries through their website, WhatsApp, or Instagram — and want those enquiries handled automatically without hiring additional staff.
+              AIVized works with UK small businesses that receive customer enquiries through their website, WhatsApp, or Instagram and want those enquiries handled automatically without hiring additional staff.
             </p>
             <p className="text-muted-foreground max-w-2xl">
               Our clients include restaurants taking reservations, real estate agencies qualifying buyers, e-commerce shops handling product questions, healthcare practices managing appointment enquiries, law firms capturing initial consultations, fitness studios promoting classes, and travel agencies answering booking queries. If your business has a website and a phone, we can likely help.
@@ -99,7 +99,7 @@ const AboutPage = () => {
               </div>
             </div>
             <p className="text-muted-foreground max-w-2xl ml-16">
-              AIVized was built to close that gap. We started from the premise that UK small business owners should be able to benefit from AI without needing a developer, a consultant, or a technical background. Our service is genuinely managed — the kind where you hand us the details about your business and we deliver a working chatbot, not a login page and a tutorial video.
+              AIVized was built to close that gap. We started from the premise that UK small business owners should be able to benefit from AI without needing a developer, a consultant, or a technical background. Our service is genuinely managed: you hand us the details about your business and we deliver a working chatbot, not a login page and a tutorial video.
             </p>
           </motion.section>
 
@@ -119,7 +119,7 @@ const AboutPage = () => {
                 <p className="font-semibold text-foreground text-lg">Zuhaib Ahmed</p>
                 <p className="text-sm text-primary mb-3">Founder, AIVized</p>
                 <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
-                  Zuhaib Ahmed founded AIVized to give UK small businesses access to genuinely managed AI — not another self-service tool that requires a technical team to maintain. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, Zuhaib leads product development and client onboarding personally.
+                  Zuhaib Ahmed founded AIVized to give UK small businesses access to genuinely managed AI, not another self-service tool that requires a technical team to maintain. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, Zuhaib leads product development and client onboarding personally.
                 </p>
                 <a
                   href="https://www.linkedin.com/in/zuhaibah/"

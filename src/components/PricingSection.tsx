@@ -14,7 +14,7 @@ const plans = [
     name: "Starter",
     price: "£29",
     priceAmount: 29,
-    description: "Perfect for small businesses wanting 24/7 lead capture—we handle everything",
+    description: "Perfect for small businesses wanting 24/7 lead capture. We handle everything",
     features: [
       { text: "We install & configure everything", included: true },
       { text: "24/7 monitoring & maintenance", included: true },
@@ -30,7 +30,7 @@ const plans = [
     name: "Professional",
     price: "£79",
     priceAmount: 79,
-    description: "For growing businesses—full customisation with priority managed support",
+    description: "For growing businesses: full customisation with priority managed support",
     features: [
       { text: "We install & configure everything", included: true },
       { text: "24/7 monitoring & maintenance", included: true },

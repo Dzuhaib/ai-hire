@@ -5,7 +5,7 @@ const painHero = "/assets/pain-section-hero.png";
 const painPoints = [
   "Missed leads from your website cost you money every day.",
   "Hiring 24/7 customer support staff is expensive and slow.",
-  "Most chatbots feel robotic—they don't capture leads or automate customer inquiries.",
+  "Most chatbots feel robotic. They don't capture leads or automate customer inquiries.",
 ];
 
 export const PainSection = () => {

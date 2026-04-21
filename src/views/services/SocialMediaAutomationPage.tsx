@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "Do I need to provide the content or do you create it?",
-    answer: "We work with whatever you prefer. You can supply your own content and we schedule and publish it, or we can discuss a content creation arrangement as part of your setup. Either way, we handle the technical side — publishing, timing, and platform management.",
+    answer: "We work with whatever you prefer. You can supply your own content and we schedule and publish it, or we can discuss a content creation arrangement as part of your setup. Either way, we handle the technical side: publishing, timing, and platform management.",
   },
   {
     question: "How are DMs handled automatically?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Is social media automation suitable for small UK businesses?",
-    answer: "Yes — it is most valuable for small businesses that receive regular DMs or enquiries on social media but do not have dedicated staff to respond promptly. Automation ensures every message gets an instant reply, regardless of when it arrives.",
+    answer: "Yes. It is most valuable for small businesses that receive regular DMs or enquiries on social media but do not have dedicated staff to respond promptly. Automation ensures every message gets an instant reply, regardless of when it arrives.",
   },
 ];
 
@@ -62,7 +62,7 @@ const SocialMediaAutomationPage = () => {
               Social Media Automation for UK Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
-              AIVized manages your Instagram, Facebook, and LinkedIn — automating DM responses, scheduling content, and keeping your audience engaged 24/7. You stay visible on social media without having to be online constantly.
+              AIVized manages your Instagram, Facebook, and LinkedIn, automating DM responses, scheduling content, and keeping your audience engaged 24/7. You stay visible on social media without having to be online constantly.
             </p>
           </motion.div>
 
@@ -105,7 +105,7 @@ const SocialMediaAutomationPage = () => {
                 "Content scheduling across Instagram, Facebook, LinkedIn",
                 "Comment monitoring and response management",
                 "Engagement tracking and monthly performance summary",
-                "Instant responses to enquiries — 24 hours a day",
+                "Instant responses to enquiries, 24 hours a day",
                 "Seamless escalation to your team for complex messages",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50">
@@ -131,7 +131,7 @@ const SocialMediaAutomationPage = () => {
               {[
                 "Retailers and e-commerce shops with active Instagram followers",
                 "Restaurants and hospitality businesses receiving booking enquiries via DM",
-                "Service businesses — salons, clinics, fitness studios — managing appointment requests",
+                "Service businesses such as salons, clinics, and fitness studios managing appointment requests",
                 "Professional services responding to LinkedIn connection and enquiry messages",
                 "Any business running paid social campaigns that generate DM responses",
               ].map((item) => (

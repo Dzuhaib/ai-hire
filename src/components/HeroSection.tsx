@@ -43,7 +43,7 @@ export const HeroSection = () => {
         </p>
 
         <p className="text-sm text-muted-foreground/75 max-w-lg mb-12">
-          3-day free trial — then from{" "}
+          3-day free trial, then from{" "}
           <Link href="/#pricing" className="text-primary hover:underline">
             £29/month
           </Link>

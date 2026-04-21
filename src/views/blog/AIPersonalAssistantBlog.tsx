@@ -19,7 +19,7 @@ const AIPersonalAssistantBlog = () => {
   const faqs = [
     {
       question: "What is an AI personal assistant for a UK business?",
-      answer: "An AI personal assistant for a UK business is a managed chatbot that handles customer-facing tasks automatically — answering enquiries, collecting lead details, booking appointments, and responding to messages across your website, WhatsApp, or Instagram. Unlike a basic FAQ bot, it holds a natural conversation and can handle multi-step requests based on a knowledge base built from your specific business."
+      answer: "An AI personal assistant for a UK business is a managed chatbot that handles customer-facing tasks automatically, answering enquiries, collecting lead details, booking appointments, and responding to messages across your website, WhatsApp, or Instagram. Unlike a basic FAQ bot, it holds a natural conversation and can handle multi-step requests based on a knowledge base built from your specific business."
     },
     {
       question: "What tasks can an AI personal assistant handle for my business?",
@@ -27,7 +27,7 @@ const AIPersonalAssistantBlog = () => {
     },
     {
       question: "How is a managed AI personal assistant different from a chatbot I build myself?",
-      answer: "A managed AI personal assistant is built, trained, installed, and maintained by AIVized on your behalf. You share your business details — we handle the technical setup and keep the assistant updated when your content changes. A self-build chatbot requires you to configure conversation flows, write responses, manage the integration, and maintain it yourself."
+      answer: "A managed AI personal assistant is built, trained, installed, and maintained by AIVized on your behalf. You share your business details and we handle the technical setup and keep the assistant updated when your content changes. A self-build chatbot requires you to configure conversation flows, write responses, manage the integration, and maintain it yourself."
     },
     {
       question: "Which channels can an AI personal assistant work on?",
@@ -35,11 +35,11 @@ const AIPersonalAssistantBlog = () => {
     },
     {
       question: "How quickly can an AI personal assistant go live for my UK business?",
-      answer: "Most businesses are live within 24 hours. You share your products, services, pricing, and common questions — we build and test the assistant, then install it on your chosen channels. There is no technical work required on your side."
+      answer: "Most businesses are live within 24 hours. You share your products, services, pricing, and common questions and we build and test the assistant, then install it on your chosen channels. There is no technical work required on your side."
     },
     {
       question: "How does WhatsApp integration work for an AI personal assistant?",
-      answer: "WhatsApp integration connects your business number to the AI assistant via the official Meta Business API. When a customer sends a message, the assistant responds instantly using your knowledge base. It can answer questions, collect contact details, book appointments, and escalate to your team — all within the WhatsApp interface your customers already use daily."
+      answer: "WhatsApp integration connects your business number to the AI assistant via the official Meta Business API. When a customer sends a message, the assistant responds instantly using your knowledge base. It can answer questions, collect contact details, book appointments, and escalate to your team, all within the WhatsApp interface your customers already use daily."
     }
   ];
 
@@ -92,14 +92,14 @@ const AIPersonalAssistantBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              An AI personal assistant for your business is a managed chatbot that handles customer-facing tasks automatically — responding to enquiries, capturing leads, and booking appointments across your website, WhatsApp, and social media. Unlike a member of staff, it works 24 hours a day without breaks, holidays, or sick days. Unlike a basic FAQ widget, it holds a real conversation.
+              An AI personal assistant for your business is a managed chatbot that handles customer-facing tasks automatically, responding to enquiries, capturing leads, and booking appointments across your website, WhatsApp, and social media. Unlike a member of staff, it works 24 hours a day without breaks, holidays, or sick days. Unlike a basic FAQ widget, it holds a real conversation.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               What an AI Personal Assistant Does for Your Business
             </h2>
             <p className="text-muted-foreground mb-6">
-              The core function of an AI personal assistant is to handle the messages that would otherwise require your time or a member of staff. Most UK small businesses receive the same questions repeatedly — about pricing, services, availability, and how to get started. An AI assistant answers these instantly, at any hour, leaving your team free to focus on work that requires human judgement.
+              The core function of an AI personal assistant is to handle the messages that would otherwise require your time or a member of staff. Most UK small businesses receive the same questions repeatedly, about pricing, services, availability, and how to get started. An AI assistant answers these instantly, at any hour, leaving your team free to focus on work that requires human judgement.
             </p>
 
             <BlogInlineImage src={personalInline1} alt="UK business owner reviewing AI personal assistant conversations on a tablet" />
@@ -126,7 +126,7 @@ const AIPersonalAssistantBlog = () => {
               Tasks an AI Personal Assistant Handles Automatically
             </h2>
             <p className="text-muted-foreground mb-6">
-              During setup, we train your AI assistant on your specific business — products, services, pricing, FAQs, and how you'd like to communicate with customers. Once live, it handles:
+              During setup, we train your AI assistant on your specific business, covering products, services, pricing, FAQs, and how you'd like to communicate with customers. Once live, it handles:
             </p>
 
             <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-8">
@@ -151,13 +151,13 @@ const AIPersonalAssistantBlog = () => {
               Multi-Channel: Website, WhatsApp, and Instagram
             </h2>
             <p className="text-muted-foreground mb-6">
-              Customers contact businesses through different channels depending on their habit and preference. Some send a message via website chat. Others prefer WhatsApp. Others reach out through Instagram DMs. A managed AI personal assistant works across all three — one assistant, trained once on your business, deployed wherever your customers are.
+              Customers contact businesses through different channels depending on their habit and preference. Some send a message via website chat. Others prefer WhatsApp. Others reach out through Instagram DMs. A managed AI personal assistant works across all three: one assistant, trained once on your business, deployed wherever your customers are.
             </p>
 
             <BlogInlineImage src={personalInline2} alt="AI personal assistant working across website, WhatsApp and Instagram for a UK business" />
 
             <p className="text-muted-foreground mb-6">
-              With over 33 million UK users on WhatsApp and 30 million on Instagram, meeting customers on the platforms they already use increases response rates and conversion. Your AI assistant doesn't require customers to visit your website or fill in a contact form — they get an instant answer in the app they're already using.
+              With over 33 million UK users on WhatsApp and 30 million on Instagram, meeting customers on the platforms they already use increases response rates and conversion. Your AI assistant doesn't require customers to visit your website or fill in a contact form. They get an instant answer in the app they're already using.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
@@ -172,7 +172,7 @@ const AIPersonalAssistantBlog = () => {
             <ol className="text-muted-foreground space-y-3 mb-6">
               <li><strong>1. Share your business details:</strong> Products, services, pricing, FAQs, and brand voice</li>
               <li><strong>2. We build and train your assistant:</strong> Custom-trained on your specific business, tested before launch</li>
-              <li><strong>3. We install it on your channels:</strong> Website, WhatsApp, Instagram — whichever you need</li>
+              <li><strong>3. We install it on your channels:</strong> Website, WhatsApp, or Instagram, whichever you need</li>
               <li><strong>4. We monitor and update it:</strong> Ongoing improvements and updates when your content changes</li>
             </ol>
             <p className="text-muted-foreground mb-6">

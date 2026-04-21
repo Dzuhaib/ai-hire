@@ -19,7 +19,7 @@ const AIAutomationUKBlog = () => {
   const faqs = [
     {
       question: "What does AI business automation actually mean for a UK small business?",
-      answer: "For a UK small business, AI business automation means using software to handle the repetitive tasks that would otherwise require your time or a member of staff. In practice, this is a managed AI chatbot that responds to customer enquiries, captures leads, and books appointments automatically — without you needing to monitor incoming messages or answer the same questions repeatedly."
+      answer: "For a UK small business, AI business automation means using software to handle the repetitive tasks that would otherwise require your time or a member of staff. In practice, this is a managed AI chatbot that responds to customer enquiries, captures leads, and books appointments automatically, without you needing to monitor incoming messages or answer the same questions repeatedly."
     },
     {
       question: "Which business tasks are best suited to AI automation?",
@@ -27,11 +27,11 @@ const AIAutomationUKBlog = () => {
     },
     {
       question: "How long does it take to get AI automation working for my business?",
-      answer: "With AIVized's managed service, most businesses are live within 24 hours. You share your products, services, pricing, and common questions — we build, train, and install the AI on your website, WhatsApp, or Instagram. There is no technical work required on your side and no lengthy onboarding process."
+      answer: "With AIVized's managed service, most businesses are live within 24 hours. You share your products, services, pricing, and common questions and we build, train, and install the AI on your website, WhatsApp, or Instagram. There is no technical work required on your side and no lengthy onboarding process."
     },
     {
       question: "Can AI automation replace my entire customer service team?",
-      answer: "AI automation doesn't replace your team — it handles the volume that would otherwise go unanswered. AI manages 70–80% of routine enquiries instantly, while complex or sensitive issues are escalated to your human team with full conversation context. Your team focuses on high-value interactions; the AI handles the repetitive work."
+      answer: "AI automation doesn't replace your team. It handles the volume that would otherwise go unanswered. AI manages 70–80% of routine enquiries instantly, while complex or sensitive issues are escalated to your human team with full conversation context. Your team focuses on high-value interactions; the AI handles the repetitive work."
     },
     {
       question: "What is the ROI of AI business automation for a UK small business?",
@@ -39,7 +39,7 @@ const AIAutomationUKBlog = () => {
     },
     {
       question: "Is AI business automation suitable for very small UK businesses?",
-      answer: "Small businesses benefit most from AI automation because every missed enquiry matters and there is rarely a dedicated team to cover out-of-hours messages. AIVized's managed service starts from £29 per month — accessible to sole traders, micro-businesses, and growing SMEs. There is no minimum volume requirement."
+      answer: "Small businesses benefit most from AI automation because every missed enquiry matters and there is rarely a dedicated team to cover out-of-hours messages. AIVized's managed service starts from £29 per month, accessible to sole traders, micro-businesses, and growing SMEs. There is no minimum volume requirement."
     }
   ];
 
@@ -92,20 +92,20 @@ const AIAutomationUKBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              AI business automation is no longer something reserved for enterprises with large technology budgets. UK small businesses are now using managed AI tools to handle customer enquiries, capture leads, and automate repetitive tasks — without any technical expertise and for a fraction of the cost of additional staff. This guide explains what AI automation actually means in practice and how to implement it without disrupting your operations.
+              AI business automation is no longer something reserved for enterprises with large technology budgets. UK small businesses are now using managed AI tools to handle customer enquiries, capture leads, and automate repetitive tasks, without any technical expertise and for a fraction of the cost of additional staff. This guide explains what AI automation actually means in practice and how to implement it without disrupting your operations.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               What AI Business Automation Means for UK Small Businesses
             </h2>
             <p className="text-muted-foreground mb-6">
-              For most UK small businesses, AI automation starts with one practical problem: customer enquiries arrive at all hours, but staff aren't available 24/7. An automated AI chatbot solves this by responding instantly to every message — on your website, WhatsApp, or social media — whether it arrives at 9am or 11pm.
+              For most UK small businesses, AI automation starts with one practical problem: customer enquiries arrive at all hours, but staff aren't available 24/7. An automated AI chatbot solves this by responding instantly to every message on your website, WhatsApp, or social media, whether it arrives at 9am or 11pm.
             </p>
             <p className="text-muted-foreground mb-6">
-              This is not about replacing your team. It's about handling the high volume of repetitive, routine enquiries that consume time without requiring skill — so your team can focus on work that actually needs a human.
+              This is not about replacing your team. It's about handling the high volume of repetitive, routine enquiries that consume time without requiring skill, so your team can focus on work that actually needs a human.
             </p>
 
-            <BlogInlineImage src={automationInline1} alt="UK small business owner benefiting from AI automation — more time for high-value work" />
+            <BlogInlineImage src={automationInline1} alt="UK small business owner benefiting from AI automation, with more time for high-value work" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 my-8 not-prose">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border text-center">
@@ -177,7 +177,7 @@ const AIAutomationUKBlog = () => {
             <ol className="text-muted-foreground space-y-3 mb-6">
               <li><strong>1. Share your business details:</strong> Products, services, pricing, FAQs, and brand voice</li>
               <li><strong>2. We build and train your AI:</strong> Custom-trained on your specific business, tested before launch</li>
-              <li><strong>3. We install it on your channels:</strong> Website, WhatsApp, Instagram — whichever you need</li>
+              <li><strong>3. We install it on your channels:</strong> Website, WhatsApp, or Instagram, whichever you need</li>
               <li><strong>4. We monitor and optimise continuously:</strong> Regular improvements based on real conversations</li>
             </ol>
 

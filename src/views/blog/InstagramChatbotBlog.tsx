@@ -28,7 +28,7 @@ const InstagramChatbotBlog = () => {
     },
     {
       question: "Does an Instagram chatbot replace my social media team?",
-      answer: "No. It handles the volume work — answering repeated questions, collecting contact details, and responding out of hours. Your team focuses on complex conversations, creative content, and relationships that require a human. The chatbot makes your team more productive, not redundant."
+      answer: "No. It handles the volume work: answering repeated questions, collecting contact details, and responding out of hours. Your team focuses on complex conversations, creative content, and relationships that require a human. The chatbot makes your team more productive, not redundant."
     },
     {
       question: "What kinds of businesses use Instagram chatbots in the UK?",
@@ -36,7 +36,7 @@ const InstagramChatbotBlog = () => {
     },
     {
       question: "Is an AI chatbot for small business UK effective on Instagram?",
-      answer: "Yes. Small businesses benefit most because every missed enquiry matters. A managed Instagram chatbot means faster response times and higher conversion rates from DM enquiries — with no technical work required on your part."
+      answer: "Yes. Small businesses benefit most because every missed enquiry matters. A managed Instagram chatbot means faster response times and higher conversion rates from DM enquiries, with no technical work required on your part."
     }
   ];
 
@@ -95,17 +95,17 @@ const InstagramChatbotBlog = () => {
                 </div>
               ))}
             </div>
-            <p>The chatbot does not replace your team — it handles the volume that would otherwise go unanswered, then passes qualified leads to you with full context.</p>
+            <p>The chatbot does not replace your team. It handles the volume that would otherwise go unanswered, then passes qualified leads to you with full context.</p>
 
             <BlogInlineImage src={instagramInline2} alt="UK small business owner reviewing Instagram chatbot conversations on a laptop" />
 
             <h2 id="instagram-chatbots-small-business">Instagram Chatbots for UK Small Businesses</h2>
-            <p>You do not need a large following or a dedicated social media team to benefit from Instagram automation. Small businesses with even a modest Instagram presence — restaurants taking bookings, beauty salons managing appointments, retailers answering product questions — see the clearest benefit because every missed DM represents a real, recoverable customer.</p>
+            <p>You do not need a large following or a dedicated social media team to benefit from Instagram automation. Small businesses with even a modest Instagram presence (restaurants taking bookings, beauty salons managing appointments, retailers answering product questions) see the clearest benefit because every missed DM represents a real, recoverable customer.</p>
             <p>Instagram's own data shows that speed of response correlates directly with conversion rate. A business that replies within a minute converts significantly more DM enquiries than one that replies the next day. Automation closes that gap without requiring you to monitor your phone constantly.</p>
 
             <div className="not-prose my-8 p-6 rounded-lg bg-pink-500/10 border border-pink-500/20">
               <h3 className="text-lg font-semibold mb-4">Instagram DM Statistics</h3>
-              <p className="text-muted-foreground">150 million people start conversations with businesses on Instagram every month. Without automation, most businesses can only respond during working hours—missing over 60% of potential opportunities.</p>
+              <p className="text-muted-foreground">150 million people start conversations with businesses on Instagram every month. Without automation, most businesses can only respond during working hours, which means missing over 60% of potential opportunities.</p>
             </div>
 
             <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
@@ -124,7 +124,7 @@ const InstagramChatbotBlog = () => {
             <p>From boutique retailers to local service providers, UK small businesses are discovering that Instagram chatbots deliver enterprise-level customer experience at SME-friendly prices.</p>
 
             <h2>Why Instagram Automation Matters Now</h2>
-            <p>The social media landscape is increasingly competitive. Users expect instant responses and personalised interactions. Businesses that can't deliver risk losing followers—and customers—to competitors who can.</p>
+            <p>The social media landscape is increasingly competitive. Users expect instant responses and personalised interactions. Businesses that can't deliver risk losing followers and customers to competitors who can.</p>
             <p>With AIVized's managed Instagram chatbot service, you get:</p>
             <ol>
               <li><strong>Complete Setup:</strong> We connect and configure everything for you</li>

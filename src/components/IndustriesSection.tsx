@@ -7,7 +7,7 @@ const industries = [
     icon: UtensilsCrossed,
     headline: "Never Miss a Reservation Again",
     description:
-      "Every question a customer asks and doesn't get answered is a lost booking. Your AI colleague handles bookings, answers menu queries, and takes orders — even at 2 AM.",
+      "Every question a customer asks and doesn't get answered is a lost booking. Your AI colleague handles bookings, answers menu queries, and takes orders, even at 2 AM.",
     benefits: [
       "Handle reservations 24/7",
       "Answer menu & allergy questions instantly",
@@ -33,7 +33,7 @@ const industries = [
     icon: ShoppingBag,
     headline: "Convert Browsers Into Buyers",
     description:
-      "Humans need breaks — your AI colleague does not. It answers every product question, tracks orders, and helps customers buy, any time of the day.",
+      "Humans need breaks, but your AI colleague does not. It answers every product question, tracks orders, and helps customers buy, any time of the day.",
     benefits: [
       "Answer product questions 24/7",
       "Track orders automatically",

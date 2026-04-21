@@ -19,15 +19,15 @@ const OutsourcedChatAgentsBlog = () => {
   const faqs = [
     {
       question: "How do AI chat agents differ from traditional outsourced chat agents?",
-      answer: "Traditional outsourced chat agents are human staff, usually based offshore, who respond to customer messages manually. AI chat agents are software — they respond in under a second, handle unlimited conversations simultaneously, and are available 24/7 without shift patterns, sick days, or overtime. For Birmingham businesses, the key difference is cost and consistency: AI chat agents deliver the same quality at any hour for a fixed monthly fee."
+      answer: "Traditional outsourced chat agents are human staff, usually based offshore, who respond to customer messages manually. AI chat agents are software. They respond in under a second, handle unlimited conversations simultaneously, and are available 24/7 without shift patterns, sick days, or overtime. For Birmingham businesses, the key difference is cost and consistency: AI chat agents deliver the same quality at any hour for a fixed monthly fee."
     },
     {
       question: "What kinds of enquiries can AI chat agents handle for Birmingham businesses?",
-      answer: "AI chat agents handle the most common customer enquiries — questions about products, services, pricing, opening hours, bookings, and availability. They collect contact details from interested leads and escalate complex or sensitive enquiries to your team with full conversation context. For most Birmingham businesses, this covers 70–80% of incoming messages."
+      answer: "AI chat agents handle the most common customer enquiries: questions about products, services, pricing, opening hours, bookings, and availability. They collect contact details from interested leads and escalate complex or sensitive enquiries to your team with full conversation context. For most Birmingham businesses, this covers 70–80% of incoming messages."
     },
     {
       question: "How quickly can AI chat agents go live for a Birmingham business?",
-      answer: "With AIVized's managed service, most Birmingham businesses are live within 24 hours. We connect to your website or WhatsApp, train the AI on your business, test the responses, and launch. You share your business details — we handle everything else."
+      answer: "With AIVized's managed service, most Birmingham businesses are live within 24 hours. We connect to your website or WhatsApp, train the AI on your business, test the responses, and launch. You share your business details and we handle everything else."
     },
     {
       question: "Are AI chat agents affordable for small Birmingham businesses?",
@@ -39,7 +39,7 @@ const OutsourcedChatAgentsBlog = () => {
     },
     {
       question: "Can AI chat agents help Birmingham businesses outside office hours?",
-      answer: "This is where AI chat agents provide the clearest value. Birmingham businesses receive enquiries in the evenings, on weekends, and during public holidays — times when human staff aren't available. AI chat agents respond instantly at any hour, capturing leads and answering questions that would otherwise wait until the next working day."
+      answer: "This is where AI chat agents provide the clearest value. Birmingham businesses receive enquiries in the evenings, on weekends, and during public holidays, times when human staff aren't available. AI chat agents respond instantly at any hour, capturing leads and answering questions that would otherwise wait until the next working day."
     }
   ];
 
@@ -92,14 +92,14 @@ const OutsourcedChatAgentsBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              Birmingham is the UK's second-largest city and home to over 40,000 businesses — from independent retailers and restaurants to professional services firms and tech companies. For most of them, customer enquiries don't stop at 5pm. AI chat agents give <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham businesses</Link> a way to respond instantly to every message, around the clock, without hiring additional staff. See our <Link href="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">complete guide to AI chatbots for UK small businesses</Link>.
+              Birmingham is the UK's second-largest city and home to over 40,000 businesses, from independent retailers and restaurants to professional services firms and tech companies. For most of them, customer enquiries don't stop at 5pm. AI chat agents give <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham businesses</Link> a way to respond instantly to every message, around the clock, without hiring additional staff. See our <Link href="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">complete guide to AI chatbots for UK small businesses</Link>.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               Why Birmingham Businesses Need 24/7 Chat Coverage
             </h2>
             <p className="text-muted-foreground mb-6">
-              Research consistently shows that the speed of first response is the strongest predictor of whether an enquiry converts into a customer. A business that responds within a minute converts significantly more leads than one that responds the next morning. For Birmingham businesses, this is a practical problem — customers browse and send messages in the evenings and at weekends, when staff aren't at their desks.
+              Research consistently shows that the speed of first response is the strongest predictor of whether an enquiry converts into a customer. A business that responds within a minute converts significantly more leads than one that responds the next morning. For Birmingham businesses, this is a practical problem, as customers browse and send messages in the evenings and at weekends, when staff aren't at their desks.
             </p>
 
             <BlogInlineImage src={outsourcedInline1} alt="AI chat agent responding to customer enquiries around the clock for a Birmingham business" />
@@ -153,7 +153,7 @@ const OutsourcedChatAgentsBlog = () => {
               AI Chat Agents vs Traditional Outsourced Chat Agents
             </h2>
             <p className="text-muted-foreground mb-6">
-              Traditional outsourced chat agents — human staff responding to messages on your behalf — typically cost several hundred pounds per month at a minimum, involve handover processes, and introduce inconsistency as different agents respond differently to the same question.
+              Traditional outsourced chat agents (human staff responding to messages on your behalf) typically cost several hundred pounds per month at a minimum, involve handover processes, and introduce inconsistency as different agents respond differently to the same question.
             </p>
             <p className="text-muted-foreground mb-6">
               AI chat agents respond in under a second, handle unlimited conversations simultaneously, and give the same accurate answer every time. For Birmingham businesses receiving 10 or 10,000 messages a month, the cost and consistency advantages are significant.

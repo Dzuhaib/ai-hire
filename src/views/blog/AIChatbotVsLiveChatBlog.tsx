@@ -27,11 +27,11 @@ const faqs = [
   },
   {
     question: "Can an AI chatbot handle complex customer questions?",
-    answer: "Modern AI chatbots handle 70–80% of common enquiries without human intervention. For complex questions, they capture the customer's details and escalate to your team—so you never lose the lead."
+    answer: "Modern AI chatbots handle 70–80% of common enquiries without human intervention. For complex questions, they capture the customer's details and escalate to your team, so you never lose the lead."
   },
   {
     question: "Will customers know they're talking to a chatbot?",
-    answer: "Our chatbots are configured to be transparent—they introduce themselves as AI assistants. Interestingly, most customers don't mind as long as they get fast, helpful answers. Speed matters more than whether it's human or AI."
+    answer: "Our chatbots are configured to be transparent. They introduce themselves as AI assistants. Interestingly, most customers don't mind as long as they get fast, helpful answers. Speed matters more than whether it's human or AI."
   },
   {
     question: "Can I use both AI chatbot and live chat together?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     question: "How long does it take to set up an AI chatbot?",
-    answer: "With AIVized's managed service, your chatbot is live within 24 hours. We handle installation, configuration, and ongoing optimisation—you don't need any technical skills."
+    answer: "With AIVized's managed service, your chatbot is live within 24 hours. We handle installation, configuration, and ongoing optimisation. You don't need any technical skills."
   },
 ];
 
@@ -76,7 +76,7 @@ const AIChatbotVsLiveChatBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              When UK small business owners want to add real-time customer support to their website, they usually face the same decision: hire live chat agents or install an AI chatbot? Both have their strengths—but for most small businesses, the answer might surprise you.
+              When UK small business owners want to add real-time customer support to their website, they usually face the same decision: hire live chat agents or install an AI chatbot? Both have their strengths, but for most small businesses, the answer might surprise you.
             </p>
 
             <h2 id="cost-comparison">The Cost Reality</h2>
@@ -91,10 +91,10 @@ const AIChatbotVsLiveChatBlog = () => {
 
             <h2 id="availability">Availability: The 24/7 Factor</h2>
             <p>
-              This is where AI chatbots have an undeniable advantage. Over 40% of website enquiries happen outside standard business hours—evenings, weekends, and bank holidays. Live chat agents simply can't cover these hours without significant additional cost.
+              This is where AI chatbots have an undeniable advantage. Over 40% of website enquiries happen outside standard business hours, including evenings, weekends, and bank holidays. Live chat agents simply can't cover these hours without significant additional cost.
             </p>
             <p>
-              An AI chatbot doesn't have off-hours. Whether a customer lands on your website at 2pm or 2am, they get an instant response. For businesses in <Link href="/industries/restaurant" className="text-primary hover:underline">hospitality</Link>, <Link href="/industries/real-estate" className="text-primary hover:underline">property</Link>, and <Link href="/industries/ecommerce" className="text-primary hover:underline">e-commerce</Link>—where customers shop around the clock—this constant availability directly translates to more captured leads.
+              An AI chatbot doesn't have off-hours. Whether a customer lands on your website at 2pm or 2am, they get an instant response. For businesses in <Link href="/industries/restaurant" className="text-primary hover:underline">hospitality</Link>, <Link href="/industries/real-estate" className="text-primary hover:underline">property</Link>, and <Link href="/industries/ecommerce" className="text-primary hover:underline">e-commerce</Link>, where customers shop around the clock, this constant availability directly translates to more captured leads.
             </p>
 
             <BlogInlineImage src={vsInline2} alt="Clock showing 3am with glowing chat notification bubbles" />
@@ -104,7 +104,7 @@ const AIChatbotVsLiveChatBlog = () => {
               Here's where the conversation gets nuanced. Live chat agents excel at empathy, handling complaints, and navigating complex situations. If a customer is upset or has a unique problem, a skilled human agent will almost always deliver a better experience.
             </p>
             <p>
-              However, the majority of website enquiries aren't complex. They're predictable, repetitive questions: "What are your opening hours?", "How much does this cost?", "Do you deliver to my area?" An AI chatbot handles these consistently and instantly—often better than a human who might be juggling multiple conversations.
+              However, the majority of website enquiries aren't complex. They're predictable, repetitive questions: "What are your opening hours?", "How much does this cost?", "Do you deliver to my area?" An AI chatbot handles these consistently and instantly, often better than a human who might be juggling multiple conversations.
             </p>
 
             {/* Comparison Table */}
@@ -149,10 +149,10 @@ const AIChatbotVsLiveChatBlog = () => {
 
             <h2 id="hybrid">The Best Approach: Hybrid</h2>
             <p>
-              For most UK small businesses, the smartest approach isn't choosing one or the other—it's using an AI chatbot as the first line of response and reserving human interaction for complex cases. This way, you get 24/7 coverage at low cost while still offering a human touch when it genuinely matters.
+              For most UK small businesses, the smartest approach isn't choosing one or the other. It's using an AI chatbot as the first line of response and reserving human interaction for complex cases. This way, you get 24/7 coverage at low cost while still offering a human touch when it genuinely matters.
             </p>
             <p>
-              With AIVized, when the chatbot encounters a question it can't handle, it captures the customer's details and forwards them to you instantly. You respond when you're available—and the customer feels looked after, not ignored.
+              With AIVized, when the chatbot encounters a question it can't handle, it captures the customer's details and forwards them to you instantly. You respond when you're available, and the customer feels looked after, not ignored.
             </p>
 
             <h2 id="verdict">The Verdict for UK Small Businesses</h2>
@@ -160,7 +160,7 @@ const AIChatbotVsLiveChatBlog = () => {
               If you're a small business with limited budget and no existing customer support team, <strong>start with an AI chatbot</strong>. It gives you instant 24/7 coverage, captures <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">leads you're currently missing</Link>, and costs less than a single day of a live chat agent's salary. Read our <Link href="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">complete guide</Link> to get started.
             </p>
             <p>
-              As your business grows, you can layer in human support for high-value interactions. But for most enquiries, an AI chatbot isn't just a cheaper alternative—it's a better one.
+              As your business grows, you can layer in human support for high-value interactions. But for most enquiries, an AI chatbot isn't just a cheaper alternative. It's a better one.
             </p>
 
             <BlogInlineImage src={vsInline3} alt="Cost savings concept with reduced expenses on digital screens" />
@@ -172,7 +172,7 @@ const AIChatbotVsLiveChatBlog = () => {
                 <br /><br />
                 <strong>Choose live chat if:</strong> You handle complex B2B sales or sensitive customer complaints that require human empathy.
                 <br /><br />
-                <strong>Choose both if:</strong> You want the best of both worlds—AI handles the volume, humans handle the exceptions.
+                <strong>Choose both if:</strong> You want the best of both worlds. AI handles the volume, humans handle the exceptions.
               </p>
             </div>
           </motion.div>
@@ -194,7 +194,7 @@ const AIChatbotVsLiveChatBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Try an AI Chatbot for Your Business</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get 24/7 customer support on your website from just £29/month. Fully managed—we install everything for you.
+              Get 24/7 customer support on your website from just £29/month. Fully managed. We install everything for you.
             </p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
               View Pricing

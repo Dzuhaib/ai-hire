@@ -40,7 +40,7 @@ export const HowItWorksSection = () => {
               <span className="text-gradient">Managed AI Chatbot</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Get started today and we install everything for you. No technical skills required—fully
+              Get started today and we install everything for you. No technical skills required. Fully
               managed from day one.
             </p>
           </div>

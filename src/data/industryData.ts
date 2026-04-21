@@ -20,19 +20,19 @@ export const industries: Record<string, IndustryData> = {
     industry: "Restaurants & Hospitality",
     tagline: "AI for Restaurants",
     heroTitle: "Restaurant AI Chatbot for UK Businesses",
-    heroSubtitle: "Your AI hostess handles bookings, answers menu questions, and captures guest details 24/7—while your staff focus on delivering exceptional dining experiences.",
+    heroSubtitle: "Your AI hostess handles bookings, answers menu questions, and captures guest details 24/7 while your staff focus on delivering exceptional dining experiences.",
     description: "AI-powered reservation management and customer service for restaurants, cafés, and hospitality businesses across the UK.",
     problems: [
       { title: "Missed Calls During Service", description: "When your restaurant is busy, phones go unanswered. Every missed call could be a lost booking worth £50-£500+." },
       { title: "Late-Night Booking Requests", description: "Customers want to book after 10pm when you're closed. Without 24/7 availability, they book with competitors instead." },
-      { title: "Repetitive Questions", description: "Staff waste hours answering the same questions about opening times, parking, menus, and allergens—time better spent on guests." },
+      { title: "Repetitive Questions", description: "Staff waste hours answering the same questions about opening times, parking, menus, and allergens, time better spent on guests." },
       { title: "No-Shows & Empty Tables", description: "Without proper confirmation systems, no-shows cost UK restaurants an average of £16 billion annually." }
     ],
     solutions: [
       { title: "24/7 Reservation Handling", description: "Your AI hostess takes bookings any time of day or night, confirming instantly and updating your calendar automatically." },
       { title: "Instant Menu & Allergen Info", description: "Customers get immediate answers about ingredients, allergens, and dietary options without waiting for staff." },
       { title: "Automated Booking Confirmations", description: "Reduce no-shows by 30% with automatic reminders and easy rebooking options for your guests." },
-      { title: "Peak Time Capacity", description: "Handle unlimited enquiries during your busiest services—Friday nights, Sunday roasts, and special events." }
+      { title: "Peak Time Capacity", description: "Handle unlimited enquiries during your busiest services, Friday nights, Sunday roasts, and special events." }
     ],
     features: [
       { title: "Smart Reservations", description: "Accept bookings 24/7 with intelligent table management and capacity awareness", icon: "Calendar" },
@@ -40,7 +40,7 @@ export const industries: Record<string, IndustryData> = {
       { title: "Special Events", description: "Handle group bookings, private dining enquiries, and event catering requests", icon: "PartyPopper" },
       { title: "Lead Capture", description: "Collect guest details and preferences to build your customer database", icon: "Users" },
       { title: "Multi-Location", description: "Direct guests to the right branch if you operate multiple venues", icon: "MapPin" },
-      { title: "Integration Ready", description: "Works alongside your existing booking system—no technical changes needed", icon: "Plug" }
+      { title: "Integration Ready", description: "Works alongside your existing booking system with no technical changes needed", icon: "Plug" }
     ],
     useCases: [
       "Fine dining restaurants",
@@ -67,7 +67,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "Does this AI chatbot for small business UK work for takeaway orders?", answer: "Yes. The chatbot can guide customers through your takeaway menu, take order details, and pass them to your kitchen or POS system depending on your setup." }
     ],
     testimonial: {
-      quote: "Since adding AIVized, we've captured 40% more reservations—especially those late-night bookings we used to miss completely. It's like having a host who never takes a break.",
+      quote: "Since adding AIVized, we've captured 40% more reservations, especially those late-night bookings we used to miss completely. It's like having a host who never takes a break.",
       author: "Marco",
       role: "Owner",
       company: "Trattoria Milano, London"
@@ -78,11 +78,11 @@ export const industries: Record<string, IndustryData> = {
     industry: "Real Estate & Property",
     tagline: "AI for Real Estate",
     heroTitle: "Real Estate AI Chatbot for UK Businesses",
-    heroSubtitle: "Your AI property assistant handles enquiries, schedules viewings, and qualifies buyers 24/7—so you can focus on closing sales instead of answering repetitive questions.",
+    heroSubtitle: "Your AI property assistant handles enquiries, schedules viewings, and qualifies buyers 24/7, so you can focus on closing sales instead of answering repetitive questions.",
     description: "AI-powered lead qualification and customer service for estate agents, letting agents, and property developers across the UK.",
     problems: [
       { title: "Leads Go Cold Quickly", description: "Property buyers expect instant responses. A 30-minute delay can mean losing a hot lead to a faster competitor." },
-      { title: "Weekend & Evening Enquiries", description: "Most property searches happen outside office hours—evenings and weekends when your office is closed." },
+      { title: "Weekend & Evening Enquiries", description: "Most property searches happen outside office hours, evenings and weekends when your office is closed." },
       { title: "Repetitive Property Questions", description: "Agents spend hours answering the same questions about council tax bands, EPC ratings, and local amenities." },
       { title: "Unqualified Viewings", description: "Wasting time on viewings with buyers who can't proceed costs you valuable selling time." }
     ],
@@ -125,7 +125,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "Is this GDPR compliant for collecting buyer and tenant data?", answer: "Yes. AIVized is fully GDPR compliant. Data collected by the chatbot is handled in accordance with UK data protection requirements." }
     ],
     testimonial: {
-      quote: "We're closing more deals because we're spending time with qualified buyers instead of answering basic questions. The AI handles the filtering—we handle the selling.",
+      quote: "We're closing more deals because we're spending time with qualified buyers instead of answering basic questions. The AI handles the filtering. We handle the selling.",
       author: "Sarah",
       role: "Branch Manager",
       company: "Prestige Properties, Manchester"
@@ -136,7 +136,7 @@ export const industries: Record<string, IndustryData> = {
     industry: "E-Commerce & Retail",
     tagline: "AI for E-Commerce",
     heroTitle: "E-Commerce AI Chatbot for UK Businesses",
-    heroSubtitle: "Your AI shopping assistant answers product questions, handles order enquiries, and recovers abandoned carts 24/7—boosting conversions while you sleep.",
+    heroSubtitle: "Your AI shopping assistant answers product questions, handles order enquiries, and recovers abandoned carts 24/7, boosting conversions while you sleep.",
     description: "AI-powered customer service and sales support for online retailers, DTC brands, and e-commerce businesses across the UK.",
     problems: [
       { title: "Cart Abandonment", description: "70% of online shopping carts are abandoned. Unanswered questions at checkout are a leading cause." },
@@ -146,8 +146,8 @@ export const industries: Record<string, IndustryData> = {
     ],
     solutions: [
       { title: "Instant Product Answers", description: "Your AI answers product questions in seconds, keeping customers engaged and moving toward purchase." },
-      { title: "24/7 Shopping Assistance", description: "Support customers whenever they shop—2pm or 2am—across all time zones and shopping habits." },
-      { title: "Automated Order Support", description: "Handle 80% of order enquiries automatically—tracking, returns, exchanges—freeing your team for complex issues." },
+      { title: "24/7 Shopping Assistance", description: "Support customers whenever they shop, whether 2pm or 2am, across all time zones and shopping habits." },
+      { title: "Automated Order Support", description: "Handle 80% of order enquiries automatically, including tracking, returns, and exchanges, freeing your team for complex issues." },
       { title: "Consistent Brand Voice", description: "Every customer receives the same accurate, on-brand response, building trust and reducing returns." }
     ],
     features: [
@@ -194,7 +194,7 @@ export const industries: Record<string, IndustryData> = {
     industry: "Healthcare & Clinics",
     tagline: "AI for Healthcare",
     heroTitle: "Healthcare AI Chatbot for UK Businesses",
-    heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7—while your team focuses on delivering exceptional care.",
+    heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7 while your team focuses on delivering exceptional care.",
     description: "AI-powered appointment booking and patient communication for dental practices, GP surgeries, private clinics, and healthcare businesses across the UK.",
     problems: [
       { title: "Missed Calls During Appointments", description: "When staff are busy with patients, phones go unanswered. Every missed call could be a new patient worth £500+ annually." },
@@ -203,10 +203,10 @@ export const industries: Record<string, IndustryData> = {
       { title: "Patient No-Shows", description: "Missed appointments cost the NHS £1 billion annually. Private practices lose significant revenue to no-shows too." }
     ],
     solutions: [
-      { title: "24/7 Patient Reception", description: "Your AI receptionist handles enquiries any time, booking requests and new patient registrations—even at midnight." },
+      { title: "24/7 Patient Reception", description: "Your AI receptionist handles enquiries any time, booking requests and new patient registrations, even at midnight." },
       { title: "Instant Service Information", description: "Patients get immediate answers about treatments, fees, NHS availability, and registration without waiting on hold." },
       { title: "Automated Appointment Reminders", description: "Reduce no-shows with intelligent reminders and easy rebooking options for your patients." },
-      { title: "New Patient Capture", description: "Never lose a potential patient—your AI captures details and registration interest 24/7." }
+      { title: "New Patient Capture", description: "Never lose a potential patient. Your AI captures details and registration interest 24/7." }
     ],
     features: [
       { title: "Appointment Requests", description: "Accept booking requests 24/7 and send them to your reception team", icon: "Calendar" },
@@ -241,7 +241,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "How do we update the chatbot when our services or fees change?", answer: "Contact us and we update the training within your monthly maintenance window. Urgent updates are handled within 24 hours on all plans." }
     ],
     testimonial: {
-      quote: "We've captured 35% more new patient registrations since adding AIVized. The AI handles out-of-hours enquiries beautifully—patients love getting instant responses about our services.",
+      quote: "We've captured 35% more new patient registrations since adding AIVized. The AI handles out-of-hours enquiries beautifully. Patients love getting instant responses about our services.",
       author: "Dr Patel",
       role: "Practice Owner",
       company: "Smile Dental, Birmingham"
@@ -252,7 +252,7 @@ export const industries: Record<string, IndustryData> = {
     industry: "Legal & Law Firms",
     tagline: "AI for Law Firms",
     heroTitle: "Law Firm AI Chatbot for UK Businesses",
-    heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7—so your solicitors can focus on billable work.",
+    heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7, so your solicitors can focus on billable work.",
     description: "AI-powered client intake and enquiry management for solicitors, law firms, and legal practices across the UK.",
     problems: [
       { title: "Missed Client Calls", description: "When solicitors are in meetings or court, potential clients call competitors. First response wins in legal services." },
@@ -264,13 +264,13 @@ export const industries: Record<string, IndustryData> = {
       { title: "24/7 Client Intake", description: "Capture every potential client enquiry instantly, day or night. Never lose a case to a faster-responding competitor." },
       { title: "Intelligent Client Qualification", description: "Your AI asks the right questions to qualify prospects by case type, urgency, and budget before involving solicitors." },
       { title: "Professional First Impression", description: "Every enquiry receives a polished, professional response that reflects your firm's standards." },
-      { title: "Cost-Effective Reception", description: "Replace expensive reception staffing with AI from £29/month—redirect savings to fee-earning work." }
+      { title: "Cost-Effective Reception", description: "Replace expensive reception staffing with AI from £29/month and redirect savings to fee-earning work." }
     ],
     features: [
       { title: "Client Intake", description: "Capture case details, contact information, and urgency level automatically", icon: "FileText" },
       { title: "Case Qualification", description: "Pre-qualify clients by practice area, budget, and case merit", icon: "Filter" },
       { title: "Appointment Booking", description: "Schedule initial consultations based on solicitor availability", icon: "Calendar" },
-      { title: "Practice Areas", description: "Direct enquiries to the right department—family, conveyancing, personal injury, etc.", icon: "Building" },
+      { title: "Practice Areas", description: "Direct enquiries to the right department: family, conveyancing, personal injury, and more", icon: "Building" },
       { title: "Fee Guidance", description: "Provide general fee information and funding options to qualified prospects", icon: "CreditCard" },
       { title: "Confidentiality", description: "Handle all communications with legal-grade data protection and GDPR compliance", icon: "Shield" }
     ],
@@ -310,16 +310,16 @@ export const industries: Record<string, IndustryData> = {
     industry: "Fitness & Gyms",
     tagline: "AI for Fitness",
     heroTitle: "Fitness AI Chatbot for UK Businesses",
-    heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7—turning curious browsers into committed members.",
+    heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7, turning curious browsers into committed members.",
     description: "AI-powered membership sales and customer service for gyms, personal trainers, yoga studios, and fitness businesses across the UK.",
     problems: [
       { title: "Lost Membership Enquiries", description: "Potential members browse gym websites at 10pm but can't get answers. By morning, they've joined a competitor." },
-      { title: "Peak Time Reception Overload", description: "Reception staff are overwhelmed during busy periods—signing in members while potential new ones walk away." },
-      { title: "Class Booking Confusion", description: "Members call repeatedly to check schedules, book classes, and ask about availability—tying up staff time." },
+      { title: "Peak Time Reception Overload", description: "Reception staff are overwhelmed during busy periods, signing in members while potential new ones walk away." },
+      { title: "Class Booking Confusion", description: "Members call repeatedly to check schedules, book classes, and ask about availability, tying up staff time." },
       { title: "Trial-to-Member Conversion", description: "Without proper follow-up, trial visitors often don't convert to full memberships." }
     ],
     solutions: [
-      { title: "24/7 Membership Sales", description: "Your AI answers pricing, facility, and membership questions at any hour—capturing leads when motivation is highest." },
+      { title: "24/7 Membership Sales", description: "Your AI answers pricing, facility, and membership questions at any hour, capturing leads when motivation is highest." },
       { title: "Automated Class Info", description: "Provide instant schedule information, class descriptions, and availability without staff involvement." },
       { title: "Trial Booking Capture", description: "Convert website visitors into trial bookings automatically, with immediate confirmation and details." },
       { title: "Lead Follow-Up", description: "Capture every enquiry with contact details so your sales team can follow up with warm leads." }
@@ -368,7 +368,7 @@ export const industries: Record<string, IndustryData> = {
     industry: "Travel & Tourism",
     tagline: "AI for Travel",
     heroTitle: "Travel AI Chatbot for UK Businesses",
-    heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7—turning dreamers into bookers while you sleep.",
+    heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7, turning dreamers into bookers while you sleep.",
     description: "AI-powered booking support and customer service for travel agents, tour operators, and tourism businesses across the UK.",
     problems: [
       { title: "Complex Enquiry Volume", description: "Travel enquiries are detailed and time-consuming. Each customer wants personalised recommendations, quotes, and itinerary help." },
@@ -378,7 +378,7 @@ export const industries: Record<string, IndustryData> = {
     ],
     solutions: [
       { title: "24/7 Destination Expertise", description: "Your AI answers destination questions, provides travel information, and captures booking interest at any hour." },
-      { title: "Surge-Ready Service", description: "Handle January booking rushes and summer peaks without temporary staff—your AI scales instantly." },
+      { title: "Surge-Ready Service", description: "Handle January booking rushes and summer peaks without temporary staff. Your AI scales instantly." },
       { title: "Instant Engagement", description: "Capture evening browsers before they default to online booking platforms." },
       { title: "Lead Qualification", description: "Pre-qualify travellers by destination, budget, dates, and party size before involving your team." }
     ],
@@ -415,7 +415,7 @@ export const industries: Record<string, IndustryData> = {
       { question: "How does the chatbot handle urgent customer issues like flight cancellations?", answer: "For urgent situations it escalates immediately to your team via email notification. It collects the customer's contact details so they are not left waiting for a response." }
     ],
     testimonial: {
-      quote: "Evening enquiries have tripled since adding AIVized. Customers research holidays at night—now we capture those leads instead of losing them to Booking.com.",
+      quote: "Evening enquiries have tripled since adding AIVized. Customers research holidays at night. Now we capture those leads instead of losing them to Booking.com.",
       author: "Lisa",
       role: "Director",
       company: "Horizon Travel, Edinburgh"

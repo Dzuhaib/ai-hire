@@ -89,7 +89,7 @@ const LocationsPage = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              From London to Edinburgh—get a fully managed AI chatbot for lead generation. We install everything, no technical skills needed.
+              From London to Edinburgh, get a fully managed AI chatbot for lead generation. We install everything, no technical skills needed.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
