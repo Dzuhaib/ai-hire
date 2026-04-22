@@ -49,16 +49,6 @@ export const PainSection = () => {
               That's why businesses across <Link href="/locations" className="text-primary hover:underline">UK cities</Link> trust our{" "}
               <Link href="/industries" className="text-primary hover:underline">managed AI chatbot</Link> to capture leads 24/7.
             </p>
-            <p className="mt-3 text-xs text-muted-foreground/60">
-              *Based on{" "}
-              <a href="https://www.hubspot.com/sales-statistics" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
-                HubSpot sales research
-              </a>{" "}
-              and{" "}
-              <a href="https://www.salesforce.com/uk/resources/research-reports/state-of-the-connected-customer/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
-                Salesforce State of the Connected Customer report
-              </a>.
-            </p>
           </div>
         </div>
       </div>
