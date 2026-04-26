@@ -265,6 +265,38 @@ export const FAQSkeleton = () => (
   </section>
 );
 
+// ─── Why Choose Us: stats bar + 6-card grid ───────────────────────────────
+
+export const WhyChooseUsSkeleton = () => (
+  <section className="section-padding bg-secondary/20">
+    <div className="container-narrow">
+      <div className="text-center mb-16 space-y-3 max-w-2xl mx-auto">
+        <Skeleton className="h-3 w-20 mx-auto" />
+        <Skeleton className="h-10 w-3/4 mx-auto" />
+        <Skeleton className="h-4 w-full mx-auto" />
+        <Skeleton className="h-4 w-4/5 mx-auto" />
+      </div>
+      <div className="grid grid-cols-3 gap-4 mb-14 rounded-2xl border border-border/50 p-6 bg-card">
+        {Array.from({ length: 3 }).map((_, i) => (
+          <div key={i} className="text-center space-y-2">
+            <Skeleton className="h-10 w-20 mx-auto" />
+            <Skeleton className="h-3 w-28 mx-auto" />
+          </div>
+        ))}
+      </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <CardShell key={i}>
+            <Skeleton className="w-11 h-11 rounded-lg mb-4" />
+            <Skeleton className="h-6 w-3/4 mb-2" />
+            <Lines count={3} last="w-4/5" />
+          </CardShell>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 // ─── Final CTA ─────────────────────────────────────────────────────────────
 
 export const FinalCTASkeleton = () => (

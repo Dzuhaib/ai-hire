@@ -13,6 +13,7 @@ import {
   AITiersSkeleton,
   IndustriesSkeleton,
   HowItWorksSkeleton,
+  WhyChooseUsSkeleton,
   PricingSkeleton,
   CalculatorSkeleton,
   TestimonialsSkeleton,
@@ -39,6 +40,10 @@ const IndustriesSection = dynamic(
 const HowItWorksSection = dynamic(
   () => import("@/components/HowItWorksSection").then(m => m.HowItWorksSection),
   { loading: () => <HowItWorksSkeleton /> }
+);
+const WhyChooseUsSection = dynamic(
+  () => import("@/components/WhyChooseUsSection").then(m => m.WhyChooseUsSection),
+  { loading: () => <WhyChooseUsSkeleton /> }
 );
 const PricingSection = dynamic(
   () => import("@/components/PricingSection").then(m => m.PricingSection),
@@ -96,6 +101,7 @@ const Index = () => {
         <IndustriesSection />
         <ServicesSection />
         <HowItWorksSection />
+        <WhyChooseUsSection />
         <PricingSection />
         <CostComparisonCalculator />
         <TestimonialsSection />
