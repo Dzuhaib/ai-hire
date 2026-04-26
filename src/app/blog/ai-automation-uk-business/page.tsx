@@ -1,47 +1,46 @@
 export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import AIAutomationUKBlog from "@/views/blog/AIAutomationUKBlog";
+import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { getBlogBySlug } from "@/data/blogData";
+
+const SLUG = "ai-automation-uk-business";
+const URL = `${SITE_URL}/blog/${SLUG}`;
+const post = getBlogBySlug(SLUG);
 
 export const metadata: Metadata = {
   title: "AI Business Automation for UK Small Business | AIVized",
   description: "A practical guide to AI business automation for UK small businesses. AIVized manages setup and monitoring. Capture leads and automate enquiries from £29/month.",
-  alternates: { canonical: "https://www.aivized.com/blog/ai-automation-uk-business" },
+  alternates: { canonical: URL },
   openGraph: {
     title: "AI Business Automation for UK Small Business | AIVized",
     description: "A practical guide to AI business automation for UK small businesses. AIVized manages setup and monitoring. Capture leads and automate enquiries from £29/month.",
-    url: "https://www.aivized.com/blog/ai-automation-uk-business",
+    url: URL,
     type: "article",
-    publishedTime: "2026-02-05",
+    publishedTime: post?.publishedDate,
     modifiedTime: "2026-04-21",
-    images: [{ url: "https://www.aivized.com/assets/blog/ai-automation-uk-hero.png", width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/blog/ai-automation-uk-hero.png`, width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/ai-automation-uk-hero.png"] },
+  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/ai-automation-uk-hero.png`] },
 };
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "AI Business Automation for UK Small Business: A Practical Guide",
-      "description": "Discover how UK small businesses are using AI automation to handle customer enquiries, capture leads, and free up staff time, without needing a technical team.",
-      "image": "https://www.aivized.com/assets/blog/ai-automation-uk-hero.png",
-      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
-      "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-      "datePublished": "2026-02-05",
-      "dateModified": "2026-04-21",
-      "mainEntityOfPage": "https://www.aivized.com/blog/ai-automation-uk-business",
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "AI Business Automation UK", "item": "https://www.aivized.com/blog/ai-automation-uk-business" }
-      ]
-    }
-  ]
+    blogPostingSchema({
+      headline: "AI Business Automation for UK Small Business: A Practical Guide",
+      description: "Discover how UK small businesses are using AI automation to handle customer enquiries, capture leads, and free up staff time, without needing a technical team.",
+      image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-automation-uk-hero.png"}`,
+      url: URL,
+      datePublished: post?.publishedDate ?? "2026-02-05",
+      dateModified: "2026-04-21",
+    }),
+    breadcrumbSchema([
+      { name: "Home", item: SITE_URL },
+      { name: "Blog", item: `${SITE_URL}/blog` },
+      { name: "AI Business Automation UK", item: URL },
+    ]),
+  ],
 };
 
 export default function Page() {

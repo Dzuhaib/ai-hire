@@ -1,47 +1,46 @@
 export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import OutsourcedChatAgentsBlog from "@/views/blog/OutsourcedChatAgentsBlog";
+import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { getBlogBySlug } from "@/data/blogData";
+
+const SLUG = "outsourced-chat-agents-birmingham";
+const URL = `${SITE_URL}/blog/${SLUG}`;
+const post = getBlogBySlug(SLUG);
 
 export const metadata: Metadata = {
   title: "24/7 AI Chat Agents for Birmingham Businesses | AIVized",
   description: "Managed 24/7 AI chat agents for your Birmingham business. AIVized installs and maintains your chatbot. Enquiries and bookings handled automatically. From £29/month.",
-  alternates: { canonical: "https://www.aivized.com/blog/outsourced-chat-agents-birmingham" },
+  alternates: { canonical: URL },
   openGraph: {
     title: "24/7 AI Chat Agents for Birmingham Businesses | AIVized",
     description: "Managed 24/7 AI chat agents for your Birmingham business. AIVized installs and maintains your chatbot. Enquiries and bookings handled automatically. From £29/month.",
-    url: "https://www.aivized.com/blog/outsourced-chat-agents-birmingham",
+    url: URL,
     type: "article",
-    publishedTime: "2026-02-01",
+    publishedTime: post?.publishedDate,
     modifiedTime: "2026-04-21",
-    images: [{ url: "https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png", width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/blog/outsourced-chat-agents-hero.png`, width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png"] },
+  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/outsourced-chat-agents-hero.png`] },
 };
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "24/7 AI Chat Agents for Birmingham Businesses",
-      "description": "Discover how Birmingham businesses use managed AI chat agents to handle customer enquiries 24/7 without hiring additional staff.",
-      "image": "https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png",
-      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
-      "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-      "datePublished": "2026-02-01",
-      "dateModified": "2026-04-21",
-      "mainEntityOfPage": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham",
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "24/7 AI Chat Agents Birmingham", "item": "https://www.aivized.com/blog/outsourced-chat-agents-birmingham" }
-      ]
-    }
-  ]
+    blogPostingSchema({
+      headline: "24/7 AI Chat Agents for Birmingham Businesses",
+      description: "Discover how Birmingham businesses use managed AI chat agents to handle customer enquiries 24/7 without hiring additional staff.",
+      image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/outsourced-chat-agents-hero.png"}`,
+      url: URL,
+      datePublished: post?.publishedDate ?? "2026-02-01",
+      dateModified: "2026-04-21",
+    }),
+    breadcrumbSchema([
+      { name: "Home", item: SITE_URL },
+      { name: "Blog", item: `${SITE_URL}/blog` },
+      { name: "24/7 AI Chat Agents Birmingham", item: URL },
+    ]),
+  ],
 };
 
 export default function Page() {

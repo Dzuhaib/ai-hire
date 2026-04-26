@@ -1,47 +1,46 @@
 export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import AIChatbotVsLiveChatBlog from "@/views/blog/AIChatbotVsLiveChatBlog";
+import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { getBlogBySlug } from "@/data/blogData";
+
+const SLUG = "ai-chatbot-vs-live-chat-uk";
+const URL = `${SITE_URL}/blog/${SLUG}`;
+const post = getBlogBySlug(SLUG);
 
 export const metadata: Metadata = {
   title: "AI Chatbot vs Live Chat for UK Businesses | AIVized",
   description: "Compare AI chatbot vs live chat for UK businesses. Understand costs, performance, and which solution is best for your small business customer service.",
-  alternates: { canonical: "https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk" },
+  alternates: { canonical: URL },
   openGraph: {
     title: "AI Chatbot vs Live Chat for UK Businesses | AIVized",
     description: "Compare AI chatbot vs live chat for UK businesses. Understand costs, performance, and which solution is best for your small business customer service.",
-    url: "https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk",
+    url: URL,
     type: "article",
-    publishedTime: "2026-02-11",
+    publishedTime: post?.publishedDate,
     modifiedTime: "2026-04-21",
-    images: [{ url: "https://www.aivized.com/assets/blog/ai-chatbot-vs-live-chat-hero.png", width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/blog/ai-chatbot-vs-live-chat-hero.png`, width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/assets/blog/ai-chatbot-vs-live-chat-hero.png"] },
+  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/ai-chatbot-vs-live-chat-hero.png`] },
 };
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "AI Chatbot vs Live Chat: Which Is Better for UK Small Business?",
-      "description": "AI chatbot or live chat for your UK small business? Compare costs, availability, and customer satisfaction. Find the right solution for 24/7 support.",
-      "image": "https://www.aivized.com/assets/blog/ai-chatbot-vs-live-chat-hero.png",
-      "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
-      "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-      "datePublished": "2026-02-11",
-      "dateModified": "2026-04-21",
-      "mainEntityOfPage": "https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk",
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "AI Chatbot vs Live Chat", "item": "https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uk" }
-      ]
-    }
-  ]
+    blogPostingSchema({
+      headline: "AI Chatbot vs Live Chat: Which Is Better for UK Small Business?",
+      description: "AI chatbot or live chat for your UK small business? Compare costs, availability, and customer satisfaction. Find the right solution for 24/7 support.",
+      image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-chatbot-vs-live-chat-hero.png"}`,
+      url: URL,
+      datePublished: post?.publishedDate ?? "2026-02-11",
+      dateModified: "2026-04-21",
+    }),
+    breadcrumbSchema([
+      { name: "Home", item: SITE_URL },
+      { name: "Blog", item: `${SITE_URL}/blog` },
+      { name: "AI Chatbot vs Live Chat", item: URL },
+    ]),
+  ],
 };
 
 export default function Page() {

@@ -75,6 +75,7 @@ export function blogPostingSchema(opts: {
     "publisher": publisherRef,
     "datePublished": opts.datePublished,
     "dateModified": opts.dateModified,
+    "inLanguage": "en-GB",
     "mainEntityOfPage": opts.url,
     "speakable": {
       "@type": "SpeakableSpecification",

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import CityWebsiteChatbotBlog from "@/views/blog/CityWebsiteChatbotBlog";
 import { cityBlogEntries } from "@/data/blogData";
 import { getCityBlogBySlug } from "@/data/cityBlogData";
+import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
 
 export async function generateStaticParams() {
   return cityBlogEntries.map((post) => ({ slug: post.slug }));
@@ -21,17 +22,17 @@ export async function generateMetadata({
       title: post.metaTitle,
       description: post.metaDescription,
       keywords: post.keywords.join(", "),
-      alternates: { canonical: `https://www.aivized.com/blog/${slug}` },
+      alternates: { canonical: `${SITE_URL}/blog/${slug}` },
       openGraph: {
         title: post.metaTitle,
         description: post.metaDescription,
-        url: `https://www.aivized.com/blog/${slug}`,
+        url: `${SITE_URL}/blog/${slug}`,
         type: "article",
-        publishedTime: "2026-02-08",
+        publishedTime: post.publishedDate,
         modifiedTime: "2026-04-21",
-        images: [{ url: post.heroImage }],
+        images: [{ url: `${SITE_URL}${post.heroImage}` }],
       },
-      twitter: { card: "summary_large_image", images: [post.heroImage] },
+      twitter: { card: "summary_large_image", images: [`${SITE_URL}${post.heroImage}`] },
     };
   }
 
@@ -43,7 +44,7 @@ export async function generateMetadata({
   return {
     title: `${title} | AIVized`,
     description: `AI chatbot services for UK businesses. Read our guide on ${title.toLowerCase()}.`,
-    alternates: { canonical: `https://www.aivized.com/blog/${slug}` },
+    alternates: { canonical: `${SITE_URL}/blog/${slug}` },
   };
 }
 
@@ -53,35 +54,28 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  // city slug is extracted from the blog slug (e.g., "website-chatbot-24-7-london" → "london")
   const citySlug = slug.replace("website-chatbot-24-7-", "");
   const data = getCityBlogBySlug(citySlug);
-  const canonicalUrl = `https://www.aivized.com/blog/${slug}`;
+  const post = cityBlogEntries.find((p) => p.slug === slug);
+  const canonicalUrl = `${SITE_URL}/blog/${slug}`;
 
   const schema = data
     ? {
         "@context": "https://schema.org",
         "@graph": [
-          {
-            "@type": "BlogPosting",
-            "headline": `Website Chatbot That Runs 24/7 ${data.city} | Managed AI Service`,
-            "description": `Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`,
-            "image": `https://www.aivized.com/assets/locations/ai-${data.slug}.png`,
-            "author": { "@type": "Person", "@id": "https://www.aivized.com/#founder", "name": "Zuhaib Ahmed", "url": "https://www.linkedin.com/in/zuhaibah/", "sameAs": ["https://www.linkedin.com/in/zuhaibah/"] },
-            "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" } },
-            "datePublished": "2026-02-08",
-            "dateModified": "2026-04-21",
-            "mainEntityOfPage": canonicalUrl,
-            "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
-          },
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" },
-              { "@type": "ListItem", "position": 3, "name": `Website Chatbot 24/7 ${data.city}`, "item": canonicalUrl },
-            ],
-          },
+          blogPostingSchema({
+            headline: `Website Chatbot That Runs 24/7 ${data.city} | Managed AI Service`,
+            description: `Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`,
+            image: `${SITE_URL}/assets/locations/ai-${data.slug}.png`,
+            url: canonicalUrl,
+            datePublished: post?.publishedDate ?? "2026-02-08",
+            dateModified: "2026-04-21",
+          }),
+          breadcrumbSchema([
+            { name: "Home", item: SITE_URL },
+            { name: "Blog", item: `${SITE_URL}/blog` },
+            { name: `Website Chatbot 24/7 ${data.city}`, item: canonicalUrl },
+          ]),
         ],
       }
     : null;

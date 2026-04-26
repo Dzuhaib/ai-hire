@@ -63,6 +63,7 @@ const homepageSchema = {
       "@id": "https://www.aivized.com/#product",
       "name": "AIVized AI Chatbot",
       "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "ChatBot",
       "operatingSystem": "Web",
       "description": "Fully managed AI chatbot for UK small businesses. Handles 24/7 lead generation, customer enquiries, and appointment booking. Installed and managed by AIVized.",
       "url": "https://www.aivized.com",
