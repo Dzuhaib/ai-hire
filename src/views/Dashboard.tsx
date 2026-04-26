@@ -143,7 +143,7 @@ const Dashboard = () => {
       const whatsappMessage = encodeURIComponent(
         `Hi! I'd like to pay for my ${subscription.plan_name} plan (£${subscription.plan_price}/month + £50 one-time setup fee).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
       );
-      window.open(`https://wa.me/923063213951?text=${whatsappMessage}`, "_blank");
+      window.open(`https://wa.me/923390349804?text=${whatsappMessage}`, "_blank");
 
       // Update local state
       setSubscription({ ...subscription, status: "pending_payment" });

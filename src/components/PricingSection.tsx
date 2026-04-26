@@ -24,6 +24,7 @@ const plans = [
       { text: "Analytics dashboard", included: false },
     ],
     popular: false,
+    hasTrial: true,
     icon: Zap,
   },
   {
@@ -40,6 +41,7 @@ const plans = [
       { text: "Priority support + Analytics", included: true },
     ],
     popular: true,
+    hasTrial: true,
     icon: Crown,
   },
   {
@@ -56,6 +58,7 @@ const plans = [
       { text: "SLA guarantee + Premium support", included: true },
     ],
     popular: false,
+    hasTrial: false,
     icon: Rocket,
   },
 ];
@@ -69,16 +72,16 @@ const guarantees = [
 export const PricingSection = () => {
   const { user, isSignedIn } = useUser();
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
 
-  const handleSubscribe = async (planName: string, priceAmount: number) => {
+  const handleStartTrial = async (planName: string, priceAmount: number) => {
     if (!isSignedIn || !user) {
       toast.info("Please sign in to start your free trial");
       router.push("/auth");
       return;
     }
 
-    setIsLoading(true);
+    setLoadingPlan(planName);
 
     try {
       const { data, error } = await supabase.functions.invoke("start-trial", {
@@ -116,7 +119,7 @@ export const PricingSection = () => {
     } catch {
       toast.error("An error occurred. Please try again.");
     } finally {
-      setIsLoading(false);
+      setLoadingPlan(null);
     }
   };
 
@@ -205,7 +208,9 @@ export const PricingSection = () => {
                     </span>
                     <span className="text-muted-foreground text-sm">/month</span>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-1">3-day free trial · then + £50 setup</p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {plan.hasTrial ? "3-day free trial · then + £50 setup" : "One-time £50 setup · No trial"}
+                  </p>
                 </div>
 
                 {/* Features */}
@@ -229,26 +234,37 @@ export const PricingSection = () => {
                 </ul>
 
                 {/* CTA */}
-                <MagneticButton
-                  className={`w-full py-3.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    plan.popular
-                      ? "bg-primary text-primary-foreground hover:bg-[hsl(16_60%_40%)]"
-                      : "border border-border hover:border-primary/50 hover:bg-secondary"
-                  }`}
-                  onClick={() => handleSubscribe(plan.name, plan.priceAmount)}
-                  disabled={isLoading}
-                >
-                  {isLoading ? (
-                    <span className="flex items-center justify-center gap-2">
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      Starting Trial...
-                    </span>
-                  ) : plan.popular ? (
-                    "Start 3-Day Free Trial"
-                  ) : (
-                    "Start Free Trial"
-                  )}
-                </MagneticButton>
+                {plan.hasTrial ? (
+                  <MagneticButton
+                    className={`w-full py-3.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      plan.popular
+                        ? "bg-primary text-primary-foreground hover:bg-[hsl(16_60%_40%)]"
+                        : "border border-border hover:border-primary/50 hover:bg-secondary"
+                    }`}
+                    onClick={() => handleStartTrial(plan.name, plan.priceAmount)}
+                    disabled={loadingPlan !== null}
+                  >
+                    {loadingPlan === plan.name ? (
+                      <span className="flex items-center justify-center gap-2">
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Starting Trial...
+                      </span>
+                    ) : plan.popular ? (
+                      "Start 3-Day Free Trial"
+                    ) : (
+                      "Start Free Trial"
+                    )}
+                  </MagneticButton>
+                ) : (
+                  <MagneticButton
+                    className="w-full py-3.5 rounded-lg text-sm font-medium transition-all duration-200 border border-border hover:border-primary/50 hover:bg-secondary"
+                    onClick={() => {
+                      window.location.href = "mailto:aivized.com@gmail.com?subject=Business%20Plan%20Enquiry";
+                    }}
+                  >
+                    Get Started
+                  </MagneticButton>
+                )}
               </div>
             </motion.div>
           ))}

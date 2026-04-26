@@ -41,6 +41,15 @@ serve(async (req) => {
       throw new Error("Missing required fields");
     }
 
+    // Free trial is only available for Starter and Professional plans
+    const trialEligiblePlans = ["Starter", "Professional"];
+    if (!trialEligiblePlans.includes(planName)) {
+      return new Response(
+        JSON.stringify({ success: false, error: "trial_not_available", message: "Free trial is not available for this plan. Please contact us to get started." }),
+        { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
