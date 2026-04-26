@@ -38,7 +38,7 @@ const schema = {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.aivized.com/#services" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.aivized.com/services/social-media-automation" },
         { "@type": "ListItem", "position": 3, "name": "Social Media Automation", "item": "https://www.aivized.com/services/social-media-automation" }
       ]
     }

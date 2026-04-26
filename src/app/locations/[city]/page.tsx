@@ -58,6 +58,7 @@ export default async function Page({
           },
           {
             "@type": "LocalBusiness",
+            "@id": `https://www.aivized.com/locations/${location.slug}#localbusiness`,
             "name": `AIVized - ${location.city}`,
             "description": location.description,
             "url": `https://www.aivized.com/locations/${location.slug}`,
@@ -86,6 +87,7 @@ export default async function Page({
           },
           {
             "@type": "Service",
+            "@id": `https://www.aivized.com/locations/${location.slug}#service`,
             "name": `Managed AI Chatbot Service for ${location.city}`,
             "description": `Fully managed AI chatbot for ${location.city} businesses. 24/7 lead capture, customer enquiry automation, and ongoing optimisation from £29/month.`,
             "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },

@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "24/7 AI Chat Agents for Birmingham Businesses",
       "description": "Discover how Birmingham businesses use managed AI chat agents to handle customer enquiries 24/7 without hiring additional staff.",
       "image": "https://www.aivized.com/assets/blog/outsourced-chat-agents-hero.png",

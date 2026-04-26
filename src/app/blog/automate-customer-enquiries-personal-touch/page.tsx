@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "How to Automate Customer Enquiries Without Losing the Personal Touch",
       "description": "Learn how UK small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples.",
       "image": "https://www.aivized.com/assets/blog/automate-enquiries-personal-touch-hero.png",

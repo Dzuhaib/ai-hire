@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "Website Chatbot for UK Small Businesses: How Managed AI Works",
       "description": "Explore how a fully managed website chatbot helps UK small businesses handle customer enquiries, capture leads, and support customers around the clock.",
       "image": "https://www.aivized.com/assets/blog/website-chatbot-hero.png",

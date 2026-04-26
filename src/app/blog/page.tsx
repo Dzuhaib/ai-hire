@@ -23,10 +23,11 @@ const blogIndexSchema = {
   "@graph": [
     {
       "@type": "CollectionPage",
+      "@id": "https://www.aivized.com/blog#collectionpage",
       "name": "AI Chatbot Blog | UK Business Insights",
       "description": "Expert insights on AI chatbots for UK businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support.",
       "url": "https://www.aivized.com/blog",
-      "publisher": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
+      "publisher": { "@id": "https://www.aivized.com/#organization" },
       "mainEntity": {
         "@type": "ItemList",
         "numberOfItems": allBlogPosts.length,

@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "AI Business Automation for UK Small Business: A Practical Guide",
       "description": "Discover how UK small businesses are using AI automation to handle customer enquiries, capture leads, and free up staff time, without needing a technical team.",
       "image": "https://www.aivized.com/assets/blog/ai-automation-uk-hero.png",

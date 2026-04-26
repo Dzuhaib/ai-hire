@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "AI Personal Assistant for Your UK Business: What It Does and How to Get One",
       "description": "Find out how a managed AI personal assistant can handle customer enquiries, capture leads, and support your UK business around the clock.",
       "image": "https://www.aivized.com/assets/blog/ai-personal-assistant-hero.png",

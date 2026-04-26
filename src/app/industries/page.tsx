@@ -30,6 +30,7 @@ const industriesSchema = {
     },
     {
       "@type": "CollectionPage",
+      "@id": "https://www.aivized.com/industries#collectionpage",
       "name": "AI Chatbot by Industry: AIVized",
       "description": "Industry-trained AI chatbot solutions for UK small businesses. Covering restaurants, real estate, e-commerce, healthcare, legal, fitness, and travel.",
       "url": "https://www.aivized.com/industries",

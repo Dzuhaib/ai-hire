@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "AI Chatbot for Small Business UK: The Complete 2026 Guide to WhatsApp & Website Chatbots",
       "description": "Complete guide to AI chatbots for UK small businesses. Compare managed vs DIY options, understand what to look for, and learn how to get started from £29/month.",
       "image": "https://www.aivized.com/assets/blog/ai-chatbot-guide-hero.png",

@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "WhatsApp Chatbot for UK Businesses: 24/7 AI Messaging",
       "description": "Learn how a managed WhatsApp chatbot helps UK businesses capture leads and answer customer enquiries 24/7 without needing a dedicated support team.",
       "image": "https://www.aivized.com/assets/blog/whatsapp-chatbot-hero.png",

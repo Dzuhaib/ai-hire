@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "Instagram Chatbot for UK Businesses: Automate DMs and Capture Leads 24/7",
       "description": "Discover how an Instagram chatbot helps UK businesses automate DM responses, capture leads, and engage customers at any hour.",
       "image": "https://www.aivized.com/assets/blog/instagram-chatbot-hero.png",

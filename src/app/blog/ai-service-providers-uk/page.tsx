@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "How to Choose an AI Service Provider for Your UK Business",
       "description": "A practical guide to evaluating AI service providers for UK small businesses: what to look for, what to ask, and how to avoid common pitfalls.",
       "image": "https://www.aivized.com/assets/blog/ai-service-providers-hero.png",

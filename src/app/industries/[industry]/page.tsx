@@ -59,6 +59,7 @@ export default async function Page({
           },
           {
             "@type": "Service",
+            "@id": `https://www.aivized.com/industries/${industryData.slug}#service`,
             "name": `AI Chatbot for ${industryData.industry}`,
             "description": industryData.description,
             "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },

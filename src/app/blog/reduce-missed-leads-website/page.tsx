@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "How to Reduce Missed Leads from Your Website with AI Chatbots",
       "description": "Discover why UK small businesses miss up to 60% of website leads and how an AI chatbot captures enquiries 24/7. Practical tips to stop losing customers.",
       "image": "https://www.aivized.com/assets/blog/reduce-missed-leads-hero.png",

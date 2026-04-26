@@ -22,7 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["BlogPosting", "Article"],
+      "@type": "BlogPosting",
       "headline": "AI Chatbot vs Live Chat: Which Is Better for UK Small Business?",
       "description": "AI chatbot or live chat for your UK small business? Compare costs, availability, and customer satisfaction. Find the right solution for 24/7 support.",
       "image": "https://www.aivized.com/assets/blog/ai-chatbot-vs-live-chat-hero.png",
