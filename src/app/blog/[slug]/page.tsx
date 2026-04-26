@@ -75,14 +75,6 @@ export default async function Page({
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
           },
           {
-            "@type": "FAQPage",
-            "mainEntity": data.faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
-            })),
-          },
-          {
             "@type": "BreadcrumbList",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },

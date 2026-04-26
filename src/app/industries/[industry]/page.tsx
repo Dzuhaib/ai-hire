@@ -72,14 +72,6 @@ export default async function Page({
               "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
             }
           },
-          {
-            "@type": "FAQPage",
-            "mainEntity": industryData.faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
-            })),
-          },
         ],
       }
     : null;

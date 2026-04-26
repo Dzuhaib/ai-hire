@@ -23,7 +23,7 @@ const OutsourcedChatAgentsBlog = () => {
     },
     {
       question: "What kinds of enquiries can AI chat agents handle for Birmingham businesses?",
-      answer: "AI chat agents handle the most common customer enquiries: questions about products, services, pricing, opening hours, bookings, and availability. They collect contact details from interested leads and escalate complex or sensitive enquiries to your team with full conversation context. For most Birmingham businesses, this covers 70–80% of incoming messages."
+      answer: "AI chat agents handle the most common customer enquiries: questions about products, services, pricing, opening hours, bookings, and availability. They collect contact details from interested leads and escalate complex or sensitive enquiries to your team with full conversation context. For most Birmingham businesses, this covers 70 to 80% of incoming messages."
     },
     {
       question: "How quickly can AI chat agents go live for a Birmingham business?",

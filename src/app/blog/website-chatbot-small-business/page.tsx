@@ -34,15 +34,6 @@ const schema = {
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "How does a managed website chatbot differ from a DIY chatbot builder?", "acceptedAnswer": { "@type": "Answer", "text": "With a DIY chatbot builder, you configure the chatbot yourself, write the conversation flows, handle the installation, and maintain it whenever your content changes. A managed service like AIVized does all of that for you. You share your business details and we install, train, and maintain the chatbot on your behalf." } },
-        { "@type": "Question", "name": "How does an AI chatbot for small business UK work on a website?", "acceptedAnswer": { "@type": "Answer", "text": "An AI chatbot for small business UK works by embedding a chat widget on your website. When visitors arrive, the chatbot greets them, answers common questions, captures contact details, and guides them toward booking or purchasing automatically, based on the knowledge base we build from your business information." } },
-        { "@type": "Question", "name": "Will a website chatbot work on my existing site without a rebuild?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. AIVized installs the chatbot by adding a single script tag to your website. This works with any website platform: WordPress, Shopify, Wix, Squarespace, or a custom-built site. No rebuild or technical work is required from your side." } },
-        { "@type": "Question", "name": "What happens when the chatbot can't answer a question?", "acceptedAnswer": { "@type": "Answer", "text": "When a visitor asks something outside the chatbot's knowledge base, it escalates the conversation to your team with the full conversation context attached. Your team sees exactly what was asked and can follow up with everything they need to help." } }
-      ]
-    },
-    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },

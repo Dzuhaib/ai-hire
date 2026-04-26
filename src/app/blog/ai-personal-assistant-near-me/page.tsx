@@ -34,17 +34,6 @@ const schema = {
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] },
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "What is an AI personal assistant for a UK business?", "acceptedAnswer": { "@type": "Answer", "text": "An AI personal assistant for a UK business is a managed chatbot that handles customer-facing tasks automatically: answering enquiries, collecting lead details, booking appointments, and responding to messages across your website, WhatsApp, or Instagram. Unlike a basic FAQ bot, it holds a natural conversation and can handle multi-step requests based on a knowledge base built from your specific business." } },
-        { "@type": "Question", "name": "What tasks can an AI personal assistant handle for my business?", "acceptedAnswer": { "@type": "Answer", "text": "An AI personal assistant handles the tasks that would otherwise require your time or a member of staff: answering repeated questions about pricing, services, availability, and hours; collecting contact details from interested customers; booking appointments into your calendar; and escalating complex enquiries to you with full conversation context." } },
-        { "@type": "Question", "name": "How is a managed AI personal assistant different from a chatbot I build myself?", "acceptedAnswer": { "@type": "Answer", "text": "A managed AI personal assistant is built, trained, installed, and maintained by AIVized on your behalf. You share your business details and we handle the technical setup and keep the assistant updated when your content changes. A self-build chatbot requires you to configure conversation flows, write responses, manage the integration, and maintain it yourself." } },
-        { "@type": "Question", "name": "Which channels can an AI personal assistant work on?", "acceptedAnswer": { "@type": "Answer", "text": "AIVized's managed AI personal assistant works across your website, WhatsApp, and Instagram. One assistant, trained on your business, deployed to the channels your customers use. Each channel can be added separately or together, depending on where your enquiries come from." } },
-        { "@type": "Question", "name": "How quickly can an AI personal assistant go live for my UK business?", "acceptedAnswer": { "@type": "Answer", "text": "Most businesses are live within 24 hours. You share your products, services, pricing, and common questions and we build and test the assistant, then install it on your chosen channels. There is no technical work required on your side." } },
-        { "@type": "Question", "name": "How does WhatsApp integration work for an AI personal assistant?", "acceptedAnswer": { "@type": "Answer", "text": "WhatsApp integration connects your business number to the AI assistant via the official Meta Business API. When a customer sends a message, the assistant responds instantly using your knowledge base. It can answer questions, collect contact details, book appointments, and escalate to your team, all within the WhatsApp interface your customers already use daily." } }
-      ]
-    },
-    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },

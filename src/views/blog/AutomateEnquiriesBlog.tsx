@@ -146,7 +146,7 @@ const AutomateEnquiriesBlog = () => {
 
             <h2 id="real-example">A Real Example</h2>
             <p>
-              Consider a small <Link href="/industries/real-estate" className="text-primary hover:underline">estate agency</Link> in <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>. Before adding an AI chatbot, they received most enquiries via a contact form. Average response time? 6–8 hours during the week, longer on weekends. Many leads went cold before anyone replied.
+              Consider a small <Link href="/industries/real-estate" className="text-primary hover:underline">estate agency</Link> in <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>. Before adding an AI chatbot, they received most enquiries via a contact form. Average response time? 6 to 8 hours during the week, longer on weekends. Many leads went cold before anyone replied.
             </p>
             <p>
               After installing an AIVized chatbot, every visitor gets an instant response. The chatbot asks what type of property they're looking for, their budget range, and preferred areas, then sends the qualified lead directly to the agent's WhatsApp. The agent follows up personally within minutes, armed with all the context.

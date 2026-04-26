@@ -246,15 +246,15 @@ const TermsOfService = () => {
                     <ul className="space-y-2 text-sm">
                       <li>
                         <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> — From £29/month</span>
+                        <span className="text-muted-foreground"> (from £29/month)</span>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
-                        <span className="text-muted-foreground"> — UK cities</span>
+                        <span className="text-muted-foreground"> (UK cities)</span>
                       </li>
                       <li>
                         <Link href="/industries" className="text-primary hover:underline">AI Chatbot by Industry</Link>
-                        <span className="text-muted-foreground"> — Restaurants, Real Estate, E-Commerce</span>
+                        <span className="text-muted-foreground"> (Restaurants, Real Estate, E-Commerce)</span>
                       </li>
                     </ul>
                   </div>
@@ -283,7 +283,7 @@ const TermsOfService = () => {
                       </li>
                       <li>
                         <Link href="/refund-policy" className="text-primary hover:underline">Refund Policy</Link>
-                        <span className="text-muted-foreground"> — 14-day money-back guarantee</span>
+                        <span className="text-muted-foreground"> (14-day money-back guarantee)</span>
                       </li>
                       <li>
                         <Link href="/" className="text-primary hover:underline">Back to Homepage</Link>

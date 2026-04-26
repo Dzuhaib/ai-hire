@@ -23,7 +23,7 @@ const locationsSchema = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "name": "AIVized UK Locations — Managed AI Chatbot by City",
+      "name": "AIVized UK Locations: Managed AI Chatbot by City",
       "description": "Managed AI chatbot service available across all major UK cities. AIVized installs and maintains your chatbot wherever your business is based.",
       "url": "https://www.aivized.com/locations",
       "publisher": { "@id": "https://www.aivized.com/#organization" },

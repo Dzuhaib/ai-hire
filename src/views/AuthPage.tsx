@@ -84,7 +84,7 @@ const SlidingQuotes = () => {
             "{quotes[current].text}"
           </p>
           <p className="mt-3 text-white/60 text-sm">
-            — {quotes[current].author},{" "}
+            {quotes[current].author},{" "}
             <span className="text-primary/90">{quotes[current].role}</span>
           </p>
         </motion.div>

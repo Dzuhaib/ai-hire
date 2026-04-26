@@ -31,11 +31,11 @@ const AIAutomationUKBlog = () => {
     },
     {
       question: "Can AI automation replace my entire customer service team?",
-      answer: "AI automation doesn't replace your team. It handles the volume that would otherwise go unanswered. AI manages 70–80% of routine enquiries instantly, while complex or sensitive issues are escalated to your human team with full conversation context. Your team focuses on high-value interactions; the AI handles the repetitive work."
+      answer: "AI automation doesn't replace your team. It handles the volume that would otherwise go unanswered. AI manages 70 to 80% of routine enquiries instantly, while complex or sensitive issues are escalated to your human team with full conversation context. Your team focuses on high-value interactions; the AI handles the repetitive work."
     },
     {
       question: "What is the ROI of AI business automation for a UK small business?",
-      answer: "UK businesses typically see ROI within 2–3 months of implementing AI automation. Key improvements include faster response times (seconds vs hours), more leads captured from out-of-hours enquiries, and significant time savings on repetitive customer service tasks. At £29 per month, the cost is lower than a single hour of additional staffing."
+      answer: "UK businesses typically see ROI within 2 to 3 months of implementing AI automation. Key improvements include faster response times, more leads captured from out-of-hours enquiries, and significant time savings on repetitive customer service tasks. At £29 per month, the cost is lower than a single hour of additional staffing."
     },
     {
       question: "Is AI business automation suitable for very small UK businesses?",

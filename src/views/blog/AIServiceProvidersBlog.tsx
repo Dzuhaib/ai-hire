@@ -127,13 +127,13 @@ const AIServiceProvidersBlog = () => {
               DIY chatbot platforms typically advertise low monthly fees, sometimes free tiers. What they do not advertise is the time cost. Building a functional chatbot on a DIY platform requires:
             </p>
             <ul className="text-muted-foreground">
-              <li>Initial setup: 10–20 hours to build and test conversation flows</li>
-              <li>Ongoing maintenance: 2–4 hours per month updating content</li>
+              <li>Initial setup: 10 to 20 hours to build and test conversation flows</li>
+              <li>Ongoing maintenance: 2 to 4 hours per month updating content</li>
               <li>Error handling: unplanned hours when the chatbot gives a wrong answer</li>
               <li>Integration work: additional hours connecting to your booking system, CRM, or email</li>
             </ul>
             <p className="text-muted-foreground mb-6">
-              For a business owner whose time is worth £30–£50 per hour, the "free" DIY tool costs several hundred pounds in the first month alone. A managed service at £29 per month that handles all of this is significantly cheaper in practice.
+              For a business owner whose time is worth £30 to £50 per hour, the "free" DIY tool costs several hundred pounds in the first month alone. A managed service at £29 per month that handles all of this is significantly cheaper in practice.
             </p>
 
             <BlogInlineImage src={providersInline2} alt="Cost comparison chart for DIY vs managed AI chatbot services" />
@@ -144,7 +144,7 @@ const AIServiceProvidersBlog = () => {
             </p>
             <ol className="text-muted-foreground">
               <li><strong>Who trains the chatbot on my business?</strong> If the answer involves you uploading content or writing responses, it is not managed.</li>
-              <li><strong>How long does setup take?</strong> A managed service should be live within 24–48 hours after you share your business details.</li>
+              <li><strong>How long does setup take?</strong> A managed service should be live within 24 to 48 hours after you share your business details.</li>
               <li><strong>What happens when I change my prices or services?</strong> You should be able to contact support and have updates applied for you.</li>
               <li><strong>Is there a free trial before I pay?</strong> Any provider confident in their service offers a trial. Avoid those that do not.</li>
               <li><strong>Can I cancel month to month?</strong> Long contract lock-ins before you have seen results are a red flag.</li>

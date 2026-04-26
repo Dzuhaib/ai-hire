@@ -30,16 +30,6 @@ const schema = {
       "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "aivized.com@gmail.com" }
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "What business processes can AIVized automate?", "acceptedAnswer": { "@type": "Answer", "text": "AIVized automates the repetitive, rule-based tasks that consume your team's time: lead follow-up sequences, appointment reminders, customer onboarding messages, booking confirmations, review request emails, and internal notifications when a new enquiry arrives. If a task happens the same way every time, it can likely be automated." } },
-        { "@type": "Question", "name": "Do I need technical skills to set up business process automation?", "acceptedAnswer": { "@type": "Answer", "text": "No. AIVized handles the full setup: identifying which workflows to automate, connecting the tools, configuring the triggers, and testing before go-live. You describe how your business currently works and we build the automation around it." } },
-        { "@type": "Question", "name": "How is business process automation different from your AI chatbot service?", "acceptedAnswer": { "@type": "Answer", "text": "The AI chatbot focuses on customer-facing conversations, answering enquiries on your website or WhatsApp in real time. Business process automation handles the behind-the-scenes workflows: what happens after a lead arrives, how customers are followed up, and how your team is notified. The two services complement each other." } },
-        { "@type": "Question", "name": "How long does it take to get automation running?", "acceptedAnswer": { "@type": "Answer", "text": "Most automations are live within three to five working days of your initial briefing. Simple workflows like appointment reminders or lead notifications can be set up within 24 hours. We confirm timelines after understanding your specific requirements." } },
-        { "@type": "Question", "name": "How do I get started with business process automation?", "acceptedAnswer": { "@type": "Answer", "text": "Email us at aivized.com@gmail.com with a description of the repetitive tasks you want to automate. We will schedule a brief call or email exchange to understand your workflow, then confirm scope and timelines." } }
-      ]
-    },
-    {
       "@type": "WebPage",
       "url": "https://www.aivized.com/services/business-automation",
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] }

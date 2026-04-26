@@ -131,7 +131,7 @@ const ReduceMissedLeadsBlog = () => {
 
             <h2 id="real-results">What Real UK Businesses Are Seeing</h2>
             <p>
-              UK small businesses that add an AI chatbot to their website typically see a <strong>25–40% increase in captured leads</strong> within the first month. That's not because they're getting more traffic. It's because they're finally converting the traffic they already have.
+              UK small businesses that add an AI chatbot to their website typically see a <strong>25 to 40% increase in captured leads</strong> within the first month. That's not because they're getting more traffic. It's because they're finally converting the traffic they already have.
             </p>
             <p>
               For a business spending £500 per month on Google Ads or SEO, capturing even 10 more leads per month from existing traffic can dramatically improve return on investment. The chatbot doesn't replace your marketing. It makes your existing marketing work harder.

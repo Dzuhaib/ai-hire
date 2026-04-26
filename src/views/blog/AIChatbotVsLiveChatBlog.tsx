@@ -23,11 +23,11 @@ const vsInline3 = "/assets/blog/vs-livechat-inline-3.png";
 const faqs = [
   {
     question: "Is an AI chatbot cheaper than hiring live chat agents?",
-    answer: "Significantly. A single live chat agent costs £1,800–£2,500 per month in the UK, and you'd need multiple agents to cover evenings and weekends. An AI chatbot from AIVized starts at £29/month and works 24/7 without breaks."
+    answer: "Significantly. A single live chat agent costs £1,800 to £2,500 per month in the UK, and you'd need multiple agents to cover evenings and weekends. An AI chatbot from AIVized starts at £29/month and works 24/7 without breaks."
   },
   {
     question: "Can an AI chatbot handle complex customer questions?",
-    answer: "Modern AI chatbots handle 70–80% of common enquiries without human intervention. For complex questions, they capture the customer's details and escalate to your team, so you never lose the lead."
+    answer: "Modern AI chatbots handle 70 to 80% of common enquiries without human intervention. For complex questions, they capture the customer's details and escalate to your team, so you never lose the lead."
   },
   {
     question: "Will customers know they're talking to a chatbot?",
@@ -127,7 +127,7 @@ const AIChatbotVsLiveChatBlog = () => {
                     { feature: "Empathy & nuance", ai: false, live: true },
                     { feature: "No recruitment needed", ai: true, live: false },
                     { feature: "Improves over time", ai: true, live: true },
-                    { feature: "Setup time", ai: "24 hours", live: "2–4 weeks" },
+                    { feature: "Setup time", ai: "24 hours", live: "2 to 4 weeks" },
                   ].map((row, i) => (
                     <tr key={i} className="border-t border-border">
                       <td className="p-4 text-sm">{row.feature}</td>

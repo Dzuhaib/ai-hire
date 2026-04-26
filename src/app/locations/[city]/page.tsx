@@ -86,7 +86,7 @@ export default async function Page({
           },
           {
             "@type": "Service",
-            "name": `Managed AI Chatbot Service — ${location.city}`,
+            "name": `Managed AI Chatbot Service for ${location.city}`,
             "description": `Fully managed AI chatbot for ${location.city} businesses. 24/7 lead capture, customer enquiry automation, and ongoing optimisation from £29/month.`,
             "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
             "serviceType": "AI Chatbot Management",
@@ -98,14 +98,6 @@ export default async function Page({
               "priceCurrency": "GBP",
               "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
             }
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": location.faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
-            })),
           },
         ],
       }

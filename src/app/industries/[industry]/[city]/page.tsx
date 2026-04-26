@@ -81,16 +81,8 @@ export default async function Page({
               }
             },
             {
-              "@type": "FAQPage",
-              "mainEntity": cityData.faqs.map((faq) => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
-              })),
-            },
-            {
               "@type": "LocalBusiness",
-              "name": `AIVized — ${parentIndustry.industry} AI Chatbot ${cityData.cityName}`,
+              "name": `AIVized ${parentIndustry.industry} AI Chatbot ${cityData.cityName}`,
               "url": `https://www.aivized.com/industries/${industry}/${city}`,
               "description": `Managed AI chatbot service for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
               "email": "aivized.com@gmail.com",

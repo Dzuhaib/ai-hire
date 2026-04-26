@@ -120,16 +120,6 @@ const pricingSchema = {
         ]
       }
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Is there a setup fee?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, there is a one-time £50 setup fee on the Starter, Professional, and Business plans. This covers installation, training, and initial configuration." } },
-        { "@type": "Question", "name": "Can I cancel at any time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All AIVized plans are month to month with no minimum commitment. You can cancel any time from your account." } },
-        { "@type": "Question", "name": "Is VAT included in the prices shown?", "acceptedAnswer": { "@type": "Answer", "text": "Prices shown are exclusive of VAT. Standard UK VAT applies." } },
-        { "@type": "Question", "name": "What happens after the 3-day free trial?", "acceptedAnswer": { "@type": "Answer", "text": "If you continue, the monthly plan fee plus the £50 setup charge applies. If you cancel within the trial period, no payment is taken." } },
-        { "@type": "Question", "name": "Can I upgrade or downgrade my plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can change your plan at any time. Upgrades take effect immediately. Downgrades apply from the next billing cycle." } }
-      ]
-    }
   ]
 };
 

@@ -50,8 +50,8 @@ const RefundPolicy = () => {
                   <li>If you are not satisfied with our service within the first 14 days of your initial subscription, you may request a full refund</li>
                   <li>The 14-day period begins from the date your subscription is activated</li>
                   <li>This guarantee applies to your first subscription with AIVized only</li>
-                  <li>No questions asked – simply contact our support team to request your refund</li>
-                  <li>Refunds will be processed within 5-10 business days</li>
+                  <li>No questions asked. Simply contact our support team to request your refund</li>
+                  <li>Refunds will be processed within 5 to 10 business days</li>
                 </ul>
               </section>
 
@@ -106,7 +106,7 @@ const RefundPolicy = () => {
                   <li><strong>Provide Details:</strong> Include your account email, subscription details, and reason for the refund request</li>
                   <li><strong>Review:</strong> Our team will review your request within 2 business days</li>
                   <li><strong>Confirmation:</strong> You will receive email confirmation of the decision</li>
-                  <li><strong>Processing:</strong> Approved refunds are processed within 5-10 business days</li>
+                  <li><strong>Processing:</strong> Approved refunds are processed within 5 to 10 business days</li>
                 </ol>
               </section>
 
@@ -118,7 +118,7 @@ const RefundPolicy = () => {
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li>Refunds are processed through Paddle, our Merchant of Record</li>
                   <li>The refund will be credited to your original payment method</li>
-                  <li>Processing time depends on your payment provider (typically 5-10 business days)</li>
+                  <li>Processing time depends on your payment provider (typically 5 to 10 business days)</li>
                   <li>Refunds are issued in the original currency of payment</li>
                   <li>You will receive email confirmation when the refund is processed</li>
                 </ul>
@@ -178,7 +178,7 @@ const RefundPolicy = () => {
               <section className="bg-primary/5 border border-primary/20 rounded-lg p-6 mt-12">
                 <h2 className="text-2xl font-serif font-semibold mb-4">Our Promise</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  We stand behind our service and are committed to your success. If you're ever unsatisfied, please reach out to us – we'll do everything we can to make it right. Your trust is important to us, and we aim to be fair and transparent in all our dealings.
+                  We stand behind our service and are committed to your success. If you're ever unsatisfied, please reach out to us and we'll do everything we can to make it right. Your trust matters to us and we aim to be fair and transparent in all our dealings.
                 </p>
               </section>
 
@@ -194,15 +194,15 @@ const RefundPolicy = () => {
                     <ul className="space-y-2 text-sm">
                       <li>
                         <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> — From £29/month</span>
+                        <span className="text-muted-foreground"> (from £29/month)</span>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
-                        <span className="text-muted-foreground"> — UK cities</span>
+                        <span className="text-muted-foreground"> (UK cities)</span>
                       </li>
                       <li>
                         <Link href="/industries" className="text-primary hover:underline">AI Chatbot by Industry</Link>
-                        <span className="text-muted-foreground"> — Restaurants, Real Estate, E-Commerce</span>
+                        <span className="text-muted-foreground"> (Restaurants, Real Estate, E-Commerce)</span>
                       </li>
                     </ul>
                   </div>

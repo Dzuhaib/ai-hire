@@ -94,11 +94,11 @@ const WebsiteChatbotBlog = () => {
             </div>
 
             <h2 id="managed-vs-diy">Managed AI vs DIY Chatbot Builders</h2>
-            <p>DIY chatbot platforms advertise low monthly fees. What they don't advertise is the time cost. Building a functional chatbot on a DIY platform requires 10–20 hours upfront to build and test conversation flows, then 2–4 hours per month to keep content updated.</p>
+            <p>DIY chatbot platforms advertise low monthly fees. What they don't advertise is the time cost. Building a functional chatbot on a DIY platform requires 10 to 20 hours upfront to build and test conversation flows, then 2 to 4 hours per month to keep content updated.</p>
 
             <BlogInlineImage src={websiteInline2} alt="UK small business owner reviewing website chatbot conversations on a laptop" />
 
-            <p>For a business owner whose time is worth £30–£50 per hour, the "free" DIY option costs several hundred pounds in the first month alone. A managed service at £29 per month that handles installation, training, and ongoing updates is significantly cheaper in practice.</p>
+            <p>For a business owner whose time is worth £30 to £50 per hour, the "free" DIY option costs several hundred pounds in the first month alone. A managed service at £29 per month that handles installation, training, and ongoing updates is significantly cheaper in practice.</p>
 
             <div className="not-prose my-8 p-6 rounded-lg bg-amber-500/10 border border-amber-400/20">
               <h3 className="text-lg font-semibold mb-4">Research Insight</h3>

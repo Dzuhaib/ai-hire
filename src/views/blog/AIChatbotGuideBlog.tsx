@@ -96,7 +96,7 @@ const AIChatbotGuideBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              If you're a UK small business owner wondering whether an <strong>AI chatbot</strong> is worth the investment, the short answer is yes, and you're not alone. Thousands of SMEs across Britain are already using chatbots to capture leads, support customers, and grow their businesses. This comprehensive guide covers everything you need to know about choosing and implementing the right chatbot solution in 2026.
+              If you're a UK small business owner wondering whether an <strong>AI chatbot</strong> is worth the investment, the short answer is yes. Thousands of SMEs across Britain are already using chatbots to capture leads, support customers, and grow their businesses. This guide walks you through choosing and getting started with the right chatbot solution in 2026.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">

@@ -20,18 +20,6 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
-// Defined here (server component) — NOT in "use client" Index.tsx — to avoid client reference serialization issues
-const homepageFaqs = [
-  { question: "What is a managed AI chatbot service?", answer: "A managed AI chatbot service means a company installs, trains, and maintains the chatbot for you. With AIVized, you subscribe to a plan and we handle everything from setup to ongoing updates. You do not touch any code." },
-  { question: "How much does an affordable AI chatbot for website cost?", answer: "AIVized plans start from £29 per month plus a one-time £50 setup fee. There are no long-term contracts and a 3-day free trial is included." },
-  { question: "How can I capture leads on my website 24/7?", answer: "AIVized installs an AI chatbot that engages every visitor, asks qualifying questions, and collects their contact details automatically. Leads are delivered to your email or CRM around the clock." },
-  { question: "Is this AI chatbot for small business UK suitable for my company?", answer: "If your business has a website and receives customer enquiries, yes. AIVized works for restaurants, real estate agencies, ecommerce stores, clinics, law firms, gyms, and travel businesses across the UK." },
-  { question: "How does your AI chatbot provide 24/7 customer support?", answer: "The chatbot runs on your website continuously. It answers questions, takes bookings, and captures leads at any hour without staff involvement. Average response time is under 3 seconds." },
-  { question: "Can this chatbot help me automate customer inquiries for my small business?", answer: "Yes. AIVized is trained on your specific business, products, and services. It handles the questions your customers ask most, freeing your team to focus on higher-value work." },
-  { question: "What makes AIVized different from other chatbot services for small business UK?", answer: "AIVized is fully managed. Unlike DIY platforms where you build and maintain the chatbot yourself, we handle everything. Setup, training, monitoring, and updates are all included in your monthly plan." },
-  { question: "How does AIVized compare to Intercom alternatives for small business?", answer: "Intercom requires technical setup and internal management. AIVized costs significantly less and includes full management. You get enterprise-quality AI without needing a technical team." },
-];
-
 const homepageSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -135,19 +123,14 @@ const homepageSchema = {
       }
     },
     {
-      "@type": ["WebPage", "FAQPage"],
+      "@type": "WebPage",
       "@id": "https://www.aivized.com/#webpage",
       "url": "https://www.aivized.com",
       "name": "Managed AI Chatbot for Small Business UK | AIVized",
       "description": "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "about": { "@id": "https://www.aivized.com/#service" },
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#services", "#how-it-works", "#pricing", "#faq"] },
-      "mainEntity": homepageFaqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-      }))
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#services", "#how-it-works", "#pricing", "#faq"] }
     }
   ]
 };
