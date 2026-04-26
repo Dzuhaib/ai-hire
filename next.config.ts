@@ -19,6 +19,8 @@ const securityHeaders = [
   },
   // DNS prefetch control
   { key: "X-DNS-Prefetch-Control", value: "on" },
+  // Tell crawlers to index and follow all pages
+  { key: "X-Robots-Tag", value: "index, follow" },
   // Content Security Policy — restricts resource origins
   {
     key: "Content-Security-Policy",

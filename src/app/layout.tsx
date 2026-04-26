@@ -20,7 +20,16 @@ export const metadata: Metadata = {
     "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
   keywords:
     "managed AI chatbot service, AI chatbot for small business UK, lead generation chatbot UK, 24/7 customer support chatbot, affordable AI chatbot, fully managed chatbot, AIVized",
-  authors: [{ name: "aivized" }],
+  authors: [{ name: "Zuhaib Ahmed", url: "https://www.linkedin.com/in/zuhaibah/" }],
+  publisher: "Zuhaib Ahmed",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   metadataBase: new URL("https://www.aivized.com"),
   openGraph: {
     type: "website",
