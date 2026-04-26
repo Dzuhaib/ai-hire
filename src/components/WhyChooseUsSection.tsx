@@ -13,46 +13,46 @@ import {
 const reasons = [
   {
     icon: Shield,
-    title: "Truly Managed — Not Just a Tool",
+    title: "We actually do it for you",
     description:
-      "Most platforms hand you a login and expect you to build it yourself. We handle installation, training, testing, and monitoring. You never touch a dashboard.",
+      "Other platforms hand you a login and expect you to build it. We build it, train it, and keep it running. You just share your business details and we get on with it.",
   },
   {
     icon: Rocket,
-    title: "Live Within 24 Hours",
+    title: "Your chatbot goes live the next day",
     description:
-      "After you subscribe, we set everything up. Most businesses have a fully working chatbot by the next business day, with zero disruption to your site.",
+      "Most of our clients are up and running within 24 hours of signing up. We do not keep you waiting weeks for a quote or dragging things out with lengthy calls.",
   },
   {
     icon: Zap,
-    title: "No Technical Skills Needed",
+    title: "You do not need to be technical at all",
     description:
-      "No code, no developer, no IT team required. Tell us about your business and we do the rest. If you can send an email, you can work with AIVized.",
+      "You genuinely do not need to know anything about code or software. Tell us what your business does and we handle everything from setup to launch.",
   },
   {
     icon: RefreshCw,
-    title: "Ongoing Updates Included",
+    title: "Updates are included in your plan",
     description:
-      "When your prices, services, or FAQs change, we update the chatbot. There are no extra charges for content updates — it is part of your monthly subscription.",
+      "When your prices change or you add a new service, just drop us an email and we update the chatbot. It is part of what you pay for every month.",
   },
   {
     icon: CalendarX,
-    title: "No Long-Term Contracts",
+    title: "Leave whenever you want",
     description:
-      "Monthly rolling subscriptions. No setup penalties, no exit fees, no minimum term. If AIVized stops working for you, you can cancel at any time.",
+      "We do not tie you into a contract. You pay monthly and you can cancel at any point. We would rather earn your trust than hold you to a commitment.",
   },
   {
     icon: Headphones,
-    title: "UK-Based Support",
+    title: "You speak to a real person",
     description:
-      "Every client has direct access to the AIVized team via email. We respond within one business day and we are based in the UK, in your timezone.",
+      "When you email us, someone on the team reads it and replies. Not an automated response and not a support queue. Usually back to you the same day.",
   },
 ];
 
 const statItems = [
-  { value: "24hrs", label: "Average setup time" },
+  { value: "24hrs", label: "Typical setup time" },
   { value: "80%", label: "Enquiries handled automatically" },
-  { value: "£0", label: "Cost to update your chatbot" },
+  { value: "£0", label: "Charge for content updates" },
 ];
 
 interface WhyChooseUsSectionProps {
@@ -82,7 +82,7 @@ export const WhyChooseUsSection = ({ variant = "homepage" }: WhyChooseUsSectionP
             <span className="text-gradient">Choose AIVized</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            There are dozens of chatbot platforms. Here is why business owners across the UK choose a managed service instead of doing it themselves.
+            Plenty of chatbot tools exist. Most expect you to do all the work yourself. Here is what makes working with us different.
           </p>
         </motion.div>
 
