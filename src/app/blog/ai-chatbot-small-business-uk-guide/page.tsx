@@ -8,21 +8,26 @@ const SLUG = "ai-chatbot-small-business-uk-guide";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "AI Chatbot for Small Business UK: Complete Guide | AIVized",
-  description: "The complete guide to AI chatbots for UK small businesses. Compare managed vs DIY options, understand the costs involved, and choose the right service.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "AI Chatbot for Small Business UK: Complete Guide | AIVized",
-    description: "The complete guide to AI chatbots for UK small businesses. Compare managed vs DIY options, understand the costs involved, and choose the right service.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/ai-chatbot-guide-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/ai-chatbot-guide-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "AI Chatbot for Small Business UK: Complete Guide | AIVized";
+  const description = post?.metaDescription || "The complete guide to AI chatbots for UK small businesses. Compare managed vs DIY options, understand the costs involved, and choose the right service.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-chatbot-guide-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-chatbot-guide-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",

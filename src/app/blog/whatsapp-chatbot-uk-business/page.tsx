@@ -8,21 +8,26 @@ const SLUG = "whatsapp-chatbot-uk-business";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "Managed WhatsApp Chatbot for UK Businesses | AIVized",
-  description: "Set up a WhatsApp chatbot for your UK business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From £29/month.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Managed WhatsApp Chatbot for UK Businesses | AIVized",
-    description: "Set up a WhatsApp chatbot for your UK business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From £29/month.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/whatsapp-chatbot-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/whatsapp-chatbot-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "Managed WhatsApp Chatbot for UK Businesses | AIVized";
+  const description = post?.metaDescription || "Set up a WhatsApp chatbot for your UK business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From £29/month.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/whatsapp-chatbot-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/whatsapp-chatbot-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",

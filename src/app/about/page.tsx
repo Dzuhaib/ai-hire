@@ -4,11 +4,11 @@ import AboutPage from "@/views/AboutPage";
 
 export const metadata: Metadata = {
   title: "Managed AI Chatbot Service for UK Businesses | AIVized",
-  description: "AIVized is a UK-based managed AI chatbot service founded by Zuhaib Ahmed. We install, train, and maintain your chatbot so you can focus on running your business.",
+  description: "Learn how AIVized provides a managed AI chatbot service to UK small businesses, automating customer service and capturing leads 24/7. Plans from £29/mo.",
   alternates: { canonical: "https://www.aivized.com/about" },
   openGraph: {
     title: "About AIVized: Managed AI Chatbot for UK Small Businesses",
-    description: "AIVized is a UK-based managed AI chatbot service founded by Zuhaib Ahmed. We install, train, and maintain your chatbot so you can focus on running your business.",
+    description: "Learn how AIVized provides a managed AI chatbot service to UK small businesses, automating customer service and capturing leads 24/7. Plans from £29/mo.",
     url: "https://www.aivized.com/about",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

@@ -4,13 +4,13 @@ import BlogsPage from "@/views/BlogsPage";
 import { allBlogPosts } from "@/data/blogData";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot Blog | AIVized - Tips & Guides for UK Businesses",
+  title: "AI Chatbot Blog: Guides for UK Businesses | AIVized",
   description:
-    "Expert guides and tips on AI chatbots for UK small businesses. Learn how to capture leads, automate enquiries, and grow your business with managed AI.",
+    "Welcome to the AIVized AI chatbot blog. Learn how to capture leads, automate enquiries, and grow your UK small business with our expert tips and guides.",
   alternates: { canonical: "https://www.aivized.com/blog" },
   openGraph: {
-    title: "AI Chatbot Blog | AIVized: Tips & Guides for UK Businesses",
-    description: "Expert guides and tips on AI chatbots for UK small businesses. Learn how to capture leads, automate enquiries, and grow your business with managed AI.",
+    title: "AI Chatbot Blog: Guides for UK Businesses | AIVized",
+    description: "Welcome to the AIVized AI chatbot blog. Learn how to capture leads, automate enquiries, and grow your UK small business with our expert tips and guides.",
     url: "https://www.aivized.com/blog",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

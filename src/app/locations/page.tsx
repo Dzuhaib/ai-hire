@@ -4,13 +4,13 @@ import LocationsPage from "@/views/LocationsPage";
 import { ukLocations } from "@/data/locationData";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot UK Locations | AIVized",
+  title: "Managed AI Chatbot Services Across the United Kingdom",
   description:
-    "Find a managed AI chatbot for your UK business. AIVized serves London, Manchester, Birmingham, Leeds, and 16+ other UK cities. From £29/month, 24-hour setup, no technical skills needed.",
+    "Get premium managed AI chatbot services in London, Manchester, Birmingham, and across the UK. Capture leads and automate support 24/7 from £29/month.",
   alternates: { canonical: "https://www.aivized.com/locations" },
   openGraph: {
-    title: "Managed AI Chatbot Across the UK | AIVized Locations",
-    description: "Find a managed AI chatbot for your UK business. AIVized serves London, Manchester, Birmingham, Leeds, and 16+ other UK cities. From £29/month, 24-hour setup, no technical skills needed.",
+    title: "Managed AI Chatbot Services Across the United Kingdom",
+    description: "Get premium managed AI chatbot services in London, Manchester, Birmingham, and across the UK. Capture leads and automate support 24/7 from £29/month.",
     url: "https://www.aivized.com/locations",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

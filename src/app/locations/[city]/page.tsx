@@ -14,13 +14,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { city } = await params;
   const location = getLocationBySlug(city);
-  // Use city-specific heroTagline/heroSubtext for unique titles and descriptions
   const title = location
-    ? `${location.heroTagline} | AIVized`
-    : `AI Chatbot ${city} | Managed AI Service`;
+    ? `Managed AI Chatbot Service in ${location.city}, UK | AIVized`
+    : `Managed AI Chatbot Service | AIVized`;
   const description = location
-    ? location.heroSubtext.slice(0, 160)
-    : `Get a fully managed AI chatbot for your ${city} business from £29/month. 24/7 lead generation and customer support.`;
+    ? `Get a fully managed AI chatbot service in ${location.city} for your business. Capture leads 24/7, reduce missed inquiries, and automate support from £29/month.`
+    : `Get a fully managed AI chatbot service for your UK business. Capture leads 24/7, reduce missed inquiries, and automate support from £29/month.`;
   return {
     title,
     description,

@@ -170,6 +170,24 @@ const LocationPage = () => {
         </div>
       </section>
 
+      {/* Strong Introduction Section */}
+      <section className="section-padding bg-background border-b border-border/50">
+        <div className="container-narrow max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
+              Empowering {location.city} Businesses with Advanced Customer Service Automation
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              AIVized provides a fully managed, custom-trained <strong>AI chatbot service in {location.city}</strong> tailored specifically for local businesses. Our mission is to bridge the gap between expensive, limited human staffing and technical, confusing DIY platforms. We handle the entire process from custom prompt engineering and training on your unique company data to one-line setup and proactive maintenance. With 24/7/365 active support and near-zero latency, AIVized ensures you never miss a client enquiry, capture booking details automatically, and scale your operations without increasing operational overhead. Discover how automation can elevate your business growth today.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Problems & Solutions Section */}
       <section id="problems" className="section-padding bg-muted/30">
         <div className="container-narrow">
@@ -307,6 +325,77 @@ const LocationPage = () => {
         </div>
       </section>
 
+      {/* Comparison Table Section */}
+      <section className="section-padding bg-background border-t border-border/50">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Value Comparison</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              Managed AI Chatbot vs. Traditional Solutions
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              Compare how our fully managed AI chatbot service stacks up against hiring full-time customer service staff or trying to build and maintain a DIY chatbot yourself.
+            </p>
+          </motion.div>
+
+          <div className="overflow-x-auto rounded-xl border border-border shadow-sm">
+            <table className="w-full text-left border-collapse min-w-[600px]">
+              <thead>
+                <tr className="bg-muted/40 border-b border-border">
+                  <th className="p-4 font-semibold text-sm">Feature</th>
+                  <th className="p-4 font-semibold text-sm text-primary">AIVized Managed AI</th>
+                  <th className="p-4 font-semibold text-sm">In-House Staff (UK)</th>
+                  <th className="p-4 font-semibold text-sm">DIY Chatbot Tools</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border/60">
+                <tr>
+                  <td className="p-4 font-medium text-sm">Monthly Cost</td>
+                  <td className="p-4 text-sm text-primary font-semibold">From £29 / month</td>
+                  <td className="p-4 text-sm">£2,500+ / month (plus taxes)</td>
+                  <td className="p-4 text-sm">£15 - £100 (plus hidden API fees)</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-medium text-sm">Availability</td>
+                  <td className="p-4 text-sm text-primary font-semibold">24/7/365 (0ms delay)</td>
+                  <td className="p-4 text-sm">40 hours / week (delayed response)</td>
+                  <td className="p-4 text-sm">24/7 (rigid, often breaks)</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-medium text-sm">Setup & Training</td>
+                  <td className="p-4 text-sm text-primary font-semibold">100% Done For You (24h)</td>
+                  <td className="p-4 text-sm">Weeks of onboarding & training</td>
+                  <td className="p-4 text-sm">Requires technical configuration</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-medium text-sm">Lead Qualification</td>
+                  <td className="p-4 text-sm text-primary font-semibold">Smart conversational logic</td>
+                  <td className="p-4 text-sm">Manual verification & input</td>
+                  <td className="p-4 text-sm">Basic button-clicking prompts</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-medium text-sm">Optimization & Edits</td>
+                  <td className="p-4 text-sm text-primary font-semibold">Fully Managed (free updates)</td>
+                  <td className="p-4 text-sm">Requires constant supervision</td>
+                  <td className="p-4 text-sm">You must debug & fix issues</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-8 text-center bg-secondary/10 p-6 rounded-xl border border-border/50 max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <strong>The Bottom Line:</strong> For small and medium businesses in <strong>{location.city}</strong>, hiring full-time receptionists creates massive overhead, while DIY chatbots often deliver frustrating, robotic customer experiences. AIVized bridges the gap by building and maintaining a custom, premium AI assistant that is trained specifically on your business information, ensuring professional 24/7 client interactions.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Service Coverage Section */}
       <section className="section-padding bg-muted/30">
         <div className="container-narrow">
@@ -361,6 +450,96 @@ const LocationPage = () => {
                   </div>
                 </div>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4-Step Process Section */}
+      <section className="section-padding bg-muted/30 border-t border-b border-border/50">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How It Works</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              Deploying Your AI Employee in 4 Steps
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              Getting started is quick and effortless. Our expert team handles all the technical aspects, from initial training to final website integration.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="card-premium p-6 relative flex flex-col h-full"
+            >
+              <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-primary/10">01</div>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold text-lg mb-3">Onboarding & Info</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                Choose a plan and share your business details, FAQs, and link. Our UK-based team reviews your operations and designs a targeted chatbot flow.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="card-premium p-6 relative flex flex-col h-full"
+            >
+              <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-primary/10">02</div>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Bot className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold text-lg mb-3">Custom AI Training</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                We configure the AI model using state-of-the-art prompt engineering. We feed it your business rules, pricing, and tone of voice to guarantee precise answers.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="card-premium p-6 relative flex flex-col h-full"
+            >
+              <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-primary/10">03</div>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Zap className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold text-lg mb-3">One-Line Install</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                We generate a lightweight, secure code snippet. You (or our developers, for free) paste it into your website's header. It immediately goes live.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="card-premium p-6 relative flex flex-col h-full"
+            >
+              <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-primary/10">04</div>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold text-lg mb-3">Monitor & Refine</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                Our active system monitors conversations, labels hot leads, and continuously retrains the AI on new questions. All edits and updates are 100% free.
+              </p>
             </motion.div>
           </div>
         </div>

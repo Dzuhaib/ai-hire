@@ -8,21 +8,26 @@ const SLUG = "website-chatbot-small-business";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "Managed Website Chatbot for UK Small Businesses | AIVized",
-  description: "Get a managed website chatbot for your UK small business. AIVized handles setup and maintenance. Enquiries answered 24/7. No technical skills needed. From £29/month.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Managed Website Chatbot for UK Small Businesses | AIVized",
-    description: "Get a managed website chatbot for your UK small business. AIVized handles setup and maintenance. Enquiries answered 24/7. No technical skills needed. From £29/month.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/website-chatbot-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/website-chatbot-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "Managed Website Chatbot for UK Small Businesses | AIVized";
+  const description = post?.metaDescription || "Get a managed website chatbot for your UK small business. AIVized handles setup and maintenance. Enquiries answered 24/7. No technical skills needed. From £29/month.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/website-chatbot-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/website-chatbot-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",

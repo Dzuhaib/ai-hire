@@ -5,11 +5,11 @@ import PricingPage from "@/views/PricingPage";
 export const metadata: Metadata = {
   title: "Pricing | AIVized - Managed AI Chatbot Plans from £29/mo",
   description:
-    "Compare AIVized managed AI chatbot plans from £29/month. Starter, Professional, and Business plans include full installation and support. 3-day free trial, no contracts.",
+    "Compare AIVized managed AI chatbot plans from £29/mo. Starter, Professional, and Business packages include 24/7 lead capture and full setup. No contracts.",
   alternates: { canonical: "https://www.aivized.com/pricing" },
   openGraph: {
     title: "AIVized Pricing: Managed AI Chatbot Plans from £29/month",
-    description: "Compare AIVized managed AI chatbot plans from £29/month. Starter, Professional, and Business plans include full installation and support. 3-day free trial, no contracts.",
+    description: "Compare AIVized managed AI chatbot plans from £29/mo. Starter, Professional, and Business packages include 24/7 lead capture and full setup. No contracts.",
     url: "https://www.aivized.com/pricing",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

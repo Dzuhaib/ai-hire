@@ -5,7 +5,7 @@ import IndexPage from "@/views/Index";
 export const metadata: Metadata = {
   title: "Managed AI Chatbot for UK Small Businesses | AIVized",
   description:
-    "AIVized provides a managed AI chatbot for UK small businesses from £29/month. No technical skills needed. UK-based support. 24-hour setup. 3-day free trial.",
+    "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation and customer support. We install everything. Start your free trial.",
   keywords:
     "managed AI chatbot service, AI chatbot for small business UK, lead generation chatbot UK, 24/7 customer support chatbot, affordable AI chatbot, fully managed chatbot, AIVized",
   alternates: { canonical: "https://www.aivized.com/" },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://www.aivized.com/",
     title: "Managed AI Chatbot for UK Small Businesses | AIVized",
     description:
-      "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
+      "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation and customer support. We install everything. Start your free trial.",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
   },

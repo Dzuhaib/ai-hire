@@ -14,14 +14,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { industry } = await params;
   const industryData = getIndustryBySlug(industry);
-  // Use industry-specific heroTitle and description for unique metadata
-  const industryLabel = industryData?.industry.split(" & ")[0].split(" & ")[0] ?? industry;
-  const title = industryData
-    ? `Managed ${industryLabel} AI Chatbot for UK Businesses | AIVized`
-    : `Managed AI Chatbot for ${industry} UK Businesses | AIVized`;
-  const description = industryData
-    ? `AIVized installs and manages a custom AI chatbot for ${industryData.industry.toLowerCase()} businesses across the UK. ${industryData.description.split(".")[0]}. No tech skills needed. From £29/month.`
-    : `AIVized installs and manages a custom AI chatbot for ${industry} businesses across the UK. Handles customer enquiries and lead capture 24/7. No tech skills needed. From £29/month.`;
+  const title = industryData?.metaTitle || `Managed AI Chatbot for ${industry} UK Businesses | AIVized`;
+  const description = industryData?.metaDescription || `Get a managed AI chatbot service for ${industry} UK businesses. Capture leads and automate support 24/7. Fully installed by AIVized from £29/month.`;
   return {
     title,
     description,

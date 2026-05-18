@@ -8,21 +8,26 @@ const SLUG = "reduce-missed-leads-website";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "How to Reduce Missed Leads from Your Website | AIVized",
-  description: "Learn how to reduce missed leads from your website using a managed AI chatbot. AIVized captures enquiries 24/7 so you never lose a potential customer.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "How to Reduce Missed Leads from Your Website | AIVized",
-    description: "Learn how to reduce missed leads from your website using a managed AI chatbot. AIVized captures enquiries 24/7 so you never lose a potential customer.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/reduce-missed-leads-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/reduce-missed-leads-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "How to Reduce Missed Leads from Your Website | AIVized";
+  const description = post?.metaDescription || "Learn how to reduce missed leads from your website using a managed AI chatbot. AIVized captures enquiries 24/7 so you never lose a potential customer.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/reduce-missed-leads-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/reduce-missed-leads-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",

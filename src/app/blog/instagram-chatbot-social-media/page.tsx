@@ -8,21 +8,26 @@ const SLUG = "instagram-chatbot-social-media";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "Managed Instagram Chatbot for UK Businesses | AIVized",
-  description: "AIVized manages a dedicated Instagram chatbot for your UK business, automating DM responses and enquiry handling 24/7. Full setup included. From £29/month.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Managed Instagram Chatbot for UK Businesses | AIVized",
-    description: "AIVized manages a dedicated Instagram chatbot for your UK business, automating DM responses and enquiry handling 24/7. Full setup included. From £29/month.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/instagram-chatbot-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/instagram-chatbot-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "Managed Instagram Chatbot for UK Businesses | AIVized";
+  const description = post?.metaDescription || "AIVized manages a dedicated Instagram chatbot for your UK business, automating DM responses and enquiry handling 24/7. Full setup included. From £29/month.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/instagram-chatbot-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/instagram-chatbot-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",

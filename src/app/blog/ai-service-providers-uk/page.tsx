@@ -8,21 +8,26 @@ const SLUG = "ai-service-providers-uk";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "How to Choose an AI Service Provider UK | AIVized Guide",
-  description: "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "How to Choose an AI Service Provider UK | AIVized Guide",
-    description: "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/ai-service-providers-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/ai-service-providers-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "How to Choose an AI Service Provider UK | AIVized Guide";
+  const description = post?.metaDescription || "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-service-providers-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-service-providers-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",

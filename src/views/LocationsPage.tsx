@@ -84,8 +84,7 @@ const LocationsPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              Managed AI Chatbot for{" "}
-              <span className="text-gradient">UK Small Businesses</span>
+              Managed AI Chatbot Services Across the United Kingdom
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">

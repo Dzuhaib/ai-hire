@@ -5,6 +5,8 @@ export interface IndustryData {
   heroTitle: string;
   heroSubtitle: string;
   description: string;
+  metaTitle: string;
+  metaDescription: string;
   problems: Array<{ title: string; description: string }>;
   solutions: Array<{ title: string; description: string }>;
   features: Array<{ title: string; description: string; icon: string }>;
@@ -22,6 +24,8 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Restaurant AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI hostess handles bookings, answers menu questions, and captures guest details 24/7 while your staff focus on delivering exceptional dining experiences.",
     description: "AI-powered reservation management and customer service for restaurants, cafés, and hospitality businesses across the UK.",
+    metaTitle: "Restaurant AI Chatbot for UK Businesses | AIVized",
+    metaDescription: "Get a managed restaurant AI chatbot from £29/mo. Automate reservations, menu enquiries, and guest table bookings 24/7. Fully installed by AIVized.",
     problems: [
       { title: "Missed Calls During Service", description: "When your restaurant is busy, phones go unanswered. Every missed call could be a lost booking worth £50-£500+." },
       { title: "Late-Night Booking Requests", description: "Customers want to book after 10pm when you're closed. Without 24/7 availability, they book with competitors instead." },
@@ -80,6 +84,8 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Real Estate AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI property assistant handles enquiries, schedules viewings, and qualifies buyers 24/7, so you can focus on closing sales instead of answering repetitive questions.",
     description: "AI-powered lead qualification and customer service for estate agents, letting agents, and property developers across the UK.",
+    metaTitle: "Real Estate AI Chatbot for UK Businesses | AIVized",
+    metaDescription: "Get a managed real estate AI chatbot from £29/mo. Capture qualified buyer leads, schedule property viewings, and answer FAQs 24/7. Fully installed.",
     problems: [
       { title: "Leads Go Cold Quickly", description: "Property buyers expect instant responses. A 30-minute delay can mean losing a hot lead to a faster competitor." },
       { title: "Weekend & Evening Enquiries", description: "Most property searches happen outside office hours, evenings and weekends when your office is closed." },
@@ -138,6 +144,8 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "E-Commerce AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI shopping assistant answers product questions, handles order enquiries, and recovers abandoned carts 24/7, boosting conversions while you sleep.",
     description: "AI-powered customer service and sales support for online retailers, DTC brands, and e-commerce businesses across the UK.",
+    metaTitle: "E-Commerce AI Chatbot for UK Businesses | AIVized",
+    metaDescription: "Get a managed e-commerce AI chatbot from £29/mo. Answer product questions, recover abandoned carts, and track customer shipments 24/7. Fully installed.",
     problems: [
       { title: "Cart Abandonment", description: "70% of online shopping carts are abandoned. Unanswered questions at checkout are a leading cause." },
       { title: "Limited Support Hours", description: "Customers shop at all hours but support is only available 9-5. No response means lost sales." },
@@ -196,6 +204,8 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Healthcare AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7 while your team focuses on delivering exceptional care.",
     description: "AI-powered appointment booking and patient communication for dental practices, GP surgeries, private clinics, and healthcare businesses across the UK.",
+    metaTitle: "Healthcare AI Chatbot for UK Businesses | AIVized",
+    metaDescription: "Get a managed healthcare AI chatbot from £29/mo. Handle patient registration, clinic booking requests, and treatment queries 24/7. Fully installed.",
     problems: [
       { title: "Missed Calls During Appointments", description: "When staff are busy with patients, phones go unanswered. Every missed call could be a new patient worth £500+ annually." },
       { title: "Out-of-Hours Enquiries", description: "Patients search for healthcare providers evenings and weekends. Without 24/7 availability, they register with competitors." },
@@ -251,9 +261,11 @@ export const industries: Record<string, IndustryData> = {
     slug: "legal",
     industry: "Legal & Law Firms",
     tagline: "AI for Law Firms",
-    heroTitle: "Law Firm AI Chatbot for UK Businesses",
+    heroTitle: "Legal AI Chatbot for UK Law Firms & Solicitors",
     heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7, so your solicitors can focus on billable work.",
     description: "AI-powered client intake and enquiry management for solicitors, law firms, and legal practices across the UK.",
+    metaTitle: "Legal AI Chatbot for UK Law Firms & Solicitors | AIVized",
+    metaDescription: "Get a managed legal AI chatbot for UK law firms from £29/mo. Capture case prospects, qualify enquiries, and schedule consultations 24/7. Installed.",
     problems: [
       { title: "Missed Client Calls", description: "When solicitors are in meetings or court, potential clients call competitors. First response wins in legal services." },
       { title: "Evening & Weekend Enquiries", description: "Legal emergencies don't wait for office hours. Domestic disputes, arrests, and accidents happen at all hours." },
@@ -309,9 +321,11 @@ export const industries: Record<string, IndustryData> = {
     slug: "fitness",
     industry: "Fitness & Gyms",
     tagline: "AI for Fitness",
-    heroTitle: "Fitness AI Chatbot for UK Businesses",
+    heroTitle: "Fitness AI Chatbot for UK Gyms & Studios",
     heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7, turning curious browsers into committed members.",
     description: "AI-powered membership sales and customer service for gyms, personal trainers, yoga studios, and fitness businesses across the UK.",
+    metaTitle: "Fitness AI Chatbot for UK Gyms & Studios | AIVized",
+    metaDescription: "Get a managed fitness AI chatbot from £29/mo. Handle gym membership enquiries, class bookings, and free pass sign-ups 24/7. Fully installed by AIVized.",
     problems: [
       { title: "Lost Membership Enquiries", description: "Potential members browse gym websites at 10pm but can't get answers. By morning, they've joined a competitor." },
       { title: "Peak Time Reception Overload", description: "Reception staff are overwhelmed during busy periods, signing in members while potential new ones walk away." },
@@ -367,9 +381,11 @@ export const industries: Record<string, IndustryData> = {
     slug: "travel",
     industry: "Travel & Tourism",
     tagline: "AI for Travel",
-    heroTitle: "Travel AI Chatbot for UK Businesses",
+    heroTitle: "Travel AI Chatbot for UK Holiday Agencies",
     heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7, turning dreamers into bookers while you sleep.",
     description: "AI-powered booking support and customer service for travel agents, tour operators, and tourism businesses across the UK.",
+    metaTitle: "Travel AI Chatbot for UK Holiday Agencies | AIVized",
+    metaDescription: "Get a managed travel AI chatbot from £29/mo. Qualify holiday bookings, answer package questions, and capture tourist leads 24/7. Fully installed.",
     problems: [
       { title: "Complex Enquiry Volume", description: "Travel enquiries are detailed and time-consuming. Each customer wants personalised recommendations, quotes, and itinerary help." },
       { title: "Seasonal Booking Surges", description: "January and summer bring massive enquiry spikes that overwhelm small travel teams." },

@@ -44,8 +44,8 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "restaurants",
     industryName: "Restaurants & Hospitality",
     h1Template: "AI Chatbot for Restaurants in {city}",
-    metaTitleTemplate: "AI Chatbot for Restaurants in {city} | AIVized",
-    metaDescTemplate: "Managed AI chatbot for restaurants in {city}. Handle reservations, menu enquiries, and booking confirmations 24/7. AIVized installs and manages everything. From £29/month.",
+    metaTitleTemplate: "AI Chatbot for Restaurants in {city}, UK | AIVized",
+    metaDescTemplate: "Get a managed AI chatbot for restaurants in {city}. Handle reservations, menu enquiries, and booking confirmations 24/7. Fully installed from £29/month.",
     heroSubtitleTemplate: "Your AI receptionist handles reservations, answers menu questions, and captures guest details for your {city} restaurant 24/7 while your staff focus on delivering great dining experiences.",
     keywordsBase: "restaurant AI chatbot {city}, restaurant chatbot UK, AI booking assistant {city}, managed chatbot restaurants",
     faqTemplates: [
@@ -59,8 +59,8 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "real-estate",
     industryName: "Real Estate & Property",
     h1Template: "AI Chatbot for Real Estate in {city}",
-    metaTitleTemplate: "AI Chatbot for Real Estate in {city} | AIVized",
-    metaDescTemplate: "Managed AI chatbot for estate agents in {city}. Qualify leads, schedule viewings, and answer property enquiries 24/7. AIVized installs and manages everything. From £29/month.",
+    metaTitleTemplate: "AI Chatbot for Real Estate in {city}, UK | AIVized",
+    metaDescTemplate: "Get a managed AI chatbot for real estate in {city}. Qualify leads, schedule viewings, and answer property enquiries 24/7. Fully installed from £29/month.",
     heroSubtitleTemplate: "Your AI property assistant qualifies buyers, schedules viewings, and answers property questions for your {city} estate agency 24/7, so you can focus on closing deals.",
     keywordsBase: "real estate AI chatbot {city}, estate agent chatbot UK, AI property assistant {city}, managed chatbot real estate",
     faqTemplates: [
@@ -74,8 +74,8 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "ecommerce",
     industryName: "E-Commerce & Retail",
     h1Template: "AI Chatbot for E-Commerce in {city}",
-    metaTitleTemplate: "AI Chatbot for E-Commerce in {city} | AIVized",
-    metaDescTemplate: "Managed AI chatbot for e-commerce businesses in {city}. Answer product questions, reduce cart abandonment, and support customers 24/7. AIVized handles setup. From £29/month.",
+    metaTitleTemplate: "AI Chatbot for E-Commerce in {city}, UK | AIVized",
+    metaDescTemplate: "Get a managed AI chatbot for e-commerce in {city}. Answer product questions, reduce cart abandonment, and support buyers 24/7. Installed from £29/month.",
     heroSubtitleTemplate: "Your AI shopping assistant answers product questions, handles order enquiries, and reduces cart abandonment for your {city} e-commerce business 24/7.",
     keywordsBase: "ecommerce AI chatbot {city}, online shop chatbot UK, AI customer service {city}, managed chatbot ecommerce",
     faqTemplates: [
@@ -89,8 +89,8 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "healthcare",
     industryName: "Healthcare & Clinics",
     h1Template: "AI Chatbot for Healthcare in {city}",
-    metaTitleTemplate: "AI Chatbot for Healthcare in {city} | AIVized",
-    metaDescTemplate: "Managed AI chatbot for clinics and dental practices in {city}. Handle patient enquiries, appointment requests, and registrations 24/7. AIVized handles setup. From £29/month.",
+    metaTitleTemplate: "AI Chatbot for Healthcare in {city}, UK | AIVized",
+    metaDescTemplate: "Get a managed AI chatbot for healthcare in {city}. Handle patient registrations, booking requests, and treatment FAQs 24/7. Installed from £29/month.",
     heroSubtitleTemplate: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details for your {city} clinic 24/7.",
     keywordsBase: "healthcare AI chatbot {city}, clinic chatbot UK, dental AI assistant {city}, managed chatbot healthcare",
     faqTemplates: [
@@ -103,9 +103,9 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "legal",
     industryName: "Legal & Law Firms",
-    h1Template: "AI Chatbot for Law Firms in {city}",
-    metaTitleTemplate: "AI Chatbot for Law Firms in {city} | AIVized",
-    metaDescTemplate: "Managed AI chatbot for solicitors in {city}. Capture client enquiries, qualify leads, and schedule consultations 24/7. AIVized installs and manages everything. From £29/month.",
+    h1Template: "AI Chatbot for Solicitors in {city}",
+    metaTitleTemplate: "AI Chatbot for Solicitors in {city}, UK | AIVized",
+    metaDescTemplate: "Get a managed AI chatbot for solicitors in {city}. Qualify case prospects, capture client enquiries, and schedule consultations 24/7. Installed from £29/mo.",
     heroSubtitleTemplate: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details for your {city} law firm 24/7.",
     keywordsBase: "law firm AI chatbot {city}, solicitor chatbot UK, legal AI assistant {city}, managed chatbot law firms",
     faqTemplates: [
@@ -118,9 +118,9 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "fitness",
     industryName: "Fitness & Gyms",
-    h1Template: "AI Chatbot for Gyms in {city}",
+    h1Template: "AI Chatbot for Gyms and Fitness in {city}",
     metaTitleTemplate: "AI Chatbot for Gyms and Fitness in {city} | AIVized",
-    metaDescTemplate: "Managed AI chatbot for gyms and fitness studios in {city}. Handle membership enquiries, class bookings, and trial requests 24/7. AIVized handles setup. From £29/month.",
+    metaDescTemplate: "Get a managed AI chatbot for gyms and fitness in {city}. Handle membership enquiries, class bookings, and free trials 24/7. Installed from £29/month.",
     heroSubtitleTemplate: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests for your {city} gym or studio 24/7, turning browsers into members.",
     keywordsBase: "gym AI chatbot {city}, fitness chatbot UK, AI membership assistant {city}, managed chatbot gyms",
     faqTemplates: [
@@ -134,8 +134,8 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "travel",
     industryName: "Travel & Tourism",
     h1Template: "AI Chatbot for Travel Agents in {city}",
-    metaTitleTemplate: "AI Chatbot for Travel Agents in {city} | AIVized",
-    metaDescTemplate: "Managed AI chatbot for travel agents in {city}. Capture holiday enquiries, answer destination questions, and qualify leads 24/7. AIVized handles setup. From £29/month.",
+    metaTitleTemplate: "AI Chatbot for Travel Agents in {city}, UK | AIVized",
+    metaDescTemplate: "Get a managed AI chatbot for travel agents in {city}. Qualify holiday enquiries, answer destination questions, and get leads 24/7. Installed from £29/mo.",
     heroSubtitleTemplate: "Your AI travel advisor handles destination enquiries, captures booking requests, and qualifies travellers for your {city} travel agency 24/7.",
     keywordsBase: "travel agent AI chatbot {city}, travel chatbot UK, AI booking assistant {city}, managed chatbot travel agents",
     faqTemplates: [

@@ -8,21 +8,26 @@ const SLUG = "automate-customer-enquiries-personal-touch";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "Automate Customer Enquiries with a Personal Touch | AIVized",
-  description: "Learn how to automate customer enquiries while keeping the personal touch. AIVized manages AI chatbots for UK small businesses with no technical setup needed.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Automate Customer Enquiries with a Personal Touch | AIVized",
-    description: "Learn how to automate customer enquiries while keeping the personal touch. AIVized manages AI chatbots for UK small businesses with no technical setup needed.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/automate-enquiries-personal-touch-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/automate-enquiries-personal-touch-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "Automate Customer Enquiries with a Personal Touch | AIVized";
+  const description = post?.metaDescription || "Learn how to automate customer enquiries while keeping the personal touch. AIVized manages AI chatbots for UK small businesses with no technical setup needed.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/automate-enquiries-personal-touch-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/automate-enquiries-personal-touch-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",

@@ -118,8 +118,7 @@ const BlogsPage = () => {
               Blog & Insights
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
-              AI Chatbot Insights for{" "}
-              <span className="text-gradient">UK Businesses</span>
+              AI Chatbot Blog & Insights for UK Businesses
             </h1>
             <p className="blog-description text-lg text-muted-foreground max-w-2xl mx-auto">
               Expert guides on implementing AI chatbots for WhatsApp, websites, and social media to transform your customer engagement.

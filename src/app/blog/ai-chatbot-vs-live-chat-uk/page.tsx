@@ -8,21 +8,26 @@ const SLUG = "ai-chatbot-vs-live-chat-uk";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
-export const metadata: Metadata = {
-  title: "AI Chatbot vs Live Chat for UK Businesses | AIVized",
-  description: "Compare AI chatbot vs live chat for UK businesses. Understand costs, performance, and which solution is best for your small business customer service.",
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "AI Chatbot vs Live Chat for UK Businesses | AIVized",
-    description: "Compare AI chatbot vs live chat for UK businesses. Understand costs, performance, and which solution is best for your small business customer service.",
-    url: URL,
-    type: "article",
-    publishedTime: post?.publishedDate,
-    modifiedTime: "2026-04-21",
-    images: [{ url: `${SITE_URL}/assets/blog/ai-chatbot-vs-live-chat-hero.png`, width: 1200, height: 630 }],
-  },
-  twitter: { card: "summary_large_image", images: [`${SITE_URL}/assets/blog/ai-chatbot-vs-live-chat-hero.png`] },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const post = getBlogBySlug(SLUG);
+  const title = post?.metaTitle || "AI Chatbot vs Live Chat for UK Businesses | AIVized";
+  const description = post?.metaDescription || "Compare AI chatbot vs live chat for UK businesses. Understand costs, performance, and which solution is best for your small business customer service.";
+  return {
+    title,
+    description,
+    alternates: { canonical: URL },
+    openGraph: {
+      title,
+      description,
+      url: URL,
+      type: "article",
+      publishedTime: post?.publishedDate,
+      modifiedTime: "2026-04-21",
+      images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-chatbot-vs-live-chat-hero.png"}`, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-chatbot-vs-live-chat-hero.png"}`] },
+  };
+}
 
 const schema = {
   "@context": "https://schema.org",
