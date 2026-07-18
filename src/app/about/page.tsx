@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import AboutPage from "@/views/AboutPage";
 
 export const metadata: Metadata = {
-  title: "Managed AI Chatbot Service for UK Businesses | AIVized",
+  title: "Managed AI Chatbot Service for UK Businesses",
   description: "Learn how AIVized provides a managed AI chatbot service to UK small businesses, automating customer service and capturing leads 24/7. Plans from £29/mo.",
   alternates: { canonical: "https://www.aivized.com/about" },
   openGraph: {

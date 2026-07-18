@@ -10,7 +10,7 @@ const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "Managed AI Personal Assistant for UK Businesses | AIVized";
+  const title = post?.metaTitle || "Managed AI Personal Assistant for UK Businesses ";
   const description = post?.metaDescription || "AIVized provides a fully managed AI personal assistant for your UK business. Handles enquiries, captures leads, and automates responses 24/7. From £29/month.";
   return {
     title,

@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import SocialMediaAutomationPage from "@/views/services/SocialMediaAutomationPage";
 
 export const metadata: Metadata = {
-  title: "Social Media Automation for UK Businesses | AIVized",
+  title: "Social Media Automation for UK Businesses",
   description: "AIVized offers social media automation for UK businesses, managing Instagram, Facebook, and LinkedIn DMs, content scheduling, and audience engagement 24/7.",
   alternates: { canonical: "https://www.aivized.com/services/social-media-automation" },
   openGraph: {
-    title: "Social Media Automation for UK Businesses | AIVized",
+    title: "Social Media Automation for UK Businesses",
     description: "AIVized offers social media automation for UK businesses, managing Instagram, Facebook, and LinkedIn DMs, content scheduling, and audience engagement 24/7.",
     url: "https://www.aivized.com/services/social-media-automation",
     type: "website",

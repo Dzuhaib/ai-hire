@@ -10,7 +10,7 @@ const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "AI Business Automation for UK Small Business | AIVized";
+  const title = post?.metaTitle || "AI Business Automation for UK Small Business ";
   const description = post?.metaDescription || "A practical guide to AI business automation for UK small businesses. AIVized manages setup and monitoring. Capture leads and automate enquiries from £29/month.";
   return {
     title,

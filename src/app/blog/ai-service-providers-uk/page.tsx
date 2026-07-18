@@ -10,7 +10,7 @@ const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "How to Choose an AI Service Provider UK | AIVized Guide";
+  const title = post?.metaTitle || "How to Choose an AI Service Provider UK  Guide";
   const description = post?.metaDescription || "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.";
   return {
     title,

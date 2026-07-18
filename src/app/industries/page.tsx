@@ -4,12 +4,12 @@ import IndustriesPage from "@/views/IndustriesPage";
 import { allIndustries } from "@/data/industryData";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot Solutions for Every UK Industry | AIVized",
+  title: "AI Chatbot Solutions for Every UK Industry",
   description:
     "AIVized provides managed AI chatbot solutions for every UK industry: restaurants, real estate, healthcare, legal, fitness, and more. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/industries" },
   openGraph: {
-    title: "AI Chatbot by Industry: Managed Solutions for UK Businesses | AIVized",
+    title: "AI Chatbot by Industry: Managed Solutions for UK Businesses",
     description: "AIVized provides managed AI chatbot solutions for every UK industry: restaurants, real estate, healthcare, legal, fitness, and more. From £29/month.",
     url: "https://www.aivized.com/industries",
     type: "website",

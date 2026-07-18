@@ -3,20 +3,23 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote: "Our AIVized handles 80% of customer enquiries now. We've saved countless hours and our customers love the instant responses.",
-    name: "James R.",
-    industry: "Restaurant",
+    name: "James Richardson",
+    role: "Owner",
+    industry: "The Northern Grill",
     location: "Manchester",
   },
   {
     quote: "Setup was incredibly simple. Within 24 hours we had AIVized handling property viewings and capturing leads around the clock.",
-    name: "Sarah T.",
-    industry: "Real Estate",
+    name: "Sarah Thompson",
+    role: "Managing Director",
+    industry: "Thompson & Co. Estate Agents",
     location: "London",
   },
   {
     quote: "Best investment we've made this year. Our conversion rate increased by 35% since adding AIVized to our online store.",
-    name: "Daniel M.",
-    industry: "E-commerce",
+    name: "Daniel Morley",
+    role: "Founder",
+    industry: "Urban Threads UK",
     location: "Bristol",
   },
 ];
@@ -74,7 +77,8 @@ export const TestimonialsSection = () => {
               {/* Name, Industry & Location */}
               <div className="pt-5 border-t border-border/60">
                 <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm font-medium text-primary mt-0.5">
+                <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                <p className="text-sm font-medium text-primary mt-1">
                   {testimonial.industry}
                 </p>
                 <p className="text-xs text-muted-foreground mt-0.5">{testimonial.location}</p>

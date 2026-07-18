@@ -14,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { industry } = await params;
   const industryData = getIndustryBySlug(industry);
-  const title = industryData?.metaTitle || `Managed AI Chatbot for ${industry} UK Businesses | AIVized`;
+  const title = industryData?.metaTitle || `Managed AI Chatbot for ${industry} UK Businesses`;
   const description = industryData?.metaDescription || `Get a managed AI chatbot service for ${industry} UK businesses. Capture leads and automate support 24/7. Fully installed by AIVized from £29/month.`;
   return {
     title,

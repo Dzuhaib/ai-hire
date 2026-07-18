@@ -186,6 +186,196 @@ export const cityBlogPosts: CityBlogData[] = [
     ]
   },
   {
+    slug: "nottingham",
+    city: "Nottingham",
+    region: "East Midlands",
+    heroDescription: "Around-the-clock website chatbot for Nottingham businesses capturing leads from the student and professional community",
+    intro: "Nottingham is one of the East Midlands' most vibrant cities, home to two major universities and a thriving creative quarter. A website chatbot that runs 24/7 in Nottingham ensures your business captures every opportunity, from late-night student enquiries to busy professionals browsing during their commute. With 830,000 residents across the greater city area, Nottingham businesses need to be available whenever their customers are online.",
+    whyNeed: "With two universities bringing over 60,000 students to the city, Nottingham has a young, digitally-native customer base that expects instant online responses. Research shows that 78% of students will choose a business that responds first. A 24/7 website chatbot ensures your Nottingham business captures those first-contact moments, from a Lace Market restaurant booking to a property viewing enquiry.",
+    howItWorks: "Our team installs a custom AI chatbot on your Nottingham business website within 24 hours. The AI learns your products, services, and common questions, then handles conversations automatically. It qualifies leads, answers FAQs, and books appointments while maintaining your brand voice.",
+    benefits: ["Capture leads from Nottingham's 830,000 residents and student population 24/7", "Handle term-time surges and holiday lulls without changing staffing levels", "Compete with larger businesses through instant, professional responses", "Serve the thriving Lace Market and Creative Quarter evening economy", "Scale customer service without increasing your Nottingham overheads"],
+    industries: "Nottingham's economy spans creative industries, hospitality, retail, and professional services.",
+    industryExamples: ["Lace Market restaurants handling late-night booking requests", "Creative Quarter businesses capturing project leads 24/7", "City centre retailers answering product enquiries after hours", "Nottingham property agents qualifying tenant and buyer leads", "Student-focused services managing high enquiry volumes during term time"],
+    localContext: "Nottingham has always been a city of enterprise, from its lace-making heritage to today's thriving digital and creative scene. A 24/7 website chatbot is the modern Nottingham business's smartest tool: always working, always professional, and always ready to capture the next opportunity, whether it comes at noon or midnight.",
+    faqs: [
+      { question: "Can a website chatbot handle Nottingham's student population?", answer: "Absolutely. Our 24/7 website chatbot handles high volumes of enquiries simultaneously, making it perfect for Nottingham businesses serving the city's 60,000+ students during term time peaks." },
+      { question: "Is a 24/7 chatbot affordable for Nottingham SMEs?", answer: "Starting from just £29/month with full installation and management included, our chatbot is designed for Nottingham small and medium businesses. No setup fees, no long-term contracts." },
+      { question: "How does the chatbot understand my Nottingham business?", answer: "We train the AI on your specific products, services, and FAQs. It learns your brand voice and responds in a way that feels natural to your Nottingham customers." },
+      { question: "What happens when the chatbot can't answer a question?", answer: "It captures the customer's details and question, then alerts your team via email. You never lose a lead, and every enquiry is followed up promptly." }
+    ]
+  },
+  {
+    slug: "cardiff",
+    city: "Cardiff",
+    region: "Wales",
+    heroDescription: "24/7 website chatbot for Cardiff businesses capturing visitors from the Welsh capital",
+    intro: "Cardiff, the thriving capital of Wales, blends rich heritage with modern innovation. From the Principality Stadium to Cardiff Bay, the city buzz with activity year-round. A website chatbot that runs 24/7 in Cardiff ensures your business never misses an enquiry, whether it comes during a Six Nations matchday weekend or from an international visitor exploring your services late at night.",
+    whyNeed: "Cardiff welcomes millions of visitors annually for rugby internationals, concerts, and events at the Principality Stadium and Motorpoint Arena. Local businesses face massive enquiry surges during these events that overwhelm small teams. A 24/7 website chatbot captures every lead during these peaks and maintains service during quieter periods, ensuring consistent customer engagement across the Welsh capital.",
+    howItWorks: "We install a smart AI chatbot on your Cardiff business website within 24 hours. It's trained on your specific products, services, and FAQs, handling conversations naturally in English with basic Welsh language support available. The chatbot qualifies leads, answers common questions, and books appointments automatically.",
+    benefits: ["Handle matchday and event surges without additional staffing costs", "Serve Cardiff's diverse community with 24/7 professional responses", "Capture international visitor enquiries from tourists planning their trip", "Maintain service levels during both peak events and quiet periods", "Support the Welsh capital's growing business community around the clock"],
+    industries: "Cardiff thrives in media, hospitality, professional services, and tourism.",
+    industryExamples: ["Cardiff Bay restaurants handling event-night booking requests", "City centre hotels managing room enquiries 24/7", "Professional services firms qualifying client leads after hours", "Retail businesses answering product questions during matchday peaks", "Tourism operators capturing visitor enquiries from around the world"],
+    localContext: "The Welsh capital is known for its warmth and welcome. A 24/7 website chatbot brings that same friendly, professional service to your online presence, ensuring every website visitor feels valued and gets the answers they need, whenever they visit.",
+    faqs: [
+      { question: "Can a website chatbot help my Cardiff business during rugby matchdays?", answer: "Yes. Our 24/7 chatbot handles unlimited conversations simultaneously, so Principality Stadium event days won't overwhelm your customer service. Every enquiry gets an instant response." },
+      { question: "Can the chatbot handle Welsh language enquiries?", answer: "Our chatbot primarily operates in English but can be configured to handle basic Welsh language enquiries, helping you serve Cardiff's bilingual community." },
+      { question: "How affordable is a 24/7 chatbot for Cardiff SMEs?", answer: "Plans start from just £29/month with full installation, training, and management included. No setup fees, no contracts." },
+      { question: "How quickly can my Cardiff business go live?", answer: "Most Cardiff businesses are live within 24 hours. Subscribe, share your website details, and our team handles the rest." }
+    ]
+  },
+  {
+    slug: "leicester",
+    city: "Leicester",
+    region: "East Midlands",
+    heroDescription: "24/7 website chatbot for Leicester businesses engaging the city's diverse community",
+    intro: "Leicester is one of the UK's most multicultural cities, renowned for its diverse communities, award-winning food scene, and strong sense of local pride. A website chatbot that runs 24/7 in Leicester ensures your business connects with customers from all backgrounds, capturing leads and answering questions at any hour, from the Golden Mile to the Cultural Quarter.",
+    whyNeed: "Leicester's diverse population means businesses need to communicate effectively with customers from many cultural backgrounds, each with different expectations and enquiry patterns. Evening and weekend enquiries are common, particularly around Leicester's thriving food scene and retail district. A 24/7 website chatbot ensures no customer is left waiting for a response.",
+    howItWorks: "We deploy a fully managed AI chatbot on your Leicester business website within 24 hours. The AI is trained on your specific products, services, and customer FAQs. It handles conversations in clear English, captures lead information, answers common questions, and escalates complex issues to your team automatically.",
+    benefits: ["Serve Leicester's diverse communities with consistent 24/7 responses", "Capture leads from the Golden Mile and city centre evening economy", "Handle enquiries during major events like the Leicester Caribbean Carnival", "Compete with national retailers through instant, personal responses", "Scale customer service without increasing overheads"],
+    industries: "Leicester excels in food manufacturing, retail, hospitality, and professional services.",
+    industryExamples: ["Golden Mile restaurants managing dinner reservations 24/7", "City centre retailers answering product questions after hours", "Cultural Quarter businesses capturing event enquiries", "Leicester property agents qualifying tenant and buyer leads", "Professional services firms scheduling client consultations"],
+    localContext: "Leicester is a city that takes pride in its community spirit and diverse business landscape. A 24/7 website chatbot ensures your business reflects that inclusive, responsive character, serving customers from every community at any time of day or night.",
+    faqs: [
+      { question: "How does a 24/7 chatbot help Leicester's diverse business community?", answer: "Our chatbot provides consistent, professional responses 24/7 in clear English, helping your Leicester business serve customers from all communities and backgrounds without missing a single enquiry." },
+      { question: "Can the chatbot handle Leicester's food and restaurant sector?", answer: "Absolutely. Our chatbot handles table reservations, menu enquiries, dietary requirements, and event bookings, perfect for Leicester's celebrated dining scene." },
+      { question: "Is this affordable for Leicester's independent businesses?", answer: "Yes. Plans start from just £29/month with no setup fees or contracts. Our managed service is designed for Leicester SMEs." },
+      { question: "What happens if the chatbot needs updates?", answer: "Simply let us know when your business changes, and we update the training at no extra cost. Your chatbot stays current as your Leicester business evolves." }
+    ]
+  },
+  {
+    slug: "brighton",
+    city: "Brighton",
+    region: "South East England",
+    heroDescription: "24/7 website chatbot for Brighton businesses capturing leads from the seaside city's creative economy",
+    intro: "Brighton is the UK's most vibrant seaside city, famous for its creative energy, independent spirit, and thriving digital scene. From the iconic pier to the bustling North Laine, Brighton attracts visitors and entrepreneurs from across the globe. A website chatbot that runs 24/7 in Brighton ensures your independent business never misses an opportunity, capturing enquiries during summer peaks and winter trade alike.",
+    whyNeed: "Brighton's economy is shaped by seasonal tourism, with summer bringing massive visitor numbers that create enquiry surges small teams can't handle. The city's tech-savvy, independent-minded population expects instant digital responses from local businesses. A 24/7 website chatbot captures those summer booking rushes and maintains year-round service, ensuring Brighton's independent businesses stay competitive.",
+    howItWorks: "We install a custom AI chatbot on your Brighton business website within 24 hours. It's trained on your specific products, services, and brand voice, ensuring it reflects Brighton's unique character. The chatbot handles conversations automatically, answering questions, capturing leads, and booking appointments around the clock.",
+    benefits: ["Handle Brighton's summer tourism surge without seasonal hiring headaches", "Capture late-night weekend enquiries from Brighton's famous nightlife economy", "Maintain Brighton's independent character with AI trained on your brand voice", "Serve visitors planning trips from the Lanes to the Sea Life Centre 24/7", "Reduce customer service costs while maintaining exceptional quality"],
+    industries: "Brighton thrives in creative industries, hospitality, tech, and tourism.",
+    industryExamples: ["Seafront restaurants handling summer reservation rushes", "North Laine independent retailers answering product questions 24/7", "Brighton tech companies capturing demo requests after hours", "Hotels and B&Bs managing booking enquiries from international visitors", "Creative agencies qualifying new project leads around the clock"],
+    localContext: "Brighton's independent spirit sets it apart. Our 24/7 website chatbot helps you maintain that unique Brighton character while delivering the instant, professional service today's customers expect. It's tech with personality, just like the city itself.",
+    faqs: [
+      { question: "Can a chatbot handle Brighton's summer tourism peaks?", answer: "Absolutely. Our 24/7 chatbot handles unlimited conversations simultaneously, making it perfect for Brighton's seasonal business cycle. Summer surges are handled without breaking a sweat." },
+      { question: "Is a 24/7 chatbot suitable for Brighton's independent shops?", answer: "Yes. Starting from £29/month, our chatbot gives independent Brighton businesses the same 24/7 customer engagement as larger competitors, without the enterprise price tag." },
+      { question: "Can the chatbot capture event enquiries for Brighton festivals?", answer: "Yes. Brighton Festival, Pride, and Great Escape all generate enquiry surges. Your chatbot captures every lead while your team focuses on delivering exceptional experiences." },
+      { question: "How quickly can my Brighton business get started?", answer: "Within 24 hours of subscribing, your chatbot will be live on your website and capturing leads for your Brighton business." }
+    ]
+  },
+  {
+    slug: "southampton",
+    city: "Southampton",
+    region: "Hampshire",
+    heroDescription: "24/7 website chatbot for Southampton businesses handling cruise and university demands",
+    intro: "Southampton is a major South Coast city with a unique blend of maritime heritage, two thriving universities, and a growing digital economy. A website chatbot that runs 24/7 in Southampton ensures your business captures every opportunity, from cruise ship passengers arriving at the port to students searching for services at midnight.",
+    whyNeed: "Southampton's economy is shaped by unpredictable cruise ship arrivals that create sudden enquiry spikes, alongside the seasonal rhythms of two major universities. Traditional staffing can't flex to meet these patterns cost-effectively. A 24/7 website chatbot handles any volume instantly, capturing leads when cruise ships dock and during Freshers' Week surges, without requiring overtime or temporary staff.",
+    howItWorks: "Our team deploys a fully managed AI chatbot on your Southampton business website within 24 hours. The AI learns your products, services, and FAQs, then handles conversations automatically. It captures leads, answers questions, and books appointments while maintaining professional, consistent service.",
+    benefits: ["Handle cruise ship arrival surges without temporary staffing costs", "Capture student enquiries during Freshers' Week and term-time peaks", "Serve Southampton's growing digital and creative community 24/7", "Provide consistent service across term-time and holiday periods", "Reduce customer service costs while capturing more leads"],
+    industries: "Southampton excels in maritime, education, hospitality, and digital industries.",
+    industryExamples: ["Ocean Village restaurants handling cruise passenger enquiries", "City centre retailers answering product questions during ship arrivals", "University-adjacent services capturing student bookings 24/7", "Southampton property agents qualifying tenant and buyer leads", "Hospitality venues managing event and booking enquiries"],
+    localContext: "Southampton has always been a city of arrivals and departures, from the Titanic to today's cruise liners. A 24/7 website chatbot ensures your business is always ready to welcome new customers, whether they've just docked at the port or discovered your website at 2am.",
+    faqs: [
+      { question: "How does a chatbot help during cruise ship arrivals?", answer: "When a cruise ship docks, thousands of potential customers arrive simultaneously. Our chatbot handles the flood of enquiries without additional staff, capturing every lead instantly." },
+      { question: "Can the chatbot support Southampton's student population?", answer: "Yes. With two major universities, Southampton has a large student population that expects instant online responses. Our chatbot delivers exactly that, 24 hours a day." },
+      { question: "Is a 24/7 chatbot affordable for Southampton SMEs?", answer: "Starting from just £29/month with full installation and management. No setup fees, no contracts, designed for Southampton small businesses." },
+      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your chatbot will be live on your Southampton business website." }
+    ]
+  },
+  {
+    slug: "oxford",
+    city: "Oxford",
+    region: "Oxfordshire",
+    heroDescription: "24/7 website chatbot for Oxford businesses matching the city's premium standards",
+    intro: "Oxford is one of the world's most prestigious cities, blending centuries of academic excellence with a thriving modern economy spanning technology, tourism, and professional services. A website chatbot that runs 24/7 in Oxford ensures your business delivers the polished, knowledgeable service the city's discerning clientele expects, whether they're college fellows booking a lunch or tourists planning their visit to the dreaming spires.",
+    whyNeed: "Oxford's customers have premium expectations. Tourism brings millions of visitors annually, while the university and conference trade generate year-round professional demand. In a city where first impressions matter enormously, delayed responses damage reputations. A 24/7 website chatbot ensures every enquiry receives an immediate, articulate response that reflects Oxford's standards of excellence.",
+    howItWorks: "We install a sophisticated AI chatbot on your Oxford business website within 24 hours. It's trained on your specific services, pricing, and communication style, ensuring every response reflects your brand's quality. The chatbot handles reservations, answers detailed questions, and captures lead information with professional polish.",
+    benefits: ["Meet Oxford's premium service expectations with polished AI responses", "Capture tourist enquiries from millions of annual visitors 24/7", "Handle conference season enquiry surges without additional staff", "Serve the Oxford tech community with instant, intelligent responses", "Maintain professional standards around the clock in one of the UK's most prestigious cities"],
+    industries: "Oxford excels in tourism, technology, hospitality, and professional services.",
+    industryExamples: ["City centre restaurants managing academic and tourist bookings", "Oxford colleges and conference venues handling event enquiries", "Science and tech businesses capturing demo and partnership leads", "Hotels managing room enquiries from international visitors", "Professional services firms qualifying client consultations"],
+    localContext: "Oxford is a city where excellence is the baseline expectation. A 24/7 website chatbot helps your business meet those exacting standards around the clock, ensuring every customer interaction reflects the quality and professionalism that Oxford is famous for.",
+    faqs: [
+      { question: "Can a chatbot match Oxford's premium service standards?", answer: "Yes. We train your chatbot on your specific business and brand voice, ensuring every response is articulate, knowledgeable, and professional. It meets the high standards Oxford customers expect." },
+      { question: "How does a chatbot help Oxford's tourism businesses?", answer: "During peak tourist season and year-round, your chatbot handles visitor enquiries 24/7, answering questions about opening times, bookings, and local information, ensuring no visitor enquiry goes unanswered." },
+      { question: "Is this suitable for Oxford's tech and science sector?", answer: "Absolutely. Our chatbot handles technical enquiries, demo requests, and partnership questions with the professionalism Oxford's innovation community expects." },
+      { question: "How quickly can my Oxford business go live?", answer: "Within 24 hours of subscribing, your chatbot will be live on your Oxford business website and serving customers around the clock." }
+    ]
+  },
+  {
+    slug: "cambridge",
+    city: "Cambridge",
+    region: "Cambridgeshire",
+    heroDescription: "24/7 website chatbot for Cambridge businesses at the heart of Silicon Fen",
+    intro: "Cambridge is globally renowned for its university and as the centre of Silicon Fen, Europe's largest technology cluster. From the historic colleges to the Cambridge Science Park, businesses here operate at the intersection of tradition and innovation. A website chatbot that runs 24/7 in Cambridge ensures your business matches the cutting-edge expectations of the city's tech-savvy, international clientele.",
+    whyNeed: "Cambridge attracts the world's brightest minds as students, researchers, and entrepreneurs. These digitally-native customers expect instant, intelligent responses from every business they engage with. The city's international visitor population also creates demand for around-the-clock availability. A 24/7 website chatbot meets these expectations effortlessly, capturing leads and enquiries at any hour.",
+    howItWorks: "We deploy a custom AI chatbot on your Cambridge business website within 24 hours. It's trained on your specific products, services, and FAQs, and configured to reflect the innovative character of Cambridge businesses. The chatbot handles conversations automatically, qualifying leads and answering questions with precision.",
+    benefits: ["Match Cambridge's tech-savvy customer expectations with instant AI responses", "Capture leads from Silicon Fen's growing business community 24/7", "Serve international students and visitors with round-the-clock availability", "Handle conference and graduation season enquiry peaks effortlessly", "Support Cambridge's innovation economy with smart, scalable customer engagement"],
+    industries: "Cambridge thrives in technology, biotech, education, and tourism.",
+    industryExamples: ["Science Park businesses capturing demo requests out of hours", "City centre restaurants handling conference and graduation bookings", "Cambridge colleges managing event and visitor enquiries", "Tech startups qualifying investor and customer leads 24/7", "Tourism operators serving international visitor enquiries around the clock"],
+    localContext: "Cambridge is a city where innovation meets tradition. A 24/7 website chatbot reflects that character perfectly — it's a smart, modern tool that delivers the sophisticated service Cambridge's international clientele expects, without losing the human touch that makes the city special.",
+    faqs: [
+      { question: "How does a chatbot help Cambridge tech businesses?", answer: "Our chatbot handles product enquiries, captures demo requests, qualifies leads, and provides instant technical information, perfect for Cambridge's fast-moving tech and biotech sectors." },
+      { question: "Can the chatbot support Cambridge's international community?", answer: "Yes. Our chatbot handles enquiries from international students, researchers, and visitors with clear, professional English responses, available 24/7." },
+      { question: "Is a 24/7 chatbot affordable for Cambridge startups?", answer: "Starting from just £29/month, our chatbot is designed for Cambridge's startup community. No setup fees, no contracts, and full management included." },
+      { question: "How quickly can my Cambridge business get started?", answer: "Within 24 hours of subscribing, your chatbot will be live on your Cambridge business website and ready to engage customers." }
+    ]
+  },
+  {
+    slug: "coventry",
+    city: "Coventry",
+    region: "West Midlands",
+    heroDescription: "24/7 website chatbot for Coventry businesses supporting the city's cultural revival",
+    intro: "Coventry has undergone a remarkable transformation, building on its UK City of Culture legacy to emerge as one of the Midlands' most exciting cities for business. With two major universities, a growing tech sector, and renewed cultural confidence, Coventry businesses are thriving. A website chatbot that runs 24/7 in Coventry ensures your business captures every opportunity as the city continues its renaissance.",
+    whyNeed: "Coventry's post-City of Culture momentum means more visitors, more students, and more business enquiries than ever before. The city's two universities bring 50,000+ students with digitally-native expectations. A 24/7 website chatbot captures those term-time surges and handles the growing volume of enquiries from Coventry's expanding tourism and business community.",
+    howItWorks: "Our team installs a fully managed AI chatbot on your Coventry business website within 24 hours. It's trained on your specific products, services, and FAQs, and configured to match your brand voice. The chatbot handles conversations automatically, capturing leads and answering questions around the clock.",
+    benefits: ["Support your growth with 24/7 enquiry capture during Coventry's revival", "Serve 50,000+ university students with instant, responsive service", "Handle event enquiries from the Coventry Building Society Arena and culture venues", "Capture tourist enquiries as Coventry's visitor economy grows", "Reduce customer service costs while expanding your reach"],
+    industries: "Coventry excels in automotive, education, culture, and professional services.",
+    industryExamples: ["City centre restaurants handling event and student bookings", "Coventry tech businesses capturing project and partnership leads", "Cultural venues managing visitor and event enquiries 24/7", "University-adjacent services managing term-time enquiry peaks", "Professional services firms qualifying new client consultations"],
+    localContext: "Coventry's story is one of reinvention, from medieval trading centre to automotive powerhouse to UK City of Culture. A 24/7 website chatbot helps your business be part of that story, capturing the opportunities created by the city's ongoing revival.",
+    faqs: [
+      { question: "Can a chatbot help my Coventry business during the city's growth?", answer: "Absolutely. Our chatbot scales automatically with your enquiry volume, ensuring your Coventry business is always responsive as the city's economy continues to expand." },
+      { question: "How does a chatbot help with Coventry's student market?", answer: "With two major universities, Coventry has a large student population that researches and books services online at all hours. Our chatbot captures those enquiries instantly." },
+      { question: "Is a 24/7 chatbot affordable for Coventry SMEs?", answer: "Starting from just £29/month with full installation and management. Designed for Coventry's small and medium businesses." },
+      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your chatbot will be live on your Coventry business website." }
+    ]
+  },
+  {
+    slug: "belfast",
+    city: "Belfast",
+    region: "Northern Ireland",
+    heroDescription: "24/7 website chatbot for Belfast businesses serving the growing Northern Irish economy",
+    intro: "Belfast has emerged as one of the UK's most dynamic cities, driven by a thriving tech sector, booming tourism industry including Titanic Quarter and Game of Thrones locations, and a world-class hospitality scene. A website chatbot that runs 24/7 in Belfast ensures your business captures every opportunity, from Cathedral Quarter revellers booking tables to international tourists planning their visit to Northern Ireland's capital.",
+    whyNeed: "Belfast's tourism boom, growing tech sector, and vibrant nightlife economy create customer enquiries at all hours. Businesses serving both Northern Ireland and cross-border customers from the Republic need flexible communication that works around the clock. A 24/7 website chatbot provides that flexibility, capturing leads and answering questions without requiring night shifts or weekend overtime.",
+    howItWorks: "We deploy a custom AI chatbot on your Belfast business website within 24 hours. The chatbot is trained on your specific products, services, and FAQs, and configured to understand both Northern Irish and cross-border customer needs. It handles conversations automatically, qualifying leads and providing instant responses.",
+    benefits: ["Capture tourism enquiries from Titanic Quarter and Game of Thrones visitors 24/7", "Serve cross-border customers from Northern Ireland and the Republic", "Handle Belfast's vibrant evening and weekend nightlife economy", "Support the growing tech sector with instant, professional AI responses", "Reduce customer service costs while covering more hours"],
+    industries: "Belfast excels in tourism, tech, hospitality, and creative industries.",
+    industryExamples: ["Cathedral Quarter restaurants managing late-night booking requests", "Titanic Quarter tourism operators handling international visitor enquiries", "Belfast tech companies capturing demo and recruitment leads", "Hotels and accommodation managing room bookings from global travellers", "Creative agencies qualifying new project leads around the clock"],
+    localContext: "Belfast has made an incredible journey to become one of Europe's most dynamic small cities. A 24/7 website chatbot helps your business match that energy, delivering the warm, professional service Belfast is known for, whenever your customers need it.",
+    faqs: [
+      { question: "How does a chatbot help Belfast's tourism businesses?", answer: "Our 24/7 chatbot handles visitor enquiries from around the world, answering questions about attractions, opening times, and bookings. Perfect for Belfast's growing tourism sector." },
+      { question: "Can the chatbot serve cross-border customers?", answer: "Yes. Our chatbot provides consistent professional responses to customers from both Northern Ireland and the Republic of Ireland, 24 hours a day." },
+      { question: "Is this suitable for Belfast's tech sector?", answer: "Absolutely. Our chatbot handles product enquiries, captures demo requests, and qualifies leads with the professionalism Belfast's growing tech community expects." },
+      { question: "How quickly can my Belfast business get started?", answer: "Within 24 hours of subscribing, your chatbot will be live on your Belfast business website and engaging customers." }
+    ]
+  },
+  {
+    slug: "aberdeen",
+    city: "Aberdeen",
+    region: "Scotland",
+    heroDescription: "24/7 website chatbot for Aberdeen businesses supporting the Granite City's transition",
+    intro: "Aberdeen, the Granite City, is Scotland's energy capital and a city in transition from oil and gas to renewable energy leadership. Beyond energy, Aberdeen has a thriving professional services sector, growing tourism industry, and resilient business community. A website chatbot that runs 24/7 in Aberdeen ensures your business captures every opportunity as the city diversifies and grows.",
+    whyNeed: "Aberdeen businesses serve customers on varied offshore schedules, professional services clients with demanding hours, and a growing number of tourists discovering the north east of Scotland. Traditional 9-5 customer service doesn't fit this diverse landscape. A 24/7 website chatbot provides the flexibility to serve customers whenever they need you, from offshore workers on night shifts to tourists planning their Highland adventure.",
+    howItWorks: "We install a custom AI chatbot on your Aberdeen business website within 24 hours. It's trained on your specific products, services, and FAQs, and configured to handle the unique communication needs of Aberdeen's diverse business landscape. The chatbot handles conversations automatically, qualifying leads and providing instant responses around the clock.",
+    benefits: ["Serve offshore workers and shift workers with 24/7 availability", "Capture tourism enquiries as Aberdeen's visitor economy grows", "Support professional services firms with round-the-clock lead capture", "Handle the city's evolving energy sector communication needs", "Reduce customer service costs while expanding coverage hours"],
+    industries: "Aberdeen excels in energy, professional services, tourism, and hospitality.",
+    industryExamples: ["Energy sector businesses handling technical enquiries around the clock", "City centre restaurants and hotels managing tourist and business bookings", "Professional services firms qualifying new client consultations 24/7", "Tourism operators capturing visitor enquiries from the north east's growing market", "Property agents serving the transitioning Aberdeen housing market"],
+    localContext: "Aberdeen has always been a city that adapts and thrives, from granite trading to oil and gas to renewable energy. A 24/7 website chatbot helps your business show that same adaptability, providing modern, responsive customer service that matches the Granite City's resilient, forward-looking character.",
+    faqs: [
+      { question: "How does a chatbot help Aberdeen's energy sector businesses?", answer: "Our chatbot handles technical enquiries, quote requests, and client communication 24/7, perfect for Aberdeen's energy sector where customers work on varied offshore and shift schedules." },
+      { question: "Can a chatbot help with Aberdeen's growing tourism market?", answer: "Yes. Our chatbot captures tourist enquiries for accommodation, dining, and activities, helping your business benefit from Aberdeen's growing visitor economy." },
+      { question: "Is a 24/7 chatbot affordable for Aberdeen SMEs?", answer: "Starting from just £29/month with full installation and management. Designed for Aberdeen's small and medium businesses navigating the city's economic transition." },
+      { question: "How quickly can my Aberdeen business get started?", answer: "Within 24 hours of subscribing, your chatbot will be live on your Aberdeen business website and capturing leads." }
+    ]
+  },
+  {
     slug: "newcastle",
     city: "Newcastle",
     region: "North East England",

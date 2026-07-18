@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import PrivacyPolicy from "@/views/PrivacyPolicy";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AIVized",
+  title: "Privacy Policy",
   description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UK GDPR.",
   alternates: { canonical: "https://www.aivized.com/privacy-policy" },
   openGraph: {
-    title: "Privacy Policy | AIVized",
+    title: "Privacy Policy",
     description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UK GDPR.",
     url: "https://www.aivized.com/privacy-policy",
     type: "website",
@@ -21,7 +21,7 @@ const schema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Privacy Policy | AIVized",
+      "name": "Privacy Policy",
       "url": "https://www.aivized.com/privacy-policy",
       "description": "AIVized privacy policy covering data collection, usage, and UK GDPR compliance.",
       "publisher": { "@id": "https://www.aivized.com/#organization" },

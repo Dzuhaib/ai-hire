@@ -57,6 +57,10 @@ const TestimonialsSection = dynamic(
   () => import("@/components/TestimonialsSection").then(m => m.TestimonialsSection),
   { loading: () => <TestimonialsSkeleton /> }
 );
+const CaseStudiesSection = dynamic(
+  () => import("@/components/CaseStudiesSection").then(m => m.CaseStudiesSection),
+  { loading: () => <TestimonialsSkeleton /> }
+);
 const FAQSection = dynamic(
   () => import("@/components/FAQSection").then(m => m.FAQSection),
   { loading: () => <FAQSkeleton /> }
@@ -104,6 +108,7 @@ const Index = () => {
         <WhyChooseUsSection />
         <PricingSection />
         <CostComparisonCalculator />
+        <CaseStudiesSection />
         <TestimonialsSection />
         <FAQSection />
         <InternalLinksSection />

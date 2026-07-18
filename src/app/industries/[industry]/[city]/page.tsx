@@ -23,7 +23,7 @@ export async function generateMetadata({
   const { industry, city } = await params;
   const data = getIndustryCityData(industry, city);
   // Use pre-crafted unique metadata from data if available; fallback to template
-  const title = data?.metaTitle ?? `AI Chatbot for ${industry} in ${city} | Managed from £29/mo | AIVized`;
+  const title = data?.metaTitle ?? `AI Chatbot for ${industry} in ${city} - Managed from £29/mo`;
   const description = data?.metaDescription ?? `Managed AI chatbot for ${industry} businesses in ${city}. 24/7 lead generation from £29/month.`;
   const keywords = data?.metaKeywords;
   return {

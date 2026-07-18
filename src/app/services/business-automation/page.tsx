@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import BusinessAutomationPage from "@/views/services/BusinessAutomationPage";
 
 export const metadata: Metadata = {
-  title: "Business Process Automation for UK Businesses | AIVized",
+  title: "Business Process Automation for UK Businesses",
   description: "AIVized delivers business process automation for UK businesses, automating follow-ups, appointment reminders, and customer onboarding. From £29/month.",
   alternates: { canonical: "https://www.aivized.com/services/business-automation" },
   openGraph: {
-    title: "Business Process Automation for UK Businesses | AIVized",
+    title: "Business Process Automation for UK Businesses",
     description: "AIVized delivers business process automation for UK businesses, automating follow-ups, appointment reminders, and customer onboarding. From £29/month.",
     url: "https://www.aivized.com/services/business-automation",
     type: "website",

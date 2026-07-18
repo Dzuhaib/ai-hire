@@ -12,10 +12,12 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getIndustryCityData, getCitiesForIndustry } from "@/data/industryCityData";
 import { getIndustryBySlug } from "@/data/industryData";
+import { ukLocations } from "@/data/locationData";
+import { cityBlogPosts } from "@/data/cityBlogData";
 import NotFound from "./NotFound";
 import {
   Bot, ArrowRight, Zap, CheckCircle, Users, Shield, Clock,
-  MessageCircle, MapPin, ChevronRight
+  MessageCircle, MapPin, ChevronRight, BookOpen
 } from "lucide-react";
 
 // Industry hero images
@@ -62,6 +64,13 @@ const IndustryCityPage = () => {
     () => (industrySlug ? getCitiesForIndustry(industrySlug).filter(c => c.citySlug !== citySlug) : []),
     [industrySlug, citySlug]
   );
+
+  const cityLocation = useMemo(
+    () => (citySlug ? ukLocations.find(loc => loc.slug === citySlug) : undefined),
+    [citySlug]
+  );
+
+  const cityBlogSlug = citySlug ? cityBlogPosts.find(post => post.slug === citySlug) : undefined;
 
   if (!cityData || !parentIndustry) return <NotFound />;
 
@@ -304,6 +313,64 @@ const IndustryCityPage = () => {
               {cityData.localFact}
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* City Quick Info + Blog Link */}
+      <section className="section-padding bg-background border-y border-border/50">
+        <div className="container-narrow">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {cityLocation && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-card rounded-xl border border-border/50 p-6"
+              >
+                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  About {cityData.cityName}
+                </h3>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p>{cityLocation.description}</p>
+                  <div className="flex gap-6 pt-2">
+                    <span className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-primary" />
+                      Pop: {cityLocation.population}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-primary" />
+                      {cityLocation.region}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+            {cityBlogSlug && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-card rounded-xl border border-border/50 p-6"
+              >
+                <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                  Read More
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Learn more about how a 24/7 AI chatbot can help your {parentIndustry.industry.toLowerCase()} business in {cityData.cityName}.
+                </p>
+                <Link
+                  href={`/blog/website-chatbot-24-7-${citySlug}`}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                >
+                  Read the {cityData.cityName} Guide
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            )}
+          </div>
         </div>
       </section>
 

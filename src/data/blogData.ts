@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "whatsapp-chatbot-uk-business",
     title: "WhatsApp Chatbot for UK Businesses: 24/7 AI Messaging",
-    metaTitle: "WhatsApp Chatbots for UK Small Businesses | AIVized",
+    metaTitle: "WhatsApp Chatbots for UK Small Businesses",
     metaDescription: "Get a WhatsApp chatbot for your UK business. We install, train, and monitor your custom AI chatbot 24/7. Capture leads automatically from £29/month.",
     excerpt: "Learn how a managed WhatsApp chatbot helps UK businesses capture leads and answer customer enquiries 24/7 without needing a dedicated support team.",
     publishedDate: "2026-01-28",
@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "website-chatbot-small-business",
     title: "Website Chatbot for UK Small Businesses: How Managed AI Works",
-    metaTitle: "Website Chatbots for UK Small Businesses | AIVized",
+    metaTitle: "Website Chatbots for UK Small Businesses",
     metaDescription: "Get a website chatbot for UK small businesses. We install, train, and maintain your AI assistant 24/7. Capture leads with no coding required from £29/mo.",
     excerpt: "Explore how a fully managed website chatbot helps UK small businesses handle customer enquiries, capture leads, and support customers around the clock.",
     publishedDate: "2026-01-29",
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "instagram-chatbot-social-media",
     title: "Instagram Chatbot for UK Businesses: Automate DMs and Capture Leads 24/7",
-    metaTitle: "Instagram Chatbots for UK Small Businesses | AIVized",
+    metaTitle: "Instagram Chatbots for UK Small Businesses",
     metaDescription: "Get an Instagram chatbot for UK businesses to automate DMs and capture leads 24/7. AIVized installs and manages everything. Plans start from £29/month.",
     excerpt: "Discover how an Instagram chatbot helps UK businesses automate DM responses, capture leads, and engage customers at any hour.",
     publishedDate: "2026-01-30",
@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "outsourced-chat-agents-birmingham",
     title: "24/7 AI Chat Agents for Birmingham Businesses",
-    metaTitle: "24/7 AI Chat Agents for Birmingham Businesses | AIVized",
+    metaTitle: "24/7 AI Chat Agents for Birmingham Businesses",
     metaDescription: "Get 24/7 managed AI chat agents for your Birmingham business to capture leads, book clients, and automate support. Installed by AIVized from £29/mo.",
     excerpt: "Discover how Birmingham businesses use managed AI chat agents to handle customer enquiries 24/7 without hiring additional staff.",
     publishedDate: "2026-02-01",
@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-service-providers-uk",
     title: "How to Choose an AI Service Provider for Your UK Business",
-    metaTitle: "How to Choose an AI Service Provider UK | AIVized Guide",
+    metaTitle: "How to Choose an AI Service Provider UK Guide",
     metaDescription: "Compare AI service providers in the UK. Learn how to choose the right provider, evaluate chatbot features, and scale your business automation from £29/mo.",
     excerpt: "A practical guide to evaluating AI service providers for UK small businesses: what to look for, what to ask, and how to avoid common pitfalls.",
     publishedDate: "2026-02-02",
@@ -100,7 +100,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-personal-assistant-near-me",
     title: "AI Personal Assistant for Your UK Business: What It Does and How to Get One",
-    metaTitle: "AI Personal Assistant for Your UK Business | AIVized",
+    metaTitle: "AI Personal Assistant for Your UK Business",
     metaDescription: "Get a managed AI personal assistant for your UK business. AIVized installs, trains, and monitors your virtual chatbot 24/7. Setup included from £29/mo.",
     excerpt: "Find out how a managed AI personal assistant can handle customer enquiries, capture leads, and support your UK business around the clock.",
     publishedDate: "2026-02-03",
@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-automation-uk-business",
     title: "AI Business Automation for UK Small Business: A Practical Guide",
-    metaTitle: "AI Business Automation for UK Small Business | AIVized",
+    metaTitle: "AI Business Automation for UK Small Business",
     metaDescription: "Learn how AI business automation helps UK small businesses capture leads and handle support 24/7. We install and monitor your AI chatbot from £29/month.",
     excerpt: "Discover how UK small businesses are using AI automation to handle customer enquiries, capture leads, and free up staff time without needing a technical team.",
     publishedDate: "2026-02-05",
@@ -134,7 +134,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-chatbot-small-business-uk-guide",
     title: "AI Chatbot for Small Business UK: The Complete 2026 Guide",
-    metaTitle: "AI Chatbot for Small Business UK: 2026 Guide | AIVized",
+    metaTitle: "AI Chatbot for Small Business UK: 2026 Guide",
     metaDescription: "Read our 2026 guide to choosing an AI chatbot for your UK small business. Learn about WhatsApp, website chatbots, costs, and setup from just £29/month.",
     excerpt: "Your complete guide to choosing and implementing the right AI chatbot for your UK small business in 2026, covering WhatsApp, website, and social media channels.",
     publishedDate: "2026-02-06",
@@ -151,7 +151,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "reduce-missed-leads-website",
     title: "How to Reduce Missed Leads from Your Website with AI Chatbots",
-    metaTitle: "Reduce Missed Leads from Website with AI | AIVized",
+    metaTitle: "Reduce Missed Leads from Website with AI",
     metaDescription: "Discover why UK small businesses miss up to 60% of website leads and how an AI chatbot captures enquiries 24/7. Practical tips to stop losing customers.",
     excerpt: "Learn why UK small businesses miss up to 60% of potential website leads and discover practical steps to capture every enquiry with AI chatbots.",
     publishedDate: "2026-02-10",
@@ -170,7 +170,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-chatbot-vs-live-chat-uk",
     title: "AI Chatbot vs Live Chat: Which Is Better for UK Small Business?",
-    metaTitle: "AI Chatbot vs Live Chat UK | Cost Comparison | AIVized",
+    metaTitle: "AI Chatbot vs Live Chat UK | Cost Comparison",
     metaDescription: "AI chatbot vs live chat for UK small businesses: compare costs, availability, and engagement metrics. Find the best solution for support from £29/month.",
     excerpt: "Compare AI chatbots and live chat agents for UK small businesses: costs, availability, response quality, and which solution delivers the best ROI.",
     publishedDate: "2026-02-11",
@@ -188,7 +188,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "automate-customer-enquiries-personal-touch",
     title: "How to Automate Customer Enquiries Without Losing the Personal Touch",
-    metaTitle: "Automate Customer Enquiries Personal Touch | AIVized",
+    metaTitle: "Automate Customer Enquiries Personal Touch",
     metaDescription: "Learn how UK small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples.",
     excerpt: "Discover how to automate customer enquiries with AI chatbots while maintaining the warm, personal touch that keeps customers coming back.",
     publishedDate: "2026-02-12",
@@ -213,7 +213,7 @@ export const cityBlogEntries: BlogPost[] = cityNames.map(city => {
   return {
     slug: `website-chatbot-24-7-${slug}`,
     title: `Website Chatbot That Runs 24/7 ${city} | Managed AI Service`,
-    metaTitle: `Website Chatbot 24/7 ${city} | Managed AI | AIVized`,
+    metaTitle: `Website Chatbot 24/7 ${city} | Managed AI`,
     metaDescription: `Get a website chatbot that runs 24/7 for your ${city} business. Capture leads, automate enquiries, and save time from just £29/month. Setup included.`,
     excerpt: `Discover how a 24/7 website chatbot helps ${city} businesses capture more leads, answer customer enquiries instantly, and grow, all fully managed from £29/month.`,
     publishedDate: "2026-02-08",

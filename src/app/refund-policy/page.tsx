@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import RefundPolicy from "@/views/RefundPolicy";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | AIVized",
+  title: "Refund Policy",
   description: "Read the AIVized refund and cancellation policy for managed AI chatbot subscriptions.",
   alternates: { canonical: "https://www.aivized.com/refund-policy" },
   openGraph: {
-    title: "Refund Policy | AIVized",
+    title: "Refund Policy",
     description: "Read the AIVized refund and cancellation policy for managed AI chatbot subscriptions.",
     url: "https://www.aivized.com/refund-policy",
     type: "website",
@@ -21,7 +21,7 @@ const schema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Refund Policy | AIVized",
+      "name": "Refund Policy",
       "url": "https://www.aivized.com/refund-policy",
       "description": "AIVized refund and cancellation policy for monthly managed AI chatbot subscriptions.",
       "publisher": { "@id": "https://www.aivized.com/#organization" },

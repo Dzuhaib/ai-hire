@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import PricingPage from "@/views/PricingPage";
 
 export const metadata: Metadata = {
-  title: "Pricing | AIVized - Managed AI Chatbot Plans from £29/mo",
+  title: "Pricing - Managed AI Chatbot Plans from £29/mo",
   description:
     "Compare AIVized managed AI chatbot plans from £29/mo. Starter, Professional, and Business packages include 24/7 lead capture and full setup. No contracts.",
   alternates: { canonical: "https://www.aivized.com/pricing" },

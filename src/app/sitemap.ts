@@ -3,9 +3,10 @@ import { ukLocations } from "@/data/locationData";
 import { industries } from "@/data/industryData";
 import { allIndustryCities } from "@/data/industryCityData";
 import { cityBlogPosts } from "@/data/cityBlogData";
+import { blogPosts } from "@/data/blogData";
 
 const BASE_URL = "https://www.aivized.com";
-const NOW = "2026-04-21T00:00:00.000Z";
+const NOW = new Date().toISOString();
 
 // Static blog slugs (non-city-specific)
 const staticBlogSlugs = [
@@ -22,115 +23,46 @@ const staticBlogSlugs = [
   "ai-personal-assistant-near-me",
 ];
 
+const blogPostMap = new Map(blogPosts.map((p) => [p.slug, p.publishedDate]));
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Core pages
   const corePages: MetadataRoute.Sitemap = [
-    {
-      url: BASE_URL,
-      lastModified: NOW,
-      changeFrequency: "daily",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: NOW,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/pricing`,
-      lastModified: NOW,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: NOW,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/industries`,
-      lastModified: NOW,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/locations`,
-      lastModified: NOW,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/services/social-media-automation`,
-      lastModified: NOW,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/services/business-automation`,
-      lastModified: NOW,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/privacy-policy`,
-      lastModified: NOW,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/terms-of-service`,
-      lastModified: NOW,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/refund-policy`,
-      lastModified: NOW,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
+    { url: BASE_URL, lastModified: NOW },
+    { url: `${BASE_URL}/about`, lastModified: NOW },
+    { url: `${BASE_URL}/pricing`, lastModified: NOW },
+    { url: `${BASE_URL}/blog`, lastModified: NOW },
+    { url: `${BASE_URL}/industries`, lastModified: NOW },
+    { url: `${BASE_URL}/locations`, lastModified: NOW },
+    { url: `${BASE_URL}/services/social-media-automation`, lastModified: NOW },
+    { url: `${BASE_URL}/services/business-automation`, lastModified: NOW },
+    { url: `${BASE_URL}/privacy-policy`, lastModified: NOW },
+    { url: `${BASE_URL}/terms-of-service`, lastModified: NOW },
+    { url: `${BASE_URL}/refund-policy`, lastModified: NOW },
   ];
 
-  // Static blog posts
   const staticBlogPages: MetadataRoute.Sitemap = staticBlogSlugs.map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,
-    lastModified: NOW,
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
+    lastModified: blogPostMap.get(slug) ?? NOW,
   }));
 
-  // City-specific blog posts
   const cityBlogPages: MetadataRoute.Sitemap = cityBlogPosts.map((post) => ({
     url: `${BASE_URL}/blog/website-chatbot-24-7-${post.slug}`,
     lastModified: NOW,
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
   }));
 
-  // Industry hub pages
   const industryPages: MetadataRoute.Sitemap = Object.values(industries).map((industry) => ({
     url: `${BASE_URL}/industries/${industry.slug}`,
     lastModified: NOW,
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
   }));
 
-  // Industry + city pages
   const industryCityPages: MetadataRoute.Sitemap = allIndustryCities.map((entry) => ({
     url: `${BASE_URL}/industries/${entry.industrySlug}/${entry.citySlug}`,
     lastModified: NOW,
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
   }));
 
-  // Location pages
   const locationPages: MetadataRoute.Sitemap = ukLocations.map((loc) => ({
     url: `${BASE_URL}/locations/${loc.slug}`,
     lastModified: NOW,
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
   }));
 
   return [

@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import TermsOfService from "@/views/TermsOfService";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | AIVized",
+  title: "Terms of Service",
   description: "Read the AIVized terms of service and usage agreement for our managed AI chatbot service.",
   alternates: { canonical: "https://www.aivized.com/terms-of-service" },
   openGraph: {
-    title: "Terms of Service | AIVized",
+    title: "Terms of Service",
     description: "Read the AIVized terms of service and usage agreement for our managed AI chatbot service.",
     url: "https://www.aivized.com/terms-of-service",
     type: "website",
@@ -21,7 +21,7 @@ const schema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Terms of Service | AIVized",
+      "name": "Terms of Service",
       "url": "https://www.aivized.com/terms-of-service",
       "description": "AIVized terms of service covering usage, subscriptions, and cancellation.",
       "publisher": { "@id": "https://www.aivized.com/#organization" },

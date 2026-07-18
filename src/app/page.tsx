@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import IndexPage from "@/views/Index";
 
 export const metadata: Metadata = {
-  title: "Managed AI Chatbot for UK Small Businesses | AIVized",
+  title: "Managed AI Chatbot for UK Small Businesses",
   description:
     "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation and customer support. We install everything. Start your free trial.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.aivized.com/" },
   openGraph: {
     url: "https://www.aivized.com/",
-    title: "Managed AI Chatbot for UK Small Businesses | AIVized",
+    title: "Managed AI Chatbot for UK Small Businesses",
     description:
       "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation and customer support. We install everything. Start your free trial.",
     type: "website",
@@ -127,7 +127,7 @@ const homepageSchema = {
       "@type": "WebPage",
       "@id": "https://www.aivized.com/#webpage",
       "url": "https://www.aivized.com",
-      "name": "Managed AI Chatbot for Small Business UK | AIVized",
+      "name": "Managed AI Chatbot for Small Business UK",
       "description": "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "about": { "@id": "https://www.aivized.com/#service" },

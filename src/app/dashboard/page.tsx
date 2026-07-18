@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Dashboard from "@/views/Dashboard";
 
 export const metadata: Metadata = {
-  title: "Dashboard | AIVized - Manage Your AI Employees",
+  title: "Dashboard - Manage Your AI Employees",
   description:
     "Your AIVized dashboard. Monitor AI employee performance, manage subscriptions, view billing history, and optimize your customer service automation.",
   alternates: { canonical: "https://www.aivized.com/dashboard" },

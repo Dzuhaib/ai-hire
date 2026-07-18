@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ForgotPasswordPage from "@/views/ForgotPasswordPage";
 
 export const metadata: Metadata = {
-  title: "Forgot Password | AIVized",
+  title: "Forgot Password",
   description: "Reset your AIVized account password.",
   alternates: { canonical: "https://www.aivized.com/forgot-password" },
   robots: { index: false, follow: false },

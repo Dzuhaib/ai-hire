@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import AdminDashboard from "@/views/AdminDashboard";
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard | AIVized",
+  title: "Admin Dashboard",
   description: "AIVized admin dashboard.",
   robots: { index: false, follow: false },
 };

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import AuthPage from "@/views/AuthPage";
 
 export const metadata: Metadata = {
-  title: "Sign In | AIVized - Access Your AI Dashboard",
+  title: "Sign In - Access Your AI Dashboard",
   description:
     "Sign in or create your AIVized account. Start your free trial and get an AI employee working for your UK business in minutes.",
   alternates: { canonical: "https://www.aivized.com/auth" },

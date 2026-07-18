@@ -10,7 +10,7 @@ const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "Managed Website Chatbot for UK Small Businesses | AIVized";
+  const title = post?.metaTitle || "Managed Website Chatbot for UK Small Businesses ";
   const description = post?.metaDescription || "Get a managed website chatbot for your UK small business. AIVized handles setup and maintenance. Enquiries answered 24/7. No technical skills needed. From £29/month.";
   return {
     title,

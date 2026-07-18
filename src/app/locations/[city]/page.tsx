@@ -15,8 +15,8 @@ export async function generateMetadata({
   const { city } = await params;
   const location = getLocationBySlug(city);
   const title = location
-    ? `Managed AI Chatbot Service in ${location.city}, UK | AIVized`
-    : `Managed AI Chatbot Service | AIVized`;
+    ? `Managed AI Chatbot Service in ${location.city}, UK`
+    : `Managed AI Chatbot Service`;
   const description = location
     ? `Get a fully managed AI chatbot service in ${location.city} for your business. Capture leads 24/7, reduce missed inquiries, and automate support from £29/month.`
     : `Get a fully managed AI chatbot service for your UK business. Capture leads 24/7, reduce missed inquiries, and automate support from £29/month.`;
