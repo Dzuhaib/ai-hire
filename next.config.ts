@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 
+const linkHeaders = [
+  { key: "Link", value: "</llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"describedby\", </.well-known/api-catalog>; rel=\"api-catalog\", </auth.md>; rel=\"help\"" },
+];
+
 const securityHeaders = [
   // Prevent clickjacking — deny embedding in iframes from other origins
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
@@ -60,9 +64,9 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        // Apply security headers to all routes
+        // Apply security headers and Link headers to all routes
         source: "/(.*)",
-        headers: securityHeaders,
+        headers: [...linkHeaders, ...securityHeaders],
       },
     ];
   },

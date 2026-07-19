@@ -1,0 +1,19 @@
+{
+  "serverInfo": {
+    "name": "AIVized",
+    "version": "1.0.0"
+  },
+  "capabilities": {
+    "resources": {
+      "listChanged": false,
+      "subscribe": false
+    },
+    "tools": {},
+    "prompts": {}
+  },
+  "endpoint": {
+    "url": "https://www.aivized.com/llms-full.txt",
+    "type": "text/markdown"
+  },
+  "description": "Managed AI chatbot service for UK small businesses. 24/7 lead capture and customer enquiry automation from £29/month."
+}

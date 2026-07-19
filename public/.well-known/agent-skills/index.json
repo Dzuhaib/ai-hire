@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/skills-index.json",
+  "skills": [
+    {
+      "name": "site-information",
+      "type": "read",
+      "description": "Read full site information about AIVized managed AI chatbot service",
+      "url": "https://www.aivized.com/llms-full.txt",
+      "sha256": ""
+    },
+    {
+      "name": "pricing",
+      "type": "read",
+      "description": "View AIVized pricing plans — Starter £29, Professional £79, Business £149 per month",
+      "url": "https://www.aivized.com/pricing",
+      "sha256": ""
+    },
+    {
+      "name": "industries",
+      "type": "read",
+      "description": "Browse AI chatbot solutions by industry — restaurants, real estate, e-commerce, healthcare, legal, fitness, travel",
+      "url": "https://www.aivized.com/industries",
+      "sha256": ""
+    },
+    {
+      "name": "locations",
+      "type": "read",
+      "description": "View AI chatbot service availability across 20 UK cities",
+      "url": "https://www.aivized.com/locations",
+      "sha256": ""
+    }
+  ]
+}

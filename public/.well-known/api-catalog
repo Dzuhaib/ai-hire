@@ -1,0 +1,24 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.aivized.com/api",
+      "relations": [
+        {
+          "href": "https://www.aivized.com/llms-full.txt",
+          "rel": "service-desc",
+          "type": "text/markdown"
+        },
+        {
+          "href": "https://www.aivized.com",
+          "rel": "service-doc",
+          "type": "text/html"
+        },
+        {
+          "href": "https://www.aivized.com/pricing",
+          "rel": "status",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}
