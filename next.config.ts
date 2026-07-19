@@ -25,6 +25,8 @@ const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
   // Tell crawlers to index and follow all pages
   { key: "X-Robots-Tag", value: "index, follow" },
+  // Content Signals — declare AI content usage preferences for AI crawlers
+  { key: "Content-Signal", value: "ai-train=no, search=yes, ai-input=no" },
   // Content Security Policy — restricts resource origins
   {
     key: "Content-Security-Policy",
