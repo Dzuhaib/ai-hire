@@ -1,0 +1,78 @@
+# AIVIZED.COM — H1, Meta Title and Meta Description Alignment Rule
+
+## THE RULE IN ONE SENTENCE
+
+Every page must have its H1 keyword reflected inside both the meta title and the meta description on that same page. All three must be topically aligned.
+
+---
+
+## WHAT THIS MEANS PRACTICALLY
+
+The H1 is the primary topic signal for a page. The meta title and meta description must reinforce that same topic. If the H1 says one thing and the meta title says something different, Google sees a mismatch and it hurts the ranking for both.
+
+This does not mean copy the H1 text word for word into the title and description. It means the core keyword phrase from the H1 must appear in both.
+
+---
+
+## CORRECT EXAMPLE
+
+H1: Restaurant AI chatbot that handles reservations and enquiries 24/7
+
+Core keyword extracted from H1: "restaurant AI chatbot"
+
+Meta title: Restaurant AI Chatbot for UK Businesses | AIVized
+(contains "restaurant AI chatbot" from the H1 ✓)
+
+Meta description: AIVized installs a managed AI chatbot for UK restaurants. Handles reservations and menu questions 24/7. No technical setup from you. Plans from £29/month.
+(contains "AI chatbot" and "restaurants" mirroring the H1 topic ✓)
+
+---
+
+## WRONG EXAMPLE
+
+H1: Restaurant AI chatbot that handles reservations and enquiries 24/7
+
+Meta title: Managed Chatbot Service for Hospitality | AIVized
+(keyword mismatch, "hospitality" is not what the H1 is about ✗)
+
+Meta description: AIVized helps businesses automate their customer communication with smart AI tools.
+(generic, does not reflect the H1 topic at all ✗)
+
+---
+
+## RULE FOR CLAUDE CODE
+
+For every page on aivized.com, follow this three step process:
+
+Step 1: Write the H1 first. Identify the core keyword phrase in that H1.
+
+Step 2: Write the meta title. It must contain the core keyword phrase from step 1. Keep it between 50 and 60 characters.
+
+Step 3: Write the meta description. It must contain the same core keyword phrase from step 1. Keep it between 150 and 160 characters.
+
+If the meta title or meta description does not contain the H1 keyword, rewrite it until it does.
+
+---
+
+## APPLY TO ALL PAGE TYPES
+
+This rule applies to every page without exception:
+- Homepage
+- All 7 industry pages
+- All 70 city pages
+- All blog posts
+- Pricing page
+- FAQ page
+- About page
+- Contact page
+
+---
+
+## VALIDATION CHECK
+
+After writing H1, meta title, and meta description for any page, ask:
+
+"Does the core keyword from the H1 appear in the meta title?" — If no, rewrite the meta title.
+"Does the core keyword from the H1 appear in the meta description?" — If no, rewrite the meta description.
+
+Both answers must be yes before moving to the next page.
