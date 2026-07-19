@@ -4,7 +4,8 @@ const protectedResource = {
   resource: 'https://www.aivized.com',
   authorization_servers: ['https://moving-starfish-1.clerk.accounts.dev'],
   scopes_supported: ['openid', 'email', 'profile'],
-  bearer_methods_supported: ['Authorization Request Header Field'],
+  grant_types_supported: ['authorization_code', 'refresh_token'],
+  bearer_methods_supported: ['header'],
   token_type: ['Bearer'],
 }
 

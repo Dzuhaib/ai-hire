@@ -1,15 +1,41 @@
-# AIVized Agent Authentication
+# Auth.md
 
-AIVized is a managed AI chatbot service for UK small businesses. This site does not currently expose public APIs that require OAuth authentication.
+AIVized is a managed AI chatbot service for UK small businesses. Authentication is handled via Clerk (OpenID Connect).
 
-## Public Resources
+## Public Resources (No Auth Required)
 
-The following resources are available without authentication:
+- `https://www.aivized.com/llms.txt`
+- `https://www.aivized.com/llms-full.txt`
+- `https://www.aivized.com/robots.txt`
+- `https://www.aivized.com/sitemap.xml`
 
-- `https://www.aivized.com/llms.txt` — Brief site overview for AI agents
-- `https://www.aivized.com/llms-full.txt` — Full site documentation
-- `https://www.aivized.com/robots.txt` — Crawler directives
-- `https://www.aivized.com/sitemap.xml` — Site structure
+## Authentication Methods
+
+### OpenID Connect (Recommended)
+
+AIVized uses Clerk for authentication. OIDC discovery is available at:
+
+- `/.well-known/openid-configuration`
+
+### OAuth 2.0 Authorization Server
+
+Authorization server metadata is published at:
+
+- `/.well-known/oauth-authorization-server`
+
+### OAuth Protected Resource
+
+Protected resource metadata is published at:
+
+- `/.well-known/oauth-protected-resource`
+
+## Agent Registration
+
+Agents can register via the web sign-up flow:
+
+- **Registration URI**: `https://www.aivized.com/sign-up`
+- **Identity types**: Email verification
+- **Credential types**: Bearer access token (issued by Clerk)
 
 ## Contact
 
