@@ -20,15 +20,12 @@ const authServerConfig = {
   agent_auth: {
     skill: 'https://isitagentready.com/.well-known/agent-skills/auth-md/SKILL.md',
     register_uri: 'https://www.aivized.com/sign-up',
-    identity_types_supported: [
-      {
-        identity_assertion: {
-          assertion_types_supported: ['verified_email'],
-          credential_types_supported: ['access_token'],
-          claim_uri: `${clerkIssuer}/oauth/userinfo`,
-        },
-      },
-    ],
+    identity_types_supported: ['identity_assertion'],
+    identity_assertion: {
+      assertion_types_supported: ['urn:ietf:params:oauth:token-type:id-jag', 'verified_email'],
+      credential_types_supported: ['access_token'],
+      claim_uri: `${clerkIssuer}/oauth/userinfo`,
+    },
   },
 }
 
