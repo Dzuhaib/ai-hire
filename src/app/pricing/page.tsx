@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
+const returnPolicyRef = { "@id": "https://www.aivized.com/refund-policy#returnPolicy" };
+
 const pricingSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -39,7 +41,8 @@ const pricingSchema = {
           "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "MONTH" },
           "description": "Managed AI chatbot for small businesses. Up to 500 conversations per month.",
           "availability": "https://schema.org/InStock",
-          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" }
+          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" },
+          "hasMerchantReturnPolicy": returnPolicyRef
         },
         {
           "@type": "Offer",
@@ -49,7 +52,8 @@ const pricingSchema = {
           "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "GBP", "unitText": "MONTH" },
           "description": "Lead generation chatbot for growing businesses. Up to 2,500 conversations per month.",
           "availability": "https://schema.org/InStock",
-          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" }
+          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" },
+          "hasMerchantReturnPolicy": returnPolicyRef
         },
         {
           "@type": "Offer",
@@ -59,7 +63,8 @@ const pricingSchema = {
           "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "GBP", "unitText": "MONTH" },
           "description": "Enterprise-grade managed AI chatbot with dedicated account manager. Unlimited conversations.",
           "availability": "https://schema.org/InStock",
-          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" }
+          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" },
+          "hasMerchantReturnPolicy": returnPolicyRef
         }
       ]
     },
@@ -69,6 +74,17 @@ const pricingSchema = {
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
         { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.aivized.com/pricing" }
       ]
+    },
+    {
+      "@id": "https://www.aivized.com/refund-policy#returnPolicy",
+      "@type": "MerchantReturnPolicy",
+      "name": "AIVized 3-Day Free Trial and Refund Policy",
+      "description": "All AIVized plans include a 3-day free trial. Cancel anytime with no long-term contracts.",
+      "applicableCountry": "GB",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 3,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
     },
   ]
 };
