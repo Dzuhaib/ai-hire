@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Providers } from "./providers";
+import { WebMCPProvider } from "@/components/WebMCPProvider";
 import "@/index.css";
 
 const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "";
@@ -114,6 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         ) : (
           <Providers>{children}</Providers>
         )}
+        <WebMCPProvider />
       </body>
     </html>
   );
