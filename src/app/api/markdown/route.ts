@@ -18,6 +18,11 @@ const pageSections: Record<string, string | undefined> = {
   "/industries/fitness": "### Fitness & Gyms",
   "/industries/travel": "### Travel & Tourism",
   "/locations": "## UK Locations Covered",
+  "/privacy-policy": "## Privacy Policy",
+  "/refund-policy": "## Refund Policy",
+  "/terms-of-service": "## Terms of Service",
+  "/services/social-media-automation": "## Social Media Automation",
+  "/services/business-automation": "## Business Process Automation",
 };
 
 function extractSection(content: string, heading: string): string {
@@ -49,6 +54,15 @@ function extractSection(content: string, heading: string): string {
   return [`# AIVized`, `> ${lines[start].replace(/^#{1,6}\s/, "")}`, "", ...result].join("\n");
 }
 
+function withMarkdownHeaders(body: string): Headers {
+  const tokenCount = Math.round(body.length / 4)
+  return new Headers({
+    "Content-Type": "text/markdown; charset=utf-8",
+    "Vary": "Accept",
+    "x-markdown-tokens": String(tokenCount),
+  })
+}
+
 export async function GET(request: NextRequest) {
   const requestPath = request.nextUrl.searchParams.get("path") || "/";
 
@@ -56,31 +70,22 @@ export async function GET(request: NextRequest) {
     const fullContent = fs.readFileSync(LLMS_FULL_PATH, "utf-8");
 
     if (requestPath === "/" || !pageSections[requestPath]) {
-      return new NextResponse(fullContent, {
-        headers: { "Content-Type": "text/markdown; charset=utf-8" },
-      });
+      return new NextResponse(fullContent, { headers: withMarkdownHeaders(fullContent) });
     }
 
     const heading = pageSections[requestPath];
     if (!heading) {
-      return new NextResponse(fullContent, {
-        headers: { "Content-Type": "text/markdown; charset=utf-8" },
-      });
+      return new NextResponse(fullContent, { headers: withMarkdownHeaders(fullContent) });
     }
 
     const sectionContent = extractSection(fullContent, heading);
     if (!sectionContent) {
-      return new NextResponse(fullContent, {
-        headers: { "Content-Type": "text/markdown; charset=utf-8" },
-      });
+      return new NextResponse(fullContent, { headers: withMarkdownHeaders(fullContent) });
     }
 
-    return new NextResponse(sectionContent, {
-      headers: { "Content-Type": "text/markdown; charset=utf-8" },
-    });
+    return new NextResponse(sectionContent, { headers: withMarkdownHeaders(sectionContent) });
   } catch {
-    return new NextResponse("# AIVized\n\nManaged AI chatbot service for UK small businesses.", {
-      headers: { "Content-Type": "text/markdown; charset=utf-8" },
-    });
+    const fallback = "# AIVized\n\nManaged AI chatbot service for UK small businesses."
+    return new NextResponse(fallback, { headers: withMarkdownHeaders(fallback) });
   }
 }

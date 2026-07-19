@@ -269,6 +269,38 @@ Summary: City-specific guides explaining how 24/7 website chatbots benefit busin
 - Zuhaib Ahmed founded AIVized to give UK small businesses access to genuinely managed AI. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, he leads product development and client onboarding personally.
 - [About AIVized](https://www.aivized.com/about): Company background, mission, and team
 
+## Privacy Policy
+- AIVized collects personal data (name, email, business info) to provide and improve service
+- Data stored securely; not shared with third parties except payment processors and hosting providers
+- Users can request data deletion at any time via email
+- Full policy: https://www.aivized.com/privacy-policy
+
+## Refund Policy
+- 14-day money-back guarantee on all plans
+- Refunds processed within 5-10 business days to original payment method
+- No partial refunds after 14 days
+- Full policy: https://www.aivized.com/refund-policy
+
+## Terms of Service
+- Service provided on a subscription basis (monthly/annual)
+- Users must not misuse the service for spam, illegal activity, or competitive analysis
+- AIVized provides service "as is" with reasonable uptime guarantees
+- Full terms: https://www.aivized.com/terms-of-service
+
+## Social Media Automation
+Service page: https://www.aivized.com/services/social-media-automation
+- Automated social media content posting and scheduling for UK businesses
+- Supports multi-platform management (Instagram, Facebook, LinkedIn, Twitter/X)
+- AI-powered content generation and curation
+- Analytics and performance reporting
+
+## Business Process Automation
+Service page: https://www.aivized.com/services/business-automation
+- Custom workflow automation for UK small businesses
+- Automates repetitive tasks (data entry, email responses, invoice processing)
+- Integration with existing tools and CRMs
+- Reduces operational costs by up to 60%
+
 ## Contact
 - Email: aivized.com@gmail.com
 - Website: https://www.aivized.com
