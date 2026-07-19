@@ -60,7 +60,7 @@ Disallow: /forgot-password
 Disallow: /auth
 
 # Content Signals — declare AI content usage preferences
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Content-Signal: ai-train=no, search=yes, ai-input=no
 
 # Sitemap location
 Sitemap: https://www.aivized.com/sitemap.xml
