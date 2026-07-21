@@ -63,7 +63,7 @@ const Dashboard = () => {
         });
 
         if (error) {
-          console.error("Error fetching dashboard data:", error);
+
           return;
         }
 
@@ -94,7 +94,7 @@ const Dashboard = () => {
           }
         }
       } catch (error) {
-        console.error("Error fetching data:", error);
+
       } finally {
         setLoading(false);
       }
@@ -126,7 +126,7 @@ const Dashboard = () => {
       setSubscription({ ...subscription, status: "cancelled", cancelled_at: new Date().toISOString() });
       toast.success("Subscription cancelled successfully");
     } catch (error) {
-      console.error("Error cancelling subscription:", error);
+
       toast.error("Failed to cancel subscription");
     } finally {
       setCancelling(false);
@@ -170,7 +170,7 @@ const Dashboard = () => {
         setBillingHistory(data.billingHistory || []);
       }
     } catch (error) {
-      console.error("WhatsApp payment error:", error);
+
       toast.error("An error occurred. Please try again.");
     } finally {
       setPayingWhatsApp(false);

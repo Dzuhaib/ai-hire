@@ -88,7 +88,6 @@ Deno.serve(async (req) => {
     });
 
     if (subError) {
-      console.error("Subscription insert error:", subError);
       return new Response(
         JSON.stringify({ error: "Failed to create subscription" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }

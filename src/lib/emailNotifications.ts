@@ -22,9 +22,9 @@ const sendEmail = async (templateId: string, params: Record<string, string>) => 
   try {
     initEmailJS();
     await emailjs.send(EMAILJS_SERVICE_ID, templateId, params);
-    console.log("[EmailJS] Email sent:", templateId);
+
   } catch (error) {
-    console.error("[EmailJS] Failed to send email:", error);
+
   }
 };
 

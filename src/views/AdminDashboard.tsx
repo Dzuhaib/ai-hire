@@ -171,7 +171,7 @@ const AdminDashboard = () => {
         throw new Error(data?.error || 'Failed to approve payment');
       }
     } catch (error) {
-      console.error('Approve payment error:', error);
+
       toast.error('Failed to approve payment');
     } finally {
       setApprovingId(null);
@@ -201,7 +201,7 @@ const AdminDashboard = () => {
         throw new Error(data?.error || 'Failed to terminate user');
       }
     } catch (error) {
-      console.error('Terminate user error:', error);
+
       toast.error('Failed to terminate user');
     } finally {
       setTerminating(false);

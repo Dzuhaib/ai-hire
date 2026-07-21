@@ -33,7 +33,7 @@ const ForgotPasswordPage = () => {
       setStep("code");
       toast.success("Reset code sent to your email!");
     } catch (error: any) {
-      console.error("Error sending reset code:", error);
+
       toast.error(error.errors?.[0]?.message || "Failed to send reset code");
     } finally {
       setLoading(false);
@@ -55,7 +55,7 @@ const ForgotPasswordPage = () => {
         setStep("password");
       }
     } catch (error: any) {
-      console.error("Error verifying code:", error);
+
       toast.error(error.errors?.[0]?.message || "Invalid code");
     } finally {
       setLoading(false);
@@ -87,7 +87,7 @@ const ForgotPasswordPage = () => {
         toast.success("Password reset successfully!");
       }
     } catch (error: any) {
-      console.error("Error resetting password:", error);
+
       toast.error(error.errors?.[0]?.message || "Failed to reset password");
     } finally {
       setLoading(false);

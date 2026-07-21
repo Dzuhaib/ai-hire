@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
   });
 
   if (subError) {
-    console.error("Subscription insert error:", subError);
+
     return NextResponse.json(
       { error: "Failed to create subscription" },
       { status: 500 }

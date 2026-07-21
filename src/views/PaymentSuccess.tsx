@@ -60,7 +60,7 @@ const PaymentSuccess = () => {
         // Clear pending data regardless of outcome
         sessionStorage.removeItem("pendingSubscription");
       } catch (error) {
-        console.error("Error processing subscription:", error);
+
       } finally {
         setProcessing(false);
       }

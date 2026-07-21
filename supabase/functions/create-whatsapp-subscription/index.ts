@@ -23,9 +23,7 @@ async function sendEmailNotification(templateId: string, params: Record<string, 
         template_params: params,
       }),
     });
-    console.log("[EmailJS] Send result:", res.status, await res.text());
   } catch (e) {
-    console.error("[EmailJS] Failed:", e);
   }
 }
 
@@ -64,8 +62,7 @@ serve(async (req) => {
         .eq("id", existingSub.id);
 
       if (updateError) {
-        console.error("Update subscription error:", updateError);
-        throw new Error("Failed to update subscription");
+          throw new Error("Failed to update subscription");
       }
     } else {
       // No existing trial - create a new pending_payment subscription
@@ -81,8 +78,7 @@ serve(async (req) => {
       });
 
       if (subError) {
-        console.error("Subscription error:", subError);
-        throw new Error("Failed to create subscription");
+          throw new Error("Failed to create subscription");
       }
     }
 
@@ -117,7 +113,6 @@ serve(async (req) => {
       { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   } catch (error: any) {
-    console.error("Subscription error:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }

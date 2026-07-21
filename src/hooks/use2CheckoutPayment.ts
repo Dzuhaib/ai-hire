@@ -31,7 +31,7 @@ export const use2CheckoutPayment = () => {
       });
 
       if (error) {
-        console.error("Payment error:", error);
+
         toast.error("Failed to initiate payment. Please try again.");
         return null;
       }
@@ -55,7 +55,7 @@ export const use2CheckoutPayment = () => {
         return null;
       }
     } catch (err) {
-      console.error("Payment error:", err);
+
       toast.error("An error occurred. Please try again.");
       return null;
     } finally {

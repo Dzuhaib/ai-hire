@@ -23,9 +23,7 @@ async function sendEmailNotification(templateId: string, params: Record<string, 
         template_params: params,
       }),
     });
-    console.log("[EmailJS] Send result:", res.status, await res.text());
   } catch (e) {
-    console.error("[EmailJS] Failed:", e);
   }
 }
 
@@ -50,15 +48,12 @@ Deno.serve(async (req) => {
     
     const { action, clerkUserId, targetUserId, subscriptionId }: AdminRequest = await req.json();
     
-    console.log(`Admin action: ${action}, clerkUserId: ${clerkUserId}`);
-    
     // Check if user is admin
     if (clerkUserId) {
       const { data: isAdmin, error: roleError } = await supabase
         .rpc('has_role', { _clerk_user_id: clerkUserId, _role: 'admin' });
       
       if (roleError) {
-        console.error('Role check error:', roleError);
         return new Response(
           JSON.stringify({ error: 'Failed to verify admin status' }),
           { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -93,7 +88,6 @@ Deno.serve(async (req) => {
           .order('created_at', { ascending: false });
         
         if (error) {
-          console.error('Get users error:', error);
           throw error;
         }
         
@@ -103,7 +97,6 @@ Deno.serve(async (req) => {
           .select('*');
         
         if (rolesError) {
-          console.error('Get roles error:', rolesError);
         }
         
         const usersWithRoles = profiles?.map(profile => ({
@@ -130,7 +123,6 @@ Deno.serve(async (req) => {
           .order('created_at', { ascending: false });
         
         if (error) {
-          console.error('Get subscriptions error:', error);
           throw error;
         }
         
@@ -185,50 +177,30 @@ Deno.serve(async (req) => {
           );
         }
         
-        console.log('Terminating user:', targetUserId);
-        
         // Delete user's subscriptions
         const { error: subsError } = await supabase
           .from('subscriptions')
           .delete()
           .eq('clerk_user_id', targetUserId);
         
-        if (subsError) {
-          console.error('Delete subscriptions error:', subsError);
-        }
-        
-        // Delete user's billing history
         const { error: billingError } = await supabase
           .from('billing_history')
           .delete()
           .eq('clerk_user_id', targetUserId);
         
-        if (billingError) {
-          console.error('Delete billing history error:', billingError);
-        }
-        
-        // Delete user's roles
         const { error: rolesError } = await supabase
           .from('user_roles')
           .delete()
           .eq('clerk_user_id', targetUserId);
         
-        if (rolesError) {
-          console.error('Delete roles error:', rolesError);
-        }
-        
-        // Delete user's profile
         const { error: profileError } = await supabase
           .from('profiles')
           .delete()
           .eq('clerk_user_id', targetUserId);
         
         if (profileError) {
-          console.error('Delete profile error:', profileError);
           throw profileError;
         }
-        
-        console.log('User terminated successfully:', targetUserId);
         
         return new Response(
           JSON.stringify({ success: true, message: 'User terminated successfully' }),
@@ -250,7 +222,6 @@ Deno.serve(async (req) => {
           .order('created_at', { ascending: false });
         
         if (error) {
-          console.error('Get pending payments error:', error);
           throw error;
         }
         
@@ -268,8 +239,6 @@ Deno.serve(async (req) => {
           );
         }
         
-        console.log('Approving payment for subscription:', subscriptionId);
-        
         // Get subscription details first
         const { data: subscription, error: fetchError } = await supabase
           .from('subscriptions')
@@ -278,7 +247,6 @@ Deno.serve(async (req) => {
           .single();
         
         if (fetchError || !subscription) {
-          console.error('Fetch subscription error:', fetchError);
           return new Response(
             JSON.stringify({ error: 'Subscription not found' }),
             { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -295,7 +263,6 @@ Deno.serve(async (req) => {
           .eq('id', subscriptionId);
         
         if (updateError) {
-          console.error('Update subscription error:', updateError);
           throw updateError;
         }
         
@@ -308,8 +275,6 @@ Deno.serve(async (req) => {
           status: 'paid',
           paid_at: new Date().toISOString(),
         });
-        
-        console.log('Payment approved successfully for subscription:', subscriptionId);
         
         // Send email notifications
         // Get user profile for email
@@ -348,7 +313,6 @@ Deno.serve(async (req) => {
         );
     }
   } catch (error) {
-    console.error('Admin function error:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return new Response(
       JSON.stringify({ error: errorMessage }),

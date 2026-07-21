@@ -25,11 +25,8 @@ const handler = async (req: Request): Promise<Response> => {
     const secretKey = Deno.env.get("TWOCHECKOUT_SECRET_KEY");
 
     if (!merchantCode || !secretKey) {
-      console.error("Missing 2Checkout credentials");
       throw new Error("Payment configuration error");
     }
-
-    console.log(`Creating 2Checkout session for plan: ${planName}, amount: ${priceAmount}`);
 
     // Generate a unique order reference
     const orderRef = `ORDER-${Date.now()}-${Math.random().toString(36).substring(7)}`;
@@ -89,8 +86,6 @@ const handler = async (req: Request): Promise<Response> => {
     // 2Checkout ConvertPlus checkout URL
     const checkoutUrl = `https://secure.2checkout.com/checkout/buy?${checkoutParams.toString()}`;
 
-    console.log("Generated checkout URL successfully");
-
     return new Response(
       JSON.stringify({ 
         checkoutUrl,
@@ -103,7 +98,6 @@ const handler = async (req: Request): Promise<Response> => {
       }
     );
   } catch (error: any) {
-    console.error("Error creating 2Checkout session:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       {
