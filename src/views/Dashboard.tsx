@@ -37,6 +37,7 @@ interface BillingRecord {
 }
 
 const WHATSAPP_NUMBER = "+92 306 321 3951";
+const WHATSAPP_URL = "https://wa.me/923063213951";
 
 const Dashboard = () => {
   const { user, isLoaded } = useUser();
@@ -326,7 +327,7 @@ const Dashboard = () => {
                               <div>
                                 <p className="font-medium text-yellow-500 mb-1">Awaiting Payment Confirmation</p>
                         <p className="text-sm text-muted-foreground">
-                          Please complete your payment via WhatsApp ({WHATSAPP_NUMBER}). Your plan will be activated once payment is confirmed by our team.
+                          Please complete your payment via WhatsApp (<a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-400 transition-colors">{WHATSAPP_NUMBER}</a>). Your plan will be activated once payment is confirmed by our team.
                         </p>
                               </div>
                             </div>
@@ -343,7 +344,7 @@ const Dashboard = () => {
                                   Free Trial: {getTrialTimeRemaining()} remaining
                                 </p>
                                 <p className="text-sm text-muted-foreground">
-                                  Your trial ends on {formatDate(subscription.trial_ends_at)}. Share your website details with us on WhatsApp ({WHATSAPP_NUMBER}) to get your AI employee set up.
+                                  Your trial ends on {formatDate(subscription.trial_ends_at)}. Share your website details with us on WhatsApp (<a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">{WHATSAPP_NUMBER}</a>) to get your AI employee set up.
                                 </p>
                                 <div className="flex flex-wrap gap-3 mt-3">
                                   <button
@@ -368,7 +369,7 @@ const Dashboard = () => {
                               <div>
                                 <p className="font-medium text-orange-500 mb-1">Trial Ended</p>
                                 <p className="text-sm text-muted-foreground">
-                                  Your free trial has expired. Pay via WhatsApp ({WHATSAPP_NUMBER}) to activate your plan, or choose a new plan.
+                                  Your free trial has expired. Pay via WhatsApp (<a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-orange-400 transition-colors">{WHATSAPP_NUMBER}</a>) to activate your plan, or choose a new plan.
                                 </p>
                                 <div className="flex flex-wrap gap-3 mt-3">
                                   <button
@@ -567,7 +568,7 @@ const Dashboard = () => {
               </div>
               <h2 className="text-2xl font-serif font-semibold mb-2">Welcome to Your Free Trial!</h2>
               <p className="text-muted-foreground">
-                Your <span className="font-medium text-foreground">{subscription.plan_name}</span> plan trial has started. Share your website details with us on WhatsApp ({WHATSAPP_NUMBER}) so we can set up your AI employee.
+                Your <span className="font-medium text-foreground">{subscription.plan_name}</span> plan trial has started. Share your website details with us on WhatsApp (<a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">{WHATSAPP_NUMBER}</a>) so we can set up your AI employee.
               </p>
             </div>
             <div className="space-y-3">
