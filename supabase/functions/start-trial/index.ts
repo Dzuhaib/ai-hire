@@ -1,31 +1,13 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { sendEmail } from "../_shared/email.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "https://www.aivized.com",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const EMAILJS_SERVICE_ID = "service_57jwo4o";
-const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
-const EMAILJS_ADMIN_TEMPLATE = "template_uoosd5n";
 const ADMIN_EMAIL = "info@aivized.com";
-
-async function sendEmailNotification(templateId: string, params: Record<string, string>) {
-  try {
-    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        service_id: EMAILJS_SERVICE_ID,
-        template_id: templateId,
-        user_id: EMAILJS_PUBLIC_KEY,
-        template_params: params,
-      }),
-    });
-  } catch (e) {
-  }
-}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -39,7 +21,6 @@ serve(async (req) => {
       throw new Error("Missing required fields");
     }
 
-    // Free trial is only available for Starter and Professional plans
     const trialEligiblePlans = ["Starter", "Professional"];
     if (!trialEligiblePlans.includes(planName)) {
       return new Response(
@@ -53,7 +34,6 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Ensure profile exists
     const { data: existingProfile } = await supabase
       .from("profiles")
       .select("clerk_user_id")
@@ -68,11 +48,10 @@ serve(async (req) => {
         avatar_url: avatarUrl || "",
       });
       if (profileError) {
-          throw new Error("Failed to create profile");
+        throw new Error("Failed to create profile");
       }
     }
 
-    // Check for existing active subscription
     const { data: existingSub } = await supabase
       .from("subscriptions")
       .select("id, status")
@@ -87,7 +66,6 @@ serve(async (req) => {
       );
     }
 
-    // Create trial subscription (3 days)
     const trialEndsAt = new Date();
     trialEndsAt.setDate(trialEndsAt.getDate() + 3);
 
@@ -107,7 +85,6 @@ serve(async (req) => {
       throw new Error("Failed to create trial subscription");
     }
 
-    // Record trial start in billing history
     await supabase.from("billing_history").insert({
       clerk_user_id: clerkUserId,
       amount: 0,
@@ -117,12 +94,21 @@ serve(async (req) => {
       paid_at: new Date().toISOString(),
     });
 
-    // Send admin email notification
-    await sendEmailNotification(EMAILJS_ADMIN_TEMPLATE, {
-      to_email: ADMIN_EMAIL,
-      subject: `🚀 New Trial Started - ${fullName || "Unknown"}`,
-      message_body: `${fullName || "Unknown"} (${email}) just started a free trial.\nPlan: ${planName}\nTrial ends: ${trialEndsAt.toLocaleDateString("en-GB")}`,
-    });
+    const displayName = fullName || email?.split("@")[0] || "there";
+    const trialEndDate = trialEndsAt.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+    await Promise.allSettled([
+      sendEmail({
+        to: ADMIN_EMAIL,
+        subject: `New Trial Started - ${displayName}`,
+        html: `<h2>New Trial Started</h2><p><strong>${displayName}</strong> (${email}) just started a free trial.</p><p><strong>Plan:</strong> ${planName}<br><strong>Trial ends:</strong> ${trialEndDate}</p>`,
+      }),
+      sendEmail({
+        to: email,
+        subject: `Your 3-Day Free Trial for ${planName} is Ready!`,
+        html: `<h2>Welcome to aivized!</h2><p>Hi ${displayName},</p><p>Your <strong>3-day free trial</strong> for the ${planName} plan has started.</p><p><strong>Trial ends:</strong> ${trialEndDate}</p><p>Share your website details with us on WhatsApp to get your AI employee set up.</p><p><a href="https://www.aivized.com/dashboard" style="display:inline-block;padding:12px 24px;background-color:#D95A2B;color:#fff;text-decoration:none;border-radius:8px;">Go to Dashboard</a></p>`,
+      }),
+    ]);
 
     return new Response(
       JSON.stringify({ success: true, trialEndsAt: trialEndsAt.toISOString() }),

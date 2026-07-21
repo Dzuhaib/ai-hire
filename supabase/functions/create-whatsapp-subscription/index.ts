@@ -1,31 +1,13 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { sendEmail } from "../_shared/email.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "https://www.aivized.com",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const EMAILJS_SERVICE_ID = "service_57jwo4o";
-const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
-const EMAILJS_ADMIN_TEMPLATE = "template_uoosd5n";
 const ADMIN_EMAIL = "info@aivized.com";
-
-async function sendEmailNotification(templateId: string, params: Record<string, string>) {
-  try {
-    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        service_id: EMAILJS_SERVICE_ID,
-        template_id: templateId,
-        user_id: EMAILJS_PUBLIC_KEY,
-        template_params: params,
-      }),
-    });
-  } catch (e) {
-  }
-}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -44,7 +26,6 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Find existing trial or expired trial subscription to update
     const { data: existingSub } = await supabase
       .from("subscriptions")
       .select("id, status, plan_name")
@@ -55,17 +36,15 @@ serve(async (req) => {
       .maybeSingle();
 
     if (existingSub) {
-      // Update existing subscription to pending_payment
       const { error: updateError } = await supabase
         .from("subscriptions")
         .update({ status: "pending_payment" })
         .eq("id", existingSub.id);
 
       if (updateError) {
-          throw new Error("Failed to update subscription");
+        throw new Error("Failed to update subscription");
       }
     } else {
-      // No existing trial - create a new pending_payment subscription
       const expiresAt = new Date();
       expiresAt.setMonth(expiresAt.getMonth() + 1);
 
@@ -78,11 +57,10 @@ serve(async (req) => {
       });
 
       if (subError) {
-          throw new Error("Failed to create subscription");
+        throw new Error("Failed to create subscription");
       }
     }
 
-    // Add billing history record
     await supabase.from("billing_history").insert({
       clerk_user_id: clerkUserId,
       amount: priceAmount,
@@ -92,19 +70,17 @@ serve(async (req) => {
       paid_at: new Date().toISOString(),
     });
 
-    // Get user profile for notification
     const { data: profile } = await supabase
       .from("profiles")
       .select("email, full_name")
       .eq("clerk_user_id", clerkUserId)
       .maybeSingle();
 
-    // Notify admin
     if (profile) {
-      await sendEmailNotification(EMAILJS_ADMIN_TEMPLATE, {
-        to_email: ADMIN_EMAIL,
-        subject: `💳 Payment Request - ${profile.full_name || "Unknown"}`,
-        message_body: `${profile.full_name || "Unknown"} (${profile.email}) has requested to pay for ${planName} (£${priceAmount}/month) via WhatsApp.\n\nPlease verify payment and approve in the admin dashboard.`,
+      await sendEmail({
+        to: ADMIN_EMAIL,
+        subject: `Payment Request - ${profile.full_name || "Unknown"}`,
+        html: `<h2>Payment Request</h2><p><strong>${profile.full_name || "Unknown"}</strong> (${profile.email}) has requested to pay for <strong>${planName}</strong> (£${priceAmount}/month) via WhatsApp.</p><p><a href="https://www.aivized.com/admin" style="display:inline-block;padding:12px 24px;background-color:#D95A2B;color:#fff;text-decoration:none;border-radius:8px;">Approve in Admin</a></p>`,
       });
     }
 

@@ -74,14 +74,12 @@ const Dashboard = () => {
         // Send email notifications based on subscription state (once per session)
         if (sub && !notifiedRef.current) {
           notifiedRef.current = true;
-          const userEmail = user.primaryEmailAddress?.emailAddress || "";
-          const userName = user.fullName || "";
 
-          // Trial ending notification (less than 24 hours remaining)
+          // Trial ending notification (3 days remaining)
           if (sub.status === "trial" && sub.trial_ends_at) {
-            const hoursLeft = (new Date(sub.trial_ends_at).getTime() - Date.now()) / (1000 * 60 * 60);
-            if (hoursLeft > 0 && hoursLeft < 24) {
-              notifyUserTrialEnding(userEmail, userName, sub.plan_name, sub.trial_ends_at);
+            const daysLeft = (new Date(sub.trial_ends_at).getTime() - Date.now()) / (1000 * 60 * 60 * 24);
+            if (daysLeft > 0 && daysLeft <= 3) {
+              notifyUserTrialEnding(user.id);
             }
           }
 
@@ -89,7 +87,7 @@ const Dashboard = () => {
           if (sub.status === "active" && sub.expires_at) {
             const daysLeft = (new Date(sub.expires_at).getTime() - Date.now()) / (1000 * 60 * 60 * 24);
             if (daysLeft > 0 && daysLeft < 3) {
-              notifyUserSubscriptionExpiring(userEmail, userName, sub.plan_name, sub.expires_at);
+              notifyUserSubscriptionExpiring(user.id);
             }
           }
         }
