@@ -115,7 +115,7 @@ export const PricingSection = () => {
         `Your 3-day free trial for the ${planName} plan has started! Head to your dashboard to manage it.`,
         { duration: 6000 }
       );
-      router.push("/dashboard");
+      router.push("/dashboard?trial=just_started");
     } catch {
       toast.error("An error occurred. Please try again.");
     } finally {
