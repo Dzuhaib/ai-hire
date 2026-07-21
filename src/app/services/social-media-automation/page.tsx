@@ -23,11 +23,11 @@ const schema = {
       "@type": "Service",
       "name": "Social Media Automation for UK Businesses",
       "description": "Fully managed social media automation service for UK small businesses. AIVized automates DM responses, content scheduling, and engagement across Instagram, Facebook, and LinkedIn.",
-      "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "email": "aivized.com@gmail.com" },
+      "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "email": "info@aivized.com" },
       "serviceType": "Social Media Automation",
       "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "url": "https://www.aivized.com/services/social-media-automation",
-      "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "aivized.com@gmail.com" }
+      "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "info@aivized.com" }
     },
     {
       "@type": "WebPage",

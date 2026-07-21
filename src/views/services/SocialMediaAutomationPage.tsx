@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "How do I get started with social media automation?",
-    answer: "Email us at aivized.com@gmail.com with a brief description of your business and which platforms you want to automate. We will respond within one working day with next steps and a setup timeline.",
+    answer: "Email us at info@aivized.com with a brief description of your business and which platforms you want to automate. We will respond within one working day with next steps and a setup timeline.",
   },
   {
     question: "Is social media automation suitable for small UK businesses?",
@@ -177,11 +177,11 @@ const SocialMediaAutomationPage = () => {
               Email us with a brief description of your business and which platforms you want to automate. We will respond within one working day.
             </p>
             <a
-              href="mailto:aivized.com@gmail.com"
+              href="mailto:info@aivized.com"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
             >
               <Mail className="w-4 h-4" />
-              aivized.com@gmail.com
+              info@aivized.com
             </a>
           </motion.div>
 

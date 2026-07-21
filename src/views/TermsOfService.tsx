@@ -224,8 +224,8 @@ const TermsOfService = () => {
                 </p>
                 <p className="text-muted-foreground mt-4">
                   <strong>AIVized</strong><br />
-                  <strong>Email:</strong> aivized.com@gmail.com<br />
-                  <strong>Support:</strong> aivized.com@gmail.com<br />
+                  <strong>Email:</strong> info@aivized.com<br />
+                  <strong>Support:</strong> info@aivized.com<br />
                   <strong>Location:</strong> Pakistan
                 </p>
                 <p className="text-muted-foreground mt-4">

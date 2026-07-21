@@ -30,7 +30,7 @@ const schema = {
         "@id": "https://www.aivized.com/#organization",
         "name": "AIVized",
         "url": "https://www.aivized.com",
-        "email": "aivized.com@gmail.com",
+        "email": "info@aivized.com",
         "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" },
         "description": "Fully managed AI chatbot service for UK small businesses. 24/7 lead generation and customer enquiry automation from £29/month.",
         "foundingDate": "2025",
@@ -38,7 +38,7 @@ const schema = {
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer support",
-          "email": "aivized.com@gmail.com",
+          "email": "info@aivized.com",
           "availableLanguage": "English",
           "areaServed": "GB"
         },

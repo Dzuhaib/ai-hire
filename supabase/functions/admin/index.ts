@@ -9,7 +9,7 @@ const EMAILJS_SERVICE_ID = "service_57jwo4o";
 const EMAILJS_PUBLIC_KEY = "MqaarR3vYud1QmXz7";
 const EMAILJS_ADMIN_TEMPLATE = "template_uoosd5n";
 const EMAILJS_USER_TEMPLATE = "template_62owekc";
-const ADMIN_EMAIL = "admin@aivized.com";
+const ADMIN_EMAIL = "info@aivized.com";
 
 async function sendEmailNotification(templateId: string, params: Record<string, string>) {
   try {

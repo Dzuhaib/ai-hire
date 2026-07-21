@@ -23,11 +23,11 @@ const schema = {
       "@type": "Service",
       "name": "Business Process Automation for UK Small Businesses",
       "description": "Fully managed business process automation service for UK small businesses. AIVized automates lead follow-up sequences, appointment reminders, customer onboarding messages, and internal notifications.",
-      "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "email": "aivized.com@gmail.com" },
+      "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "email": "info@aivized.com" },
       "serviceType": "Business Process Automation",
       "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "url": "https://www.aivized.com/services/business-automation",
-      "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "aivized.com@gmail.com" }
+      "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "info@aivized.com" }
     },
     {
       "@type": "WebPage",

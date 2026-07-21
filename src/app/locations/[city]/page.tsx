@@ -61,7 +61,7 @@ export default async function Page({
             "name": `AIVized - ${location.city}`,
             "description": location.description,
             "url": `https://www.aivized.com/locations/${location.slug}`,
-            "email": "aivized.com@gmail.com",
+            "email": "info@aivized.com",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": location.city,

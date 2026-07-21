@@ -692,7 +692,7 @@ const LocationPage = () => {
                   <Zap className="w-4 h-4 ml-2 " />
                 </Button>
               </Link>
-              <a href="mailto:aivized.com@gmail.com">
+              <a href="mailto:info@aivized.com">
                 <Button variant="outline" size="lg">
                   <Mail className="w-4 h-4 mr-2" />
                   Contact Us

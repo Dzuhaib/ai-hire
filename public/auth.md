@@ -39,4 +39,4 @@ Agents can register via the web sign-up flow:
 
 ## Contact
 
-For API access or partnership inquiries: aivized.com@gmail.com
+For API access or partnership inquiries: info@aivized.com

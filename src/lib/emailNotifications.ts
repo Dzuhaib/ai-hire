@@ -8,7 +8,7 @@ const TEMPLATES = {
   USER: "template_62owekc",
 };
 
-const ADMIN_EMAIL = "admin@aivized.com";
+const ADMIN_EMAIL = "info@aivized.com";
 
 let initialized = false;
 const initEmailJS = () => {

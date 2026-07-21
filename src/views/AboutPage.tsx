@@ -178,8 +178,8 @@ const AboutPage = () => {
               </p>
               <div className="flex items-center gap-3 p-5 rounded-xl bg-card border border-border w-fit">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:aivized.com@gmail.com" className="text-primary hover:underline font-medium">
-                  aivized.com@gmail.com
+                <a href="mailto:info@aivized.com" className="text-primary hover:underline font-medium">
+                  info@aivized.com
                 </a>
               </div>
             </motion.section>

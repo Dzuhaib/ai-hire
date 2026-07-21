@@ -68,8 +68,8 @@ export const Footer = () => {
             © {new Date().getFullYear()} AIVized. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <a href="mailto:aivized.com@gmail.com" className="hover:text-foreground transition-colors">
-              aivized.com@gmail.com
+            <a href="mailto:info@aivized.com" className="hover:text-foreground transition-colors">
+              info@aivized.com
             </a>
             <div className="flex items-center gap-2 lg:hidden">
               {socials.map(({ label, href, icon: Icon }) => (

@@ -259,7 +259,7 @@ export const PricingSection = () => {
                   <MagneticButton
                     className="w-full py-3.5 rounded-lg text-sm font-medium transition-all duration-200 border border-border hover:border-primary/50 hover:bg-secondary"
                     onClick={() => {
-                      window.location.href = "mailto:aivized.com@gmail.com?subject=Business%20Plan%20Enquiry";
+                      window.location.href = "mailto:info@aivized.com?subject=Business%20Plan%20Enquiry";
                     }}
                   >
                     Get Started
@@ -313,7 +313,7 @@ export const PricingSection = () => {
               <MagneticButton
                 className="btn-primary text-sm"
                 onClick={() => {
-                  window.location.href = "mailto:aivized.com@gmail.com?subject=Custom%20AI%20Development%20Inquiry";
+                  window.location.href = "mailto:info@aivized.com?subject=Custom%20AI%20Development%20Inquiry";
                 }}
               >
                 <MessageSquare className="w-4 h-4 mr-2 inline-block" />

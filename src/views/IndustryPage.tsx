@@ -555,7 +555,7 @@ const IndustryPage = () => {
                   View Pricing Plans <Zap className="w-4 h-4 ml-2 " />
                 </Button>
               </Link>
-              <a href="mailto:aivized.com@gmail.com">
+              <a href="mailto:info@aivized.com">
                 <Button variant="outline" size="lg">
                   Contact Sales <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>

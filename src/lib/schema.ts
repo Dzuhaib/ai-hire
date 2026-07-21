@@ -137,7 +137,7 @@ export function localBusinessSchema(opts: {
     "name": opts.name,
     "description": opts.description,
     "url": opts.url,
-    "email": "aivized.com@gmail.com",
+    "email": "info@aivized.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": opts.city,

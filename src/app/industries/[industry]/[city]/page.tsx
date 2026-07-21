@@ -85,7 +85,7 @@ export default async function Page({
               "name": `AIVized ${parentIndustry.industry} AI Chatbot ${cityData.cityName}`,
               "url": `https://www.aivized.com/industries/${industry}/${city}`,
               "description": `Managed AI chatbot service for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
-              "email": "aivized.com@gmail.com",
+              "email": "info@aivized.com",
               "priceRange": "£29-£149",
               "areaServed": {
                 "@type": "City",
