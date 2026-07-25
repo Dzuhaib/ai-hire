@@ -3,17 +3,17 @@ import type { Metadata } from "next";
 import IndexPage from "@/views/Index";
 
 export const metadata: Metadata = {
-  title: "Managed AI Chatbot for UK Small Businesses",
+  title: "AI Agency UK | AI Chatbot & Automation for Small Businesses",
   description:
-    "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation and customer support. We install everything. Start your free trial.",
+    "AIVized is a leading AI agency in the UK, offering fully managed AI chatbot and automation services for small businesses. Capture leads 24/7 from £29/month.",
   keywords:
-    "managed AI chatbot service, AI chatbot for small business UK, lead generation chatbot UK, 24/7 customer support chatbot, affordable AI chatbot, fully managed chatbot, AIVized",
+    "AI agency UK, managed AI chatbot service, AI chatbot for small business UK, lead generation chatbot UK, 24/7 customer support chatbot, affordable AI chatbot, fully managed chatbot, AIVized",
   alternates: { canonical: "https://www.aivized.com/" },
   openGraph: {
     url: "https://www.aivized.com/",
-    title: "Managed AI Chatbot for UK Small Businesses",
+    title: "AI Agency UK | AI Chatbot & Automation for Small Businesses",
     description:
-      "Get a managed AI chatbot for your UK small business from £29/month. 24/7 lead generation and customer support. We install everything. Start your free trial.",
+      "AIVized is a leading AI agency in the UK, offering fully managed AI chatbot and automation services for small businesses. Capture leads 24/7 from £29/month.",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
   },

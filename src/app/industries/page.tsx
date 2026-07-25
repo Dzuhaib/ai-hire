@@ -4,13 +4,13 @@ import IndustriesPage from "@/views/IndustriesPage";
 import { allIndustries } from "@/data/industryData";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot Solutions for Every UK Industry",
+  title: "AI Agency for UK Industries | AI Chatbot Solutions by Sector",
   description:
-    "AIVized provides managed AI chatbot solutions for every UK industry: restaurants, real estate, healthcare, legal, fitness, and more. From £29/month.",
+    "AIVized is an AI agency serving every UK industry: restaurants, real estate, healthcare, legal, fitness, e-commerce, and more. Fully managed AI from £29/month.",
   alternates: { canonical: "https://www.aivized.com/industries" },
   openGraph: {
-    title: "AI Chatbot by Industry: Managed Solutions for UK Businesses",
-    description: "AIVized provides managed AI chatbot solutions for every UK industry: restaurants, real estate, healthcare, legal, fitness, and more. From £29/month.",
+    title: "AI Agency for UK Industries | AI Chatbot Solutions by Sector",
+    description: "AIVized is an AI agency serving every UK industry: restaurants, real estate, healthcare, legal, fitness, e-commerce, and more. Fully managed AI from £29/month.",
     url: "https://www.aivized.com/industries",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -31,8 +31,8 @@ const industriesSchema = {
     {
       "@type": "CollectionPage",
       "@id": "https://www.aivized.com/industries#collectionpage",
-      "name": "AI Chatbot by Industry: AIVized",
-      "description": "Industry-trained AI chatbot solutions for UK small businesses. Covering restaurants, real estate, e-commerce, healthcare, legal, fitness, and travel.",
+      "name": "AI Agency for UK Industries | AIVized",
+      "description": "Industry-trained AI agency solutions for UK small businesses. Covering restaurants, real estate, e-commerce, healthcare, legal, fitness, and travel.",
       "url": "https://www.aivized.com/industries",
       "publisher": { "@id": "https://www.aivized.com/#organization" },
       "mainEntity": {

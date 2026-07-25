@@ -561,6 +561,14 @@ const LocationPage = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 {location.cityDescription}
               </p>
+              {location.relatedBlogSlug && (
+                <Link
+                  href={`/blog/${location.relatedBlogSlug}`}
+                  className="inline-flex items-center gap-2 text-primary hover:underline mb-6 text-sm font-medium"
+                >
+                  Read our AI Agency guide for {location.city} →
+                </Link>
+              )}
               <div className="flex items-center gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-primary" />

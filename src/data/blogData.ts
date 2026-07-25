@@ -116,14 +116,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ai-automation-uk-business",
-    title: "AI Business Automation for UK Small Business: A Practical Guide",
-    metaTitle: "AI Business Automation for UK Small Business",
-    metaDescription: "Learn how AI business automation helps UK small businesses capture leads and handle support 24/7. We install and monitor your AI chatbot from £29/month.",
-    excerpt: "Discover how UK small businesses are using AI automation to handle customer enquiries, capture leads, and free up staff time without needing a technical team.",
+    title: "AI Automation for Business UK: A Practical Guide",
+    metaTitle: "AI Automation for Business UK | Fully Managed Service from £29/mo",
+    metaDescription: "AI automation for business UK: capture leads 24/7, automate customer enquiries, and save time. Fully managed service installed in 24 hours from just £29/month.",
+    excerpt: "Discover how UK businesses use AI automation to capture leads, handle customer enquiries 24/7, and streamline operations with a fully managed service from £29/month.",
     publishedDate: "2026-02-05",
     readTime: "11 min read",
     category: "Automation",
     keywords: [
+      "ai automation for business uk",
       "ai business automation uk",
       "ai chatbot for small business uk",
       "managed ai service uk",
@@ -202,6 +203,24 @@ export const blogPosts: BlogPost[] = [
       "personalised AI chatbot"
     ],
     heroImage: "/assets/blog/automate-enquiries-personal-touch-hero.png"
+  },
+  {
+    slug: "ai-agency-manchester",
+    title: "Why Manchester Businesses Need an AI Agency in 2026",
+    metaTitle: "AI Agency Manchester | Why Local Businesses Need AI in 2026",
+    metaDescription: "Discover why Manchester businesses are turning to AI agencies for lead generation, customer support, and automation. AIVized provides fully managed AI services from £29/month.",
+    excerpt: "Manchester's business scene is more competitive than ever. Here's why local companies are partnering with AI agencies to capture leads, automate support, and stay ahead in 2026.",
+    publishedDate: "2026-07-25",
+    readTime: "8 min read",
+    category: "AI Agency",
+    keywords: [
+      "ai agency manchester",
+      "ai agency manchester uk",
+      "managed ai chatbot manchester",
+      "ai automation manchester",
+      "ai services manchester"
+    ],
+    heroImage: "/assets/locations/ai-manchester.png"
   }
 ];
 

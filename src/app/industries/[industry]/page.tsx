@@ -14,8 +14,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { industry } = await params;
   const industryData = getIndustryBySlug(industry);
-  const title = industryData?.metaTitle || `Managed AI Chatbot for ${industry} UK Businesses`;
-  const description = industryData?.metaDescription || `Get a managed AI chatbot service for ${industry} UK businesses. Capture leads and automate support 24/7. Fully installed by AIVized from £29/month.`;
+  const title = industryData?.metaTitle || `AI Agency for ${industry} UK | AI Chatbot & Automation Services`;
+  const description = industryData?.metaDescription || `AIVized is an AI agency serving ${industry} UK businesses. Fully managed AI chatbot and automation services. Capture leads and automate support 24/7 from £29/month.`;
   return {
     title,
     description,
@@ -54,10 +54,10 @@ export default async function Page({
           {
             "@type": "Service",
             "@id": `https://www.aivized.com/industries/${industryData.slug}#service`,
-            "name": `AI Chatbot for ${industryData.industry}`,
+            "name": `AI Agency for ${industryData.industry} | AIVized`,
             "description": industryData.description,
             "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
-            "serviceType": "AI Chatbot Management",
+            "serviceType": "AI Agency Services",
             "areaServed": { "@type": "Country", "name": "United Kingdom" },
             "url": `https://www.aivized.com/industries/${industryData.slug}`,
             "offers": {

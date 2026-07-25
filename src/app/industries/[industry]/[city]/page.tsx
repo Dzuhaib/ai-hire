@@ -23,8 +23,8 @@ export async function generateMetadata({
   const { industry, city } = await params;
   const data = getIndustryCityData(industry, city);
   // Use pre-crafted unique metadata from data if available; fallback to template
-  const title = data?.metaTitle ?? `AI Chatbot for ${industry} in ${city} - Managed from £29/mo`;
-  const description = data?.metaDescription ?? `Managed AI chatbot for ${industry} businesses in ${city}. 24/7 lead generation from £29/month.`;
+  const title = data?.metaTitle ?? `AI Agency for ${industry} in ${city} | AI Chatbot Services | AIVized`;
+  const description = data?.metaDescription ?? `AIVized is an AI agency serving ${industry} businesses in ${city}. Fully managed AI chatbot and automation from £29/month.`;
   const keywords = data?.metaKeywords;
   return {
     title,
@@ -67,10 +67,10 @@ export default async function Page({
             },
             {
               "@type": "Service",
-              "name": `AI Chatbot for ${parentIndustry.industry} in ${cityData.cityName}`,
-              "description": `Fully managed AI chatbot for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation from £29/month.`,
+              "name": `AI Agency for ${parentIndustry.industry} in ${cityData.cityName} | AIVized`,
+              "description": `Fully managed AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation from £29/month.`,
               "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
-              "serviceType": "AI Chatbot Management",
+              "serviceType": "AI Agency Services",
               "areaServed": { "@type": "City", "name": cityData.cityName },
               "url": `https://www.aivized.com/industries/${industry}/${city}`,
               "offers": {
@@ -82,9 +82,9 @@ export default async function Page({
             },
             {
               "@type": "LocalBusiness",
-              "name": `AIVized ${parentIndustry.industry} AI Chatbot ${cityData.cityName}`,
+              "name": `AIVized AI Agency - ${parentIndustry.industry} in ${cityData.cityName}`,
               "url": `https://www.aivized.com/industries/${industry}/${city}`,
-              "description": `Managed AI chatbot service for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
+              "description": `AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
               "email": "info@aivized.com",
               "priceRange": "£29-£149",
               "areaServed": {

@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import PricingPage from "@/views/PricingPage";
 
 export const metadata: Metadata = {
-  title: "Pricing - Managed AI Chatbot Plans from £29/mo",
+  title: "AI Agency Pricing | AI Chatbot Plans from £29/mo",
   description:
-    "Compare AIVized managed AI chatbot plans from £29/mo. Starter, Professional, and Business packages include 24/7 lead capture and full setup. No contracts.",
+    "View AIVized AI agency pricing. Fully managed AI chatbot and automation plans from £29/month. Starter, Professional, and Business — no contracts, 24/7 support included.",
   alternates: { canonical: "https://www.aivized.com/pricing" },
   openGraph: {
-    title: "AIVized Pricing: Managed AI Chatbot Plans from £29/month",
-    description: "Compare AIVized managed AI chatbot plans from £29/mo. Starter, Professional, and Business packages include 24/7 lead capture and full setup. No contracts.",
+    title: "AI Agency Pricing | AI Chatbot Plans from £29/mo",
+    description: "View AIVized AI agency pricing. Fully managed AI chatbot and automation plans from £29/month. Starter, Professional, and Business — no contracts, 24/7 support included.",
     url: "https://www.aivized.com/pricing",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

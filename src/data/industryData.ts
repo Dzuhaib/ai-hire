@@ -24,7 +24,7 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Restaurant AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI hostess handles bookings, answers menu questions, and captures guest details 24/7 while your staff focus on delivering exceptional dining experiences.",
     description: "AI-powered reservation management and customer service for restaurants, cafés, and hospitality businesses across the UK.",
-    metaTitle: "Restaurant AI Chatbot for UK Businesses",
+    metaTitle: "AI Agency for Restaurants UK | AI Chatbot & Automation | AIVized",
     metaDescription: "Get a managed restaurant AI chatbot from £29/mo. Automate reservations, menu enquiries, and guest table bookings 24/7. Fully installed by AIVized.",
     problems: [
       { title: "Missed Calls During Service", description: "When your restaurant is busy, phones go unanswered. Every missed call could be a lost booking worth £50-£500+." },
@@ -84,7 +84,7 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Real Estate AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI property assistant handles enquiries, schedules viewings, and qualifies buyers 24/7, so you can focus on closing sales instead of answering repetitive questions.",
     description: "AI-powered lead qualification and customer service for estate agents, letting agents, and property developers across the UK.",
-    metaTitle: "Real Estate AI Chatbot for UK Businesses",
+    metaTitle: "AI Agency for Real Estate UK | AI Chatbot & Automation | AIVized",
     metaDescription: "Get a managed real estate AI chatbot from £29/mo. Capture qualified buyer leads, schedule property viewings, and answer FAQs 24/7. Fully installed.",
     problems: [
       { title: "Leads Go Cold Quickly", description: "Property buyers expect instant responses. A 30-minute delay can mean losing a hot lead to a faster competitor." },
@@ -144,7 +144,7 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "E-Commerce AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI shopping assistant answers product questions, handles order enquiries, and recovers abandoned carts 24/7, boosting conversions while you sleep.",
     description: "AI-powered customer service and sales support for online retailers, DTC brands, and e-commerce businesses across the UK.",
-    metaTitle: "E-Commerce AI Chatbot for UK Businesses",
+    metaTitle: "AI Agency for E-Commerce UK | AI Chatbot & Automation | AIVized",
     metaDescription: "Get a managed e-commerce AI chatbot from £29/mo. Answer product questions, recover abandoned carts, and track customer shipments 24/7. Fully installed.",
     problems: [
       { title: "Cart Abandonment", description: "70% of online shopping carts are abandoned. Unanswered questions at checkout are a leading cause." },
@@ -204,7 +204,7 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Healthcare AI Chatbot for UK Businesses",
     heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7 while your team focuses on delivering exceptional care.",
     description: "AI-powered appointment booking and patient communication for dental practices, GP surgeries, private clinics, and healthcare businesses across the UK.",
-    metaTitle: "Healthcare AI Chatbot for UK Businesses",
+    metaTitle: "AI Agency for Healthcare UK | AI Chatbot & Automation | AIVized",
     metaDescription: "Get a managed healthcare AI chatbot from £29/mo. Handle patient registration, clinic booking requests, and treatment queries 24/7. Fully installed.",
     problems: [
       { title: "Missed Calls During Appointments", description: "When staff are busy with patients, phones go unanswered. Every missed call could be a new patient worth £500+ annually." },
@@ -264,7 +264,7 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Legal AI Chatbot for UK Law Firms & Solicitors",
     heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7, so your solicitors can focus on billable work.",
     description: "AI-powered client intake and enquiry management for solicitors, law firms, and legal practices across the UK.",
-    metaTitle: "Legal AI Chatbot for UK Law Firms & Solicitors",
+    metaTitle: "AI Agency for Legal UK | AI Chatbot & Automation | AIVized",
     metaDescription: "Get a managed legal AI chatbot for UK law firms from £29/mo. Capture case prospects, qualify enquiries, and schedule consultations 24/7. Installed.",
     problems: [
       { title: "Missed Client Calls", description: "When solicitors are in meetings or court, potential clients call competitors. First response wins in legal services." },
@@ -324,7 +324,7 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Fitness AI Chatbot for UK Gyms & Studios",
     heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7, turning curious browsers into committed members.",
     description: "AI-powered membership sales and customer service for gyms, personal trainers, yoga studios, and fitness businesses across the UK.",
-    metaTitle: "Fitness AI Chatbot for UK Gyms & Studios",
+    metaTitle: "AI Agency for Fitness UK | AI Chatbot & Automation | AIVized",
     metaDescription: "Get a managed fitness AI chatbot from £29/mo. Handle gym membership enquiries, class bookings, and free pass sign-ups 24/7. Fully installed by AIVized.",
     problems: [
       { title: "Lost Membership Enquiries", description: "Potential members browse gym websites at 10pm but can't get answers. By morning, they've joined a competitor." },
@@ -384,7 +384,7 @@ export const industries: Record<string, IndustryData> = {
     heroTitle: "Travel AI Chatbot for UK Holiday Agencies",
     heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7, turning dreamers into bookers while you sleep.",
     description: "AI-powered booking support and customer service for travel agents, tour operators, and tourism businesses across the UK.",
-    metaTitle: "Travel AI Chatbot for UK Holiday Agencies",
+    metaTitle: "AI Agency for Travel UK | AI Chatbot & Automation | AIVized",
     metaDescription: "Get a managed travel AI chatbot from £29/mo. Qualify holiday bookings, answer package questions, and capture tourist leads 24/7. Fully installed.",
     problems: [
       { title: "Complex Enquiry Volume", description: "Travel enquiries are detailed and time-consuming. Each customer wants personalised recommendations, quotes, and itinerary help." },

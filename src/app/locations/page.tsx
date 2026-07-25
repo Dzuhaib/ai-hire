@@ -4,13 +4,13 @@ import LocationsPage from "@/views/LocationsPage";
 import { ukLocations } from "@/data/locationData";
 
 export const metadata: Metadata = {
-  title: "Managed AI Chatbot Services Across the United Kingdom",
+  title: "AI Agency UK | AI Chatbot & Automation Services Across the UK",
   description:
-    "Get premium managed AI chatbot services in London, Manchester, Birmingham, and across the UK. Capture leads and automate support 24/7 from £29/month.",
+    "AIVized is a leading AI agency serving businesses across the UK — London, Manchester, Birmingham, and all major cities. Fully managed AI chatbot and automation from £29/month.",
   alternates: { canonical: "https://www.aivized.com/locations" },
   openGraph: {
-    title: "Managed AI Chatbot Services Across the United Kingdom",
-    description: "Get premium managed AI chatbot services in London, Manchester, Birmingham, and across the UK. Capture leads and automate support 24/7 from £29/month.",
+    title: "AI Agency UK | AI Chatbot & Automation Services Across the UK",
+    description: "AIVized is a leading AI agency serving businesses across the UK — London, Manchester, Birmingham, and all major cities. Fully managed AI chatbot and automation from £29/month.",
     url: "https://www.aivized.com/locations",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -24,8 +24,8 @@ const locationsSchema = {
     {
       "@type": "CollectionPage",
       "@id": "https://www.aivized.com/locations#collectionpage",
-      "name": "AIVized UK Locations: Managed AI Chatbot by City",
-      "description": "Managed AI chatbot service available across all major UK cities. AIVized installs and maintains your chatbot wherever your business is based.",
+      "name": "AI Agency UK | AIVized Locations by City",
+      "description": "AI agency services available across all major UK cities. AIVized installs and maintains your AI chatbot wherever your business is based.",
       "url": "https://www.aivized.com/locations",
       "publisher": { "@id": "https://www.aivized.com/#organization" },
       "mainEntity": {

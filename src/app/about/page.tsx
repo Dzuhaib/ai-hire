@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 import AboutPage from "@/views/AboutPage";
 
 export const metadata: Metadata = {
-  title: "Managed AI Chatbot Service for UK Businesses",
-  description: "Learn how AIVized provides a managed AI chatbot service to UK small businesses, automating customer service and capturing leads 24/7. Plans from £29/mo.",
+  title: "About AIVized | AI Agency for UK Small Businesses",
+  description: "Learn about AIVized — the UK's leading AI agency for small businesses. We provide fully managed AI chatbot and automation services that capture leads 24/7 from £29/mo.",
   alternates: { canonical: "https://www.aivized.com/about" },
   openGraph: {
-    title: "About AIVized: Managed AI Chatbot for UK Small Businesses",
-    description: "Learn how AIVized provides a managed AI chatbot service to UK small businesses, automating customer service and capturing leads 24/7. Plans from £29/mo.",
+    title: "About AIVized | AI Agency for UK Small Businesses",
+    description: "Learn about AIVized — the UK's leading AI agency for small businesses. We provide fully managed AI chatbot and automation services that capture leads 24/7 from £29/mo.",
     url: "https://www.aivized.com/about",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -23,7 +23,7 @@ const schema = {
       "@type": "AboutPage",
       "@id": "https://www.aivized.com/about",
       "name": "About AIVized",
-      "description": "AIVized is a managed AI chatbot service for UK small businesses. We install, train, and maintain chatbots on websites and WhatsApp so business owners can focus on running their business.",
+      "description": "AIVized is a UK AI agency providing managed AI chatbot and automation services for small businesses. We install, train, and maintain chatbots so business owners can focus on running their business.",
       "url": "https://www.aivized.com/about",
       "publisher": {
         "@type": "Organization",

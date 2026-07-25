@@ -10,8 +10,8 @@ const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "AI Business Automation for UK Small Business ";
-  const description = post?.metaDescription || "A practical guide to AI business automation for UK small businesses. AIVized manages setup and monitoring. Capture leads and automate enquiries from £29/month.";
+  const title = post?.metaTitle || "AI Automation for Business UK | Fully Managed Service";
+  const description = post?.metaDescription || "AI automation for business UK: capture leads 24/7, automate customer enquiries, and save time. Fully managed service installed in 24 hours from £29/month.";
   return {
     title,
     description,
@@ -33,8 +33,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     blogPostingSchema({
-      headline: "AI Business Automation for UK Small Business: A Practical Guide",
-      description: "Discover how UK small businesses are using AI automation to handle customer enquiries, capture leads, and free up staff time, without needing a technical team.",
+      headline: "AI Automation for Business UK: A Practical Guide to Lead Capture & 24/7 Support",
+      description: "AI automation for business UK: learn how UK businesses capture leads, automate customer enquiries, and save time with a fully managed AI service from £29/month.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-automation-uk-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-05",
@@ -43,7 +43,7 @@ const schema = {
     breadcrumbSchema([
       { name: "Home", item: SITE_URL },
       { name: "Blog", item: `${SITE_URL}/blog` },
-      { name: "AI Business Automation UK", item: URL },
+      { name: "AI Automation for Business UK", item: URL },
     ]),
   ],
 };

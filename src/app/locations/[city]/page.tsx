@@ -15,11 +15,11 @@ export async function generateMetadata({
   const { city } = await params;
   const location = getLocationBySlug(city);
   const title = location
-    ? `Managed AI Chatbot Service in ${location.city}, UK`
-    : `Managed AI Chatbot Service`;
+    ? `AI Agency ${location.city} | AI Chatbot & Automation Services | AIVized`
+    : `AI Agency UK | AI Chatbot & Automation Services | AIVized`;
   const description = location
-    ? `Get a fully managed AI chatbot service in ${location.city} for your business. Capture leads 24/7, reduce missed inquiries, and automate support from £29/month.`
-    : `Get a fully managed AI chatbot service for your UK business. Capture leads 24/7, reduce missed inquiries, and automate support from £29/month.`;
+    ? `AIVized is a leading AI agency in ${location.city}, offering fully managed AI chatbot and automation services for local businesses. Capture leads 24/7, automate support from £29/month.`
+    : `AIVized is a UK AI agency offering fully managed AI chatbot and automation services. Capture leads 24/7, automate support from £29/month.`;
   return {
     title,
     description,
@@ -58,8 +58,8 @@ export default async function Page({
           {
             "@type": "LocalBusiness",
             "@id": `https://www.aivized.com/locations/${location.slug}#localbusiness`,
-            "name": `AIVized - ${location.city}`,
-            "description": location.description,
+            "name": `AIVized - AI Agency ${location.city}`,
+            "description": `AI agency in ${location.city} offering managed chatbot and automation services. ${location.description}`,
             "url": `https://www.aivized.com/locations/${location.slug}`,
             "email": "info@aivized.com",
             "address": {
@@ -87,10 +87,10 @@ export default async function Page({
           {
             "@type": "Service",
             "@id": `https://www.aivized.com/locations/${location.slug}#service`,
-            "name": `Managed AI Chatbot Service for ${location.city}`,
-            "description": `Fully managed AI chatbot for ${location.city} businesses. 24/7 lead capture, customer enquiry automation, and ongoing optimisation from £29/month.`,
+            "name": `AI Agency Services in ${location.city} | AIVized`,
+            "description": `AIVized is a leading AI agency in ${location.city}, providing fully managed AI chatbot, lead generation, and customer service automation for local businesses. From £29/month.`,
             "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
-            "serviceType": "AI Chatbot Management",
+            "serviceType": "AI Agency Services",
             "areaServed": { "@type": "City", "name": location.city },
             "url": `https://www.aivized.com/locations/${location.slug}`,
             "offers": {
