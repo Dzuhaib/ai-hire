@@ -107,9 +107,14 @@ Homepage, industries, industry+city, locations, blog, blog posts, case studies, 
 
 ## AI Search Readiness — 95/100
 
-### llms.txt — ✅ Present
-- `/llms.txt` and `/llms-full.txt` both deployed and accessible
-- Comprehensive content with all key facts, FAQs, competitive analysis
+### Blog Posts — 1900+ Words Each with Internal Linking
+All 20 city blog posts have expanded to 1900+ words with unique content:
+- Market Analysis section specific to each city
+- AI Trends section covering AI developments
+- Industry Deep Dive section
+- Why AIVized section with city-specific arguments
+- Internal links to locations, industries, pricing, and case studies
+- Blog posts use `cityBlogData.ts` content with `blogExpandedContent.ts` additions
 
 ### AI Crawler Access — ✅ Excellent
 All major crawlers allowed, CCBot blocked, IndexNow configured.
@@ -138,6 +143,8 @@ All major crawlers allowed, CCBot blocked, IndexNow configured.
 | `src/data/industryContent.ts` | New file — expanded unique content per industry (7 industries) covering overview, AI trends, business impact, and choosing AIVized |
 | `src/data/industryCityContent.ts` | New file — expanded unique content per industry-city combination (147 combinations) using `cityIndustryFacts` data |
 | `src/data/industryCityData.ts` | Added `export { cityIndustryFacts }` to make city-industry facts accessible for content generation |
+| `src/data/blogExpandedContent.ts` | New file — expanded unique content per city (20 cities) covering market analysis, AI trends, industry deep dive, choosing AIVized, and internal links |
+| `src/views/blog/CityWebsiteChatbotBlog.tsx` | Added Market Analysis, AI Trends, Industry Deep Dive, Why AIVized sections with internal links to locations, industries, pricing, and case studies |
 | `public/robots.txt` | Added CCBot block, IndexNow directive |
 | `src/app/case-studies/page.tsx` | New file — Case Studies page with schema |
 | `src/views/CaseStudiesPage.tsx` | New file — Case Studies view component |
