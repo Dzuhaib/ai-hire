@@ -188,6 +188,85 @@ const LocationPage = () => {
         </div>
       </section>
 
+      {/* City-Specific Service Section */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">What We Deliver</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              AIVized's Approach to {location.city}
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              {location.description}
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">Custom AI Training on Your Business</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Every AIVized chatbot is trained specifically on your business information — your products, services, pricing, FAQs, brand voice, and customer workflows. Unlike generic chatbot templates, our AI understands the nuances of the {location.city} market and can answer customer questions with the accuracy and personality that matches your business identity. We invest time in understanding your operations so your chatbot delivers genuinely helpful conversations, not generic responses.
+              </p>
+            </div>
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">Seamless Website Integration</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Your AI chatbot integrates directly into your existing website with a single code snippet. Whether you use WordPress, Shopify, Webflow, Squarespace, or a custom-built site, our chatbot widget works instantly. The widget adapts to your site's design language, ensuring a cohesive brand experience. Customers in {location.city} see a familiar, professional interface that feels like a natural part of your website, not a third-party add-on.
+              </p>
+            </div>
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">Multi-Channel Support for {location.region}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                AIVized extends your AI assistant beyond your website to WhatsApp Business API and Instagram Direct Messages. Your {location.city} customers in {location.region} can reach you through their preferred channel, and all conversations are unified in a single dashboard. Whether a customer sends a message via WhatsApp, Instagram, or your website chat widget, your AI handles it consistently and routes qualified leads to your team.
+              </p>
+            </div>
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">Monitoring Optimised for {location.city}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Our AI doesn't just install and forget. AIVized continuously monitors conversation quality for {location.city} businesses, identifies frequently missed questions, and proactively retrains your chatbot to improve accuracy. We track key metrics like response rate, lead conversion, and customer satisfaction specifically for your {location.region} market. Every month, you receive a performance report with actionable insights for your {location.city} operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us — City Specific Section */}
+      <section className="section-padding">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Why {location.city}</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              Why {location.city} Businesses Choose AIVized
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              {location.cityDescription}
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {location.whyChooseUs.map((reason, idx) => (
+              <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-card/50 border border-border/50">
+                <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                <span className="text-sm">{reason}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              {location.city} businesses trust AIVized because we understand the local market dynamics, competitive landscape, and customer expectations that are unique to {location.city}. Our AI chatbots are not off-the-shelf tools — they are custom-trained for {location.region} businesses that want to stay ahead.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Problems & Solutions Section */}
       <section id="problems" className="section-padding bg-muted/30">
         <div className="container-narrow">
@@ -545,6 +624,41 @@ const LocationPage = () => {
         </div>
       </section>
 
+      {/* How AI Chatbots Work — City Specific */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How It Works</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              How AI Chatbots Work for {location.city} Businesses
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              {location.cityDescription}
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {location.problems.slice(0, 4).map((problem, idx) => (
+              <div key={idx} className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">{problem.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {problem.description} AIVized's AI chatbot for {location.city} addresses this challenge by providing a custom-trained solution that handles these specific scenarios automatically. Every interaction is logged, analysed, and used to improve future responses for {location.region} businesses.
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              {location.whyChooseUs[0]} — AIVized's approach to {location.city} means every chatbot is trained on local market conditions, {location.region} customer expectations, and the competitive landscape specific to {location.city}. Unlike generic tools that treat every city the same, your {location.city} chatbot understands the nuances that matter most to your local customers.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* About City & Map Section */}
       <section className="section-padding">
         <div className="container-narrow">
@@ -558,8 +672,14 @@ const LocationPage = () => {
               <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
                 AI Solutions for {location.city}'s Business Community
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 {location.cityDescription}
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                {location.city} is not just another UK city — it represents a unique blend of traditional industries and modern innovation that creates both challenges and opportunities for local businesses. Understanding this dynamic is essential for any business looking to stay competitive. AIVized has spent years studying {location.city}'s market patterns, customer behaviors, and industry trends to build AI chatbots that genuinely resonate with {location.city} audiences.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Whether you operate in {location.region} or serve customers across the entire United Kingdom, our AI chatbot solution adapts to your specific needs. We understand the local business environment, the competitive pressures, and the customer expectations that are unique to {location.city}. This local knowledge, combined with our technical expertise in AI, ensures your chatbot delivers results that go beyond generic automation.
               </p>
               {location.relatedBlogSlug && (
                 <Link
@@ -636,6 +756,88 @@ const LocationPage = () => {
                   <span className="text-sm font-medium group-hover:text-primary transition-colors">{loc.city}</span>
                 </Link>
               ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local Market Insights — City Specific */}
+      <section className="section-padding bg-muted/30 border-t border-border/50">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">{location.city} Market Context</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              Understanding {location.city}'s Business Landscape
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">{location.city}'s Business Environment</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {location.cityDescription} With a population of {location.population} spanning {location.region}, {location.city} presents a unique commercial ecosystem where businesses face both intense competition and significant growth opportunities. The local market demands providers who understand regional nuances and can respond to {location.city} customers with the speed and personalisation that the area expects.
+              </p>
+            </div>
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">The Automation Imperative for {location.city}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                In {location.city}, where {location.population} consumers and businesses generate constant demand for services, the cost of missed enquiries is disproportionately high. Industry data shows that 67% of website visitors leave without making contact, and businesses that fail to capture those leads lose an average of 30% in potential revenue. For a {location.city} business generating 100 website visitors per day, that's approximately 67 missed opportunities daily. AIVized's AI chatbot, trained specifically on {location.city} market dynamics, captures every single enquiry automatically.
+              </p>
+            </div>
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">Why {location.region} Needs Local AI Expertise</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {location.city} businesses operate within a unique regulatory, cultural, and competitive environment that generic chatbot solutions cannot address. From the specific demographics of {location.region} to the seasonal fluctuations that affect local commerce, an AI chatbot needs to understand {location.city}-specific contexts to deliver value. AIVized's custom training process incorporates these local factors, ensuring your chatbot speaks the language of {location.city} customers fluently and accurately.
+              </p>
+            </div>
+            <div className="card-premium p-6">
+              <h3 className="font-semibold text-lg mb-3 text-primary">Growth Trajectory in {location.city}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {location.city}'s economy continues to evolve, with new businesses launching and existing ones expanding their digital presence every month. The {location.population} residents and growing professional population in {location.region} create a thriving market for businesses that can respond instantly to customer enquiries. Companies that invest in AI-powered automation now — specifically solutions trained for the {location.city} market — position themselves to capture a disproportionate share of future growth in this dynamic region.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* City-Specific Results Section */}
+      <section className="section-padding">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Results for {location.city}</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              How {location.city} Businesses Are Winning with AIVized
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              {location.description}
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="card-premium p-6 text-center">
+              <div className="text-4xl font-serif font-bold text-primary mb-2">30%</div>
+              <div className="text-sm text-muted-foreground">Average increase in captured leads within the first month for {location.city} businesses</div>
+            </div>
+            <div className="card-premium p-6 text-center">
+              <div className="text-4xl font-serif font-bold text-primary mb-2">80%</div>
+              <div className="text-sm text-muted-foreground">Of standard customer enquiries handled automatically by {location.city}'s AIVized chatbots</div>
+            </div>
+            <div className="card-premium p-6 text-center">
+              <div className="text-4xl font-serif font-bold text-primary mb-2">&lt;3s</div>
+              <div className="text-sm text-muted-foreground">Average response time vs 10+ minutes for email — proven across {location.region}</div>
+            </div>
+          </div>
+          <div className="mt-8 text-center max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Businesses across {location.city} — from {location.region} restaurants and real estate agencies to e-commerce stores and healthcare clinics — already use AIVized's AI chatbot to automate customer service and capture more leads. Whether you're a startup looking for your first customer service solution or an established {location.city} business seeking to scale without increasing overhead, AIVized delivers measurable results from day one.
+            </p>
           </div>
         </div>
       </section>

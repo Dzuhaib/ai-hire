@@ -27,6 +27,8 @@ const navItems: NavItem[] = [
   { label: "About", href: "/about", isRoute: true },
   { label: "Industries", href: "/industries", isRoute: true },
   { label: "Pricing", href: "/pricing", isRoute: true },
+  { label: "Case Studies", href: "/case-studies", isRoute: true },
+  { label: "Contact", href: "/contact", isRoute: true },
   { label: "Blog", href: "/blog", isRoute: true },
 ];
 

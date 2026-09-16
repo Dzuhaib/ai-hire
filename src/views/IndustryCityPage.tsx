@@ -14,6 +14,7 @@ import { getIndustryCityData, getCitiesForIndustry } from "@/data/industryCityDa
 import { getIndustryBySlug } from "@/data/industryData";
 import { ukLocations } from "@/data/locationData";
 import { cityBlogPosts } from "@/data/cityBlogData";
+import { getIndustryCityExpandedContent } from "@/data/industryCityContent";
 import NotFound from "./NotFound";
 import {
   Bot, ArrowRight, Zap, CheckCircle, Users, Shield, Clock,
@@ -69,6 +70,10 @@ const IndustryCityPage = () => {
     () => (citySlug ? ukLocations.find(loc => loc.slug === citySlug) : undefined),
     [citySlug]
   );
+
+  const expandedContent = cityData && parentIndustry
+    ? getIndustryCityExpandedContent(cityData.industrySlug, cityData.citySlug)
+    : null;
 
   const cityBlogSlug = citySlug ? cityBlogPosts.find(post => post.slug === citySlug) : undefined;
 
@@ -315,6 +320,96 @@ const IndustryCityPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Industry Landscape */}
+      {expandedContent && (
+        <section className="section-padding">
+          <div className="container-narrow">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Market Context</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                {parentIndustry.industry} in {cityData.cityName}
+              </h2>
+            </motion.div>
+            <div className="max-w-4xl mx-auto prose prose-lg">
+              <p className="text-muted-foreground leading-relaxed">
+                {expandedContent.cityIndustryLandscape}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Why {cityData.cityName} Needs {parentIndustry.industry} AI */}
+      {expandedContent && (
+        <section className="section-padding bg-muted/30">
+          <div className="container-narrow">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">The Case for AI</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                Why {cityData.cityName} {parentIndustry.industry} Businesses Need AIVized
+              </h2>
+            </motion.div>
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">The Competitive Challenge</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.whyCityNeedsIndustryAI}
+                </p>
+              </div>
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">City-Specific Challenges</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.citySpecificChallenges}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Industry Benefits for This City */}
+      {expandedContent && (
+        <section className="section-padding">
+          <div className="container-narrow">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Benefits</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                What {cityData.cityName} Businesses Gain
+              </h2>
+            </motion.div>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">Business Impact</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.cityBenefits}
+                </p>
+              </div>
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">AI Adoption in {cityData.cityName}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.aiInCityMarket}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* City Quick Info + Blog Link */}
       <section className="section-padding bg-background border-y border-border/50">

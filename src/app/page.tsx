@@ -49,14 +49,16 @@ const homepageSchema = {
         "https://www.facebook.com/aivized",
         "https://www.instagram.com/aivized"
       ],
-      "founder": {
-        "@type": "Person",
-        "@id": "https://www.aivized.com/#founder",
-        "name": "Zuhaib Ahmed",
-        "jobTitle": "Founder",
-        "url": "https://www.linkedin.com/in/zuhaibah/",
-        "sameAs": ["https://www.linkedin.com/in/zuhaibah/"]
-      }
+      "founder": { "@id": "https://www.aivized.com/#founder" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.aivized.com/#founder",
+      "name": "Zuhaib Ahmed",
+      "jobTitle": "Founder",
+      "url": "https://www.linkedin.com/in/zuhaibah/",
+      "sameAs": ["https://www.linkedin.com/in/zuhaibah/"],
+      "description": "Founder of AIVized, a managed AI chatbot service for UK small businesses. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce."
     },
     {
       "@type": "SoftwareApplication",

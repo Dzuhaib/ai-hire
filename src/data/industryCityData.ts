@@ -54,7 +54,7 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "restaurants",
     industryName: "Restaurants & Hospitality",
     h1Template: "AI Agency for Restaurants in {city}",
-    metaTitleTemplate: "AI Agency for Restaurants in {city} | AI Chatbot Services | AIVized",
+    metaTitleTemplate: "AI Agency for Restaurants in {city} | AI Chatbot Services",
     metaDescTemplate: "AIVized is an AI agency serving restaurants in {city}. Fully managed AI chatbot handling reservations, menu enquiries, and booking confirmations 24/7 from £29/month.",
     heroSubtitleTemplate: "Your AI receptionist handles reservations, answers menu questions, and captures guest details for your {city} restaurant 24/7 while your staff focus on delivering great dining experiences.",
     keywordsBase: "restaurant AI chatbot {city}, restaurant chatbot UK, AI booking assistant {city}, managed chatbot restaurants",
@@ -69,7 +69,7 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "real-estate",
     industryName: "Real Estate & Property",
     h1Template: "AI Agency for Real Estate in {city}",
-    metaTitleTemplate: "AI Agency for Real Estate in {city} | AI Chatbot Services | AIVized",
+    metaTitleTemplate: "AI Agency for Real Estate in {city} | AI Chatbot Services",
     metaDescTemplate: "AIVized is an AI agency serving real estate in {city}. Fully managed AI chatbot to qualify leads, schedule viewings, and answer property enquiries 24/7 from £29/month.",
     heroSubtitleTemplate: "Your AI property assistant qualifies buyers, schedules viewings, and answers property questions for your {city} estate agency 24/7, so you can focus on closing deals.",
     keywordsBase: "real estate AI chatbot {city}, estate agent chatbot UK, AI property assistant {city}, managed chatbot real estate",
@@ -84,7 +84,7 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "ecommerce",
     industryName: "E-Commerce & Retail",
     h1Template: "AI Agency for E-Commerce in {city}",
-    metaTitleTemplate: "AI Agency for E-Commerce in {city} | AI Chatbot Services | AIVized",
+    metaTitleTemplate: "AI Agency for E-Commerce in {city} | AI Chatbot Services",
     metaDescTemplate: "AIVized is an AI agency serving e-commerce in {city}. Fully managed AI chatbot to answer product questions, reduce cart abandonment, and support buyers 24/7 from £29/month.",
     heroSubtitleTemplate: "Your AI shopping assistant answers product questions, handles order enquiries, and reduces cart abandonment for your {city} e-commerce business 24/7.",
     keywordsBase: "ecommerce AI chatbot {city}, online shop chatbot UK, AI customer service {city}, managed chatbot ecommerce",
@@ -99,7 +99,7 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "healthcare",
     industryName: "Healthcare & Clinics",
     h1Template: "AI Agency for Healthcare in {city}",
-    metaTitleTemplate: "AI Agency for Healthcare in {city} | AI Chatbot Services | AIVized",
+    metaTitleTemplate: "AI Agency for Healthcare in {city} | AI Chatbot Services",
     metaDescTemplate: "AIVized is an AI agency serving healthcare in {city}. Fully managed AI chatbot for patient registrations, booking requests, and treatment FAQs 24/7 from £29/month.",
     heroSubtitleTemplate: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details for your {city} clinic 24/7.",
     keywordsBase: "healthcare AI chatbot {city}, clinic chatbot UK, dental AI assistant {city}, managed chatbot healthcare",
@@ -114,7 +114,7 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "legal",
     industryName: "Legal & Law Firms",
     h1Template: "AI Agency for Solicitors in {city}",
-    metaTitleTemplate: "AI Agency for Solicitors in {city} | AI Chatbot Services | AIVized",
+    metaTitleTemplate: "AI Agency for Solicitors in {city} | AI Chatbot Services",
     metaDescTemplate: "AIVized is an AI agency serving solicitors in {city}. Fully managed AI chatbot to qualify case prospects, capture client enquiries, and schedule consultations 24/7 from £29/mo.",
     heroSubtitleTemplate: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details for your {city} law firm 24/7.",
     keywordsBase: "law firm AI chatbot {city}, solicitor chatbot UK, legal AI assistant {city}, managed chatbot law firms",
@@ -129,7 +129,7 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "fitness",
     industryName: "Fitness & Gyms",
     h1Template: "AI Agency for Gyms and Fitness in {city}",
-    metaTitleTemplate: "AI Agency for Gyms and Fitness in {city} | AI Chatbot Services | AIVized",
+    metaTitleTemplate: "AI Agency for Gyms and Fitness in {city} | AI Chatbot Services",
     metaDescTemplate: "AIVized is an AI agency serving gyms and fitness in {city}. Fully managed AI chatbot for membership enquiries, class bookings, and free trials 24/7 from £29/month.",
     heroSubtitleTemplate: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests for your {city} gym or studio 24/7, turning browsers into members.",
     keywordsBase: "gym AI chatbot {city}, fitness chatbot UK, AI membership assistant {city}, managed chatbot gyms",
@@ -144,7 +144,7 @@ const industryConfigs: IndustryCityConfig[] = [
     industrySlug: "travel",
     industryName: "Travel & Tourism",
     h1Template: "AI Agency for Travel Agents in {city}",
-    metaTitleTemplate: "AI Agency for Travel Agents in {city} | AI Chatbot Services | AIVized",
+    metaTitleTemplate: "AI Agency for Travel Agents in {city} | AI Chatbot Services",
     metaDescTemplate: "AIVized is an AI agency serving travel agents in {city}. Fully managed AI chatbot to qualify holiday enquiries, answer destination questions, and get leads 24/7 from £29/mo.",
     heroSubtitleTemplate: "Your AI travel advisor handles destination enquiries, captures booking requests, and qualifies travellers for your {city} travel agency 24/7.",
     keywordsBase: "travel agent AI chatbot {city}, travel chatbot UK, AI booking assistant {city}, managed chatbot travel agents",
@@ -351,3 +351,5 @@ export const getCitiesForIndustry = (industrySlug: string): IndustryCityData[] =
 };
 
 export const industryCities = cities;
+
+export { cityIndustryFacts };

@@ -49,7 +49,15 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
+# Block AI training crawlers
+User-agent: CCBot
+Disallow: /
+
 User-agent: *
+Allow: /
+
+# IndexNow protocol
+User-agent: Bingbot
 Allow: /
 
 # Disallow private/auth pages from indexing
@@ -64,3 +72,6 @@ Content-Signal: ai-train=no, search=yes, ai-input=no
 
 # Sitemap location
 Sitemap: https://www.aivized.com/sitemap.xml
+
+# IndexNow API endpoint
+Index: https://www.aivized.com

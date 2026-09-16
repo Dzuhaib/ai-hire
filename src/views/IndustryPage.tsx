@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getIndustryBySlug, allIndustries } from "@/data/industryData";
 import { getCitiesForIndustry } from "@/data/industryCityData";
+import { industryExpandedContent } from "@/data/industryContent";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -91,6 +92,8 @@ const IndustryPage = () => {
   const scrollToSection = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const expandedContent = industry ? industryExpandedContent[industry.slug] : null;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -185,6 +188,99 @@ const IndustryPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Industry Overview */}
+      {expandedContent && (
+        <section className="section-padding bg-muted/30">
+          <div className="container-narrow">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Industry Overview</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                The {industry.industry} Sector in the UK
+              </h2>
+            </motion.div>
+            <div className="max-w-4xl mx-auto prose prose-lg">
+              <p className="text-muted-foreground leading-relaxed">
+                {expandedContent.overview}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Why AI Is Essential for This Industry */}
+      {expandedContent && (
+        <section className="section-padding">
+          <div className="container-narrow">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">The Case for AI</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                Why {industry.industry} Businesses Need AI Chatbots
+              </h2>
+              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                {expandedContent.whyThisIndustryNeedsAI}
+              </p>
+            </motion.div>
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">Automated Customer Service</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.whyThisIndustryNeedsAI}
+                </p>
+              </div>
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">24/7 Availability Without Overtime</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.businessImpact}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* AI Trends and Future Outlook */}
+      {expandedContent && (
+        <section className="section-padding bg-muted/30">
+          <div className="container-narrow">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Future Outlook</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                AI Trends Reshaping {industry.industry}
+              </h2>
+            </motion.div>
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">The Current Landscape</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.aiTrends}
+                </p>
+              </div>
+              <div className="card-premium p-6">
+                <h3 className="font-semibold text-lg mb-3 text-primary">What This Means for {industry.industry} Businesses</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {expandedContent.businessImpact}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Problems & Solutions */}
       <section id="problems" className="section-padding bg-muted/30">
@@ -357,6 +453,72 @@ const IndustryPage = () => {
           </div>
         </div>
       </section>
+
+      {expandedContent && (
+        <>
+          {/* Industry Deep Dive */}
+          <section className="section-padding">
+            <div className="container-narrow">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Deep Dive</p>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                  {industry.industry} Businesses: What You Need to Know
+                </h2>
+              </motion.div>
+              <div className="max-w-4xl mx-auto space-y-8">
+                <div className="card-premium p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-primary">The Modern Challenge for {industry.industry}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {expandedContent.citySpecificChallenges}
+                  </p>
+                </div>
+                <div className="card-premium p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-primary">How AI Changes the Equation</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {expandedContent.cityBenefits}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Industry-Specific Benefits */}
+          <section className="section-padding bg-muted/30">
+            <div className="container-narrow">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Key Benefits</p>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                  What {industry.industry} Businesses Gain with AIVized
+                </h2>
+              </motion.div>
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="card-premium p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-primary">Revenue Growth</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {expandedContent.aiInCityMarket}
+                  </p>
+                </div>
+                <div className="card-premium p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-primary">Operational Efficiency</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {expandedContent.cityBenefits}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* 4-Step Process Section */}
       <section className="section-padding bg-muted/30 border-t border-b border-border/50">
