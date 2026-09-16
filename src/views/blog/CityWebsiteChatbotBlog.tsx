@@ -4,7 +4,7 @@ import { AuthorBio } from "@/components/AuthorBio";
 import Image from 'next/image';
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,6 +17,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { getCityBlogBySlug } from "@/data/cityBlogData";
+import { getBlogExpandedContent } from "@/data/blogExpandedContent";
 import NotFound from "@/views/NotFound";
 
 // City hero images (reuse location images)
@@ -54,6 +55,7 @@ const CityWebsiteChatbotBlog = () => {
 
   if (!data) return <NotFound />;
 
+  const expandedContent = city ? getBlogExpandedContent(city) : null;
   const heroImage = cityHeroImages[data.slug] || aiLondon;
   const blogSlug = `website-chatbot-24-7-${data.slug}`;
   const canonicalUrl = `https://www.aivized.com/blog/${blogSlug}`;
@@ -174,10 +176,100 @@ const CityWebsiteChatbotBlog = () => {
               <li><strong>We Install Everything:</strong> Our team deploys your custom chatbot within 24 hours</li>
               <li><strong>Watch It Work:</strong> Your AI assistant starts capturing leads and answering enquiries immediately</li>
             </ol>
-            <p>
-              No technical skills required. No long-term contracts. Just a professional, 24/7 website chatbot that helps your {data.city} business grow.
+<p>
+               No technical skills required. No long-term contracts. Just a professional, 24/7 website chatbot that helps your {data.city} business grow.
             </p>
+
+            {/* Internal Links Section */}
+            {expandedContent && (
+              <div className="not-prose my-8 p-6 rounded-lg bg-secondary/30 border border-border/50">
+                <h3 className="text-lg font-semibold mb-4">Explore More About {data.city}</h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {expandedContent.internalLinks.map((link, idx) => (
+                    <Link key={idx} href={link.url} className="inline-flex items-center gap-2 text-sm text-primary hover:underline">
+                      {link.text} <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
+
+          {/* Market Analysis Section */}
+          {expandedContent && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-16 pt-12 border-t border-border"
+            >
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+                The {data.city} Market: A Deep Analysis
+              </h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {expandedContent.marketAnalysis}
+                </p>
+              </div>
+            </motion.section>
+          )}
+
+          {/* AI Trends Section */}
+          {expandedContent && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-16 pt-12 border-t border-border"
+            >
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+                AI Trends Shaping {data.city}'s Business Landscape
+              </h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {expandedContent.aiTrends}
+                </p>
+              </div>
+            </motion.section>
+          )}
+
+          {/* Industry Deep Dive Section */}
+          {expandedContent && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="mt-16 pt-12 border-t border-border"
+            >
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+                {data.city}'s AI Customer Service Landscape
+              </h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {expandedContent.industryDeepDive}
+                </p>
+              </div>
+            </motion.section>
+          )}
+
+          {/* Why AIVized for {data.city} Section */}
+          {expandedContent && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-16 pt-12 border-t border-border"
+            >
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+                Why {data.city} Businesses Choose AIVized
+              </h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {expandedContent.choosingAIVized}
+                </p>
+              </div>
+            </motion.section>
+          )}
 
           {/* FAQ Section */}
           <motion.section
