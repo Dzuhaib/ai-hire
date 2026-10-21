@@ -1,43 +1,43 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Briefcase, ArrowRight, BookOpen, MessageCircle, Globe, Instagram } from "lucide-react";
+import { Briefcase, ArrowRight, BookOpen, Bot, TrendingUp, Globe } from "lucide-react";
 
 export const InternalLinksSection = () => {
   const links = [
     {
-      title: "Managed AI Chatbot by Industry",
-      description: "Industry-trained AI chatbot for lead capture. We install everything.",
-      href: "/industries",
+      title: "Our Services",
+      description: "Six connected services covering AI, automation, search, marketing, and software.",
+      href: "/services",
       icon: Briefcase,
-      items: ["Restaurants", "Real Estate", "E-Commerce", "Healthcare", "Legal", "Fitness", "Travel"],
+      items: ["AI Systems", "Automations", "SEO & GEO", "Digital Marketing", "Web Development", "Desktop Software"],
     },
     {
-      title: "AI Chatbot Blog & Insights",
-      description: "Expert guides on WhatsApp, website & Instagram chatbots for UK businesses.",
-      href: "/blog",
-      icon: BookOpen,
-      items: ["WhatsApp Chatbot", "Website Chatbot", "Instagram Chatbot"],
+      title: "Industries We Serve",
+      description: "How our services apply to hospitality, professional services, e-commerce, and more.",
+      href: "/industries",
+      icon: Globe,
+      items: ["Hospitality", "Professional Services", "E-commerce", "Healthcare", "Legal", "Fitness", "Travel"],
     },
   ];
 
   const blogArticles = [
     {
-      title: "WhatsApp Chatbot for UK Businesses",
-      href: "/blog/whatsapp-chatbot-uk-business",
-      icon: MessageCircle,
-      keyword: "24/7 AI messaging from £29/month",
+      title: "AI Automation for UK Businesses",
+      href: "/blog/ai-automation-uk-business",
+      icon: Bot,
+      keyword: "Where automation pays back fastest",
     },
     {
-      title: "Website Chatbot for UK Small Businesses",
-      href: "/blog/website-chatbot-small-business",
-      icon: Globe,
-      keyword: "How managed AI chatbots work",
+      title: "Reduce Missed Leads from Your Website",
+      href: "/blog/reduce-missed-leads-website",
+      icon: TrendingUp,
+      keyword: "Fix the gaps in your enquiry journey",
     },
     {
-      title: "Instagram Chatbot Automation",
-      href: "/blog/instagram-chatbot-social-media",
-      icon: Instagram,
-      keyword: "Automate DMs and capture leads 24/7",
+      title: "Choosing an AI Service Provider in the UK",
+      href: "/blog/ai-service-providers-uk",
+      icon: BookOpen,
+      keyword: "What to look for before you buy",
     },
   ];
 
@@ -51,9 +51,9 @@ export const InternalLinksSection = () => {
           transition={{ duration: 0.4 }}
           className="text-center mb-12"
         >
-          <p className="label-tag mb-3">Explore Our Services</p>
+          <p className="label-tag mb-3">Explore AIVized</p>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-            Find the Right <span className="text-gradient">Managed AI Chatbot</span>
+            Find the Right <span className="text-gradient">Service for Your Goal</span>
           </h2>
         </motion.div>
 

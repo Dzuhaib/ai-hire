@@ -14,8 +14,6 @@ import {
   IndustriesSkeleton,
   HowItWorksSkeleton,
   WhyChooseUsSkeleton,
-  PricingSkeleton,
-  CalculatorSkeleton,
   TestimonialsSkeleton,
   FAQSkeleton,
   FinalCTASkeleton,
@@ -44,14 +42,6 @@ const HowItWorksSection = dynamic(
 const WhyChooseUsSection = dynamic(
   () => import("@/components/WhyChooseUsSection").then(m => m.WhyChooseUsSection),
   { loading: () => <WhyChooseUsSkeleton /> }
-);
-const PricingSection = dynamic(
-  () => import("@/components/PricingSection").then(m => m.PricingSection),
-  { loading: () => <PricingSkeleton /> }
-);
-const CostComparisonCalculator = dynamic(
-  () => import("@/components/CostComparisonCalculator").then(m => m.CostComparisonCalculator),
-  { loading: () => <CalculatorSkeleton /> }
 );
 const TestimonialsSection = dynamic(
   () => import("@/components/TestimonialsSection").then(m => m.TestimonialsSection),
@@ -100,14 +90,12 @@ const Index = () => {
       <main>
         <HeroSection />
         <PainSection />
+        <ServicesSection />
         <AIShowcaseSection />
         <AITiersSection />
-        <IndustriesSection />
-        <ServicesSection />
         <HowItWorksSection />
+        <IndustriesSection />
         <WhyChooseUsSection />
-        <PricingSection />
-        <CostComparisonCalculator />
         <CaseStudiesSection />
         <TestimonialsSection />
         <FAQSection />

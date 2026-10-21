@@ -3,9 +3,10 @@ import Link from "next/link";
 const painHero = "/assets/pain-section-hero.png";
 
 const painPoints = [
-  "Missed leads from your website cost you money every day.",
-  "Hiring 24/7 customer support staff is expensive and slow.",
-  "Most chatbots feel robotic. They don't capture leads or automate customer inquiries.",
+  "Your team spends hours every week on work software should be doing.",
+  "Your website looks fine but does not bring in enough enquiries.",
+  "You are invisible on Google and in AI search results.",
+  "Your tools, data, and customer journeys do not talk to each other.",
 ];
 
 export const PainSection = () => {
@@ -18,13 +19,13 @@ export const PainSection = () => {
             <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
               <Image
                 src={painHero}
-                alt="Business owner frustrated by missed leads and unanswered customer messages"
+                alt="Business owner frustrated by disconnected systems and manual work"
                 width={1200}
                 height={675}
                 className="w-full object-cover"
               />
               <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-lg bg-card/95 border border-border/80">
-                <span className="text-sm font-medium text-destructive">⚠ 67% of leads lost after hours*</span>
+                <span className="text-sm font-medium text-destructive">Disconnected systems hold growing businesses back</span>
               </div>
             </div>
           </div>
@@ -34,7 +35,8 @@ export const PainSection = () => {
             <p className="text-sm uppercase tracking-[0.2em] text-primary/70 mb-6">The Problem</p>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-10">
-              UK Small Businesses <span className="text-gradient">Lose Leads</span> Every Day
+              Growth Gets Stuck When Your{" "}
+              <span className="text-gradient">Systems Do Not Scale</span>
             </h2>
 
             <div className="space-y-6">
@@ -46,8 +48,11 @@ export const PainSection = () => {
             </div>
 
             <p className="mt-8 text-lg text-muted-foreground">
-              That's why businesses across <Link href="/locations" className="text-primary hover:underline">UK cities</Link> trust our{" "}
-              <Link href="/industries" className="text-primary hover:underline">managed AI chatbot</Link> to capture leads 24/7.
+              We fix the gaps across AI, automation, search, marketing, and software - so the business runs
+              better as a whole, not just one channel at a time. Explore our{" "}
+              <Link href="/services" className="text-primary hover:underline">services</Link> or see how we
+              work with{" "}
+              <Link href="/industries" className="text-primary hover:underline">your industry</Link>.
             </p>
           </div>
         </div>

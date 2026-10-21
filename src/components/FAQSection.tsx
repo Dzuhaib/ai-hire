@@ -9,40 +9,65 @@ import {
 
 const faqs = [
   {
-    question: "What is a managed AI chatbot service?",
-    answer: "A managed AI chatbot service means a company installs, trains, and maintains the chatbot for you. With AIVized, you subscribe to a plan and we handle everything from setup to ongoing updates. You do not touch any code.",
-  },
-  {
-    question: "How much does an affordable AI chatbot for website cost?",
+    question: "What services does AIVized provide?",
     answer: (
       <>
-        AIVized plans start from £29 per month plus a one-time £50 setup fee. There are no long-term contracts and a 3-day free trial is included. View our <Link href="/#pricing" className="text-primary hover:underline">pricing plans</Link>.
+        We provide six core services: AI Systems, Automations, SEO &amp; GEO, Digital Marketing, Web
+        Development, and Desktop Software Development. You can use one service or combine several. See the
+        full breakdown on our <Link href="/services" className="text-primary hover:underline">services page</Link>.
       </>
     ),
   },
   {
-    question: "How can I capture leads on my website 24/7?",
-    answer: "AIVized installs an AI chatbot that engages every visitor, asks qualifying questions, and collects their contact details automatically. Leads are delivered to your email or CRM around the clock.",
+    question: "Which service should I start with?",
+    answer:
+      "It depends on the bottleneck. If leads are the problem, SEO, marketing, and a better website usually come first. If the team is drowning in admin, AI and automation will have the biggest impact. On a discovery call we will recommend the shortest path to a measurable result.",
   },
   {
-    question: "Is this AI chatbot for small business UK suitable for my company?",
-    answer: "If your business has a website and receives customer enquiries, yes. AIVized works for restaurants, real estate agencies, ecommerce stores, clinics, law firms, gyms, and travel businesses across the UK.",
+    question: "Do you work with small businesses or only large companies?",
+    answer:
+      "Both. Most of our clients are UK small and medium-sized businesses, but we also deliver custom systems and software for larger organisations with more complex requirements.",
   },
   {
-    question: "How does your AI chatbot provide 24/7 customer support?",
-    answer: "The chatbot runs on your website continuously. It answers questions, takes bookings, and captures leads at any hour without staff involvement. Average response time is under 3 seconds.",
+    question: "How long does a project take?",
+    answer:
+      "Smaller automation and landing-page projects can be live in a few weeks. A full website, AI system, or desktop application typically takes four to twelve weeks depending on scope and integrations. We agree the timeline in writing before work starts.",
   },
   {
-    question: "Can this chatbot help me automate customer inquiries for my small business?",
-    answer: "Yes. AIVized is trained on your specific business, products, and services. It handles the questions your customers ask most, freeing your team to focus on higher-value work.",
+    question: "How much does it cost?",
+    answer: (
+      <>
+        Pricing depends on scope. We provide a fixed written quote after discovery, with no obligation. For
+        ongoing work, monthly retainers are available.{" "}
+        <Link href="/contact" className="text-primary hover:underline">Book a consultation</Link> to discuss
+        your budget and requirements.
+      </>
+    ),
   },
   {
-    question: "What makes AIVized different from other chatbot services for small business UK?",
-    answer: "AIVized is fully managed. Unlike DIY platforms where you build and maintain the chatbot yourself, we handle everything. Setup, training, monitoring, and updates are all included in your monthly plan.",
+    question: "Do we own the website, code, and data?",
+    answer:
+      "Yes. You own the accounts, data, and intellectual property we create for you. We set projects up so you are not locked into us, and we document everything for a clean handover if you ever want to take things in-house.",
   },
   {
-    question: "How does AIVized compare to Intercom alternatives for small business?",
-    answer: "Intercom requires technical setup and internal management. AIVized costs significantly less and includes full management. You get enterprise-quality AI without needing a technical team.",
+    question: "Do you provide ongoing support after launch?",
+    answer:
+      "Yes. We offer managed partnerships that include monitoring, maintenance, updates, and continuous improvement. Support is optional, not a condition of working with us.",
+  },
+  {
+    question: "Can you work with our existing website and tools?",
+    answer:
+      "Usually, yes. We regularly integrate with existing websites, CRMs, booking systems, and internal tools. If something is genuinely holding you back, we will tell you rather than forcing a rebuild you do not need.",
+  },
+  {
+    question: "How is SEO and GEO different?",
+    answer:
+      "SEO focuses on ranking in traditional search results. GEO, or Generative Engine Optimisation, focuses on being understood and cited by AI tools such as ChatGPT, Perplexity, and Google AI Overviews. We combine both so your business is visible wherever customers are searching.",
+  },
+  {
+    question: "Are you UK-based?",
+    answer:
+      "Yes. AIVized is a UK-based team working with clients across the country. Communication is in English, and we work to UK business hours with scheduled calls as needed.",
   },
 ];
 
@@ -68,7 +93,7 @@ export const FAQSection = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold"
           >
-            Managed AI Chatbot <span className="text-gradient">FAQ</span>
+            Frequently Asked <span className="text-gradient">Questions</span>
           </motion.h2>
         </div>
 

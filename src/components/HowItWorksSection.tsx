@@ -1,29 +1,36 @@
 import Image from 'next/image';
 import Link from "next/link";
-import { CreditCard, Share2, Rocket, ArrowRight } from "lucide-react";
+import { Compass, ClipboardList, Rocket, BarChart3, ArrowRight } from "lucide-react";
 const howItWorksHero = "/assets/how-it-works-hero.png";
 
 const steps = [
   {
     number: "01",
-    title: "Subscribe to a Plan",
-    description: "Choose the plan that fits your business needs. No long-term contracts, cancel anytime.",
-    icon: CreditCard,
-    link: { text: "View pricing", href: "/#pricing" },
+    title: "Discovery Call",
+    description: "We learn how your business works, where time is being lost, and what growth actually looks like for you.",
+    icon: Compass,
+    link: { text: "Book a call", href: "/contact" },
   },
   {
     number: "02",
-    title: "Share Your Website Access",
-    description: "Securely provide your website login details. We use bank-level encryption.",
-    icon: Share2,
-    link: { text: "Privacy policy", href: "/privacy-policy" },
+    title: "Strategy & Proposal",
+    description: "You get a clear plan: the recommended services, scope, timeline, and the outcomes we will measure.",
+    icon: ClipboardList,
+    link: { text: "See our services", href: "/services" },
   },
   {
     number: "03",
-    title: "We Install It For You",
-    description: "Our team sets up your AIVized within 24 hours. No technical knowledge required.",
+    title: "Build & Launch",
+    description: "We design, build, and test the work, then launch it with your team fully briefed and supported.",
     icon: Rocket,
-    link: { text: "See industries", href: "/industries" },
+    link: { text: "How we work", href: "/about" },
+  },
+  {
+    number: "04",
+    title: "Measure & Improve",
+    description: "We track performance, fix what is not working, and keep improving the system as your business changes.",
+    icon: BarChart3,
+    link: { text: "View results", href: "/case-studies" },
   },
 ];
 
@@ -36,46 +43,46 @@ export const HowItWorksSection = () => {
           <div>
             <p className="label-tag mb-4">Simple Process</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6">
-              How We Install Your{" "}
-              <span className="text-gradient">Managed AI Chatbot</span>
+              How We Turn Your Goals Into{" "}
+              <span className="text-gradient">Working Systems</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Get started today and we install everything for you. No technical skills required. Fully
-              managed from day one.
+              No jargon, no endless discovery documents. We start with a conversation, agree on the
+              outcome, and get to work.
             </p>
           </div>
 
           <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
             <Image
               src={howItWorksHero}
-              alt="Professional showing AI chatbot setup on tablet"
+              alt="Team reviewing a digital growth strategy on a tablet"
               width={1200}
               height={675}
               className="w-full object-cover"
             />
             <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-lg bg-card/95 border border-border/80">
               <Rocket className="w-4 h-4 text-primary flex-shrink-0" />
-              <span className="text-sm font-medium">Setup in under 24 hours</span>
+              <span className="text-sm font-medium">From first call to launch, without the agency runaround</span>
             </div>
           </div>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
             <div key={step.number} className="relative group">
-              <div className="h-full bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
+              <div className="h-full bg-card border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/8 border border-border flex items-center justify-center">
                     <step.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-6xl font-serif font-bold text-foreground/6 leading-none select-none">
+                  <span className="text-5xl font-serif font-bold text-foreground/6 leading-none select-none">
                     {step.number}
                   </span>
                 </div>
 
                 <h3 className="text-xl font-serif font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">{step.description}</p>
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm">{step.description}</p>
                 <Link href={step.link.href} className="text-sm text-primary hover:underline inline-flex items-center gap-1">
                   {step.link.text}
                   <ArrowRight className="w-3 h-3" />
@@ -97,7 +104,7 @@ export const HowItWorksSection = () => {
         {/* Bottom note */}
         <div className="mt-14 text-center">
           <p className="text-sm text-muted-foreground">
-            <span className="font-medium text-foreground">500+</span> businesses already automated across the UK
+            <span className="font-medium text-foreground">One partner</span> across AI, automation, search, marketing, and software
           </p>
         </div>
       </div>

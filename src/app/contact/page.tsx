@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import ContactPage from "@/views/ContactPage";
 
 export const metadata: Metadata = {
-  title: "Contact Us | AIVized — Let's Build Your AI Chatbot",
+  title: "Contact Us | AIVized — Let's Build Something Better",
   description:
-    "Get in touch with AIVized to discuss your AI chatbot needs. We'll help you design, deploy, and manage a custom AI chatbot for your UK business from £29/month.",
+    "Get in touch with AIVized to discuss AI systems, automation, SEO and GEO, digital marketing, web development, or desktop software for your UK business.",
   alternates: { canonical: "https://www.aivized.com/contact" },
   openGraph: {
-    title: "Contact Us | AIVized — Let's Build Your AI Chatbot",
-    description: "Get in touch with AIVized to discuss your AI chatbot needs. We'll help you design, deploy, and manage a custom AI chatbot for your UK business from £29/month.",
+    title: "Contact Us | AIVized — Let's Build Something Better",
+    description: "Get in touch with AIVized to discuss AI systems, automation, SEO and GEO, digital marketing, web development, or desktop software for your UK business.",
     url: "https://www.aivized.com/contact",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

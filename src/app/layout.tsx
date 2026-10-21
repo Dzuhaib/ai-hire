@@ -13,13 +13,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Managed AI Chatbot for Small Business UK | AIVized From £29/mo",
+    default: "AI Systems, Automation & Digital Growth Agency UK | AIVized",
     template: "%s | AIVized",
   },
   description:
-    "Get a fully managed AI chatbot for your UK small business from £29/month. 24/7 lead generation. We install everything. No technical skills needed.",
+    "AIVized is a UK agency delivering AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development.",
   keywords:
-    "managed AI chatbot service, AI chatbot for small business UK, lead generation chatbot UK, 24/7 customer support chatbot, affordable AI chatbot, fully managed chatbot, AIVized",
+    "AI agency UK, AI systems, business automation UK, SEO and GEO, generative engine optimisation, digital marketing agency, web development UK, desktop software development, AIVized",
   authors: [{ name: "Zuhaib Ahmed", url: "https://www.linkedin.com/in/zuhaibah/" }],
   publisher: "Zuhaib Ahmed",
   robots: {
@@ -97,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* WebMCP — expose site tools to browser AI agents */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=[{name:"get_pricing",description:"Get detailed pricing info for AIVized chatbot tiers (Starter, Growth, Scale)",inputSchema:{type:"object",properties:{tier:{type:"string",enum:["starter","growth","scale","all"],description:"Tier to look up"}}}},{name:"get_services",description:"Get info about AIVized managed AI chatbot services",inputSchema:{type:"object",properties:{category:{type:"string",enum:["all","restaurant","real_estate","ecommerce","healthcare"],description:"Service category"}}}},{name:"get_case_studies",description:"Get AIVized case studies and success stories",inputSchema:{type:"object",properties:{industry:{type:"string",enum:["all","restaurant","real_estate"],description:"Filter by industry"}}}},{name:"contact_sales",description:"Get contact/sales info for AIVized",inputSchema:{type:"object",properties:{topic:{type:"string",enum:["general","sales","partnership","support"],description:"Contact reason"}}}},{name:"search_site",description:"Search the AIVized website",inputSchema:{type:"object",properties:{query:{type:"string",description:"Search terms"}},required:["query"]}}];var m=(document.modelContext||navigator.modelContext);if(!m)return;var r=m.registerTool||m.provideContext;if(!r)return;t.forEach(function(t){try{r.call(m,{name:t.name,description:t.description,inputSchema:t.inputSchema,annotations:{readOnlyHint:true},execute:function(){return Promise.resolve({ok:!0,tool:t.name})}},{signal:(new AbortController).signal})}catch(e){}})})()` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=[{name:"get_pricing",description:"Get detailed pricing info for AIVized chatbot tiers (Starter, Growth, Scale)",inputSchema:{type:"object",properties:{tier:{type:"string",enum:["starter","growth","scale","all"],description:"Tier to look up"}}}},{name:"get_services",description:"Get info about AIVized services: AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software",inputSchema:{type:"object",properties:{category:{type:"string",enum:["all","ai_systems","automations","seo_geo","digital_marketing","web_development","desktop_software"],description:"Service category"}}}},{name:"get_case_studies",description:"Get AIVized case studies and success stories",inputSchema:{type:"object",properties:{industry:{type:"string",enum:["all","restaurant","real_estate"],description:"Filter by industry"}}}},{name:"contact_sales",description:"Get contact/sales info for AIVized",inputSchema:{type:"object",properties:{topic:{type:"string",enum:["general","sales","partnership","support"],description:"Contact reason"}}}},{name:"search_site",description:"Search the AIVized website",inputSchema:{type:"object",properties:{query:{type:"string",description:"Search terms"}},required:["query"]}}];var m=(document.modelContext||navigator.modelContext);if(!m)return;var r=m.registerTool||m.provideContext;if(!r)return;t.forEach(function(t){try{r.call(m,{name:t.name,description:t.description,inputSchema:t.inputSchema,annotations:{readOnlyHint:true},execute:function(){return Promise.resolve({ok:!0,tool:t.name})}},{signal:(new AbortController).signal})}catch(e){}})})()` }} />
       </head>
       <body>
         {/* GTM noscript */}

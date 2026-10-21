@@ -24,7 +24,7 @@ const ContactPage = () => {
               Get In Touch
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to transform your {""}business with AI? We'd love to hear from you.
+              Ready to improve how your business runs and grows? We would love to hear from you.
             </p>
           </motion.div>
         </div>
@@ -79,14 +79,19 @@ const ContactPage = () => {
                   <label className="text-sm font-medium mb-1 block">Subject</label>
                   <select className="w-full px-4 py-3 rounded-xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
                     <option>General Inquiry</option>
-                    <option>Pricing Info</option>
+                    <option>AI Systems</option>
+                    <option>Automations</option>
+                    <option>SEO &amp; GEO</option>
+                    <option>Digital Marketing</option>
+                    <option>Web Development</option>
+                    <option>Desktop Software</option>
                     <option>Partnership</option>
                     <option>Support</option>
                   </select>
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-1 block">Message</label>
-                  <textarea className="w-full px-4 py-3 rounded-xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none h-32 resize-none" placeholder="Tell us about your AI chatbot needs..." />
+                    <textarea className="w-full px-4 py-3 rounded-xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none h-32 resize-none" placeholder="Tell us about your project or the problem you are trying to solve..." />
                 </div>
                 <Button size="lg" className="btn-primary w-full">
                   Send Message

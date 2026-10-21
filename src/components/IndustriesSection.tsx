@@ -1,54 +1,50 @@
 import { motion } from "framer-motion";
 import { UtensilsCrossed, Home, ShoppingBag, ArrowRight, CheckCircle2, Clock } from "lucide-react";
+import Link from "next/link";
 
 const industries = [
   {
-    title: "Restaurants",
+    title: "Hospitality & Local Business",
     icon: UtensilsCrossed,
-    headline: "Never Miss a Reservation Again",
+    headline: "More Bookings, Less Admin",
     description:
-      "Every question a customer asks and doesn't get answered is a lost booking. Your AI colleague handles bookings, answers menu queries, and takes orders, even at 2 AM.",
+      "A fast website, local SEO, and automated bookings and reminders. We connect the customer journey from first search to repeat visit.",
     benefits: [
-      "Handle reservations 24/7",
-      "Answer menu & allergy questions instantly",
-      "Process takeaway orders automatically",
+      "Conversion-focused website and booking flow",
+      "Local SEO and Google Business visibility",
+      "Automated reminders and review requests",
     ],
-    stat: "Bookings handled overnight",
+    stat: "Built for footfall and repeat custom",
   },
   {
-    title: "Real Estate",
+    title: "Professional Services",
     icon: Home,
-    headline: "Close More Deals While You Sleep",
+    headline: "A Pipeline You Can Rely On",
     description:
-      "Your competitors are already responding instantly. Every unanswered inquiry is a property someone else sells. Your AI colleague qualifies leads and schedules viewings around the clock.",
+      "AI-assisted enquiry handling, CRM automation, and search visibility that positions your expertise in front of the right clients.",
     benefits: [
-      "Qualify leads automatically",
-      "Schedule viewings 24/7",
-      "Answer property questions instantly",
+      "Lead qualification and follow-up automation",
+      "SEO and GEO for high-intent searches",
+      "Proposal, onboarding, and reporting workflows",
     ],
-    stat: "Leads qualified around the clock",
+    stat: "Less admin, more billable time",
   },
   {
-    title: "E-commerce",
+    title: "E-commerce & Retail",
     icon: ShoppingBag,
-    headline: "Convert Browsers Into Buyers",
+    headline: "Convert More of Your Traffic",
     description:
-      "Humans need breaks, but your AI colleague does not. It answers every product question, tracks orders, and helps customers buy, any time of the day.",
+      "Product-aware AI support, performance improvements, and marketing campaigns that recover abandoned carts and grow repeat revenue.",
     benefits: [
-      "Answer product questions 24/7",
-      "Track orders automatically",
-      "Reduce cart abandonment",
+      "AI product and order support",
+      "Speed, SEO, and conversion optimisation",
+      "Email, paid, and retention campaigns",
     ],
-    stat: "Enquiries answered 24/7",
+    stat: "Joined-up storefront and marketing",
   },
 ];
 
 export const IndustriesSection = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section id="industries" className="section-padding bg-secondary/20">
       <div className="container-narrow">
@@ -60,7 +56,7 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.4 }}
             className="label-tag mb-3"
           >
-            Built for Your Industry
+            Built Around Your Business
           </motion.p>
 
           <motion.h2
@@ -70,7 +66,7 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.4, delay: 0.05 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4"
           >
-            Automation Tailored to <span className="text-gradient">Your Business</span>
+            Services Shaped by <span className="text-gradient">How You Operate</span>
           </motion.h2>
 
           <motion.p
@@ -80,7 +76,8 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Every industry has different workflows and customer questions. AIVized sets up and manages automation that fits how your business actually works.
+            Every sector has different customers, workflows, and pressure points. We combine the right mix
+            of AI, automation, search, marketing, and software for yours.
           </motion.p>
         </div>
 
@@ -92,8 +89,7 @@ export const IndustriesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="group cursor-pointer"
-              onClick={() => scrollToSection("#pricing")}
+              className="group"
             >
               <div className="relative h-full p-8 rounded-xl bg-card border border-border overflow-hidden transition-all duration-300 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
                 {/* Icon */}
@@ -121,7 +117,9 @@ export const IndustriesSection = () => {
                 {/* Stat + Arrow */}
                 <div className="flex items-center justify-between pt-4 border-t border-border/50">
                   <span className="text-sm font-medium text-primary">{industry.stat}</span>
-                  <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  <Link href="/industries" aria-label={`See ${industry.title} services`}>
+                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -140,16 +138,16 @@ export const IndustriesSection = () => {
             <div className="flex items-center gap-3">
               <Clock className="w-5 h-5 text-primary flex-shrink-0" />
               <span className="text-sm text-muted-foreground">
-                Every day without instant responses is a day your competitors take your customers.
+                Not sure where to start? Tell us the problem and we will recommend the right mix.
               </span>
             </div>
-            <button
+            <Link
+              href="/contact"
               className="btn-primary text-sm px-6 py-3 whitespace-nowrap"
-              onClick={() => scrollToSection("#pricing")}
             >
-              See Pricing
+              Book a Consultation
               <ArrowRight className="w-4 h-4 ml-2 inline-block" />
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

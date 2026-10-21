@@ -2,57 +2,57 @@
 
 import { motion } from "framer-motion";
 import {
-  Shield,
-  Rocket,
-  Zap,
-  RefreshCw,
-  CalendarX,
+  Compass,
+  UserCheck,
+  Network,
+  FileCheck,
+  KeyRound,
   Headphones,
 } from "lucide-react";
 
 const reasons = [
   {
-    icon: Shield,
-    title: "We actually do it for you",
+    icon: Compass,
+    title: "Strategy before build",
     description:
-      "Other platforms hand you a login and expect you to build it. We build it, train it, and keep it running. You just share your business details and we get on with it.",
+      "We start with the commercial problem, not a tool we want to sell you. You get a clear recommendation and the reasoning behind it before any work begins.",
   },
   {
-    icon: Rocket,
-    title: "Your chatbot goes live the next day",
+    icon: UserCheck,
+    title: "Senior people on the work",
     description:
-      "Most of our clients are up and running within 24 hours of signing up. We do not keep you waiting weeks for a quote or dragging things out with lengthy calls.",
+      "You work directly with the people designing and building your systems. No layers of account managers, and no handing your project to an inexperienced junior.",
   },
   {
-    icon: Zap,
-    title: "You do not need to be technical at all",
+    icon: Network,
+    title: "One connected roadmap",
     description:
-      "You genuinely do not need to know anything about code or software. Tell us what your business does and we handle everything from setup to launch.",
+      "Because we cover AI, automation, SEO, marketing, web, and software, we can connect the pieces. You avoid the gaps that appear when five suppliers work in isolation.",
   },
   {
-    icon: RefreshCw,
-    title: "Updates are included in your plan",
+    icon: FileCheck,
+    title: "Clear scope and pricing",
     description:
-      "When your prices change or you add a new service, just drop us an email and we update the chatbot. It is part of what you pay for every month.",
+      "Every project starts with a written scope, timeline, and price. You know what is included, what is not, and when you will see the result.",
   },
   {
-    icon: CalendarX,
-    title: "Leave whenever you want",
+    icon: KeyRound,
+    title: "You own what we build",
     description:
-      "We do not tie you into a contract. You pay monthly and you can cancel at any point. We would rather earn your trust than hold you to a commitment.",
+      "Your website, code, accounts, and data stay yours. We set things up so you are never locked in or dependent on us to keep operating.",
   },
   {
     icon: Headphones,
-    title: "You speak to a real person",
+    title: "Support after launch",
     description:
-      "When you email us, someone on the team reads it and replies. Not an automated response and not a support queue. Usually back to you the same day.",
+      "A launch is the beginning, not the end. We monitor, maintain, and improve the work so it keeps performing as your business changes.",
   },
 ];
 
 const statItems = [
-  { value: "24hrs", label: "Typical setup time" },
-  { value: "80%", label: "Enquiries handled automatically" },
-  { value: "£0", label: "Charge for content updates" },
+  { value: "6", label: "Specialist services in one team" },
+  { value: "1", label: "Accountable partner" },
+  { value: "48h", label: "Typical proposal turnaround" },
 ];
 
 interface WhyChooseUsSectionProps {
@@ -82,7 +82,8 @@ export const WhyChooseUsSection = ({ variant = "homepage" }: WhyChooseUsSectionP
             <span className="text-gradient">Choose AIVized</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Plenty of chatbot tools exist. Most expect you to do all the work yourself. Here is what makes working with us different.
+            Plenty of agencies can build one thing. We combine strategy, delivery, and ongoing support
+            across the systems your business actually depends on.
           </p>
         </motion.div>
 

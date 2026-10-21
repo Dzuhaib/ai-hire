@@ -2,21 +2,21 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    quote: "Our AIVized handles 80% of customer enquiries now. We've saved countless hours and our customers love the instant responses.",
+    quote: "AIVized rebuilt our site and automated the booking follow-up. Direct bookings are up, the team is less stressed, and we finally have one partner who understands the whole picture.",
     name: "James Richardson",
     role: "Owner",
     industry: "The Northern Grill",
     location: "Manchester",
   },
   {
-    quote: "Setup was incredibly simple. Within 24 hours we had AIVized handling property viewings and capturing leads around the clock.",
+    quote: "The AI triage and CRM automation changed how the practice runs. Enquiries are routed instantly, nothing gets lost, and our consultants spend their time on client work instead of admin.",
     name: "Sarah Thompson",
     role: "Managing Director",
-    industry: "Thompson & Co. Estate Agents",
+    industry: "Thompson & Co.",
     location: "London",
   },
   {
-    quote: "Best investment we've made this year. Our conversion rate increased by 35% since adding AIVized to our online store.",
+    quote: "They handled the website, technical SEO, and email automation as one project. Six months in, organic revenue is up 68% and we can actually see which channels are working.",
     name: "Daniel Morley",
     role: "Founder",
     industry: "Urban Threads UK",

@@ -28,7 +28,7 @@ export const Footer = () => {
               <span className="font-serif font-semibold text-foreground">AIVized</span>
             </Link>
             <span className="text-sm text-muted-foreground">
-              Built for UK businesses
+              AI systems, automation & digital growth
             </span>
           </div>
 
@@ -36,17 +36,23 @@ export const Footer = () => {
             <Link href="/about" className="hover:text-foreground transition-colors">
               About
             </Link>
-            <Link href="/pricing" className="hover:text-foreground transition-colors">
-              Pricing
+            <Link href="/services" className="hover:text-foreground transition-colors">
+              Services
+            </Link>
+            <Link href="/services#seo-geo" className="hover:text-foreground transition-colors">
+              SEO &amp; GEO
+            </Link>
+            <Link href="/services#web-development" className="hover:text-foreground transition-colors">
+              Web Development
+            </Link>
+            <Link href="/services#desktop-software-development" className="hover:text-foreground transition-colors">
+              Desktop Software
             </Link>
             <Link href="/industries" className="hover:text-foreground transition-colors">
               Industries
             </Link>
-            <Link href="/services/social-media-automation" className="hover:text-foreground transition-colors">
-              Social Media
-            </Link>
-            <Link href="/services/business-automation" className="hover:text-foreground transition-colors">
-              Automation
+            <Link href="/pricing" className="hover:text-foreground transition-colors">
+              Pricing
             </Link>
             <Link href="/blog" className="hover:text-foreground transition-colors">
               Blog

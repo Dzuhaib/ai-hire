@@ -4,11 +4,6 @@ import { MagneticButton } from "./MagneticButton";
 import { ArrowRight } from "lucide-react";
 
 export const FinalCTASection = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="section-padding bg-secondary/20">
       <div className="container-narrow">
@@ -30,8 +25,8 @@ export const FinalCTASection = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6"
           >
-            Get Your AIVized{" "}
-            <span className="text-gradient">AI Colleague Today</span>
+            Let us Build the Systems Your{" "}
+            <span className="text-gradient">Business Deserves</span>
           </motion.h2>
 
           <motion.p
@@ -41,7 +36,8 @@ export const FinalCTASection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground mb-4"
           >
-            Fully managed AI chatbot. No contracts. No technical skills needed. We install everything.
+            Tell us what is slowing you down. We will tell you which of our services will fix it - and what
+            it will take.
           </motion.p>
 
           <motion.p
@@ -64,13 +60,12 @@ export const FinalCTASection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.18 }}
           >
-            <MagneticButton
-              className="btn-primary group"
-              onClick={() => scrollToSection("#pricing")}
-            >
-              Start Your 3-Day Free Trial
-              <ArrowRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover:translate-x-1" />
-            </MagneticButton>
+            <Link href="/contact">
+              <MagneticButton className="btn-primary group">
+                Book a Free Consultation
+                <ArrowRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover:translate-x-1" />
+              </MagneticButton>
+            </Link>
           </motion.div>
         </div>
       </div>

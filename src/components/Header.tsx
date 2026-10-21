@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, Bot, User, LogIn } from "lucide-react";
-import { useUser, SignedIn, SignedOut } from "@clerk/nextjs";
+import { Menu, Bot, User } from "lucide-react";
+import { SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { MagneticButton } from "./MagneticButton";
@@ -25,8 +25,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: "About", href: "/about", isRoute: true },
+  { label: "Services", href: "/services", isRoute: true },
   { label: "Industries", href: "/industries", isRoute: true },
-  { label: "Pricing", href: "/pricing", isRoute: true },
   { label: "Case Studies", href: "/case-studies", isRoute: true },
   { label: "Contact", href: "/contact", isRoute: true },
   { label: "Blog", href: "/blog", isRoute: true },
@@ -67,12 +67,6 @@ export const Header = () => {
       const element = document.querySelector(item.href);
       element?.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false);
-  };
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
 
@@ -140,20 +134,11 @@ export const Header = () => {
                 </MagneticButton>
               </Link>
             </SignedIn>
-            <SignedOut>
-              <Link href="/auth">
-                <MagneticButton className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  <LogIn className="w-4 h-4" />
-                  Sign In
-                </MagneticButton>
-              </Link>
-            </SignedOut>
-            <MagneticButton
-              className="btn-primary text-xs"
-              onClick={() => scrollToSection("#pricing")}
-            >
-              Start Free Trial
-            </MagneticButton>
+            <Link href="/contact">
+              <MagneticButton className="btn-primary text-xs">
+                Book a Consultation
+              </MagneticButton>
+            </Link>
           </div>
 
           {/* Mobile Menu */}
@@ -216,24 +201,13 @@ export const Header = () => {
                       </Link>
                     </SheetClose>
                   </SignedIn>
-                  <SignedOut>
-                    <SheetClose asChild>
-                      <Link
-                        href="/auth"
-                        className="flex items-center gap-2 w-full p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
-                      >
-                        <LogIn className="w-5 h-5 text-primary" />
-                        <span className="font-medium">Sign In</span>
-                      </Link>
-                    </SheetClose>
-                  </SignedOut>
                   <SheetClose asChild>
-                    <button
-                      onClick={() => scrollToSection("#pricing")}
+                    <Link
+                      href="/contact"
                       className="btn-primary w-full text-center"
                     >
-                      Start Free Trial
-                    </button>
+                      Book a Consultation
+                    </Link>
                   </SheetClose>
                 </div>
               </div>

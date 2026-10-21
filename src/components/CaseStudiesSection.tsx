@@ -2,31 +2,45 @@ import { motion } from "framer-motion";
 
 const caseStudies = [
   {
-    title: "How The Northern Grill Cut Enquiry Response Time from 12 Hours to 3 Seconds",
-    business: "The Northern Grill",
-    industry: "Restaurant",
-    location: "Manchester",
-    challenge: "The Northern Grill was missing 40% of reservation enquiries because calls came in after hours. Their team spent 2+ hours daily on repetitive questions about menus, allergens, and bookings.",
-    solution: "AIVized deployed a restaurant-specific AI chatbot trained on their menu, pricing, allergen info, reservation policies, and event packages. Installed within 24 hours.",
+    title: "How a Bristol Retailer Grew Organic Revenue 68% with a Rebuilt Storefront and Technical SEO",
+    business: "Urban Threads UK",
+    industry: "E-commerce",
+    location: "Bristol",
+    challenge: "Urban Threads had outgrown a slow, template-based store. Product pages were hard to find in search, mobile conversion was falling, and the team had no clear view of which channels actually drove sales.",
+    solution: "AIVized rebuilt the storefront for speed and conversion, fixed technical SEO and structured data, launched a GEO-ready content plan, and added automated abandoned-cart and post-purchase email flows.",
     results: [
-      "80% of enquiries handled automatically by AI",
-      "Average response time dropped from 12 hours to under 3 seconds",
-      "30% reduction in no-shows via automated reminders",
-      "Front-of-house team reclaimed 15+ hours per week",
+      "68% increase in organic revenue within six months",
+      "41% faster page load on mobile",
+      "32% reduction in cart abandonment through automated recovery",
+      "Clear channel-level reporting across SEO, email, and paid",
     ],
   },
   {
-    title: "Thompson & Co. Increased Lead Capture by 45% with 24/7 AI Chatbot",
-    business: "Thompson & Co. Estate Agents",
-    industry: "Real Estate",
-    location: "London",
-    challenge: "Thompson & Co. had 5 negotiators handling calls, emails, and website enquiries. After-hours property enquiries from Rightmove and their own site went unanswered until the next morning, losing leads to competitors.",
-    solution: "AIVized installed a fully managed AI chatbot that qualifies property viewing requests, answers valuation enquiries, captures tenant details, and schedules appointments automatically.",
+    title: "How a Manchester Consultancy Saved 30 Hours a Week with AI Triage and CRM Automation",
+    business: "Northbridge Consulting",
+    industry: "Professional Services",
+    location: "Manchester",
+    challenge: "Every new enquiry arrived by email or web form and was manually read, categorised, and forwarded. Senior consultants were losing billable time to admin, and high-value leads sometimes waited days for a reply.",
+    solution: "We built an AI enquiry triage system that reads each request, scores fit and urgency, routes it to the right consultant, and logs everything in the CRM. Automated follow-up sequences and proposal reminders completed the workflow.",
     results: [
-      "45% increase in qualified lead capture within the first month",
-      "Viewing bookings captured 24/7, including Sundays and bank holidays",
-      "Staff saved 20+ hours per week on enquiry filtering",
-      "ROI achieved within 6 weeks of deployment",
+      "30 hours a week returned to billable work",
+      "Average first-response time cut from 2 days to 18 minutes",
+      "100% of enquiries logged and tracked in the CRM",
+      "Higher-quality discovery calls through automated qualification",
+    ],
+  },
+  {
+    title: "How a London Hospitality Group Increased Direct Bookings 41% with Local SEO and Automated Follow-Up",
+    business: "The London Table Group",
+    industry: "Hospitality",
+    location: "London",
+    challenge: "The group relied heavily on third-party booking platforms and was invisible for several high-intent local searches. Booking enquiries that arrived after hours were often lost before the team opened the next morning.",
+    solution: "AIVized rebuilt the booking journey, improved local SEO and Google Business profiles for each venue, and added automated reminders, review requests, and after-hours enquiry capture.",
+    results: [
+      "41% increase in direct bookings",
+      "Top-three local rankings for priority venue searches",
+      "28% reduction in no-shows with automated reminders",
+      "More reviews and stronger local visibility across venues",
     ],
   },
 ];
@@ -72,6 +86,9 @@ export const CaseStudiesSection = () => {
                 </span>
                 <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-muted px-3 py-1 rounded-full">
                   {study.location}
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                  {study.business}
                 </span>
               </div>
 
