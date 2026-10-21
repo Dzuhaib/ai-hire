@@ -151,7 +151,7 @@ const ReduceMissedLeadsBlog = () => {
             <div className="not-prose my-8 p-6 rounded-lg bg-primary/10 border border-primary/20">
               <h3 className="text-lg font-semibold mb-4">The Bottom Line</h3>
               <p className="text-muted-foreground">
-                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings, 24 hours a day, 7 days a week. Starting from just <Link href="/pricing" className="text-primary hover:underline">$29/month</Link> with AIVized, it's one of the highest-ROI investments a UAE small business can make. Read our <Link href="/blog/ai-chatbot-vs-live-chat-uae" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link> to learn more.
+                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings, 24 hours a day, 7 days a week. With AIVized's fully managed service, it's one of the highest-ROI investments a UAE small business can make. Read our <Link href="/blog/ai-chatbot-vs-live-chat-uae" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link> to learn more.
               </p>
             </div>
           </motion.div>
@@ -175,10 +175,10 @@ const ReduceMissedLeadsBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Stop Missing Leads Today</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get a fully managed AI chatbot on your website from $29/month. We install everything with no technical skills needed.
+              Get a fully managed AI chatbot on your website. We install everything with no technical skills needed.
             </p>
-            <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
-              View Pricing
+            <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
+              Get in Touch
             </Link>
           </motion.div>
                   <AuthorBio />

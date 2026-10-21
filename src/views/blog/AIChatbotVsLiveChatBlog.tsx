@@ -23,7 +23,7 @@ const vsInline3 = "/assets/blog/vs-livechat-inline-3.png";
 const faqs = [
   {
     question: "Is an AI chatbot cheaper than hiring live chat agents?",
-    answer: "Significantly. A single live chat agent costs $1,800 to $2,500 per month in the UAE, and you'd need multiple agents to cover evenings and weekends. An AI chatbot from AIVized starts at $29/month and works 24/7 without breaks."
+    answer: "Significantly. A single live chat agent costs $1,800 to $2,500 per month in the UAE, and you'd need multiple agents to cover evenings and weekends. A managed AI chatbot from AIVized works 24/7 without breaks for a fraction of that cost."
   },
   {
     question: "Can an AI chatbot handle complex customer questions?",
@@ -84,7 +84,7 @@ const AIChatbotVsLiveChatBlog = () => {
               Let's start with the numbers, because for a small business, cost matters. A full-time live chat agent in the UAE costs between <strong>$1,800 and $2,500 per month</strong>. That's just for one person covering standard office hours. Want 24/7 coverage? You'll need at least three agents, pushing costs above $5,000 monthly.
             </p>
             <p>
-              An AI chatbot like AIVized starts at <Link href="/pricing" className="text-primary hover:underline"><strong>$29 per month</strong></Link>. It covers every hour of every day, handles unlimited conversations simultaneously, and never calls in sick. For a small business watching every penny, the maths speaks for itself.
+              A managed AI chatbot like AIVized covers every hour of every day, handles unlimited conversations simultaneously, and never calls in sick — for a fraction of the cost of a single live chat agent. For a small business watching every penny, the maths speaks for itself.
             </p>
 
             <BlogInlineImage src={vsInline1} alt="Split screen comparing AI chatbot and human live chat agent" />
@@ -119,7 +119,7 @@ const AIChatbotVsLiveChatBlog = () => {
                 </thead>
                 <tbody>
                   {[
-                    { feature: "Cost per month", ai: "From $29", live: "$1,800+" },
+                    { feature: "Cost per month", ai: "Scoped to your needs", live: "$1,800+" },
                     { feature: "24/7 availability", ai: true, live: false },
                     { feature: "Handles multiple chats", ai: true, live: false },
                     { feature: "Instant response", ai: true, live: false },
@@ -194,10 +194,10 @@ const AIChatbotVsLiveChatBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Try an AI Chatbot for Your Business</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get 24/7 customer support on your website from just $29/month. Fully managed. We install everything for you.
+              Get 24/7 customer support on your website. Fully managed. We install everything for you.
             </p>
-            <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
-              View Pricing
+            <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
+              Get in Touch
             </Link>
           </motion.div>
                   <AuthorBio />

@@ -33,9 +33,9 @@ export default function NotFound() {
             </Link>
           </div>
           <p className="text-sm text-muted-foreground">
-            Looking for pricing?{" "}
-            <Link href="/pricing" className="text-primary hover:underline">
-              View our plans
+            Looking for something else?{" "}
+            <Link href="/contact" className="text-primary hover:underline">
+              Get in touch
             </Link>
           </p>
         </div>

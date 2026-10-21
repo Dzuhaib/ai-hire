@@ -40,7 +40,7 @@ First, AIVized is fully managed. From initial consultation through to ongoing op
 
 Second, AIVized understands the ${cityName} market specifically. The chatbot is trained not just on generic customer service responses but on the specific needs, preferences, and expectations of ${cityName} customers. Whether it's the local dialect, the types of products and services commonly requested, or the seasonal patterns that affect enquiry volume, AIVized's team accounts for these local factors during the training process. The result is a chatbot that speaks the language of ${cityName} customers and understands their specific concerns.
 
-Third, AIVized offers transparent, affordable pricing starting from just $29/month with no hidden fees, no per-message charges, and no long-term contracts. For a ${cityName} business that might otherwise spend $25,000-$30,000 annually on a customer service representative, AIVized provides 24/7 coverage for a fraction of the cost. The return on investment is immediate and measurable — every captured lead, every booked appointment, and every unanswered question that is now handled automatically represents a direct financial benefit.
+Third, AIVized offers transparent, fully managed engagements with no hidden fees, no per-message charges, and no long-term contracts. For a ${cityName} business that might otherwise spend $25,000-$30,000 annually on a customer service representative, AIVized provides 24/7 coverage for a fraction of the cost. The return on investment is immediate and measurable — every captured lead, every booked appointment, and every unanswered question that is now handled automatically represents a direct financial benefit.
 
 Finally, AIVized commits to continuous improvement. The AI chatbot doesn't just install and forget — it is monitored, refined, and retrained on a regular basis to ensure it remains accurate and effective. ${cityName} businesses receive monthly performance reports with actionable insights, and the team is available for support whenever needed. This ongoing partnership means the chatbot gets better over time, providing increasingly valuable service to both the business and its customers.`;
 
@@ -55,7 +55,6 @@ Looking at the broader ${region} context, ${cityName} businesses that adopt AI c
     { text: `24/7 AI chat agents for ${cityName}`, url: `/industries/customer-support/${citySlug}`, description: `Discover managed AI chat agents available around the clock` },
     { text: `Website chatbot for ${cityName} businesses`, url: `/industries/ecommerce/${citySlug}`, description: `Get a custom-trained website chatbot that captures more leads` },
     { text: `See all AIVized locations across the UAE`, url: "/locations", description: `Browse all ${location?.population ? 'UAE city' : 'city'} locations where AIVized operates` },
-    { text: `View AIVized pricing plans`, url: "/pricing", description: `Choose from plans starting at $29/month` },
     { text: `Read about AIVized case studies`, url: "/case-studies", description: `See how UAE businesses are transforming with AI chatbots` },
     { text: `Contact AIVized today`, url: "/contact", description: `Get in touch to discuss your ${cityName} AI chatbot needs` },
     { text: `Explore all industries AIVized serves`, url: "/industries", description: `Find industry-specific AI chatbot solutions` },

@@ -150,7 +150,7 @@ export function localBusinessSchema(opts: {
       "longitude": opts.lng,
     },
     "areaServed": { "@type": "City", "name": opts.city },
-    "priceRange": "$29-$149",
+    "priceRange": "Custom",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

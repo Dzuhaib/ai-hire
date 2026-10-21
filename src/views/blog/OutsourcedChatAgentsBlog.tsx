@@ -181,7 +181,6 @@ const OutsourcedChatAgentsBlog = () => {
             <BlogInlineImage src={outsourcedInline3} alt="Comparison of AI chat agent vs traditional customer service for Abu Dhabi SMEs" />
 
             <p className="text-muted-foreground mb-6">
-              Starting from <Link href="/pricing" className="text-primary hover:underline">$29 per month</Link>,
               AIVized&apos;s managed AI chat agent service includes setup, training, monitoring, and ongoing updates.
               There are no large upfront costs and no long-term contracts. Explore how AI chatbots help{" "}
               <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">
@@ -216,10 +215,10 @@ const OutsourcedChatAgentsBlog = () => {
                 scope, and explain exactly what happens next.
               </p>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
               >
-                View Pricing Plans
+                Get in Touch
               </Link>
             </div>
           </motion.div>

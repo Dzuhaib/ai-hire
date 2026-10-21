@@ -34,7 +34,7 @@ const schema = {
   "@graph": [
     blogPostingSchema({
       headline: "AI Chatbot for Small Business UAE: The Complete 2026 Guide to WhatsApp & Website Chatbots",
-      description: "Complete guide to AI chatbots for UAE small businesses. Compare managed vs DIY options, understand what to look for, and learn how to get started from $29/month.",
+      description: "Complete guide to AI chatbots for UAE small businesses. Compare managed vs DIY options, understand what to look for, and learn how to get started.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-chatbot-guide-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-06",

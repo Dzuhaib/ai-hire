@@ -107,14 +107,14 @@ const AdminDashboard = () => {
       if (error) throw error;
 
       if (!data?.isAdmin) {
-        router.push("/dashboard");
+        router.push("/");
         return;
       }
 
       setIsAdmin(true);
       await loadData();
     } catch {
-      router.push("/dashboard");
+      router.push("/");
     } finally {
       setLoading(false);
     }
@@ -249,9 +249,9 @@ const AdminDashboard = () => {
         <div className="container-narrow py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <Link href="/dashboard" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                 <ArrowLeft className="w-4 h-4" />
-                <span className="text-sm">Back to Dashboard</span>
+                <span className="text-sm">Back to Home</span>
               </Link>
             </div>
             

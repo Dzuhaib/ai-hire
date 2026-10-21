@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { CLERK_PUBLISHABLE_KEY } from "@/lib/clerk";
 import Index from "@/pages/Index";
 import NotFound from "@/pages/NotFound";
-import PaymentSuccess from "@/pages/PaymentSuccess";
-import Dashboard from "@/pages/Dashboard";
 import AuthPage from "@/pages/AuthPage";
 import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
 import AdminDashboard from "@/pages/AdminDashboard";
@@ -16,7 +14,6 @@ import LocationsPage from "@/pages/LocationsPage";
 import IndustryPage from "@/pages/IndustryPage";
 import IndustriesPage from "@/pages/IndustriesPage";
 import IndustryCityPage from "@/pages/IndustryCityPage";
-import PricingPage from "@/pages/PricingPage";
 import BlogsPage from "@/pages/BlogsPage";
 import WhatsAppChatbotBlog from "@/pages/blog/WhatsAppChatbotBlog";
 import WebsiteChatbotBlog from "@/pages/blog/WebsiteChatbotBlog";
@@ -62,13 +59,10 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
-          <Route path="/pricing" element={<PricingPage />} />
           {/* Location pages (kept live but removed from navigation) */}
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/locations/:city" element={<LocationPage />} />

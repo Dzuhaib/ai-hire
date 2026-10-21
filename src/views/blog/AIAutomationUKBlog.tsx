@@ -35,11 +35,11 @@ const AIAutomationUKBlog = () => {
     },
     {
       question: "What is the ROI of AI automation for business UAE?",
-      answer: "UAE businesses typically see ROI within 2 to 3 months of implementing AI automation. Key improvements include faster response times, more leads captured from out-of-hours enquiries, and significant time savings on repetitive customer service tasks. At $29 per month, the cost is lower than a single hour of additional staffing, making it the most accessible AI automation for business UAE solution available."
+      answer: "UAE businesses typically see ROI within 2 to 3 months of implementing AI automation. Key improvements include faster response times, more leads captured from out-of-hours enquiries, and significant time savings on repetitive customer service tasks. The ongoing cost is usually lower than a single hour of additional staffing, making it one of the most accessible AI automation for business UAE options available."
     },
     {
       question: "Is AI automation for business UAE suitable for very small businesses?",
-      answer: "Small businesses benefit most from AI automation for business UAE because every missed enquiry matters and there is rarely a dedicated team to cover out-of-hours messages. AIVized's managed service starts from $29 per month, accessible to sole traders, micro-businesses, and growing SMEs. There is no minimum volume requirement."
+      answer: "Small businesses benefit most from AI automation for business UAE because every missed enquiry matters and there is rarely a dedicated team to cover out-of-hours messages. AIVized's managed service is fully managed and accessible to sole traders, micro-businesses, and growing SMEs. There is no minimum volume requirement."
     }
   ];
 
@@ -184,7 +184,7 @@ const AIAutomationUKBlog = () => {
             <BlogInlineImage src={automationInline3} alt="Four-step managed AI automation for business UAE process" />
 
             <p className="text-muted-foreground mb-6">
-              Plans for AI automation for business UAE start from <Link href="/pricing" className="text-primary hover:underline">$29 per month</Link> with no long-term contracts and a 3-day free trial. See how <Link href="/#how-it-works" className="text-primary hover:underline">our simple setup process</Link> works, or read about <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">how to automate enquiries without losing the personal touch</Link>.
+              AI automation for business UAE is fully managed with no long-term contracts. See how <Link href="/#how-it-works" className="text-primary hover:underline">our simple setup process</Link> works, or read about <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">how to automate enquiries without losing the personal touch</Link>.
             </p>
 
             <section className="mt-16">
@@ -210,13 +210,13 @@ const AIAutomationUKBlog = () => {
                 Get Started with AI Automation for Business UAE Today
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                AIVized provides fully managed AI automation for business UAE across all industries. We handle installation, training, monitoring, and updates. From $29/month.
+                AIVized provides fully managed AI automation for business UAE across all industries. We handle installation, training, monitoring, and updates. Get in touch to discuss what your business needs.
               </p>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
               >
-                View Pricing Plans
+                Get in Touch
               </Link>
             </div>
           </motion.div>

@@ -233,8 +233,7 @@ const PrivacyPolicy = () => {
                     <h3 className="font-semibold mb-2">Our Services</h3>
                     <ul className="space-y-2 text-sm">
                       <li>
-                        <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> (from $29/month)</span>
+                        <Link href="/contact" className="text-primary hover:underline">Get in Touch</Link>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
@@ -271,7 +270,6 @@ const PrivacyPolicy = () => {
                       </li>
                       <li>
                         <Link href="/refund-policy" className="text-primary hover:underline">Refund Policy</Link>
-                        <span className="text-muted-foreground"> (14-day money-back guarantee)</span>
                       </li>
                       <li>
                         <Link href="/" className="text-primary hover:underline">Back to Homepage</Link>

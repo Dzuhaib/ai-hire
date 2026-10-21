@@ -11,7 +11,7 @@ const post = getBlogBySlug(SLUG);
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
   const title = post?.metaTitle || "Managed WhatsApp Chatbot for UAE Businesses ";
-  const description = post?.metaDescription || "Set up a WhatsApp chatbot for your UAE business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From $29/month.";
+  const description = post?.metaDescription || "Set up a WhatsApp chatbot for your UAE business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7.";
   return {
     title,
     description,

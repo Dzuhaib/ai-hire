@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, Bot, User } from "lucide-react";
-import { SignedIn } from "@clerk/nextjs";
+import { Menu, Bot } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { MagneticButton } from "./MagneticButton";
@@ -124,16 +123,8 @@ export const Header = () => {
             )}
           </nav>
 
-          {/* Desktop Auth/CTA */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <SignedIn>
-              <Link href="/dashboard">
-                <MagneticButton className="flex items-center gap-2 px-4 py-2 text-sm border border-border rounded-lg hover:border-primary/50 hover:bg-secondary transition-all">
-                  <User className="w-4 h-4" />
-                  Dashboard
-                </MagneticButton>
-              </Link>
-            </SignedIn>
             <Link href="/contact">
               <MagneticButton className="btn-primary text-xs">
                 Book a Consultation
@@ -190,17 +181,6 @@ export const Header = () => {
                 </nav>
                 
                 <div className="mt-auto pb-8 space-y-3">
-                  <SignedIn>
-                    <SheetClose asChild>
-                      <Link
-                        href="/dashboard"
-                        className="flex items-center gap-2 w-full p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
-                      >
-                        <User className="w-5 h-5 text-primary" />
-                        <span className="font-medium">Dashboard</span>
-                      </Link>
-                    </SheetClose>
-                  </SignedIn>
                   <SheetClose asChild>
                     <Link
                       href="/contact"

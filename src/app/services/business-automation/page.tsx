@@ -4,11 +4,11 @@ import BusinessAutomationPage from "@/views/services/BusinessAutomationPage";
 
 export const metadata: Metadata = {
   title: "AI Agency for Business Automation | UAE Process Automation",
-  description: "AIVized is an AI agency delivering business process automation for UAE businesses — automated follow-ups, appointment reminders, customer onboarding, and more. From $29/month.",
+    description: "AIVized is an AI agency delivering business process automation for UAE businesses — automated follow-ups, appointment reminders, customer onboarding, and more. Fully managed and tailored to your business.",
   alternates: { canonical: "https://www.aivized.com/services/business-automation" },
   openGraph: {
     title: "AI Agency for Business Automation | UAE Process Automation",
-    description: "AIVized is an AI agency delivering business process automation for UAE businesses — automated follow-ups, appointment reminders, customer onboarding, and more. From $29/month.",
+  description: "AIVized is an AI agency delivering business process automation for UAE businesses — automated follow-ups, appointment reminders, customer onboarding, and more. Fully managed and tailored to your business.",
     url: "https://www.aivized.com/services/business-automation",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

@@ -7,7 +7,6 @@ const LLMS_PATH = path.join(process.cwd(), "public", "llms.txt");
 
 const pageSections: Record<string, string | undefined> = {
   "/": undefined,
-  "/pricing": "## Pricing Plans",
   "/about": "## Founder & Team",
   "/industries": "## Industries Served",
   "/industries/restaurants": "### Restaurants & Hospitality",

@@ -24,7 +24,7 @@ export async function generateMetadata({
   const data = getIndustryCityData(industry, city);
   // Use pre-crafted unique metadata from data if available; fallback to template
   const title = data?.metaTitle ?? `AI Agency for ${industry} in ${city} | AI Chatbot Services`;
-  const description = data?.metaDescription ?? `AIVized is an AI agency serving ${industry} businesses in ${city}. Fully managed AI chatbot and automation from $29/month.`;
+  const description = data?.metaDescription ?? `AIVized is an AI agency serving ${industry} businesses in ${city}. Fully managed AI chatbot and automation.`;
   const keywords = data?.metaKeywords;
   return {
     title,
@@ -68,17 +68,11 @@ export default async function Page({
             {
               "@type": "Service",
               "name": `AI Agency for ${parentIndustry.industry} in ${cityData.cityName} | AIVized`,
-              "description": `Fully managed AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation from $29/month.`,
+              "description": `Fully managed AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation.`,
               "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
               "serviceType": "AI Agency Services",
               "areaServed": { "@type": "City", "name": cityData.cityName },
-              "url": `https://www.aivized.com/industries/${industry}/${city}`,
-              "offers": {
-                "@type": "Offer",
-                "price": "29",
-                "priceCurrency": "USD",
-                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "USD", "unitCode": "MON" }
-              }
+              "url": `https://www.aivized.com/industries/${industry}/${city}`
             },
             {
               "@type": "LocalBusiness",
@@ -86,7 +80,7 @@ export default async function Page({
               "url": `https://www.aivized.com/industries/${industry}/${city}`,
               "description": `AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
               "email": "info@aivized.com",
-              "priceRange": "$29-$149",
+              "priceRange": "Custom",
               "areaServed": {
                 "@type": "City",
                 "name": cityData.cityName,

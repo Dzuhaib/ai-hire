@@ -159,7 +159,7 @@ const AutomateEnquiriesBlog = () => {
 
             <h2 id="getting-started">Start Automating the Right Way</h2>
             <p>
-              Automating customer enquiries doesn't mean removing the human element. It means adding speed and consistency while preserving warmth. With a <Link href="/#how-it-works" className="text-primary hover:underline">managed AI chatbot</Link> from AIVized, you get both: instant 24/7 responses that reflect your brand, with seamless escalation to your team for the conversations that need a human touch. Plans start from <Link href="/pricing" className="text-primary hover:underline">$29/month</Link>.
+              Automating customer enquiries doesn't mean removing the human element. It means adding speed and consistency while preserving warmth. With a <Link href="/#how-it-works" className="text-primary hover:underline">managed AI chatbot</Link> from AIVized, you get both: instant 24/7 responses that reflect your brand, with seamless escalation to your team for the conversations that need a human touch. Engagements are scoped individually with no long-term contracts.
             </p>
 
             <BlogInlineImage src={automateInline3} alt="Customers receiving quick helpful responses on mobile phones" />
@@ -189,10 +189,10 @@ const AutomateEnquiriesBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Automate Without Losing Your Personal Touch</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get a fully managed AI chatbot that sounds like your brand. From $29/month. We install everything for you.
+              Get a fully managed AI chatbot that sounds like your brand. We install everything for you.
             </p>
-            <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
-              View Pricing
+            <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
+              Get in Touch
             </Link>
           </motion.div>
                   <AuthorBio />

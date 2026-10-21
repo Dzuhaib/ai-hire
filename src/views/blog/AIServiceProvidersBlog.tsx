@@ -27,19 +27,19 @@ const AIServiceProvidersBlog = () => {
     },
     {
       question: "How much should AI services cost for a UAE small business?",
-      answer: "A managed AI chatbot service for a UAE small business should cost between $29 and $149 per month depending on the volume of conversations and the level of support included. Be cautious of providers that charge setup fees in the thousands or lock you into annual contracts before you have seen the results."
+      answer: "Cost depends on the volume of conversations and the level of support included. Be cautious of providers that charge large setup fees upfront or lock you into annual contracts before you have seen the results."
     },
     {
       question: "What questions should I ask before signing up with an AI provider?",
-      answer: "Ask: Who trains the chatbot on my business? How long does setup take? What happens when I change my prices or services? How do I contact support if something goes wrong? Is there a free trial? What is the cancellation policy? The answers tell you whether the provider is genuinely managed or a self-service platform with a managed label."
+      answer: "Ask: Who trains the chatbot on my business? How long does setup take? What happens when I change my prices or services? How do I contact support if something goes wrong? What is the cancellation policy? The answers tell you whether the provider is genuinely managed or a self-service platform with a managed label."
     },
     {
       question: "What are the red flags when evaluating AI service providers?",
-      answer: "Red flags include: no free trial or demo, vague answers about who handles ongoing maintenance, pricing that only shows setup costs with unclear monthly fees, and case studies that do not match your business type. A provider who cannot explain exactly what happens after you sign up is likely not a managed service."
+      answer: "Red flags include: no demo, vague answers about who handles ongoing maintenance, fee structures that only show setup costs with unclear ongoing costs, and case studies that do not match your business type. A provider who cannot explain exactly what happens after you sign up is likely not a managed service."
     },
     {
       question: "Is there an affordable AI chatbot for small business UAE?",
-      answer: "Yes. AIVized provides fully managed AI chatbot services from $29 per month. This includes installation, training, monitoring, and ongoing updates. There are no long-term contracts and a 3-day free trial is included so you can verify the chatbot works before committing."
+      answer: "Yes. AIVized provides fully managed AI chatbot services. This includes installation, training, monitoring, and ongoing updates. There are no long-term contracts, and each engagement is scoped to your business."
     }
   ];
 
@@ -133,7 +133,7 @@ const AIServiceProvidersBlog = () => {
               <li>Integration work: additional hours connecting to your booking system, CRM, or email</li>
             </ul>
             <p className="text-muted-foreground mb-6">
-              For a business owner whose time is worth $30 to $50 per hour, the "free" DIY tool costs several hundred pounds in the first month alone. A managed service at $29 per month that handles all of this is significantly cheaper in practice.
+              For a business owner whose time is worth $30 to $50 per hour, the "free" DIY tool costs several hundred dollars in the first month alone. A managed service that handles all of this is significantly cheaper in practice.
             </p>
 
             <BlogInlineImage src={providersInline2} alt="Cost comparison chart for DIY vs managed AI chatbot services" />
@@ -146,7 +146,7 @@ const AIServiceProvidersBlog = () => {
               <li><strong>Who trains the chatbot on my business?</strong> If the answer involves you uploading content or writing responses, it is not managed.</li>
               <li><strong>How long does setup take?</strong> A managed service should be live within 24 to 48 hours after you share your business details.</li>
               <li><strong>What happens when I change my prices or services?</strong> You should be able to contact support and have updates applied for you.</li>
-              <li><strong>Is there a free trial before I pay?</strong> Any provider confident in their service offers a trial. Avoid those that do not.</li>
+              <li><strong>Will you show me it working before I commit?</strong> Any provider confident in their service will demonstrate it. Avoid those that will not.</li>
               <li><strong>Can I cancel month to month?</strong> Long contract lock-ins before you have seen results are a red flag.</li>
               <li><strong>What is the support response time?</strong> If the chatbot goes wrong at 2am and affects customer enquiries, how quickly do they respond?</li>
             </ol>
@@ -158,7 +158,7 @@ const AIServiceProvidersBlog = () => {
               Based on what businesses report after switching providers, these are the most common red flags:
             </p>
             <ul className="text-muted-foreground">
-              <li><strong>No demo or trial:</strong> Legitimate services let you see the product before committing.</li>
+              <li><strong>No demo:</strong> Legitimate services let you see the product before committing.</li>
               <li><strong>Setup fees in the thousands:</strong> High upfront costs before you have seen results shift all the risk onto you.</li>
               <li><strong>Vague about what "managed" means:</strong> If they cannot explain exactly who does what after signup, you are likely doing it yourself.</li>
               <li><strong>Generic case studies:</strong> Case studies that do not mention the industry, business size, or measurable result are not evidence of anything.</li>
@@ -167,13 +167,13 @@ const AIServiceProvidersBlog = () => {
 
             <h2 id="how-to-assess-pricing">How to Assess Whether the Pricing Is Fair</h2>
             <p className="text-muted-foreground mb-6">
-              A managed AI chatbot for a UAE small business should cost between $29 and $149 per month depending on conversation volume and support level. Within that range, the key question is not the headline price but what is included.
+              A managed AI chatbot for a UAE small business should be priced for the value it delivers. The key question is not the headline figure but what is included.
             </p>
             <p className="text-muted-foreground mb-6">
-              Specifically, verify whether the monthly fee includes training updates, or whether those are charged separately. A $29/month plan that charges $150 every time you update your menu is not a $29 plan.
+              Specifically, verify whether training updates are included, or whether they are charged separately. An entry-level fee that comes with steep charges every time you update your menu is not good value.
             </p>
             <p className="text-muted-foreground mb-6">
-              AIVized's plans start from <Link href="/pricing" className="text-primary hover:underline">$29 per month</Link>. Monthly updates are included. There is a one-time $50 setup fee and a 3-day free trial so you can verify the chatbot works for your business before committing to a plan.
+              AIVized's managed service includes monthly updates, with no long-term contracts. Each engagement is scoped to your business so you can see it working before you commit.
             </p>
 
             <section className="mt-16">
@@ -202,10 +202,10 @@ const AIServiceProvidersBlog = () => {
                 AIVized provides fully managed AI chatbot services to UAE businesses across all industries. We handle installation, training, monitoring, and updates. You focus on running your business.
               </p>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
               >
-                See Our Plans
+                Get in Touch
               </Link>
             </div>
           </motion.div>

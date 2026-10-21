@@ -89,9 +89,9 @@ const TermsOfService = () => {
               </section>
 
               <section>
-                <h2 className="text-2xl font-serif font-semibold mb-4">5. Free Trial</h2>
+                <h2 className="text-2xl font-serif font-semibold mb-4">5. Service Scope</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  We may offer a free trial period for new subscribers. During the trial, you will have full access to the selected plan's features. At the end of the trial period, your subscription will automatically convert to a paid subscription unless you cancel before the trial ends. You will be notified before any charges are made.
+                  Each engagement is scoped in writing before any work begins. Your scope sets out the deliverables, timeline, and the outcomes we will measure. The scope can be updated by mutual agreement as your requirements change.
                 </p>
               </section>
 
@@ -153,7 +153,7 @@ const TermsOfService = () => {
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li>We do not guarantee uninterrupted access and may suspend services for maintenance, updates, or security reasons</li>
                   <li>Scheduled maintenance will be communicated in advance where possible</li>
-                  <li>Business plan subscribers receive enhanced SLA guarantees as specified in their agreement</li>
+                  <li>Enterprise clients receive enhanced SLA guarantees as specified in their agreement</li>
                   <li>We will use reasonable efforts to restore service promptly in case of outages</li>
                 </ul>
               </section>
@@ -245,8 +245,7 @@ const TermsOfService = () => {
                     <h3 className="font-semibold mb-2">Our Services</h3>
                     <ul className="space-y-2 text-sm">
                       <li>
-                        <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> (from $29/month)</span>
+                        <Link href="/contact" className="text-primary hover:underline">Get in Touch</Link>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
@@ -283,7 +282,6 @@ const TermsOfService = () => {
                       </li>
                       <li>
                         <Link href="/refund-policy" className="text-primary hover:underline">Refund Policy</Link>
-                        <span className="text-muted-foreground"> (14-day money-back guarantee)</span>
                       </li>
                       <li>
                         <Link href="/" className="text-primary hover:underline">Back to Homepage</Link>

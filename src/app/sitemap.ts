@@ -48,7 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE_URL, lastModified: coreDate },
     { url: `${BASE_URL}/about`, lastModified: coreDate },
     { url: `${BASE_URL}/services`, lastModified: coreDate },
-    { url: `${BASE_URL}/pricing`, lastModified: coreDate },
     { url: `${BASE_URL}/case-studies`, lastModified: coreDate },
     { url: `${BASE_URL}/contact`, lastModified: coreDate },
     { url: `${BASE_URL}/blog`, lastModified: coreDate },

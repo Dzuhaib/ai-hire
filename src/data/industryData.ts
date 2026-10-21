@@ -25,7 +25,7 @@ export const industries: Record<string, IndustryData> = {
     heroSubtitle: "Your AI hostess handles bookings, answers menu questions, and captures guest details 24/7 while your staff focus on delivering exceptional dining experiences.",
     description: "AI-powered reservation management and customer service for restaurants, cafés, and hospitality businesses across the UAE.",
     metaTitle: "AI Agency for Restaurants UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed restaurant AI chatbot from $29/mo. Automate reservations, menu enquiries, and guest table bookings 24/7. Fully installed by AIVized.",
+    metaDescription: "Get a managed restaurant AI chatbot. Automate reservations, menu enquiries, and guest table bookings 24/7. Fully installed by AIVized.",
     problems: [
       { title: "Missed Calls During Service", description: "When your restaurant is busy, phones go unanswered. Every missed call could be a lost booking worth $50-$500+." },
       { title: "Late-Night Booking Requests", description: "Customers want to book after 10pm when you're closed. Without 24/7 availability, they book with competitors instead." },
@@ -64,7 +64,7 @@ export const industries: Record<string, IndustryData> = {
     ],
     faqs: [
       { question: "How does a managed AI chatbot service help restaurants capture leads 24/7?", answer: "The chatbot sits on your website and takes reservations, answers menu questions, and collects guest contact details at any hour. During busy service hours or late at night when staff are unavailable, it continues working without interruption." },
-      { question: "Is this an affordable AI chatbot for restaurant websites?", answer: "Plans start from $29 per month with a one-off $50 setup fee. There are no long-term contracts and a 3-day free trial is available." },
+      { question: "Is this an affordable AI chatbot for restaurant websites?", answer: "Yes. Every engagement is scoped individually and priced for your requirements. There are no long-term contracts." },
       { question: "Can your lead generation chatbot UAE handle dietary and allergen questions?", answer: "Yes. We train the chatbot on your menu, ingredients, and allergen information during setup. It gives accurate answers to dietary queries without needing staff involvement." },
       { question: "Will this 24/7 customer support chatbot integrate with my booking system?", answer: "The AIVized chatbot works alongside your existing booking system. We configure the integration during setup so reservations flow through to your current process automatically." },
       { question: "What happens if a customer asks something the AI chatbot cannot answer?", answer: "The chatbot recognises when a question falls outside its knowledge and either collects the customer's contact details for a follow-up or escalates to you directly via email or your preferred channel." },
@@ -85,7 +85,7 @@ export const industries: Record<string, IndustryData> = {
     heroSubtitle: "Your AI property assistant handles enquiries, schedules viewings, and qualifies buyers 24/7, so you can focus on closing sales instead of answering repetitive questions.",
     description: "AI-powered lead qualification and customer service for estate agents, letting agents, and property developers across the UAE.",
     metaTitle: "AI Agency for Real Estate UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed real estate AI chatbot from $29/mo. Capture qualified buyer leads, schedule property viewings, and answer FAQs 24/7. Fully installed.",
+    metaDescription: "Get a managed real estate AI chatbot. Capture qualified buyer leads, schedule property viewings, and answer FAQs 24/7. Fully installed.",
     problems: [
       { title: "Leads Go Cold Quickly", description: "Property buyers expect instant responses. A 30-minute delay can mean losing a hot lead to a faster competitor." },
       { title: "Weekend & Evening Enquiries", description: "Most property searches happen outside office hours, evenings and weekends when your office is closed." },
@@ -119,8 +119,7 @@ export const industries: Record<string, IndustryData> = {
     stats: [
       { value: "65%", label: "Faster lead response" },
       { value: "45%", label: "More qualified viewings" },
-      { value: "24/7", label: "Lead capture" },
-      { value: "$0", label: "Per viewing scheduled" }
+      { value: "24/7", label: "Lead capture" }
     ],
     faqs: [
       { question: "How does a property AI chatbot capture leads 24/7?", answer: "The chatbot engages every visitor to your website, asks qualifying questions about their budget and requirements, and collects their contact details before passing them to an agent." },
@@ -145,7 +144,7 @@ export const industries: Record<string, IndustryData> = {
     heroSubtitle: "Your AI shopping assistant answers product questions, handles order enquiries, and recovers abandoned carts 24/7, boosting conversions while you sleep.",
     description: "AI-powered customer service and sales support for online retailers, DTC brands, and e-commerce businesses across the UAE.",
     metaTitle: "AI Agency for E-Commerce UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed e-commerce AI chatbot from $29/mo. Answer product questions, recover abandoned carts, and track customer shipments 24/7. Fully installed.",
+    metaDescription: "Get a managed e-commerce AI chatbot. Answer product questions, recover abandoned carts, and track customer shipments 24/7. Fully installed.",
     problems: [
       { title: "Cart Abandonment", description: "70% of online shopping carts are abandoned. Unanswered questions at checkout are a leading cause." },
       { title: "Limited Support Hours", description: "Customers shop at all hours but support is only available 9-5. No response means lost sales." },
@@ -205,7 +204,7 @@ export const industries: Record<string, IndustryData> = {
     heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7 while your team focuses on delivering exceptional care.",
     description: "AI-powered appointment booking and patient communication for dental practices, GP surgeries, private clinics, and healthcare businesses across the UAE.",
     metaTitle: "AI Agency for Healthcare UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed healthcare AI chatbot from $29/mo. Handle patient registration, clinic booking requests, and treatment queries 24/7. Fully installed.",
+    metaDescription: "Get a managed healthcare AI chatbot. Handle patient registration, clinic booking requests, and treatment queries 24/7. Fully installed.",
     problems: [
       { title: "Missed Calls During Appointments", description: "When staff are busy with patients, phones go unanswered. Every missed call could be a new patient worth $500+ annually." },
       { title: "Out-of-Hours Enquiries", description: "Patients search for healthcare providers evenings and weekends. Without 24/7 availability, they register with competitors." },
@@ -265,7 +264,7 @@ export const industries: Record<string, IndustryData> = {
     heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7, so your solicitors can focus on billable work.",
     description: "AI-powered client intake and enquiry management for solicitors, law firms, and legal practices across the UAE.",
     metaTitle: "AI Agency for Legal UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed legal AI chatbot for UAE law firms from $29/mo. Capture case prospects, qualify enquiries, and schedule consultations 24/7. Installed.",
+    metaDescription: "Get a managed legal AI chatbot for UAE law firms. Capture case prospects, qualify enquiries, and schedule consultations 24/7. Installed.",
     problems: [
       { title: "Missed Client Calls", description: "When solicitors are in meetings or court, potential clients call competitors. First response wins in legal services." },
       { title: "Evening & Weekend Enquiries", description: "Legal emergencies don't wait for office hours. Domestic disputes, arrests, and accidents happen at all hours." },
@@ -276,7 +275,7 @@ export const industries: Record<string, IndustryData> = {
       { title: "24/7 Client Intake", description: "Capture every potential client enquiry instantly, day or night. Never lose a case to a faster-responding competitor." },
       { title: "Intelligent Client Qualification", description: "Your AI asks the right questions to qualify prospects by case type, urgency, and budget before involving solicitors." },
       { title: "Professional First Impression", description: "Every enquiry receives a polished, professional response that reflects your firm's standards." },
-      { title: "Cost-Effective Reception", description: "Replace expensive reception staffing with AI from $29/month and redirect savings to fee-earning work." }
+      { title: "Cost-Effective Reception", description: "Replace expensive reception staffing with AI and redirect savings to fee-earning work." }
     ],
     features: [
       { title: "Client Intake", description: "Capture case details, contact information, and urgency level automatically", icon: "FileText" },
@@ -299,7 +298,6 @@ export const industries: Record<string, IndustryData> = {
     stats: [
       { value: "50%", label: "More qualified leads" },
       { value: "24/7", label: "Client intake" },
-      { value: "$25k+", label: "Annual savings vs receptionist" },
       { value: "8 sec", label: "Average response time" }
     ],
     faqs: [
@@ -325,7 +323,7 @@ export const industries: Record<string, IndustryData> = {
     heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7, turning curious browsers into committed members.",
     description: "AI-powered membership sales and customer service for gyms, personal trainers, yoga studios, and fitness businesses across the UAE.",
     metaTitle: "AI Agency for Fitness UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed fitness AI chatbot from $29/mo. Handle gym membership enquiries, class bookings, and free pass sign-ups 24/7. Fully installed by AIVized.",
+    metaDescription: "Get a managed fitness AI chatbot. Handle gym membership enquiries, class bookings, and free pass sign-ups 24/7. Fully installed by AIVized.",
     problems: [
       { title: "Lost Membership Enquiries", description: "Potential members browse gym websites at 10pm but can't get answers. By morning, they've joined a competitor." },
       { title: "Peak Time Reception Overload", description: "Reception staff are overwhelmed during busy periods, signing in members while potential new ones walk away." },
@@ -359,15 +357,14 @@ export const industries: Record<string, IndustryData> = {
     stats: [
       { value: "30%", label: "More trial bookings" },
       { value: "45%", label: "Better trial conversion" },
-      { value: "24/7", label: "Membership enquiries" },
-      { value: "$0", label: "Per enquiry handled" }
+      { value: "24/7", label: "Membership enquiries" }
     ],
     faqs: [
       { question: "Can the AI chatbot handle gym membership enquiries?", answer: "Yes. It answers questions about membership tiers, pricing, joining process, and class schedules. It can also collect contact details from interested prospects." },
       { question: "Can the chatbot book fitness classes and personal training sessions?", answer: "Yes. We integrate with your booking system so the chatbot shows available slots and takes bookings automatically." },
       { question: "Will the chatbot know about my class timetable?", answer: "Yes. We train the chatbot on your current class schedule during setup. You notify us of schedule changes and we update it as part of your monthly maintenance." },
       { question: "Can it handle enquiries about personal trainers and coaching?", answer: "Yes. The chatbot can describe each trainer's specialisation, availability, and pricing and direct the visitor to book a consultation." },
-      { question: "Does AIVized work for independent gyms as well as chains?", answer: "Yes. Plans start from $29 per month, making it accessible for independent studios, boutique gyms, and personal training businesses." },
+      { question: "Does AIVized work for independent gyms as well as chains?", answer: "Yes. Engagements are scoped individually, making the service accessible for independent studios, boutique gyms, and personal training businesses." },
       { question: "How does the chatbot help reduce member churn?", answer: "By providing fast, consistent responses to member queries and making it easy to rebook or reschedule, the chatbot removes friction that often leads to membership cancellation." }
     ],
     testimonial: {
@@ -385,7 +382,7 @@ export const industries: Record<string, IndustryData> = {
     heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7, turning dreamers into bookers while you sleep.",
     description: "AI-powered booking support and customer service for travel agents, tour operators, and tourism businesses across the UAE.",
     metaTitle: "AI Agency for Travel UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed travel AI chatbot from $29/mo. Qualify holiday bookings, answer package questions, and capture tourist leads 24/7. Fully installed.",
+    metaDescription: "Get a managed travel AI chatbot. Qualify holiday bookings, answer package questions, and capture tourist leads 24/7. Fully installed.",
     problems: [
       { title: "Complex Enquiry Volume", description: "Travel enquiries are detailed and time-consuming. Each customer wants personalised recommendations, quotes, and itinerary help." },
       { title: "Seasonal Booking Surges", description: "January and summer bring massive enquiry spikes that overwhelm small travel teams." },

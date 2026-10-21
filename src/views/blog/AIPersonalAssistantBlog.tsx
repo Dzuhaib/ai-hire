@@ -176,7 +176,7 @@ const AIPersonalAssistantBlog = () => {
               <li><strong>4. We monitor and update it:</strong> Ongoing improvements and updates when your content changes</li>
             </ol>
             <p className="text-muted-foreground mb-6">
-              Plans start from <Link href="/pricing" className="text-primary hover:underline">$29 per month</Link> with no long-term contracts and a 3-day free trial. Explore how AI chatbots help <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">automate enquiries without losing the personal touch</Link>.
+              Engagements are scoped individually with no long-term contracts. Explore how AI chatbots help <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">automate enquiries without losing the personal touch</Link>.
             </p>
 
             <section className="mt-16">
@@ -205,10 +205,10 @@ const AIPersonalAssistantBlog = () => {
                 AIVized provides managed AI personal assistants for UAE businesses across all industries. We handle installation, training, monitoring, and updates.
               </p>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
               >
-                Explore Pricing
+                Get in Touch
               </Link>
             </div>
           </motion.div>

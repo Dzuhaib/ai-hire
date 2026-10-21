@@ -139,16 +139,10 @@ const RefundPolicy = () => {
               </section>
 
               <section>
-                <h2 className="text-2xl font-serif font-semibold mb-4">10. Free Trial Conversions</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  If you sign up for a free trial:
+                <h2 className="text-2xl font-serif font-semibold mb-4">10. Service Adjustments</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Refunds may be considered where a service has not been delivered as scoped. Contact our support team and we will review the matter fairly against the terms of your engagement.
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li>You will not be charged during the trial period</li>
-                  <li>You may cancel at any time during the trial without charge</li>
-                  <li>If you do not cancel, your trial will convert to a paid subscription</li>
-                  <li>The 14-day money-back guarantee applies from the first paid charge</li>
-                </ul>
               </section>
 
               <section>
@@ -193,8 +187,7 @@ const RefundPolicy = () => {
                     <h3 className="font-semibold mb-2">Our Services</h3>
                     <ul className="space-y-2 text-sm">
                       <li>
-                        <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> (from $29/month)</span>
+                        <Link href="/contact" className="text-primary hover:underline">Get in Touch</Link>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>

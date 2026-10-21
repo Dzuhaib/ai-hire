@@ -36,7 +36,7 @@ const WhatsAppChatbotBlog = () => {
     },
     {
       question: "Is an AI chatbot for small business UAE affordable on WhatsApp?",
-      answer: "Yes. AIVized offers managed WhatsApp chatbots from $29 per month. This includes setup, training, monitoring, and ongoing updates. There is no large upfront cost and no technical work required on your part."
+      answer: "Yes. AIVized offers managed WhatsApp chatbots. This includes setup, training, monitoring, and ongoing updates. There is no large upfront cost and no technical work required on your part."
     }
   ];
 
@@ -143,7 +143,7 @@ const WhatsAppChatbotBlog = () => {
               <li>Qualified leads passed to the team with full conversation context</li>
             </ul>
             <p>
-              With managed solutions starting from <Link href="/pricing" className="text-primary hover:underline">$29/month</Link>, there's no large upfront cost and no technical skills required. Learn more about <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">how to reduce missed leads</Link> across your website and messaging channels.
+              With managed solutions, there's no large upfront cost and no technical skills required. Learn more about <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">how to reduce missed leads</Link> across your website and messaging channels.
             </p>
 
             <h2>Getting Started with a WhatsApp Chatbot</h2>
@@ -189,13 +189,13 @@ const WhatsAppChatbotBlog = () => {
               Ready to Get Your WhatsApp Chatbot?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              AIVized manages everything: connection, training, and monitoring. From $29/month with no technical skills required.
+              AIVized manages everything: connection, training, and monitoring. No technical skills required.
             </p>
             <Link
-              href="/pricing"
+              href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
             >
-              View Pricing
+              Get in Touch
             </Link>
           </motion.div>
           <AuthorBio />

@@ -98,7 +98,7 @@ const WebsiteChatbotBlog = () => {
 
             <BlogInlineImage src={websiteInline2} alt="UAE small business owner reviewing website chatbot conversations on a laptop" />
 
-            <p>For a business owner whose time is worth $30 to $50 per hour, the "free" DIY option costs several hundred pounds in the first month alone. A managed service at $29 per month that handles installation, training, and ongoing updates is significantly cheaper in practice.</p>
+            <p>For a business owner whose time is worth $30 to $50 per hour, the "free" DIY option costs several hundred pounds in the first month alone. A managed service that handles installation, training, and ongoing updates is significantly cheaper in practice.</p>
 
             <div className="not-prose my-8 p-6 rounded-lg bg-amber-500/10 border border-amber-400/20">
               <h3 className="text-lg font-semibold mb-4">Research Insight</h3>
@@ -129,7 +129,7 @@ const WebsiteChatbotBlog = () => {
               <li><strong>We install it on your site:</strong> A single script tag, no rebuild required</li>
               <li><strong>We monitor and update it:</strong> Ongoing improvements and updates when your content changes</li>
             </ol>
-            <p>Plans start from <Link href="/pricing" className="text-primary hover:underline">$29 per month</Link> with no long-term contracts.</p>
+            <p>Engagements are scoped individually with no long-term contracts.</p>
           </motion.div>
 
           <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 pt-12 border-t border-border">
@@ -146,8 +146,8 @@ const WebsiteChatbotBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-border text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Ready to Add a Chatbot to Your Website?</h3>
-            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">AIVized handles everything: installation, training, and monitoring. From $29/month with complete setup included.</p>
-            <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">View Pricing</Link>
+            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">AIVized handles everything: installation, training, and monitoring. Fully managed, with complete setup included.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">Get in Touch</Link>
           </motion.div>
           <AuthorBio />
         </article>

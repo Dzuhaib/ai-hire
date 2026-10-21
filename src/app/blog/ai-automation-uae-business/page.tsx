@@ -11,7 +11,7 @@ const post = getBlogBySlug(SLUG);
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
   const title = post?.metaTitle || "AI Automation for Business UAE | Fully Managed Service";
-  const description = post?.metaDescription || "AI automation for business UAE: capture leads 24/7, automate customer enquiries, and save time. Fully managed service installed in 24 hours from $29/month.";
+  const description = post?.metaDescription || "AI automation for business UAE: capture leads 24/7, automate customer enquiries, and save time. Fully managed service installed in 24 hours.";
   return {
     title,
     description,
@@ -34,7 +34,7 @@ const schema = {
   "@graph": [
     blogPostingSchema({
       headline: "AI Automation for Business UAE: A Practical Guide to Lead Capture & 24/7 Support",
-      description: "AI automation for business UAE: learn how UAE businesses capture leads, automate customer enquiries, and save time with a fully managed AI service from $29/month.",
+      description: "AI automation for business UAE: learn how UAE businesses capture leads, automate customer enquiries, and save time with a fully managed AI service.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-automation-uae-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-05",

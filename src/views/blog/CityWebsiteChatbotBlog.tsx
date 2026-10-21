@@ -160,7 +160,7 @@ const CityWebsiteChatbotBlog = () => {
               Implementing a website chatbot for your {data.city} business couldn't be simpler with AIVized's fully managed service:
             </p>
             <ol>
-              <li><strong>Subscribe:</strong> Choose a plan starting from just $29/month</li>
+              <li><strong>Get Started:</strong> Reach out and we&apos;ll scope the right setup for your {data.city} business</li>
               <li><strong>Share Your Details:</strong> Tell us about your {data.city} business, products, and common customer questions</li>
               <li><strong>We Install Everything:</strong> Our team deploys your custom chatbot within 24 hours</li>
               <li><strong>Watch It Work:</strong> Your AI assistant starts capturing leads and answering enquiries immediately</li>
@@ -295,13 +295,13 @@ const CityWebsiteChatbotBlog = () => {
               Ready for a 24/7 Website Chatbot in {data.city}?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Join hundreds of {data.city} businesses already using AIVized's managed website chatbot service. From $29/month with complete installation included.
+              Join {data.city} businesses already using AIVized's managed website chatbot service. Fully managed, with complete installation included.
             </p>
             <Link
-              href="/pricing"
+              href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
             >
-              View Pricing
+              Get in Touch
             </Link>
           </motion.div>
                   <AuthorBio />

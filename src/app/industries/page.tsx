@@ -6,11 +6,11 @@ import { allIndustries } from "@/data/industryData";
 export const metadata: Metadata = {
   title: "AI Agency for UAE Industries | AI Chatbot Solutions by Sector",
   description:
-    "AIVized is an AI agency serving every UAE industry: restaurants, real estate, healthcare, legal, fitness, e-commerce, and more. Fully managed AI from $29/month.",
+    "AIVized is an AI agency serving every UAE industry: restaurants, real estate, healthcare, legal, fitness, e-commerce, and more. Fully managed AI.",
   alternates: { canonical: "https://www.aivized.com/industries" },
   openGraph: {
     title: "AI Agency for UAE Industries | AI Chatbot Solutions by Sector",
-    description: "AIVized is an AI agency serving every UAE industry: restaurants, real estate, healthcare, legal, fitness, e-commerce, and more. Fully managed AI from $29/month.",
+    description: "AIVized is an AI agency serving every UAE industry: restaurants, real estate, healthcare, legal, fitness, e-commerce, and more. Fully managed AI.",
     url: "https://www.aivized.com/industries",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],

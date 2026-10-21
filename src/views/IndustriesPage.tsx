@@ -128,7 +128,7 @@ const IndustriesPage = () => {
                       </div>
                       <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{industry.description}</p>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-primary font-semibold">From $29/month</span> • 24-hour setup
+                        <span className="text-primary font-semibold">Fully managed</span> • 24-hour setup
                       </p>
                     </div>
                   </div>
@@ -153,15 +153,15 @@ const IndustriesPage = () => {
               <span className="text-sm font-medium text-primary">Ready to launch?</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Pick a plan and we’ll set it up</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Get started and we&apos;ll set it up</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Subscribe, share your website details securely, and we’ll install your AI employee within 24 hours.
+              Get in touch, share your website details securely, and we&apos;ll install your AI employee within 24 hours.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/pricing">
+              <Link href="/contact">
                 <Button size="lg" className="btn-primary">
-                  View Pricing
+                  Get in Touch
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>

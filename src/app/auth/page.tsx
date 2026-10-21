@@ -5,7 +5,7 @@ import AuthPage from "@/views/AuthPage";
 export const metadata: Metadata = {
   title: "Sign In - Access Your AI Dashboard",
   description:
-    "Sign in or create your AIVized account. Start your free trial and get an AI employee working for your UAE business in minutes.",
+    "Sign in or create your AIVized account and get an AI employee working for your UAE business in minutes.",
   alternates: { canonical: "https://www.aivized.com/auth" },
   robots: { index: false, follow: false },
 };

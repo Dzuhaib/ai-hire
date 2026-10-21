@@ -59,7 +59,7 @@ const AuthPage = () => {
 
   useEffect(() => {
     if (isLoaded && isSignedIn) {
-      router.push("/dashboard");
+      router.push("/");
     }
   }, [isSignedIn, isLoaded, router]);
 
@@ -95,7 +95,7 @@ const AuthPage = () => {
               <p className="text-muted-foreground text-sm">
                 {isSignUp
                   ? "Start automating your business with AIVized"
-                  : "Sign in to manage your AIVized dashboard"}
+                  : "Sign in to your AIVized account"}
               </p>
             </div>
 
@@ -106,14 +106,14 @@ const AuthPage = () => {
                   routing="virtual"
                   appearance={clerkAppearance}
                   signInUrl="/auth"
-                  afterSignUpUrl="/dashboard"
+                  afterSignUpUrl="/"
                 />
               ) : (
                 <SignIn
                   routing="virtual"
                   appearance={clerkAppearance}
                   signUpUrl="/auth?mode=signup"
-                  afterSignInUrl="/dashboard"
+                  afterSignInUrl="/"
                 />
               )}
             </div>

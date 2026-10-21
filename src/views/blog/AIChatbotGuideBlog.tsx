@@ -19,7 +19,7 @@ const AIChatbotGuideBlog = () => {
   const faqs = [
     {
       question: "What is the best AI chatbot for small business UAE in 2026?",
-      answer: "The best AI chatbot for small business UAE combines affordability, ease of use, and multi-channel support. AIVized offers a fully managed chatbot service from $29/month that works across your website, WhatsApp, and social media with no technical skills required. Unlike DIY builders, we handle installation, training, and ongoing optimisation."
+      answer: "The best AI chatbot for small business UAE combines affordability, ease of use, and multi-channel support. AIVized offers a fully managed chatbot service that works across your website, WhatsApp, and social media with no technical skills required. Unlike DIY builders, we handle installation, training, and ongoing optimisation."
     },
     {
       question: "How does a WhatsApp chatbot UAE work for lead generation?",
@@ -39,7 +39,7 @@ const AIChatbotGuideBlog = () => {
     },
     {
       question: "How much does an AI chatbot cost for a small business in the UAE?",
-      answer: "AI chatbot costs for UAE small businesses range from $29 to $299/month depending on features and channels. AIVized's Silver plan starts at $29/month for a single-channel chatbot, while the Gold plan at $79/month includes WhatsApp, website, and social media integration. There are no setup fees, no long-term contracts, and a 14-day money-back guarantee."
+      answer: "Cost depends on the channels and level of support you need. AIVized offers fully managed chatbot services with no setup fees and no long-term contracts. Contact us for a tailored quote based on your requirements."
     }
   ];
 
@@ -181,7 +181,7 @@ const AIChatbotGuideBlog = () => {
               <strong>Red flags to watch for:</strong> Providers who cannot show you example chatbot conversations. Contracts of 12 months or more before you have seen results. No clear answer on data storage location. Pricing that increases significantly once you need updates. Providers who promise specific traffic or lead numbers without knowing anything about your business.
             </p>
             <p className="text-muted-foreground mb-6">
-              <strong>Assessing whether the price is fair:</strong> A managed chatbot service that handles installation, training, monitoring, and updates should cost somewhere between $29 and $150 per month for most small business needs. If a provider charges more than $200 per month for a basic website chatbot, ask exactly what is included and whether those extras are things you actually need. If a provider charges less than $20 per month for a fully managed service, ask what is not included.
+              <strong>Assessing whether the price is fair:</strong> A managed chatbot service that handles installation, training, monitoring, and updates should be priced for the value it delivers. Ask exactly what is included, and be wary of quotes that seem too low to cover genuine ongoing management or too high without a clear justification.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
@@ -191,24 +191,24 @@ const AIChatbotGuideBlog = () => {
               Not all chatbot solutions are created equal. Here's what to look for when choosing an <strong>AI chatbot for small business UAE</strong>:
             </p>
 
-            <BlogInlineImage src={guideInline3} alt="Pricing comparison interface on laptop showing chatbot plans" />
+            <BlogInlineImage src={guideInline3} alt="Managed AI chatbot service overview on laptop" />
             <ol className="text-muted-foreground space-y-3 mb-6">
               <li><strong>1. Managed vs. DIY:</strong> Managed services like AIVized handle everything, while DIY builders require your time and technical knowledge. For most small businesses, managed is the better investment.</li>
               <li><strong>2. Multi-channel support:</strong> Your chatbot should work across WhatsApp, your website, and social media, not just one platform.</li>
               <li><strong>3. Customisation:</strong> It should be trained on your specific products, services, and brand voice, not generic responses.</li>
               <li><strong>4. Analytics:</strong> You need clear reporting on conversations, leads captured, and customer satisfaction to measure ROI.</li>
               <li><strong>5. UAE compliance:</strong> Ensure the provider is compliant with UAE data protection law and understands local requirements.</li>
-              <li><strong>6. Transparent pricing:</strong> No hidden fees, no long-term contracts, and ideally a money-back guarantee.</li>
+              <li><strong>6. Transparent terms:</strong> No hidden fees and no long-term contracts.</li>
             </ol>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
               Getting Started: Your AI Chatbot in Under 24 Hours
             </h2>
             <p className="text-muted-foreground mb-6">
-              With AIVized's managed service, getting an AI chatbot is as simple as subscribing to a plan. We handle the entire process, from understanding your business to deploying your chatbot across your chosen channels. No developers, no code, no headaches. Most businesses are live within 24 hours.
+              With AIVized's managed service, getting an AI chatbot is as simple as getting in touch. We handle the entire process, from understanding your business to deploying your chatbot across your chosen channels. No developers, no code, no headaches. Most businesses are live within 24 hours.
             </p>
             <p className="text-muted-foreground mb-6">
-              AIVized works with small businesses across the UAE, including restaurants, estate agents, clinics, law firms, gyms, and travel agencies. Plans start from just $29/month with a 3-day free trial and no long-term contract.
+              AIVized works with small businesses across the UAE, including restaurants, estate agents, clinics, law firms, gyms, and travel agencies. Engagements are scoped individually, with no long-term contracts.
             </p>
 
             {/* FAQ Section */}
@@ -236,13 +236,13 @@ const AIChatbotGuideBlog = () => {
                 Ready to Get Your AI Chatbot?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join thousands of UAE small businesses already using AI chatbots to capture more leads, provide 24/7 customer support, and grow faster. Plans from $29/month with a 14-day money-back guarantee.
+                Join UAE small businesses already using AI chatbots to capture more leads, provide 24/7 customer support, and grow faster. Get in touch to see how we can help.
               </p>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
               >
-                View Pricing Plans
+                Get in Touch
               </Link>
             </div>
           </motion.div>

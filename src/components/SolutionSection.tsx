@@ -4,7 +4,7 @@ const benefits = [
   "Fully managed AI chatbot service. Zero maintenance for you",
   "Continuous monitoring & immediate issue resolution",
   "Ongoing updates and improvements included",
-  "Affordable AI chatbot for website: from $29/month, no developers, no contracts",
+  "Affordable AI chatbot for website:, no developers, no contracts",
 ];
 
 export const SolutionSection = () => {

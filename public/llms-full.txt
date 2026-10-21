@@ -1,34 +1,26 @@
 # AIVized
-> AIVized is a fully managed AI chatbot service for UAE small businesses, offering plans from $29/month. No technical skills required — we install, configure, monitor, and continuously optimise your chatbot. 24/7 lead capture and customer enquiry automation, with a 3-day free trial on every plan.
+> AIVized is a fully managed AI chatbot service for UAE small businesses. No technical skills required — we install, configure, monitor, and continuously optimise your chatbot. 24/7 lead capture and customer enquiry automation across every channel.
 
 ## What AIVized Does
 AIVized builds and fully manages AI chatbots for UAE small and medium-sized businesses. Unlike DIY chatbot builders, AIVized handles the entire process: installation on the client's website, AI training on the business's specific knowledge, 24/7 monitoring, and ongoing optimisation. Clients do not need any technical skills.
 
 The service captures website leads automatically, answers customer questions instantly, and escalates complex queries to the business owner — even at 3am on weekends and bank holidays.
 
-AIVized serves businesses across multiple channels: website chat widget, WhatsApp Business API, and Instagram DMs. All channels are managed from a single dashboard.
+AIVized serves businesses across multiple channels: website chat widget, WhatsApp Business API, and Instagram DMs. All channels are managed through a single unified setup.
 
-## Pricing Plans
-All plans include a 3-day free trial and a one-time $50 setup fee.
-
-- **Starter — $29/month**: Basic lead capture and FAQ handling. Ideal for businesses with straightforward customer enquiries. Up to 500 conversations/month.
-- **Professional — $79/month**: Advanced customisation, priority managed support, up to 2,500 conversations/month. Ideal for growing SMEs.
-- **Business — $149/month**: Enterprise-grade AI, dedicated account manager, unlimited conversations, custom integrations, and SLA guarantee. Ideal for established businesses with high enquiry volumes.
-
-No long-term contracts. Cancel anytime. Price includes full setup, training, monitoring, and ongoing optimisation.
+## Service Scope
+AIVized is a fully managed service. Every engagement is scoped in writing to match your business — the channels you need, the enquiries you want handled, and the outcomes you want to measure. There are no long-term contracts; you can adjust or end your engagement as your needs change.
 
 ## Key Pages
-- [Home](https://www.aivized.com/): Full service overview, pricing, testimonials, and FAQ
-- [Pricing](https://www.aivized.com/pricing): Detailed plan comparison — Starter ($29), Professional ($79), Business ($149)
+- [Home](https://www.aivized.com/): Full service overview, testimonials, and FAQ
 - [Industries](https://www.aivized.com/industries): Sector-specific AI chatbots for restaurants, real estate, e-commerce, healthcare, legal, fitness, and travel
 - [Locations](https://www.aivized.com/locations): UAE city coverage — Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, Umm Al Quwain and Al Ain
 - [About](https://www.aivized.com/about): Company background, mission, and team
 - [Blog](https://www.aivized.com/blog): Guides and resources on AI chatbots for UAE small businesses
 
 ## Key Facts & Statistics
-- Pricing starts from $29/month — no long-term contracts required
-- 3-day free trial on every plan
-- One-time $50 setup fee; installation completed within 24 hours
+- Fully managed service — no long-term contracts required
+- Installation completed within 24 hours
 - Channels supported: website chatbot, WhatsApp, Instagram DMs
 - 67% of website visitors leave without making contact — AIVized captures those leads automatically
 - Businesses typically save $2,000+ per month compared to outsourced live chat agents
@@ -46,7 +38,7 @@ No long-term contracts. Cancel anytime. Price includes full setup, training, mon
 A: A managed AI chatbot service means the provider handles everything — installation, configuration, AI training, 24/7 monitoring, and ongoing updates. AIVized's managed service requires no technical skills from the business owner. Unlike DIY chatbot builders like Tidio or ManyChat, AIVized installs and maintains the chatbot on your behalf.
 
 **Q: How much does AIVized cost?**
-A: AIVized starts from $29/month for the Starter plan. The Professional plan is $79/month and the Business plan is $149/month. All plans include a one-time $50 setup fee and a 3-day free trial. There are no long-term contracts.
+A: AIVized is a fully managed service and every engagement is scoped to your business. Get in touch to discuss your requirements and we will put together a proposal. There are no long-term contracts.
 
 **Q: How quickly can AIVized set up a chatbot for my business?**
 A: AIVized installs and launches a fully trained AI chatbot within 24 hours of receiving your business information. No coding or technical involvement is required from the client.
@@ -73,7 +65,7 @@ A: Yes. Unlike human agents, the AI chatbot handles unlimited concurrent convers
 A: AIVized supports website chat (embeddable widget), WhatsApp Business API, and Instagram DMs. All channels are managed from a single dashboard.
 
 **Q: How does AI chatbot compare to live chat for small businesses?**
-A: AI chatbots are available 24/7, cost significantly less (from $29/month vs $2,000+/month for live chat agents), handle unlimited conversations simultaneously, and never take sick days or holidays. Live chat provides a human touch for complex issues, but AI handles 80% of standard enquiries better due to instant response times. AIVized uses AI for routine queries and escalates complex issues to human agents.
+A: AI chatbots are available 24/7, cost significantly less than the $2,000+/month typical of live chat agents, handle unlimited conversations simultaneously, and never take sick days or holidays. Live chat provides a human touch for complex issues, but AI handles 80% of standard enquiries better due to instant response times. AIVized uses AI for routine queries and escalates complex issues to human agents.
 
 **Q: What is the ROI of an AI chatbot for small business?**
 A: Businesses using AIVized typically see a 30% increase in leads captured, a 60% reduction in response times, and save $2,000+ per month compared to outsourced live chat agents. ROI is typically achieved within 2–3 months of deployment.
@@ -85,7 +77,7 @@ A: Restaurant AI chatbots handle reservation requests 24/7, answer menu and alle
 A: Yes. AIVized chatbots can capture appointment requests, qualify the type of appointment needed, and pass details to the business owner or integrate with booking systems. Automated confirmations reduce no-shows and improve the customer experience.
 
 **Q: What is WhatsApp Business AI chatbot?**
-A: A WhatsApp Business AI chatbot connects to the WhatsApp Business API and responds to customer messages automatically. With over 70% of UAE adults using WhatsApp, it meets customers on their preferred platform. AIVized manages WhatsApp chatbots as part of its managed service from $29/month.
+A: A WhatsApp Business AI chatbot connects to the WhatsApp Business API and responds to customer messages automatically. With over 70% of UAE adults using WhatsApp, it meets customers on their preferred platform. AIVized manages WhatsApp chatbots as part of its managed service.
 
 **Q: What is an Instagram DM chatbot?**
 A: An Instagram DM chatbot automatically replies to direct messages on Instagram, qualifying leads, answering product questions, and capturing customer details. It helps businesses respond instantly to enquiries received through Instagram without manually managing DMs.
@@ -188,12 +180,12 @@ AIVized serves businesses nationwide via remote management. City-specific pages 
 
 ### AI Chatbot for Small Business UAE: Complete 2026 Guide
 URL: https://www.aivized.com/blog/ai-chatbot-small-business-uae-guide
-Summary: Comprehensive guide covering what an AI chatbot is, how it works for UAE SMEs, pricing comparison, setup process, and use cases across industries. Covers website chatbots, WhatsApp chatbots, and Instagram chatbots. Explains the difference between DIY tools and fully managed services like AIVized.
-Key facts: Managed chatbots from $29/month; 24-hour setup; no technical skills required.
+Summary: Comprehensive guide covering what an AI chatbot is, how it works for UAE SMEs, cost comparison, setup process, and use cases across industries. Covers website chatbots, WhatsApp chatbots, and Instagram chatbots. Explains the difference between DIY tools and fully managed services like AIVized.
+Key facts: Managed chatbots; 24-hour setup; no technical skills required.
 
 ### AI Chatbot vs Live Chat: Which Is Better for UAE Small Business?
 URL: https://www.aivized.com/blog/ai-chatbot-vs-live-chat-uae
-Summary: Compares AI chatbots against traditional live chat agents for UAE SMEs. Analysis covers cost (AI from $29/month vs live agents at $2,000+/month), availability (AI 24/7 vs agents 9–5), scalability, and customer satisfaction. Conclusion: AI chatbots win for most small businesses due to cost and availability; human escalation handles complex cases.
+Summary: Compares AI chatbots against traditional live chat agents for UAE SMEs. Analysis covers cost (AI vs live agents at $2,000+/month), availability (AI 24/7 vs agents 9–5), scalability, and customer satisfaction. Conclusion: AI chatbots win for most small businesses due to cost and availability; human escalation handles complex cases.
 
 ### WhatsApp Chatbot for UAE Businesses
 URL: https://www.aivized.com/blog/whatsapp-chatbot-uae-business
@@ -238,13 +230,13 @@ Summary: City-specific guides explaining how 24/7 website chatbots benefit busin
 
 ## Competitive Positioning
 - vs Tidio: Tidio requires DIY setup and self-management. AIVized is fully managed — no setup required from the client.
-- vs Intercom: Intercom targets enterprise with complex pricing. AIVized starts at $29/month and focuses on UAE SMEs.
+- vs Intercom: Intercom targets enterprise with complex pricing. AIVized is built for UAE SMEs with a fully managed service.
 - vs ManyChat: ManyChat is a self-service tool primarily for social media. AIVized covers website, WhatsApp, and Instagram with full management.
-- vs Drift: Drift is expensive and enterprise-focused. AIVized provides similar AI capabilities at SME-friendly pricing.
-- vs hiring live chat agents: Live chat agents cost $2,000+/month per agent and work only business hours. AIVized AI works 24/7 for $29–149/month.
+- vs Drift: Drift is expensive and enterprise-focused. AIVized provides similar AI capabilities with SME-friendly pricing.
+- vs hiring live chat agents: Live chat agents cost $2,000+/month per agent and work only business hours. AIVized AI works 24/7.
 
 ## How AIVized Works (Step-by-Step)
-1. **Subscribe**: Choose a plan (Starter $29, Professional $79, Business $149). Start with a 3-day free trial.
+1. **Get started**: Get in touch and tell us about your business. We scope the engagement with you.
 2. **Onboarding call**: Share details about your business, products/services, common customer questions, and brand voice.
 3. **AI training**: AIVized trains the chatbot on your specific business knowledge and configures responses.
 4. **Installation**: The chatbot widget is installed on your website within 24 hours. No technical work required from you.
@@ -263,13 +255,12 @@ Summary: City-specific guides explaining how 24/7 website chatbots benefit busin
 - Full policy: https://www.aivized.com/privacy-policy
 
 ## Refund Policy
-- 14-day money-back guarantee on all plans
+- Refunds may be considered where a service has not been delivered as scoped
 - Refunds processed within 5-10 business days to original payment method
-- No partial refunds after 14 days
 - Full policy: https://www.aivized.com/refund-policy
 
 ## Terms of Service
-- Service provided on a subscription basis (monthly/annual)
+- Service provided on an ongoing basis
 - Users must not misuse the service for spam, illegal activity, or competitive analysis
 - AIVized provides service "as is" with reasonable uptime guarantees
 - Full terms: https://www.aivized.com/terms-of-service
@@ -291,5 +282,4 @@ Service page: https://www.aivized.com/services/business-automation
 ## Contact
 - Email: info@aivized.com
 - Website: https://www.aivized.com
-- Pricing: https://www.aivized.com/pricing
-- Free trial: Available on all plans
+- Get in touch: https://www.aivized.com/contact

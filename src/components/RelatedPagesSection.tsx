@@ -13,7 +13,7 @@ interface RelatedLink {
 }
 
 interface RelatedPagesSectionProps {
-  currentPage?: "home" | "blog" | "location" | "industry" | "legal" | "pricing";
+  currentPage?: "home" | "blog" | "location" | "industry" | "legal";
   currentSlug?: string;
   title?: string;
   subtitle?: string;
@@ -47,17 +47,8 @@ export const RelatedPagesSection = ({
     primaryLinks.push({
       title: "Home",
       href: "/",
-      description: "Managed AI chatbot for UAE small businesses from $29/month",
+      description: "Managed AI automation for UAE small businesses",
       icon: MessageCircle,
-    });
-  }
-  
-  if (currentPage !== "pricing") {
-    primaryLinks.push({
-      title: "Pricing",
-      href: "/pricing",
-      description: "Transparent AI chatbot pricing from $29/month",
-      icon: FileText,
     });
   }
   
