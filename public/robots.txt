@@ -1,4 +1,4 @@
-# AI Vized - UK AI Employee Solutions
+# AI Vized - UAE AI Employee Solutions
 # https://www.aivized.com
 
 User-agent: Googlebot

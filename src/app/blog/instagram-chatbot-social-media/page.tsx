@@ -10,8 +10,8 @@ const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "Managed Instagram Chatbot for UK Businesses ";
-  const description = post?.metaDescription || "AIVized manages a dedicated Instagram chatbot for your UK business, automating DM responses and enquiry handling 24/7. Full setup included. From £29/month.";
+  const title = post?.metaTitle || "Managed Instagram Chatbot for UAE Businesses ";
+  const description = post?.metaDescription || "AIVized manages a dedicated Instagram chatbot for your UAE business, automating DM responses and enquiry handling 24/7. Full setup included. From $29/month.";
   return {
     title,
     description,
@@ -33,8 +33,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     blogPostingSchema({
-      headline: "Instagram Chatbot for UK Businesses: Automate DMs and Capture Leads 24/7",
-      description: "Discover how an Instagram chatbot helps UK businesses automate DM responses, capture leads, and engage customers at any hour.",
+      headline: "Instagram Chatbot for UAE Businesses: Automate DMs and Capture Leads 24/7",
+      description: "Discover how an Instagram chatbot helps UAE businesses automate DM responses, capture leads, and engage customers at any hour.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/instagram-chatbot-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-01-30",
@@ -43,7 +43,7 @@ const schema = {
     breadcrumbSchema([
       { name: "Home", item: SITE_URL },
       { name: "Blog", item: `${SITE_URL}/blog` },
-      { name: "Instagram Chatbot UK", item: URL },
+      { name: "Instagram Chatbot UAE", item: URL },
     ]),
   ],
 };

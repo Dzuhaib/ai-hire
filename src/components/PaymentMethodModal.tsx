@@ -42,7 +42,7 @@ export const PaymentMethodModal = ({
         <DialogHeader>
           <DialogTitle className="text-xl font-serif">Choose Payment Method</DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Select how you'd like to pay for <span className="font-semibold text-foreground">{planName}</span> at <span className="font-semibold text-primary">£{planPrice}/month</span>
+            Select how you'd like to pay for <span className="font-semibold text-foreground">{planName}</span> at <span className="font-semibold text-primary">${planPrice}/month</span>
           </DialogDescription>
         </DialogHeader>
 

@@ -4,14 +4,14 @@ import AIServiceProvidersBlog from "@/views/blog/AIServiceProvidersBlog";
 import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { getBlogBySlug } from "@/data/blogData";
 
-const SLUG = "ai-service-providers-uk";
+const SLUG = "ai-service-providers-uae";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "How to Choose an AI Service Provider UK  Guide";
-  const description = post?.metaDescription || "Choosing an AI service provider for your UK business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.";
+  const title = post?.metaTitle || "How to Choose an AI Service Provider UAE  Guide";
+  const description = post?.metaDescription || "Choosing an AI service provider for your UAE business? This guide covers what to look for, questions to ask, and how managed AI chatbot services compare.";
   return {
     title,
     description,
@@ -33,8 +33,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     blogPostingSchema({
-      headline: "How to Choose an AI Service Provider for Your UK Business",
-      description: "A practical guide to evaluating AI service providers for UK small businesses: what to look for, what to ask, and how to avoid common pitfalls.",
+      headline: "How to Choose an AI Service Provider for Your UAE Business",
+      description: "A practical guide to evaluating AI service providers for UAE small businesses: what to look for, what to ask, and how to avoid common pitfalls.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-service-providers-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-02",
@@ -43,7 +43,7 @@ const schema = {
     breadcrumbSchema([
       { name: "Home", item: SITE_URL },
       { name: "Blog", item: `${SITE_URL}/blog` },
-      { name: "AI Service Providers UK", item: URL },
+      { name: "AI Service Providers UAE", item: URL },
     ]),
   ],
 };

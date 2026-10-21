@@ -12,7 +12,7 @@ interface AuthorBioProps {
 export function AuthorBio({
   name = "Zuhaib Ahmed",
   role = "Founder, AIVized",
-  bio = "Zuhaib Ahmed is the founder of AIVized, a managed AI chatbot service for UK small businesses. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, he writes from direct expertise in what works for UK SMEs.",
+  bio = "Zuhaib Ahmed is the founder of AIVized, a managed AI chatbot service for UAE small businesses. With hands-on experience deploying AI chatbots across restaurants, real estate, healthcare, and e-commerce, he writes from direct expertise in what works for UAE SMEs.",
   linkedIn = "https://www.linkedin.com/in/zuhaibah/",
   avatar = "/zuhaib.png",
 }: AuthorBioProps) {

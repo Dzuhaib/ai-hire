@@ -4,9 +4,9 @@ import { Calculator, Users, Bot, Sparkles, TrendingDown, Check } from "lucide-re
 import { Slider } from "@/components/ui/slider";
 
 const formatCurrency = (value: number) => {
-  return new Intl.NumberFormat('en-GB', {
+  return new Intl.NumberFormat('en-AE', {
     style: 'currency',
-    currency: 'GBP',
+    currency: 'USD',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(value);
@@ -23,8 +23,8 @@ export const CostComparisonCalculator = () => {
     business: 149,
   };
 
-  // UK minimum wage and typical customer service costs
-  const hourlyRate = 12; // Approximate UK hourly rate for customer service
+  // UAE minimum wage and typical customer service costs
+  const hourlyRate = 12; // Approximate UAE hourly rate for customer service
   const employerNI = 0.138; // Employer National Insurance
   const pensionContribution = 0.03; // Minimum pension contribution
   const trainingCost = 500; // Annual training cost

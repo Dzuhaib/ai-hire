@@ -36,7 +36,7 @@ const PricingPage = () => {
                 <span className="text-sm font-medium text-primary">Transparent Pricing</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-                Managed AI Chatbot Plans <span className="text-gradient">from £29/mo</span>
+                Managed AI Chatbot Plans <span className="text-gradient">from $29/mo</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 No hidden fees, no long-term contracts. Choose the plan that fits your business and we'll handle the rest.

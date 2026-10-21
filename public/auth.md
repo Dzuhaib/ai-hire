@@ -1,6 +1,6 @@
 # Auth.md
 
-AIVized is a managed AI chatbot service for UK small businesses. Authentication is handled via Clerk (OpenID Connect).
+AIVized is a managed AI chatbot service for UAE small businesses. Authentication is handled via Clerk (OpenID Connect).
 
 ## Public Resources (No Auth Required)
 

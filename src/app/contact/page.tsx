@@ -4,7 +4,7 @@ import ContactPage from "@/views/ContactPage";
 
 const title = "Contact Us | AIVized | Let's Build Something Better";
 const description =
-  "Get in touch with AIVized to discuss AI systems, automation, SEO and GEO, digital marketing, web development, or desktop software for your UK business.";
+  "Get in touch with AIVized to discuss AI systems, automation, SEO and GEO, digital marketing, web development, or desktop software for your UAE business.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -54,7 +54,7 @@ const contactSchema = {
         "@type": "ContactPoint",
         "contactType": "sales",
         "email": "info@aivized.com",
-        "areaServed": "GB",
+        "areaServed": "AE",
         "availableLanguage": ["English"],
       },
     },

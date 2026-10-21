@@ -194,11 +194,11 @@ const RefundPolicy = () => {
                     <ul className="space-y-2 text-sm">
                       <li>
                         <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> (from £29/month)</span>
+                        <span className="text-muted-foreground"> (from $29/month)</span>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
-                        <span className="text-muted-foreground"> (UK cities)</span>
+                        <span className="text-muted-foreground"> (UAE cities)</span>
                       </li>
                       <li>
                         <Link href="/industries" className="text-primary hover:underline">AI Chatbot by Industry</Link>
@@ -210,7 +210,7 @@ const RefundPolicy = () => {
                     <h3 className="font-semibold mb-2">Blog & Insights</h3>
                     <ul className="space-y-2 text-sm">
                       <li>
-                        <Link href="/blog/whatsapp-chatbot-uk-business" className="text-primary hover:underline">WhatsApp Chatbot Guide</Link>
+                        <Link href="/blog/whatsapp-chatbot-uae-business" className="text-primary hover:underline">WhatsApp Chatbot Guide</Link>
                       </li>
                       <li>
                         <Link href="/blog/website-chatbot-small-business" className="text-primary hover:underline">Website Chatbot Solutions</Link>

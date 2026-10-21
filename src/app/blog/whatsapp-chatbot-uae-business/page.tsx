@@ -4,14 +4,14 @@ import WhatsAppChatbotBlog from "@/views/blog/WhatsAppChatbotBlog";
 import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { getBlogBySlug } from "@/data/blogData";
 
-const SLUG = "whatsapp-chatbot-uk-business";
+const SLUG = "whatsapp-chatbot-uae-business";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "Managed WhatsApp Chatbot for UK Businesses ";
-  const description = post?.metaDescription || "Set up a WhatsApp chatbot for your UK business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From £29/month.";
+  const title = post?.metaTitle || "Managed WhatsApp Chatbot for UAE Businesses ";
+  const description = post?.metaDescription || "Set up a WhatsApp chatbot for your UAE business. AIVized manages installation, training, and monitoring. Handles customer enquiries automatically 24/7. From $29/month.";
   return {
     title,
     description,
@@ -33,8 +33,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     blogPostingSchema({
-      headline: "WhatsApp Chatbot for UK Businesses: 24/7 AI Messaging",
-      description: "Learn how a managed WhatsApp chatbot helps UK businesses capture leads and answer customer enquiries 24/7 without needing a dedicated support team.",
+      headline: "WhatsApp Chatbot for UAE Businesses: 24/7 AI Messaging",
+      description: "Learn how a managed WhatsApp chatbot helps UAE businesses capture leads and answer customer enquiries 24/7 without needing a dedicated support team.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/whatsapp-chatbot-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-01-28",
@@ -43,7 +43,7 @@ const schema = {
     breadcrumbSchema([
       { name: "Home", item: SITE_URL },
       { name: "Blog", item: `${SITE_URL}/blog` },
-      { name: "WhatsApp Chatbot UK", item: URL },
+      { name: "WhatsApp Chatbot UAE", item: URL },
     ]),
   ],
 };

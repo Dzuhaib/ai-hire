@@ -13,13 +13,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Systems, Automation & Digital Growth for UK Businesses | AIVized",
+    default: "AI Systems, Automation & Digital Growth for UAE Businesses | AIVized",
     template: "%s | AIVized",
   },
   description:
-    "AIVized delivers AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development for UK businesses.",
+    "AIVized delivers AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development for UAE businesses.",
   keywords:
-    "AI agency UK, AI systems, business automation UK, SEO and GEO, generative engine optimisation, digital marketing agency, web development UK, desktop software development, AIVized",
+    "AI agency UAE, AI systems, business automation UAE, SEO and GEO, generative engine optimisation, digital marketing agency, web development UAE, desktop software development, AIVized",
   authors: [{ name: "Zuhaib Ahmed", url: "https://www.linkedin.com/in/zuhaibah/" }],
   publisher: "Zuhaib Ahmed",
   robots: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "aivized",
-    locale: "en_GB",
+    locale: "en_AE",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
@@ -57,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-AE">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -71,7 +71,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#7C3AED" />
-        <link rel="alternate" hrefLang="en-GB" href="https://www.aivized.com/" />
+        <link rel="alternate" hrefLang="en-AE" href="https://www.aivized.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.aivized.com/" />
         {/* Google Tag Manager */}
         <script

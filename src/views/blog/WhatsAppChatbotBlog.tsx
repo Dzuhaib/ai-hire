@@ -23,7 +23,7 @@ const whatsappInline3 = "/assets/blog/whatsapp-inline-3.png";
 const WhatsAppChatbotBlog = () => {
   const faqs = [
     {
-      question: "How does a WhatsApp chatbot work for a UK business?",
+      question: "How does a WhatsApp chatbot work for a UAE business?",
       answer: "A WhatsApp chatbot connects to your business number via the official Meta Business API. When a customer sends a message, the chatbot responds instantly using a knowledge base we build from your products, services, and FAQs. It handles enquiries 24 hours a day without any action required from you."
     },
     {
@@ -35,8 +35,8 @@ const WhatsAppChatbotBlog = () => {
       answer: "A WhatsApp chatbot handles the most common customer messages: questions about pricing, services, opening hours, bookings, and availability. It can collect contact details, send automated follow-ups, and escalate complex enquiries to your team with full conversation context."
     },
     {
-      question: "Is an AI chatbot for small business UK affordable on WhatsApp?",
-      answer: "Yes. AIVized offers managed WhatsApp chatbots from £29 per month. This includes setup, training, monitoring, and ongoing updates. There is no large upfront cost and no technical work required on your part."
+      question: "Is an AI chatbot for small business UAE affordable on WhatsApp?",
+      answer: "Yes. AIVized offers managed WhatsApp chatbots from $29 per month. This includes setup, training, monitoring, and ongoing updates. There is no large upfront cost and no technical work required on your part."
     }
   ];
 
@@ -70,7 +70,7 @@ const WhatsAppChatbotBlog = () => {
               WhatsApp
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
-              WhatsApp Chatbot for UK Businesses: 24/7 AI Messaging
+              WhatsApp Chatbot for UAE Businesses: 24/7 AI Messaging
             </h1>
             <div className="flex items-center gap-6 text-muted-foreground mb-8">
               <span className="flex items-center gap-2">
@@ -83,7 +83,7 @@ const WhatsAppChatbotBlog = () => {
               </span>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-video bg-secondary relative">
-              <Image src={whatsappHero} alt="WhatsApp Chatbot for UK Business" fill className="object-cover" priority />
+              <Image src={whatsappHero} alt="WhatsApp Chatbot for UAE Business" fill className="object-cover" priority />
             </div>
           </motion.header>
 
@@ -94,13 +94,13 @@ const WhatsAppChatbotBlog = () => {
             className="prose prose-lg dark:prose-invert max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              Over 33 million people in the UK use WhatsApp regularly, and many of them prefer to contact businesses through messaging rather than phone or email. A managed WhatsApp chatbot means every message gets an instant response, whether it arrives at noon on a Tuesday or 11pm on a Sunday. If you want to understand how chatbots compare to traditional support, see our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link>.
+              Over 33 million people in the UAE use WhatsApp regularly, and many of them prefer to contact businesses through messaging rather than phone or email. A managed WhatsApp chatbot means every message gets an instant response, whether it arrives at noon on a Tuesday or 11pm on a Sunday. If you want to understand how chatbots compare to traditional support, see our <Link href="/blog/ai-chatbot-vs-live-chat-uae" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link>.
             </p>
 
-            <h2 id="how-whatsapp-chatbots-work">How WhatsApp Chatbots Work for UK Businesses</h2>
+            <h2 id="how-whatsapp-chatbots-work">How WhatsApp Chatbots Work for UAE Businesses</h2>
             <p>A WhatsApp chatbot connects to your business number via the official Meta Business API. When a customer sends a message, the chatbot responds instantly from a knowledge base built during setup. Unlike manual replies, the chatbot is available at all hours and handles multiple conversations simultaneously, so a busy Saturday evening doesn't mean a queue of unanswered messages on Monday morning.</p>
 
-            <BlogInlineImage src={whatsappInline1} alt="WhatsApp business messaging on smartphone in modern UK office" />
+            <BlogInlineImage src={whatsappInline1} alt="WhatsApp business messaging on smartphone in modern UAE office" />
 
             <p>During setup, we train your chatbot on your products, pricing, and the most common questions your customers ask. Once live, it handles:</p>
             <div className="not-prose my-8 grid gap-4">
@@ -118,24 +118,24 @@ const WhatsAppChatbotBlog = () => {
               ))}
             </div>
 
-            <h2 id="why-whatsapp-for-uk-businesses">Why WhatsApp Is the Right Channel for UK Businesses</h2>
+            <h2 id="why-whatsapp-for-uae-businesses">Why WhatsApp Is the Right Channel for UAE Businesses</h2>
             <p>WhatsApp has a message open rate above 90%, compared to around 20% for email. Customers are already using it daily. They don't need to download an app, create an account, or visit your website. They send a message the same way they'd text a friend, and the chatbot responds with the same speed.</p>
 
-            <BlogInlineImage src={whatsappInline2} alt="Customer messaging a UK business on WhatsApp and receiving instant reply" />
+            <BlogInlineImage src={whatsappInline2} alt="Customer messaging a UAE business on WhatsApp and receiving instant reply" />
 
-            <p>For UK small businesses, this matters because most enquiries arrive outside office hours, including evenings, weekends, and lunch breaks. A WhatsApp chatbot captures those enquiries without requiring you or your team to be available. Every message gets a response, every lead gets captured.</p>
+            <p>For UAE small businesses, this matters because most enquiries arrive outside office hours, including evenings, weekends, and lunch breaks. A WhatsApp chatbot captures those enquiries without requiring you or your team to be available. Every message gets a response, every lead gets captured.</p>
 
             <div className="not-prose my-8 p-6 rounded-lg bg-green-500/10 border border-green-500/20">
-              <h3 className="text-lg font-semibold mb-4">WhatsApp in the UK</h3>
-              <p className="text-muted-foreground">Over 33 million UK users check WhatsApp daily. Businesses that respond within a minute convert significantly more enquiries than those that reply the next working day. Automation closes that gap without requiring 24/7 staffing.</p>
+              <h3 className="text-lg font-semibold mb-4">WhatsApp in the UAE</h3>
+              <p className="text-muted-foreground">Over 33 million UAE users check WhatsApp daily. Businesses that respond within a minute convert significantly more enquiries than those that reply the next working day. Automation closes that gap without requiring 24/7 staffing.</p>
             </div>
 
-            <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
+            <h2 id="ai-chatbot-for-small-business-uae">AI Chatbot for Small Business UAE</h2>
             <p>Small businesses benefit most from WhatsApp automation because every missed enquiry matters. A missed DM is a missed sale with no reception team to catch it. With AIVized's managed service, your WhatsApp number has a trained AI chatbot handling enquiries from the moment the service goes live.</p>
 
             <BlogInlineImage src={whatsappInline3} alt="Small business owner reviewing customer engagement analytics on a laptop" />
 
-            <p>From corner shops to local service providers, UK small businesses that add WhatsApp automation typically see:</p>
+            <p>From corner shops to local service providers, UAE small businesses that add WhatsApp automation typically see:</p>
             <ul>
               <li>Responses to every message, regardless of time or volume</li>
               <li>More leads captured from out-of-hours enquiries</li>
@@ -143,7 +143,7 @@ const WhatsAppChatbotBlog = () => {
               <li>Qualified leads passed to the team with full conversation context</li>
             </ul>
             <p>
-              With managed solutions starting from <Link href="/pricing" className="text-primary hover:underline">£29/month</Link>, there's no large upfront cost and no technical skills required. Learn more about <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">how to reduce missed leads</Link> across your website and messaging channels.
+              With managed solutions starting from <Link href="/pricing" className="text-primary hover:underline">$29/month</Link>, there's no large upfront cost and no technical skills required. Learn more about <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">how to reduce missed leads</Link> across your website and messaging channels.
             </p>
 
             <h2>Getting Started with a WhatsApp Chatbot</h2>
@@ -189,7 +189,7 @@ const WhatsAppChatbotBlog = () => {
               Ready to Get Your WhatsApp Chatbot?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              AIVized manages everything: connection, training, and monitoring. From £29/month with no technical skills required.
+              AIVized manages everything: connection, training, and monitoring. From $29/month with no technical skills required.
             </p>
             <Link
               href="/pricing"

@@ -4,11 +4,11 @@ import PrivacyPolicy from "@/views/PrivacyPolicy";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UK GDPR.",
+    description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UAE data protection law.",
   alternates: { canonical: "https://www.aivized.com/privacy-policy" },
   openGraph: {
     title: "Privacy Policy",
-    description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UK GDPR.",
+  description: "Read the AIVized privacy policy. We are committed to protecting your personal data in compliance with UAE data protection law.",
     url: "https://www.aivized.com/privacy-policy",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -23,7 +23,7 @@ const schema = {
       "@type": "WebPage",
       "name": "Privacy Policy",
       "url": "https://www.aivized.com/privacy-policy",
-      "description": "AIVized privacy policy covering data collection, usage, and UK GDPR compliance.",
+      "description": "AIVized privacy policy covering data collection, usage, and UAE data protection compliance.",
       "publisher": { "@id": "https://www.aivized.com/#organization" },
     },
     {

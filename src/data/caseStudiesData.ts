@@ -12,11 +12,11 @@ export interface EngagementExample {
 
 export const engagementExamples: EngagementExample[] = [
   {
-    slug: "fashion-retailer-bristol",
+    slug: "fashion-retailer-fujairah",
     title: "Rebuilding a slow storefront for search and conversion",
     businessType: "Independent fashion retailer",
     industry: "E-commerce",
-    location: "Bristol",
+    location: "Fujairah",
     challenge:
       "A growing retailer had outgrown a slow, template-based store. Product pages were difficult to find in search, mobile conversion was falling, and the team lacked a clear view of which channels drove sales.",
     approach:
@@ -34,11 +34,11 @@ export const engagementExamples: EngagementExample[] = [
     ],
   },
   {
-    slug: "consultancy-manchester",
+    slug: "consultancy-abu-dhabi",
     title: "Reducing manual enquiry handling with AI triage",
     businessType: "Management consultancy",
     industry: "Professional Services",
-    location: "Manchester",
+    location: "Abu Dhabi",
     challenge:
       "New enquiries arrived by email and web form and were manually read, categorised, and forwarded. Senior consultants were losing billable time to admin, and high-value leads sometimes waited days for a reply.",
     approach:
@@ -55,11 +55,11 @@ export const engagementExamples: EngagementExample[] = [
     ],
   },
   {
-    slug: "hospitality-group-london",
+    slug: "hospitality-group-dubai",
     title: "Connecting local search, bookings, and follow-up",
     businessType: "Hospitality group",
     industry: "Hospitality",
-    location: "London",
+    location: "Dubai",
     challenge:
       "The group relied heavily on third-party booking platforms and was difficult to find for several high-intent local searches. Booking enquiries that arrived after hours were often lost before the team opened the next morning.",
     approach:
@@ -77,11 +77,11 @@ export const engagementExamples: EngagementExample[] = [
     ],
   },
   {
-    slug: "clinic-leeds",
+    slug: "clinic-ajman",
     title: "Making appointment enquiries easier to handle",
     businessType: "Private healthcare clinic",
     industry: "Healthcare",
-    location: "Leeds",
+    location: "Ajman",
     challenge:
       "Reception staff were managing a high volume of repetitive appointment questions alongside in-person patients. Evening and weekend enquiries were not being captured consistently.",
     approach:
@@ -98,11 +98,11 @@ export const engagementExamples: EngagementExample[] = [
     ],
   },
   {
-    slug: "homeware-brand-birmingham",
+    slug: "homeware-brand-sharjah",
     title: "Improving product discovery and post-purchase support",
     businessType: "Homeware e-commerce brand",
     industry: "E-commerce",
-    location: "Birmingham",
+    location: "Sharjah",
     challenge:
       "Customers struggled to find the right product, and routine questions about sizing, materials, delivery, and returns were consuming the small support team's day.",
     approach:
@@ -120,11 +120,11 @@ export const engagementExamples: EngagementExample[] = [
     ],
   },
   {
-    slug: "professional-firm-glasgow",
+    slug: "professional-firm-al-ain",
     title: "Structuring client intake and follow-up",
     businessType: "Professional services firm",
     industry: "Professional Services",
-    location: "Glasgow",
+    location: "Al Ain",
     challenge:
       "Intake was inconsistent across the team. Some enquiries were followed up quickly, others were missed, and there was no single view of where each prospect was in the process.",
     approach:

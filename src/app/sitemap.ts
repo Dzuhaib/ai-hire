@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { ukLocations } from "@/data/locationData";
+import { uaeLocations } from "@/data/locationData";
 import { industries } from "@/data/industryData";
 import { allIndustryCities } from "@/data/industryCityData";
 import { cityBlogPosts } from "@/data/cityBlogData";
@@ -27,16 +27,17 @@ const staticBlogDate = getFileDate("src/data/blogData.ts");
 const cityBlogDate = getFileDate("src/data/cityBlogData.ts");
 
 const staticBlogSlugs = [
-  "ai-chatbot-small-business-uk-guide",
-  "ai-chatbot-vs-live-chat-uk",
-  "whatsapp-chatbot-uk-business",
+  "ai-chatbot-small-business-uae-guide",
+  "ai-chatbot-vs-live-chat-uae",
+  "whatsapp-chatbot-uae-business",
   "website-chatbot-small-business",
   "instagram-chatbot-social-media",
   "reduce-missed-leads-website",
   "automate-customer-enquiries-personal-touch",
-  "ai-automation-uk-business",
-  "outsourced-chat-agents-birmingham",
-  "ai-service-providers-uk",
+  "ai-automation-uae-business",
+  "outsourced-chat-agents-abu-dhabi",
+  "ai-agency-dubai",
+  "ai-service-providers-uae",
   "ai-personal-assistant-near-me",
 ];
 
@@ -80,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: industryCityDate,
   }));
 
-  const locationPages: MetadataRoute.Sitemap = ukLocations.map((loc) => ({
+  const locationPages: MetadataRoute.Sitemap = uaeLocations.map((loc) => ({
     url: `${BASE_URL}/locations/${loc.slug}`,
     lastModified: locationDataDate,
   }));

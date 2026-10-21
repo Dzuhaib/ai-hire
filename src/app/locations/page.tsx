@@ -1,21 +1,33 @@
-export const revalidate = 86400; // ISR: revalidate every 24 hours
+export const revalidate = 86400;
 import type { Metadata } from "next";
 import LocationsPage from "@/views/LocationsPage";
-import { ukLocations } from "@/data/locationData";
+import { uaeLocations } from "@/data/locationData";
+import { services } from "@/data/servicesData";
+
+const title = "AI, Automation & Digital Services Across the UAE | AIVized";
+const description =
+  "AIVized works with businesses across the UAE, delivering AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software. Explore services by city.";
 
 export const metadata: Metadata = {
-  title: "AI Agency UK | AI Chatbot & Automation Services Across the UK",
-  description:
-    "AIVized is a leading AI agency serving businesses across the UK — London, Manchester, Birmingham, and all major cities. Fully managed AI chatbot and automation from £29/month.",
+  title: { absolute: title },
+  description,
+  keywords: [
+    "AI services UAE",
+    "automation services UAE",
+    "SEO and GEO UAE",
+    "digital marketing UAE",
+    "web development UAE",
+    "desktop software development UAE",
+  ],
   alternates: { canonical: "https://www.aivized.com/locations" },
   openGraph: {
-    title: "AI Agency UK | AI Chatbot & Automation Services Across the UK",
-    description: "AIVized is a leading AI agency serving businesses across the UK — London, Manchester, Birmingham, and all major cities. Fully managed AI chatbot and automation from £29/month.",
+    title,
+    description,
     url: "https://www.aivized.com/locations",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
+  twitter: { card: "summary_large_image", title, description, images: ["https://www.aivized.com/og-image.png"] },
 };
 
 const locationsSchema = {
@@ -24,25 +36,52 @@ const locationsSchema = {
     {
       "@type": "CollectionPage",
       "@id": "https://www.aivized.com/locations#collectionpage",
-      "name": "AI Agency UK | AIVized Locations by City",
-      "description": "AI agency services available across all major UK cities. AIVized installs and maintains your AI chatbot wherever your business is based.",
+      "name": "AI, Automation & Digital Services Across the UAE",
+      "description":
+        "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for businesses across the UAE.",
       "url": "https://www.aivized.com/locations",
+      "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "publisher": { "@id": "https://www.aivized.com/#organization" },
       "mainEntity": {
         "@type": "ItemList",
-        "itemListElement": ukLocations.map((loc, i) => ({
+        "name": "AIVized locations",
+        "itemListElement": uaeLocations.map((loc, index) => ({
           "@type": "ListItem",
-          "position": i + 1,
-          "name": `Managed AI Chatbot ${loc.city}`,
+          "position": index + 1,
+          "name": `AI, Automation & Digital Services in ${loc.city}`,
           "url": `https://www.aivized.com/locations/${loc.slug}`,
         })),
       },
     },
     {
+      "@type": "OfferCatalog",
+      "@id": "https://www.aivized.com/locations#services",
+      "name": "AIVized Services",
+      "itemListElement": services.map((service, index) => ({
+        "@type": "Offer",
+        "position": index + 1,
+        "itemOffered": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description,
+          "serviceType": service.title,
+          "provider": { "@id": "https://www.aivized.com/#organization" },
+          "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
+          "url": `https://www.aivized.com/services#${service.slug}`,
+        },
+      })),
+    },
+    {
       "@type": "BreadcrumbList",
+      "@id": "https://www.aivized.com/locations#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.aivized.com/locations" },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Locations",
+          "item": "https://www.aivized.com/locations",
+        },
       ],
     },
   ],

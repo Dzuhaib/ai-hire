@@ -75,7 +75,7 @@ export function blogPostingSchema(opts: {
     "publisher": publisherRef,
     "datePublished": opts.datePublished,
     "dateModified": opts.dateModified,
-    "inLanguage": "en-GB",
+    "inLanguage": "en-AE",
     "mainEntityOfPage": opts.url,
     "speakable": {
       "@type": "SpeakableSpecification",
@@ -103,16 +103,16 @@ export function serviceSchema(opts: {
     "description": opts.description,
     "provider": { "@id": ORG_ID },
     "serviceType": opts.serviceType ?? "AI Chatbot Management",
-    "areaServed": opts.areaServed ?? { "@type": "Country", "name": "United Kingdom" },
+    "areaServed": opts.areaServed ?? { "@type": "Country", "name": "United Arab Emirates" },
     "url": opts.url,
     "offers": {
       "@type": "Offer",
       "price": String(opts.startingPrice ?? 29),
-      "priceCurrency": "GBP",
+      "priceCurrency": "USD",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": String(opts.startingPrice ?? 29),
-        "priceCurrency": "GBP",
+        "priceCurrency": "USD",
         "unitCode": "MON",
       },
     },
@@ -142,7 +142,7 @@ export function localBusinessSchema(opts: {
       "@type": "PostalAddress",
       "addressLocality": opts.city,
       "addressRegion": opts.region,
-      "addressCountry": "GB",
+      "addressCountry": "AE",
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -150,7 +150,7 @@ export function localBusinessSchema(opts: {
       "longitude": opts.lng,
     },
     "areaServed": { "@type": "City", "name": opts.city },
-    "priceRange": "£29-£149",
+    "priceRange": "$29-$149",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

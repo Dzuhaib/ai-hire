@@ -2,7 +2,7 @@
 
 **Date:** 16 September 2026
 **URL:** https://www.aivized.com
-**Business Type:** SaaS — Managed AI Chatbot Service for UK SMEs
+**Business Type:** SaaS — Managed AI Chatbot Service for UAE SMEs
 **Build Status:** ✅ Compiling successfully (224 pages generated)
 
 ---
@@ -49,7 +49,7 @@
 ### Indexability — ✅ Pass
 - Unique sitemap dates now generated per URL type
 - Canonical tags self-referencing on all pages
-- Hreflang `en-GB` + `x-default` present
+- Hreflang `en-AE` + `x-default` present
 - No noindex tags on public pages
 - IndexNow protocol configured for Bing/Yandex
 
@@ -64,7 +64,7 @@
 
 ### Title Tags — ✅ Fixed
 All page titles now correctly append "| AIVized" exactly once via the layout template:
-- Homepage: `Managed AI Chatbot for Small Business UK | AIVized From £29/mo` (default title, no template applied)
+- Homepage: `Managed AI Chatbot for Small Business UAE | AIVized From $29/mo` (default title, no template applied)
 - Location pages: `AI Agency London | AI Chatbot & Automation Services` → template → `... | AIVized` ✅
 - Industry+City pages: `AI Agency for Restaurants in London | AI Chatbot Services` → template → `... | AIVized` ✅
 - Blog, pricing, industries: Clean single brand suffix ✅

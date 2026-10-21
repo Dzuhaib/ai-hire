@@ -30,10 +30,10 @@ const AboutPage = () => {
                 <span className="text-sm text-primary font-medium tracking-wide uppercase">About AIVized</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
-                AI, Automation &amp; Digital Growth for UK Businesses
+                AI, Automation &amp; Digital Growth for UAE Businesses
               </h1>
               <p className="lead text-xl text-muted-foreground leading-relaxed">
-                AIVized helps UK businesses design, build, and run the systems they depend on - from custom
+                AIVized helps UAE businesses design, build, and run the systems they depend on - from custom
                 AI and automation to search visibility, marketing, websites, and desktop software. We combine
                 strategy, delivery, and ongoing support in one accountable team.
               </p>
@@ -126,7 +126,7 @@ const AboutPage = () => {
             >
               <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who We Serve</h2>
               <p className="text-muted-foreground mb-6 max-w-2xl">
-                We work with UK small and medium-sized businesses that want to grow without proportionally
+                We work with UAE small and medium-sized businesses that want to grow without proportionally
                 growing their headcount, as well as larger organisations that need custom systems, software,
                 or a more joined-up digital strategy.
               </p>
@@ -193,7 +193,7 @@ const AboutPage = () => {
                   <p className="font-semibold text-foreground text-lg">Zuhaib Ahmed</p>
                   <p className="text-sm text-primary mb-3">Founder, AIVized</p>
                   <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
-                    Zuhaib founded AIVized to give UK businesses access to practical AI and digital delivery
+                    Zuhaib founded AIVized to give UAE businesses access to practical AI and digital delivery
                     without the usual agency layers. With hands-on experience building AI systems,
                     automations, websites, and search strategies across hospitality, professional services,
                     healthcare, and e-commerce, he leads client strategy and delivery personally.

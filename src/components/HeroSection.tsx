@@ -27,7 +27,7 @@ export const HeroSection = () => {
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-8 md:mb-10">
           <div className="h-px w-8 bg-primary" />
-          <span className="label-tag">AI Systems, Automation & Digital Growth - UK</span>
+          <span className="label-tag">AI Systems, Automation & Digital Growth - UAE</span>
         </div>
 
         {/* Main heading */}
@@ -39,13 +39,13 @@ export const HeroSection = () => {
 
         {/* Subheading */}
         <p className="lead text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed">
-          AIVized is a UK AI and digital agency. We design, build, and manage AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software - so your business runs smarter and grows faster.
+          AIVized is a UAE AI and digital agency. We design, build, and manage AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software - so your business runs smarter and grows faster.
         </p>
 
         <p className="text-sm text-muted-foreground/75 max-w-xl mb-12">
           One partner for strategy, build, and ongoing support. Serving businesses across{" "}
           <Link href="/locations" className="text-primary hover:underline">
-            the UK
+            the UAE
           </Link>
           .
         </p>

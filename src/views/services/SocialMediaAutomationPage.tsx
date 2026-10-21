@@ -25,7 +25,7 @@ const faqs = [
     answer: "Email us at info@aivized.com with a brief description of your business and which platforms you want to automate. We will respond within one working day with next steps and a setup timeline.",
   },
   {
-    question: "Is social media automation suitable for small UK businesses?",
+    question: "Is social media automation suitable for small UAE businesses?",
     answer: "Yes. It is most valuable for small businesses that receive regular DMs or enquiries on social media but do not have dedicated staff to respond promptly. Automation ensures every message gets an instant reply, regardless of when it arrives.",
   },
 ];
@@ -59,7 +59,7 @@ const SocialMediaAutomationPage = () => {
               <span className="text-sm text-primary font-medium tracking-wide uppercase">Managed Service</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
-              Social Media Automation for UK Businesses
+              Social Media Automation for UAE Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
               AIVized manages your Instagram, Facebook, and LinkedIn, automating DM responses, scheduling content, and keeping your audience engaged 24/7. You stay visible on social media without having to be online constantly.
@@ -125,7 +125,7 @@ const SocialMediaAutomationPage = () => {
           >
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who It Is For</h2>
             <p className="text-muted-foreground max-w-2xl mb-6">
-              Social media automation is most valuable for UK small businesses that receive regular DMs or enquiries on social media but do not have dedicated staff to respond promptly. This includes:
+              Social media automation is most valuable for UAE small businesses that receive regular DMs or enquiries on social media but do not have dedicated staff to respond promptly. This includes:
             </p>
             <ul className="space-y-2 max-w-xl">
               {[

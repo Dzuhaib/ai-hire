@@ -22,8 +22,8 @@ export const InternalLinksSection = () => {
 
   const blogArticles = [
     {
-      title: "AI Automation for UK Businesses",
-      href: "/blog/ai-automation-uk-business",
+      title: "AI Automation for UAE Businesses",
+      href: "/blog/ai-automation-uae-business",
       icon: Bot,
       keyword: "Where automation pays back fastest",
     },
@@ -34,8 +34,8 @@ export const InternalLinksSection = () => {
       keyword: "Fix the gaps in your enquiry journey",
     },
     {
-      title: "Choosing an AI Service Provider in the UK",
-      href: "/blog/ai-service-providers-uk",
+      title: "Choosing an AI Service Provider in the UAE",
+      href: "/blog/ai-service-providers-uae",
       icon: BookOpen,
       keyword: "What to look for before you buy",
     },

@@ -1,8 +1,8 @@
 # AIVized
-> AIVized is a fully managed AI chatbot service for UK small businesses, offering plans from £29/month. No technical skills required — we install, configure, monitor, and continuously optimise your chatbot. 24/7 lead capture and customer enquiry automation, with a 3-day free trial on every plan.
+> AIVized is a fully managed AI chatbot service for UAE small businesses, offering plans from $29/month. No technical skills required — we install, configure, monitor, and continuously optimise your chatbot. 24/7 lead capture and customer enquiry automation, with a 3-day free trial on every plan.
 
 ## What AIVized Does
-AIVized builds and fully manages AI chatbots for UK small and medium-sized businesses. Unlike DIY chatbot builders, AIVized handles the entire process: installation on the client's website, AI training on the business's specific knowledge, 24/7 monitoring, and ongoing optimisation. Clients do not need any technical skills.
+AIVized builds and fully manages AI chatbots for UAE small and medium-sized businesses. Unlike DIY chatbot builders, AIVized handles the entire process: installation on the client's website, AI training on the business's specific knowledge, 24/7 monitoring, and ongoing optimisation. Clients do not need any technical skills.
 
 The service captures website leads automatically, answers customer questions instantly, and escalates complex queries to the business owner — even at 3am on weekends and bank holidays.
 

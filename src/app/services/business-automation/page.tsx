@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 import BusinessAutomationPage from "@/views/services/BusinessAutomationPage";
 
 export const metadata: Metadata = {
-  title: "AI Agency for Business Automation | UK Process Automation",
-  description: "AIVized is an AI agency delivering business process automation for UK businesses — automated follow-ups, appointment reminders, customer onboarding, and more. From £29/month.",
+  title: "AI Agency for Business Automation | UAE Process Automation",
+  description: "AIVized is an AI agency delivering business process automation for UAE businesses — automated follow-ups, appointment reminders, customer onboarding, and more. From $29/month.",
   alternates: { canonical: "https://www.aivized.com/services/business-automation" },
   openGraph: {
-    title: "AI Agency for Business Automation | UK Process Automation",
-    description: "AIVized is an AI agency delivering business process automation for UK businesses — automated follow-ups, appointment reminders, customer onboarding, and more. From £29/month.",
+    title: "AI Agency for Business Automation | UAE Process Automation",
+    description: "AIVized is an AI agency delivering business process automation for UAE businesses — automated follow-ups, appointment reminders, customer onboarding, and more. From $29/month.",
     url: "https://www.aivized.com/services/business-automation",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -22,10 +22,10 @@ const schema = {
     {
       "@type": "Service",
       "name": "AI Agency for Business Automation | AIVized",
-      "description": "AI agency offering fully managed business process automation for UK small businesses. AIVized automates lead follow-up sequences, appointment reminders, customer onboarding messages, and internal notifications.",
+      "description": "AI agency offering fully managed business process automation for UAE small businesses. AIVized automates lead follow-up sequences, appointment reminders, customer onboarding messages, and internal notifications.",
       "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "email": "info@aivized.com" },
       "serviceType": "Business Process Automation",
-      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
       "url": "https://www.aivized.com/services/business-automation",
       "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "info@aivized.com" }
     },

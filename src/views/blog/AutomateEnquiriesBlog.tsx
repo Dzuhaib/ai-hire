@@ -76,7 +76,7 @@ const AutomateEnquiriesBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              "But won't it feel robotic?" That's the number one concern UK business owners have about automating customer enquiries. The good news? With the right approach, AI-powered customer service can feel more personal than a generic contact form, and far more responsive than a voicemail box. Curious how AI compares to human support? Read our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat guide</Link>.
+              "But won't it feel robotic?" That's the number one concern UAE business owners have about automating customer enquiries. The good news? With the right approach, AI-powered customer service can feel more personal than a generic contact form, and far more responsive than a voicemail box. Curious how AI compares to human support? Read our <Link href="/blog/ai-chatbot-vs-live-chat-uae" className="text-primary hover:underline">AI chatbot vs live chat guide</Link>.
             </p>
 
             <h2 id="the-fear">The Fear: Automation Equals Impersonal</h2>
@@ -146,7 +146,7 @@ const AutomateEnquiriesBlog = () => {
 
             <h2 id="real-example">A Real Example</h2>
             <p>
-              Consider a small <Link href="/industries/real-estate" className="text-primary hover:underline">estate agency</Link> in <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>. Before adding an AI chatbot, they received most enquiries via a contact form. Average response time? 6 to 8 hours during the week, longer on weekends. Many leads went cold before anyone replied.
+              Consider a small <Link href="/industries/real-estate" className="text-primary hover:underline">estate agency</Link> in <Link href="/locations/abu-dhabi" className="text-primary hover:underline">Abu Dhabi</Link>. Before adding an AI chatbot, they received most enquiries via a contact form. Average response time? 6 to 8 hours during the week, longer on weekends. Many leads went cold before anyone replied.
             </p>
             <p>
               After installing an AIVized chatbot, every visitor gets an instant response. The chatbot asks what type of property they're looking for, their budget range, and preferred areas, then sends the qualified lead directly to the agent's WhatsApp. The agent follows up personally within minutes, armed with all the context.
@@ -159,7 +159,7 @@ const AutomateEnquiriesBlog = () => {
 
             <h2 id="getting-started">Start Automating the Right Way</h2>
             <p>
-              Automating customer enquiries doesn't mean removing the human element. It means adding speed and consistency while preserving warmth. With a <Link href="/#how-it-works" className="text-primary hover:underline">managed AI chatbot</Link> from AIVized, you get both: instant 24/7 responses that reflect your brand, with seamless escalation to your team for the conversations that need a human touch. Plans start from <Link href="/pricing" className="text-primary hover:underline">£29/month</Link>.
+              Automating customer enquiries doesn't mean removing the human element. It means adding speed and consistency while preserving warmth. With a <Link href="/#how-it-works" className="text-primary hover:underline">managed AI chatbot</Link> from AIVized, you get both: instant 24/7 responses that reflect your brand, with seamless escalation to your team for the conversations that need a human touch. Plans start from <Link href="/pricing" className="text-primary hover:underline">$29/month</Link>.
             </p>
 
             <BlogInlineImage src={automateInline3} alt="Customers receiving quick helpful responses on mobile phones" />
@@ -189,7 +189,7 @@ const AutomateEnquiriesBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Automate Without Losing Your Personal Touch</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get a fully managed AI chatbot that sounds like your brand. From £29/month. We install everything for you.
+              Get a fully managed AI chatbot that sounds like your brand. From $29/month. We install everything for you.
             </p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
               View Pricing

@@ -50,8 +50,8 @@ export const faqs: FaqItem[] = [
       "SEO focuses on ranking in traditional search results. GEO, or Generative Engine Optimisation, focuses on being understood and cited by AI tools such as ChatGPT, Perplexity, and Google AI Overviews. We combine both so your business is visible wherever customers are searching.",
   },
   {
-    question: "Do you work with UK businesses?",
+    question: "Do you work with UAE businesses?",
     answer:
-      "Yes. We work with businesses across the UK, including London, Manchester, Birmingham, Leeds, Glasgow, and Bristol. Calls are scheduled to suit your time zone, and all work is delivered in English.",
+      "Yes. We work with businesses across the UAE, including Dubai, Abu Dhabi, Sharjah, Ajman, Al Ain, and Fujairah. Calls are scheduled to suit your time zone, and all work is delivered in English.",
   },
 ];

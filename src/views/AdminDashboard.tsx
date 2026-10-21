@@ -330,7 +330,7 @@ const AdminDashboard = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Monthly Revenue</p>
-                    <p className="text-2xl font-semibold">£{stats.monthlyRevenue.toFixed(2)}</p>
+                    <p className="text-2xl font-semibold">${stats.monthlyRevenue.toFixed(2)}</p>
                   </div>
                 </div>
               </motion.div>
@@ -400,7 +400,7 @@ const AdminDashboard = () => {
                           </p>
                         </div>
                         <div className="text-right">
-                          <p className="text-sm font-medium">£{sub.plan_price}</p>
+                          <p className="text-sm font-medium">${sub.plan_price}</p>
                           {getStatusBadge(sub.status)}
                         </div>
                       </div>
@@ -445,7 +445,7 @@ const AdminDashboard = () => {
                             <td className="p-4">
                               <div className="flex items-center gap-1">
                                 <DollarSign className="w-4 h-4 text-muted-foreground" />
-                                <span className="font-medium">£{payment.plan_price}/mo</span>
+                                <span className="font-medium">${payment.plan_price}/mo</span>
                               </div>
                             </td>
                             <td className="p-4">
@@ -585,7 +585,7 @@ const AdminDashboard = () => {
                           <td className="p-4">
                             <div className="flex items-center gap-1">
                               <DollarSign className="w-4 h-4 text-muted-foreground" />
-                              <span className="font-medium">£{sub.plan_price}/mo</span>
+                              <span className="font-medium">${sub.plan_price}/mo</span>
                             </div>
                           </td>
                           <td className="p-4">

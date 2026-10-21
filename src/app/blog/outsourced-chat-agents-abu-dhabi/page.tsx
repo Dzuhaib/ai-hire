@@ -4,14 +4,14 @@ import OutsourcedChatAgentsBlog from "@/views/blog/OutsourcedChatAgentsBlog";
 import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { getBlogBySlug } from "@/data/blogData";
 
-const SLUG = "outsourced-chat-agents-birmingham";
+const SLUG = "outsourced-chat-agents-abu-dhabi";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "24/7 AI Chat Agents for Birmingham Businesses ";
-  const description = post?.metaDescription || "Managed 24/7 AI chat agents for your Birmingham business. AIVized installs and maintains your chatbot. Enquiries and bookings handled automatically. From £29/month.";
+  const title = post?.metaTitle || "24/7 AI Chat Agents for Abu Dhabi Businesses";
+  const description = post?.metaDescription || "Managed 24/7 AI chat agents for your Abu Dhabi business. AIVized installs and maintains your chatbot. Enquiries and bookings handled automatically. From $29/month.";
   return {
     title,
     description,
@@ -33,8 +33,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     blogPostingSchema({
-      headline: "24/7 AI Chat Agents for Birmingham Businesses",
-      description: "Discover how Birmingham businesses use managed AI chat agents to handle customer enquiries 24/7 without hiring additional staff.",
+      headline: "24/7 AI Chat Agents for Abu Dhabi Businesses",
+      description: "Discover how Abu Dhabi businesses use managed AI chat agents to handle customer enquiries 24/7 without hiring additional staff.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/outsourced-chat-agents-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-01",
@@ -43,7 +43,7 @@ const schema = {
     breadcrumbSchema([
       { name: "Home", item: SITE_URL },
       { name: "Blog", item: `${SITE_URL}/blog` },
-      { name: "24/7 AI Chat Agents Birmingham", item: URL },
+      { name: "24/7 AI Chat Agents Abu Dhabi", item: URL },
     ]),
   ],
 };

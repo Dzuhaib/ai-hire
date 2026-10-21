@@ -19,28 +19,34 @@ const OutsourcedChatAgentsBlog = () => {
   const faqs = [
     {
       question: "How do AI chat agents differ from traditional outsourced chat agents?",
-      answer: "Traditional outsourced chat agents are human staff, usually based offshore, who respond to customer messages manually. AI chat agents are software. They respond in under a second, handle unlimited conversations simultaneously, and are available 24/7 without shift patterns, sick days, or overtime. For Birmingham businesses, the key difference is cost and consistency: AI chat agents deliver the same quality at any hour for a fixed monthly fee."
+      answer:
+        "Traditional outsourced chat agents are human staff, usually based offshore, who respond to customer messages manually. AI chat agents are software. They respond immediately, handle many conversations at once, and are available at any hour without shift patterns. For Abu Dhabi businesses, the main difference is consistency and cost: the same quality of answer is available all day for a fixed monthly fee.",
     },
     {
-      question: "What kinds of enquiries can AI chat agents handle for Birmingham businesses?",
-      answer: "AI chat agents handle the most common customer enquiries: questions about products, services, pricing, opening hours, bookings, and availability. They collect contact details from interested leads and escalate complex or sensitive enquiries to your team with full conversation context. For most Birmingham businesses, this covers 70 to 80% of incoming messages."
+      question: "What kinds of enquiries can AI chat agents handle for Abu Dhabi businesses?",
+      answer:
+        "AI chat agents handle the most common enquiries: questions about products, services, pricing, opening hours, bookings, and availability. They collect contact details from interested leads and pass complex or sensitive enquiries to your team with the full conversation attached.",
     },
     {
-      question: "How quickly can AI chat agents go live for a Birmingham business?",
-      answer: "With AIVized's managed service, most Birmingham businesses are live within 24 hours. We connect to your website or WhatsApp, train the AI on your business, test the responses, and launch. You share your business details and we handle everything else."
+      question: "How quickly can AI chat agents go live for an Abu Dhabi business?",
+      answer:
+        "It starts with a discovery call and a written scope. Once the scope and content are agreed, we connect to your website or WhatsApp, train the assistant on your business, test the responses, and launch.",
     },
     {
-      question: "Are AI chat agents affordable for small Birmingham businesses?",
-      answer: "Yes. AIVized's managed AI chat agent service starts from £29 per month. This includes installation, training, 24/7 monitoring, and ongoing updates. There are no setup fees in the thousands, no long-term contracts, and a 3-day free trial so you can verify performance before committing."
+      question: "Are AI chat agents affordable for smaller Abu Dhabi businesses?",
+      answer:
+        "Managed AI chat agents are typically far cheaper than adding full-time support headcount. We agree a fixed monthly price for the agreed scope, and ongoing support is priced separately so you always know what you are paying for.",
     },
     {
       question: "What happens when an AI chat agent can't help a customer?",
-      answer: "When a question falls outside the AI's knowledge base, it passes the conversation to your team with the full message history attached. Your team can pick up the conversation with complete context and no customer has to repeat themselves."
+      answer:
+        "When a question falls outside the assistant's knowledge, it passes the conversation to your team with the full message history attached, so no customer has to repeat themselves.",
     },
     {
-      question: "Can AI chat agents help Birmingham businesses outside office hours?",
-      answer: "This is where AI chat agents provide the clearest value. Birmingham businesses receive enquiries in the evenings, on weekends, and during public holidays, times when human staff aren't available. AI chat agents respond instantly at any hour, capturing leads and answering questions that would otherwise wait until the next working day."
-    }
+      question: "Can AI chat agents help Abu Dhabi businesses outside office hours?",
+      answer:
+        "This is where AI chat agents are most useful. Enquiries arrive in the evenings, on weekends, and during public holidays, when staff are not available. An AI chat agent can acknowledge and answer those enquiries immediately, capturing the lead instead of letting it wait until the next working day.",
+    },
   ];
 
   return (
@@ -66,7 +72,7 @@ const OutsourcedChatAgentsBlog = () => {
               Customer Support
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
-              24/7 AI Chat Agents for Birmingham Businesses
+              24/7 AI Chat Agents for Abu Dhabi Businesses
             </h1>
 
             <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
@@ -81,7 +87,7 @@ const OutsourcedChatAgentsBlog = () => {
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-video bg-secondary">
-              <Image src={heroImage} alt="24/7 AI chat agents for Birmingham businesses" fill className="object-cover" priority />
+              <Image src={heroImage} alt="AI chat agents for Abu Dhabi businesses" fill className="object-cover" priority />
             </div>
           </motion.header>
 
@@ -92,33 +98,42 @@ const OutsourcedChatAgentsBlog = () => {
             className="prose prose-lg max-w-none"
           >
             <p className="lead text-xl text-muted-foreground mb-8">
-              Birmingham is the UK's second-largest city and home to over 40,000 businesses, from independent retailers and restaurants to professional services firms and tech companies. For most of them, customer enquiries don't stop at 5pm. AI chat agents give <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham businesses</Link> a way to respond instantly to every message, around the clock, without hiring additional staff. See our <Link href="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">complete guide to AI chatbots for UK small businesses</Link>.
+              Abu Dhabi businesses serve a mix of residents, government-linked organisations, and international
+              clients. Enquiries rarely stop at 5pm. AI chat agents give{" "}
+              <Link href="/locations/abu-dhabi" className="text-primary hover:underline">Abu Dhabi businesses</Link>{" "}
+              a way to respond to common questions at any hour, without immediately adding headcount. See our{" "}
+              <Link href="/blog/ai-chatbot-small-business-uae-guide" className="text-primary hover:underline">
+                complete guide to AI chatbots for UAE small businesses
+              </Link>.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
-              Why Birmingham Businesses Need 24/7 Chat Coverage
+              Why Abu Dhabi Businesses Need Round-the-Clock Coverage
             </h2>
             <p className="text-muted-foreground mb-6">
-              Research consistently shows that the speed of first response is the strongest predictor of whether an enquiry converts into a customer. A business that responds within a minute converts significantly more leads than one that responds the next morning. For Birmingham businesses, this is a practical problem, as customers browse and send messages in the evenings and at weekends, when staff aren't at their desks.
+              The speed of the first response is one of the clearest factors in whether an enquiry turns into a
+              customer. A business that answers in seconds has an advantage over one that replies the next
+              morning. For many Abu Dhabi businesses, this is a practical problem, because people browse and send
+              messages in the evenings and at weekends, when staff are not at their desks.
             </p>
 
-            <BlogInlineImage src={outsourcedInline1} alt="AI chat agent responding to customer enquiries around the clock for a Birmingham business" />
+            <BlogInlineImage src={outsourcedInline1} alt="AI chat agent responding to customer enquiries around the clock for an Abu Dhabi business" />
 
             <div className="grid md:grid-cols-3 gap-6 my-8">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border">
                 <MessageSquare className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">Never Miss a Lead</h3>
-                <p className="text-sm text-muted-foreground">Capture enquiries at 3am just as effectively as 3pm with round-the-clock AI coverage.</p>
+                <h3 className="font-semibold mb-2">Fewer Missed Enquiries</h3>
+                <p className="text-sm text-muted-foreground">Enquiries received late at night are acknowledged and captured, not left until morning.</p>
               </div>
               <div className="p-6 rounded-xl bg-secondary/50 border border-border">
                 <Users className="w-10 h-10 text-primary mb-4" />
                 <h3 className="font-semibold mb-2">Scale Without Hiring</h3>
-                <p className="text-sm text-muted-foreground">Handle unlimited conversations simultaneously without increasing headcount or cost.</p>
+                <p className="text-sm text-muted-foreground">Handle many conversations at once without increasing headcount for every peak.</p>
               </div>
               <div className="p-6 rounded-xl bg-secondary/50 border border-border">
                 <Building2 className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">Consistent Quality</h3>
-                <p className="text-sm text-muted-foreground">Every customer receives the same accurate, on-brand response every time.</p>
+                <h3 className="font-semibold mb-2">Consistent Answers</h3>
+                <p className="text-sm text-muted-foreground">Every customer receives the same accurate, on-brand response.</p>
               </div>
             </div>
 
@@ -126,10 +141,11 @@ const OutsourcedChatAgentsBlog = () => {
               What AI Chat Agents Handle Automatically
             </h2>
             <p className="text-muted-foreground mb-6">
-              During setup, we train your AI chat agent on your products, services, pricing, and the questions your customers ask most often. Once live, the agent handles the majority of incoming messages without any action from your team.
+              During setup, we train your assistant on your products, services, pricing, and the questions your
+              customers ask most often. Once live, it handles routine messages without any action from your team.
             </p>
 
-            <BlogInlineImage src={outsourcedInline2} alt="Birmingham business owner reviewing AI chat agent conversation logs on a laptop" />
+            <BlogInlineImage src={outsourcedInline2} alt="Abu Dhabi business owner reviewing AI chat agent conversation logs on a laptop" />
 
             <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-8">
               <h3 className="font-semibold text-lg mb-4">Common Tasks Handled Automatically</h3>
@@ -139,7 +155,7 @@ const OutsourcedChatAgentsBlog = () => {
                   "Collect contact details from interested customers",
                   "Guide visitors toward booking, quoting, or purchasing",
                   "Respond to out-of-hours enquiries with immediate, accurate answers",
-                  "Pass complex or sensitive issues to your team with full conversation context"
+                  "Pass complex or sensitive issues to your team with full conversation context",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -153,21 +169,29 @@ const OutsourcedChatAgentsBlog = () => {
               AI Chat Agents vs Traditional Outsourced Chat Agents
             </h2>
             <p className="text-muted-foreground mb-6">
-              Traditional outsourced chat agents (human staff responding to messages on your behalf) typically cost several hundred pounds per month at a minimum, involve handover processes, and introduce inconsistency as different agents respond differently to the same question.
+              Traditional outsourced chat agents are human staff responding to messages on your behalf. They
+              typically cost several hundred dollars per month at a minimum, involve handover processes, and can
+              be inconsistent as different agents answer the same question differently.
             </p>
             <p className="text-muted-foreground mb-6">
-              AI chat agents respond in under a second, handle unlimited conversations simultaneously, and give the same accurate answer every time. For Birmingham businesses receiving 10 or 10,000 messages a month, the cost and consistency advantages are significant.
+              AI chat agents respond immediately, handle many conversations at once, and give the same accurate
+              answer every time. For Abu Dhabi businesses of any size, that consistency is the main advantage.
             </p>
 
-            <BlogInlineImage src={outsourcedInline3} alt="Comparison of AI chat agent vs traditional customer service costs for Birmingham SMEs" />
+            <BlogInlineImage src={outsourcedInline3} alt="Comparison of AI chat agent vs traditional customer service for Abu Dhabi SMEs" />
 
             <p className="text-muted-foreground mb-6">
-              Starting from <Link href="/pricing" className="text-primary hover:underline">£29 per month</Link>, AIVized's managed AI chat agent service includes installation, training, monitoring, and ongoing updates. There are no large upfront costs and no long-term contracts. Explore how AI chatbots help <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">reduce missed leads from your website</Link>.
+              Starting from <Link href="/pricing" className="text-primary hover:underline">$29 per month</Link>,
+              AIVized&apos;s managed AI chat agent service includes setup, training, monitoring, and ongoing updates.
+              There are no large upfront costs and no long-term contracts. Explore how AI chatbots help{" "}
+              <Link href="/blog/reduce-missed-leads-website" className="text-primary hover:underline">
+                reduce missed leads from your website
+              </Link>.
             </p>
 
             <section className="mt-16">
               <h2 className="text-2xl font-serif font-semibold mb-6">
-                Frequently Asked Questions About AI Chat Agents for Birmingham Businesses
+                Frequently Asked Questions About AI Chat Agents for Abu Dhabi Businesses
               </h2>
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
@@ -185,10 +209,11 @@ const OutsourcedChatAgentsBlog = () => {
 
             <div className="mt-16 p-8 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
               <h3 className="text-2xl font-serif font-semibold mb-4">
-                Ready to Add 24/7 AI Chat Agents to Your Birmingham Business?
+                Ready to Add AI Chat Agents to Your Abu Dhabi Business?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                AIVized handles setup, training, and monitoring. Your AI chat agent is live within 24 hours. From £29/month with a 3-day free trial.
+                Tell us what is slowing your team down. We will recommend the right setup, provide a written
+                scope, and explain exactly what happens next.
               </p>
               <Link
                 href="/pricing"

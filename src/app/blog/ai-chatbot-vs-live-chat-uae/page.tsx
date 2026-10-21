@@ -4,14 +4,14 @@ import AIChatbotVsLiveChatBlog from "@/views/blog/AIChatbotVsLiveChatBlog";
 import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { getBlogBySlug } from "@/data/blogData";
 
-const SLUG = "ai-chatbot-vs-live-chat-uk";
+const SLUG = "ai-chatbot-vs-live-chat-uae";
 const URL = `${SITE_URL}/blog/${SLUG}`;
 const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "AI Chatbot vs Live Chat for UK Businesses ";
-  const description = post?.metaDescription || "Compare AI chatbot vs live chat for UK businesses. Understand costs, performance, and which solution is best for your small business customer service.";
+  const title = post?.metaTitle || "AI Chatbot vs Live Chat for UAE Businesses ";
+  const description = post?.metaDescription || "Compare AI chatbot vs live chat for UAE businesses. Understand costs, performance, and which solution is best for your small business customer service.";
   return {
     title,
     description,
@@ -33,8 +33,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     blogPostingSchema({
-      headline: "AI Chatbot vs Live Chat: Which Is Better for UK Small Business?",
-      description: "AI chatbot or live chat for your UK small business? Compare costs, availability, and customer satisfaction. Find the right solution for 24/7 support.",
+      headline: "AI Chatbot vs Live Chat: Which Is Better for UAE Small Business?",
+      description: "AI chatbot or live chat for your UAE small business? Compare costs, availability, and customer satisfaction. Find the right solution for 24/7 support.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-chatbot-vs-live-chat-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-11",

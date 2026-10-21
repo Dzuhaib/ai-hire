@@ -4,16 +4,16 @@ import AboutPage from "@/views/AboutPage";
 import { services } from "@/data/servicesData";
 
 export const metadata: Metadata = {
-  title: { absolute: "About AIVized | AI, Automation & Digital Growth for UK Businesses" },
+  title: { absolute: "About AIVized | AI, Automation & Digital Growth for UAE Businesses" },
   description:
-    "Learn about AIVized and how we deliver AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for growing UK businesses.",
+    "Learn about AIVized and how we deliver AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for growing UAE businesses.",
   keywords:
-    "about AIVized, AI agency UK, automation agency, SEO GEO agency, digital marketing agency, web development agency, desktop software development UK",
+    "about AIVized, AI agency UAE, automation agency, SEO GEO agency, digital marketing agency, web development agency, desktop software development UAE",
   alternates: { canonical: "https://www.aivized.com/about" },
   openGraph: {
-    title: "About AIVized | AI, Automation & Digital Growth for UK Businesses",
+    title: "About AIVized | AI, Automation & Digital Growth for UAE Businesses",
     description:
-      "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UK businesses.",
+      "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UAE businesses.",
     url: "https://www.aivized.com/about",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -29,7 +29,7 @@ const schema = {
       "@id": "https://www.aivized.com/about",
       "name": "About AIVized",
       "description":
-        "AIVized provides AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software development for UK businesses.",
+        "AIVized provides AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software development for UAE businesses.",
       "url": "https://www.aivized.com/about",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "publisher": { "@id": "https://www.aivized.com/#organization" }
@@ -42,15 +42,15 @@ const schema = {
       "email": "info@aivized.com",
       "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" },
       "description":
-        "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UK businesses.",
+        "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UAE businesses.",
       "foundingDate": "2025",
-      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
         "email": "info@aivized.com",
         "availableLanguage": "English",
-        "areaServed": "GB"
+        "areaServed": "AE"
       },
       "sameAs": [
         "https://www.linkedin.com/company/ai-vized/",

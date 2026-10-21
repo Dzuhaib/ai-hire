@@ -11,7 +11,7 @@ const post = getBlogBySlug(SLUG);
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
   const title = post?.metaTitle || "Automate Customer Enquiries with a Personal Touch ";
-  const description = post?.metaDescription || "Learn how to automate customer enquiries while keeping the personal touch. AIVized manages AI chatbots for UK small businesses with no technical setup needed.";
+  const description = post?.metaDescription || "Learn how to automate customer enquiries while keeping the personal touch. AIVized manages AI chatbots for UAE small businesses with no technical setup needed.";
   return {
     title,
     description,
@@ -34,7 +34,7 @@ const schema = {
   "@graph": [
     blogPostingSchema({
       headline: "How to Automate Customer Enquiries Without Losing the Personal Touch",
-      description: "Learn how UK small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples.",
+      description: "Learn how UAE small businesses automate customer enquiries with AI chatbots while keeping interactions warm and personal. Practical guide with real examples.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/automate-enquiries-personal-touch-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-12",

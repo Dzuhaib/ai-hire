@@ -2,7 +2,7 @@
 
 **Hire AI That Works 24/7 — Premium On‑Demand AI Services**
 
-Aivized is a SaaS platform that enables businesses to access and deploy advanced artificial intelligence solutions on demand. Designed for UK and global enterprise use, Aivized lets companies integrate powerful AI services — including conversational AI, automation workflows, and intelligent assistants — without owning or maintaining AI infrastructure.
+Aivized is a SaaS platform that enables businesses to access and deploy advanced artificial intelligence solutions on demand. Designed for UAE and global enterprise use, Aivized lets companies integrate powerful AI services — including conversational AI, automation workflows, and intelligent assistants — without owning or maintaining AI infrastructure.
 
 ---
 
@@ -12,7 +12,7 @@ Aivized provides a scalable, flexible approach to leveraging AI:
 
 - **24/7 On‑Demand AI Access:** Rent AI capabilities when needed, without long‑term contracts.  
 - **Conversational Interfaces:** Deploy AI‑powered chat solutions for customer support, engagement, and automation.  
-- **Enterprise‑Grade Reliability:** Built for UK businesses and global clients with high performance, security, and compliance.  
+- **Enterprise‑Grade Reliability:** Built for UAE businesses and global clients with high performance, security, and compliance.  
 - **Usage‑Based Pricing:** Pay only for what you use — ideal for startups, SMEs, and large enterprises.
 
 ---
@@ -32,7 +32,7 @@ Aivized provides a scalable, flexible approach to leveraging AI:
   Track performance, engagement, and usage metrics to optimize AI deployments.
 
 - **Secure & GDPR Compliant**  
-  Designed with data protection and privacy in mind, suitable for UK, EU, and international standards.
+  Designed with data protection and privacy in mind, suitable for UAE, EU, and international standards.
 
 ---
 

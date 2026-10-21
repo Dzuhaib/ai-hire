@@ -50,7 +50,7 @@ export const CookieConsent = () => {
             <h3 className="font-semibold text-foreground">We Value Your Privacy</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               We use cookies to enhance your browsing experience, analyse site traffic, and personalise content. 
-              Under UK GDPR, we need your consent to use non-essential cookies. You can manage your preferences 
+              Under UAE data protection law, we need your consent to use non-essential cookies. You can manage your preferences 
               at any time. Learn more in our{" "}
               <a 
                 href="/privacy-policy" 

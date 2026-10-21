@@ -23,7 +23,7 @@ const reduceInline3 = "/assets/blog/reduce-leads-inline-3.png";
 const faqs = [
   {
     question: "How many leads does a typical small business website miss?",
-    answer: "Research shows that UK small businesses miss up to 60% of potential leads because visitors leave without making contact. Most website visits happen outside office hours, and without a way to engage those visitors, the leads simply vanish."
+    answer: "Research shows that UAE small businesses miss up to 60% of potential leads because visitors leave without making contact. Most website visits happen outside office hours, and without a way to engage those visitors, the leads simply vanish."
   },
   {
     question: "Can a chatbot really capture leads as well as a human?",
@@ -71,13 +71,13 @@ const ReduceMissedLeadsBlog = () => {
               <span className="flex items-center gap-2"><Clock className="w-4 h-4" />9 min read</span>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-video bg-secondary relative">
-              <Image src={heroImage} alt="Reducing missed leads with AI chatbot on UK business website" fill className="object-cover" priority />
+              <Image src={heroImage} alt="Reducing missed leads with AI chatbot on UAE business website" fill className="object-cover" priority />
             </div>
           </motion.header>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              Your website is your hardest-working salesperson, but what happens when a potential customer visits at 10pm on a Tuesday? If no one's there to engage them, that lead walks away. For UK small businesses, this silent loss of potential customers costs thousands every year. Here's how to fix it.
+              Your website is your hardest-working salesperson, but what happens when a potential customer visits at 10pm on a Tuesday? If no one's there to engage them, that lead walks away. For UAE small businesses, this silent loss of potential customers costs thousands every year. Here's how to fix it.
             </p>
 
             <h2 id="the-problem">The Hidden Cost of Missed Website Leads</h2>
@@ -116,7 +116,7 @@ const ReduceMissedLeadsBlog = () => {
             <div className="not-prose my-8 grid gap-4">
               {[
                 "Engages visitors instantly, with no waiting and no friction",
-                "Works 24/7, including weekends and bank holidays",
+                "Works 24/7, including weekends and public holidays",
                 "Asks qualifying questions to capture genuine leads",
                 "Forwards hot leads to you via email or WhatsApp immediately",
                 "Answers FAQs so visitors don't need to search your site",
@@ -129,12 +129,12 @@ const ReduceMissedLeadsBlog = () => {
               ))}
             </div>
 
-            <h2 id="real-results">What Real UK Businesses Are Seeing</h2>
+            <h2 id="real-results">What Real UAE Businesses Are Seeing</h2>
             <p>
-              UK small businesses that add an AI chatbot to their website typically see a <strong>25 to 40% increase in captured leads</strong> within the first month. That's not because they're getting more traffic. It's because they're finally converting the traffic they already have.
+              UAE small businesses that add an AI chatbot to their website typically see a <strong>25 to 40% increase in captured leads</strong> within the first month. That's not because they're getting more traffic. It's because they're finally converting the traffic they already have.
             </p>
             <p>
-              For a business spending £500 per month on Google Ads or SEO, capturing even 10 more leads per month from existing traffic can dramatically improve return on investment. The chatbot doesn't replace your marketing. It makes your existing marketing work harder.
+              For a business spending $500 per month on Google Ads or SEO, capturing even 10 more leads per month from existing traffic can dramatically improve return on investment. The chatbot doesn't replace your marketing. It makes your existing marketing work harder.
             </p>
 
             <BlogInlineImage src={reduceInline3} alt="Before and after comparison showing increase in captured leads" />
@@ -151,7 +151,7 @@ const ReduceMissedLeadsBlog = () => {
             <div className="not-prose my-8 p-6 rounded-lg bg-primary/10 border border-primary/20">
               <h3 className="text-lg font-semibold mb-4">The Bottom Line</h3>
               <p className="text-muted-foreground">
-                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings, 24 hours a day, 7 days a week. Starting from just <Link href="/pricing" className="text-primary hover:underline">£29/month</Link> with AIVized, it's one of the highest-ROI investments a UK small business can make. Read our <Link href="/blog/ai-chatbot-vs-live-chat-uk" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link> to learn more.
+                You're already paying for website traffic. An AI chatbot ensures you actually capture the leads that traffic brings, 24 hours a day, 7 days a week. Starting from just <Link href="/pricing" className="text-primary hover:underline">$29/month</Link> with AIVized, it's one of the highest-ROI investments a UAE small business can make. Read our <Link href="/blog/ai-chatbot-vs-live-chat-uae" className="text-primary hover:underline">AI chatbot vs live chat comparison</Link> to learn more.
               </p>
             </div>
           </motion.div>
@@ -175,7 +175,7 @@ const ReduceMissedLeadsBlog = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Stop Missing Leads Today</h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Get a fully managed AI chatbot on your website from £29/month. We install everything with no technical skills needed.
+              Get a fully managed AI chatbot on your website from $29/month. We install everything with no technical skills needed.
             </p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
               View Pricing

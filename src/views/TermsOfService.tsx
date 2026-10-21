@@ -75,7 +75,7 @@ const TermsOfService = () => {
                   Our services are provided on a subscription basis and processed through Paddle.com Market Limited ("Paddle"), our Merchant of Record:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li>Subscriptions are billed monthly in GBP (£) unless otherwise agreed</li>
+                  <li>Subscriptions are billed monthly in USD ($) unless otherwise agreed</li>
                   <li>All payments are processed securely by Paddle, who acts as the Merchant of Record</li>
                   <li>VAT will be added where applicable based on your location</li>
                   <li>Payment is due at the beginning of each billing cycle</li>
@@ -246,11 +246,11 @@ const TermsOfService = () => {
                     <ul className="space-y-2 text-sm">
                       <li>
                         <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> (from £29/month)</span>
+                        <span className="text-muted-foreground"> (from $29/month)</span>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
-                        <span className="text-muted-foreground"> (UK cities)</span>
+                        <span className="text-muted-foreground"> (UAE cities)</span>
                       </li>
                       <li>
                         <Link href="/industries" className="text-primary hover:underline">AI Chatbot by Industry</Link>
@@ -262,7 +262,7 @@ const TermsOfService = () => {
                     <h3 className="font-semibold mb-2">Blog & Insights</h3>
                     <ul className="space-y-2 text-sm">
                       <li>
-                        <Link href="/blog/whatsapp-chatbot-uk-business" className="text-primary hover:underline">WhatsApp Chatbot Guide</Link>
+                        <Link href="/blog/whatsapp-chatbot-uae-business" className="text-primary hover:underline">WhatsApp Chatbot Guide</Link>
                       </li>
                       <li>
                         <Link href="/blog/website-chatbot-small-business" className="text-primary hover:underline">Website Chatbot Solutions</Link>

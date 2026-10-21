@@ -48,10 +48,10 @@ export const FinalCTASection = () => {
             className="text-sm text-muted-foreground/75 mb-10"
           >
             Serving businesses in{" "}
-            <Link href="/locations/london" className="text-primary hover:underline">London</Link>,{" "}
-            <Link href="/locations/manchester" className="text-primary hover:underline">Manchester</Link>,{" "}
-            <Link href="/locations/birmingham" className="text-primary hover:underline">Birmingham</Link>, and{" "}
-            <Link href="/locations" className="text-primary hover:underline">more UK cities</Link>.
+            <Link href="/locations/dubai" className="text-primary hover:underline">Dubai</Link>,{" "}
+            <Link href="/locations/abu-dhabi" className="text-primary hover:underline">Abu Dhabi</Link>,{" "}
+            <Link href="/locations/sharjah" className="text-primary hover:underline">Sharjah</Link>, and{" "}
+            <Link href="/locations" className="text-primary hover:underline">more UAE cities</Link>.
           </motion.p>
 
           <motion.div

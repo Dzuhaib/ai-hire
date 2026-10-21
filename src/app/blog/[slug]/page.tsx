@@ -43,7 +43,7 @@ export async function generateMetadata({
     .join(" ");
   return {
     title,
-    description: `AI chatbot services for UK businesses. Read our guide on ${title.toLowerCase()}.`,
+    description: `AI chatbot services for UAE businesses. Read our guide on ${title.toLowerCase()}.`,
     alternates: { canonical: `${SITE_URL}/blog/${slug}` },
   };
 }
@@ -65,7 +65,7 @@ export default async function Page({
         "@graph": [
           blogPostingSchema({
             headline: `Website Chatbot That Runs 24/7 ${data.city} | Managed AI Service`,
-            description: `Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from £29/month. Capture leads, automate enquiries, we install everything.`,
+            description: `Get a website chatbot that runs 24/7 for your ${data.city} business. Managed AI chatbot from $29/month. Capture leads, automate enquiries, we install everything.`,
             image: `${SITE_URL}/assets/locations/ai-${data.slug}.png`,
             url: canonicalUrl,
             datePublished: post?.publishedDate ?? "2026-02-08",

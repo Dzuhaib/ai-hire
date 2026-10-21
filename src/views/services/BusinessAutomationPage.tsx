@@ -59,7 +59,7 @@ const BusinessAutomationPage = () => {
               <span className="text-sm text-primary font-medium tracking-wide uppercase">Managed Service</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
-              Business Process Automation for UK Small Businesses
+              Business Process Automation for UAE Small Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
               AIVized automates the repetitive workflows that drain your team's time: lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. We handle the setup and keep it running so you don't have to.
@@ -107,7 +107,7 @@ const BusinessAutomationPage = () => {
                 "Testing before every automation goes live",
                 "Monitoring and error alerts so nothing breaks silently",
                 "Updates when your business processes change",
-                "UK-based support when you need adjustments",
+                "UAE-based support when you need adjustments",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -126,7 +126,7 @@ const BusinessAutomationPage = () => {
           >
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who It Is For</h2>
             <p className="text-muted-foreground max-w-2xl mb-6">
-              Business process automation is most useful for UK small businesses where repetitive admin tasks consume significant time each week. It is particularly effective for:
+              Business process automation is most useful for UAE small businesses where repetitive admin tasks consume significant time each week. It is particularly effective for:
             </p>
             <ul className="space-y-2 max-w-xl">
               {[

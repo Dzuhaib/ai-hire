@@ -23,7 +23,7 @@ const instagramInline3 = "/assets/blog/instagram-inline-3.png";
 const InstagramChatbotBlog = () => {
   const faqs = [
     {
-      question: "How does an Instagram chatbot capture leads for my UK business?",
+      question: "How does an Instagram chatbot capture leads for my UAE business?",
       answer: "The chatbot responds to every DM instantly, asks qualifying questions about the customer's needs, and collects their contact details. Leads are sent to you automatically so you can follow up at a time that suits you. No DM goes unanswered, even at midnight."
     },
     {
@@ -31,11 +31,11 @@ const InstagramChatbotBlog = () => {
       answer: "No. It handles the volume work: answering repeated questions, collecting contact details, and responding out of hours. Your team focuses on complex conversations, creative content, and relationships that require a human. The chatbot makes your team more productive, not redundant."
     },
     {
-      question: "What kinds of businesses use Instagram chatbots in the UK?",
+      question: "What kinds of businesses use Instagram chatbots in the UAE?",
       answer: "Restaurants taking reservations, beauty salons booking appointments, retailers answering product questions, fitness studios promoting classes, and service businesses qualifying leads. Any business that receives enquiries through Instagram DMs benefits from automation."
     },
     {
-      question: "Is an AI chatbot for small business UK effective on Instagram?",
+      question: "Is an AI chatbot for small business UAE effective on Instagram?",
       answer: "Yes. Small businesses benefit most because every missed enquiry matters. A managed Instagram chatbot means faster response times and higher conversion rates from DM enquiries, with no technical work required on your part."
     }
   ];
@@ -56,28 +56,28 @@ const InstagramChatbotBlog = () => {
           <motion.header initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-pink-500/10 text-pink-500 text-sm font-medium mb-6">Instagram</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
-              Instagram Chatbot for UK Businesses: Automate DMs and Capture Leads 24/7
+              Instagram Chatbot for UAE Businesses: Automate DMs and Capture Leads 24/7
             </h1>
             <div className="flex items-center gap-6 text-muted-foreground mb-8">
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />30 January 2026</span>
               <span className="flex items-center gap-2"><Clock className="w-4 h-4" />6 min read</span>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-video bg-secondary relative">
-              <Image src={instagramHero} alt="Instagram Chatbot for UK Business" fill className="object-cover" priority />
+              <Image src={instagramHero} alt="Instagram Chatbot for UAE Business" fill className="object-cover" priority />
             </div>
           </motion.header>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead text-xl text-muted-foreground mb-8">
-              Instagram has evolved from a photo-sharing app to a powerful business platform. With over 30 million UK users, it's where your customers discover, research, and connect with brands. But managing DMs, comments, and enquiries manually is time-consuming and often impossible to scale. Learn how to <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">automate enquiries without losing the personal touch</Link>.
+              Instagram has evolved from a photo-sharing app to a powerful business platform. With over 30 million UAE users, it's where your customers discover, research, and connect with brands. But managing DMs, comments, and enquiries manually is time-consuming and often impossible to scale. Learn how to <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">automate enquiries without losing the personal touch</Link>.
             </p>
 
-            <h2 id="how-instagram-chatbots-work">How Instagram Chatbots Work for UK Businesses</h2>
+            <h2 id="how-instagram-chatbots-work">How Instagram Chatbots Work for UAE Businesses</h2>
             <p>An Instagram chatbot connects to your business account via the official Meta API. When someone sends your account a DM, the chatbot responds instantly using the knowledge base we build during setup. Unlike manual replies, the chatbot is available at all hours and handles any volume of messages simultaneously.</p>
 
             <BlogInlineImage src={instagramInline1} alt="Instagram DM automation on smartphone with business replies" />
 
-            <p>For UK businesses, this solves a specific problem: customers discover your brand on Instagram during evenings and weekends, then send a DM enquiring about a product or service. Without 24/7 coverage, that message sits unanswered until the next working day. By then, many customers have already moved on.</p>
+            <p>For UAE businesses, this solves a specific problem: customers discover your brand on Instagram during evenings and weekends, then send a DM enquiring about a product or service. Without 24/7 coverage, that message sits unanswered until the next working day. By then, many customers have already moved on.</p>
 
             <h2 id="what-instagram-chatbot-handles">What an Instagram Chatbot Handles Automatically</h2>
             <p>During setup, we train your chatbot on your products, pricing, services, and the most common questions your customers ask. Once live, it handles:</p>
@@ -97,9 +97,9 @@ const InstagramChatbotBlog = () => {
             </div>
             <p>The chatbot does not replace your team. It handles the volume that would otherwise go unanswered, then passes qualified leads to you with full context.</p>
 
-            <BlogInlineImage src={instagramInline2} alt="UK small business owner reviewing Instagram chatbot conversations on a laptop" />
+            <BlogInlineImage src={instagramInline2} alt="UAE small business owner reviewing Instagram chatbot conversations on a laptop" />
 
-            <h2 id="instagram-chatbots-small-business">Instagram Chatbots for UK Small Businesses</h2>
+            <h2 id="instagram-chatbots-small-business">Instagram Chatbots for UAE Small Businesses</h2>
             <p>You do not need a large following or a dedicated social media team to benefit from Instagram automation. Small businesses with even a modest Instagram presence (restaurants taking bookings, beauty salons managing appointments, retailers answering product questions) see the clearest benefit because every missed DM represents a real, recoverable customer.</p>
             <p>Instagram's own data shows that speed of response correlates directly with conversion rate. A business that replies within a minute converts significantly more DM enquiries than one that replies the next day. Automation closes that gap without requiring you to monitor your phone constantly.</p>
 
@@ -108,8 +108,8 @@ const InstagramChatbotBlog = () => {
               <p className="text-muted-foreground">150 million people start conversations with businesses on Instagram every month. Without automation, most businesses can only respond during working hours, which means missing over 60% of potential opportunities.</p>
             </div>
 
-            <h2 id="ai-chatbot-for-small-business-uk">AI Chatbot for Small Business UK</h2>
-            <p>Instagram chatbots aren't just for big brands. An <Link href="/blog/ai-chatbot-small-business-uk-guide" className="text-primary hover:underline">AI chatbot for small business UK</Link> can level the playing field, allowing independents and SMEs to compete with larger competitors.</p>
+            <h2 id="ai-chatbot-for-small-business-uae">AI Chatbot for Small Business UAE</h2>
+            <p>Instagram chatbots aren't just for big brands. An <Link href="/blog/ai-chatbot-small-business-uae-guide" className="text-primary hover:underline">AI chatbot for small business UAE</Link> can level the playing field, allowing independents and SMEs to compete with larger competitors.</p>
 
             <BlogInlineImage src={instagramInline3} alt="Marketing team reviewing Instagram engagement analytics" />
 
@@ -121,7 +121,7 @@ const InstagramChatbotBlog = () => {
               <li>Professional appearance that builds trust</li>
               <li>Valuable insights from conversation analytics</li>
             </ul>
-            <p>From boutique retailers to local service providers, UK small businesses are discovering that Instagram chatbots deliver enterprise-level customer experience at SME-friendly prices.</p>
+            <p>From boutique retailers to local service providers, UAE small businesses are discovering that Instagram chatbots deliver enterprise-level customer experience at SME-friendly prices.</p>
 
             <h2>Why Instagram Automation Matters Now</h2>
             <p>The social media landscape is increasingly competitive. Users expect instant responses and personalised interactions. Businesses that can't deliver risk losing followers and customers to competitors who can.</p>
@@ -148,7 +148,7 @@ const InstagramChatbotBlog = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-border text-center">
             <h3 className="text-2xl font-serif font-semibold mb-4">Ready to Automate Your Instagram DMs?</h3>
-            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">Join hundreds of UK businesses already using AIVized's managed Instagram chatbot service. From £29/month with complete setup included.</p>
+            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">Join hundreds of UAE businesses already using AIVized's managed Instagram chatbot service. From $29/month with complete setup included.</p>
             <Link href="/pricing" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">View Pricing</Link>
           </motion.div>
                   <AuthorBio />

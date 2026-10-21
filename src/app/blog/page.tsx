@@ -4,13 +4,13 @@ import BlogsPage from "@/views/BlogsPage";
 import { allBlogPosts } from "@/data/blogData";
 
 export const metadata: Metadata = {
-  title: "AI Chatbot Blog: Guides for UK Businesses",
+  title: "AI Chatbot Blog: Guides for UAE Businesses",
   description:
-    "Welcome to the AIVized AI chatbot blog. Learn how to capture leads, automate enquiries, and grow your UK small business with our expert tips and guides.",
+    "Welcome to the AIVized AI chatbot blog. Learn how to capture leads, automate enquiries, and grow your UAE small business with our expert tips and guides.",
   alternates: { canonical: "https://www.aivized.com/blog" },
   openGraph: {
-    title: "AI Chatbot Blog: Guides for UK Businesses",
-    description: "Welcome to the AIVized AI chatbot blog. Learn how to capture leads, automate enquiries, and grow your UK small business with our expert tips and guides.",
+    title: "AI Chatbot Blog: Guides for UAE Businesses",
+    description: "Welcome to the AIVized AI chatbot blog. Learn how to capture leads, automate enquiries, and grow your UAE small business with our expert tips and guides.",
     url: "https://www.aivized.com/blog",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -24,8 +24,8 @@ const blogIndexSchema = {
     {
       "@type": "CollectionPage",
       "@id": "https://www.aivized.com/blog#collectionpage",
-      "name": "AI Chatbot Blog | UK Business Insights",
-      "description": "Expert insights on AI chatbots for UK businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support.",
+      "name": "AI Chatbot Blog | UAE Business Insights",
+      "description": "Expert insights on AI chatbots for UAE businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support.",
       "url": "https://www.aivized.com/blog",
       "publisher": { "@id": "https://www.aivized.com/#organization" },
       "mainEntity": {

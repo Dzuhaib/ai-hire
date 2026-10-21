@@ -20,10 +20,10 @@ H1: Restaurant AI chatbot that handles reservations and enquiries 24/7
 
 Core keyword extracted from H1: "restaurant AI chatbot"
 
-Meta title: Restaurant AI Chatbot for UK Businesses | AIVized
+Meta title: Restaurant AI Chatbot for UAE Businesses | AIVized
 (contains "restaurant AI chatbot" from the H1 ✓)
 
-Meta description: AIVized installs a managed AI chatbot for UK restaurants. Handles reservations and menu questions 24/7. No technical setup from you. Plans from £29/month.
+Meta description: AIVized installs a managed AI chatbot for UAE restaurants. Handles reservations and menu questions 24/7. No technical setup from you. Plans from $29/month.
 (contains "AI chatbot" and "restaurants" mirroring the H1 topic ✓)
 
 ---

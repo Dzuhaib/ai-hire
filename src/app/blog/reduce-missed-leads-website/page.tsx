@@ -34,7 +34,7 @@ const schema = {
   "@graph": [
     blogPostingSchema({
       headline: "How to Reduce Missed Leads from Your Website with AI Chatbots",
-      description: "Discover why UK small businesses miss up to 60% of website leads and how an AI chatbot captures enquiries 24/7. Practical tips to stop losing customers.",
+      description: "Discover why UAE small businesses miss up to 60% of website leads and how an AI chatbot captures enquiries 24/7. Practical tips to stop losing customers.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/reduce-missed-leads-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-02-10",

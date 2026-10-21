@@ -2,13 +2,13 @@ export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import IndustryCityPage from "@/views/IndustryCityPage";
 import { allIndustries, getIndustryBySlug } from "@/data/industryData";
-import { ukLocations } from "@/data/locationData";
+import { uaeLocations } from "@/data/locationData";
 import { getIndustryCityData } from "@/data/industryCityData";
 
 export async function generateStaticParams() {
   const params: { industry: string; city: string }[] = [];
   for (const industry of allIndustries) {
-    for (const location of ukLocations) {
+    for (const location of uaeLocations) {
       params.push({ industry: industry.slug, city: location.slug });
     }
   }
@@ -24,7 +24,7 @@ export async function generateMetadata({
   const data = getIndustryCityData(industry, city);
   // Use pre-crafted unique metadata from data if available; fallback to template
   const title = data?.metaTitle ?? `AI Agency for ${industry} in ${city} | AI Chatbot Services`;
-  const description = data?.metaDescription ?? `AIVized is an AI agency serving ${industry} businesses in ${city}. Fully managed AI chatbot and automation from £29/month.`;
+  const description = data?.metaDescription ?? `AIVized is an AI agency serving ${industry} businesses in ${city}. Fully managed AI chatbot and automation from $29/month.`;
   const keywords = data?.metaKeywords;
   return {
     title,
@@ -68,7 +68,7 @@ export default async function Page({
             {
               "@type": "Service",
               "name": `AI Agency for ${parentIndustry.industry} in ${cityData.cityName} | AIVized`,
-              "description": `Fully managed AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation from £29/month.`,
+              "description": `Fully managed AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation from $29/month.`,
               "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
               "serviceType": "AI Agency Services",
               "areaServed": { "@type": "City", "name": cityData.cityName },
@@ -76,8 +76,8 @@ export default async function Page({
               "offers": {
                 "@type": "Offer",
                 "price": "29",
-                "priceCurrency": "GBP",
-                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "USD", "unitCode": "MON" }
               }
             },
             {
@@ -86,11 +86,11 @@ export default async function Page({
               "url": `https://www.aivized.com/industries/${industry}/${city}`,
               "description": `AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
               "email": "info@aivized.com",
-              "priceRange": "£29-£149",
+              "priceRange": "$29-$149",
               "areaServed": {
                 "@type": "City",
                 "name": cityData.cityName,
-                "containedInPlace": { "@type": "Country", "name": "United Kingdom" }
+                "containedInPlace": { "@type": "Country", "name": "United Arab Emirates" }
               }
             },
           ],

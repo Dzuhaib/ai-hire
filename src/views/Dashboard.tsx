@@ -151,7 +151,7 @@ const Dashboard = () => {
 
       // Open WhatsApp
       const whatsappMessage = encodeURIComponent(
-        `Hi! I'd like to pay for my ${subscription.plan_name} plan (£${subscription.plan_price}/month + £50 one-time setup fee).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
+        `Hi! I'd like to pay for my ${subscription.plan_name} plan ($${subscription.plan_price}/month + $50 one-time setup fee).\n\nEmail: ${user.primaryEmailAddress?.emailAddress}\nName: ${user.fullName || 'Not provided'}`
       );
       window.open(`https://wa.me/923063213951?text=${whatsappMessage}`, "_blank");
 
@@ -181,7 +181,7 @@ const Dashboard = () => {
 
   const formatDate = (dateString: string | null) => {
     if (!dateString) return "—";
-    return new Date(dateString).toLocaleDateString("en-GB", {
+    return new Date(dateString).toLocaleDateString("en-AE", {
       day: "numeric",
       month: "short",
       year: "numeric",
@@ -311,7 +311,7 @@ const Dashboard = () => {
                           </div>
                           <div className="text-right">
                             <p className="text-3xl font-serif font-semibold">
-                              £{subscription.plan_price}
+                              ${subscription.plan_price}
                             </p>
                             <p className="text-sm text-muted-foreground">/month</p>
                           </div>
@@ -531,7 +531,7 @@ const Dashboard = () => {
                                   </span>
                                 </td>
                                 <td className="py-3 px-4 text-sm text-right font-medium">
-                                  {record.currency === "GBP" ? "£" : record.currency}
+                                  {record.currency === "USD" ? "$" : record.currency}
                                   {record.amount.toFixed(2)}
                                 </td>
                               </tr>

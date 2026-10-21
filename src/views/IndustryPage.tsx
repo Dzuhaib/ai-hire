@@ -183,7 +183,7 @@ const IndustryPage = () => {
               Empowering the {industry.industry} Sector with Advanced AI Chatbot Solutions
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              AIVized designs and delivers a custom-trained, fully managed <strong>AI chatbot for {industry.industry.toLowerCase()} businesses</strong>, giving your company a highly capable virtual receptionist that works 24/7/365. Rather than utilizing basic button-clicking trees or leaving clients waiting for next-day replies, AIVized trains a custom AI model specifically on your business parameters, FAQs, pricing systems, and service structures. From table reservations and property viewing qualification to booking client trials and answering precise product questions, our managed automation captures every lead instantly with 0ms latency. No coding, no complicated setup, and no developers needed—our UK team handles everything.
+              AIVized designs and delivers a custom-trained, fully managed <strong>AI chatbot for {industry.industry.toLowerCase()} businesses</strong>, giving your company a highly capable virtual receptionist that works 24/7/365. Rather than utilizing basic button-clicking trees or leaving clients waiting for next-day replies, AIVized trains a custom AI model specifically on your business parameters, FAQs, pricing systems, and service structures. From table reservations and property viewing qualification to booking client trials and answering precise product questions, our managed automation captures every lead instantly with 0ms latency. No coding, no complicated setup, and no developers needed—our UAE team handles everything.
             </p>
           </motion.div>
         </div>
@@ -201,7 +201,7 @@ const IndustryPage = () => {
             >
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Industry Overview</p>
               <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-                The {industry.industry} Sector in the UK
+                The {industry.industry} Sector in the UAE
               </h2>
             </motion.div>
             <div className="max-w-4xl mx-auto prose prose-lg">
@@ -388,16 +388,16 @@ const IndustryPage = () => {
                 <tr className="bg-muted/40 border-b border-border">
                   <th className="p-4 font-semibold text-sm">Feature</th>
                   <th className="p-4 font-semibold text-sm text-primary">AIVized Managed AI</th>
-                  <th className="p-4 font-semibold text-sm">In-House Staff (UK)</th>
+                  <th className="p-4 font-semibold text-sm">In-House Staff (UAE)</th>
                   <th className="p-4 font-semibold text-sm">DIY Chatbot Tools</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border/60">
                 <tr>
                   <td className="p-4 font-medium text-sm">Monthly Cost</td>
-                  <td className="p-4 text-sm text-primary font-semibold">From £29 / month</td>
-                  <td className="p-4 text-sm">£2,500+ / month (plus taxes)</td>
-                  <td className="p-4 text-sm">£15 - £100 (plus hidden API fees)</td>
+                  <td className="p-4 text-sm text-primary font-semibold">From $29 / month</td>
+                  <td className="p-4 text-sm">$2,500+ / month (plus taxes)</td>
+                  <td className="p-4 text-sm">$15 - $100 (plus hidden API fees)</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-medium text-sm">Availability</td>
@@ -552,7 +552,7 @@ const IndustryPage = () => {
               </div>
               <h3 className="font-semibold text-lg mb-3">Onboarding & Info</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                Choose a plan and share your business details, FAQs, and link. Our UK-based team reviews your operations and designs a targeted chatbot flow.
+                Choose a plan and share your business details, FAQs, and link. Our team reviews your operations and designs a targeted chatbot flow.
               </p>
             </motion.div>
 
@@ -659,7 +659,7 @@ const IndustryPage = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">By City</p>
               <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-                {industry.industry} AI Chatbot <span className="text-gradient">Across the UK</span>
+                {industry.industry} AI Chatbot <span className="text-gradient">Across the UAE</span>
               </h2>
             </motion.div>
 
@@ -708,7 +708,7 @@ const IndustryPage = () => {
               Ready to Transform Your {industry.industry} Business?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join hundreds of UK {industry.industry.toLowerCase()} businesses already using AIVized to deliver exceptional customer service 24/7.
+                Join UAE {industry.industry.toLowerCase()} businesses using AIVized to deliver faster, more consistent customer service.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -725,7 +725,7 @@ const IndustryPage = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />From £29/month</span>
+              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />From $29/month</span>
               <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />No long-term contracts</span>
               <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />24-hour setup</span>
             </div>

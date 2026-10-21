@@ -17,7 +17,7 @@ const pageSections: Record<string, string | undefined> = {
   "/industries/legal": "### Legal Services",
   "/industries/fitness": "### Fitness & Gyms",
   "/industries/travel": "### Travel & Tourism",
-  "/locations": "## UK Locations Covered",
+  "/locations": "## UAE Locations Covered",
   "/privacy-policy": "## Privacy Policy",
   "/refund-policy": "## Refund Policy",
   "/terms-of-service": "## Terms of Service",
@@ -85,7 +85,7 @@ export async function GET(request: NextRequest) {
 
     return new NextResponse(sectionContent, { headers: withMarkdownHeaders(sectionContent) });
   } catch {
-    const fallback = "# AIVized\n\nManaged AI chatbot service for UK small businesses."
+    const fallback = "# AIVized\n\nManaged AI chatbot service for UAE small businesses."
     return new NextResponse(fallback, { headers: withMarkdownHeaders(fallback) });
   }
 }

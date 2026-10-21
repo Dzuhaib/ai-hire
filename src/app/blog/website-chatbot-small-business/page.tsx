@@ -10,8 +10,8 @@ const post = getBlogBySlug(SLUG);
 
 export async function generateMetadata(): Promise<Metadata> {
   const post = getBlogBySlug(SLUG);
-  const title = post?.metaTitle || "Managed Website Chatbot for UK Small Businesses ";
-  const description = post?.metaDescription || "Get a managed website chatbot for your UK small business. AIVized handles setup and maintenance. Enquiries answered 24/7. No technical skills needed. From £29/month.";
+  const title = post?.metaTitle || "Managed Website Chatbot for UAE Small Businesses ";
+  const description = post?.metaDescription || "Get a managed website chatbot for your UAE small business. AIVized handles setup and maintenance. Enquiries answered 24/7. No technical skills needed. From $29/month.";
   return {
     title,
     description,
@@ -33,8 +33,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     blogPostingSchema({
-      headline: "Website Chatbot for UK Small Businesses: How Managed AI Works",
-      description: "Explore how a fully managed website chatbot helps UK small businesses handle customer enquiries, capture leads, and support customers around the clock.",
+      headline: "Website Chatbot for UAE Small Businesses: How Managed AI Works",
+      description: "Explore how a fully managed website chatbot helps UAE small businesses handle customer enquiries, capture leads, and support customers around the clock.",
       image: `${SITE_URL}${post?.heroImage ?? "/assets/blog/website-chatbot-hero.png"}`,
       url: URL,
       datePublished: post?.publishedDate ?? "2026-01-29",
@@ -43,7 +43,7 @@ const schema = {
     breadcrumbSchema([
       { name: "Home", item: SITE_URL },
       { name: "Blog", item: `${SITE_URL}/blog` },
-      { name: "Website Chatbot UK", item: URL },
+      { name: "Website Chatbot UAE", item: URL },
     ]),
   ],
 };

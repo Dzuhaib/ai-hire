@@ -57,7 +57,7 @@ const IndustriesPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              AI Chatbot Solutions for Every UK Industry
+              AI Chatbot Solutions for Every UAE Industry
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -75,7 +75,7 @@ const IndustriesPage = () => {
               </span>
               <span className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-primary" />
-                GDPR compliant
+                UAE data protection
               </span>
             </div>
           </motion.div>
@@ -128,7 +128,7 @@ const IndustriesPage = () => {
                       </div>
                       <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{industry.description}</p>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-primary font-semibold">From £29/month</span> • 24-hour setup
+                        <span className="text-primary font-semibold">From $29/month</span> • 24-hour setup
                       </p>
                     </div>
                   </div>

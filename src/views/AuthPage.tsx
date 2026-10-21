@@ -169,7 +169,7 @@ const AuthPage = () => {
                 and desktop software.
               </p>
               <p className="mt-4 text-white/60 text-sm max-w-sm">
-                Built for UK businesses that want practical improvements, clear scope, and support after
+                Built for UAE businesses that want practical improvements, clear scope, and support after
                 launch.
               </p>
             </div>

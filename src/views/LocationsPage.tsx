@@ -4,57 +4,26 @@ import Image from 'next/image';
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
+import { MapPin, ArrowRight, Sparkles, Users, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-import { ukLocations } from "@/data/locationData";
+import { uaeLocations } from "@/data/locationData";
 import { LocationCardsSkeleton } from "@/components/skeletons/SectionSkeletons";
 
-// City images
-const aiLondon = "/assets/locations/ai-london.png";
-const aiManchester = "/assets/locations/ai-manchester.png";
-const aiBirmingham = "/assets/locations/ai-birmingham.png";
-const aiLeeds = "/assets/locations/ai-leeds.png";
-const aiLiverpool = "/assets/locations/ai-liverpool.png";
-const aiBristol = "/assets/locations/ai-bristol.png";
-const aiGlasgow = "/assets/locations/ai-glasgow.png";
-const aiEdinburgh = "/assets/locations/ai-edinburgh.png";
-const aiSheffield = "/assets/locations/ai-sheffield.png";
-const aiNewcastle = "/assets/locations/ai-newcastle.png";
-const aiNottingham = "/assets/locations/ai-nottingham.png";
-const aiCardiff = "/assets/locations/ai-cardiff.png";
-const aiLeicester = "/assets/locations/ai-leicester.png";
-const aiBrighton = "/assets/locations/ai-brighton.png";
-const aiSouthampton = "/assets/locations/ai-southampton.png";
-const aiOxford = "/assets/locations/ai-oxford.png";
-const aiCambridge = "/assets/locations/ai-cambridge.png";
-const aiCoventry = "/assets/locations/ai-coventry.png";
-const aiBelfast = "/assets/locations/ai-belfast.png";
-const aiAberdeen = "/assets/locations/ai-aberdeen.png";
+// Shared hero image for UAE city cards until city-specific imagery is available
+const cityHeroImage = "/assets/locations/ai-support.png";
 
 const cityImages: Record<string, string> = {
-  london: aiLondon,
-  manchester: aiManchester,
-  birmingham: aiBirmingham,
-  leeds: aiLeeds,
-  liverpool: aiLiverpool,
-  bristol: aiBristol,
-  glasgow: aiGlasgow,
-  edinburgh: aiEdinburgh,
-  sheffield: aiSheffield,
-  newcastle: aiNewcastle,
-  nottingham: aiNottingham,
-  cardiff: aiCardiff,
-  leicester: aiLeicester,
-  brighton: aiBrighton,
-  southampton: aiSouthampton,
-  oxford: aiOxford,
-  cambridge: aiCambridge,
-  coventry: aiCoventry,
-  belfast: aiBelfast,
-  aberdeen: aiAberdeen,
+  dubai: cityHeroImage,
+  "abu-dhabi": cityHeroImage,
+  sharjah: cityHeroImage,
+  ajman: cityHeroImage,
+  "ras-al-khaimah": cityHeroImage,
+  fujairah: cityHeroImage,
+  "umm-al-quwain": cityHeroImage,
+  "al-ain": cityHeroImage,
 };
 
 const LocationsPage = () => {
@@ -80,21 +49,22 @@ const LocationsPage = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
               <MapPin className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">UK-Wide Coverage</span>
+              <span className="text-sm font-medium text-primary">UAE-Wide Coverage</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              Managed AI Chatbot Services Across the United Kingdom
+              AI, Automation &amp; Digital Growth Across the UAE
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              From London to Edinburgh, get a fully managed AI chatbot for lead generation. We install everything, no technical skills needed.
+              From Dubai to Abu Dhabi, get one partner for AI systems, automations, SEO and GEO, digital
+              marketing, web development, and desktop software.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-primary" />
-                UK-wide coverage
+                UAE-wide coverage
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary" />
@@ -102,7 +72,7 @@ const LocationsPage = () => {
               </span>
               <span className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-primary" />
-                GDPR compliant
+                UAE data protection
               </span>
             </div>
           </motion.div>
@@ -120,15 +90,15 @@ const LocationsPage = () => {
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Our Locations</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              AI Chatbot Service by <span className="text-gradient">City</span>
+              Digital Services by <span className="text-gradient">City</span>
             </h2>
           </motion.div>
 
           {isLoading ? (
-            <LocationCardsSkeleton count={ukLocations.length} />
+            <LocationCardsSkeleton count={uaeLocations.length} />
           ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ukLocations.map((location, idx) => (
+            {uaeLocations.map((location, idx) => (
               <motion.div
                 key={location.slug}
                 initial={{ opacity: 0, y: 30 }}
@@ -145,8 +115,8 @@ const LocationsPage = () => {
                     {/* Image */}
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={cityImages[location.slug] || aiLondon}
-                        alt={`AI assistant for ${location.city}`}
+                        src={cityImages[location.slug] || cityHeroImage}
+                        alt={`Digital services for businesses in ${location.city}`}
                         fill
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
@@ -166,7 +136,8 @@ const LocationsPage = () => {
                         <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                       </div>
                       <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                        {location.description}
+                        AI, automation, SEO and GEO, marketing, web development, and desktop software for
+                        businesses in {location.city}.
                       </p>
                       <div className="flex items-center gap-2 text-xs text-muted-foreground">
                         <MapPin className="w-3 h-3" />
@@ -192,8 +163,8 @@ const LocationsPage = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
-              <Bot className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Dedicated Support</span>
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Six connected services</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
@@ -201,25 +172,26 @@ const LocationsPage = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8">
-              We serve businesses across the entire UK. Whether you&apos;re in a major city or a smaller town, our AI employees are ready to help your business grow.
+              We work with businesses across the UAE. Whether you are in a major city or a smaller emirate,
+              we can scope the right mix of AI, automation, search, marketing, and software for your goals.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/pricing">
+              <Link href="/contact">
                 <Button size="lg" className="btn-primary">
-                  Get Started Today
+                  Book a Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <Link href="/#contact">
+              <Link href="/services">
                 <Button variant="outline" size="lg">
-                  Contact Us
+                  Explore Services
                 </Button>
               </Link>
             </div>
 
             <p className="text-sm text-muted-foreground mt-6">
-              From <span className="text-primary font-semibold">£29/month</span> • No contracts • guided setup
+              Fixed written scope &middot; Remote delivery &middot; Optional ongoing support
             </p>
           </motion.div>
         </div>

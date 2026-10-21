@@ -20,32 +20,21 @@ import { getCityBlogBySlug } from "@/data/cityBlogData";
 import { getBlogExpandedContent } from "@/data/blogExpandedContent";
 import NotFound from "@/views/NotFound";
 
-// City hero images (reuse location images)
-const aiLondon = "/assets/locations/ai-london.png";
-const aiManchester = "/assets/locations/ai-manchester.png";
-const aiBirmingham = "/assets/locations/ai-birmingham.png";
-const aiLeeds = "/assets/locations/ai-leeds.png";
-const aiLiverpool = "/assets/locations/ai-liverpool.png";
-const aiBristol = "/assets/locations/ai-bristol.png";
-const aiGlasgow = "/assets/locations/ai-glasgow.png";
-const aiEdinburgh = "/assets/locations/ai-edinburgh.png";
-const aiSheffield = "/assets/locations/ai-sheffield.png";
-const aiNewcastle = "/assets/locations/ai-newcastle.png";
+// Shared UAE hero image until city-specific art is available
+const aiUae = "/assets/locations/ai-support.png";
 const cityInline1 = "/assets/blog/city-chatbot-inline-1.png";
 const cityInline2 = "/assets/blog/city-chatbot-inline-2.png";
 const cityInline3 = "/assets/blog/city-chatbot-inline-3.png";
 
 const cityHeroImages: Record<string, string> = {
-  london: aiLondon,
-  manchester: aiManchester,
-  birmingham: aiBirmingham,
-  leeds: aiLeeds,
-  liverpool: aiLiverpool,
-  bristol: aiBristol,
-  glasgow: aiGlasgow,
-  edinburgh: aiEdinburgh,
-  sheffield: aiSheffield,
-  newcastle: aiNewcastle,
+  dubai: aiUae,
+  "abu-dhabi": aiUae,
+  sharjah: aiUae,
+  ajman: aiUae,
+  "ras-al-khaimah": aiUae,
+  fujairah: aiUae,
+  "umm-al-quwain": aiUae,
+  "al-ain": aiUae,
 };
 
 const CityWebsiteChatbotBlog = () => {
@@ -56,7 +45,7 @@ const CityWebsiteChatbotBlog = () => {
   if (!data) return <NotFound />;
 
   const expandedContent = city ? getBlogExpandedContent(city) : null;
-  const heroImage = cityHeroImages[data.slug] || aiLondon;
+  const heroImage = cityHeroImages[data.slug] || aiUae;
   const blogSlug = `website-chatbot-24-7-${data.slug}`;
   const canonicalUrl = `https://www.aivized.com/blog/${blogSlug}`;
 
@@ -126,7 +115,7 @@ const CityWebsiteChatbotBlog = () => {
             </h2>
             <p>{data.whyNeed}</p>
 
-            <BlogInlineImage src={cityInline1} alt={`UK high street businesses using AI chatbot technology in ${data.city}`} />
+            <BlogInlineImage src={cityInline1} alt={`UAE high street businesses using AI chatbot technology in ${data.city}`} />
 
             <h2 id="how-it-works">
               How Our Managed Website Chatbot Works in {data.city}
@@ -171,7 +160,7 @@ const CityWebsiteChatbotBlog = () => {
               Implementing a website chatbot for your {data.city} business couldn't be simpler with AIVized's fully managed service:
             </p>
             <ol>
-              <li><strong>Subscribe:</strong> Choose a plan starting from just £29/month</li>
+              <li><strong>Subscribe:</strong> Choose a plan starting from just $29/month</li>
               <li><strong>Share Your Details:</strong> Tell us about your {data.city} business, products, and common customer questions</li>
               <li><strong>We Install Everything:</strong> Our team deploys your custom chatbot within 24 hours</li>
               <li><strong>Watch It Work:</strong> Your AI assistant starts capturing leads and answering enquiries immediately</li>
@@ -306,7 +295,7 @@ const CityWebsiteChatbotBlog = () => {
               Ready for a 24/7 Website Chatbot in {data.city}?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Join hundreds of {data.city} businesses already using AIVized's managed website chatbot service. From £29/month with complete installation included.
+              Join hundreds of {data.city} businesses already using AIVized's managed website chatbot service. From $29/month with complete installation included.
             </p>
             <Link
               href="/pricing"

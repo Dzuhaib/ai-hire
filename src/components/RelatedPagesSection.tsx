@@ -30,7 +30,7 @@ const allIndustries = [
 ];
 
 const allBlogs = [
-  { name: "WhatsApp Chatbot", slug: "whatsapp-chatbot-uk-business", icon: MessageCircle },
+  { name: "WhatsApp Chatbot", slug: "whatsapp-chatbot-uae-business", icon: MessageCircle },
   { name: "Website Chatbot", slug: "website-chatbot-small-business", icon: Globe },
   { name: "Instagram Chatbot", slug: "instagram-chatbot-social-media", icon: Instagram },
 ];
@@ -47,7 +47,7 @@ export const RelatedPagesSection = ({
     primaryLinks.push({
       title: "Home",
       href: "/",
-      description: "Managed AI chatbot for UK small businesses from £29/month",
+      description: "Managed AI chatbot for UAE small businesses from $29/month",
       icon: MessageCircle,
     });
   }
@@ -56,7 +56,7 @@ export const RelatedPagesSection = ({
     primaryLinks.push({
       title: "Pricing",
       href: "/pricing",
-      description: "Transparent AI chatbot pricing from £29/month",
+      description: "Transparent AI chatbot pricing from $29/month",
       icon: FileText,
     });
   }

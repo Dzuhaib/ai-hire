@@ -17,814 +17,864 @@ export interface LocationData {
   relatedBlogSlug?: string;
 }
 
-export const ukLocations: LocationData[] = [
+const mapUrl = (city: string) =>
+  `https://maps.google.com/maps?q=${encodeURIComponent(city)}&t=&z=11&ie=UTF8&iwloc=&output=embed`;
+
+export const uaeLocations: LocationData[] = [
   {
-    slug: "london",
-    city: "London",
-    region: "Greater London",
-    population: "8.8 million",
-    description: "London's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158857.72810623145!2d-0.24168144457754!3d51.52873519515656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency London | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in London, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    slug: "dubai",
+    city: "Dubai",
+    region: "Dubai",
+    population: "3.7 million",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Dubai businesses.",
+    mapEmbedUrl: mapUrl("Dubai, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Dubai",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Dubai businesses that want practical improvements and clear scope.",
     problems: [
-      { title: "High Staff Costs in London", description: "London wages are among the highest in the UK. Hiring customer service staff costs £35,000+ per year, plus recruitment fees and training time." },
-      { title: "24/7 Customer Expectations", description: "In a city that never sleeps, customers expect instant responses at all hours. Missing enquiries outside business hours means losing sales to competitors." },
-      { title: "Fierce Competition", description: "With thousands of businesses competing for the same customers, those who respond faster and provide better service win the race." },
-      { title: "Scaling Challenges", description: "Growing a London business means managing more customer enquiries without proportionally increasing overhead costs." }
+      {
+        title: "Many suppliers, no single owner",
+        description:
+          "Agencies, developers, and tool vendors often work in isolation, leaving gaps between the website, CRM, marketing, and internal operations.",
+      },
+      {
+        title: "Manual work slows growth",
+        description:
+          "Enquiries, follow-ups, onboarding, reporting, and repetitive admin still depend on people copying data between disconnected systems.",
+      },
+      {
+        title: "High expectations, short attention",
+        description:
+          "Dubai customers compare options quickly. Slow replies, weak search visibility, or a confusing website send them to a competitor.",
+      },
+      {
+        title: "Tools that do not talk to each other",
+        description:
+          "A growing stack of subscriptions can create more work than it removes when nothing is integrated properly.",
+      },
     ],
     solutions: [
-      { title: "Cost-Effective AI Staff", description: "Our AI chatbot costs a fraction of a London salary, from just £29/month. No employment taxes, no sick days, no holiday pay." },
-      { title: "Always-On Support", description: "Your AI assistant handles customer queries 24 hours a day, 365 days a year. Perfect for London's round-the-clock business culture." },
-      { title: "Instant Response Advantage", description: "Respond to every enquiry within seconds, not hours. Beat competitors to the punch and capture leads before they move on." },
-      { title: "Effortless Scaling", description: "Handle unlimited conversations simultaneously. Whether you get 10 or 10,000 enquiries, your AI employee manages them all." }
+      {
+        title: "One connected roadmap",
+        description:
+          "We look at the whole business, then prioritise the AI, automation, search, marketing, or software work that removes the biggest bottleneck first.",
+      },
+      {
+        title: "Automation around your process",
+        description:
+          "Enquiries, follow-ups, onboarding, and reporting can be automated without forcing your team into an unfamiliar workflow.",
+      },
+      {
+        title: "Search and content that compound",
+        description:
+          "Technical SEO, content, GEO, and paid campaigns work together to reach people who are already looking for what you offer.",
+      },
+      {
+        title: "A digital foundation that fits",
+        description:
+          "Fast websites, booking flows, integrations, and custom desktop tools built around how your business actually operates.",
+      },
     ],
     whyChooseUs: [
-      "Trusted by 100+ London businesses across restaurants, real estate, and e-commerce",
-      "Industry-specific AI training ensures accurate, relevant responses for your sector",
-      "24-hour setup with no technical skills required from your team",
-      "UK-based support team that understands the London business landscape",
-      "GDPR compliant with bank-level data security"
+      "Six connected services instead of several disconnected suppliers",
+      "A written scope, timeline, and price before work starts",
+      "Direct access to the people doing the work",
+      "Systems built to fit your existing website, CRM, and internal tools",
+      "Clear documentation and a clean handover, so you are never locked in",
     ],
-    serviceAreas: ["Central London", "North London", "South London", "East London", "West London", "Canary Wharf", "City of London", "Westminster", "Camden", "Islington", "Hackney", "Southwark", "Tower Hamlets", "Kensington & Chelsea", "Wandsworth"],
-    cityDescription: "London is the economic powerhouse of the United Kingdom, home to the London Stock Exchange, world-renowned restaurants, a thriving property market, and countless e-commerce businesses. As the UK's most competitive business environment, London companies need every advantage to stand out. AIVized provides London businesses with intelligent automation that delivers exceptional customer service while keeping costs under control.",
+    serviceAreas: [
+      "Dubai Marina",
+      "Downtown Dubai",
+      "Business Bay",
+      "Jumeirah Lake Towers",
+      "DIFC",
+      "Deira",
+      "Bur Dubai",
+      "Jumeirah",
+      "Al Barsha",
+      "Dubai Silicon Oasis",
+      "Dubai Hills",
+      "Al Quoz",
+      "International City",
+      "Discovery Gardens",
+    ],
+    cityDescription:
+      "Dubai is one of the most connected business markets in the world, with customers, investors, and partners spread across every time zone. Companies here compete on speed, service quality, and how well their digital systems work together. AIVized helps Dubai businesses connect AI, automation, search, marketing, and software into one practical operating system for growth.",
     faqs: [
-      { question: "How quickly can a managed AI chatbot service be set up for my London business?", answer: "We can have your managed AI chatbot service fully operational within 24 hours. After you subscribe, our team handles the complete installation and configuration. No technical skills required from your side." },
-      { question: "Is this AI chatbot for small business UK suitable for London restaurants?", answer: "Absolutely. Our restaurant-specific AI chatbot for small business UK is trained to handle reservations, answer menu questions, provide opening hours, and capture booking details. Perfect for busy London eateries that receive enquiries at all hours." },
-      { question: "Can the lead generation chatbot UK handle multiple London locations?", answer: "Yes. If your business operates across multiple London locations, your lead generation chatbot UK can be trained to direct customers to the right branch and provide location-specific information." },
-      { question: "What happens if a customer asks something the 24/7 customer support chatbot can't answer?", answer: "Your 24/7 customer support chatbot UK will capture the customer's details and escalate the enquiry to you via email. You never lose a lead. Every conversation is an opportunity." },
-      { question: "Do you offer on-site support in London for the AI chatbot?", answer: "Our setup and support is entirely remote, which allows us to keep costs low and pass those savings to you. However, our UK-based team is available via phone and email whenever you need assistance with your affordable AI chatbot for website." },
-      { question: "How does AIVized compare to hiring a receptionist in London?", answer: "A London receptionist costs £28,000-£35,000+ annually, works limited hours, needs holidays, and can only handle one call at a time. Our managed AI chatbot service costs from £29/month, works 24/7, never takes leave, and handles unlimited conversations simultaneously." }
+      {
+        question: "What services does AIVized offer in Dubai?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development. You can start with one service or combine several into a single roadmap.",
+      },
+      {
+        question: "Do you work on-site in Dubai?",
+        answer:
+          "Projects are delivered remotely, with scheduled calls and clear checkpoints. We work with businesses across Dubai and the wider UAE without requiring you to rearrange your week around travel.",
+      },
+      {
+        question: "Can you work with our existing website and tools?",
+        answer:
+          "Usually, yes. We regularly work with existing websites, CRMs, booking systems, and internal tools. If something is genuinely holding you back, we will explain why rather than forcing an unnecessary rebuild.",
+      },
+      {
+        question: "How does a project start?",
+        answer:
+          "It starts with a discovery call. We look at what is slowing the business down, recommend the shortest path to a useful result, and send a written scope, timeline, and price before any work begins.",
+      },
+      {
+        question: "Do you provide support after launch?",
+        answer:
+          "Yes. Optional managed support covers monitoring, maintenance, updates, and continuous improvement. Support is not a condition of working with us.",
+      },
     ],
-    coordinates: { lat: 51.5074, lng: -0.1278 }
+    coordinates: { lat: 25.2048, lng: 55.2708 },
+    relatedBlogSlug: "ai-agency-dubai",
   },
   {
-    slug: "manchester",
-    city: "Manchester",
-    region: "Greater Manchester",
-    population: "2.8 million",
-    description: "Manchester's leading AI agency providing fully managed chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76219.64587995544!2d-2.3028623!3d53.4723272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2sManchester!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Manchester | Smart Automation for Your Business",
-    heroSubtext: "AIVized is Manchester's leading AI agency, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, automate customer engagement, and grow your business without the overhead.",
-    problems: [
-      { title: "Growing Competition in Manchester", description: "Manchester's business scene is booming. Standing out requires exceptional customer service that many businesses struggle to maintain consistently." },
-      { title: "Staff Recruitment Challenges", description: "Finding reliable customer service staff in Manchester's competitive job market is increasingly difficult and time-consuming." },
-      { title: "Peak Time Overwhelm", description: "Match days, events, and busy periods create surges in customer enquiries that overwhelm small teams." },
-      { title: "After-Hours Missed Opportunities", description: "Many Manchester businesses close their phones at 5pm, missing evening and weekend enquiries from potential customers." }
-    ],
-    solutions: [
-      { title: "Consistent Excellence", description: "Your AI employee delivers the same high-quality service whether it's the first or thousandth conversation of the day." },
-      { title: "No Recruitment Headaches", description: "Skip the hiring process entirely. Your AI is trained, reliable, and ready to work from day one." },
-      { title: "Unlimited Capacity", description: "Handle match-day rushes and peak periods effortlessly. Your AI manages any volume of conversations simultaneously." },
-      { title: "Round-the-Clock Coverage", description: "Capture every lead, answer every question, 24 hours a day. Your competitors are sleeping. Your AI isn't." }
-    ],
-    whyChooseUs: [
-      "Manchester's trusted AI agency — serving 50+ local businesses across every sector",
-      "Fully managed service: we build, train, install, and optimise your AI around the clock",
-      "AI trained specifically for Northern hospitality and Manchester customer expectations",
-      "Setup completed within 24 hours. Start seeing results immediately",
-      "Affordable from £29/month with no long-term contracts. No technical skills needed"
-    ],
-    serviceAreas: ["Manchester City Centre", "Salford", "Trafford", "Stockport", "Tameside", "Oldham", "Bolton", "Bury", "Rochdale", "Wigan", "MediaCityUK", "Spinningfields", "Northern Quarter", "Ancoats", "Didsbury"],
-    cityDescription: "Manchester has transformed from its industrial heritage into a modern hub of commerce, creativity, and technology — one of the fastest-growing tech ecosystems in Europe. Home to MediaCityUK, a thriving startup scene in the Northern Quarter, over 20,000 digital businesses, and major institutions like Manchester Metropolitan University, the city is a powerhouse of innovation. As an AI agency serving Manchester, AIVized helps local businesses — from Spinningfields professional services to Ancoats hospitality venues — compete at the highest level with intelligent automation that captures leads, handles enquiries, and delivers outstanding customer experiences 24/7.",
-    faqs: [
-      { question: "Is AIVized a Manchester-based AI agency or just another software tool?", answer: "AIVized is a fully managed AI agency serving Manchester businesses — we're not a DIY chatbot builder. Our UK-based team handles the entire process: AI training, website installation, 24/7 monitoring, and ongoing optimisation. You get a dedicated AI employee for your business without needing any technical skills." },
-      { question: "Is this AI chatbot for small business UK good for Manchester restaurants and bars?", answer: "Definitely. Our hospitality-trained AI chatbot for small business UK handles table bookings, menu enquiries, event information, and group reservations, perfect for Manchester's busy restaurant and nightlife scene." },
-      { question: "How does the lead generation chatbot UK help Manchester real estate agents?", answer: "Your lead generation chatbot UK can answer property questions, qualify leads, schedule viewings, and provide information about local areas, giving you more time to close deals instead of answering repetitive questions." },
-      { question: "What's the setup process for Manchester businesses using the managed AI chatbot?", answer: "After subscribing, you share your website access with us, and our team installs and configures your managed AI chatbot within 24 hours. We handle everything. You just watch it work." },
-      { question: "Can I try the affordable AI chatbot for website before committing?", answer: "We believe in earning your business every month. There are no long-term contracts, so you can cancel anytime if it's not delivering value for your Manchester business. It's the most affordable AI chatbot for website in the UK." },
-      { question: "Does the 24/7 customer support chatbot UK support multiple languages for Manchester's diverse customer base?", answer: "Our 24/7 customer support chatbot UK primarily operates in English but can be configured to handle basic enquiries in other languages, helping you serve Manchester's wonderfully diverse community." }
-    ],
-    coordinates: { lat: 53.4808, lng: -2.2426 },
-    relatedBlogSlug: "ai-agency-manchester"
-  },
-  {
-    slug: "birmingham",
-    city: "Birmingham",
-    region: "West Midlands",
-    population: "2.9 million",
-    description: "Birmingham's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77925.59628890326!2d-1.9537!3d52.4862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2sBirmingham!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Birmingham | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Birmingham, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Rising Operational Costs", description: "Birmingham businesses face increasing pressure to deliver more while spending less. Traditional staffing models are becoming unsustainable." },
-      { title: "Inconsistent Customer Service", description: "Staff turnover and varying skill levels mean customers receive inconsistent experiences, damaging your reputation." },
-      { title: "Missed Business Opportunities", description: "Without 24/7 coverage, Birmingham businesses lose potential customers who enquire outside traditional hours." },
-      { title: "Scaling Without Breaking the Bank", description: "Growing means handling more enquiries, but hiring proportionally more staff erodes profitability." }
-    ],
-    solutions: [
-      { title: "Slash Operational Costs", description: "Replace expensive staffing with AI that costs from £29/month. Reinvest savings into growing your Birmingham business." },
-      { title: "Consistent Brand Experience", description: "Every customer receives the same exceptional service, every time. Your AI never has a bad day." },
-      { title: "Never Miss a Lead", description: "Your AI captures enquiries 24/7, ensuring no Birmingham customer slips through the cracks." },
-      { title: "Profitable Growth", description: "Scale your customer service capacity without proportionally increasing costs. More revenue, better margins." }
-    ],
-    whyChooseUs: [
-      "Trusted by Birmingham businesses across hospitality, property, and retail sectors",
-      "AI specifically trained for Midlands business needs and customer expectations",
-      "Complete setup within 24 hours with zero technical requirements",
-      "Month-to-month flexibility with no long-term contracts",
-      "UK-based support team available when you need help"
-    ],
-    serviceAreas: ["Birmingham City Centre", "Solihull", "Sutton Coldfield", "Edgbaston", "Moseley", "Harborne", "Jewellery Quarter", "Digbeth", "Selly Oak", "Kings Heath", "Erdington", "Hall Green", "Handsworth", "Aston", "Small Heath"],
-    cityDescription: "Birmingham stands as the commercial capital of the Midlands, hosting major businesses, world-class dining, and a thriving property market. With ongoing regeneration projects and excellent transport links including HS2, Birmingham is positioned for continued growth. AIVized helps Birmingham businesses capitalise on this momentum with intelligent automation that delivers exceptional customer experiences at a fraction of traditional staffing costs.",
-    faqs: [
-      { question: "How can a managed AI chatbot service help my Birmingham restaurant?", answer: "Our hospitality-focused managed AI chatbot service handles reservations, answers menu and allergen questions, provides opening times, and captures booking details, freeing your staff to focus on in-house guests." },
-      { question: "Is this AI chatbot for small business UK suitable for Birmingham's manufacturing sector?", answer: "Yes. Our AI chatbot for small business UK can handle product enquiries, provide specifications, capture quote requests, and direct technical questions to the right team members." },
-      { question: "What makes AIVized's lead generation chatbot UK different from other chatbots?", answer: "Unlike basic chatbots, our lead generation chatbot UK is trained specifically for your industry and business. It understands context, handles complex questions, and knows when to escalate to a human." },
-      { question: "Can the affordable AI chatbot for website integrate with my existing Birmingham business systems?", answer: "Our affordable AI chatbot for website works via your website and doesn't require complex integrations. It captures leads and sends them to you via email, fitting straight into your existing workflow." },
-      { question: "How quickly will I see results from the 24/7 customer support chatbot UK?", answer: "Most Birmingham businesses see immediate improvements in response times and lead capture. Within the first month, you'll have clear data on conversations handled and leads generated by your 24/7 customer support chatbot UK." },
-      { question: "What if I need to update the AI chatbot's knowledge about my business?", answer: "Simply let us know, and we'll update your AI's training at no extra cost. Your managed AI chatbot stays current with your Birmingham business as it evolves." }
-    ],
-    coordinates: { lat: 52.4862, lng: -1.8904 }
-  },
-  {
-    slug: "leeds",
-    city: "Leeds",
-    region: "West Yorkshire",
-    population: "1.9 million",
-    description: "Leeds' leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75441.42127098876!2d-1.6014!3d53.8008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c6e8b8c6b8d%3A0x1d0296e9b7b7b7b7!2sLeeds!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Leeds | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Leeds, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Professional Service Demands", description: "Leeds' professional services sector demands impeccable client communication. Delays or missed messages damage reputations." },
-      { title: "Out-of-Hours Enquiries", description: "Clients and customers increasingly expect responses outside traditional 9-5 hours, especially for urgent matters." },
-      { title: "Staff Capacity Constraints", description: "Growing businesses struggle to handle increasing enquiry volumes without overwhelming existing team members." },
-      { title: "Competitive Pressure", description: "Leeds' thriving business scene means competitors are constantly improving. Standing still means falling behind." }
-    ],
-    solutions: [
-      { title: "Professional 24/7 Presence", description: "Your AI represents your Leeds business professionally at all hours, maintaining your reputation around the clock." },
-      { title: "Instant Response Times", description: "Every enquiry receives an immediate, intelligent response. No more missed opportunities while you sleep." },
-      { title: "Unlimited Capacity", description: "Handle any volume of conversations without adding staff. Your AI scales effortlessly with your success." },
-      { title: "Competitive Edge", description: "Outpace competitors with superior responsiveness and consistent customer service quality." }
-    ],
-    whyChooseUs: [
-      "Supporting Leeds businesses across legal, finance, hospitality, and property sectors",
-      "AI trained to match Yorkshire's professional yet friendly communication style",
-      "Full deployment within 24 hours with minimal disruption to your operations",
-      "Transparent pricing with no hidden fees or long-term commitments",
-      "Complete GDPR compliance for professional service requirements"
-    ],
-    serviceAreas: ["Leeds City Centre", "Headingley", "Chapel Allerton", "Roundhay", "Horsforth", "Meanwood", "Kirkstall", "Morley", "Pudsey", "Wetherby", "Otley", "Ilkley", "Garforth", "Guiseley", "Yeadon"],
-    cityDescription: "Leeds has established itself as the economic heart of Yorkshire, with particular strengths in financial services, legal expertise, digital innovation, and a world-class hospitality scene. The city's ongoing development and excellent connectivity make it an increasingly attractive location for businesses. AIVized helps Leeds companies maintain professional standards while managing costs through intelligent automation.",
-    faqs: [
-      { question: "Is the managed AI chatbot service suitable for Leeds law firms?", answer: "Absolutely. Our managed AI chatbot service can handle initial client enquiries, capture case details, provide general information, and schedule consultations, while maintaining the professional tone expected in legal services." },
-      { question: "How does the AI chatbot for small business UK help Leeds restaurants and bars?", answer: "From Trinity Kitchen to Call Lane, our hospitality AI chatbot for small business UK manages bookings, answers menu questions, handles event enquiries, and captures customer details for follow-up marketing." },
-      { question: "Can the lead generation chatbot UK qualify leads for my Leeds business?", answer: "Yes. Your lead generation chatbot UK can ask qualifying questions, gather relevant information, and ensure you only spend time on genuine opportunities." },
-      { question: "What training does the affordable AI chatbot for website receive for my specific business?", answer: "We train your affordable AI chatbot for website on your specific services, common questions, and business processes. It's not a generic chatbot. It's tailored to your Leeds business." },
-      { question: "How do I know if the 24/7 customer support chatbot UK is working for my business?", answer: "You'll receive regular reports on conversations handled, leads captured, and common questions asked. Clear data shows the value your 24/7 customer support chatbot UK brings to your Leeds business." },
-      { question: "Can I cancel the managed AI chatbot if it isn't right for my business?", answer: "Yes. We operate on a month-to-month basis with no long-term contracts. We're confident you'll see the value, but you're never locked in to our managed AI chatbot service." }
-    ],
-    coordinates: { lat: 53.8008, lng: -1.5491 }
-  },
-  {
-    slug: "liverpool",
-    city: "Liverpool",
-    region: "Merseyside",
+    slug: "abu-dhabi",
+    city: "Abu Dhabi",
+    region: "Abu Dhabi",
     population: "1.5 million",
-    description: "Liverpool's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75637.69214673!2d-3.0185!3d53.4084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b212d473d8f0f%3A0x53e7f7b8a0fa9a0a!2sLiverpool!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Liverpool | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Liverpool, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Abu Dhabi businesses.",
+    mapEmbedUrl: mapUrl("Abu Dhabi, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Abu Dhabi",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Abu Dhabi organisations that need practical, accountable delivery.",
     problems: [
-      { title: "Tourism and Hospitality Demands", description: "Liverpool's booming tourism means peaks and troughs in enquiries that are hard to staff for efficiently." },
-      { title: "Matchday Madness", description: "Football matchdays bring surges of enquiries that overwhelm traditional customer service capacity." },
-      { title: "Budget Constraints", description: "Many Liverpool businesses need to compete with larger players despite tighter budgets." },
-      { title: "Reputation Management", description: "In a close-knit city, word spreads fast. Poor customer service can quickly damage your reputation." }
+      {
+        title: "Complex approval and delivery cycles",
+        description:
+          "Large organisations and growing businesses need suppliers who can work to a clear scope, document decisions, and keep momentum without constant hand-holding.",
+      },
+      {
+        title: "Data trapped in separate systems",
+        description:
+          "When enquiries, operations, and reporting live in different tools, teams spend their time moving information instead of using it.",
+      },
+      {
+        title: "Digital presence lags the business",
+        description:
+          "A strong reputation offline does not automatically translate into search visibility, a convincing website, or a smooth enquiry process online.",
+      },
+      {
+        title: "Limited internal technical capacity",
+        description:
+          "Hiring a full in-house team for every project is not practical. Businesses need senior delivery without adding permanent overhead.",
+      },
     ],
     solutions: [
-      { title: "Flexible Capacity", description: "Your AI handles quiet Tuesdays and packed matchdays with equal efficiency. Pay the same regardless of volume." },
-      { title: "Surge-Ready Service", description: "When Anfield or Goodison empties, your AI is ready to handle the rush without breaking a sweat." },
-      { title: "Enterprise Quality, SME Prices", description: "Get AI-powered customer service that rivals major corporations, at prices that work for Liverpool businesses." },
-      { title: "Consistently Brilliant", description: "Every customer interaction is handled professionally, protecting and enhancing your reputation." }
+      {
+        title: "Clear scope and documentation",
+        description:
+          "Every project starts with a written scope, timeline, and price, with decisions documented so internal stakeholders stay aligned.",
+      },
+      {
+        title: "Integrated systems",
+        description:
+          "We connect the website, CRM, internal tools, and reporting so information flows without manual copying.",
+      },
+      {
+        title: "Search, content, and marketing",
+        description:
+          "Technical SEO, GEO, content, and campaigns are planned together to build visibility that supports the commercial goal.",
+      },
+      {
+        title: "Flexible delivery capacity",
+        description:
+          "Access senior strategy, design, development, and support without building a permanent department for a single project.",
+      },
     ],
     whyChooseUs: [
-      "Helping Liverpool businesses from restaurants and hotels to letting agents and shops",
-      "AI trained to match Liverpool's warm, welcoming customer service style",
-      "Operational within 24 hours of signing up, no delays, no hassle",
-      "Straightforward monthly pricing that Liverpool businesses can budget for",
-      "UK-based team that understands the local market"
+      "A written scope, timeline, and price before work starts",
+      "Direct access to the people doing the work",
+      "Systems built to fit existing websites, CRMs, and internal tools",
+      "Clear documentation and a clean handover",
+      "Optional ongoing support for monitoring and improvement",
     ],
-    serviceAreas: ["Liverpool City Centre", "Albert Dock", "Baltic Triangle", "Woolton", "Crosby", "Formby", "Southport", "Bootle", "Birkenhead", "Wallasey", "West Kirby", "Heswall", "Allerton", "Aigburth", "Anfield"],
-    cityDescription: "Liverpool's rich cultural heritage, Premier League football clubs, and thriving hospitality scene make it one of the UK's most visited cities. The city's ongoing regeneration and strong sense of community create a unique business environment. AIVized helps Liverpool businesses deliver the warm, efficient service the city is known for, while managing costs and capturing every opportunity.",
+    serviceAreas: [
+      "Abu Dhabi Island",
+      "Al Maryah Island",
+      "Al Reem Island",
+      "Khalifa City",
+      "Al Khalidiyah",
+      "The Corniche",
+      "Yas Island",
+      "Saadiyat Island",
+      "Mussafah",
+      "Masdar City",
+      "Al Raha",
+      "Al Shamkha",
+    ],
+    cityDescription:
+      "Abu Dhabi combines a large public sector, a growing private sector, and a strong focus on long-term investment. Organisations here value suppliers who can document their work, integrate with existing systems, and deliver without unnecessary disruption. AIVized supports Abu Dhabi businesses with AI, automation, search, marketing, and software delivered to a clear scope.",
     faqs: [
-      { question: "Can a managed AI chatbot service handle Liverpool's tourist season peaks?", answer: "Absolutely. Your managed AI chatbot service handles any volume of enquiries without additional cost. Whether it's a quiet January or peak Beatles festival season, you're covered with 24/7 lead capture." },
-      { question: "Is this AI chatbot for small business UK good for Liverpool hotels and B&Bs?", answer: "Perfect for them. Our AI chatbot for small business UK handles room enquiries, provides local recommendations, manages booking questions, and captures guest details, ideal for Liverpool's hospitality sector." },
-      { question: "How does the lead generation chatbot UK help Liverpool letting agents?", answer: "Your lead generation chatbot UK can answer property questions, schedule viewings, qualify tenant leads, and provide information about Liverpool neighbourhoods, saving hours of repetitive work and reducing missed leads from your website." },
-      { question: "Can the 24/7 customer support chatbot UK handle Scouse humour and local expressions?", answer: "Our 24/7 customer support chatbot UK is trained to understand UK English in all its wonderful variations. It may not crack jokes, but it'll understand your customers and respond appropriately." },
-      { question: "What if my Liverpool business is seasonal? Is the affordable AI chatbot flexible?", answer: "With no long-term contracts, you can adjust your affordable AI chatbot for website plan as needed. Many Liverpool businesses scale up for summer tourism and adjust during quieter periods." },
-      { question: "How quickly can I get started with the managed AI chatbot in Liverpool?", answer: "Within 24 hours of subscribing, your managed AI chatbot service will be live on your website and ready to help Liverpool customers capture leads 24/7." }
+      {
+        question: "What services does AIVized offer in Abu Dhabi?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development, delivered as standalone projects or as a connected roadmap.",
+      },
+      {
+        question: "Do you work on-site in Abu Dhabi?",
+        answer:
+          "Projects are delivered remotely with scheduled calls, reviews, and handover sessions. We support organisations across Abu Dhabi and the wider UAE.",
+      },
+      {
+        question: "Can you integrate with our existing systems?",
+        answer:
+          "Yes, where the systems expose an API or a practical integration path. We review the current stack during discovery and recommend the least disruptive approach.",
+      },
+      {
+        question: "How is pricing handled?",
+        answer:
+          "After discovery we provide a fixed written quote for the agreed scope. Ongoing support and retainers are optional and priced separately.",
+      },
+      {
+        question: "Do you provide documentation and handover?",
+        answer:
+          "Yes. Every project includes clear documentation and a handover so your team understands how the system works and is not dependent on us for routine changes.",
+      },
     ],
-    coordinates: { lat: 53.4084, lng: -2.9916 }
+    coordinates: { lat: 24.4539, lng: 54.3773 },
   },
   {
-    slug: "bristol",
-    city: "Bristol",
-    region: "South West England",
-    population: "700,000",
-    description: "Bristol's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79508.08127098876!2d-2.6544!3d51.4545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7aae8b8b8d%3A0x1d0296e9b7b7b7b7!2sBristol!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Bristol | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Bristol, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    slug: "sharjah",
+    city: "Sharjah",
+    region: "Sharjah",
+    population: "1.8 million",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Sharjah businesses.",
+    mapEmbedUrl: mapUrl("Sharjah, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Sharjah",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Sharjah businesses that want practical improvements and clear scope.",
     problems: [
-      { title: "Tech-Savvy Customer Expectations", description: "Bristol's customers expect modern, instant service. Traditional slow responses don't cut it in this innovative city." },
-      { title: "Indie Business Challenges", description: "Bristol's vibrant independent business scene means competing without corporate resources." },
-      { title: "Work-Life Balance", description: "Bristol businesses value work-life balance, but customers still expect responses outside office hours." },
-      { title: "Sustainable Growth", description: "Scaling sustainably means growing without unsustainable staffing costs." }
+      {
+        title: "Strong local competition",
+        description:
+          "Sharjah businesses compete with nearby Dubai suppliers as well as local operators, making response speed and a credible digital presence essential.",
+      },
+      {
+        title: "Repetitive enquiries",
+        description:
+          "Teams answer the same questions about availability, pricing, delivery, and services instead of focusing on higher-value work.",
+      },
+      {
+        title: "Disconnected sales and operations",
+        description:
+          "Enquiries from the website, social media, and phone often sit in different places, making follow-up inconsistent.",
+      },
+      {
+        title: "Website underperforms",
+        description:
+          "A site that looks acceptable but loads slowly, ranks poorly, or makes enquiry difficult quietly limits growth.",
+      },
     ],
     solutions: [
-      { title: "Modern Service Delivery", description: "Meet Bristol customers where they are with instant, intelligent AI responses that match their expectations." },
-      { title: "Level the Playing Field", description: "Get enterprise-quality customer service on an independent business budget." },
-      { title: "Protect Your Boundaries", description: "Your AI handles out-of-hours enquiries so you can switch off, knowing no opportunity is missed." },
-      { title: "Sustainable Scaling", description: "Grow your customer base without proportionally growing your payroll." }
+      {
+        title: "Respond faster without adding staff",
+        description:
+          "AI systems and automations handle routine enquiries, follow-ups, and internal handoffs so the team can focus on customers who need a person.",
+      },
+      {
+        title: "One view of the customer",
+        description:
+          "We connect enquiry channels and internal tools so leads and customer details are not lost between systems.",
+      },
+      {
+        title: "Local and regional visibility",
+        description:
+          "Technical SEO, content, and GEO help the business appear when people search for relevant services in Sharjah and the wider UAE.",
+      },
+      {
+        title: "A website that supports sales",
+        description:
+          "Clear structure, fast pages, and simple enquiry flows make it easier for customers to understand the offer and take the next step.",
+      },
     ],
     whyChooseUs: [
-      "Supporting Bristol's creative and independent business community",
-      "AI that matches Bristol's innovative, friendly business culture",
-      "Live within 24 hours with zero technical requirements",
-      "Ethical, transparent pricing with no lock-in contracts",
-      "GDPR compliant and environmentally conscious operations"
+      "A written scope, timeline, and price before work starts",
+      "Six connected services instead of several disconnected suppliers",
+      "Direct access to the people doing the work",
+      "Systems built to fit existing tools and workflows",
+      "Optional ongoing support after launch",
     ],
-    serviceAreas: ["Bristol City Centre", "Clifton", "Harbourside", "Redland", "Cotham", "Stokes Croft", "Bedminster", "Southville", "Bishopston", "Horfield", "Fishponds", "St Pauls", "Temple Meads", "Broadmead", "Cabot Circus"],
-    cityDescription: "Bristol stands out as one of the UK's most innovative and environmentally conscious cities. With a thriving tech sector, celebrated food scene, and fiercely independent business community, Bristol attracts entrepreneurs who think differently. AIVized helps Bristol businesses maintain their distinctive character while automating the repetitive aspects of customer service.",
+    serviceAreas: [
+      "Al Majaz",
+      "Al Qasimia",
+      "Al Nahda",
+      "Al Khan",
+      "Muwaileh",
+      "University City",
+      "Al Taawun",
+      "Al Mamzar",
+      "Sharjah City Centre",
+      "Aljada",
+      "Industrial Area",
+      "Rolla",
+    ],
+    cityDescription:
+      "Sharjah has a broad mix of established family businesses, education providers, industrial operators, and a growing creative sector. Many companies here are investing in digital systems for the first time, or replacing tools that no longer fit. AIVized helps Sharjah businesses improve enquiry handling, visibility, and internal operations without overcomplicating the technology.",
     faqs: [
-      { question: "Is the managed AI chatbot service suitable for Bristol's tech and creative businesses?", answer: "Absolutely. Our managed AI chatbot service handles technical product enquiries, creative brief discussions, and project scoping conversations with the professionalism your Bristol clients expect." },
-      { question: "How does the AI chatbot for small business UK help Bristol restaurants and cafes?", answer: "From Gloucester Road independents to Harbourside dining, our AI chatbot for small business UK manages reservations, handles dietary enquiries, and captures customer information for marketing, reducing missed leads from your website." },
-      { question: "Can the lead generation chatbot UK represent my brand's unique Bristol personality?", answer: "Yes. We train your lead generation chatbot UK to match your specific tone of voice and brand values, ensuring it feels like a natural extension of your Bristol business." },
-      { question: "Is the 24/7 customer support chatbot UK environmentally friendly?", answer: "Our 24/7 customer support chatbot UK operates efficiently with minimal environmental impact. It's certainly more sustainable than daily commuting and office energy consumption." },
-      { question: "How does pricing work for Bristol startups? Is it an affordable AI chatbot for website?", answer: "We offer the most affordable AI chatbot for website in the UK, from £29/month with no setup fees or long-term contracts. Perfect for Bristol businesses watching their runway." },
-      { question: "Can I upgrade or downgrade my managed AI chatbot as my Bristol business evolves?", answer: "Absolutely. Move between plans as your needs change. Our managed AI chatbot service grows with your business, with no penalties and no complications." }
+      {
+        question: "What services does AIVized offer in Sharjah?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development, either individually or as a connected roadmap.",
+      },
+      {
+        question: "Do you work on-site in Sharjah?",
+        answer:
+          "Delivery is remote, with scheduled calls and reviews. We work with businesses across Sharjah and the wider UAE.",
+      },
+      {
+        question: "Can you help a small business with a limited budget?",
+        answer:
+          "Yes. We scope the smallest useful piece first, so you can see a result before committing to a larger programme of work.",
+      },
+      {
+        question: "Will the work fit our existing website?",
+        answer:
+          "In many cases, yes. We review the current site and tools during discovery and only recommend a rebuild when the existing setup is genuinely limiting performance.",
+      },
+      {
+        question: "Do you offer support after launch?",
+        answer:
+          "Yes. Optional support covers monitoring, maintenance, updates, and improvements. It is not a condition of working with us.",
+      },
     ],
-    coordinates: { lat: 51.4545, lng: -2.5879 }
+    coordinates: { lat: 25.3463, lng: 55.4209 },
   },
   {
-    slug: "glasgow",
-    city: "Glasgow",
-    region: "Scotland",
-    population: "1.7 million",
-    description: "Glasgow's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71718.84127098876!2d-4.3011!3d55.8642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Glasgow | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Glasgow, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    slug: "ajman",
+    city: "Ajman",
+    region: "Ajman",
+    population: "600,000",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Ajman businesses.",
+    mapEmbedUrl: mapUrl("Ajman, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Ajman",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Ajman businesses that want practical improvements and clear scope.",
     problems: [
-      { title: "Hospitality Staffing Shortages", description: "Glasgow's hospitality sector faces chronic staffing challenges, making consistent customer service difficult to maintain." },
-      { title: "Event-Driven Demand Spikes", description: "From Celtic and Rangers matchdays to SECC events, Glasgow businesses face unpredictable surges in enquiries." },
-      { title: "Budget Pressures", description: "Scottish businesses need to maximise value from every pound spent on customer service." },
-      { title: "Reputation in a Connected City", description: "Glasgow's tight-knit business community means reputation is everything. Consistent excellence is essential." }
+      {
+        title: "Compete with larger neighbours",
+        description:
+          "Businesses in Ajman often compete with better-resourced operators in Dubai and Sharjah, making efficiency and response speed important.",
+      },
+      {
+        title: "Manual follow-up",
+        description:
+          "Enquiries arrive through several channels, but follow-up depends on someone remembering to check each one.",
+      },
+      {
+        title: "Low search visibility",
+        description:
+          "Good local businesses can be hard to find online when their website lacks structure, content, and technical foundations.",
+      },
+      {
+        title: "Limited technical resources",
+        description:
+          "Not every business needs an in-house technology team, but most need systems that work reliably without constant attention.",
+      },
     ],
     solutions: [
-      { title: "Reliable AI Staff", description: "Your AI employee shows up every day, handles every enquiry, and never calls in sick. Solve your staffing challenges permanently." },
-      { title: "Surge Capacity Built In", description: "Handle matchday rushes and event peaks without panic hiring. Your AI scales instantly to meet demand." },
-      { title: "Maximum Value", description: "Get 24/7 customer service from £29/month. Unbeatable value for Glasgow businesses." },
-      { title: "Consistent Excellence", description: "Every customer receives the same high standard of service, protecting your Glasgow reputation." }
+      {
+        title: "Efficient operations",
+        description:
+          "Automations handle repetitive enquiries, follow-ups, and internal admin so a smaller team can support more customers.",
+      },
+      {
+        title: "Consistent lead handling",
+        description:
+          "We connect enquiry channels so leads are captured, assigned, and followed up without manual copying.",
+      },
+      {
+        title: "Search foundations",
+        description:
+          "Technical SEO, content, and local signals help Ajman businesses appear for the services people are actively searching for.",
+      },
+      {
+        title: "Practical software",
+        description:
+          "Websites, booking flows, and internal tools are built around the way the business already works, not the other way around.",
+      },
     ],
     whyChooseUs: [
-      "Trusted by Glasgow businesses from restaurants and bars to property agents and retailers",
-      "AI trained for Scottish hospitality's warm, welcoming style",
-      "Full deployment within 24 hours. Start benefiting immediately",
-      "Straightforward pricing with no hidden fees or surprises",
-      "UK-based support that understands Scottish business needs"
+      "A written scope, timeline, and price before work starts",
+      "Direct access to the people doing the work",
+      "Systems built to fit existing tools and workflows",
+      "Clear documentation and a clean handover",
+      "Optional ongoing support after launch",
     ],
-    serviceAreas: ["Glasgow City Centre", "West End", "Finnieston", "Merchant City", "Partick", "Hillhead", "Kelvinbridge", "Shawlands", "Queen's Park", "Govan", "Pollokshields", "Dennistoun", "Maryhill", "Springburn", "Bothwell"],
-    cityDescription: "Glasgow is Scotland's commercial capital, renowned for its warmth, world-class hospitality, and thriving business community. From historic buildings to modern developments, the city buzzes with entrepreneurial energy. AIVized helps Glasgow businesses deliver the legendary Scottish welcome around the clock, while keeping costs under control and capturing every opportunity.",
+    serviceAreas: [
+      "Ajman City Centre",
+      "Al Nuaimiya",
+      "Al Rashidiya",
+      "Ajman Corniche",
+      "Al Jurf",
+      "Al Hamidiyah",
+      "Mushairef",
+      "Al Rawda",
+      "Emirates City",
+      "Al Mowaihat",
+    ],
+    cityDescription:
+      "Ajman is a compact, practical business market with a strong base of trading companies, service businesses, and family-run operations. Companies here often need straightforward improvements that reduce manual work and make it easier for customers to find and contact them. AIVized supports Ajman businesses with focused AI, automation, marketing, and software projects.",
     faqs: [
-      { question: "Can the managed AI chatbot service understand Scottish customers?", answer: "Absolutely. Our managed AI chatbot service is trained on diverse UK English and handles Scottish expressions and communication styles naturally. Your Glasgow customers will feel right at home." },
-      { question: "How does the AI chatbot for small business UK help Glasgow's hospitality industry?", answer: "From managing table bookings and answering menu questions to handling event enquiries and capturing customer data, our AI chatbot for small business UK is perfect for Glasgow's legendary food and drink scene." },
-      { question: "Is the lead generation chatbot UK suitable for Glasgow letting agents?", answer: "Yes. Your lead generation chatbot UK can answer property questions, schedule viewings, qualify tenant leads, and provide information about Glasgow neighbourhoods and transport links." },
-      { question: "What happens during Old Firm weekends with the 24/7 customer support chatbot UK?", answer: "Your 24/7 customer support chatbot UK handles the surge in enquiries without missing a beat. While your competitors struggle with volume, you're capturing every lead and answering every question." },
-      { question: "How quickly can I get started with an affordable AI chatbot for website in Glasgow?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live and serving your Glasgow customers. No delays, no complications." },
-      { question: "Do you offer support for Glasgow businesses using the managed AI chatbot?", answer: "Our UK-based support team is available via phone and email. We understand the Scottish market and are here to help your Glasgow business succeed with our managed AI chatbot service." }
+      {
+        question: "What services does AIVized offer in Ajman?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development.",
+      },
+      {
+        question: "Do you work on-site in Ajman?",
+        answer:
+          "Delivery is remote with scheduled calls and reviews. We support businesses across Ajman and the wider UAE.",
+      },
+      {
+        question: "Can we start with a small project?",
+        answer:
+          "Yes. Many clients start with a single automation, a website improvement, or a focused SEO review before committing to a larger roadmap.",
+      },
+      {
+        question: "How long does a typical project take?",
+        answer:
+          "Smaller automation and website projects can be live in a few weeks. Larger systems typically take four to twelve weeks, depending on scope and integrations.",
+      },
+      {
+        question: "Is ongoing support required?",
+        answer:
+          "No. Support is optional. Some clients prefer a clean handover and manage the system internally; others choose a monthly support arrangement.",
+      },
     ],
-    coordinates: { lat: 55.8642, lng: -4.2518 }
+    coordinates: { lat: 25.4052, lng: 55.5136 },
   },
   {
-    slug: "edinburgh",
-    city: "Edinburgh",
-    region: "Scotland",
-    population: "540,000",
-    description: "Edinburgh's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71499.84127098876!2d-3.2207!3d55.9533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b800a5982623%3A0x64f2147b7ce71727!2sEdinburgh!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Edinburgh | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Edinburgh, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    slug: "ras-al-khaimah",
+    city: "Ras Al Khaimah",
+    region: "Ras Al Khaimah",
+    population: "400,000",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Ras Al Khaimah businesses.",
+    mapEmbedUrl: mapUrl("Ras Al Khaimah, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Ras Al Khaimah",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Ras Al Khaimah businesses that want practical improvements and clear scope.",
     problems: [
-      { title: "Festival Season Chaos", description: "Edinburgh's famous festivals bring millions of visitors but create enormous pressure on local businesses to handle enquiry volumes." },
-      { title: "Premium Customer Expectations", description: "Edinburgh's affluent visitors and residents expect premium service that matches the city's world-class reputation." },
-      { title: "Seasonal Fluctuations", description: "Tourist-dependent businesses face dramatic seasonal variations that make staffing decisions challenging." },
-      { title: "Professional Services Demands", description: "Edinburgh's financial and legal sectors require impeccable client communication at all times." }
+      {
+        title: "Seasonal demand",
+        description:
+          "Tourism, hospitality, and service businesses see sharp peaks and quiet periods, making flexible enquiry handling important.",
+      },
+      {
+        title: "Enquiries outside working hours",
+        description:
+          "Guests and customers often research and book in the evening, when a small team is no longer available to respond.",
+      },
+      {
+        title: "Growing competition",
+        description:
+          "As the emirate attracts more visitors and investment, businesses need a credible digital presence to stand out.",
+      },
+      {
+        title: "Fragmented customer data",
+        description:
+          "Bookings, enquiries, and follow-ups can sit in separate tools, making it difficult to see the full customer journey.",
+      },
     ],
     solutions: [
-      { title: "Festival-Ready Service", description: "Your AI handles August's fringe madness as easily as January's quiet weeks. No seasonal staffing stress." },
-      { title: "Premium Quality Guaranteed", description: "Deliver consistently excellent service that matches Edinburgh's reputation for quality." },
-      { title: "Cost-Effective Flexibility", description: "Pay the same monthly fee regardless of volume. No penalties for seasonal variation." },
-      { title: "Professional 24/7 Presence", description: "Maintain impeccable client communication around the clock, befitting Edinburgh's professional reputation." }
+      {
+        title: "Handle peak demand",
+        description:
+          "AI systems and automations answer routine questions and capture enquiries when the team is busy or closed.",
+      },
+      {
+        title: "Smoother booking journeys",
+        description:
+          "Websites, booking flows, and integrations reduce friction between interest and a confirmed booking.",
+      },
+      {
+        title: "Visibility for a growing market",
+        description:
+          "SEO, content, and GEO help the business reach people researching Ras Al Khaimah services and experiences.",
+      },
+      {
+        title: "Connected operations",
+        description:
+          "We connect enquiry channels and internal tools so customer details and follow-ups are not lost.",
+      },
     ],
     whyChooseUs: [
-      "Serving Edinburgh businesses from hotels and restaurants to law firms and letting agents",
-      "AI trained to deliver the premium service Edinburgh customers expect",
-      "Operational within 24 hours, ready before your next busy period",
-      "Transparent pricing that works for Edinburgh's seasonal businesses",
-      "Complete GDPR compliance for professional and financial services"
+      "A written scope, timeline, and price before work starts",
+      "Direct access to the people doing the work",
+      "Systems built to fit existing tools and workflows",
+      "Clear documentation and a clean handover",
+      "Optional ongoing support after launch",
     ],
-    serviceAreas: ["Edinburgh Old Town", "Edinburgh New Town", "Leith", "Stockbridge", "Morningside", "Marchmont", "Bruntsfield", "Portobello", "Cramond", "Dean Village", "Haymarket", "Grassmarket", "Canonmills", "Tollcross", "Gorgie"],
-    cityDescription: "Edinburgh combines historic grandeur with modern sophistication, attracting millions of visitors annually while serving as a major centre for financial services and law. The city's world-renowned festivals, stunning architecture, and premium hospitality create a business environment where quality is paramount. AIVized helps Edinburgh businesses maintain the highest standards while managing the practical challenges of serving a global audience.",
+    serviceAreas: [
+      "Ras Al Khaimah City",
+      "Al Hamra Village",
+      "Mina Al Arab",
+      "Marjan Island",
+      "Julfar",
+      "Dafan Al Nakheel",
+      "Khuzam",
+      "Al Nakheel",
+      "Al Dhait",
+      "Kharan",
+    ],
+    cityDescription:
+      "Ras Al Khaimah combines a growing tourism and hospitality sector with established trading, industrial, and professional service businesses. Demand can be seasonal, but customer expectations remain consistent all year. AIVized helps businesses in Ras Al Khaimah improve enquiry handling, booking journeys, visibility, and internal operations with practical digital systems.",
     faqs: [
-      { question: "How does the managed AI chatbot service help Edinburgh hotels during festival season?", answer: "Your managed AI chatbot service handles the surge in booking enquiries, room questions, and local recommendations without breaking stride. While competitors struggle, you capture every lead 24/7." },
-      { question: "Is the AI chatbot for small business UK suitable for Edinburgh's professional services firms?", answer: "Absolutely. Our AI chatbot for small business UK maintains the professional tone expected in legal and financial services, handling initial enquiries, capturing client details, and scheduling consultations." },
-      { question: "Can the lead generation chatbot UK help with Edinburgh tourist enquiries?", answer: "Yes. Your lead generation chatbot UK can provide information about local attractions, transport, opening hours, and recommendations, enhancing the visitor experience and your reputation while reducing missed leads." },
-      { question: "How does the 24/7 customer support chatbot UK handle multiple languages for international visitors?", answer: "Our 24/7 customer support chatbot UK primarily operates in English but handles communication with international visitors naturally, ensuring everyone receives helpful service." },
-      { question: "What makes the affordable AI chatbot for website right for Edinburgh restaurants?", answer: "From Michelin-starred establishments to cosy bistros, our affordable AI chatbot for website manages reservations, handles dietary requirements, and captures guest information, maintaining the service standards Edinburgh diners expect." },
-      { question: "Is there a contract or can I adjust the managed AI chatbot for seasonal needs?", answer: "No long-term contracts. Adjust your managed AI chatbot service month-to-month as your Edinburgh business needs change seasonally. Perfect flexibility for tourism-dependent businesses." }
+      {
+        question: "What services does AIVized offer in Ras Al Khaimah?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development.",
+      },
+      {
+        question: "Do you work on-site in Ras Al Khaimah?",
+        answer:
+          "Delivery is remote with scheduled calls and reviews. We support businesses across Ras Al Khaimah and the wider UAE.",
+      },
+      {
+        question: "Can you help hospitality and tourism businesses?",
+        answer:
+          "Yes. We build enquiry handling, booking flows, and marketing systems for hospitality, tourism, and service businesses that need to respond outside standard hours.",
+      },
+      {
+        question: "How do you price projects?",
+        answer:
+          "After discovery we provide a fixed written quote for the agreed scope. Ongoing support and retainers are optional.",
+      },
+      {
+        question: "Do you provide support after launch?",
+        answer:
+          "Yes. Optional support covers monitoring, maintenance, updates, and improvement.",
+      },
     ],
-    coordinates: { lat: 55.9533, lng: -3.1883 }
+    coordinates: { lat: 25.8007, lng: 55.9762 },
   },
   {
-    slug: "sheffield",
-    city: "Sheffield",
-    region: "South Yorkshire",
-    population: "1.4 million",
-    description: "Sheffield's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75828.84127098876!2d-1.5101!3d53.3811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48798283ab8a6d33%3A0xba21c7ade766f6c!2sSheffield!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Sheffield | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Sheffield, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    slug: "fujairah",
+    city: "Fujairah",
+    region: "Fujairah",
+    population: "300,000",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Fujairah businesses.",
+    mapEmbedUrl: mapUrl("Fujairah, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Fujairah",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Fujairah businesses that want practical improvements and clear scope.",
     problems: [
-      { title: "Competing with Larger Cities", description: "Sheffield businesses often compete with Leeds and Manchester for customers, requiring standout service to win." },
-      { title: "Student Market Dynamics", description: "With two major universities, Sheffield's market has unique patterns and expectations that require flexible service." },
-      { title: "Manufacturing to Service Shift", description: "Sheffield's evolving economy means businesses need modern customer service approaches." },
-      { title: "Value-Conscious Customers", description: "Sheffield customers appreciate quality but expect fair value. Premium staffing costs can be prohibitive." }
+      {
+        title: "Distance from the main business hubs",
+        description:
+          "Businesses outside Dubai and Abu Dhabi can struggle to access the same level of specialist support without paying for unnecessary travel or overhead.",
+      },
+      {
+        title: "Manual processes",
+        description:
+          "Enquiries, quotations, follow-ups, and reporting still depend on people moving information between spreadsheets and inboxes.",
+      },
+      {
+        title: "Limited online visibility",
+        description:
+          "A strong local reputation does not always translate into search visibility or a website that converts interest into enquiries.",
+      },
+      {
+        title: "Small teams wear many hats",
+        description:
+          "The same people handle sales, operations, and customer service, leaving little time for digital improvement projects.",
+      },
     ],
     solutions: [
-      { title: "Outperform the Competition", description: "Respond faster and more consistently than competitors in larger cities. Distance becomes irrelevant when service is excellent." },
-      { title: "Flexible, Always-On Service", description: "Serve Sheffield's student population whenever they're active, which is often not 9-to-5." },
-      { title: "Modern Customer Experience", description: "Deliver the instant, intelligent service modern customers expect from forward-thinking businesses." },
-      { title: "Exceptional Value", description: "Get premium customer service from £29/month. Quality that Sheffield customers appreciate at a price that works." }
+      {
+        title: "Remote delivery without compromise",
+        description:
+          "Access strategy, design, development, and support remotely, with clear communication and documented decisions.",
+      },
+      {
+        title: "Automation that saves time",
+        description:
+          "We remove repetitive admin from enquiries, follow-ups, reporting, and internal handoffs so small teams can focus on growth.",
+      },
+      {
+        title: "Search and website improvements",
+        description:
+          "Technical SEO, content, and a clearer website help Fujairah businesses reach customers across the UAE.",
+      },
+      {
+        title: "Systems that fit the business",
+        description:
+          "We build around existing tools and processes rather than forcing a large, unfamiliar platform onto a small team.",
+      },
     ],
     whyChooseUs: [
-      "Helping Sheffield businesses from independents to established enterprises",
-      "AI trained to deliver friendly Yorkshire service with modern efficiency",
-      "Live within 24 hours with no lengthy implementation projects",
-      "Fair, transparent pricing that makes sense for Sheffield budgets",
-      "No long-term contracts. Earn your business every month"
+      "A written scope, timeline, and price before work starts",
+      "Direct access to the people doing the work",
+      "Remote delivery with clear communication",
+      "Systems built to fit existing tools and workflows",
+      "Optional ongoing support after launch",
     ],
-    serviceAreas: ["Sheffield City Centre", "Kelham Island", "Ecclesall Road", "Sharrow", "Crookes", "Hillsborough", "Broomhill", "Walkley", "Dore", "Totley", "Woodseats", "Meadowhall", "Chapeltown", "Crystal Peaks", "Norton"],
-    cityDescription: "Sheffield has reinvented itself from steel manufacturing powerhouse to a diverse economy spanning advanced manufacturing, digital industries, and higher education. With two major universities bringing over 60,000 students, plus a thriving food and drink scene, Sheffield offers unique opportunities for businesses that can deliver modern customer experiences. AIVized helps Sheffield businesses compete effectively while embracing the city's innovative spirit.",
+    serviceAreas: [
+      "Fujairah City",
+      "Dibba",
+      "Khor Fakkan",
+      "Kalba",
+      "Al Aqah",
+      "Mirbah",
+      "Sakamkam",
+      "Al Bidiyah",
+      "Al Hayl",
+      "Qidfa",
+    ],
+    cityDescription:
+      "Fujairah is a distinct business market shaped by its port, tourism, trading, and service sectors. Many businesses here operate with small teams and need technology that reduces administrative load rather than adding complexity. AIVized supports Fujairah businesses with focused AI, automation, search, marketing, and software projects delivered remotely.",
     faqs: [
-      { question: "Can the managed AI chatbot service help my Sheffield restaurant with student customers?", answer: "Absolutely. Our managed AI chatbot service handles late-night enquiries, manages group bookings, and provides instant responses when students are searching for where to eat, often outside traditional hours. Capture leads 24/7." },
-      { question: "Is the AI chatbot for small business UK suitable for Sheffield's manufacturing and engineering sectors?", answer: "Yes. Our AI chatbot for small business UK handles product enquiries, quote requests, and technical questions, freeing your team to focus on production and delivery." },
-      { question: "How does the lead generation chatbot UK help Sheffield letting agents with student properties?", answer: "Manage the annual student housing rush effortlessly. Your lead generation chatbot UK answers property questions, schedules viewings, and captures leads 24/7 during peak search periods, reducing missed leads from your website." },
-      { question: "What makes the affordable AI chatbot for website right for Sheffield independents?", answer: "We provide enterprise-quality customer service at prices independent Sheffield businesses can afford. Our affordable AI chatbot for website lets you compete with the chains without the corporate budget, from just £29/month." },
-      { question: "Can the 24/7 customer support chatbot UK handle Sheffield's Freshers Week rush?", answer: "Yes. While competitors drown in enquiries, your 24/7 customer support chatbot UK handles the surge smoothly, capturing every student lead and answering every question automatically." },
-      { question: "How quickly can a Sheffield business get started with the managed AI chatbot?", answer: "Within 24 hours of subscribing, your managed AI chatbot service will be live and serving Sheffield customers. Fast setup for fast results with no technical skills required." }
+      {
+        question: "What services does AIVized offer in Fujairah?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development.",
+      },
+      {
+        question: "Do you work on-site in Fujairah?",
+        answer:
+          "Delivery is remote with scheduled calls and reviews. We support businesses across Fujairah and the wider UAE.",
+      },
+      {
+        question: "Can you work with a small team?",
+        answer:
+          "Yes. Our projects are designed to reduce manual work for small teams, with clear handover and documentation so you are not dependent on a large internal technical function.",
+      },
+      {
+        question: "How does a project start?",
+        answer:
+          "It starts with a discovery call. We recommend the shortest path to a useful result, then provide a written scope, timeline, and price before work begins.",
+      },
+      {
+        question: "Do you provide support after launch?",
+        answer:
+          "Yes. Optional support covers monitoring, maintenance, updates, and improvement.",
+      },
     ],
-    coordinates: { lat: 53.3811, lng: -1.4701 }
+    coordinates: { lat: 25.1288, lng: 56.3265 },
   },
   {
-    slug: "newcastle",
-    city: "Newcastle upon Tyne",
-    region: "Tyne and Wear",
-    population: "1.1 million",
-    description: "Newcastle's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73042.84127098876!2d-1.6778!3d54.9783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d857e0c6f64cd%3A0xbe252b072a76191!2sNewcastle%20upon%20Tyne!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Newcastle | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Newcastle, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    slug: "umm-al-quwain",
+    city: "Umm Al Quwain",
+    region: "Umm Al Quwain",
+    population: "100,000",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Umm Al Quwain businesses.",
+    mapEmbedUrl: mapUrl("Umm Al Quwain, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Umm Al Quwain",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Umm Al Quwain businesses that want practical improvements and clear scope.",
     problems: [
-      { title: "Legendary Hospitality Pressure", description: "Newcastle's famous hospitality culture sets high expectations. Meeting them consistently requires significant resources." },
-      { title: "Matchday Madness", description: "St James' Park matchdays create surges that overwhelm traditional customer service capacity." },
-      { title: "Night-Time Economy Demands", description: "Newcastle's vibrant nightlife means businesses need to respond at hours when staff are unavailable." },
-      { title: "Regional Competition", description: "North East businesses compete for customers across the region, requiring standout service to win." }
+      {
+        title: "Small market, wider competition",
+        description:
+          "Customers often compare Umm Al Quwain businesses with options in nearby emirates, so a credible online presence matters.",
+      },
+      {
+        title: "Limited specialist support locally",
+        description:
+          "Finding senior digital, AI, and software expertise in a smaller market can be difficult and expensive.",
+      },
+      {
+        title: "Repetitive admin",
+        description:
+          "Enquiries and follow-ups are handled manually, taking time away from delivery and customer relationships.",
+      },
+      {
+        title: "Website not pulling its weight",
+        description:
+          "An outdated or slow site can make a capable business look less credible than its competitors.",
+      },
     ],
     solutions: [
-      { title: "Consistently Legendary", description: "Your AI delivers Newcastle's famous warm welcome every time, maintaining your reputation for brilliant hospitality." },
-      { title: "Matchday Ready", description: "Handle the black and white army's enquiries before, during, and after games without breaking stride." },
-      { title: "Night Owl Service", description: "Capture leads and answer questions when Newcastle is buzzing, even at 2am on a Saturday." },
-      { title: "Regional Reach", description: "Serve customers across the North East with consistent excellence, wherever they are." }
+      {
+        title: "Access specialist expertise remotely",
+        description:
+          "Work with senior strategists and builders without needing to hire a full in-house team.",
+      },
+      {
+        title: "Automate the repetitive work",
+        description:
+          "Enquiry handling, follow-ups, and internal handoffs can be automated with systems that fit the team's existing workflow.",
+      },
+      {
+        title: "Build credibility online",
+        description:
+          "A clear, fast website and consistent search presence help the business compete beyond its immediate area.",
+      },
+      {
+        title: "Start with the biggest bottleneck",
+        description:
+          "We prioritise the one improvement that removes the most friction, then expand only when it makes commercial sense.",
+      },
     ],
     whyChooseUs: [
-      "Supporting Newcastle businesses from restaurants and bars to letting agents and retailers",
-      "AI trained for Geordie warmth and North East hospitality standards",
-      "Operational within 24 hours, ready for your next busy weekend",
-      "Honest, straightforward pricing with no hidden catches",
-      "UK-based support that gets North East business culture"
+      "A written scope, timeline, and price before work starts",
+      "Direct access to the people doing the work",
+      "Remote delivery with clear communication",
+      "Systems built to fit existing tools and workflows",
+      "Optional ongoing support after launch",
     ],
-    serviceAreas: ["Newcastle City Centre", "Quayside", "Jesmond", "Gosforth", "Heaton", "Ouseburn", "Gateshead", "Sunderland", "North Shields", "Tynemouth", "Whitley Bay", "Washington", "Durham", "Hexham", "Morpeth"],
-    cityDescription: "Newcastle upon Tyne is the undisputed capital of North East England, renowned worldwide for its hospitality, nightlife, and passionate community spirit. From the iconic Tyne Bridge to the buzzing Bigg Market, Newcastle businesses operate in a unique environment where personality and service quality matter enormously. AIVized helps Newcastle businesses deliver the legendary Geordie welcome around the clock, capturing opportunities that competitors miss.",
+    serviceAreas: [
+      "Umm Al Quwain City",
+      "Al Salamah",
+      "Al Hamriyah",
+      "Al Rafaah",
+      "Falaj Al Mualla",
+      "Al Labsah",
+      "Al Aqab",
+      "Al Khor",
+    ],
+    cityDescription:
+      "Umm Al Quwain is a smaller, relationship-driven business market where reputation and responsiveness matter. Companies here often need practical digital improvements without a large agency programme. AIVized supports Umm Al Quwain businesses with focused AI, automation, marketing, and software work delivered remotely and documented clearly.",
     faqs: [
-      { question: "Can the managed AI chatbot service handle Newcastle's hospitality demands?", answer: "Absolutely. Our managed AI chatbot service is trained for the warm, welcoming service Newcastle is famous for. Handle reservations, answer questions, and capture leads with genuine Geordie friendliness, 24/7." },
-      { question: "How does the AI chatbot for small business UK help Newcastle restaurants on matchdays?", answer: "Your AI chatbot for small business UK manages the pre-match booking rush, handles enquiries during the game, and captures the post-match crowd, all without additional staff or overtime costs." },
-      { question: "Is the lead generation chatbot UK suitable for Newcastle's night-time economy?", answer: "Perfect for it. While you're running your venue, your lead generation chatbot UK handles online enquiries, booking questions, and event information, even at peak Saturday night hours. Never miss a lead." },
-      { question: "Can the affordable AI chatbot for website help with Newcastle letting and property businesses?", answer: "Yes. Our affordable AI chatbot for website handles viewing requests, answers property questions, and captures tenant leads 24/7. Essential for Newcastle's busy rental market, from just £29/month." },
-      { question: "Does the 24/7 customer support chatbot UK understand Geordie customers?", answer: "Our 24/7 customer support chatbot UK is trained on diverse UK English and handles communication naturally with your North East customers. It understands context and responds appropriately." },
-      { question: "How quickly can Newcastle businesses get started with the managed AI chatbot?", answer: "Within 24 hours of subscribing, your managed AI chatbot service will be live. Quick setup means you're ready for your next busy period without delay and no technical skills needed." }
+      {
+        question: "What services does AIVized offer in Umm Al Quwain?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development.",
+      },
+      {
+        question: "Do you work on-site in Umm Al Quwain?",
+        answer:
+          "Delivery is remote with scheduled calls and reviews. We support businesses across Umm Al Quwain and the wider UAE.",
+      },
+      {
+        question: "Is a small project worth doing?",
+        answer:
+          "Yes. A focused automation, website improvement, or SEO fix can remove a meaningful bottleneck without requiring a large budget.",
+      },
+      {
+        question: "How is pricing handled?",
+        answer:
+          "After discovery we provide a fixed written quote for the agreed scope. Ongoing support is optional and priced separately.",
+      },
+      {
+        question: "Do you provide documentation?",
+        answer:
+          "Yes. Every project includes clear documentation and a handover so your team understands how the system works.",
+      },
     ],
-    coordinates: { lat: 54.9783, lng: -1.6178 }
+    coordinates: { lat: 25.5647, lng: 55.5533 },
   },
   {
-    slug: "nottingham",
-    city: "Nottingham",
-    region: "East Midlands",
-    population: "830,000",
-    description: "Nottingham's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77000!2d-1.1581!3d52.9548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c3e82aaaaa7%3A0x63c tried%21!2sNottingham!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Nottingham | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Nottingham, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
+    slug: "al-ain",
+    city: "Al Ain",
+    region: "Abu Dhabi",
+    population: "800,000",
+    description:
+      "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for Al Ain businesses.",
+    mapEmbedUrl: mapUrl("Al Ain, United Arab Emirates"),
+    heroTagline: "AI, Automation & Digital Services in Al Ain",
+    heroSubtext:
+      "One partner for AI systems, automations, search visibility, marketing, websites, and custom software. Built for Al Ain businesses that want practical improvements and clear scope.",
     problems: [
-      { title: "University City Competition", description: "With two major universities, Nottingham businesses compete fiercely for student and local trade year-round." },
-      { title: "Seasonal Student Fluctuations", description: "Term-time surges and holiday lulls make staffing consistently a real headache for Nottingham businesses." },
-      { title: "Budget-Conscious Customers", description: "Nottingham's market demands value-driven service without compromising on quality." },
-      { title: "Growing Digital Expectations", description: "A tech-savvy population expects instant online responses from local businesses." }
+      {
+        title: "Competing with Abu Dhabi and Dubai",
+        description:
+          "Businesses in Al Ain need a strong digital presence to reach customers who compare options across the wider UAE.",
+      },
+      {
+        title: "Enquiries handled manually",
+        description:
+          "Website, phone, and social enquiries are often managed in separate places, making follow-up inconsistent.",
+      },
+      {
+        title: "Operations depend on spreadsheets",
+        description:
+          "Growth increases the volume of manual reporting, scheduling, and data entry, consuming time that could go into the business.",
+      },
+      {
+        title: "Underused digital channels",
+        description:
+          "Many businesses have a website and social profiles but no connected system for turning interest into qualified enquiries.",
+      },
     ],
     solutions: [
-      { title: "Always Competitive", description: "Your AI responds instantly to every enquiry, giving you the edge over slower competitors." },
-      { title: "Consistent Year-Round", description: "Handle term-time rushes and quiet periods with the same AI, with no hiring or firing cycles." },
-      { title: "Exceptional Value", description: "Enterprise-quality customer service from just £29/month, perfect for Nottingham's value-driven market." },
-      { title: "Instant Digital Presence", description: "Meet the expectations of Nottingham's tech-savvy customers with immediate, intelligent responses." }
+      {
+        title: "A connected enquiry process",
+        description:
+          "We connect website, phone, and social enquiries into one follow-up process so leads are not lost.",
+      },
+      {
+        title: "Automation for operations",
+        description:
+          "Scheduling, reporting, onboarding, and repetitive admin can be automated without disrupting the existing team.",
+      },
+      {
+        title: "Regional search visibility",
+        description:
+          "Technical SEO, content, and GEO help Al Ain businesses appear for relevant searches across the UAE.",
+      },
+      {
+        title: "Websites built to convert",
+        description:
+          "Clear structure, fast pages, and simple enquiry flows make it easier for customers to take the next step.",
+      },
     ],
     whyChooseUs: [
-      "Supporting Nottingham businesses across hospitality, retail, and property sectors",
-      "AI trained for the East Midlands market and customer expectations",
-      "Full deployment within 24 hours with minimal disruption to operations",
-      "Transparent pricing with no hidden fees or long-term contracts",
-      "GDPR compliant with UK-based support"
+      "A written scope, timeline, and price before work starts",
+      "Direct access to the people doing the work",
+      "Systems built to fit existing tools and workflows",
+      "Clear documentation and a clean handover",
+      "Optional ongoing support after launch",
     ],
-    serviceAreas: ["Nottingham City Centre", "Lace Market", "Hockley", "West Bridgford", "Beeston", "Long Eaton", "Arnold", "Carlton", "Mapperley", "Sherwood", "Sneinton", "Bulwell", "Wollaton", "Gedling", "Radcliffe-on-Trent"],
-    cityDescription: "Nottingham is one of the East Midlands' most dynamic cities, home to two major universities, a celebrated creative quarter, and a growing tech and startup ecosystem. From legendary nightlife to world-class sport, Nottingham businesses operate in a city that punches well above its weight. AIVized helps Nottingham companies capture every opportunity with intelligent automation that works around the clock.",
+    serviceAreas: [
+      "Al Ain City Centre",
+      "Al Jimi",
+      "Al Mutaredh",
+      "Al Towayya",
+      "Khalifa City",
+      "Zakher",
+      "Al Foah",
+      "Al Hili",
+      "Al Maqam",
+      "Al Yahar",
+      "Mezyad",
+    ],
+    cityDescription:
+      "Al Ain blends a strong local community with education, healthcare, tourism, and a growing service sector. Businesses here often serve customers across Abu Dhabi and the wider UAE, making search visibility and consistent enquiry handling important. AIVized helps Al Ain businesses connect AI, automation, marketing, and software into a practical system for growth.",
     faqs: [
-      { question: "How can a managed AI chatbot service help my Nottingham business?", answer: "Our managed AI chatbot service captures leads 24/7, answers customer questions instantly, and handles enquiries even when you're closed, perfect for Nottingham's busy business scene." },
-      { question: "Is the AI chatbot for small business UK good for Nottingham restaurants?", answer: "Absolutely. Our AI chatbot for small business UK handles bookings, menu enquiries, dietary questions, and captures customer details for follow-up, ideal for Nottingham's thriving food scene." },
-      { question: "How much does the lead generation chatbot UK cost for Nottingham businesses?", answer: "Our lead generation chatbot UK starts from just £29/month with no setup fees or contracts. It's the most affordable option for Nottingham SMEs." },
-      { question: "Can the 24/7 customer support chatbot UK handle student enquiries?", answer: "Yes. Your 24/7 customer support chatbot UK handles high volumes efficiently, perfect for Nottingham's student-driven peaks." },
-      { question: "How quickly can I set up an affordable AI chatbot for website in Nottingham?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live and serving your Nottingham customers." },
-      { question: "Does AIVized offer support for Nottingham businesses?", answer: "Our UK-based support team is available via phone and email to help your Nottingham business get the most from our managed AI chatbot service." }
+      {
+        question: "What services does AIVized offer in Al Ain?",
+        answer:
+          "We provide AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development.",
+      },
+      {
+        question: "Do you work on-site in Al Ain?",
+        answer:
+          "Delivery is remote with scheduled calls and reviews. We support businesses across Al Ain, Abu Dhabi, and the wider UAE.",
+      },
+      {
+        question: "Can you help with both marketing and software?",
+        answer:
+          "Yes. Many projects combine search and content with automation or web development, because the biggest bottleneck usually crosses more than one channel.",
+      },
+      {
+        question: "How long does a project take?",
+        answer:
+          "Smaller projects can be live in a few weeks. Larger systems typically take four to twelve weeks, depending on scope and integrations.",
+      },
+      {
+        question: "Do you provide support after launch?",
+        answer:
+          "Yes. Optional support covers monitoring, maintenance, updates, and improvement.",
+      },
     ],
-    coordinates: { lat: 52.9548, lng: -1.1581 }
+    coordinates: { lat: 24.2075, lng: 55.7447 },
   },
-  {
-    slug: "cardiff",
-    city: "Cardiff",
-    region: "Wales",
-    population: "480,000",
-    description: "Cardiff's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79600!2d-3.1791!3d51.4816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e02d434ec53f5%3A0x143406db6586670e!2sCardiff!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Cardiff | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Cardiff, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Bilingual Customer Base", description: "Cardiff businesses serve both Welsh and English-speaking customers, requiring flexible communication approaches." },
-      { title: "Event-Driven Surges", description: "Principality Stadium events and Six Nations weekends create massive spikes in customer enquiries." },
-      { title: "Growing Competition", description: "Cardiff's rapid development means more businesses competing for the same customers." },
-      { title: "Limited Evening Coverage", description: "Many Cardiff SMEs can't afford evening staff but lose leads after hours." }
-    ],
-    solutions: [
-      { title: "Multilingual Ready", description: "Your AI communicates naturally in English and can be configured for basic Welsh language support." },
-      { title: "Event-Ready Capacity", description: "Handle matchday and event surges effortlessly. Your AI scales to any volume instantly." },
-      { title: "Stand Out from Competitors", description: "Beat Cardiff competitors with instant 24/7 responses while they're still checking voicemails." },
-      { title: "Round-the-Clock Coverage", description: "Capture every lead evening, weekend, and bank holiday. Your AI never clocks off." }
-    ],
-    whyChooseUs: [
-      "Trusted by Cardiff businesses across hospitality, property, and professional services",
-      "AI trained for the Welsh market and customer communication styles",
-      "Complete setup within 24 hours with zero technical requirements",
-      "Month-to-month flexibility with no lock-in contracts",
-      "UK-based support team available when you need help"
-    ],
-    serviceAreas: ["Cardiff City Centre", "Cardiff Bay", "Canton", "Roath", "Cathays", "Pontcanna", "Llandaff", "Whitchurch", "Heath", "Splott", "Grangetown", "Penarth", "Barry", "Caerphilly", "Newport"],
-    cityDescription: "Cardiff has transformed into one of the UK's most exciting cities, combining Welsh heritage with modern innovation. As home to the BBC, a thriving startup scene, and world-class sporting venues, Cardiff businesses operate in a dynamic and growing market. AIVized helps Cardiff companies deliver exceptional customer service while keeping costs manageable.",
-    faqs: [
-      { question: "Can the managed AI chatbot service handle Cardiff's bilingual customer base?", answer: "Our managed AI chatbot service primarily operates in English but can be configured to handle basic Welsh language enquiries, helping you serve Cardiff's diverse community." },
-      { question: "Is this AI chatbot for small business UK suitable for Cardiff hospitality?", answer: "Absolutely. Our AI chatbot for small business UK handles bookings, menu enquiries, and event information, perfect for Cardiff's bustling restaurant and bar scene." },
-      { question: "How does the lead generation chatbot UK help Cardiff businesses during rugby weekends?", answer: "Your lead generation chatbot UK handles the surge in enquiries during Six Nations and international matches, capturing every lead while you focus on service." },
-      { question: "What's the setup process for the affordable AI chatbot for website in Cardiff?", answer: "Subscribe, share your website access, and we install your affordable AI chatbot for website within 24 hours. No technical skills needed." },
-      { question: "Can the 24/7 customer support chatbot UK integrate with my Cardiff business website?", answer: "Yes. Our 24/7 customer support chatbot UK installs directly on your existing website with no redesign needed." },
-      { question: "Is there a contract for the managed AI chatbot in Cardiff?", answer: "No long-term contracts. Our managed AI chatbot service runs month-to-month, so you can cancel anytime." }
-    ],
-    coordinates: { lat: 51.4816, lng: -3.1791 }
-  },
-  {
-    slug: "leicester",
-    city: "Leicester",
-    region: "East Midlands",
-    population: "920,000",
-    description: "Leicester's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77200!2d-1.1398!3d52.6369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877614c77000001%3A0x5e4a755a574d2b1c!2sLeicester!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Leicester | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Leicester, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Diverse Customer Needs", description: "Leicester's multicultural market requires flexible, inclusive customer communication." },
-      { title: "Retail Competition", description: "From independent shops to High Street chains, Leicester businesses compete fiercely for footfall and online enquiries." },
-      { title: "After-Hours Demand", description: "Leicester's vibrant evening economy means customers expect responses outside traditional hours." },
-      { title: "Cost Pressures", description: "Rising business costs in Leicester make efficient customer service essential for survival." }
-    ],
-    solutions: [
-      { title: "Inclusive Communication", description: "Your AI handles enquiries from Leicester's diverse community with professionalism and respect." },
-      { title: "Competitive Edge Online", description: "Capture online leads faster than competitors with instant AI responses 24/7." },
-      { title: "Evening & Weekend Coverage", description: "Never miss a Leicester lead again. Your AI works evenings, weekends, and bank holidays." },
-      { title: "Cost-Effective Service", description: "Get 24/7 customer service from £29/month, a fraction of the cost of hiring additional staff." }
-    ],
-    whyChooseUs: [
-      "Supporting Leicester businesses across food, retail, property, and professional services",
-      "AI trained for diverse customer communication and cultural sensitivity",
-      "Full deployment within 24 hours. Start capturing leads immediately",
-      "Affordable pricing that works for Leicester's SME community",
-      "GDPR compliant with UK-based support"
-    ],
-    serviceAreas: ["Leicester City Centre", "Golden Mile", "Cultural Quarter", "Highfields", "Oadby", "Wigston", "Birstall", "Beaumont Leys", "Braunstone", "Evington", "Knighton", "Stoneygate", "Clarendon Park", "Narborough", "Enderby"],
-    cityDescription: "Leicester is one of England's most vibrant and diverse cities, renowned for its rich cultural heritage, thriving food scene, and strong business community. From the famous Golden Mile to the innovative Cultural Quarter, Leicester businesses operate in a market that values quality service and community connection. AIVized helps Leicester companies serve their diverse customer base 24/7.",
-    faqs: [
-      { question: "How can a managed AI chatbot service help my Leicester business?", answer: "Our managed AI chatbot service captures leads around the clock, answers customer questions instantly, and handles enquiries even when your Leicester shop or office is closed." },
-      { question: "Is this AI chatbot for small business UK suitable for Leicester restaurants?", answer: "Yes. Our AI chatbot for small business UK handles reservations, dietary enquiries, and menu questions, perfect for Leicester's celebrated food scene." },
-      { question: "How much does the lead generation chatbot UK cost?", answer: "Our lead generation chatbot UK starts from just £29/month. No setup fees, no contracts, ideal for Leicester SMEs." },
-      { question: "Can the 24/7 customer support chatbot UK handle multiple languages?", answer: "Our 24/7 customer support chatbot UK primarily operates in English but can handle basic enquiries in other languages, helping serve Leicester's diverse community." },
-      { question: "How quickly can I get started in Leicester?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live on your Leicester business website." },
-      { question: "Is there a long-term contract?", answer: "No. Our managed AI chatbot service runs month-to-month with no lock-in, so you can cancel anytime." }
-    ],
-    coordinates: { lat: 52.6369, lng: -1.1398 }
-  },
-  {
-    slug: "brighton",
-    city: "Brighton",
-    region: "South East England",
-    population: "290,000",
-    description: "Brighton's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81200!2d-0.1363!3d50.8225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48758550bd6f41c5%3A0xd1e8b64a4b5b8f0a!2sBrighton!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Brighton | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Brighton, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Seasonal Tourism Peaks", description: "Brighton's summer brings massive footfall but staffing for peaks is expensive and temporary workers lack expertise." },
-      { title: "Digital-First Customers", description: "Brighton's tech-savvy population expects instant online interactions from local businesses." },
-      { title: "Independent Business Pressures", description: "Competing against chains while maintaining Brighton's unique independent character is challenging." },
-      { title: "Weekend & Evening Rush", description: "Brighton's nightlife and weekend tourism mean enquiries peak when businesses are busiest." }
-    ],
-    solutions: [
-      { title: "Season-Proof Service", description: "Handle summer rushes and winter quiet with the same consistent AI, with no seasonal hiring headaches." },
-      { title: "Instant Digital Response", description: "Meet Brighton's digital-first customers with immediate, intelligent online responses." },
-      { title: "Indie Quality, AI Efficiency", description: "Maintain your unique Brighton personality with AI that's trained on your specific brand voice." },
-      { title: "Peak-Time Support", description: "Your AI handles online enquiries while your team focuses on in-person Brighton visitors." }
-    ],
-    whyChooseUs: [
-      "Supporting Brighton's creative and independent business community",
-      "AI that matches Brighton's innovative, friendly communication style",
-      "Live within 24 hours with zero technical requirements",
-      "Ethical pricing with no lock-in contracts",
-      "GDPR compliant and UK-based support"
-    ],
-    serviceAreas: ["Brighton City Centre", "The Lanes", "North Laine", "Kemptown", "Hove", "Portslade", "Rottingdean", "Saltdean", "Peacehaven", "Lewes", "Shoreham-by-Sea", "Worthing", "Burgess Hill", "Haywards Heath", "Newhaven"],
-    cityDescription: "Brighton is the UK's most vibrant seaside city, famous for its creative energy, digital innovation scene, and fiercely independent business community. From the iconic pier to the bustling Lanes, Brighton attracts visitors and entrepreneurs who value originality and quality. AIVized helps Brighton businesses deliver exceptional service year-round while managing the unique challenges of a seasonal, tourism-driven economy.",
-    faqs: [
-      { question: "Can a managed AI chatbot service handle Brighton's summer tourism peak?", answer: "Absolutely. Our managed AI chatbot service handles unlimited enquiries at no extra cost, making it perfect for Brighton's busy summer season." },
-      { question: "Is this AI chatbot for small business UK good for Brighton's independent shops?", answer: "Yes. Our AI chatbot for small business UK maintains your unique brand voice while handling product enquiries, opening hours, and customer questions 24/7." },
-      { question: "How does the lead generation chatbot UK help Brighton accommodation businesses?", answer: "Your lead generation chatbot UK handles booking enquiries, answers questions about Brighton attractions, and captures guest details, essential for hotels and B&Bs." },
-      { question: "Can the 24/7 customer support chatbot UK handle weekend enquiry surges?", answer: "Yes. Your 24/7 customer support chatbot UK manages any volume of weekend enquiries while your team focuses on in-person service." },
-      { question: "Is the affordable AI chatbot for website suitable for Brighton startups?", answer: "Perfect for startups. Our affordable AI chatbot for website starts from £29/month with no setup fees, ideal for Brighton's growing tech scene." },
-      { question: "How quickly can Brighton businesses get started?", answer: "Within 24 hours of subscribing, your managed AI chatbot will be live and capturing leads for your Brighton business." }
-    ],
-    coordinates: { lat: 50.8225, lng: -0.1363 }
-  },
-  {
-    slug: "southampton",
-    city: "Southampton",
-    region: "Hampshire",
-    population: "260,000",
-    description: "Southampton's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80600!2d-1.4044!3d50.9097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487476b4b92301f7%3A0xdc0f515de4530fce!2sSouthampton!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Southampton | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Southampton, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Port & Tourism Demands", description: "Cruise ship arrivals create unpredictable surges in local business enquiries that are hard to staff for." },
-      { title: "Student Market Fluctuations", description: "Two universities mean seasonal swings in customer demand that challenge consistent service." },
-      { title: "Matchday Pressures", description: "Saints matchdays bring spikes in hospitality enquiries that overwhelm small teams." },
-      { title: "Cost-Conscious Market", description: "Southampton businesses need efficient customer service without premium city costs." }
-    ],
-    solutions: [
-      { title: "Cruise-Ready Service", description: "Handle the surge when ships dock. Your AI manages any volume of enquiries instantly." },
-      { title: "Year-Round Consistency", description: "Maintain excellent service whether students are in town or away, with no staffing adjustments needed." },
-      { title: "Matchday Managed", description: "Capture every pre and post-match enquiry without additional staff or overtime." },
-      { title: "Maximum Efficiency", description: "Get 24/7 customer service from £29/month, smart spending for Southampton businesses." }
-    ],
-    whyChooseUs: [
-      "Supporting Southampton businesses across hospitality, maritime, retail, and property",
-      "AI trained for the Hampshire market and customer expectations",
-      "Full deployment within 24 hours with no technical skills needed",
-      "Transparent pricing with no hidden costs",
-      "GDPR compliant with UK-based support"
-    ],
-    serviceAreas: ["Southampton City Centre", "Ocean Village", "Shirley", "Portswood", "Bitterne", "Woolston", "Totton", "Hedge End", "Eastleigh", "Chandlers Ford", "Romsey", "Winchester", "Fareham", "Hythe", "Marchwood"],
-    cityDescription: "Southampton is one of the South Coast's most important cities, renowned as a global cruise port, home to two major universities, and a growing centre for digital and creative industries. The city's mix of maritime heritage and modern innovation creates exciting opportunities for businesses. AIVized helps Southampton companies capitalise on every opportunity with 24/7 intelligent customer engagement.",
-    faqs: [
-      { question: "How can a managed AI chatbot service help my Southampton business?", answer: "Our managed AI chatbot service captures leads 24/7, handles customer enquiries instantly, and works around cruise ship arrivals and matchdays, keeping your Southampton business responsive at all times." },
-      { question: "Is the AI chatbot for small business UK suitable for Southampton hospitality?", answer: "Yes. Our AI chatbot for small business UK handles bookings, menu enquiries, and tourist information, perfect for Southampton's busy hospitality scene." },
-      { question: "How much does the lead generation chatbot UK cost?", answer: "Our lead generation chatbot UK starts from just £29/month with no setup fees or long-term contracts." },
-      { question: "Can the 24/7 customer support chatbot UK handle cruise season peaks?", answer: "Absolutely. Your 24/7 customer support chatbot UK manages unlimited enquiries, perfect for when ships dock in Southampton." },
-      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live on your Southampton business website." },
-      { question: "Is there a contract?", answer: "No long-term contracts. Our managed AI chatbot service is month-to-month." }
-    ],
-    coordinates: { lat: 50.9097, lng: -1.4044 }
-  },
-  {
-    slug: "oxford",
-    city: "Oxford",
-    region: "Oxfordshire",
-    population: "160,000",
-    description: "Oxford's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79200!2d-1.2578!3d51.7520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9f0efb617%3A0x4c85c1c9a4739b1e!2sOxford!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Oxford | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Oxford, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Premium Service Expectations", description: "Oxford's discerning clientele expects polished, knowledgeable responses. Anything less damages your reputation." },
-      { title: "Tourist Volume Pressure", description: "Millions of annual visitors create enquiry volumes that overwhelm small Oxford businesses." },
-      { title: "Academic Calendar Swings", description: "Term times and conferences create peaks; vacations bring lulls, making staffing a constant balancing act." },
-      { title: "High Operating Costs", description: "Oxford's property and staffing costs are among the highest outside London." }
-    ],
-    solutions: [
-      { title: "Polished Communication", description: "Your AI delivers articulate, knowledgeable responses that match Oxford's premium expectations." },
-      { title: "Tourist-Ready Capacity", description: "Handle peak tourist season enquiries without breaking a sweat or your budget." },
-      { title: "Calendar-Proof Service", description: "Consistent excellence whether it's Freshers' Week or the long vacation." },
-      { title: "Cost-Smart Operations", description: "Cut customer service costs dramatically while improving response quality and speed." }
-    ],
-    whyChooseUs: [
-      "Supporting Oxford businesses across tourism, hospitality, property, and education",
-      "AI trained for Oxford's premium communication standards",
-      "Full deployment within 24 hours with no technical skills required",
-      "Transparent pricing that helps manage Oxford's high operating costs",
-      "GDPR compliant with UK-based support"
-    ],
-    serviceAreas: ["Oxford City Centre", "Jericho", "Summertown", "Cowley", "Headington", "Iffley", "Botley", "Wolvercote", "Marston", "Abingdon", "Didcot", "Witney", "Bicester", "Kidlington", "Woodstock"],
-    cityDescription: "Oxford is one of the world's most prestigious cities, home to the University of Oxford and a magnet for millions of tourists annually. Beyond academia, Oxford has a thriving tech sector, celebrated dining scene, and competitive property market. AIVized helps Oxford businesses deliver the polished, knowledgeable service their discerning clientele expects, 24 hours a day.",
-    faqs: [
-      { question: "Can a managed AI chatbot service match Oxford's premium service standards?", answer: "Yes. Our managed AI chatbot service is trained on your specific business and delivers articulate, knowledgeable responses that meet Oxford's high expectations." },
-      { question: "Is the AI chatbot for small business UK good for Oxford's tourism sector?", answer: "Perfect. Our AI chatbot for small business UK handles visitor enquiries, booking requests, and local information, ideal for Oxford's busy tourism businesses." },
-      { question: "How does the lead generation chatbot UK help Oxford property agents?", answer: "Your lead generation chatbot UK answers property questions, schedules viewings, qualifies leads, and provides area information for Oxford's competitive market." },
-      { question: "Can the 24/7 customer support chatbot UK handle conference season?", answer: "Absolutely. Your 24/7 customer support chatbot UK manages unlimited enquiries during Oxford's busy conference and events calendar." },
-      { question: "Is there a contract for the affordable AI chatbot for website?", answer: "No contracts. Our affordable AI chatbot for website runs month-to-month from just £29." },
-      { question: "How quickly can Oxford businesses get started?", answer: "Within 24 hours of subscribing, your managed AI chatbot will be live and working for your Oxford business." }
-    ],
-    coordinates: { lat: 51.7520, lng: -1.2578 }
-  },
-  {
-    slug: "cambridge",
-    city: "Cambridge",
-    region: "Cambridgeshire",
-    population: "150,000",
-    description: "Cambridge's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78000!2d0.1218!3d52.2053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d85d89f32b012d%3A0x63a320e1a35e3d21!2sCambridge!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Cambridge | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Cambridge, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Tech-Savvy Clientele", description: "Cambridge's innovation-driven customers expect sharp digital experiences from every business they engage with." },
-      { title: "International Visitor Volume", description: "Millions of international tourists visit annually, creating language and volume challenges." },
-      { title: "Startup Competition", description: "Cambridge's thriving startup scene means businesses compete fiercely for attention and leads." },
-      { title: "Premium Market Costs", description: "Cambridge's high property and staffing costs squeeze business margins." }
-    ],
-    solutions: [
-      { title: "Innovation-Ready Service", description: "Meet Cambridge's tech-savvy expectations with instant, intelligent AI-powered customer engagement." },
-      { title: "Global Communication", description: "Handle international visitor enquiries with professional, clear responses around the clock." },
-      { title: "Competitive Advantage", description: "Outpace Cambridge competitors with 24/7 instant response capability." },
-      { title: "Cost Efficiency", description: "Reduce customer service costs from thousands to just £29/month." }
-    ],
-    whyChooseUs: [
-      "Supporting Cambridge businesses across tech, tourism, hospitality, and education sectors",
-      "AI trained for Cambridge's premium, innovation-focused market",
-      "Full deployment within 24 hours with no technical requirements",
-      "Transparent pricing that helps manage Cambridge's high costs",
-      "GDPR compliant with UK-based support"
-    ],
-    serviceAreas: ["Cambridge City Centre", "King's Parade", "Mill Road", "Chesterton", "Cherry Hinton", "Trumpington", "Newnham", "Cambridge Science Park", "Girton", "Histon", "Milton", "Ely", "Newmarket", "St Ives", "Huntingdon"],
-    cityDescription: "Cambridge is synonymous with academic excellence and technological innovation. Home to the University of Cambridge and Silicon Fen, Europe's largest tech cluster, the city attracts talent, tourists, and entrepreneurs from around the world. AIVized helps Cambridge businesses deliver the sophisticated, efficient service their discerning clients expect, while keeping costs manageable in one of the UK's most expensive cities.",
-    faqs: [
-      { question: "How can a managed AI chatbot service help my Cambridge tech business?", answer: "Our managed AI chatbot service handles product enquiries, captures demo requests, qualifies leads, and provides instant technical information, perfect for Cambridge's fast-moving tech sector." },
-      { question: "Is the AI chatbot for small business UK suitable for Cambridge tourism?", answer: "Absolutely. Our AI chatbot for small business UK handles visitor enquiries, booking requests, and local information in multiple languages." },
-      { question: "How does the lead generation chatbot UK work for Cambridge startups?", answer: "Your lead generation chatbot UK captures and qualifies leads 24/7, so your Cambridge startup never misses a potential customer or investor enquiry." },
-      { question: "Can the 24/7 customer support chatbot UK handle international visitors?", answer: "Yes. Your 24/7 customer support chatbot UK communicates clearly in English with international visitors and can handle basic enquiries in other languages." },
-      { question: "Is there a long-term contract?", answer: "No. Our affordable AI chatbot for website runs month-to-month from £29, perfect for Cambridge startups and SMEs." },
-      { question: "How quickly can I get started?", answer: "Within 24 hours, your managed AI chatbot will be live on your Cambridge business website." }
-    ],
-    coordinates: { lat: 52.2053, lng: 0.1218 }
-  },
-  {
-    slug: "coventry",
-    city: "Coventry",
-    region: "West Midlands",
-    population: "380,000",
-    description: "Coventry's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77800!2d-1.5197!3d52.4068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877eaff1e84c07d%3A0x5060f1e61e102c04!2sCoventry!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Coventry | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Coventry, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Post-City of Culture Momentum", description: "Coventry businesses need to maintain momentum and attract customers in the post-2021 era." },
-      { title: "Student Economy Fluctuations", description: "Two universities mean seasonal demand swings that make consistent staffing challenging." },
-      { title: "Manufacturing Heritage Shift", description: "Transitioning businesses need modern customer engagement to match their evolving offerings." },
-      { title: "Budget Constraints", description: "Coventry businesses need affordable solutions that deliver real results." }
-    ],
-    solutions: [
-      { title: "Keep the Momentum", description: "Maintain excellent customer service and capture every lead as Coventry continues to grow." },
-      { title: "Year-Round Excellence", description: "Consistent AI service whether students are in town or not, with no seasonal staffing worries." },
-      { title: "Modern Customer Engagement", description: "Show customers your business is forward-thinking with instant, intelligent AI responses." },
-      { title: "Incredible Value", description: "Enterprise-quality service from just £29/month, unbeatable for Coventry SMEs." }
-    ],
-    whyChooseUs: [
-      "Supporting Coventry businesses across automotive, hospitality, retail, and education",
-      "AI trained for the West Midlands market",
-      "Full deployment within 24 hours",
-      "No contracts, no setup fees, transparent pricing",
-      "GDPR compliant with UK-based support"
-    ],
-    serviceAreas: ["Coventry City Centre", "Earlsdon", "Chapelfields", "Stoke", "Hillfields", "Coundon", "Binley", "Walsgrave", "Tile Hill", "Canley", "Allesley", "Kenilworth", "Bedworth", "Nuneaton", "Rugby"],
-    cityDescription: "Coventry has undergone a remarkable transformation, from its automotive heritage to becoming the UK City of Culture. With two thriving universities, a growing tech sector, and renewed cultural confidence, Coventry businesses operate in one of the Midlands' most exciting markets. AIVized helps Coventry companies deliver modern, responsive customer service that matches the city's forward-thinking identity.",
-    faqs: [
-      { question: "How can a managed AI chatbot service help my Coventry business grow?", answer: "Our managed AI chatbot service captures leads 24/7, handles customer enquiries instantly, and ensures your Coventry business never misses an opportunity." },
-      { question: "Is the AI chatbot for small business UK suitable for Coventry's automotive sector?", answer: "Yes. Our AI chatbot for small business UK handles product enquiries, booking requests, and captures leads for automotive businesses across Coventry." },
-      { question: "How much does the lead generation chatbot UK cost?", answer: "Our lead generation chatbot UK starts from just £29/month with no setup fees or contracts." },
-      { question: "Can the 24/7 customer support chatbot UK handle student enquiries?", answer: "Absolutely. Your 24/7 customer support chatbot UK handles high volumes efficiently during term time." },
-      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live." },
-      { question: "Is there a contract?", answer: "No contracts. Our managed AI chatbot service is month-to-month." }
-    ],
-    coordinates: { lat: 52.4068, lng: -1.5197 }
-  },
-  {
-    slug: "belfast",
-    city: "Belfast",
-    region: "Northern Ireland",
-    population: "640,000",
-    description: "Belfast's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73200!2d-5.9301!3d54.5973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4860fffdd7d08a3b%3A0x2e57162cefc7c531!2sBelfast!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Belfast | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Belfast, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Tourism Growth Demands", description: "Belfast's tourism boom (Titanic, Game of Thrones) creates surges that overwhelm small business teams." },
-      { title: "Cross-Border Customer Base", description: "Serving customers from both Northern Ireland and the Republic requires flexible, always-available communication." },
-      { title: "Tech Sector Competition", description: "Belfast's growing tech scene means businesses compete for talent and customers alike." },
-      { title: "Evening Economy Pressure", description: "Belfast's vibrant nightlife and dining scene means enquiries come at all hours." }
-    ],
-    solutions: [
-      { title: "Tourism-Ready AI", description: "Handle Titanic Quarter tourist surges and Game of Thrones fans without additional staff." },
-      { title: "Cross-Border Service", description: "Your AI serves customers from both sides of the border 24/7 with consistent excellence." },
-      { title: "Tech-Forward Service", description: "Show Belfast's tech community you mean business with instant, intelligent AI responses." },
-      { title: "All-Hours Coverage", description: "Capture every lead from Belfast's evening and weekend economy. Your AI never sleeps." }
-    ],
-    whyChooseUs: [
-      "Supporting Belfast businesses across tourism, hospitality, tech, and property",
-      "AI trained for Northern Irish customer communication and market needs",
-      "Full deployment within 24 hours with no technical skills needed",
-      "Transparent pricing with no hidden fees",
-      "GDPR compliant with UK-based support"
-    ],
-    serviceAreas: ["Belfast City Centre", "Cathedral Quarter", "Titanic Quarter", "Queen's Quarter", "Botanic", "Stranmillis", "Ormeau", "East Belfast", "West Belfast", "North Belfast", "South Belfast", "Lisburn", "Bangor", "Holywood", "Newtownards"],
-    cityDescription: "Belfast has undergone a remarkable transformation, emerging as one of the UK's most exciting cities for business, tourism, and technology. From the world-famous Titanic Quarter to the buzzing Cathedral Quarter, Belfast combines rich heritage with forward-thinking innovation. AIVized helps Belfast businesses capitalise on the city's growth with intelligent customer service that works around the clock.",
-    faqs: [
-      { question: "Can a managed AI chatbot service help my Belfast tourism business?", answer: "Absolutely. Our managed AI chatbot service handles tourist enquiries, booking requests, and local information 24/7, perfect for Belfast's booming tourism sector." },
-      { question: "Is the AI chatbot for small business UK suitable for Belfast hospitality?", answer: "Yes. Our AI chatbot for small business UK manages reservations, menu enquiries, and event bookings for Belfast's thriving restaurant and bar scene." },
-      { question: "How does the lead generation chatbot UK help Belfast property agents?", answer: "Your lead generation chatbot UK answers property questions, schedules viewings, and qualifies leads 24/7, essential for Belfast's competitive property market." },
-      { question: "Can the 24/7 customer support chatbot UK serve cross-border customers?", answer: "Yes. Your 24/7 customer support chatbot UK serves customers from Northern Ireland and the Republic with consistent, professional responses." },
-      { question: "How quickly can Belfast businesses get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live." },
-      { question: "Is there a long-term contract?", answer: "No. Our managed AI chatbot service runs month-to-month with no lock-in." }
-    ],
-    coordinates: { lat: 54.5973, lng: -5.9301 }
-  },
-  {
-    slug: "aberdeen",
-    city: "Aberdeen",
-    region: "Scotland",
-    population: "230,000",
-    description: "Aberdeen's leading AI agency providing fully managed AI chatbot and automation services for local businesses.",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69500!2d-2.0943!3d57.1497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48840e55ce4bdb8d%3A0x3b8e24bde53d2ec4!2sAberdeen!5e0!3m2!1sen!2suk!4v1640000000000!5m2!1sen!2suk",
-    heroTagline: "AI Agency Aberdeen | AI Chatbot & Automation for Your Business",
-    heroSubtext: "AIVized is a leading AI agency in Aberdeen, providing fully managed AI chatbot and automation services from £29/month. Capture leads 24/7, reduce missed inquiries, and automate customer engagement.",
-    problems: [
-      { title: "Energy Sector Transitions", description: "Aberdeen businesses navigating the shift from oil & gas to renewables need efficient, cost-effective operations." },
-      { title: "Remote Working Challenges", description: "With many offshore and remote workers, businesses need 24/7 communication that doesn't depend on office hours." },
-      { title: "Seasonal Tourism Growth", description: "Growing tourism to Scotland's northeast creates new opportunities that require responsive service." },
-      { title: "Cost Management", description: "In a diversifying economy, managing operational costs is critical for Aberdeen businesses." }
-    ],
-    solutions: [
-      { title: "Lean Operations", description: "Cut customer service costs while improving quality, essential for businesses navigating industry transitions." },
-      { title: "Always Available", description: "Your AI responds to offshore workers, remote teams, and customers at any hour with no timezone limitations." },
-      { title: "Tourism-Ready", description: "Capture tourist enquiries and bookings 24/7 as Aberdeen's tourism sector continues to grow." },
-      { title: "Smart Cost Control", description: "Enterprise-quality customer service from just £29/month, smart spending for Aberdeen businesses." }
-    ],
-    whyChooseUs: [
-      "Supporting Aberdeen businesses across energy, hospitality, property, and professional services",
-      "AI trained for Scottish business communication and market needs",
-      "Full deployment within 24 hours with no disruption to operations",
-      "Transparent pricing with no hidden fees or contracts",
-      "GDPR compliant with UK-based support"
-    ],
-    serviceAreas: ["Aberdeen City Centre", "Union Street", "Old Aberdeen", "Rubislaw", "Rosemount", "Torry", "Dyce", "Bridge of Don", "Cove Bay", "Westhill", "Stonehaven", "Inverurie", "Ellon", "Peterhead", "Portlethen"],
-    cityDescription: "Aberdeen, the Granite City, has been Scotland's energy capital for decades and is now at the forefront of the UK's renewable energy transition. With a strong professional services sector, growing tourism industry, and resilient business community, Aberdeen companies are adapting and thriving. AIVized helps Aberdeen businesses stay competitive with intelligent automation that delivers exceptional customer service at a fraction of traditional costs.",
-    faqs: [
-      { question: "How can a managed AI chatbot service help my Aberdeen business?", answer: "Our managed AI chatbot service captures leads 24/7, handles customer enquiries instantly, and works around the clock, perfect for Aberdeen's diverse business landscape." },
-      { question: "Is the AI chatbot for small business UK suitable for Aberdeen's energy sector?", answer: "Yes. Our AI chatbot for small business UK handles technical enquiries, quote requests, and client communication for energy and professional services businesses." },
-      { question: "How does the lead generation chatbot UK help Aberdeen property agents?", answer: "Your lead generation chatbot UK answers property questions, schedules viewings, and qualifies leads 24/7 in Aberdeen's competitive market." },
-      { question: "Can the 24/7 customer support chatbot UK handle offshore worker schedules?", answer: "Absolutely. Your 24/7 customer support chatbot UK responds at any hour, perfect for Aberdeen's workforce on varied shift patterns." },
-      { question: "How quickly can I get started?", answer: "Within 24 hours of subscribing, your affordable AI chatbot for website will be live on your Aberdeen business website." },
-      { question: "Is there a contract?", answer: "No contracts. Our managed AI chatbot service is month-to-month with no lock-in." }
-    ],
-    coordinates: { lat: 57.1497, lng: -2.0943 }
-  }
 ];
 
 export const getLocationBySlug = (slug: string): LocationData | undefined => {
-  return ukLocations.find(loc => loc.slug === slug);
+  return uaeLocations.find((location) => location.slug === slug);
 };
 
 export const getAllLocationSlugs = (): string[] => {
-  return ukLocations.map(loc => loc.slug);
+  return uaeLocations.map((location) => location.slug);
 };

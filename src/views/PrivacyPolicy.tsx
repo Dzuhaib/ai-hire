@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">1. Introduction</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  AIVized ("AIVized," "we," "our," or "us") is a trading name of a sole proprietorship based in Pakistan, providing AI-powered customer service solutions to businesses worldwide. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and related services. We operate in accordance with applicable data protection principles and strive to meet international standards including GDPR requirements for our customers in the UK and EEA.
+                  AIVized ("AIVized," "we," "our," or "us") is a trading name of a sole proprietorship based in Pakistan, providing AI-powered customer service solutions to businesses worldwide. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and related services. We operate in accordance with applicable data protection principles and strive to meet international standards, including the UAE Personal Data Protection Law (PDPL).
                 </p>
               </section>
 
@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">3. Legal Basis for Processing</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  For customers in the UK and EEA, we process personal data based on the following legal grounds under GDPR:
+                  For customers in the UAE, we process personal data based on the following legal grounds under UAE data protection law:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li><strong>Contract:</strong> Processing necessary to perform our contract with you (providing our services)</li>
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
                   We do not sell your personal information. We may share your information with:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li><strong>Paddle:</strong> Our Merchant of Record for payment processing. Paddle acts as a data controller for payment transactions and is based in the UK.</li>
+                  <li><strong>Paddle:</strong> Our Merchant of Record for payment processing. Paddle acts as a data controller for payment transactions and is based in the United Kingdom.</li>
                   <li><strong>Service Providers:</strong> Third-party providers who perform services on our behalf (hosting, analytics, customer support tools). These providers are contractually bound to protect your information.</li>
                   <li><strong>AI Model Providers:</strong> We use third-party AI services to power our chatbots. Conversation data may be processed by these providers under strict data protection agreements.</li>
                   <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental authority.</li>
@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">6. International Data Transfers</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Your data may be transferred to and processed in countries outside your country of residence, including Pakistan where AIVized is based. When we transfer data internationally, we ensure appropriate safeguards are in place. For UK and EEA customers, this may include Standard Contractual Clauses (SCCs) or other approved mechanisms. Our service providers are required to maintain appropriate levels of data protection.
+                  Your data may be transferred to and processed in countries outside your country of residence, including Pakistan where AIVized is based. When we transfer data internationally, we ensure appropriate safeguards are in place. For UAE and EEA customers, this may include Standard Contractual Clauses (SCCs) or other approved mechanisms. Our service providers are required to maintain appropriate levels of data protection.
                 </p>
               </section>
 
@@ -151,7 +151,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  To exercise your rights, contact us at info@aivized.com. We will respond within 30 days. For UK and EEA residents, you also have the right to lodge a complaint with your local data protection authority.
+                  To exercise your rights, contact us at info@aivized.com. We will respond within 30 days. For UAE residents, you also have the right to lodge a complaint with the relevant data protection authority.
                 </p>
               </section>
 
@@ -216,7 +216,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">14. Payment Processor Privacy</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Payments are processed by Paddle.com Market Limited, who acts as the Merchant of Record for all transactions. Paddle is based in the UK and handles all payment-related data processing in compliance with applicable data protection laws. Paddle collects and processes payment information in accordance with their own privacy policy, available at{" "}
+                  Payments are processed by Paddle.com Market Limited, who acts as the Merchant of Record for all transactions. Paddle is based in the United Kingdom and handles all payment-related data processing in compliance with applicable data protection laws. Paddle collects and processes payment information in accordance with their own privacy policy, available at{" "}
                   <a href="https://paddle.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">paddle.com/privacy</a>. 
                   We recommend reviewing their policy to understand how your payment data is handled.
                 </p>
@@ -234,11 +234,11 @@ const PrivacyPolicy = () => {
                     <ul className="space-y-2 text-sm">
                       <li>
                         <Link href="/#pricing" className="text-primary hover:underline">View Pricing Plans</Link>
-                        <span className="text-muted-foreground"> (from £29/month)</span>
+                        <span className="text-muted-foreground"> (from $29/month)</span>
                       </li>
                       <li>
                         <Link href="/locations" className="text-primary hover:underline">AI Chatbot by Location</Link>
-                        <span className="text-muted-foreground"> (UK cities)</span>
+                        <span className="text-muted-foreground"> (UAE cities)</span>
                       </li>
                       <li>
                         <Link href="/industries" className="text-primary hover:underline">AI Chatbot by Industry</Link>
@@ -250,7 +250,7 @@ const PrivacyPolicy = () => {
                     <h3 className="font-semibold mb-2">Blog & Insights</h3>
                     <ul className="space-y-2 text-sm">
                       <li>
-                        <Link href="/blog/whatsapp-chatbot-uk-business" className="text-primary hover:underline">WhatsApp Chatbot Guide</Link>
+                        <Link href="/blog/whatsapp-chatbot-uae-business" className="text-primary hover:underline">WhatsApp Chatbot Guide</Link>
                       </li>
                       <li>
                         <Link href="/blog/website-chatbot-small-business" className="text-primary hover:underline">Website Chatbot Solutions</Link>

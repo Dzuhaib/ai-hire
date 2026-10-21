@@ -91,7 +91,7 @@ Includes:
 | WebSite | ✅ |
 | Organization | ✅ (email, social links, founding date, areaServed) |
 | SoftwareApplication | ✅ (3 pricing offers) |
-| LocalBusiness | ✅ (11 UK cities, 24/7 opening hours) |
+| LocalBusiness | ✅ (11 UAE cities, 24/7 opening hours) |
 | Service | ✅ (OfferCatalog with 3 plans) |
 | FAQPage | ✅ (8 questions — answers in schema) |
 | WebPage + Speakable | ✅ |
@@ -104,11 +104,11 @@ Includes:
 | Schema Type | Status |
 |-------------|--------|
 | BreadcrumbList | ✅ |
-| Service | ✅ (with GBP pricing offer) |
+| Service | ✅ (with USD pricing offer) |
 | FAQPage | ✅ |
 
 **Meta title pattern (FIXED):**  
-`Restaurant AI Chatbot for UK Businesses | Managed from £29/mo | AIVized` ✅
+`Restaurant AI Chatbot for UAE Businesses | Managed from $29/mo | AIVized` ✅
 
 **Previously:** Used `heroTitle` which was not keyword-optimised.
 
@@ -207,7 +207,7 @@ Google will now see genuinely different pages for each city+industry combination
 - "AI Agency Leeds: Yorkshire's Growing AI Ecosystem"
 - "AI Service Providers Canary Wharf & Kensington: Premium Solutions for London"
 
-**Replaced with:** "How to Evaluate Any AI Chatbot Service for Your UK Business" — 250 words covering managed vs DIY, questions to ask before signing up, red flags, and how to assess pricing fairness. This targets informational buyers at the bottom of funnel without geographic keyword stuffing.
+**Replaced with:** "How to Evaluate Any AI Chatbot Service for Your UAE Business" — 250 words covering managed vs DIY, questions to ask before signing up, red flags, and how to assess pricing fairness. This targets informational buyers at the bottom of funnel without geographic keyword stuffing.
 
 **FAQ entries also cleaned:** Removed Manchester/Leeds/Kensington FAQs from schema and component. Replaced with genuinely useful evaluation questions.
 
@@ -220,14 +220,14 @@ Google will now see genuinely different pages for each city+industry combination
 ### High-Citability Passages (already present) ✅
 
 **From llms.txt:**
-> "AIVized builds and fully manages AI chatbots for UK small and medium-sized businesses. Unlike DIY chatbot builders, AIVized handles the entire process: installation on the client's website, AI training on the business's specific knowledge, 24/7 monitoring, and ongoing optimisation. Clients do not need any technical skills."
+> "AIVized builds and fully manages AI chatbots for UAE small and medium-sized businesses. Unlike DIY chatbot builders, AIVized handles the entire process: installation on the client's website, AI training on the business's specific knowledge, 24/7 monitoring, and ongoing optimisation. Clients do not need any technical skills."
 
 **From homepage FAQ (now DOM-visible):**
 > "A managed AI chatbot service means we handle everything—installation, configuration, 24/7 monitoring, and ongoing updates. Unlike DIY chatbot builders, our managed AI chatbot service requires no technical skills from your side. We install, you benefit."
 
 ### Passages Needing Improvement ⚠️
 
-1. **Homepage hero intro** — Opens with marketing language, no direct definition. Add: "AIVized is a managed AI chatbot service for UK small businesses. From £29/month, we install and maintain a chatbot on your website that captures leads and answers enquiries 24/7. No technical skills required."
+1. **Homepage hero intro** — Opens with marketing language, no direct definition. Add: "AIVized is a managed AI chatbot service for UAE small businesses. From $29/month, we install and maintain a chatbot on your website that captures leads and answers enquiries 24/7. No technical skills required."
 
 2. **Industry pages** — No explicit "what is X AI chatbot" definition in first 60 words of page content. Add a `<p class="lead">` paragraph defining the service for that industry.
 
@@ -268,7 +268,7 @@ All public-facing pages (homepage, industry, city, blog, pricing) are **server-r
 4. **Industry page lead paragraph** — Add `<p class="lead">` with explicit service definition per industry
 5. **OG images** — `/industries/[industry]` and `/industries/[industry]/[city]` pages may not have unique OG images. Verify `og:image` is set for all page types
 6. **Author schema on blog posts** — `BlogPosting.author` currently uses `Organization` not `Person`. Adding a real named author with `Person` schema + LinkedIn URL improves E-E-A-T
-7. **Wikipedia presence** — AIVized has no Wikipedia article. Even a mention in a "AI chatbot services UK" list article would significantly improve ChatGPT citation probability
+7. **Wikipedia presence** — AIVized has no Wikipedia article. Even a mention in a "AI chatbot services UAE" list article would significantly improve ChatGPT citation probability
 
 ### High Impact (long-term)
 8. **Reddit presence** — A genuine presence in r/smallbusiness, r/entrepreneur, r/uknews with AIVized mentioned increases Perplexity citation probability significantly

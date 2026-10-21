@@ -95,7 +95,7 @@ export async function POST(req: NextRequest) {
     await sendResendEmail(
       "info@aivized.com",
       `New User Signup - ${fullName || "Unknown"}`,
-      `<h2>New User Signup</h2><p><strong>Name:</strong> ${fullName || "Not provided"}<br><strong>Email:</strong> ${email}<br><strong>Date:</strong> ${new Date().toLocaleDateString("en-GB")}</p>`
+      `<h2>New User Signup</h2><p><strong>Name:</strong> ${fullName || "Not provided"}<br><strong>Email:</strong> ${email}<br><strong>Date:</strong> ${new Date().toLocaleDateString("en-AE")}</p>`
     );
 
     return NextResponse.json({ received: true });

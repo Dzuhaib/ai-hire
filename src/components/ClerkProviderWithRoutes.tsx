@@ -78,16 +78,16 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/industries/:industry/:city" element={<IndustryCityPage />} />
           {/* Blog pages */}
           <Route path="/blog" element={<BlogsPage />} />
-          <Route path="/blog/whatsapp-chatbot-uk-business" element={<WhatsAppChatbotBlog />} />
+          <Route path="/blog/whatsapp-chatbot-uae-business" element={<WhatsAppChatbotBlog />} />
           <Route path="/blog/website-chatbot-small-business" element={<WebsiteChatbotBlog />} />
           <Route path="/blog/instagram-chatbot-social-media" element={<InstagramChatbotBlog />} />
-          <Route path="/blog/outsourced-chat-agents-birmingham" element={<OutsourcedChatAgentsBlog />} />
-          <Route path="/blog/ai-service-providers-uk" element={<AIServiceProvidersBlog />} />
+          <Route path="/blog/outsourced-chat-agents-abu-dhabi" element={<OutsourcedChatAgentsBlog />} />
+          <Route path="/blog/ai-service-providers-uae" element={<AIServiceProvidersBlog />} />
           <Route path="/blog/ai-personal-assistant-near-me" element={<AIPersonalAssistantBlog />} />
-          <Route path="/blog/ai-automation-uk-business" element={<AIAutomationUKBlog />} />
-          <Route path="/blog/ai-chatbot-small-business-uk-guide" element={<AIChatbotGuideBlog />} />
+          <Route path="/blog/ai-automation-uae-business" element={<AIAutomationUKBlog />} />
+          <Route path="/blog/ai-chatbot-small-business-uae-guide" element={<AIChatbotGuideBlog />} />
           <Route path="/blog/reduce-missed-leads-website" element={<ReduceMissedLeadsBlog />} />
-          <Route path="/blog/ai-chatbot-vs-live-chat-uk" element={<AIChatbotVsLiveChatBlog />} />
+          <Route path="/blog/ai-chatbot-vs-live-chat-uae" element={<AIChatbotVsLiveChatBlog />} />
           <Route path="/blog/automate-customer-enquiries-personal-touch" element={<AutomateEnquiriesBlog />} />
           <Route path="/blog/:slug" element={<CityWebsiteChatbotBlog />} />
           <Route path="*" element={<NotFound />} />

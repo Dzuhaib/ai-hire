@@ -38,7 +38,7 @@ const ContactPage = () => {
               <MapPin className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Service Area</h3>
               <p className="text-muted-foreground text-sm">
-                UK businesses<br />
+                UAE businesses<br />
                 Remote delivery
               </p>
             </div>

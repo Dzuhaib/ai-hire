@@ -5,7 +5,7 @@ import { engagementExamples } from "@/data/caseStudiesData";
 
 const title = "Example Engagements | AI, Automation & Digital Projects | AIVized";
 const description =
-  "Explore illustrative examples of AI systems, automation, SEO, web development, and software projects we deliver for UK businesses. Client names and specific results are withheld.";
+  "Explore illustrative examples of AI systems, automation, SEO, web development, and software projects we deliver for UAE businesses. Client names and specific results are withheld.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "automation examples",
     "SEO case studies",
     "web development projects",
-    "AI systems for UK businesses",
+    "AI systems for UAE businesses",
   ],
   alternates: { canonical: "https://www.aivized.com/case-studies" },
   openGraph: {
@@ -49,7 +49,7 @@ const caseStudiesSchema = {
       "@id": "https://www.aivized.com/case-studies#collectionpage",
       "name": "Example Engagements: AI, Automation & Digital Projects",
       "description":
-        "Illustrative examples of AI systems, workflow automation, SEO, web development, and software projects for UK businesses.",
+        "Illustrative examples of AI systems, workflow automation, SEO, web development, and software projects for UAE businesses.",
       "url": "https://www.aivized.com/case-studies",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "publisher": { "@id": "https://www.aivized.com/#organization" },

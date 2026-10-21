@@ -11,7 +11,7 @@
     {
       "name": "pricing",
       "type": "read",
-      "description": "View AIVized pricing plans — Starter £29, Professional £79, Business £149 per month",
+      "description": "View AIVized pricing plans — Starter $29, Professional $79, Business $149 per month",
       "url": "https://www.aivized.com/pricing",
       "sha256": ""
     },
@@ -25,7 +25,7 @@
     {
       "name": "locations",
       "type": "read",
-      "description": "View AI chatbot service availability across 20 UK cities",
+      "description": "View AI chatbot service availability across 20 UAE cities",
       "url": "https://www.aivized.com/locations",
       "sha256": ""
     }

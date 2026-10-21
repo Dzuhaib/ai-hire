@@ -12,7 +12,7 @@ import { toast } from "sonner";
 const plans = [
   {
     name: "Starter",
-    price: "£29",
+    price: "$29",
     priceAmount: 29,
     description: "Perfect for small businesses wanting always-on lead capture. We handle everything",
     features: [
@@ -29,7 +29,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "£79",
+    price: "$79",
     priceAmount: 79,
     description: "For growing businesses: full customisation with priority managed support",
     features: [
@@ -46,7 +46,7 @@ const plans = [
   },
   {
     name: "Business",
-    price: "£149",
+    price: "$149",
     priceAmount: 149,
     description: "Enterprise-grade managed AI with dedicated account manager",
     features: [
@@ -156,7 +156,7 @@ export const PricingSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Fully managed AI chatbot for UK small business. No technical skills needed. We install everything.
+            Fully managed AI chatbot for UAE small business. No technical skills needed. We install everything.
           </motion.p>
         </div>
 
@@ -209,7 +209,7 @@ export const PricingSection = () => {
                     <span className="text-muted-foreground text-sm">/month</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {plan.hasTrial ? "3-day free trial · then + £50 setup" : "One-time £50 setup · No trial"}
+                    {plan.hasTrial ? "3-day free trial · then + $50 setup" : "One-time $50 setup · No trial"}
                   </p>
                 </div>
 

@@ -18,66 +18,36 @@ const instagramHero = "/assets/blog/instagram-chatbot-hero.png";
 const outsourcedHero = "/assets/blog/outsourced-chat-agents-hero.png";
 const aiProvidersHero = "/assets/blog/ai-service-providers-hero.png";
 const aiPersonalHero = "/assets/blog/ai-personal-assistant-hero.png";
-const aiAutomationHero = "/assets/blog/ai-automation-uk-hero.png";
+const aiAutomationHero = "/assets/blog/ai-automation-uae-hero.png";
 const aiChatbotGuideHero = "/assets/blog/ai-chatbot-guide-hero.png";
 const reduceMissedLeadsHero = "/assets/blog/reduce-missed-leads-hero.png";
 const aiChatbotVsLiveChatHero = "/assets/blog/ai-chatbot-vs-live-chat-hero.png";
 const automateEnquiriesHero = "/assets/blog/automate-enquiries-personal-touch-hero.png";
 
-// City hero images
-const aiLondon = "/assets/locations/ai-london.png";
-const aiManchester = "/assets/locations/ai-manchester.png";
-const aiBirmingham = "/assets/locations/ai-birmingham.png";
-const aiLeeds = "/assets/locations/ai-leeds.png";
-const aiLiverpool = "/assets/locations/ai-liverpool.png";
-const aiBristol = "/assets/locations/ai-bristol.png";
-const aiGlasgow = "/assets/locations/ai-glasgow.png";
-const aiEdinburgh = "/assets/locations/ai-edinburgh.png";
-const aiSheffield = "/assets/locations/ai-sheffield.png";
-const aiNewcastle = "/assets/locations/ai-newcastle.png";
-const aiNottingham = "/assets/locations/ai-nottingham.png";
-const aiCardiff = "/assets/locations/ai-cardiff.png";
-const aiLeicester = "/assets/locations/ai-leicester.png";
-const aiBrighton = "/assets/locations/ai-brighton.png";
-const aiSouthampton = "/assets/locations/ai-southampton.png";
-const aiOxford = "/assets/locations/ai-oxford.png";
-const aiCambridge = "/assets/locations/ai-cambridge.png";
-const aiCoventry = "/assets/locations/ai-coventry.png";
-const aiBelfast = "/assets/locations/ai-belfast.png";
-const aiAberdeen = "/assets/locations/ai-aberdeen.png";
+// City hero images share a single UAE support image until city-specific art is available
+const aiUae = "/assets/locations/ai-support.png";
 
 const imageMap: Record<string, string> = {
-  "whatsapp-chatbot-uk-business": whatsappHero,
+  "whatsapp-chatbot-uae-business": whatsappHero,
   "website-chatbot-small-business": websiteHero,
   "instagram-chatbot-social-media": instagramHero,
-  "outsourced-chat-agents-birmingham": outsourcedHero,
-  "ai-service-providers-uk": aiProvidersHero,
+  "outsourced-chat-agents-abu-dhabi": outsourcedHero,
+  "ai-service-providers-uae": aiProvidersHero,
   "ai-personal-assistant-near-me": aiPersonalHero,
-  "ai-automation-uk-business": aiAutomationHero,
-  "ai-chatbot-small-business-uk-guide": aiChatbotGuideHero,
+  "ai-automation-uae-business": aiAutomationHero,
+  "ai-chatbot-small-business-uae-guide": aiChatbotGuideHero,
   "reduce-missed-leads-website": reduceMissedLeadsHero,
-  "ai-chatbot-vs-live-chat-uk": aiChatbotVsLiveChatHero,
+  "ai-chatbot-vs-live-chat-uae": aiChatbotVsLiveChatHero,
   "automate-customer-enquiries-personal-touch": automateEnquiriesHero,
-  "website-chatbot-24-7-london": aiLondon,
-  "website-chatbot-24-7-manchester": aiManchester,
-  "website-chatbot-24-7-birmingham": aiBirmingham,
-  "website-chatbot-24-7-leeds": aiLeeds,
-  "website-chatbot-24-7-liverpool": aiLiverpool,
-  "website-chatbot-24-7-bristol": aiBristol,
-  "website-chatbot-24-7-glasgow": aiGlasgow,
-  "website-chatbot-24-7-edinburgh": aiEdinburgh,
-  "website-chatbot-24-7-sheffield": aiSheffield,
-  "website-chatbot-24-7-newcastle": aiNewcastle,
-  "website-chatbot-24-7-nottingham": aiNottingham,
-  "website-chatbot-24-7-cardiff": aiCardiff,
-  "website-chatbot-24-7-leicester": aiLeicester,
-  "website-chatbot-24-7-brighton": aiBrighton,
-  "website-chatbot-24-7-southampton": aiSouthampton,
-  "website-chatbot-24-7-oxford": aiOxford,
-  "website-chatbot-24-7-cambridge": aiCambridge,
-  "website-chatbot-24-7-coventry": aiCoventry,
-  "website-chatbot-24-7-belfast": aiBelfast,
-  "website-chatbot-24-7-aberdeen": aiAberdeen,
+  "ai-agency-dubai": aiUae,
+  "website-chatbot-24-7-dubai": aiUae,
+  "website-chatbot-24-7-abu-dhabi": aiUae,
+  "website-chatbot-24-7-sharjah": aiUae,
+  "website-chatbot-24-7-ajman": aiUae,
+  "website-chatbot-24-7-ras-al-khaimah": aiUae,
+  "website-chatbot-24-7-fujairah": aiUae,
+  "website-chatbot-24-7-umm-al-quwain": aiUae,
+  "website-chatbot-24-7-al-ain": aiUae,
 };
 
 const POSTS_PER_PAGE = 9;
@@ -118,7 +88,7 @@ const BlogsPage = () => {
               Blog & Insights
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
-              AI Chatbot Blog & Insights for UK Businesses
+              AI Chatbot Blog & Insights for UAE Businesses
             </h1>
             <p className="blog-description text-lg text-muted-foreground max-w-2xl mx-auto">
               Expert guides on implementing AI chatbots for WhatsApp, websites, and social media to transform your customer engagement.
@@ -157,7 +127,7 @@ const BlogsPage = () => {
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                       <time dateTime={post.publishedDate} className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        {new Date(post.publishedDate).toLocaleDateString('en-GB', {
+                        {new Date(post.publishedDate).toLocaleDateString('en-AE', {
                           day: 'numeric',
                           month: 'short',
                           year: 'numeric'

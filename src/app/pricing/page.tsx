@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import PricingPage from "@/views/PricingPage";
 
 export const metadata: Metadata = {
-  title: "AI Agency Pricing | AI Chatbot Plans from £29/mo",
+  title: "AI Agency Pricing | AI Chatbot Plans from $29/mo",
   description:
-    "View AIVized AI agency pricing. Fully managed AI chatbot and automation plans from £29/month. Starter, Professional, and Business — no contracts, 24/7 support included.",
+    "View AIVized AI agency pricing. Fully managed AI chatbot and automation plans from $29/month. Starter, Professional, and Business — no contracts, 24/7 support included.",
   alternates: { canonical: "https://www.aivized.com/pricing" },
   openGraph: {
-    title: "AI Agency Pricing | AI Chatbot Plans from £29/mo",
-    description: "View AIVized AI agency pricing. Fully managed AI chatbot and automation plans from £29/month. Starter, Professional, and Business — no contracts, 24/7 support included.",
+    title: "AI Agency Pricing | AI Chatbot Plans from $29/mo",
+    description: "View AIVized AI agency pricing. Fully managed AI chatbot and automation plans from $29/month. Starter, Professional, and Business — no contracts, 24/7 support included.",
     url: "https://www.aivized.com/pricing",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -27,7 +27,7 @@ const pricingSchema = {
       "@id": "https://www.aivized.com/pricing#product",
       "url": "https://www.aivized.com/pricing",
       "name": "AIVized Managed AI Chatbot Service",
-      "description": "Fully managed AI chatbot installation and maintenance for UK small businesses.",
+      "description": "Fully managed AI chatbot installation and maintenance for UAE small businesses.",
       "brand": {
         "@type": "Brand",
         "name": "AIVized"
@@ -37,33 +37,33 @@ const pricingSchema = {
           "@type": "Offer",
           "name": "Starter",
           "price": "29",
-          "priceCurrency": "GBP",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitText": "MONTH" },
+          "priceCurrency": "USD",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "USD", "unitText": "MONTH" },
           "description": "Managed AI chatbot for small businesses. Up to 500 conversations per month.",
           "availability": "https://schema.org/InStock",
-          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" },
+          "eligibleRegion": { "@type": "Country", "name": "United Arab Emirates" },
           "hasMerchantReturnPolicy": returnPolicyRef
         },
         {
           "@type": "Offer",
           "name": "Professional",
           "price": "79",
-          "priceCurrency": "GBP",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "GBP", "unitText": "MONTH" },
+          "priceCurrency": "USD",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "USD", "unitText": "MONTH" },
           "description": "Lead generation chatbot for growing businesses. Up to 2,500 conversations per month.",
           "availability": "https://schema.org/InStock",
-          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" },
+          "eligibleRegion": { "@type": "Country", "name": "United Arab Emirates" },
           "hasMerchantReturnPolicy": returnPolicyRef
         },
         {
           "@type": "Offer",
           "name": "Business",
           "price": "149",
-          "priceCurrency": "GBP",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "GBP", "unitText": "MONTH" },
+          "priceCurrency": "USD",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "USD", "unitText": "MONTH" },
           "description": "Enterprise-grade managed AI chatbot with dedicated account manager. Unlimited conversations.",
           "availability": "https://schema.org/InStock",
-          "eligibleRegion": { "@type": "Country", "name": "United Kingdom" },
+          "eligibleRegion": { "@type": "Country", "name": "United Arab Emirates" },
           "hasMerchantReturnPolicy": returnPolicyRef
         }
       ]
@@ -80,7 +80,7 @@ const pricingSchema = {
       "@type": "MerchantReturnPolicy",
       "name": "AIVized 3-Day Free Trial and Refund Policy",
       "description": "All AIVized plans include a 3-day free trial. Cancel anytime with no long-term contracts.",
-      "applicableCountry": "GB",
+      "applicableCountry": "AE",
       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
       "merchantReturnDays": 3,
       "returnMethod": "https://schema.org/ReturnByMail",

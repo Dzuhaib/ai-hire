@@ -14,8 +14,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { industry } = await params;
   const industryData = getIndustryBySlug(industry);
-  const title = industryData?.metaTitle || `AI Agency for ${industry} UK | AI Chatbot & Automation Services`;
-  const description = industryData?.metaDescription || `AIVized is an AI agency serving ${industry} UK businesses. Fully managed AI chatbot and automation services. Capture leads and automate support 24/7 from £29/month.`;
+  const title = industryData?.metaTitle || `AI Agency for ${industry} UAE | AI Chatbot & Automation Services`;
+  const description = industryData?.metaDescription || `AIVized is an AI agency serving ${industry} UAE businesses. Fully managed AI chatbot and automation services. Capture leads and automate support 24/7 from $29/month.`;
   return {
     title,
     description,
@@ -58,13 +58,13 @@ export default async function Page({
             "description": industryData.description,
             "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
             "serviceType": "AI Agency Services",
-            "areaServed": { "@type": "Country", "name": "United Kingdom" },
+            "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
             "url": `https://www.aivized.com/industries/${industryData.slug}`,
             "offers": {
               "@type": "Offer",
               "price": "29",
-              "priceCurrency": "GBP",
-              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "GBP", "unitCode": "MON" }
+              "priceCurrency": "USD",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "USD", "unitCode": "MON" }
             }
           },
         ],

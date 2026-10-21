@@ -18,8 +18,8 @@ const personalInline3 = "/assets/blog/ai-personal-inline-3.png";
 const AIPersonalAssistantBlog = () => {
   const faqs = [
     {
-      question: "What is an AI personal assistant for a UK business?",
-      answer: "An AI personal assistant for a UK business is a managed chatbot that handles customer-facing tasks automatically, answering enquiries, collecting lead details, booking appointments, and responding to messages across your website, WhatsApp, or Instagram. Unlike a basic FAQ bot, it holds a natural conversation and can handle multi-step requests based on a knowledge base built from your specific business."
+      question: "What is an AI personal assistant for a UAE business?",
+      answer: "An AI personal assistant for a UAE business is a managed chatbot that handles customer-facing tasks automatically, answering enquiries, collecting lead details, booking appointments, and responding to messages across your website, WhatsApp, or Instagram. Unlike a basic FAQ bot, it holds a natural conversation and can handle multi-step requests based on a knowledge base built from your specific business."
     },
     {
       question: "What tasks can an AI personal assistant handle for my business?",
@@ -34,7 +34,7 @@ const AIPersonalAssistantBlog = () => {
       answer: "AIVized's managed AI personal assistant works across your website, WhatsApp, and Instagram. One assistant, trained on your business, deployed to the channels your customers use. Each channel can be added separately or together, depending on where your enquiries come from."
     },
     {
-      question: "How quickly can an AI personal assistant go live for my UK business?",
+      question: "How quickly can an AI personal assistant go live for my UAE business?",
       answer: "Most businesses are live within 24 hours. You share your products, services, pricing, and common questions and we build and test the assistant, then install it on your chosen channels. There is no technical work required on your side."
     },
     {
@@ -66,7 +66,7 @@ const AIPersonalAssistantBlog = () => {
               AI Assistants
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
-              AI Personal Assistant for Your UK Business: What It Does and How to Get One
+              AI Personal Assistant for Your UAE Business: What It Does and How to Get One
             </h1>
 
             <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
@@ -81,7 +81,7 @@ const AIPersonalAssistantBlog = () => {
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-video bg-secondary">
-              <Image src={heroImage} alt="AI personal assistant for UK business" fill className="object-cover" priority />
+              <Image src={heroImage} alt="AI personal assistant for UAE business" fill className="object-cover" priority />
             </div>
           </motion.header>
 
@@ -99,10 +99,10 @@ const AIPersonalAssistantBlog = () => {
               What an AI Personal Assistant Does for Your Business
             </h2>
             <p className="text-muted-foreground mb-6">
-              The core function of an AI personal assistant is to handle the messages that would otherwise require your time or a member of staff. Most UK small businesses receive the same questions repeatedly, about pricing, services, availability, and how to get started. An AI assistant answers these instantly, at any hour, leaving your team free to focus on work that requires human judgement.
+              The core function of an AI personal assistant is to handle the messages that would otherwise require your time or a member of staff. Most UAE small businesses receive the same questions repeatedly, about pricing, services, availability, and how to get started. An AI assistant answers these instantly, at any hour, leaving your team free to focus on work that requires human judgement.
             </p>
 
-            <BlogInlineImage src={personalInline1} alt="UK business owner reviewing AI personal assistant conversations on a tablet" />
+            <BlogInlineImage src={personalInline1} alt="UAE business owner reviewing AI personal assistant conversations on a tablet" />
 
             <div className="grid md:grid-cols-3 gap-6 my-8">
               <div className="p-6 rounded-xl bg-secondary/50 border border-border">
@@ -154,10 +154,10 @@ const AIPersonalAssistantBlog = () => {
               Customers contact businesses through different channels depending on their habit and preference. Some send a message via website chat. Others prefer WhatsApp. Others reach out through Instagram DMs. A managed AI personal assistant works across all three: one assistant, trained once on your business, deployed wherever your customers are.
             </p>
 
-            <BlogInlineImage src={personalInline2} alt="AI personal assistant working across website, WhatsApp and Instagram for a UK business" />
+            <BlogInlineImage src={personalInline2} alt="AI personal assistant working across website, WhatsApp and Instagram for a UAE business" />
 
             <p className="text-muted-foreground mb-6">
-              With over 33 million UK users on WhatsApp and 30 million on Instagram, meeting customers on the platforms they already use increases response rates and conversion. Your AI assistant doesn't require customers to visit your website or fill in a contact form. They get an instant answer in the app they're already using.
+              With over 33 million UAE users on WhatsApp and 30 million on Instagram, meeting customers on the platforms they already use increases response rates and conversion. Your AI assistant doesn't require customers to visit your website or fill in a contact form. They get an instant answer in the app they're already using.
             </p>
 
             <h2 className="text-2xl font-serif font-semibold mt-12 mb-4">
@@ -167,7 +167,7 @@ const AIPersonalAssistantBlog = () => {
               An AI personal assistant from AIVized is a fully managed service. You don't need technical skills, development resources, or time to configure conversation flows. Here's how it works:
             </p>
 
-            <BlogInlineImage src={personalInline3} alt="Simple four-step process for getting an AI personal assistant live for a UK business" />
+            <BlogInlineImage src={personalInline3} alt="Simple four-step process for getting an AI personal assistant live for a UAE business" />
 
             <ol className="text-muted-foreground space-y-3 mb-6">
               <li><strong>1. Share your business details:</strong> Products, services, pricing, FAQs, and brand voice</li>
@@ -176,12 +176,12 @@ const AIPersonalAssistantBlog = () => {
               <li><strong>4. We monitor and update it:</strong> Ongoing improvements and updates when your content changes</li>
             </ol>
             <p className="text-muted-foreground mb-6">
-              Plans start from <Link href="/pricing" className="text-primary hover:underline">£29 per month</Link> with no long-term contracts and a 3-day free trial. Explore how AI chatbots help <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">automate enquiries without losing the personal touch</Link>.
+              Plans start from <Link href="/pricing" className="text-primary hover:underline">$29 per month</Link> with no long-term contracts and a 3-day free trial. Explore how AI chatbots help <Link href="/blog/automate-customer-enquiries-personal-touch" className="text-primary hover:underline">automate enquiries without losing the personal touch</Link>.
             </p>
 
             <section className="mt-16">
               <h2 className="text-2xl font-serif font-semibold mb-6">
-                Frequently Asked Questions About AI Personal Assistants for UK Businesses
+                Frequently Asked Questions About AI Personal Assistants for UAE Businesses
               </h2>
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
@@ -202,7 +202,7 @@ const AIPersonalAssistantBlog = () => {
                 Ready to Get Your AI Personal Assistant?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                AIVized provides managed AI personal assistants for UK businesses across all industries. We handle installation, training, monitoring, and updates.
+                AIVized provides managed AI personal assistants for UAE businesses across all industries. We handle installation, training, monitoring, and updates.
               </p>
               <Link
                 href="/pricing"
