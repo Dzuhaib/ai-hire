@@ -14,10 +14,10 @@ const plans = [
     name: "Starter",
     price: "£29",
     priceAmount: 29,
-    description: "Perfect for small businesses wanting 24/7 lead capture. We handle everything",
+    description: "Perfect for small businesses wanting always-on lead capture. We handle everything",
     features: [
       { text: "We install & configure everything", included: true },
-      { text: "24/7 monitoring & maintenance", included: true },
+      { text: "Proactive monitoring & maintenance", included: true },
       { text: "Up to 500 conversations/mo", included: true },
       { text: "Immediate issue resolution", included: true },
       { text: "Email support", included: true },
@@ -34,7 +34,7 @@ const plans = [
     description: "For growing businesses: full customisation with priority managed support",
     features: [
       { text: "We install & configure everything", included: true },
-      { text: "24/7 monitoring & maintenance", included: true },
+      { text: "Proactive monitoring & maintenance", included: true },
       { text: "Up to 2,500 conversations/mo", included: true },
       { text: "Lead handling & optimisation", included: true },
       { text: "Ongoing updates & improvements", included: true },
@@ -51,7 +51,7 @@ const plans = [
     description: "Enterprise-grade managed AI with dedicated account manager",
     features: [
       { text: "We install & configure everything", included: true },
-      { text: "24/7 monitoring & maintenance", included: true },
+      { text: "Proactive monitoring & maintenance", included: true },
       { text: "Unlimited conversations", included: true },
       { text: "Dedicated account manager", included: true },
       { text: "Custom integrations & white-label", included: true },
@@ -65,8 +65,8 @@ const plans = [
 
 const guarantees = [
   { icon: Shield, text: "14-day money back" },
-  { icon: Clock, text: "24hr setup" },
-  { icon: Headphones, text: "UK-based support" },
+  { icon: Clock, text: "Guided onboarding" },
+  { icon: Headphones, text: "Email support" },
 ];
 
 export const PricingSection = () => {

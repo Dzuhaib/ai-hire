@@ -72,7 +72,7 @@ export const HeroSection = () => {
           <div className="flex flex-wrap gap-x-8 gap-y-3">
             {[
               "Strategy, build & support",
-              "Senior UK-based team",
+              "Direct access to specialists",
               "Fixed-scope projects",
               "Security-conscious delivery",
             ].map((item) => (

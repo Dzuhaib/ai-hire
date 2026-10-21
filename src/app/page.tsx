@@ -2,17 +2,18 @@ export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import IndexPage from "@/views/Index";
 import { services } from "@/data/servicesData";
+import { faqs } from "@/data/faqData";
 
 export const metadata: Metadata = {
-  title: "AI Systems, Automation & Digital Growth Agency UK | AIVized",
+  title: { absolute: "AI Systems, Automation & Digital Growth for UK Businesses | AIVized" },
   description:
-    "AIVized is a UK agency delivering AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development.",
+    "AIVized delivers AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development for UK businesses.",
   keywords:
     "AI agency UK, AI systems, business automation UK, SEO and GEO, generative engine optimisation, digital marketing agency, web development UK, desktop software development, AIVized",
   alternates: { canonical: "https://www.aivized.com/" },
   openGraph: {
     url: "https://www.aivized.com/",
-    title: "AI Systems, Automation & Digital Growth Agency UK | AIVized",
+    title: "AI Systems, Automation & Digital Growth for UK Businesses | AIVized",
     description:
       "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software development for UK businesses.",
     type: "website",
@@ -42,7 +43,7 @@ const homepageSchema = {
       "image": "https://www.aivized.com/og-image.png",
       "email": "info@aivized.com",
       "description":
-        "AIVized is a UK AI and digital agency delivering AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software.",
+        "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UK businesses.",
       "foundingDate": "2025",
       "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "contactPoint": {
@@ -85,18 +86,30 @@ const homepageSchema = {
       "url": "https://www.linkedin.com/in/zuhaibah/",
       "sameAs": ["https://www.linkedin.com/in/zuhaibah/"],
       "description":
-        "Founder of AIVized, a UK agency delivering AI systems, automation, SEO and GEO, digital marketing, web development, and desktop software."
+        "Founder of AIVized, which delivers AI systems, automation, SEO and GEO, digital marketing, web development, and desktop software for UK businesses."
     },
     {
       "@type": "WebPage",
       "@id": "https://www.aivized.com/#webpage",
       "url": "https://www.aivized.com",
-      "name": "AI Systems, Automation & Digital Growth Agency UK",
+      "name": "AI Systems, Automation & Digital Growth for UK Businesses",
       "description":
         "AIVized builds AI systems, automations, search visibility, marketing, websites, and desktop software for UK businesses.",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "about": { "@id": "https://www.aivized.com/#organization" },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#services", "#how-it-works", "#faq"] }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.aivized.com/#faq",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
     }
   ]
 };

@@ -94,11 +94,11 @@ const LocationsPage = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-primary" />
-                500+ UK businesses
+                UK-wide coverage
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary" />
-                24/7 availability
+                Remote delivery
               </span>
               <span className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-primary" />
@@ -193,15 +193,15 @@ const LocationsPage = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
               <Bot className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">UK-Based Support</span>
+              <span className="text-sm font-medium text-primary">Dedicated Support</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
-              Don't See Your City?
+              Don&apos;t See Your City?
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8">
-              We serve businesses across the entire UK. Whether you're in a major city or a smaller town, our AI employees are ready to help your business grow.
+              We serve businesses across the entire UK. Whether you&apos;re in a major city or a smaller town, our AI employees are ready to help your business grow.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -219,7 +219,7 @@ const LocationsPage = () => {
             </div>
 
             <p className="text-sm text-muted-foreground mt-6">
-              From <span className="text-primary font-semibold">£29/month</span> • No contracts • 24-hour setup
+              From <span className="text-primary font-semibold">£29/month</span> • No contracts • guided setup
             </p>
           </motion.div>
         </div>

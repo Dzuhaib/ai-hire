@@ -2,19 +2,22 @@ export const revalidate = 86400;
 import type { Metadata } from "next";
 import ContactPage from "@/views/ContactPage";
 
+const title = "Contact Us | AIVized | Let's Build Something Better";
+const description =
+  "Get in touch with AIVized to discuss AI systems, automation, SEO and GEO, digital marketing, web development, or desktop software for your UK business.";
+
 export const metadata: Metadata = {
-  title: "Contact Us | AIVized — Let's Build Something Better",
-  description:
-    "Get in touch with AIVized to discuss AI systems, automation, SEO and GEO, digital marketing, web development, or desktop software for your UK business.",
+  title: { absolute: title },
+  description,
   alternates: { canonical: "https://www.aivized.com/contact" },
   openGraph: {
-    title: "Contact Us | AIVized — Let's Build Something Better",
-    description: "Get in touch with AIVized to discuss AI systems, automation, SEO and GEO, digital marketing, web development, or desktop software for your UK business.",
+    title,
+    description,
     url: "https://www.aivized.com/contact",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
+  twitter: { card: "summary_large_image", title, description, images: ["https://www.aivized.com/og-image.png"] },
 };
 
 const contactSchema = {
@@ -22,17 +25,25 @@ const contactSchema = {
   "@graph": [
     {
       "@type": "BreadcrumbList",
+      "@id": "https://www.aivized.com/contact#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.aivized.com/contact" }
-      ]
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://www.aivized.com/contact",
+        },
+      ],
     },
     {
       "@type": "ContactPage",
       "@id": "https://www.aivized.com/contact#contactpage",
       "name": "Contact AIVized",
       "url": "https://www.aivized.com/contact",
-      "publisher": { "@id": "https://www.aivized.com/#organization" }
+      "isPartOf": { "@id": "https://www.aivized.com/#website" },
+      "about": { "@id": "https://www.aivized.com/#organization" },
+      "publisher": { "@id": "https://www.aivized.com/#organization" },
     },
     {
       "@type": "Organization",
@@ -41,14 +52,13 @@ const contactSchema = {
       "url": "https://www.aivized.com",
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "customer support",
-        "telephone": "+44-0000000000",
+        "contactType": "sales",
         "email": "info@aivized.com",
         "areaServed": "GB",
-        "availableLanguage": ["English"]
-      }
-    }
-  ]
+        "availableLanguage": ["English"],
+      },
+    },
+  ],
 };
 
 export default function Page() {

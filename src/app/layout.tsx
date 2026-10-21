@@ -13,11 +13,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Systems, Automation & Digital Growth Agency UK | AIVized",
+    default: "AI Systems, Automation & Digital Growth for UK Businesses | AIVized",
     template: "%s | AIVized",
   },
   description:
-    "AIVized is a UK agency delivering AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development.",
+    "AIVized delivers AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development for UK businesses.",
   keywords:
     "AI agency UK, AI systems, business automation UK, SEO and GEO, generative engine optimisation, digital marketing agency, web development UK, desktop software development, AIVized",
   authors: [{ name: "Zuhaib Ahmed", url: "https://www.linkedin.com/in/zuhaibah/" }],

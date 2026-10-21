@@ -5,16 +5,8 @@ import { SignIn, SignUp, useUser } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { Bot, ArrowLeft, Quote } from "lucide-react";
+import { Bot, ArrowLeft } from "lucide-react";
 const authSideImage = "/assets/auth-side-image.png";
-
-const quotes = [
-  { text: "AIVized cut our response time from hours to seconds. Our customers love it.", author: "Sarah M.", role: "E-commerce Owner, London" },
-  { text: "We saved over £2,000/month by replacing our outsourced chat team with AIVized.", author: "James T.", role: "Restaurant Manager, Manchester" },
-  { text: "Setup took 10 minutes. Our AI employee handles 80% of enquiries automatically.", author: "Priya K.", role: "Real Estate Agent, Birmingham" },
-  { text: "The best investment we've made this year. It never sleeps and never misses a lead.", author: "David L.", role: "Salon Owner, Leeds" },
-];
 
 const clerkAppearance = {
   elements: {
@@ -56,53 +48,6 @@ const clerkAppearance = {
     logoPlacement: "none" as const,
     showOptionalFields: false,
   },
-};
-
-const SlidingQuotes = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % quotes.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="relative min-h-[140px]">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
-          className="absolute inset-0"
-        >
-          <Quote className="w-7 h-7 text-primary/70 mb-3" />
-          <p className="text-white text-base font-medium leading-relaxed italic">
-            "{quotes[current].text}"
-          </p>
-          <p className="mt-3 text-white/60 text-sm">
-            {quotes[current].author},{" "}
-            <span className="text-primary/90">{quotes[current].role}</span>
-          </p>
-        </motion.div>
-      </AnimatePresence>
-      {/* Dots */}
-      <div className="absolute -bottom-6 left-0 flex gap-2">
-        {quotes.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === current ? "bg-primary w-6" : "bg-white/30 w-2"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
 };
 
 const AuthPage = () => {
@@ -199,11 +144,11 @@ const AuthPage = () => {
         </div>
       </div>
 
-      {/* Right Side — Image + Quotes */}
+      {/* Right Side — Image + Value Proposition */}
       <div className="hidden lg:block w-[45%] p-4">
         <div className="relative w-full h-full rounded-3xl overflow-hidden">
           {/* Background image */}
-          <Image src={authSideImage} alt="AI chatbot service" width={800} height={600} className="w-full h-full object-cover" />
+          <Image src={authSideImage} alt="AIVized AI systems and automation platform" width={800} height={600} className="w-full h-full object-cover" />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50" />
 
@@ -212,13 +157,21 @@ const AuthPage = () => {
             {/* Top tagline */}
             <div>
               <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs font-semibold tracking-wide uppercase border border-white/20">
-                Trusted by 500+ UK Businesses
+                AI Systems, Automation &amp; Digital Growth
               </span>
             </div>
 
-            {/* Bottom quotes */}
+            {/* Bottom message */}
             <div className="mb-6">
-              <SlidingQuotes />
+              <Bot className="w-8 h-8 text-primary mb-4" />
+              <p className="text-white text-xl font-medium leading-relaxed max-w-sm">
+                One partner for AI systems, automations, SEO and GEO, digital marketing, web development,
+                and desktop software.
+              </p>
+              <p className="mt-4 text-white/60 text-sm max-w-sm">
+                Built for UK businesses that want practical improvements, clear scope, and support after
+                launch.
+              </p>
             </div>
           </div>
         </div>

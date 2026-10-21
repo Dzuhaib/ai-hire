@@ -52,7 +52,7 @@ const reasons = [
 const statItems = [
   { value: "6", label: "Specialist services in one team" },
   { value: "1", label: "Accountable partner" },
-  { value: "48h", label: "Typical proposal turnaround" },
+  { value: "Written", label: "Scope and pricing before work starts" },
 ];
 
 interface WhyChooseUsSectionProps {

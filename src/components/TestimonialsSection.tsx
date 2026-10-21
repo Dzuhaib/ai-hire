@@ -1,27 +1,34 @@
 import { motion } from "framer-motion";
+import { MessageSquare, FileCheck2, LifeBuoy, Building2 } from "lucide-react";
 
-const testimonials = [
+const commitments = [
   {
-    quote: "AIVized rebuilt our site and automated the booking follow-up. Direct bookings are up, the team is less stressed, and we finally have one partner who understands the whole picture.",
-    name: "James Richardson",
-    role: "Owner",
-    industry: "The Northern Grill",
-    location: "Manchester",
+    icon: MessageSquare,
+    title: "Direct communication",
+    description:
+      "You speak to the people doing the work, not a call centre or a chain of account managers. Questions get answered by someone who knows your project.",
   },
   {
-    quote: "The AI triage and CRM automation changed how the practice runs. Enquiries are routed instantly, nothing gets lost, and our consultants spend their time on client work instead of admin.",
-    name: "Sarah Thompson",
-    role: "Managing Director",
-    industry: "Thompson & Co.",
-    location: "London",
+    icon: FileCheck2,
+    title: "Clear scope and pricing",
+    description:
+      "Every project starts with a written scope, timeline, and price. You know what is included before work begins, and changes are agreed in writing.",
   },
   {
-    quote: "They handled the website, technical SEO, and email automation as one project. Six months in, organic revenue is up 68% and we can actually see which channels are working.",
-    name: "Daniel Morley",
-    role: "Founder",
-    industry: "Urban Threads UK",
-    location: "Bristol",
+    icon: LifeBuoy,
+    title: "Support after launch",
+    description:
+      "We do not disappear after handover. Optional support and managed partnerships keep the work maintained, monitored, and improving.",
   },
+];
+
+const businessTypes = [
+  "Independent retailers",
+  "Professional practices",
+  "Hospitality groups",
+  "Healthcare clinics",
+  "E-commerce brands",
+  "B2B service firms",
 ];
 
 export const TestimonialsSection = () => {
@@ -36,7 +43,7 @@ export const TestimonialsSection = () => {
             transition={{ duration: 0.5 }}
             className="label-tag mb-3"
           >
-            Trusted by UK Businesses
+            How We Work
           </motion.p>
 
           <motion.h2
@@ -46,46 +53,66 @@ export const TestimonialsSection = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold"
           >
-            UK Businesses <span className="text-gradient">Trust AIVized</span>
+            A Partner You Can <span className="text-gradient">Actually Reach</span>
           </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-muted-foreground max-w-2xl mx-auto mt-4"
+          >
+            We do not publish invented reviews or borrow the names of other businesses. Named client stories
+            are shared only with permission. Here is what working with us looks like.
+          </motion.p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+          {commitments.map((item, index) => (
             <motion.div
-              key={index}
+              key={item.title}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.08 }}
               className="bg-card border border-border rounded-xl p-8 flex flex-col hover:border-primary/30 hover:shadow-[var(--shadow-lift)] transition-all duration-300"
             >
-              {/* Stars */}
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+              <div className="w-11 h-11 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
+                <item.icon className="w-5 h-5 text-primary" />
               </div>
-
-              {/* Quote */}
-              <blockquote className="text-foreground/85 mb-6 flex-grow leading-relaxed font-serif text-lg">
-                &ldquo;{testimonial.quote}&rdquo;
-              </blockquote>
-
-              {/* Name, Industry & Location */}
-              <div className="pt-5 border-t border-border/60">
-                <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                <p className="text-sm font-medium text-primary mt-1">
-                  {testimonial.industry}
-                </p>
-                <p className="text-xs text-muted-foreground mt-0.5">{testimonial.location}</p>
-              </div>
+              <h3 className="font-serif font-semibold text-lg mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 rounded-2xl border border-border bg-card p-6 md:p-8"
+        >
+          <div className="flex flex-col md:flex-row md:items-center gap-5">
+            <div className="flex items-center gap-3 shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <Building2 className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="font-serif font-semibold">Businesses we work with</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {businessTypes.map((type) => (
+                <span
+                  key={type}
+                  className="px-3 py-1.5 text-xs rounded-full bg-secondary text-muted-foreground border border-border/60"
+                >
+                  {type}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

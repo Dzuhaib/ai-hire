@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -33,30 +33,30 @@ const ContactPage = () => {
       {/* Contact Info */}
       <section className="section-padding">
         <div className="container-narrow">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="card-premium p-6 text-center">
               <MapPin className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Office Address</h3>
+              <h3 className="font-semibold mb-2">Service Area</h3>
               <p className="text-muted-foreground text-sm">
-                AIVized<br />
-                United Kingdom<br />
-                Remote-first team
+                UK businesses<br />
+                Remote delivery
               </p>
-            </div>
-            <div className="card-premium p-6 text-center">
-              <Phone className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Phone</h3>
-              <p className="text-muted-foreground text-sm">+44 000 000 0000</p>
             </div>
             <div className="card-premium p-6 text-center">
               <Mail className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Email</h3>
-              <p className="text-muted-foreground text-sm">info@aivized.com</p>
+              <p className="text-muted-foreground text-sm">
+                info@aivized.com<br />
+                Usual reply within one business day
+              </p>
             </div>
             <div className="card-premium p-6 text-center">
               <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Hours</h3>
-              <p className="text-muted-foreground text-sm">24/7 Support<br />Mon–Sun, All Year</p>
+              <h3 className="font-semibold mb-2">Calls</h3>
+              <p className="text-muted-foreground text-sm">
+                By appointment<br />
+                Scheduled to suit your time zone
+              </p>
             </div>
           </div>
 

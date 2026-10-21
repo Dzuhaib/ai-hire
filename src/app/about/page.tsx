@@ -4,16 +4,16 @@ import AboutPage from "@/views/AboutPage";
 import { services } from "@/data/servicesData";
 
 export const metadata: Metadata = {
-  title: "About AIVized | AI, Automation & Digital Agency UK",
+  title: { absolute: "About AIVized | AI, Automation & Digital Growth for UK Businesses" },
   description:
-    "Learn about AIVized, a UK agency delivering AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for growing businesses.",
+    "Learn about AIVized and how we deliver AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for growing UK businesses.",
   keywords:
     "about AIVized, AI agency UK, automation agency, SEO GEO agency, digital marketing agency, web development agency, desktop software development UK",
   alternates: { canonical: "https://www.aivized.com/about" },
   openGraph: {
-    title: "About AIVized | AI, Automation & Digital Agency UK",
+    title: "About AIVized | AI, Automation & Digital Growth for UK Businesses",
     description:
-      "A UK agency delivering AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software.",
+      "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UK businesses.",
     url: "https://www.aivized.com/about",
     type: "website",
     images: [{ url: "https://www.aivized.com/og-image.png", width: 1200, height: 630 }],
@@ -29,7 +29,7 @@ const schema = {
       "@id": "https://www.aivized.com/about",
       "name": "About AIVized",
       "description":
-        "AIVized is a UK AI and digital agency providing AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software development for small and medium-sized businesses.",
+        "AIVized provides AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software development for UK businesses.",
       "url": "https://www.aivized.com/about",
       "isPartOf": { "@id": "https://www.aivized.com/#website" },
       "publisher": { "@id": "https://www.aivized.com/#organization" }
@@ -42,7 +42,7 @@ const schema = {
       "email": "info@aivized.com",
       "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" },
       "description":
-        "AIVized is a UK AI and digital agency delivering AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software.",
+        "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UK businesses.",
       "foundingDate": "2025",
       "areaServed": { "@type": "Country", "name": "United Kingdom" },
       "contactPoint": {

@@ -30,7 +30,7 @@ const AboutPage = () => {
                 <span className="text-sm text-primary font-medium tracking-wide uppercase">About AIVized</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
-                A UK Agency for AI, Automation &amp; Digital Growth
+                AI, Automation &amp; Digital Growth for UK Businesses
               </h1>
               <p className="lead text-xl text-muted-foreground leading-relaxed">
                 AIVized helps UK businesses design, build, and run the systems they depend on - from custom
