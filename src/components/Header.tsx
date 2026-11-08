@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, Bot } from "lucide-react";
+import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { MagneticButton } from "./MagneticButton";
@@ -78,15 +79,19 @@ export const Header = () => {
     >
       <div className="container-narrow">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-2 text-xl font-serif font-semibold tracking-tight">
+          <Link href="/" aria-label="AIVized home" className="flex items-center">
             <motion.div
-              className="flex items-center gap-2"
+              className="flex items-center"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-                <Bot className="w-4 h-4 text-primary" />
-              </div>
-              <span className="font-serif font-semibold text-foreground">AIVized</span>
+              <Image
+                src="/logo/logo.png"
+                alt="AIVized"
+                width={2172}
+                height={724}
+                priority
+                className="h-12 w-auto"
+              />
             </motion.div>
           </Link>
 

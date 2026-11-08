@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bot } from "lucide-react";
+import Image from "next/image";
 
 export const LoadingScreen = () => {
   return (
@@ -25,11 +25,17 @@ export const LoadingScreen = () => {
             ease: "easeInOut"
           }}
         >
-          <div className="relative w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-2xl bg-primary/20 animate-pulse" />
-            <Bot className="w-7 h-7 text-primary relative z-10" />
+          <div className="relative">
+            <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl animate-pulse" />
+            <Image
+              src="/logo/logo.png"
+              alt="AIVized"
+              width={2172}
+              height={724}
+              priority
+              className="relative z-10 h-16 w-auto"
+            />
           </div>
-          <span className="text-3xl font-serif font-semibold tracking-tight text-gradient">AIVized</span>
         </motion.div>
 
         {/* Loading indicator */}

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, Facebook, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const socials = [
@@ -21,11 +22,14 @@ export const Footer = () => {
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2 text-lg font-serif font-semibold">
-              <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-                <Bot className="w-4 h-4 text-primary" />
-              </div>
-              <span className="font-serif font-semibold text-foreground">AIVized</span>
+            <Link href="/" aria-label="AIVized home" className="flex items-center">
+              <Image
+                src="/logo/logo.png"
+                alt="AIVized"
+                width={2172}
+                height={724}
+                className="h-11 w-auto"
+              />
             </Link>
             <span className="text-sm text-muted-foreground">
               AI systems, automation & digital growth

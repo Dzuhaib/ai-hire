@@ -80,11 +80,15 @@ const AuthPage = () => {
         <div className="flex-1 flex items-center justify-center px-6 sm:px-10 lg:px-20 pb-12">
           <div className="w-full max-w-[400px]">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 mb-10 hover:opacity-80 transition-opacity">
-              <div className="relative w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                <Bot className="w-5 h-5 text-primary relative z-10" />
-              </div>
-              <span className="text-2xl font-serif font-semibold tracking-tight text-gradient">AIVized</span>
+            <Link href="/" aria-label="AIVized home" className="inline-flex items-center mb-10 hover:opacity-80 transition-opacity">
+              <Image
+                src="/logo/logo.png"
+                alt="AIVized"
+                width={2172}
+                height={724}
+                priority
+                className="h-12 w-auto"
+              />
             </Link>
 
             {/* Header */}

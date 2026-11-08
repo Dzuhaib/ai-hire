@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSignIn } from "@clerk/nextjs";
 import { motion } from "framer-motion";
-import { Bot, ArrowLeft, Mail, Key, CheckCircle, Loader2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, Mail, Key, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
 type Step = "email" | "code" | "password" | "success";
@@ -302,11 +303,15 @@ const ForgotPasswordPage = () => {
         className="w-full max-w-md"
       >
         {/* Logo */}
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="relative w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-            <Bot className="w-5 h-5 text-primary relative z-10" />
-          </div>
-          <span className="text-2xl font-serif font-semibold tracking-tight text-gradient">aivized</span>
+        <div className="flex items-center justify-center mb-8">
+          <Image
+            src="/logo/logo.png"
+            alt="AIVized"
+            width={2172}
+            height={724}
+            priority
+            className="h-12 w-auto"
+          />
         </div>
 
         {/* Card */}
