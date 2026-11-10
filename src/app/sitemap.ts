@@ -109,11 +109,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     )
   );
 
+  const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
+    url: `${BASE_URL}/services/${service.slug}`,
+    lastModified: coreDate,
+  }));
+
   return [
     ...corePages,
     ...industryPages,
     ...industryCityPages,
     ...locationPages,
+    ...servicePages,
     ...serviceLocationPages,
     ...industryServicePages,
     ...industryServiceCityPages,
