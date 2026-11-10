@@ -1,5 +1,4 @@
 import { ArrowRight, CheckCircle, Zap } from "lucide-react";
-import { servicePageKeywords } from "@/data/servicesData";
 import type { Service } from "@/data/servicesData";
 import { uaeLocations } from "@/data/locationData";
 import { Header } from "@/components/Header";
@@ -55,6 +54,10 @@ const ServicePage = ({ service }: ServicePageProps) => {
         <div className="container-narrow max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">What {service.title} Delivers</h2>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{service.outcome}</p>
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
+            Delivered by a dedicated AI automation agency in Dubai, this work combines AI automation services with
+            hands-on engineering — the AI automation UAE companies actually keep running after handover.
+          </p>
         </div>
       </section>
 
@@ -74,6 +77,11 @@ const ServicePage = ({ service }: ServicePageProps) => {
               </div>
             ))}
           </div>
+          <p className="text-center text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-8">
+            Every engagement is scoped in writing by our AI consultants in Abu Dhabi and Dubai, so you know your AI
+            automation cost in the UAE before work starts — including extras like an AI chatbot for your website and
+            AI SEO in Abu Dhabi that keeps you visible in Google and AI search.
+          </p>
         </div>
       </section>
 
@@ -97,30 +105,13 @@ const ServicePage = ({ service }: ServicePageProps) => {
         </div>
       </section>
 
-      <section className="section-padding bg-muted/30 border-t border-border/50">
-        <div className="container-narrow">
-          <div className="text-center mb-8">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Related Searches</p>
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold">What People Search For</h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-            {servicePageKeywords.map((keyword) => (
-              <span
-                key={keyword}
-                className="px-4 py-2 text-sm rounded-full bg-card border border-border/50 text-muted-foreground"
-              >
-                {keyword}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="section-padding bg-muted/30 border-t border-b border-border/50">
         <div className="container-narrow text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Ready to Start with {service.title}?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Tell us about your business and we will scope the {service.title.toLowerCase()} work that fits.
+            Tell us about your business and we will scope the {service.title.toLowerCase()} work that fits — a
+            focused alternative to generic AI tools such as Levora AI.
           </p>
           <Link href="/contact">
             <Button size="lg" className="btn-primary group">
