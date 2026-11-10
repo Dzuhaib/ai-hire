@@ -111,6 +111,18 @@ export const services: Service[] = [
   },
 ];
 
+export const servicePageKeywords = [
+  "ai seo abu dhabi",
+  "ai automation agency dubai",
+  "ai automation uae",
+  "automation services",
+  "levora ai",
+  "ai chatbot for website uae",
+  "ai automation services",
+  "ai consultants abu dhabi",
+  "ai automation cost uae",
+];
+
 export const servicesNav = services.map((service) => ({
   label: service.title,
   href: `/services#${service.slug}`,

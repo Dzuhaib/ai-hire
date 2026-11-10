@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, Zap } from "lucide-react";
+import { servicePageKeywords } from "@/data/servicesData";
 import type { Service } from "@/data/servicesData";
 import { uaeLocations } from "@/data/locationData";
 import { Header } from "@/components/Header";
@@ -91,6 +92,25 @@ const ServicePage = ({ service }: ServicePageProps) => {
               >
                 {service.title} in {location.city}
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-muted/30 border-t border-border/50">
+        <div className="container-narrow">
+          <div className="text-center mb-8">
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Related Searches</p>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">What People Search For</h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+            {servicePageKeywords.map((keyword) => (
+              <span
+                key={keyword}
+                className="px-4 py-2 text-sm rounded-full bg-card border border-border/50 text-muted-foreground"
+              >
+                {keyword}
+              </span>
             ))}
           </div>
         </div>

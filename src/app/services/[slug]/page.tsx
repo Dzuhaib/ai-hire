@@ -1,6 +1,6 @@
 export const revalidate = 86400;
 import type { Metadata } from "next";
-import { services } from "@/data/servicesData";
+import { services, servicePageKeywords } from "@/data/servicesData";
 import ServicePage from "@/views/services/ServicePage";
 import { ORG_ID, SITE_URL, breadcrumbSchema, serviceSchema } from "@/lib/schema";
 import NotFound from "../../not-found";
@@ -30,15 +30,7 @@ export async function generateMetadata({ params }: ServiceDetailPageProps): Prom
       `${service.title} UAE`,
       `${service.title} services`,
       service.slug,
-      "ai seo abu dhabi",
-      "ai automation agency dubai",
-      "ai automation uae",
-      "automation services",
-      "levora ai",
-      "ai chatbot for website uae",
-      "ai automation services",
-      "ai consultants abu dhabi",
-      "ai automation cost uae",
+      ...servicePageKeywords,
     ],
     alternates: { canonical: url },
     openGraph: {
