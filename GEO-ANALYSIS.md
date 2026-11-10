@@ -75,8 +75,8 @@ Includes:
 **Recommended addition** (add to llms.txt under Key Pages):
 ```
 ## Industry + City Pages (70 pages)
-- [Restaurants London](https://www.aivized.com/industries/restaurants/london)
-- [Restaurants Manchester](https://www.aivized.com/industries/restaurants/manchester)
+- [Restaurants Dubai](https://www.aivized.com/industries/restaurants/dubai)
+- [Restaurants Abu Dhabi](https://www.aivized.com/industries/restaurants/abu-dhabi)
 [... and so on for all 70 combinations]
 ```
 
@@ -133,7 +133,7 @@ Includes:
 | Service + OfferCatalog | ✅ | ✅ |
 | FAQPage | ❌ Missing | ✅ Added (5 Q&As) |
 
-### Blog Posts (static) — e.g., `/blog/ai-chatbot-small-business-uk-guide`
+### Blog Posts (static) — e.g., `/blog/ai-chatbot-small-business-uae-guide`
 | Schema Type | Status |
 |-------------|--------|
 | BlogPosting | ✅ |
@@ -183,18 +183,18 @@ Added `forceMount` to `AccordionContent` in `src/components/ui/accordion.tsx`. E
 
 ## 6. City Page Unique Content (70 Pages Fixed)
 
-**Problem:** All 70 city+industry pages used identical template content with only the city name swapped. `localFact` was: `"Serving restaurants & hospitality businesses across London and surrounding areas."` — identical for Manchester, Birmingham, etc.
+**Problem:** All 70 city+industry pages used identical template content with only the city name swapped. `localFact` was: `"Serving restaurants & hospitality businesses across Dubai and surrounding areas."` — identical for Abu Dhabi, Sharjah, etc.
 
 **Fix applied:** Created a `cityIndustryFacts` dictionary in `industryCityData.ts` with unique 100-150 word paragraphs for all 70 combinations. Each paragraph:
 - Opens with a specific fact about that city's industry market
 - Includes a challenge specific to running that business type in that city
 - Ends with a sentence connecting AIVized's solution to that challenge
 
-**Example (London Restaurants):**
-> "London has over 15,000 restaurants — one of the highest concentrations in Europe. Your competition for bookings is intense, especially for mid-week covers where a single missed enquiry can leave a table empty. Late-night booking requests peak after 10pm when most restaurants are too busy to answer the phone. An AI chatbot captures those requests automatically, turning browsing into confirmed reservations without staff involvement."
+**Example (Dubai Restaurants):**
+> "Dubai has one of the highest concentrations of restaurants in the region, with new venues opening across Downtown, JLT, and Dubai Marina every month. Competition for bookings is intense, especially for mid-week covers where a single missed enquiry can leave a table empty. Late-night booking requests peak after 10pm when most restaurants are too busy to answer the phone. An AI chatbot captures those requests automatically, turning browsing into confirmed reservations without staff involvement."
 
-**Vs Manchester Restaurants:**
-> "Manchester's food scene has grown 35% in the past five years, with the Northern Quarter and Ancoats now drawing visitors from across the north. Competition for weekend covers is fierce among independent restaurants, and customers increasingly expect instant confirmation rather than waiting to hear back by phone..."
+**Vs Abu Dhabi Restaurants:**
+> "Abu Dhabi's dining scene is growing quickly, with new venues across Al Maryah Island, Yas Island, and the Corniche drawing both residents and visitors. Competition for weekend covers is fierce among independent restaurants, and customers increasingly expect instant confirmation rather than waiting to hear back by phone..."
 
 Google will now see genuinely different pages for each city+industry combination.
 
@@ -202,14 +202,14 @@ Google will now see genuinely different pages for each city+industry combination
 
 ## 7. Blog Post Quality — Keyword Stuffing Removed
 
-**`/blog/ai-chatbot-small-business-uk-guide`** had three mid-article sections with no informational value, inserted purely for geographic keyword density:
-- "AI Consulting Services Manchester: Expert Guidance for Your Chatbot Strategy"
-- "AI Agency Leeds: Yorkshire's Growing AI Ecosystem"
-- "AI Service Providers Canary Wharf & Kensington: Premium Solutions for London"
+**`/blog/ai-chatbot-small-business-uae-guide`** had three mid-article sections with no informational value, inserted purely for geographic keyword density:
+- "AI Consulting Services Abu Dhabi: Expert Guidance for Your Chatbot Strategy"
+- "AI Agency Sharjah: The UAE's Growing AI Ecosystem"
+- "AI Service Providers Dubai Marina & Downtown: Premium Solutions for Dubai"
 
 **Replaced with:** "How to Evaluate Any AI Chatbot Service for Your UAE Business" — 250 words covering managed vs DIY, questions to ask before signing up, red flags, and how to assess pricing fairness. This targets informational buyers at the bottom of funnel without geographic keyword stuffing.
 
-**FAQ entries also cleaned:** Removed Manchester/Leeds/Kensington FAQs from schema and component. Replaced with genuinely useful evaluation questions.
+**FAQ entries also cleaned:** Removed Abu Dhabi/Sharjah/Dubai Marina FAQs from schema and component. Replaced with genuinely useful evaluation questions.
 
 ---
 

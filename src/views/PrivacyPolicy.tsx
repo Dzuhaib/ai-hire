@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
                   We do not sell your personal information. We may share your information with:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li><strong>Paddle:</strong> Our Merchant of Record for payment processing. Paddle acts as a data controller for payment transactions and is based in the United Kingdom.</li>
+                  <li><strong>Paddle:</strong> Our Merchant of Record for payment processing. Paddle acts as a data controller for payment transactions.</li>
                   <li><strong>Service Providers:</strong> Third-party providers who perform services on our behalf (hosting, analytics, customer support tools). These providers are contractually bound to protect your information.</li>
                   <li><strong>AI Model Providers:</strong> We use third-party AI services to power our chatbots. Conversation data may be processed by these providers under strict data protection agreements.</li>
                   <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental authority.</li>
@@ -216,7 +216,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-serif font-semibold mb-4">14. Payment Processor Privacy</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Payments are processed by Paddle.com Market Limited, who acts as the Merchant of Record for all transactions. Paddle is based in the United Kingdom and handles all payment-related data processing in compliance with applicable data protection laws. Paddle collects and processes payment information in accordance with their own privacy policy, available at{" "}
+                  Payments are processed by Paddle.com Market Limited, who acts as the Merchant of Record for all transactions. Paddle handles all payment-related data processing in compliance with applicable data protection laws. Paddle collects and processes payment information in accordance with their own privacy policy, available at{" "}
                   <a href="https://paddle.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">paddle.com/privacy</a>. 
                   We recommend reviewing their policy to understand how your payment data is handled.
                 </p>

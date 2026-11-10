@@ -5,11 +5,10 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { 
-  CheckCircle, ArrowRight, Zap, Users, Shield, Clock, TrendingUp, 
-  Bot, MessageCircle, Star, Calendar, UtensilsCrossed, PartyPopper, 
-  Plug, MapPin, Filter, Home, FileText, Building, Package, Truck, 
-  RotateCcw, Box, ShoppingCart, Quote, Headphones, Heart, AlertTriangle, CreditCard
+import {
+  CheckCircle, ArrowRight, Zap, Users, Shield, TrendingUp,
+  Bot, MessageCircle, Workflow, Search, Megaphone, Code2,
+  MonitorSmartphone, Layers3,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -18,6 +17,7 @@ import { getCitiesForIndustry } from "@/data/industryCityData";
 import { industryExpandedContent } from "@/data/industryContent";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import IndustryServicesSection from "@/components/IndustryServicesSection";
 
 import NotFound from "./NotFound";
 
@@ -60,10 +60,7 @@ const sceneImages: Record<string, string> = {
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Calendar, UtensilsCrossed, PartyPopper, Users, MapPin, Plug,
-  Filter, Home, FileText, Building, Package, Truck, RotateCcw,
-  Box, TrendingUp, ShoppingCart, Heart, AlertTriangle, CreditCard,
-  Shield, Star,
+  Bot, Workflow, Search, Megaphone, Code2, MonitorSmartphone,
 };
 
 const IndustryPage = () => {
@@ -110,7 +107,7 @@ const IndustryPage = () => {
               className="text-center lg:text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-                <Bot className="w-4 h-4 text-primary" />
+                <Layers3 className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-primary">{industry.tagline}</span>
               </div>
 
@@ -151,7 +148,7 @@ const IndustryPage = () => {
             >
               <div className="relative">
                 <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
-                  <Image src={heroImage} alt={`AI assistant for ${industry.industry}`} width={600} height={500} priority className="w-full max-w-md object-cover" />
+                  <Image src={heroImage} alt={`AI and digital services for ${industry.industry}`} width={600} height={500} priority className="w-full max-w-md object-cover" />
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -160,9 +157,9 @@ const IndustryPage = () => {
                   >
                     <div className="flex items-center gap-2">
                       <MessageCircle className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-medium">Your {industry.industry} AI</span>
+                      <span className="text-sm font-medium">Your {industry.industry} digital stack</span>
                     </div>
-                    <span className="text-xs px-2 py-1 rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">24/7 Active</span>
+                    <span className="text-xs px-2 py-1 rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">Connected</span>
                   </motion.div>
                 </div>
               </div>
@@ -180,10 +177,10 @@ const IndustryPage = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
-              Empowering the {industry.industry} Sector with Advanced AI Chatbot Solutions
+              One Partner for AI, Automation &amp; Digital Growth in {industry.industry}
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              AIVized designs and delivers a custom-trained, fully managed <strong>AI chatbot for {industry.industry.toLowerCase()} businesses</strong>, giving your company a highly capable virtual receptionist that works 24/7/365. Rather than utilizing basic button-clicking trees or leaving clients waiting for next-day replies, AIVized trains a custom AI model specifically on your business parameters, FAQs, pricing systems, and service structures. From table reservations and property viewing qualification to booking client trials and answering precise product questions, our managed automation captures every lead instantly with 0ms latency. No coding, no complicated setup, and no developers needed—our UAE team handles everything.
+              AIVized helps <strong>{industry.industry.toLowerCase()} businesses across the UAE</strong> connect six services around how they actually operate: <strong>AI Systems</strong> for customer and internal assistants, <strong>Automations</strong> for repetitive workflows, <strong>SEO &amp; GEO</strong> for search and AI visibility, <strong>Digital Marketing</strong> for demand, <strong>Web Development</strong> for conversion, and <strong>Desktop Software Development</strong> for custom operational tools. We start with the bottleneck that matters most, then connect the pieces so enquiries, data, and follow-up move through one coherent system.
             </p>
           </motion.div>
         </div>
@@ -208,75 +205,6 @@ const IndustryPage = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {expandedContent.overview}
               </p>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Why AI Is Essential for This Industry */}
-      {expandedContent && (
-        <section className="section-padding">
-          <div className="container-narrow">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">The Case for AI</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-                Why {industry.industry} Businesses Need AI Chatbots
-              </h2>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                {expandedContent.whyThisIndustryNeedsAI}
-              </p>
-            </motion.div>
-            <div className="max-w-4xl mx-auto space-y-8">
-              <div className="card-premium p-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">Automated Customer Service</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {expandedContent.whyThisIndustryNeedsAI}
-                </p>
-              </div>
-              <div className="card-premium p-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">24/7 Availability Without Overtime</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {expandedContent.businessImpact}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* AI Trends and Future Outlook */}
-      {expandedContent && (
-        <section className="section-padding bg-muted/30">
-          <div className="container-narrow">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Future Outlook</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-                AI Trends Reshaping {industry.industry}
-              </h2>
-            </motion.div>
-            <div className="max-w-4xl mx-auto space-y-8">
-              <div className="card-premium p-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">The Current Landscape</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {expandedContent.aiTrends}
-                </p>
-              </div>
-              <div className="card-premium p-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">What This Means for {industry.industry} Businesses</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {expandedContent.businessImpact}
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -327,10 +255,10 @@ const IndustryPage = () => {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative order-2 lg:order-1">
               <div className="relative">
                 <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
-                  <Image src={sceneImage} alt={`AI assistant working in ${industry.industry}`} width={1200} height={675} className="w-full object-cover" />
+                  <Image src={sceneImage} alt={`AI and digital systems for ${industry.industry}`} width={1200} height={675} className="w-full object-cover" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-xl bg-card/95 border border-border/80">
-                    <Headphones className="w-5 h-5 text-primary" />
-                    <span className="text-sm font-medium">AI-powered {industry.industry.toLowerCase()} support</span>
+                    <Layers3 className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">Connected {industry.industry.toLowerCase()} systems</span>
                   </div>
                 </div>
               </div>
@@ -364,76 +292,10 @@ const IndustryPage = () => {
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section className="section-padding bg-background border-t border-border/50">
-        <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Value Comparison</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Managed AI Chatbot vs. Alternatives
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Compare the operational advantages of a dedicated AIVized managed AI assistant against traditional receptionists or DIY builders in the {industry.industry.toLowerCase()} sector.
-            </p>
-          </motion.div>
-
-          <div className="overflow-x-auto rounded-xl border border-border shadow-sm">
-            <table className="w-full text-left border-collapse min-w-[600px]">
-              <thead>
-                <tr className="bg-muted/40 border-b border-border">
-                  <th className="p-4 font-semibold text-sm">Feature</th>
-                  <th className="p-4 font-semibold text-sm text-primary">AIVized Managed AI</th>
-                  <th className="p-4 font-semibold text-sm">In-House Staff (UAE)</th>
-                  <th className="p-4 font-semibold text-sm">DIY Chatbot Tools</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border/60">
-                <tr>
-                  <td className="p-4 font-medium text-sm">Monthly Cost</td>
-                  <td className="p-4 text-sm text-primary font-semibold">Fully managed</td>
-                  <td className="p-4 text-sm">$2,500+ / month (plus taxes)</td>
-                  <td className="p-4 text-sm">$15 - $100 (plus hidden API fees)</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium text-sm">Availability</td>
-                  <td className="p-4 text-sm text-primary font-semibold">24/7/365 (0ms delay)</td>
-                  <td className="p-4 text-sm">40 hours / week (delayed response)</td>
-                  <td className="p-4 text-sm">24/7 (rigid, often breaks)</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium text-sm">Setup & Training</td>
-                  <td className="p-4 text-sm text-primary font-semibold">100% Done For You (24h)</td>
-                  <td className="p-4 text-sm">Weeks of onboarding & training</td>
-                  <td className="p-4 text-sm">Requires technical configuration</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium text-sm">Sector Training</td>
-                  <td className="p-4 text-sm text-primary font-semibold">Fully custom to your brand</td>
-                  <td className="p-4 text-sm">Requires continuous supervision</td>
-                  <td className="p-4 text-sm">Basic button-clicking prompts</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium text-sm">Optimization & Edits</td>
-                  <td className="p-4 text-sm text-primary font-semibold">Fully Managed (free updates)</td>
-                  <td className="p-4 text-sm">Requires constant supervision</td>
-                  <td className="p-4 text-sm">You must debug & fix issues</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="mt-8 text-center bg-secondary/10 p-6 rounded-xl border border-border/50 max-w-3xl mx-auto">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              <strong>The Bottom Line:</strong> For {industry.industry.toLowerCase()} businesses, missing a customer inquiry, reservation, or quote request directly reduces revenue. AIVized captures and handles all customer interactions automatically at a fraction of the cost, making it the most sensible operational decision.
-            </p>
-          </div>
-        </div>
-      </section>
+      <IndustryServicesSection
+        industryName={industry.industry}
+        description={`We connect AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development around the way ${industry.industry.toLowerCase()} businesses in the UAE actually operate. Start with one priority or connect several into a single roadmap.`}
+      />
 
       {/* Use Cases */}
       <section className="section-padding bg-muted/30">
@@ -472,15 +334,15 @@ const IndustryPage = () => {
               </motion.div>
               <div className="max-w-4xl mx-auto space-y-8">
                 <div className="card-premium p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-primary">The Modern Challenge for {industry.industry}</h3>
+                  <h3 className="font-semibold text-lg mb-3 text-primary">Where the Friction Shows Up</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {expandedContent.citySpecificChallenges}
+                    {expandedContent.whyThisIndustryNeedsAI}
                   </p>
                 </div>
                 <div className="card-premium p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-primary">How AI Changes the Equation</h3>
+                  <h3 className="font-semibold text-lg mb-3 text-primary">What Is Changing in the Market</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {expandedContent.cityBenefits}
+                    {expandedContent.aiTrends}
                   </p>
                 </div>
               </div>
@@ -503,15 +365,15 @@ const IndustryPage = () => {
               </motion.div>
               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div className="card-premium p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-primary">Revenue Growth</h3>
+                  <h3 className="font-semibold text-lg mb-3 text-primary">Measurable Business Impact</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {expandedContent.aiInCityMarket}
+                    {expandedContent.businessImpact}
                   </p>
                 </div>
                 <div className="card-premium p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-primary">Operational Efficiency</h3>
+                  <h3 className="font-semibold text-lg mb-3 text-primary">Why AIVized</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {expandedContent.cityBenefits}
+                    {expandedContent.choosingAIVized}
                   </p>
                 </div>
               </div>
@@ -531,10 +393,10 @@ const IndustryPage = () => {
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How It Works</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Deploying Your AI Employee in 4 Steps
+              A Scoped Plan in 4 Steps
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Getting started is quick and effortless. Our expert team handles all the technical aspects, from initial training to final website integration.
+              We start with the bottleneck, not a package. Every engagement follows the same clear process, from discovery to measurement.
             </p>
           </motion.div>
 
@@ -550,9 +412,9 @@ const IndustryPage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">Onboarding & Info</h3>
+              <h3 className="font-semibold text-lg mb-3">Discovery &amp; Audit</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                Get in touch and share your business details, FAQs, and link. Our team reviews your operations and designs a targeted chatbot flow.
+                We review your enquiry channels, operations, search visibility, and current tools to find where time and opportunities are being lost.
               </p>
             </motion.div>
 
@@ -565,11 +427,11 @@ const IndustryPage = () => {
             >
               <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-primary/10">02</div>
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                <Bot className="w-6 h-6 text-primary" />
+                <Search className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">Custom AI Training</h3>
+              <h3 className="font-semibold text-lg mb-3">Scoped Plan</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                We configure the AI model using state-of-the-art prompt engineering. We feed it your business rules, pricing, and tone of voice to guarantee precise answers.
+                We recommend the smallest useful set of changes across the six services, with clear deliverables, ownership, and a realistic timeline.
               </p>
             </motion.div>
 
@@ -584,9 +446,9 @@ const IndustryPage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Zap className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">One-Line Install</h3>
+              <h3 className="font-semibold text-lg mb-3">Build &amp; Integrate</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                We generate a lightweight, secure code snippet. You (or our developers, for free) paste it into your website's header. It immediately goes live.
+                We build and connect the chosen systems to your existing website, CRM, and operational tools so the work fits how your team already operates.
               </p>
             </motion.div>
 
@@ -599,35 +461,14 @@ const IndustryPage = () => {
             >
               <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-primary/10">04</div>
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-primary" />
+                <TrendingUp className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">Monitor & Refine</h3>
+              <h3 className="font-semibold text-lg mb-3">Measure &amp; Improve</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                Our active system monitors conversations, labels hot leads, and continuously retrains the AI on new questions. All edits and updates are 100% free.
+                We track the metrics that matter, refine what is underperforming, and recommend the next service when the results justify it.
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="section-padding">
-        <div className="container-narrow">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto text-center">
-            <Quote className="w-12 h-12 text-primary/30 mx-auto mb-6" />
-            <blockquote className="text-xl md:text-2xl font-serif italic text-foreground mb-6">
-              "{industry.testimonial.quote}"
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold">{industry.testimonial.author}</div>
-                <div className="text-sm text-muted-foreground">{industry.testimonial.role}, {industry.testimonial.company}</div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -636,7 +477,7 @@ const IndustryPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Common Questions About AI for {industry.industry}</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Common Questions About AI, Automation &amp; Growth for {industry.industry}</h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
@@ -659,7 +500,7 @@ const IndustryPage = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">By City</p>
               <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-                {industry.industry} AI Chatbot <span className="text-gradient">Across the UAE</span>
+                {industry.industry} AI &amp; Automation <span className="text-gradient">Across the UAE</span>
               </h2>
             </motion.div>
 

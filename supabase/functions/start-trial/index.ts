@@ -88,14 +88,14 @@ serve(async (req) => {
     await supabase.from("billing_history").insert({
       clerk_user_id: clerkUserId,
       amount: 0,
-      currency: "GBP",
+      currency: "USD",
       description: `${planName} - Free Trial Started (3 days)`,
       status: "trial",
       paid_at: new Date().toISOString(),
     });
 
     const displayName = fullName || email?.split("@")[0] || "there";
-    const trialEndDate = trialEndsAt.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+    const trialEndDate = trialEndsAt.toLocaleDateString("en-AE", { day: "numeric", month: "long", year: "numeric" });
 
     await Promise.allSettled([
       sendEmail({

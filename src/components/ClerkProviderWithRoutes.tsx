@@ -21,7 +21,7 @@ import InstagramChatbotBlog from "@/pages/blog/InstagramChatbotBlog";
 import OutsourcedChatAgentsBlog from "@/pages/blog/OutsourcedChatAgentsBlog";
 import AIServiceProvidersBlog from "@/pages/blog/AIServiceProvidersBlog";
 import AIPersonalAssistantBlog from "@/pages/blog/AIPersonalAssistantBlog";
-import AIAutomationUKBlog from "@/pages/blog/AIAutomationUKBlog";
+import AIAutomationUAEBlog from "@/views/blog/AIAutomationUAEBlog";
 import AIChatbotGuideBlog from "@/pages/blog/AIChatbotGuideBlog";
 import ReduceMissedLeadsBlog from "@/pages/blog/ReduceMissedLeadsBlog";
 import AIChatbotVsLiveChatBlog from "@/pages/blog/AIChatbotVsLiveChatBlog";
@@ -78,7 +78,7 @@ export const ClerkProviderWithRoutes = () => {
           <Route path="/blog/outsourced-chat-agents-abu-dhabi" element={<OutsourcedChatAgentsBlog />} />
           <Route path="/blog/ai-service-providers-uae" element={<AIServiceProvidersBlog />} />
           <Route path="/blog/ai-personal-assistant-near-me" element={<AIPersonalAssistantBlog />} />
-          <Route path="/blog/ai-automation-uae-business" element={<AIAutomationUKBlog />} />
+          <Route path="/blog/ai-automation-uae-business" element={<AIAutomationUAEBlog />} />
           <Route path="/blog/ai-chatbot-small-business-uae-guide" element={<AIChatbotGuideBlog />} />
           <Route path="/blog/reduce-missed-leads-website" element={<ReduceMissedLeadsBlog />} />
           <Route path="/blog/ai-chatbot-vs-live-chat-uae" element={<AIChatbotVsLiveChatBlog />} />

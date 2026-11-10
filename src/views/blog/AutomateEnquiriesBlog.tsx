@@ -120,7 +120,7 @@ const AutomateEnquiriesBlog = () => {
 
             <h3>4. Remember Context</h3>
             <p>
-              A good chatbot remembers what the customer has already told it within the conversation. If someone mentions they're looking for a 3-bedroom house in <Link href="/locations/leeds" className="text-primary hover:underline">Leeds</Link>, the chatbot shouldn't ask "What area are you interested in?" two messages later. Context awareness makes conversations feel natural.
+              A good chatbot remembers what the customer has already told it within the conversation. If someone mentions they're looking for a 3-bedroom house in <Link href="/locations/dubai" className="text-primary hover:underline">Dubai</Link>, the chatbot shouldn't ask "What area are you interested in?" two messages later. Context awareness makes conversations feel natural.
             </p>
 
             <h3>5. Follow Up Like a Human Would</h3>

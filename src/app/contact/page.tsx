@@ -1,6 +1,7 @@
 export const revalidate = 86400;
 import type { Metadata } from "next";
 import ContactPage from "@/views/ContactPage";
+import { ORG_ID, SITE_URL, WEBSITE_ID, organizationSchema, breadcrumbSchema } from "@/lib/schema";
 
 const title = "Contact Us | AIVized | Let's Build Something Better";
 const description =
@@ -24,32 +25,23 @@ const contactSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.aivized.com/contact#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Contact",
-          "item": "https://www.aivized.com/contact",
-        },
-      ],
+      ...breadcrumbSchema([
+        { name: "Home", item: SITE_URL },
+        { name: "Contact", item: `${SITE_URL}/contact` },
+      ]),
+      "@id": `${SITE_URL}/contact#breadcrumb`,
     },
     {
       "@type": "ContactPage",
-      "@id": "https://www.aivized.com/contact#contactpage",
+      "@id": `${SITE_URL}/contact#contactpage`,
       "name": "Contact AIVized",
-      "url": "https://www.aivized.com/contact",
-      "isPartOf": { "@id": "https://www.aivized.com/#website" },
-      "about": { "@id": "https://www.aivized.com/#organization" },
-      "publisher": { "@id": "https://www.aivized.com/#organization" },
+      "url": `${SITE_URL}/contact`,
+      "isPartOf": { "@id": WEBSITE_ID },
+      "about": { "@id": ORG_ID },
+      "publisher": { "@id": ORG_ID },
     },
     {
-      "@type": "Organization",
-      "@id": "https://www.aivized.com/#organization",
-      "name": "AIVized",
-      "url": "https://www.aivized.com",
+      ...organizationSchema,
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",

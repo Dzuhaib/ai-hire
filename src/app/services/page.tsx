@@ -2,13 +2,20 @@ export const revalidate = 86400;
 import type { Metadata } from "next";
 import ServicesPage from "@/views/ServicesPage";
 import { services } from "@/data/servicesData";
+import {
+  ORG_ID,
+  SITE_URL,
+  WEBSITE_ID,
+  organizationSchema,
+  breadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Services | AI Systems, Automation, SEO & Software",
   description:
     "Explore AIVized services: AI systems, business automations, SEO and GEO, digital marketing, web development, and desktop software development for UAE businesses.",
   keywords:
-    "AI systems UAE, business automation agency, SEO and GEO services, digital marketing agency UAE, web development UAE, desktop software development, AIVized services",
+    "AI systems UAE, business automation agency, SEO and GEO services, digital marketing agency UAE, web development UAE, desktop software development, AIVized services, AI automation agency Dubai, AI automation services, AI chatbot agency Dubai, AI services Dubai, AI automation company in Dubai, Business Automation Services, Automation Services, AI visibility services, AI chatbot services Dubai, AI automation services in Dubai",
   alternates: { canonical: "https://www.aivized.com/services" },
   openGraph: {
     title: "Services | AI Systems, Automation, SEO & Software | AIVized",
@@ -26,49 +33,39 @@ const servicesSchema = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://www.aivized.com/services",
-      "url": "https://www.aivized.com/services",
+      "@id": `${SITE_URL}/services#collectionpage`,
+      "url": `${SITE_URL}/services`,
       "name": "AIVized Services",
       "description":
         "AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software development for UAE businesses.",
-      "isPartOf": { "@id": "https://www.aivized.com/#website" },
-      "about": { "@id": "https://www.aivized.com/#organization" }
+      "isPartOf": { "@id": WEBSITE_ID },
+      "about": { "@id": ORG_ID },
+      "mainEntity": { "@id": `${SITE_URL}/services#catalog` }
     },
-    {
-      "@type": "Organization",
-      "@id": "https://www.aivized.com/#organization",
-      "name": "AIVized",
-      "url": "https://www.aivized.com",
-      "email": "info@aivized.com",
-      "description":
-        "AIVized is a UAE AI and digital agency delivering AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software.",
-      "areaServed": { "@type": "Country", "name": "United Arab Emirates" }
-    },
+    organizationSchema,
     {
       "@type": "OfferCatalog",
-      "@id": "https://www.aivized.com/services#catalog",
+      "@id": `${SITE_URL}/services#catalog`,
       "name": "AIVized Services",
       "itemListElement": services.map((service, index) => ({
         "@type": "Offer",
         "position": index + 1,
         "itemOffered": {
           "@type": "Service",
+          "@id": `${SITE_URL}/services#${service.slug}`,
           "name": service.title,
           "description": service.description,
           "serviceType": service.title,
-          "provider": { "@id": "https://www.aivized.com/#organization" },
+          "provider": { "@id": ORG_ID },
           "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
-          "url": `https://www.aivized.com/services#${service.slug}`
+          "url": `${SITE_URL}/services#${service.slug}`
         }
       }))
     },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.aivized.com/services" }
-      ]
-    }
+    breadcrumbSchema([
+      { name: "Home", item: SITE_URL },
+      { name: "Services", item: `${SITE_URL}/services` },
+    ])
   ]
 };
 

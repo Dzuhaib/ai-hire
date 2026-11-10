@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { uaeLocations } from "@/data/locationData";
+import { services } from "@/data/servicesData";
 import { industries } from "@/data/industryData";
 import { allIndustryCities } from "@/data/industryCityData";
 import { cityBlogPosts } from "@/data/cityBlogData";
@@ -85,11 +86,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: locationDataDate,
   }));
 
+  const serviceLocationPages: MetadataRoute.Sitemap = services.flatMap((service) =>
+    uaeLocations.map((location) => ({
+      url: `${BASE_URL}/services/${service.slug}/${location.slug}`,
+      lastModified: locationDataDate,
+    }))
+  );
+
+  const industryServicePages: MetadataRoute.Sitemap = Object.values(industries).flatMap((industry) =>
+    services.map((service) => ({
+      url: `${BASE_URL}/industries/${industry.slug}/services/${service.slug}`,
+      lastModified: industryPageDate,
+    }))
+  );
+
+  const industryServiceCityPages: MetadataRoute.Sitemap = Object.values(industries).flatMap((industry) =>
+    services.flatMap((service) =>
+      uaeLocations.map((location) => ({
+        url: `${BASE_URL}/industries/${industry.slug}/services/${service.slug}/${location.slug}`,
+        lastModified: industryCityDate,
+      }))
+    )
+  );
+
   return [
     ...corePages,
     ...industryPages,
     ...industryCityPages,
     ...locationPages,
+    ...serviceLocationPages,
+    ...industryServicePages,
+    ...industryServiceCityPages,
     ...staticBlogPages,
     ...cityBlogPages,
   ];

@@ -44,7 +44,7 @@ serve(async (req) => {
         await supabase.from("billing_history").insert({
           clerk_user_id: trial.clerk_user_id,
           amount: 0,
-          currency: "GBP",
+          currency: "USD",
           description: `${trial.plan_name} - Free Trial Ended`,
           status: "expired",
           paid_at: trial.trial_ends_at,

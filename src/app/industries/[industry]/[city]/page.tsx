@@ -4,6 +4,14 @@ import IndustryCityPage from "@/views/IndustryCityPage";
 import { allIndustries, getIndustryBySlug } from "@/data/industryData";
 import { uaeLocations } from "@/data/locationData";
 import { getIndustryCityData } from "@/data/industryCityData";
+import {
+  ORG_ID,
+  SITE_URL,
+  breadcrumbSchema,
+  faqPageSchema,
+  localBusinessSchema,
+  serviceSchema,
+} from "@/lib/schema";
 
 export async function generateStaticParams() {
   const params: { industry: string; city: string }[] = [];
@@ -23,8 +31,8 @@ export async function generateMetadata({
   const { industry, city } = await params;
   const data = getIndustryCityData(industry, city);
   // Use pre-crafted unique metadata from data if available; fallback to template
-  const title = data?.metaTitle ?? `AI Agency for ${industry} in ${city} | AI Chatbot Services`;
-  const description = data?.metaDescription ?? `AIVized is an AI agency serving ${industry} businesses in ${city}. Fully managed AI chatbot and automation.`;
+  const title = data?.metaTitle ?? `AI Agency for ${industry} in ${city} | AI & Automation Services`;
+  const description = data?.metaDescription ?? `AIVized is an AI agency serving ${industry} businesses in ${city}. Fully managed AI and automation services for enquiries, operations, and growth.`;
   const keywords = data?.metaKeywords;
   return {
     title,
@@ -51,42 +59,58 @@ export default async function Page({
   const cityData = getIndustryCityData(industry, city);
   const parentIndustry = getIndustryBySlug(industry);
 
+  const url = `${SITE_URL}/industries/${industry}/${city}`;
+  const cityLocation = uaeLocations.find((loc) => loc.slug === city);
+
   const schema =
     cityData && parentIndustry
       ? {
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-                { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
-                { "@type": "ListItem", "position": 3, "name": parentIndustry.industry, "item": `https://www.aivized.com/industries/${industry}` },
-                { "@type": "ListItem", "position": 4, "name": cityData.cityName, "item": `https://www.aivized.com/industries/${industry}/${city}` },
-              ],
+              ...breadcrumbSchema([
+                { name: "Home", item: SITE_URL },
+                { name: "Industries", item: `${SITE_URL}/industries` },
+                { name: parentIndustry.industry, item: `${SITE_URL}/industries/${industry}` },
+                { name: cityData.cityName, item: url },
+              ]),
+              "@id": `${url}#breadcrumb`,
             },
             {
-              "@type": "Service",
-              "name": `AI Agency for ${parentIndustry.industry} in ${cityData.cityName} | AIVized`,
-              "description": `Fully managed AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation.`,
-              "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
-              "serviceType": "AI Agency Services",
-              "areaServed": { "@type": "City", "name": cityData.cityName },
-              "url": `https://www.aivized.com/industries/${industry}/${city}`
+              ...serviceSchema({
+                name: `AI Agency for ${parentIndustry.industry} in ${cityData.cityName} | AIVized`,
+                description: `Fully managed AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. 24/7 lead capture and customer enquiry automation.`,
+                url,
+                serviceType: `AI Agency Services for ${parentIndustry.industry}`,
+                areaServed: { "@type": "City", "name": cityData.cityName },
+              }),
+              "provider": { "@id": ORG_ID },
             },
-            {
-              "@type": "LocalBusiness",
-              "name": `AIVized AI Agency - ${parentIndustry.industry} in ${cityData.cityName}`,
-              "url": `https://www.aivized.com/industries/${industry}/${city}`,
-              "description": `AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
-              "email": "info@aivized.com",
-              "priceRange": "Custom",
-              "areaServed": {
-                "@type": "City",
-                "name": cityData.cityName,
-                "containedInPlace": { "@type": "Country", "name": "United Arab Emirates" }
-              }
-            },
+            cityLocation
+              ? localBusinessSchema({
+                  name: `AIVized AI Agency - ${parentIndustry.industry} in ${cityData.cityName}`,
+                  description: `AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
+                  url,
+                  city: cityData.cityName,
+                  region: cityLocation.region,
+                  lat: cityLocation.coordinates.lat,
+                  lng: cityLocation.coordinates.lng,
+                })
+              : {
+                  "@type": "LocalBusiness",
+                  "@id": `${url}#localbusiness`,
+                  "name": `AIVized AI Agency - ${parentIndustry.industry} in ${cityData.cityName}`,
+                  "url": url,
+                  "description": `AI agency services for ${parentIndustry.industry.toLowerCase()} businesses in ${cityData.cityName}. Installed and maintained by AIVized.`,
+                  "email": "info@aivized.com",
+                  "priceRange": "Custom",
+                  "areaServed": {
+                    "@type": "City",
+                    "name": cityData.cityName,
+                    "containedInPlace": { "@type": "Country", "name": "United Arab Emirates" }
+                  }
+                },
+            faqPageSchema(cityData.faqs, `${url}#faq`),
           ],
         }
       : null;

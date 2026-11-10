@@ -35,7 +35,7 @@ const handler = async (req: Request): Promise<Response> => {
     // and return the checkout URL with parameters
     
     // Build the signature source string
-    const currency = "GBP";
+    const currency = "USD";
     const signatureSource = `${merchantCode}${orderRef}${priceAmount.toFixed(2)}${currency}`;
     
     // Create HMAC-SHA256 signature

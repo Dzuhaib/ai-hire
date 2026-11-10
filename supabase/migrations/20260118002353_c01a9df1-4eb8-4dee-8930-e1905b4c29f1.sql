@@ -31,7 +31,7 @@ CREATE TABLE public.billing_history (
   clerk_user_id TEXT NOT NULL REFERENCES public.profiles(clerk_user_id) ON DELETE CASCADE,
   subscription_id UUID REFERENCES public.subscriptions(id) ON DELETE SET NULL,
   amount DECIMAL(10,2) NOT NULL,
-  currency TEXT NOT NULL DEFAULT 'GBP',
+  currency TEXT NOT NULL DEFAULT 'USD',
   description TEXT NOT NULL,
   status TEXT NOT NULL DEFAULT 'paid' CHECK (status IN ('paid', 'pending', 'failed', 'refunded')),
   twocheckout_ref TEXT,

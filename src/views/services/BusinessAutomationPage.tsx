@@ -6,29 +6,7 @@ import { ArrowLeft, CheckCircle2, Zap, Mail, Bell, UserCheck, RefreshCw, Message
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    question: "What business processes can AIVized automate?",
-    answer: "AIVized automates the repetitive, rule-based tasks that consume your team's time: lead follow-up sequences, appointment reminders, customer onboarding messages, booking confirmations, review request emails, and internal notifications when a new enquiry arrives. If a task happens the same way every time, it can likely be automated.",
-  },
-  {
-    question: "Do I need technical skills to set up business process automation?",
-    answer: "No. AIVized handles the full setup, identifying which workflows to automate, connecting the tools, configuring the triggers, and testing before go-live. You describe how your business currently works and we build the automation around it.",
-  },
-  {
-    question: "How is business process automation different from your AI chatbot service?",
-    answer: "The AI chatbot focuses on customer-facing conversations, answering enquiries on your website or WhatsApp in real time. Business process automation handles the behind-the-scenes workflows: what happens after a lead arrives, how customers are followed up, and how your team is notified. The two services complement each other.",
-  },
-  {
-    question: "How long does it take to get automation running?",
-    answer: "Most automations are live within three to five working days of your initial briefing. Simple workflows like appointment reminders or lead notifications can be set up within 24 hours. We confirm timelines after understanding your specific requirements.",
-  },
-  {
-    question: "How do I get started with business process automation?",
-    answer: "Email us at info@aivized.com with a description of the repetitive tasks you want to automate. We will schedule a brief call or email exchange to understand your workflow, then confirm scope and timelines.",
-  },
-];
+import { businessAutomationFaqs as faqs } from "@/data/serviceFaqs";
 
 const BusinessAutomationPage = () => {
   return (
@@ -62,7 +40,7 @@ const BusinessAutomationPage = () => {
               Business Process Automation for UAE Small Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
-              AIVized automates the repetitive workflows that drain your team's time: lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. We handle the setup and keep it running so you don't have to.
+              AIVized automates the repetitive workflows that drain your team&apos;s time: lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. We handle the setup and keep it running so you don&apos;t have to.
             </p>
           </motion.div>
 

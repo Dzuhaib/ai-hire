@@ -98,7 +98,7 @@ Deno.serve(async (req) => {
     await supabase.from("billing_history").insert({
       clerk_user_id: clerkUserId,
       amount: priceAmount,
-      currency: "GBP",
+      currency: "USD",
       description: `${planName} - Monthly subscription`,
       status: "paid",
       twocheckout_ref: orderRef ?? null,

@@ -65,8 +65,8 @@
 ### Title Tags — ✅ Fixed
 All page titles now correctly append "| AIVized" exactly once via the layout template:
 - Homepage: `Managed AI Chatbot for Small Business UAE | AIVized From $29/mo` (default title, no template applied)
-- Location pages: `AI Agency London | AI Chatbot & Automation Services` → template → `... | AIVized` ✅
-- Industry+City pages: `AI Agency for Restaurants in London | AI Chatbot Services` → template → `... | AIVized` ✅
+- Location pages: `AI Agency Dubai | AI Chatbot & Automation Services` → template → `... | AIVized` ✅
+- Industry+City pages: `AI Agency for Restaurants in Dubai | AI Chatbot Services` → template → `... | AIVized` ✅
 - Blog, pricing, industries: Clean single brand suffix ✅
 
 ### Location Pages — 1900+ Words Each

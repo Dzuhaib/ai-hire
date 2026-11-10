@@ -1,6 +1,6 @@
 export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
-import AIAutomationUKBlog from "@/views/blog/AIAutomationUKBlog";
+import AIAutomationUAEBlog from "@/views/blog/AIAutomationUAEBlog";
 import { blogPostingSchema, breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { getBlogBySlug } from "@/data/blogData";
 
@@ -26,6 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-automation-uae-hero.png"}`, width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/blog/ai-automation-uae-hero.png"}`] },
+    keywords: post?.keywords ?? [],
   };
 }
 
@@ -52,7 +53,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <AIAutomationUKBlog />
+      <AIAutomationUAEBlog />
     </>
   );
 }

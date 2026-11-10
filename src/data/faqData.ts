@@ -30,6 +30,11 @@ export const faqs: FaqItem[] = [
       "Pricing depends on scope. We provide a fixed written quote after discovery, with no obligation. For ongoing work, monthly retainers are available. Book a consultation to discuss your budget and requirements.",
   },
   {
+    question: "How much does an AI chatbot cost in Dubai?",
+    answer:
+      "Chatbot pricing depends on scope, including the channels you want covered (website, WhatsApp, or Instagram), the depth of custom training, and ongoing maintenance. We provide a fixed written quote after discovery and offer optional managed support with monthly retainers. Book a consultation to get a clear, scoped quote for your business.",
+  },
+  {
     question: "Do we own the website, code, and data?",
     answer:
       "Yes. You own the accounts, data, and intellectual property we create for you. We set projects up so you are not locked into us, and we document everything for a clean handover if you ever want to take things in-house.",

@@ -210,7 +210,7 @@ Deno.serve(async (req) => {
         await supabase.from('billing_history').insert({
           clerk_user_id: subscription.clerk_user_id,
           amount: subscription.plan_price,
-          currency: 'GBP',
+          currency: 'USD',
           description: `${subscription.plan_name} - Monthly subscription (WhatsApp payment)`,
           status: 'paid',
           paid_at: new Date().toISOString(),
@@ -228,12 +228,12 @@ Deno.serve(async (req) => {
             sendEmail({
               to: ADMIN_EMAIL,
               subject: `Subscription Activated - ${userProfile.full_name || "Unknown"}`,
-              html: `<h2>Subscription Activated</h2><p><strong>${userProfile.full_name || "Unknown"}</strong> (${userProfile.email}) subscription activated.</p><p><strong>Plan:</strong> ${subscription.plan_name}<br><strong>Amount:</strong> £${subscription.plan_price}/month</p>`,
+              html: `<h2>Subscription Activated</h2><p><strong>${userProfile.full_name || "Unknown"}</strong> (${userProfile.email}) subscription activated.</p><p><strong>Plan:</strong> ${subscription.plan_name}<br><strong>Amount:</strong> $${subscription.plan_price}/month</p>`,
             }),
             sendEmail({
               to: userProfile.email,
               subject: `Subscription Confirmed - ${subscription.plan_name}`,
-              html: `<h2>Subscription Confirmed</h2><p>Hi ${displayName},</p><p>Your <strong>${subscription.plan_name}</strong> subscription (£${subscription.plan_price}/month) is now active.</p><p>Thank you for choosing aivized!</p><p><a href="https://www.aivized.com/dashboard" style="display:inline-block;padding:12px 24px;background-color:#D95A2B;color:#fff;text-decoration:none;border-radius:8px;">Go to Dashboard</a></p>`,
+              html: `<h2>Subscription Confirmed</h2><p>Hi ${displayName},</p><p>Your <strong>${subscription.plan_name}</strong> subscription ($${subscription.plan_price}/month) is now active.</p><p>Thank you for choosing aivized!</p><p><a href="https://www.aivized.com/dashboard" style="display:inline-block;padding:12px 24px;background-color:#D95A2B;color:#fff;text-decoration:none;border-radius:8px;">Go to Dashboard</a></p>`,
             }),
           ]);
         }

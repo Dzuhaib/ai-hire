@@ -128,7 +128,12 @@ export const blogPosts: BlogPost[] = [
       "ai business automation uae",
       "ai chatbot for small business uae",
       "managed ai service uae",
-      "automate customer enquiries uae"
+      "automate customer enquiries uae",
+      "ai automation agency dubai",
+      "ai automation cost uae",
+      "ai automation services uae",
+      "business automation services",
+      "crm automation services"
     ],
     heroImage: "/assets/blog/ai-automation-uae-hero.png"
   },
@@ -145,7 +150,9 @@ export const blogPosts: BlogPost[] = [
       "ai chatbot for small business uae",
       "whatsapp chatbot uae",
       "managed ai chatbot service",
-      "best chatbot for small business uae"
+      "best chatbot for small business uae",
+      "ai chatbot cost dubai",
+      "ai chatbot agency dubai"
     ],
     heroImage: "/assets/blog/ai-chatbot-guide-hero.png"
   },
@@ -182,7 +189,8 @@ export const blogPosts: BlogPost[] = [
       "chatbot or live chat small business",
       "AI chatbot cost comparison UAE",
       "live chat alternative UAE",
-      "automated customer support vs human"
+      "automated customer support vs human",
+      "ai chatbot cost dubai"
     ],
     heroImage: "/assets/blog/ai-chatbot-vs-live-chat-hero.png"
   },
@@ -218,7 +226,8 @@ export const blogPosts: BlogPost[] = [
       "ai agency dubai uae",
       "managed ai chatbot dubai",
       "ai automation dubai",
-      "ai services dubai"
+      "ai services dubai",
+      "ai automation agency dubai"
     ],
     heroImage: "/assets/locations/ai-support.png"
   }

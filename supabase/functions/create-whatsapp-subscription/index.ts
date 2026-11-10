@@ -64,7 +64,7 @@ serve(async (req) => {
     await supabase.from("billing_history").insert({
       clerk_user_id: clerkUserId,
       amount: priceAmount,
-      currency: "GBP",
+      currency: "USD",
       description: `${planName} - Payment Request via WhatsApp (Awaiting Approval)`,
       status: "pending",
       paid_at: new Date().toISOString(),
@@ -80,7 +80,7 @@ serve(async (req) => {
       await sendEmail({
         to: ADMIN_EMAIL,
         subject: `Payment Request - ${profile.full_name || "Unknown"}`,
-        html: `<h2>Payment Request</h2><p><strong>${profile.full_name || "Unknown"}</strong> (${profile.email}) has requested to pay for <strong>${planName}</strong> (£${priceAmount}/month) via WhatsApp.</p><p><a href="https://www.aivized.com/admin" style="display:inline-block;padding:12px 24px;background-color:#D95A2B;color:#fff;text-decoration:none;border-radius:8px;">Approve in Admin</a></p>`,
+        html: `<h2>Payment Request</h2><p><strong>${profile.full_name || "Unknown"}</strong> (${profile.email}) has requested to pay for <strong>${planName}</strong> ($${priceAmount}/month) via WhatsApp.</p><p><a href="https://www.aivized.com/admin" style="display:inline-block;padding:12px 24px;background-color:#D95A2B;color:#fff;text-decoration:none;border-radius:8px;">Approve in Admin</a></p>`,
       });
     }
 

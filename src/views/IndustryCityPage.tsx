@@ -18,7 +18,7 @@ import { getIndustryCityExpandedContent } from "@/data/industryCityContent";
 import NotFound from "./NotFound";
 import {
   Bot, ArrowRight, Zap, CheckCircle, Users, Shield, Clock,
-  MessageCircle, MapPin, ChevronRight, BookOpen
+  MapPin, ChevronRight, BookOpen
 } from "lucide-react";
 
 // Industry hero images
@@ -166,10 +166,10 @@ const IndustryCityPage = () => {
                     className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-card/95 border border-border/80"
                   >
                     <div className="flex items-center gap-2">
-                      <MessageCircle className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-medium">{cityData.cityName} {parentIndustry.industry} AI</span>
+                      <Bot className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium">{cityData.cityName} {parentIndustry.industry} AI stack</span>
                     </div>
-                    <span className="text-xs px-2 py-1 rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">24/7 Active</span>
+                    <span className="text-xs px-2 py-1 rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">Connected</span>
                   </motion.div>
                 </div>
               </div>
@@ -187,10 +187,12 @@ const IndustryCityPage = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
-              Empowering {cityData.cityName} {parentIndustry.industry} with Premium AI Chatbot Solutions
+              Empowering {cityData.cityName} {parentIndustry.industry} with Premium AI &amp; Growth Solutions
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              AIVized designs and delivers a custom-trained, fully managed <strong>AI chatbot for {parentIndustry.industry.toLowerCase()} in {cityData.cityName}</strong>, giving your business a highly capable virtual receptionist that works 24/7/365. Rather than utilizing basic button-clicking trees or leaving clients waiting for next-day replies, AIVized trains a custom AI model specifically on your business parameters, FAQs, pricing systems, and service structures. From table reservations and property viewing qualification to booking client trials and answering precise product questions, our managed automation captures every lead instantly with 0ms latency. No coding, no complicated setup, and no developers needed—our UAE team handles everything.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
+              AIVized designs and delivers a custom-trained, fully managed <strong>AI system for {parentIndustry.industry.toLowerCase()} in {cityData.cityName}</strong>, giving your business a highly capable virtual receptionist that works 24/7/365. Rather than utilizing basic button-clicking trees or leaving clients waiting for next-day replies, AIVized trains a custom AI model specifically on your business parameters, FAQs, pricing systems, and service structures. From table reservations and property viewing qualification to booking client trials and answering precise product questions, our managed automation captures every lead instantly with 0ms latency. No coding, no complicated setup, and no developers needed — our UAE team handles everything.
+
+              From that foundation we connect the wider stack — <strong>Automations</strong> for repeatable workflows, <strong>SEO &amp; GEO</strong> for search and AI visibility, <strong>Digital Marketing</strong> for demand, <strong>Web Development</strong> for conversion, and <strong>Desktop Software</strong> for operational tools. That means the AI assistant, follow-up workflows, content, campaigns, and reporting work together instead of operating as disconnected pieces.
             </p>
           </motion.div>
         </div>
@@ -217,7 +219,7 @@ const IndustryCityPage = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Key Features</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              What Your {cityData.cityName} AI Chatbot Does
+              What Your {cityData.cityName} {parentIndustry.industry} Business Gets
             </h2>
           </motion.div>
 
@@ -247,10 +249,10 @@ const IndustryCityPage = () => {
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Value Comparison</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Managed AI Chatbot vs. Alternatives
+              Managed AI &amp; Automation vs. Alternatives
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Compare the operational advantages of a dedicated AIVized managed AI assistant against traditional receptionists or DIY builders in the {parentIndustry.industry.toLowerCase()} sector.
+              Compare the operational advantages of AIVized&apos;s managed AI and automation stack against traditional in-house staff or DIY alternatives in the {parentIndustry.industry.toLowerCase()} sector.
             </p>
           </motion.div>
 
@@ -261,7 +263,7 @@ const IndustryCityPage = () => {
                   <th className="p-4 font-semibold text-sm">Feature</th>
                   <th className="p-4 font-semibold text-sm text-primary">AIVized Managed AI</th>
                   <th className="p-4 font-semibold text-sm">In-House Staff (UAE)</th>
-                  <th className="p-4 font-semibold text-sm">DIY Chatbot Tools</th>
+                  <th className="p-4 font-semibold text-sm">DIY AI &amp; Automation Tools</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border/60">
@@ -301,7 +303,7 @@ const IndustryCityPage = () => {
 
           <div className="mt-8 text-center bg-secondary/10 p-6 rounded-xl border border-border/50 max-w-3xl mx-auto">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              <strong>The Bottom Line:</strong> In {cityData.cityName}, {parentIndustry.industry.toLowerCase()} businesses face high customer expectations and fierce competition. Missing an out-of-hours booking request, viewing inquiry, or service question directly impacts your weekly covers, property listings, or retail sales. AIVized captures and handles all of this automatically at a fraction of the cost, making it the most sensible operational decision.
+              <strong>The Bottom Line:</strong> In {cityData.cityName}, {parentIndustry.industry.toLowerCase()} businesses face high customer expectations and fierce competition. Missing an out-of-hours booking request, viewing inquiry, or service question directly impacts your weekly covers, property listings, or retail sales. AIVized connects AI, automation, search, marketing, and software to capture and handle enquiries automatically at a fraction of the cost, making it the most sensible operational decision.
             </p>
           </div>
         </div>
@@ -454,7 +456,7 @@ const IndustryCityPage = () => {
                   Read More
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Learn more about how a 24/7 AI chatbot can help your {parentIndustry.industry.toLowerCase()} business in {cityData.cityName}.
+                  Learn more about how our AI and automation services can help your {parentIndustry.industry.toLowerCase()} business in {cityData.cityName}.
                 </p>
                 <Link
                   href={`/blog/website-chatbot-24-7-${citySlug}`}
@@ -480,10 +482,10 @@ const IndustryCityPage = () => {
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How It Works</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Deploying Your AI Employee in 4 Steps
+              Delivering Your AI &amp; Automation Stack in 4 Steps
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Getting started is quick and effortless. Our expert team handles all the technical aspects, from initial training to final website integration.
+              Getting started is quick and effortless. Our expert team handles the technical aspects, from scoping to build, launch, and integration.
             </p>
           </motion.div>
 
@@ -499,9 +501,9 @@ const IndustryCityPage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">Onboarding & Info</h3>
+              <h3 className="font-semibold text-lg mb-3">Discovery &amp; Scope</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                Get in touch and share your business details, FAQs, and link. Our team reviews your operations and designs a targeted chatbot flow.
+                Get in touch and share your business details and goals. Our team reviews your operations and scopes the right mix of AI, automation, search, marketing, or software.
               </p>
             </motion.div>
 
@@ -516,9 +518,9 @@ const IndustryCityPage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Bot className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">Custom AI Training</h3>
+              <h3 className="font-semibold text-lg mb-3">Design &amp; Build</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                We configure the AI model using state-of-the-art prompt engineering. We feed it your business rules, pricing, and tone of voice to guarantee precise answers.
+                We design and build the AI system, automations, or custom tools around your actual workflows, rules, pricing, and tone of voice.
               </p>
             </motion.div>
 
@@ -533,9 +535,9 @@ const IndustryCityPage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Zap className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">One-Line Install</h3>
+              <h3 className="font-semibold text-lg mb-3">Launch &amp; Connect</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                We generate a lightweight, secure code snippet. You (or our developers, for free) paste it into your website's header. It immediately goes live.
+                We generate and configure the launch plan, then connect the solution with your website, CRM, marketing, or reporting systems. It goes live as part of a tested workflow.
               </p>
             </motion.div>
 
@@ -550,9 +552,9 @@ const IndustryCityPage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">Monitor & Refine</h3>
+              <h3 className="font-semibold text-lg mb-3">Measure &amp; Improve</h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                Our active system monitors conversations, labels hot leads, and continuously retrains the AI on new questions. All edits and updates are 100% free.
+                Our system monitors performance, measures results, and improves the setup over time. All updates and refinements are included.
               </p>
             </motion.div>
           </div>
@@ -565,7 +567,7 @@ const IndustryCityPage = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              Common Questions About AI Chatbots for {parentIndustry.industry} in {cityData.cityName}
+              Common Questions About AI &amp; Automation for {parentIndustry.industry} in {cityData.cityName}
             </h2>
           </motion.div>
 
@@ -592,7 +594,7 @@ const IndustryCityPage = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">More Cities</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold">
-              {parentIndustry.industry} AI Chatbot in <span className="text-gradient">Other UAE Cities</span>
+              {parentIndustry.industry} AI &amp; Automation in <span className="text-gradient">Other UAE Cities</span>
             </h2>
           </motion.div>
 
@@ -615,10 +617,10 @@ const IndustryCityPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
-              Ready to Get Your {cityData.cityName} {parentIndustry.industry} AI Chatbot?
+              Ready to Get Your {cityData.cityName} {parentIndustry.industry} AI &amp; Growth Solution?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Get in touch, share your website details, and we'll install your AI employee within 24 hours.
+              Get in touch, share your business details, and we&apos;ll scope your AI and automation plan together.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Link href="/contact">
@@ -635,7 +637,7 @@ const IndustryCityPage = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />Fully managed</span>
               <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />No long-term contracts</span>
-              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />24-hour setup</span>
+              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />Scoped delivery</span>
             </div>
           </motion.div>
         </div>

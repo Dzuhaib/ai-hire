@@ -4,6 +4,13 @@ import LocationPage from "@/views/LocationPage";
 import { uaeLocations, getLocationBySlug } from "@/data/locationData";
 import { getLocationFaqs } from "@/data/locationContent";
 import { services } from "@/data/servicesData";
+import {
+  ORG_ID,
+  SITE_URL,
+  breadcrumbSchema,
+  faqPageSchema,
+  localBusinessSchema,
+} from "@/lib/schema";
 
 export async function generateStaticParams() {
   return uaeLocations.map((loc) => ({ city: loc.slug }));
@@ -45,33 +52,32 @@ export default async function Page({
   const { city } = await params;
   const location = getLocationBySlug(city);
 
+  const url = `${SITE_URL}/locations/${location?.slug}`;
+
   const schema = location
     ? {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "BreadcrumbList",
-            "@id": `https://www.aivized.com/locations/${location.slug}#breadcrumb`,
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-              { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.aivized.com/locations" },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": location.city,
-                "item": `https://www.aivized.com/locations/${location.slug}`,
-              },
-            ],
+            ...breadcrumbSchema([
+              { name: "Home", item: SITE_URL },
+              { name: "Locations", item: `${SITE_URL}/locations` },
+              { name: location.city, item: url },
+            ]),
+            "@id": `${url}#breadcrumb`,
           },
           {
-            "@type": "ProfessionalService",
-            "@id": `https://www.aivized.com/locations/${location.slug}#service`,
-            "name": `AIVized - AI, Automation & Digital Services in ${location.city}`,
-            "description": `AIVized provides AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for businesses in ${location.city}, ${location.region}.`,
-            "url": `https://www.aivized.com/locations/${location.slug}`,
-            "email": "info@aivized.com",
-            "areaServed": { "@type": "City", "name": location.city },
-            "provider": { "@id": "https://www.aivized.com/#organization" },
+            ...localBusinessSchema({
+              type: "ProfessionalService",
+              name: `AIVized - AI, Automation & Digital Services in ${location.city}`,
+              description: `AIVized provides AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for businesses in ${location.city}, ${location.region}.`,
+              url,
+              city: location.city,
+              region: location.region,
+              lat: location.coordinates.lat,
+              lng: location.coordinates.lng,
+            }),
+            "@id": `${url}#service`,
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": `Services available in ${location.city}`,
@@ -83,22 +89,14 @@ export default async function Page({
                   "name": service.title,
                   "description": service.description,
                   "serviceType": service.title,
-                  "provider": { "@id": "https://www.aivized.com/#organization" },
+                  "provider": { "@id": ORG_ID },
                   "areaServed": { "@type": "City", "name": location.city },
-                  "url": `https://www.aivized.com/services#${service.slug}`,
+                  "url": `${SITE_URL}/services#${service.slug}`,
                 },
               })),
             },
           },
-          {
-            "@type": "FAQPage",
-            "@id": `https://www.aivized.com/locations/${location.slug}#faq`,
-            "mainEntity": getLocationFaqs(location.city).map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
-            })),
-          },
+          faqPageSchema(getLocationFaqs(location.city), `${url}#faq`),
         ],
       }
     : null;

@@ -4,11 +4,12 @@ import Image from 'next/image';
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Layers3, ArrowRight, Bot, Users, Clock, Shield } from "lucide-react";
+import { Layers3, ArrowRight, Layers, MapPin, Workflow } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import IndustryServicesSection from "@/components/IndustryServicesSection";
 
 import { allIndustries } from "@/data/industryData";
 
@@ -53,29 +54,29 @@ const IndustriesPage = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
               <Layers3 className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Industry-Trained AI</span>
+              <span className="text-sm font-medium text-primary">Industry Solutions</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              AI Chatbot Solutions for Every UAE Industry
+              AI, Automation &amp; Digital Growth for Every UAE Industry
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Choose an industry solution built around your customers’ questions and your team’s workflow, and launch in 24 hours.
+              Six connected services, scoped around how your industry actually operates: AI Systems, Automations, SEO &amp; GEO, Digital Marketing, Web Development, and Desktop Software Development.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-primary" />
-                Industry-trained flows
+                <Layers className="w-4 h-4 text-primary" />
+                Six connected services
               </span>
               <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
-                24/7 availability
+                <Workflow className="w-4 h-4 text-primary" />
+                Built around your workflows
               </span>
               <span className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-primary" />
-                UAE data protection
+                <MapPin className="w-4 h-4 text-primary" />
+                UAE-based team
               </span>
             </div>
           </motion.div>
@@ -92,7 +93,7 @@ const IndustriesPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Our Industries</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Lead Generation Chatbot by <span className="text-gradient">Industry</span></h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Digital Solutions by <span className="text-gradient">Industry</span></h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -111,7 +112,7 @@ const IndustriesPage = () => {
                 >
                   <div className="relative h-full card-premium overflow-hidden transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[var(--shadow-lift)]">
                     <div className="relative h-48 overflow-hidden">
-                      <Image src={industryImages[industry.slug] || aiRestaurantHero} alt={`AI chatbot for ${industry.industry} businesses`} width={600} height={400} className="w-full object-cover" />
+                      <Image src={industryImages[industry.slug] || aiRestaurantHero} alt={`AI and digital services for ${industry.industry} businesses`} width={600} height={400} className="w-full object-cover" />
                       <div className="absolute bottom-3 left-3 flex items-center gap-2">
                         <span className="px-2 py-1 text-xs rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">
                           {industry.tagline}
@@ -128,7 +129,7 @@ const IndustriesPage = () => {
                       </div>
                       <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{industry.description}</p>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-primary font-semibold">Fully managed</span> • 24-hour setup
+                        <span className="text-primary font-semibold">Six connected services</span> • Scoped delivery
                       </p>
                     </div>
                   </div>
@@ -138,6 +139,12 @@ const IndustriesPage = () => {
           </div>
         </div>
       </section>
+
+      <IndustryServicesSection
+        eyebrow="What We Do"
+        title="Six Connected Services, One Roadmap"
+        description="Whatever your industry, we can help with AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development. Start with the priority that removes the biggest bottleneck, then expand."
+      />
 
       {/* CTA */}
       <section className="section-padding bg-muted/30">
@@ -149,13 +156,13 @@ const IndustriesPage = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-              <Bot className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Ready to launch?</span>
+              <Layers className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Ready to scope?</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Get started and we&apos;ll set it up</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Tell us where the friction is</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Get in touch, share your website details securely, and we&apos;ll install your AI employee within 24 hours.
+              Share the enquiries, processes, or visibility gaps slowing your team down. We&apos;ll review them and come back with a scoped plan across the services that fit.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -25,6 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: `${SITE_URL}${post?.heroImage ?? "/assets/locations/ai-support.png"}`, width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image", images: [`${SITE_URL}${post?.heroImage ?? "/assets/locations/ai-support.png"}`] },
+    keywords: post?.keywords ?? [],
   };
 }
 

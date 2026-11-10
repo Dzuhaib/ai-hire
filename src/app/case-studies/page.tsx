@@ -2,6 +2,7 @@ export const revalidate = 86400;
 import type { Metadata } from "next";
 import CaseStudiesPage from "@/views/CaseStudiesPage";
 import { engagementExamples } from "@/data/caseStudiesData";
+import { ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbSchema } from "@/lib/schema";
 
 const title = "Example Engagements | AI, Automation & Digital Projects | AIVized";
 const description =
@@ -32,32 +33,29 @@ const caseStudiesSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.aivized.com/case-studies#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Example Engagements",
-          "item": "https://www.aivized.com/case-studies",
-        },
-      ],
+      ...breadcrumbSchema([
+        { name: "Home", item: SITE_URL },
+        { name: "Example Engagements", item: `${SITE_URL}/case-studies` },
+      ]),
+      "@id": `${SITE_URL}/case-studies#breadcrumb`,
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://www.aivized.com/case-studies#collectionpage",
+      "@id": `${SITE_URL}/case-studies#collectionpage`,
       "name": "Example Engagements: AI, Automation & Digital Projects",
       "description":
         "Illustrative examples of AI systems, workflow automation, SEO, web development, and software projects for UAE businesses.",
-      "url": "https://www.aivized.com/case-studies",
-      "isPartOf": { "@id": "https://www.aivized.com/#website" },
-      "publisher": { "@id": "https://www.aivized.com/#organization" },
+      "url": `${SITE_URL}/case-studies`,
+      "isPartOf": { "@id": WEBSITE_ID },
+      "about": { "@id": ORG_ID },
+      "publisher": { "@id": ORG_ID },
+      "mainEntity": { "@id": `${SITE_URL}/case-studies#engagements` },
     },
     {
       "@type": "ItemList",
-      "@id": "https://www.aivized.com/case-studies#engagements",
+      "@id": `${SITE_URL}/case-studies#engagements`,
       "name": "Example Engagements",
+      "numberOfItems": engagementExamples.length,
       "itemListElement": engagementExamples.map((example, index) => ({
         "@type": "ListItem",
         "position": index + 1,
@@ -66,7 +64,7 @@ const caseStudiesSchema = {
           "name": example.title,
           "description": example.challenge,
           "about": [example.industry, example.businessType],
-          "url": `https://www.aivized.com/case-studies#${example.slug}`,
+          "url": `${SITE_URL}/case-studies#${example.slug}`,
         },
       })),
     },

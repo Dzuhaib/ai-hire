@@ -98,7 +98,7 @@ const WebsiteChatbotBlog = () => {
 
             <BlogInlineImage src={websiteInline2} alt="UAE small business owner reviewing website chatbot conversations on a laptop" />
 
-            <p>For a business owner whose time is worth $30 to $50 per hour, the "free" DIY option costs several hundred pounds in the first month alone. A managed service that handles installation, training, and ongoing updates is significantly cheaper in practice.</p>
+            <p>For a business owner whose time is worth $30 to $50 per hour, the "free" DIY option costs several hundred dirhams in the first month alone. A managed service that handles installation, training, and ongoing updates is significantly cheaper in practice.</p>
 
             <div className="not-prose my-8 p-6 rounded-lg bg-amber-500/10 border border-amber-400/20">
               <h3 className="text-lg font-semibold mb-4">Research Insight</h3>

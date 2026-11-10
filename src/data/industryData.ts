@@ -13,38 +13,111 @@ export interface IndustryData {
   useCases: string[];
   stats: Array<{ value: string; label: string }>;
   faqs: Array<{ question: string; answer: string }>;
-  testimonial: { quote: string; author: string; role: string; company: string };
 }
+
+const defaultStats = [
+  { value: "6", label: "Connected services" },
+  { value: "1", label: "Accountable partner" },
+  { value: "UAE", label: "Local delivery team" },
+  { value: "Ongoing", label: "Support & improvement" },
+];
+
+const defaultFaqs = (industry: string, examples: string) => [
+  {
+    question: `What can AIVized do for ${industry.toLowerCase()} businesses in the UAE?`,
+    answer: `We cover six connected services: AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development. For ${industry.toLowerCase()} businesses that includes ${examples}. We can start with one service or connect several into a single roadmap.`,
+  },
+  {
+    question: "Do we need all six services at once?",
+    answer:
+      "No. Most engagements start with a discovery session and one or two priorities. We scope the smallest useful improvement first, prove the value, then expand into the other services when it makes commercial sense.",
+  },
+  {
+    question: "Can you automate our industry-specific workflows?",
+    answer:
+      "Yes. We map how your team actually works, then automate the repetitive parts: enquiry handling, follow-ups, onboarding, reminders, reporting, and internal handoffs. Every automation is built around your existing tools rather than forcing a new system on your team.",
+  },
+  {
+    question: "Can you help us appear in Google and AI-powered search?",
+    answer:
+      "Yes. Our SEO & GEO service covers technical SEO, content strategy, schema markup, and Generative Engine Optimisation so your business can rank in traditional results and be cited by tools like ChatGPT, Perplexity, and Google AI Overviews.",
+  },
+  {
+    question: "Do you build websites and internal software as well?",
+    answer:
+      "Yes. We build fast, conversion-focused websites and web applications, plus Windows and macOS desktop tools for data-heavy workflows, reporting, and internal operations. Everything is designed to fit your process and integrate with the services you already use.",
+  },
+  {
+    question: "How do you decide what to build first?",
+    answer:
+      "We start with a short discovery and audit. We review your enquiries, operations, search visibility, and current software, then propose a scoped plan with clear priorities, deliverables, and next steps. No long-term commitment is required to get that recommendation.",
+  },
+];
 
 export const industries: Record<string, IndustryData> = {
   restaurants: {
     slug: "restaurants",
     industry: "Restaurants & Hospitality",
-    tagline: "AI for Restaurants",
-    heroTitle: "Restaurant AI Chatbot for UAE Businesses",
-    heroSubtitle: "Your AI hostess handles bookings, answers menu questions, and captures guest details 24/7 while your staff focus on delivering exceptional dining experiences.",
-    description: "AI-powered reservation management and customer service for restaurants, cafés, and hospitality businesses across the UAE.",
-    metaTitle: "AI Agency for Restaurants UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed restaurant AI chatbot. Automate reservations, menu enquiries, and guest table bookings 24/7. Fully installed by AIVized.",
+    tagline: "AI & Digital Growth for Restaurants",
+    heroTitle: "AI, Automation & Digital Growth for Restaurants in the UAE",
+    heroSubtitle:
+      "AIVized helps restaurants, cafés, and hospitality groups connect AI systems, automations, SEO & GEO, digital marketing, web development, and desktop software into one practical growth roadmap.",
+    description:
+      "AI systems, workflow automation, search visibility, marketing, websites, and custom software for restaurants, cafés, and hospitality businesses across the UAE.",
+    metaTitle: "AI, Automation & Digital Growth for Restaurants UAE | AIVized",
+    metaDescription:
+      "AIVized helps UAE restaurants with AI systems, automations, SEO & GEO, digital marketing, web development, and custom software. One connected partner for reservations, operations, and growth.",
     problems: [
-      { title: "Missed Calls During Service", description: "When your restaurant is busy, phones go unanswered. Every missed call could be a lost booking worth $50-$500+." },
-      { title: "Late-Night Booking Requests", description: "Customers want to book after 10pm when you're closed. Without 24/7 availability, they book with competitors instead." },
-      { title: "Repetitive Questions", description: "Staff waste hours answering the same questions about opening times, parking, menus, and allergens, time better spent on guests." },
-      { title: "No-Shows & Empty Tables", description: "Without proper confirmation systems, no-shows cost UAE restaurants an average of $16 billion annually." }
+      {
+        title: "Enquiries Arrive When the Team Is Busiest",
+        description:
+          "Reservation requests, menu questions, and event enquiries often land during service, when nobody has a free hand to respond. The result is slow replies and bookings that never happen.",
+      },
+      {
+        title: "Manual Work Between Systems",
+        description:
+          "Bookings, guest details, supplier orders, and reporting live in different tools. Staff copy information between them, and small errors turn into missed covers or wasted stock.",
+      },
+      {
+        title: "Low Visibility Beyond Delivery Apps",
+        description:
+          "Many restaurants depend on aggregators and paid ads, while their own site, local search presence, and AI-search citations stay underdeveloped.",
+      },
+      {
+        title: "Generic Tools That Do Not Fit Service",
+        description:
+          "Off-the-shelf booking and back-office software rarely matches how a specific venue runs. Teams end up working around the tool instead of with it.",
+      },
     ],
     solutions: [
-      { title: "24/7 Reservation Handling", description: "Your AI hostess takes bookings any time of day or night, confirming instantly and updating your calendar automatically." },
-      { title: "Instant Menu & Allergen Info", description: "Customers get immediate answers about ingredients, allergens, and dietary options without waiting for staff." },
-      { title: "Automated Booking Confirmations", description: "Reduce no-shows by 30% with automatic reminders and easy rebooking options for your guests." },
-      { title: "Peak Time Capacity", description: "Handle unlimited enquiries during your busiest services, Friday nights, Sunday roasts, and special events." }
+      {
+        title: "AI Systems for Guest Enquiries",
+        description:
+          "Custom assistants trained on your menus, policies, and booking rules to answer guest questions, capture reservation requests, and route complex enquiries to your team.",
+      },
+      {
+        title: "Automations That Remove Admin",
+        description:
+          "Automated booking confirmations, reminders, review requests, supplier follow-ups, and reporting so your team spends less time on repetitive admin.",
+      },
+      {
+        title: "Local Search & AI Visibility",
+        description:
+          "SEO, local search, and GEO work so your venue shows up on Google, Maps, and AI answer engines when diners are deciding where to eat.",
+      },
+      {
+        title: "Websites, Marketing & Custom Tools",
+        description:
+          "Fast booking-focused websites, paid and organic campaigns, and custom desktop tools for reservations, reporting, or multi-venue operations.",
+      },
     ],
     features: [
-      { title: "Smart Reservations", description: "Accept bookings 24/7 with intelligent table management and capacity awareness", icon: "Calendar" },
-      { title: "Menu Intelligence", description: "Answer detailed questions about dishes, ingredients, and dietary requirements", icon: "UtensilsCrossed" },
-      { title: "Special Events", description: "Handle group bookings, private dining enquiries, and event catering requests", icon: "PartyPopper" },
-      { title: "Lead Capture", description: "Collect guest details and preferences to build your customer database", icon: "Users" },
-      { title: "Multi-Location", description: "Direct guests to the right branch if you operate multiple venues", icon: "MapPin" },
-      { title: "Integration Ready", description: "Works alongside your existing booking system with no technical changes needed", icon: "Plug" }
+      { title: "AI Systems", description: "Guest-facing assistants and internal knowledge tools trained on your menu and policies", icon: "Bot" },
+      { title: "Automations", description: "Booking follow-ups, reminders, reporting, and supplier workflows that run without manual input", icon: "Workflow" },
+      { title: "SEO & GEO", description: "Local search, schema, and AI-search visibility for your venue and locations", icon: "Search" },
+      { title: "Digital Marketing", description: "Campaigns for offers, events, and new openings with conversion tracking", icon: "Megaphone" },
+      { title: "Web Development", description: "Fast, mobile-first sites with reservations, menus, and ordering flows", icon: "Code2" },
+      { title: "Desktop Software", description: "Custom tools for reservations, reporting, stock, and multi-venue operations", icon: "MonitorSmartphone" },
     ],
     useCases: [
       "Fine dining restaurants",
@@ -54,57 +127,74 @@ export const industries: Record<string, IndustryData> = {
       "Takeaway and delivery",
       "Event catering",
       "Hotel restaurants",
-      "Private dining venues"
+      "Private dining venues",
     ],
-    stats: [
-      { value: "40%", label: "More bookings captured" },
-      { value: "30%", label: "Reduction in no-shows" },
-      { value: "24/7", label: "Availability" },
-      { value: "3 sec", label: "Average response time" }
-    ],
-    faqs: [
-      { question: "How does a managed AI chatbot service help restaurants capture leads 24/7?", answer: "The chatbot sits on your website and takes reservations, answers menu questions, and collects guest contact details at any hour. During busy service hours or late at night when staff are unavailable, it continues working without interruption." },
-      { question: "Is this an affordable AI chatbot for restaurant websites?", answer: "Yes. Every engagement is scoped individually and priced for your requirements. There are no long-term contracts." },
-      { question: "Can your lead generation chatbot UAE handle dietary and allergen questions?", answer: "Yes. We train the chatbot on your menu, ingredients, and allergen information during setup. It gives accurate answers to dietary queries without needing staff involvement." },
-      { question: "Will this 24/7 customer support chatbot integrate with my booking system?", answer: "The AIVized chatbot works alongside your existing booking system. We configure the integration during setup so reservations flow through to your current process automatically." },
-      { question: "What happens if a customer asks something the AI chatbot cannot answer?", answer: "The chatbot recognises when a question falls outside its knowledge and either collects the customer's contact details for a follow-up or escalates to you directly via email or your preferred channel." },
-      { question: "Does this AI chatbot for small business UAE work for takeaway orders?", answer: "Yes. The chatbot can guide customers through your takeaway menu, take order details, and pass them to your kitchen or POS system depending on your setup." }
-    ],
-    testimonial: {
-      quote: "Since adding AIVized, we've captured 40% more reservations, especially those late-night bookings we used to miss completely. It's like having a host who never takes a break.",
-      author: "Marco",
-      role: "Owner",
-      company: "Trattoria Milano, Dubai"
-    }
+    stats: defaultStats,
+    faqs: defaultFaqs("Restaurants & Hospitality", "reservation capture, menu and allergen answers, review follow-ups, multi-venue reporting, and booking-focused websites"),
   },
   "real-estate": {
     slug: "real-estate",
     industry: "Real Estate & Property",
-    tagline: "AI for Real Estate",
-    heroTitle: "Real Estate AI Chatbot for UAE Businesses",
-    heroSubtitle: "Your AI property assistant handles enquiries, schedules viewings, and qualifies buyers 24/7, so you can focus on closing sales instead of answering repetitive questions.",
-    description: "AI-powered lead qualification and customer service for estate agents, letting agents, and property developers across the UAE.",
-    metaTitle: "AI Agency for Real Estate UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed real estate AI chatbot. Capture qualified buyer leads, schedule property viewings, and answer FAQs 24/7. Fully installed.",
+    tagline: "AI & Digital Growth for Real Estate",
+    heroTitle: "AI, Automation & Digital Growth for Real Estate in the UAE",
+    heroSubtitle:
+      "AIVized helps estate agents, developers, and property managers connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software around the way property deals actually move.",
+    description:
+      "AI systems, lead automation, SEO & GEO, marketing, websites, and custom software for estate agents, developers, and property businesses across the UAE.",
+    metaTitle: "AI, Automation & Digital Growth for Real Estate UAE | AIVized",
+    metaDescription:
+      "AIVized helps UAE property businesses with AI lead qualification, workflow automations, SEO & GEO, digital marketing, web development, and custom software. One connected growth partner.",
     problems: [
-      { title: "Leads Go Cold Quickly", description: "Property buyers expect instant responses. A 30-minute delay can mean losing a hot lead to a faster competitor." },
-      { title: "Weekend & Evening Enquiries", description: "Most property searches happen outside office hours, evenings and weekends when your office is closed." },
-      { title: "Repetitive Property Questions", description: "Agents spend hours answering the same questions about council tax bands, EPC ratings, and local amenities." },
-      { title: "Unqualified Viewings", description: "Wasting time on viewings with buyers who can't proceed costs you valuable selling time." }
+      {
+        title: "Leads Cool Down Before an Agent Replies",
+        description:
+          "Buyers and tenants enquire across several agencies at once. Slow or inconsistent first responses quietly hand the opportunity to a faster competitor.",
+      },
+      {
+        title: "Lead Data Is Scattered",
+        description:
+          "Enquiries arrive by form, phone, WhatsApp, and portals. Without a connected process, follow-ups are missed and agents spend time re-entering the same information.",
+      },
+      {
+        title: "Listings Compete on Portals Alone",
+        description:
+          "Many agencies rely on property portals while their own website, local SEO, and AI-search presence do little to differentiate them or capture direct enquiries.",
+      },
+      {
+        title: "Reporting Takes Manual Effort",
+        description:
+          "Pipeline updates, viewing feedback, and vendor reports are assembled by hand, which slows decision-making and creates gaps in accountability.",
+      },
     ],
     solutions: [
-      { title: "Instant Lead Response", description: "Respond to every property enquiry within seconds, 24 hours a day. Never lose a lead to slow response times again." },
-      { title: "24/7 Property Information", description: "Your AI answers detailed questions about listings, local areas, and availability at any hour of the day or night." },
-      { title: "Automated Lead Qualification", description: "Pre-qualify buyers by budget, chain status, and timeline before you spend time on viewings." },
-      { title: "Smart Viewing Scheduling", description: "Let your AI arrange viewings based on property availability and buyer preferences." }
+      {
+        title: "AI Lead Qualification",
+        description:
+          "Assistants that ask the right questions about budget, timeline, location, and requirements, then pass qualified enquiries to the right agent with context.",
+      },
+      {
+        title: "Automated Follow-Up & Handoffs",
+        description:
+          "CRM updates, viewing reminders, document requests, and follow-up sequences that run consistently without relying on memory.",
+      },
+      {
+        title: "Search Visibility for Listings & Areas",
+        description:
+          "SEO and GEO for property pages, area guides, and listings so your agency is found directly and cited by AI search tools.",
+      },
+      {
+        title: "Websites, Campaigns & Internal Tools",
+        description:
+          "Conversion-focused property websites, paid and organic campaigns, and custom desktop tools for reporting or portfolio management.",
+      },
     ],
     features: [
-      { title: "Lead Qualification", description: "Ask the right questions to filter serious buyers from casual browsers", icon: "Filter" },
-      { title: "Property Matching", description: "Suggest suitable properties based on buyer requirements and budget", icon: "Home" },
-      { title: "Viewing Scheduling", description: "Arrange property viewings based on availability and preferences", icon: "Calendar" },
-      { title: "Area Information", description: "Answer questions about schools, transport, amenities, and local market data", icon: "MapPin" },
-      { title: "Vendor Updates", description: "Capture viewing feedback and buyer interest for vendor reporting", icon: "FileText" },
-      { title: "Multi-Branch Support", description: "Direct enquiries to the right branch or specialist agent", icon: "Building" }
+      { title: "AI Systems", description: "Lead qualification assistants and internal search across listings and policies", icon: "Bot" },
+      { title: "Automations", description: "CRM updates, viewing reminders, document collection, and vendor reporting", icon: "Workflow" },
+      { title: "SEO & GEO", description: "Property and area pages optimised for Google and AI answer engines", icon: "Search" },
+      { title: "Digital Marketing", description: "Lead campaigns across Google, Meta, and LinkedIn with clear tracking", icon: "Megaphone" },
+      { title: "Web Development", description: "Fast listing sites and portals with search, filters, and enquiry flows", icon: "Code2" },
+      { title: "Desktop Software", description: "Custom tools for portfolio data, reporting, and operational workflows", icon: "MonitorSmartphone" },
     ],
     useCases: [
       "High street estate agents",
@@ -114,56 +204,74 @@ export const industries: Record<string, IndustryData> = {
       "New homes sales",
       "Commercial property",
       "Property management",
-      "Relocation services"
+      "Relocation services",
     ],
-    stats: [
-      { value: "65%", label: "Faster lead response" },
-      { value: "45%", label: "More qualified viewings" },
-      { value: "24/7", label: "Lead capture" }
-    ],
-    faqs: [
-      { question: "How does a property AI chatbot capture leads 24/7?", answer: "The chatbot engages every visitor to your website, asks qualifying questions about their budget and requirements, and collects their contact details before passing them to an agent." },
-      { question: "Can the AI chatbot schedule property viewings?", answer: "Yes. We configure the chatbot to offer available viewing slots and log appointments directly to your calendar or CRM." },
-      { question: "Is the chatbot trained on my specific property listings?", answer: "During setup we train the chatbot on your current listings, price ranges, and locations so it answers accurately rather than giving generic responses." },
-      { question: "What happens when a new property comes on the market?", answer: "You notify us of significant changes and we update the chatbot training. Regular monthly updates are included in all plans." },
-      { question: "Does the chatbot work for letting agents and sales agents?", answer: "Yes. The chatbot handles both rental and sales enquiries and can be configured to ask different qualifying questions for each type of visitor." },
-      { question: "Is this UAE data protection compliant for collecting buyer and tenant data?", answer: "Yes. AIVized is fully compliant with UAE data protection law. Data collected by the chatbot is handled in accordance with UAE data protection requirements." }
-    ],
-    testimonial: {
-      quote: "We're closing more deals because we're spending time with qualified buyers instead of answering basic questions. The AI handles the filtering. We handle the selling.",
-      author: "Sarah",
-      role: "Branch Manager",
-      company: "Prestige Properties, Abu Dhabi"
-    }
+    stats: defaultStats,
+    faqs: defaultFaqs("Real Estate & Property", "lead qualification, viewing coordination, CRM automation, listing and area SEO, and property-focused websites"),
   },
   ecommerce: {
     slug: "ecommerce",
     industry: "E-Commerce & Retail",
-    tagline: "AI for E-Commerce",
-    heroTitle: "E-Commerce AI Chatbot for UAE Businesses",
-    heroSubtitle: "Your AI shopping assistant answers product questions, handles order enquiries, and recovers abandoned carts 24/7, boosting conversions while you sleep.",
-    description: "AI-powered customer service and sales support for online retailers, DTC brands, and e-commerce businesses across the UAE.",
-    metaTitle: "AI Agency for E-Commerce UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed e-commerce AI chatbot. Answer product questions, recover abandoned carts, and track customer shipments 24/7. Fully installed.",
+    tagline: "AI & Digital Growth for E-Commerce",
+    heroTitle: "AI, Automation & Digital Growth for E-Commerce in the UAE",
+    heroSubtitle:
+      "AIVized helps online retailers and DTC brands connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software to turn more visitors into repeat customers.",
+    description:
+      "AI systems, support and order automations, SEO & GEO, performance marketing, e-commerce development, and custom software for online retailers across the UAE.",
+    metaTitle: "AI, Automation & Digital Growth for E-Commerce UAE | AIVized",
+    metaDescription:
+      "AIVized helps UAE e-commerce brands with AI product assistants, order automations, SEO & GEO, digital marketing, web development, and custom software. One connected growth partner.",
     problems: [
-      { title: "Cart Abandonment", description: "70% of online shopping carts are abandoned. Unanswered questions at checkout are a leading cause." },
-      { title: "Limited Support Hours", description: "Customers shop at all hours but support is only available 9-5. No response means lost sales." },
-      { title: "Overwhelming Ticket Volume", description: "Support teams drown in repetitive questions about shipping, returns, and product specifications." },
-      { title: "Inconsistent Customer Experience", description: "Different agents give different answers, damaging brand trust and increasing returns." }
+      {
+        title: "Visitors Leave With Unanswered Questions",
+        description:
+          "Sizing, compatibility, shipping, and returns questions stall purchases. When answers are slow or inconsistent, shoppers abandon the cart.",
+      },
+      {
+        title: "Support and Operations Do Not Scale",
+        description:
+          "Order updates, returns, stock checks, and supplier follow-ups consume time that should go into merchandising and growth.",
+      },
+      {
+        title: "Product Pages Struggle to Rank",
+        description:
+          "Thin descriptions and weak technical SEO limit organic traffic, while AI answer engines rarely cite the brand.",
+      },
+      {
+        title: "Marketing Spend Is Hard to Attribute",
+        description:
+          "Campaigns run across several channels without connected tracking, so budget shifts are based on guesswork rather than contribution.",
+      },
     ],
     solutions: [
-      { title: "Instant Product Answers", description: "Your AI answers product questions in seconds, keeping customers engaged and moving toward purchase." },
-      { title: "24/7 Shopping Assistance", description: "Support customers whenever they shop, whether 2pm or 2am, across all time zones and shopping habits." },
-      { title: "Automated Order Support", description: "Handle 80% of order enquiries automatically, including tracking, returns, and exchanges, freeing your team for complex issues." },
-      { title: "Consistent Brand Voice", description: "Every customer receives the same accurate, on-brand response, building trust and reducing returns." }
+      {
+        title: "AI Shopping Assistants",
+        description:
+          "Assistants trained on your catalogue, policies, and FAQs to answer product questions, guide shoppers, and capture order enquiries.",
+      },
+      {
+        title: "Order & Support Automations",
+        description:
+          "Automated order updates, returns workflows, review requests, and internal alerts so routine work runs without adding headcount.",
+      },
+      {
+        title: "Product SEO & GEO",
+        description:
+          "Technical SEO, category and product content, schema, and GEO so your store ranks in search and gets referenced by AI tools.",
+      },
+      {
+        title: "Campaigns, Storefronts & Custom Tools",
+        description:
+          "Performance marketing, conversion-focused storefronts, and custom desktop tools for inventory, reporting, or operations.",
+      },
     ],
     features: [
-      { title: "Product Intelligence", description: "Answer detailed questions about products, sizing, materials, and compatibility", icon: "Package" },
-      { title: "Order Tracking", description: "Provide instant updates on order status, shipping, and delivery estimates", icon: "Truck" },
-      { title: "Returns & Exchanges", description: "Guide customers through return processes and capture exchange requests", icon: "RotateCcw" },
-      { title: "Stock Availability", description: "Answer real-time questions about product availability and restock dates", icon: "Box" },
-      { title: "Upselling & Cross-selling", description: "Suggest complementary products based on customer interests", icon: "TrendingUp" },
-      { title: "Cart Recovery", description: "Engage hesitant shoppers and answer last-minute purchase questions", icon: "ShoppingCart" }
+      { title: "AI Systems", description: "Product assistants and internal knowledge tools trained on your catalogue", icon: "Bot" },
+      { title: "Automations", description: "Order updates, returns, reviews, and supplier or inventory workflows", icon: "Workflow" },
+      { title: "SEO & GEO", description: "Category, product, and technical SEO plus AI-search visibility", icon: "Search" },
+      { title: "Digital Marketing", description: "Paid and organic campaigns tied to revenue and tracked properly", icon: "Megaphone" },
+      { title: "Web Development", description: "Fast storefronts, landing pages, and custom checkout or booking flows", icon: "Code2" },
+      { title: "Desktop Software", description: "Custom tools for inventory, order data, reporting, and operations", icon: "MonitorSmartphone" },
     ],
     useCases: [
       "Fashion and apparel",
@@ -173,57 +281,74 @@ export const industries: Record<string, IndustryData> = {
       "Food and beverage",
       "Subscription boxes",
       "Dropshipping stores",
-      "Marketplace sellers"
+      "Marketplace sellers",
     ],
-    stats: [
-      { value: "25%", label: "Increase in conversions" },
-      { value: "80%", label: "Queries handled automatically" },
-      { value: "60%", label: "Reduction in support tickets" },
-      { value: "24/7", label: "Customer support" }
-    ],
-    faqs: [
-      { question: "How does an AI chatbot reduce cart abandonment?", answer: "The chatbot proactively engages visitors who spend time on product or checkout pages, answers their questions about shipping, returns, and sizing, and removes the hesitation that causes abandonment." },
-      { question: "Can the chatbot track orders for customers?", answer: "Yes. We can integrate the chatbot with your order management system so customers get real-time order status without contacting support." },
-      { question: "What ecommerce platforms does AIVized support?", answer: "AIVized works with Shopify, WooCommerce, Magento, and custom-built stores. We handle the technical integration during setup." },
-      { question: "Will the chatbot know about my product range and pricing?", answer: "Yes. We train it on your product catalogue, pricing, and any current promotions before it goes live." },
-      { question: "Can the chatbot handle returns and refund queries?", answer: "Yes. We configure it with your returns policy so it answers refund and exchange questions accurately and consistently." },
-      { question: "How does the chatbot help with product recommendations?", answer: "Based on what a visitor is browsing or asking about, the chatbot can suggest related products and guide them toward a purchase." }
-    ],
-    testimonial: {
-      quote: "Our conversion rate jumped 25% after implementing AIVized. Customers get instant answers to product questions instead of abandoning their carts to 'think about it'.",
-      author: "James",
-      role: "Founder",
-      company: "Urban Lifestyle Co, Fujairah"
-    }
+    stats: defaultStats,
+    faqs: defaultFaqs("E-Commerce & Retail", "product assistants, order and returns automation, product-page SEO, paid campaigns, and conversion-focused storefronts"),
   },
   healthcare: {
     slug: "healthcare",
     industry: "Healthcare & Clinics",
-    tagline: "AI for Healthcare",
-    heroTitle: "Healthcare AI Chatbot for UAE Businesses",
-    heroSubtitle: "Your AI receptionist handles appointment requests, answers service questions, and captures new patient details 24/7 while your team focuses on delivering exceptional care.",
-    description: "AI-powered appointment booking and patient communication for dental practices, GP surgeries, private clinics, and healthcare businesses across the UAE.",
-    metaTitle: "AI Agency for Healthcare UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed healthcare AI chatbot. Handle patient registration, clinic booking requests, and treatment queries 24/7. Fully installed.",
+    tagline: "AI & Digital Growth for Healthcare",
+    heroTitle: "AI, Automation & Digital Growth for Healthcare in the UAE",
+    heroSubtitle:
+      "AIVized helps clinics, dental practices, and healthcare groups connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software while keeping patient communication safe and clear.",
+    description:
+      "AI systems, patient enquiry automation, SEO & GEO, healthcare marketing, websites, and custom software for clinics and healthcare businesses across the UAE.",
+    metaTitle: "AI, Automation & Digital Growth for Healthcare UAE | AIVized",
+    metaDescription:
+      "AIVized helps UAE healthcare providers with patient enquiry AI, appointment automations, SEO & GEO, digital marketing, web development, and custom software. Administrative support only.",
     problems: [
-      { title: "Missed Calls During Appointments", description: "When staff are busy with patients, phones go unanswered. Every missed call could be a new patient worth $500+ annually." },
-      { title: "Out-of-Hours Enquiries", description: "Patients search for healthcare providers evenings and weekends. Without 24/7 availability, they register with competitors." },
-      { title: "Repetitive Admin Questions", description: "Reception staff waste hours answering the same questions about opening times, public and private vs private fees, and registration processes." },
-      { title: "Patient No-Shows", description: "Missed appointments cost the public and private $1 billion annually. Private practices lose significant revenue to no-shows too." }
+      {
+        title: "Reception Is the Bottleneck",
+        description:
+          "Front-desk teams juggle calls, walk-ins, and admin at once. Enquiries go unanswered during busy periods and new patients register elsewhere.",
+      },
+      {
+        title: "Manual Appointment Workflows",
+        description:
+          "Reminders, rescheduling, registration forms, and follow-ups are handled by hand, increasing no-shows and admin load.",
+      },
+      {
+        title: "Weak Local and AI Search Presence",
+        description:
+          "Patients search by treatment and location, often using AI tools. Clinics without structured content and local SEO are easy to miss.",
+      },
+      {
+        title: "Disconnected Patient Information",
+        description:
+          "Enquiry details, booking notes, and administrative data sit in separate systems, creating duplicate work and inconsistent patient experiences.",
+      },
     ],
     solutions: [
-      { title: "24/7 Patient Reception", description: "Your AI receptionist handles enquiries any time, booking requests and new patient registrations, even at midnight." },
-      { title: "Instant Service Information", description: "Patients get immediate answers about treatments, fees, public and private availability, and registration without waiting on hold." },
-      { title: "Automated Appointment Reminders", description: "Reduce no-shows with intelligent reminders and easy rebooking options for your patients." },
-      { title: "New Patient Capture", description: "Never lose a potential patient. Your AI captures details and registration interest 24/7." }
+      {
+        title: "Administrative AI Assistants",
+        description:
+          "Assistants that answer service, location, fee, and appointment questions, capture new patient details, and escalate urgent cases without giving medical advice.",
+      },
+      {
+        title: "Appointment & Admin Automations",
+        description:
+          "Automated reminders, rescheduling prompts, registration follow-ups, and internal notifications that reduce reception workload.",
+      },
+      {
+        title: "Local SEO & GEO for Clinics",
+        description:
+          "Treatment, location, and practitioner content structured so patients and AI search tools can find and understand your services.",
+      },
+      {
+        title: "Websites, Campaigns & Practice Tools",
+        description:
+          "Accessible clinic websites, compliant marketing campaigns, and custom desktop tools for reporting or administrative workflows.",
+      },
     ],
     features: [
-      { title: "Appointment Requests", description: "Accept booking requests 24/7 and send them to your reception team", icon: "Calendar" },
-      { title: "Treatment Info", description: "Answer questions about services, treatments, and pricing accurately", icon: "Heart" },
-      { title: "New Patient Registration", description: "Capture new patient details and registration interest automatically", icon: "Users" },
-      { title: "Emergency Triage", description: "Direct urgent cases to appropriate emergency services immediately", icon: "AlertTriangle" },
-      { title: "Insurance & Fees", description: "Provide clear information about public and private, private fees, and insurance accepted", icon: "CreditCard" },
-      { title: "Multi-Practice Support", description: "Direct patients to the right branch or specialist practitioner", icon: "Building" }
+      { title: "AI Systems", description: "Administrative patient assistants with clear medical-advice safeguards", icon: "Bot" },
+      { title: "Automations", description: "Appointment reminders, registration follow-ups, and internal alerts", icon: "Workflow" },
+      { title: "SEO & GEO", description: "Treatment and location pages optimised for search and AI answers", icon: "Search" },
+      { title: "Digital Marketing", description: "Service campaigns and content with privacy-conscious tracking", icon: "Megaphone" },
+      { title: "Web Development", description: "Accessible, fast clinic websites with clear booking and contact flows", icon: "Code2" },
+      { title: "Desktop Software", description: "Custom administrative and reporting tools for multi-practice operations", icon: "MonitorSmartphone" },
     ],
     useCases: [
       "Dental practices",
@@ -233,57 +358,74 @@ export const industries: Record<string, IndustryData> = {
       "Opticians",
       "Veterinary clinics",
       "Cosmetic clinics",
-      "Mental health practices"
+      "Mental health practices",
     ],
-    stats: [
-      { value: "35%", label: "More new patients" },
-      { value: "40%", label: "Fewer no-shows" },
-      { value: "24/7", label: "Patient reception" },
-      { value: "5 sec", label: "Average response time" }
-    ],
-    faqs: [
-      { question: "Can the AI chatbot book patient appointments?", answer: "Yes. We configure the chatbot to offer available appointment slots and collect patient details. It does not provide medical advice and handles administrative enquiries only." },
-      { question: "Is the chatbot UAE data protection compliant for patient data?", answer: "Yes. AIVized is fully compliant with UAE data protection law and handles all patient data in accordance with it. No sensitive medical information is stored by the chatbot." },
-      { question: "What kinds of questions will the healthcare chatbot answer?", answer: "It handles appointment availability, clinic opening hours, location and parking, fees and payment methods, and general service information. It does not give medical diagnosis or advice." },
-      { question: "Does the chatbot work for both public and private and private healthcare?", answer: "Yes. We configure the chatbot based on your specific service model, whether you are a private clinic, dental practice, physiotherapy centre, or similar." },
-      { question: "What happens if a patient describes a medical emergency?", answer: "The chatbot is configured to immediately direct emergency situations to 999 or 111 and escalate to your staff. This is a mandatory part of our healthcare setup." },
-      { question: "How do we update the chatbot when our services or fees change?", answer: "Contact us and we update the training within your monthly maintenance window. Urgent updates are handled within 24 hours on all plans." }
-    ],
-    testimonial: {
-      quote: "We've captured 35% more new patient registrations since adding AIVized. The AI handles out-of-hours enquiries beautifully. Patients love getting instant responses about our services.",
-      author: "Dr Patel",
-      role: "Practice Owner",
-      company: "Smile Dental, Sharjah"
-    }
+    stats: defaultStats,
+    faqs: defaultFaqs("Healthcare & Clinics", "administrative patient assistants, appointment reminders, treatment-page SEO, clinic websites, and internal reporting tools"),
   },
   legal: {
     slug: "legal",
     industry: "Legal & Law Firms",
-    tagline: "AI for Law Firms",
-    heroTitle: "Legal AI Chatbot for UAE Law Firms & Solicitors",
-    heroSubtitle: "Your AI legal receptionist handles initial enquiries, qualifies potential clients, and captures case details 24/7, so your solicitors can focus on billable work.",
-    description: "AI-powered client intake and enquiry management for solicitors, law firms, and legal practices across the UAE.",
-    metaTitle: "AI Agency for Legal UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed legal AI chatbot for UAE law firms. Capture case prospects, qualify enquiries, and schedule consultations 24/7. Installed.",
+    tagline: "AI & Digital Growth for Law Firms",
+    heroTitle: "AI, Automation & Digital Growth for Law Firms in the UAE",
+    heroSubtitle:
+      "AIVized helps law firms connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software so client intake, visibility, and case administration work together.",
+    description:
+      "AI intake systems, workflow automations, SEO & GEO, legal marketing, websites, and custom software for law firms and legal practices across the UAE.",
+    metaTitle: "AI, Automation & Digital Growth for Law Firms UAE | AIVized",
+    metaDescription:
+      "AIVized helps UAE law firms with AI client intake, workflow automations, SEO & GEO, digital marketing, web development, and custom software. Clear AI safeguards, no legal advice.",
     problems: [
-      { title: "Missed Client Calls", description: "When solicitors are in meetings or court, potential clients call competitors. First response wins in legal services." },
-      { title: "Evening & Weekend Enquiries", description: "Legal emergencies don't wait for office hours. Domestic disputes, arrests, and accidents happen at all hours." },
-      { title: "Unqualified Consultations", description: "Solicitors waste billable hours on initial consultations with prospects who can't afford services or need different expertise." },
-      { title: "High Reception Costs", description: "Legal receptionists in the UAE cost $24,000-$30,000+ annually, plus recruitment and training expenses." }
+      {
+        title: "Enquiries Arrive Outside Office Hours",
+        description:
+          "Potential clients often reach out in the evening or at weekends. When nobody responds, they contact another firm before the next working day.",
+      },
+      {
+        title: "Solicitors Spend Time on Unqualified Enquiries",
+        description:
+          "Initial calls and emails often come from prospects outside your practice areas or budget, consuming billable time.",
+      },
+      {
+        title: "Practice Areas Are Hard to Find Online",
+        description:
+          "Without structured service pages and local SEO, firms are invisible for specific matter types and locations, and rarely cited by AI search tools.",
+      },
+      {
+        title: "Case Administration Is Manual",
+        description:
+          "Intake notes, conflict checks, document requests, and status updates are handled across disconnected tools.",
+      },
     ],
     solutions: [
-      { title: "24/7 Client Intake", description: "Capture every potential client enquiry instantly, day or night. Never lose a case to a faster-responding competitor." },
-      { title: "Intelligent Client Qualification", description: "Your AI asks the right questions to qualify prospects by case type, urgency, and budget before involving solicitors." },
-      { title: "Professional First Impression", description: "Every enquiry receives a polished, professional response that reflects your firm's standards." },
-      { title: "Cost-Effective Reception", description: "Replace expensive reception staffing with AI and redirect savings to fee-earning work." }
+      {
+        title: "AI Client Intake",
+        description:
+          "Assistants that capture matter type, urgency, location, and contact details, then route enquiries to the right practice area with clear AI disclosure.",
+      },
+      {
+        title: "Intake & Follow-Up Automations",
+        description:
+          "Automated acknowledgements, document requests, consultation reminders, and internal handoffs that keep every enquiry moving.",
+      },
+      {
+        title: "Practice-Area SEO & GEO",
+        description:
+          "Structured service pages, location content, and schema so clients and AI tools understand your specialisms.",
+      },
+      {
+        title: "Websites, Campaigns & Firm Tools",
+        description:
+          "Professional firm websites, targeted campaigns, and custom desktop tools for reporting and administrative workflows.",
+      },
     ],
     features: [
-      { title: "Client Intake", description: "Capture case details, contact information, and urgency level automatically", icon: "FileText" },
-      { title: "Case Qualification", description: "Pre-qualify clients by practice area, budget, and case merit", icon: "Filter" },
-      { title: "Appointment Booking", description: "Schedule initial consultations based on solicitor availability", icon: "Calendar" },
-      { title: "Practice Areas", description: "Direct enquiries to the right department: family, conveyancing, personal injury, and more", icon: "Building" },
-      { title: "Fee Guidance", description: "Provide general fee information and funding options to qualified prospects", icon: "CreditCard" },
-      { title: "Confidentiality", description: "Handle all communications with legal-grade data protection and UAE PDPL compliance", icon: "Shield" }
+      { title: "AI Systems", description: "Client intake assistants with clear disclosure and no legal advice", icon: "Bot" },
+      { title: "Automations", description: "Acknowledgements, document requests, reminders, and handoffs", icon: "Workflow" },
+      { title: "SEO & GEO", description: "Practice-area and location pages built for search and AI citations", icon: "Search" },
+      { title: "Digital Marketing", description: "Targeted campaigns for practice areas with responsible tracking", icon: "Megaphone" },
+      { title: "Web Development", description: "Professional firm websites with clear service and contact journeys", icon: "Code2" },
+      { title: "Desktop Software", description: "Custom tools for matter data, reporting, and administrative workflows", icon: "MonitorSmartphone" },
     ],
     useCases: [
       "High street solicitors",
@@ -293,56 +435,74 @@ export const industries: Record<string, IndustryData> = {
       "Employment law specialists",
       "Criminal defence solicitors",
       "Immigration lawyers",
-      "Commercial law firms"
+      "Commercial law firms",
     ],
-    stats: [
-      { value: "50%", label: "More qualified leads" },
-      { value: "24/7", label: "Client intake" },
-      { value: "8 sec", label: "Average response time" }
-    ],
-    faqs: [
-      { question: "Can an AI chatbot handle client enquiries for a law firm?", answer: "Yes. The chatbot captures initial enquiry details, asks qualifying questions about the legal matter, and collects contact information for a solicitor to follow up. It does not provide legal advice." },
-      { question: "Is the chatbot compliant with UAE legal authorities guidelines?", answer: "AIVized chatbots for law firms are configured to make clear they are AI assistants and do not provide legal advice. We recommend reviewing the setup with your compliance officer before going live." },
-      { question: "What legal enquiry types can the chatbot handle?", answer: "Initial contact for conveyancing, family law, employment disputes, personal injury, wills and probate, and commercial matters. It qualifies the enquiry and passes it to the right team." },
-      { question: "How does the chatbot handle sensitive client information?", answer: "All data collected is handled in compliance with UAE data protection law. The chatbot collects only what is necessary for initial contact and passes it securely to your team." },
-      { question: "Can the chatbot qualify leads based on case type and location?", answer: "Yes. We configure qualifying questions based on your practice areas and geographic coverage so only relevant leads reach your solicitors." },
-      { question: "What happens out of hours when no one is available?", answer: "The chatbot collects the enquiry details and sends them to your team for follow-up the next working day. No potential client is lost due to out-of-hours contact." }
-    ],
-    testimonial: {
-      quote: "We've increased qualified consultations by 50% while reducing reception costs. The AI captures evening and weekend enquiries we used to miss entirely.",
-      author: "Richard",
-      role: "Managing Partner",
-      company: "Clarke & Associates, Ajman"
-    }
+    stats: defaultStats,
+    faqs: defaultFaqs("Legal & Law Firms", "client intake, consultation reminders, practice-area SEO, firm websites, and internal reporting tools"),
   },
   fitness: {
     slug: "fitness",
     industry: "Fitness & Gyms",
-    tagline: "AI for Fitness",
-    heroTitle: "Fitness AI Chatbot for UAE Gyms & Studios",
-    heroSubtitle: "Your AI fitness advisor handles membership enquiries, class bookings, and trial requests 24/7, turning curious browsers into committed members.",
-    description: "AI-powered membership sales and customer service for gyms, personal trainers, yoga studios, and fitness businesses across the UAE.",
-    metaTitle: "AI Agency for Fitness UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed fitness AI chatbot. Handle gym membership enquiries, class bookings, and free pass sign-ups 24/7. Fully installed by AIVized.",
+    tagline: "AI & Digital Growth for Fitness",
+    heroTitle: "AI, Automation & Digital Growth for Gyms & Studios in the UAE",
+    heroSubtitle:
+      "AIVized helps gyms, studios, and personal training businesses connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software to grow memberships and reduce admin.",
+    description:
+      "AI membership assistants, booking automations, SEO & GEO, fitness marketing, websites, and custom software for gyms, studios, and fitness businesses across the UAE.",
+    metaTitle: "AI, Automation & Digital Growth for Gyms & Fitness UAE | AIVized",
+    metaDescription:
+      "AIVized helps UAE gyms and studios with AI membership support, booking automations, SEO & GEO, digital marketing, web development, and custom software. One connected growth partner.",
     problems: [
-      { title: "Lost Membership Enquiries", description: "Potential members browse gym websites at 10pm but can't get answers. By morning, they've joined a competitor." },
-      { title: "Peak Time Reception Overload", description: "Reception staff are overwhelmed during busy periods, signing in members while potential new ones walk away." },
-      { title: "Class Booking Confusion", description: "Members call repeatedly to check schedules, book classes, and ask about availability, tying up staff time." },
-      { title: "Trial-to-Member Conversion", description: "Without proper follow-up, trial visitors often don't convert to full memberships." }
+      {
+        title: "Membership Enquiries Arrive Late",
+        description:
+          "Prospective members browse and decide in the evening, but reception is closed or busy. Interest fades before anyone follows up.",
+      },
+      {
+        title: "Bookings and Reminders Are Manual",
+        description:
+          "Class bookings, trial sessions, waitlists, and reminders are handled by staff, creating delays and avoidable no-shows.",
+      },
+      {
+        title: "Local Visibility Is Weak",
+        description:
+          "Studios compete on aggregators and social media while their own website and local search presence do little to attract direct sign-ups.",
+      },
+      {
+        title: "Member Data Sits in Different Tools",
+        description:
+          "Bookings, payments, and member records are spread across systems, making retention and reporting harder than it should be.",
+      },
     ],
     solutions: [
-      { title: "24/7 Membership Sales", description: "Your AI answers pricing, facility, and membership questions at any hour, capturing leads when motivation is highest." },
-      { title: "Automated Class Info", description: "Provide instant schedule information, class descriptions, and availability without staff involvement." },
-      { title: "Trial Booking Capture", description: "Convert website visitors into trial bookings automatically, with immediate confirmation and details." },
-      { title: "Lead Follow-Up", description: "Capture every enquiry with contact details so your sales team can follow up with warm leads." }
+      {
+        title: "AI Membership Assistants",
+        description:
+          "Assistants trained on your classes, pricing, and facilities to answer questions, capture trial requests, and route serious enquiries to your team.",
+      },
+      {
+        title: "Booking & Retention Automations",
+        description:
+          "Automated class reminders, waitlist updates, trial follow-ups, and re-engagement messages that reduce admin and churn.",
+      },
+      {
+        title: "Local SEO & GEO",
+        description:
+          "Location, class, and service pages structured so nearby members and AI search tools can find your studio.",
+      },
+      {
+        title: "Websites, Campaigns & Studio Tools",
+        description:
+          "Conversion-focused studio websites, membership campaigns, and custom desktop tools for reporting or multi-site operations.",
+      },
     ],
     features: [
-      { title: "Membership Info", description: "Answer questions about pricing, contracts, and membership options", icon: "CreditCard" },
-      { title: "Class Schedules", description: "Provide real-time class information and booking guidance", icon: "Calendar" },
-      { title: "Trial Bookings", description: "Capture trial session requests and send confirmations automatically", icon: "Users" },
-      { title: "Facility Info", description: "Answer questions about equipment, amenities, parking, and opening hours", icon: "Building" },
-      { title: "PT Enquiries", description: "Capture personal training enquiries and match with available trainers", icon: "TrendingUp" },
-      { title: "Multi-Location", description: "Direct enquiries to the right gym location or studio", icon: "MapPin" }
+      { title: "AI Systems", description: "Membership and class assistants trained on your timetable and pricing", icon: "Bot" },
+      { title: "Automations", description: "Trial follow-ups, reminders, waitlists, and re-engagement flows", icon: "Workflow" },
+      { title: "SEO & GEO", description: "Local and class-based content for Google and AI search", icon: "Search" },
+      { title: "Digital Marketing", description: "Membership campaigns with clear attribution and reporting", icon: "Megaphone" },
+      { title: "Web Development", description: "Fast studio sites with schedules, trials, and sign-up flows", icon: "Code2" },
+      { title: "Desktop Software", description: "Custom tools for member data, reporting, and multi-site operations", icon: "MonitorSmartphone" },
     ],
     useCases: [
       "Commercial gyms",
@@ -352,56 +512,74 @@ export const industries: Record<string, IndustryData> = {
       "Personal training studios",
       "Swimming pools and leisure centres",
       "Martial arts academies",
-      "Dance studios"
+      "Dance studios",
     ],
-    stats: [
-      { value: "30%", label: "More trial bookings" },
-      { value: "45%", label: "Better trial conversion" },
-      { value: "24/7", label: "Membership enquiries" }
-    ],
-    faqs: [
-      { question: "Can the AI chatbot handle gym membership enquiries?", answer: "Yes. It answers questions about membership tiers, pricing, joining process, and class schedules. It can also collect contact details from interested prospects." },
-      { question: "Can the chatbot book fitness classes and personal training sessions?", answer: "Yes. We integrate with your booking system so the chatbot shows available slots and takes bookings automatically." },
-      { question: "Will the chatbot know about my class timetable?", answer: "Yes. We train the chatbot on your current class schedule during setup. You notify us of schedule changes and we update it as part of your monthly maintenance." },
-      { question: "Can it handle enquiries about personal trainers and coaching?", answer: "Yes. The chatbot can describe each trainer's specialisation, availability, and pricing and direct the visitor to book a consultation." },
-      { question: "Does AIVized work for independent gyms as well as chains?", answer: "Yes. Engagements are scoped individually, making the service accessible for independent studios, boutique gyms, and personal training businesses." },
-      { question: "How does the chatbot help reduce member churn?", answer: "By providing fast, consistent responses to member queries and making it easy to rebook or reschedule, the chatbot removes friction that often leads to membership cancellation." }
-    ],
-    testimonial: {
-      quote: "Trial bookings are up 30% since we added AIVized. The chatbot captures those late-night 'I should join a gym' moments that we used to miss completely.",
-      author: "Emma",
-      role: "Studio Owner",
-      company: "FlexFit Studios, Fujairah"
-    }
+    stats: defaultStats,
+    faqs: defaultFaqs("Fitness & Gyms", "membership assistants, trial and class reminders, local SEO, studio websites, and member reporting tools"),
   },
   travel: {
     slug: "travel",
     industry: "Travel & Tourism",
-    tagline: "AI for Travel",
-    heroTitle: "Travel AI Chatbot for UAE Holiday Agencies",
-    heroSubtitle: "Your AI travel advisor handles destination enquiries, captures booking requests, and answers trip questions 24/7, turning dreamers into bookers while you sleep.",
-    description: "AI-powered booking support and customer service for travel agents, tour operators, and tourism businesses across the UAE.",
-    metaTitle: "AI Agency for Travel UAE | AI Chatbot & Automation | AIVized",
-    metaDescription: "Get a managed travel AI chatbot. Qualify holiday bookings, answer package questions, and capture tourist leads 24/7. Fully installed.",
+    tagline: "AI & Digital Growth for Travel",
+    heroTitle: "AI, Automation & Digital Growth for Travel & Tourism in the UAE",
+    heroSubtitle:
+      "AIVized helps travel agencies and tour operators connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software to capture enquiries and run bookings more smoothly.",
+    description:
+      "AI travel assistants, booking automations, SEO & GEO, travel marketing, websites, and custom software for agencies and tour operators across the UAE.",
+    metaTitle: "AI, Automation & Digital Growth for Travel UAE | AIVized",
+    metaDescription:
+      "AIVized helps UAE travel businesses with AI enquiry handling, booking automations, SEO & GEO, digital marketing, web development, and custom software. One connected growth partner.",
     problems: [
-      { title: "Complex Enquiry Volume", description: "Travel enquiries are detailed and time-consuming. Each customer wants personalised recommendations, quotes, and itinerary help." },
-      { title: "Seasonal Booking Surges", description: "January and summer bring massive enquiry spikes that overwhelm small travel teams." },
-      { title: "After-Hours Research", description: "Customers research holidays in the evening. Without 24/7 responses, they book directly with OTAs instead." },
-      { title: "Quote Follow-Up Gaps", description: "Without systematic follow-up, interested customers drift to competitors or online booking platforms." }
+      {
+        title: "Enquiries Peak Outside Office Hours",
+        description:
+          "Travellers research in the evening and at weekends. Slow replies send them to OTAs or to whichever agency answers first.",
+      },
+      {
+        title: "Complex Enquiries Consume Consultant Time",
+        description:
+          "Dates, budgets, party sizes, and destination questions are repeated manually before a consultant can even start building a quote.",
+      },
+      {
+        title: "Seasonal Demand Is Hard to Absorb",
+        description:
+          "Booking surges overwhelm small teams, while quiet periods leave capacity unused and marketing spend uneven.",
+      },
+      {
+        title: "Destination Content Does Not Rank",
+        description:
+          "Package and destination pages are often thin, making the agency hard to find in search and unlikely to be cited by AI travel tools.",
+      },
     ],
     solutions: [
-      { title: "24/7 Destination Expertise", description: "Your AI answers destination questions, provides travel information, and captures booking interest at any hour." },
-      { title: "Surge-Ready Service", description: "Handle January booking rushes and summer peaks without temporary staff. Your AI scales instantly." },
-      { title: "Instant Engagement", description: "Capture evening browsers before they default to online booking platforms." },
-      { title: "Lead Qualification", description: "Pre-qualify travellers by destination, budget, dates, and party size before involving your team." }
+      {
+        title: "AI Travel Assistants",
+        description:
+          "Assistants trained on your destinations, packages, and booking policies to answer questions, capture requirements, and qualify travellers.",
+      },
+      {
+        title: "Booking & Follow-Up Automations",
+        description:
+          "Automated quote reminders, document checklists, pre-departure messages, and internal handoffs that keep every trip moving.",
+      },
+      {
+        title: "Destination SEO & GEO",
+        description:
+          "Structured destination, package, and visa-information pages designed for search engines and AI answer engines.",
+      },
+      {
+        title: "Websites, Campaigns & Agency Tools",
+        description:
+          "Conversion-focused travel websites, seasonal campaigns, and custom desktop tools for itineraries, reporting, or operations.",
+      },
     ],
     features: [
-      { title: "Destination Info", description: "Answer questions about destinations, visa requirements, and travel advice", icon: "MapPin" },
-      { title: "Quote Requests", description: "Capture detailed booking requests with dates, budget, and preferences", icon: "FileText" },
-      { title: "Package Information", description: "Present holiday packages, tours, and special offers to interested travellers", icon: "Package" },
-      { title: "Booking Support", description: "Handle post-booking questions about itineraries, documents, and requirements", icon: "Calendar" },
-      { title: "Group Travel", description: "Manage group enquiries, hen/stag parties, and corporate travel requests", icon: "Users" },
-      { title: "Reviews & Recommendations", description: "Share customer reviews and personalised destination recommendations", icon: "Star" }
+      { title: "AI Systems", description: "Travel assistants trained on destinations, packages, and policies", icon: "Bot" },
+      { title: "Automations", description: "Quote follow-ups, document checklists, and pre-departure messages", icon: "Workflow" },
+      { title: "SEO & GEO", description: "Destination and package content for search and AI citations", icon: "Search" },
+      { title: "Digital Marketing", description: "Seasonal campaigns with tracking that shows what converts", icon: "Megaphone" },
+      { title: "Web Development", description: "Fast travel sites with package search and enquiry flows", icon: "Code2" },
+      { title: "Desktop Software", description: "Custom tools for itineraries, booking data, and reporting", icon: "MonitorSmartphone" },
     ],
     useCases: [
       "Independent travel agents",
@@ -411,29 +589,11 @@ export const industries: Record<string, IndustryData> = {
       "Cruise specialists",
       "Corporate travel managers",
       "Wedding & honeymoon planners",
-      "Activity holiday providers"
+      "Activity holiday providers",
     ],
-    stats: [
-      { value: "40%", label: "More booking enquiries" },
-      { value: "60%", label: "Faster response times" },
-      { value: "24/7", label: "Travel advice" },
-      { value: "3x", label: "More evening leads" }
-    ],
-    faqs: [
-      { question: "Can the AI chatbot help customers enquire about holiday packages?", answer: "Yes. It handles questions about destinations, pricing, availability, and package inclusions and collects the customer's details for a travel consultant to follow up." },
-      { question: "Can the chatbot take booking requests?", answer: "Yes. It collects booking intent and traveller details and passes them to your team for confirmation. For fully automated booking it integrates with your booking system." },
-      { question: "What kinds of travel businesses use AIVized?", answer: "Independent travel agencies, tour operators, hotel chains, and holiday rental businesses across the UAE." },
-      { question: "Can the chatbot handle visa and documentation questions?", answer: "It provides general destination information and directs customers to official sources for visa requirements. It does not provide legal or immigration advice." },
-      { question: "Does the chatbot work in multiple languages for international travellers?", answer: "The chatbot is trained in English by default. Additional language support can be configured on request." },
-      { question: "How does the chatbot handle urgent customer issues like flight cancellations?", answer: "For urgent situations it escalates immediately to your team via email notification. It collects the customer's contact details so they are not left waiting for a response." }
-    ],
-    testimonial: {
-      quote: "Evening enquiries have tripled since adding AIVized. Customers research holidays at night. Now we capture those leads instead of losing them to Booking.com.",
-      author: "Lisa",
-      role: "Director",
-      company: "Horizon Travel, Umm Al Quwain"
-    }
-  }
+    stats: defaultStats,
+    faqs: defaultFaqs("Travel & Tourism", "travel enquiry assistants, quote follow-ups, destination SEO, booking-focused websites, and itinerary reporting tools"),
+  },
 };
 
 export const getIndustryBySlug = (slug: string): IndustryData | undefined => {

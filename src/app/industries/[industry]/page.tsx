@@ -2,6 +2,13 @@ export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import IndustryPage from "@/views/IndustryPage";
 import { allIndustries, getIndustryBySlug } from "@/data/industryData";
+import {
+  ORG_ID,
+  SITE_URL,
+  breadcrumbSchema,
+  faqPageSchema,
+  serviceSchema,
+} from "@/lib/schema";
 
 export async function generateStaticParams() {
   return allIndustries.map((ind) => ({ industry: ind.slug }));
@@ -14,8 +21,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { industry } = await params;
   const industryData = getIndustryBySlug(industry);
-  const title = industryData?.metaTitle || `AI Agency for ${industry} UAE | AI Chatbot & Automation Services`;
-  const description = industryData?.metaDescription || `AIVized is an AI agency serving ${industry} UAE businesses. Fully managed AI chatbot and automation services. Capture leads and automate support 24/7.`;
+  const title = industryData?.metaTitle || `AI Agency for ${industry} UAE | AI & Automation Services`;
+  const description = industryData?.metaDescription || `AIVized is an AI agency serving ${industry} UAE businesses. Fully managed AI and automation services. Capture leads, automate support, and grow.`;
   return {
     title,
     description,
@@ -39,28 +46,30 @@ export default async function Page({
   const { industry } = await params;
   const industryData = getIndustryBySlug(industry);
 
+  const url = `${SITE_URL}/industries/${industryData?.slug}`;
+
   const schema = industryData
     ? {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-              { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.aivized.com/industries" },
-              { "@type": "ListItem", "position": 3, "name": industryData.industry, "item": `https://www.aivized.com/industries/${industryData.slug}` },
-            ],
+            ...breadcrumbSchema([
+              { name: "Home", item: SITE_URL },
+              { name: "Industries", item: `${SITE_URL}/industries` },
+              { name: industryData.industry, item: url },
+            ]),
+            "@id": `${url}#breadcrumb`,
           },
           {
-            "@type": "Service",
-            "@id": `https://www.aivized.com/industries/${industryData.slug}#service`,
-            "name": `AI Agency for ${industryData.industry} | AIVized`,
-            "description": industryData.description,
-            "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
-            "serviceType": "AI Agency Services",
-            "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
-            "url": `https://www.aivized.com/industries/${industryData.slug}`
+            ...serviceSchema({
+              name: `AI Agency for ${industryData.industry} | AIVized`,
+              description: industryData.description,
+              url,
+              serviceType: `AI Agency Services for ${industryData.industry}`,
+            }),
+            "provider": { "@id": ORG_ID },
           },
+          faqPageSchema(industryData.faqs, `${url}#faq`),
         ],
       }
     : null;

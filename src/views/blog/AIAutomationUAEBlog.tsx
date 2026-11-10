@@ -15,7 +15,7 @@ const automationInline1 = "/assets/blog/ai-automation-inline-1.png";
 const automationInline2 = "/assets/blog/ai-automation-inline-2.png";
 const automationInline3 = "/assets/blog/ai-automation-inline-3.png";
 
-const AIAutomationUKBlog = () => {
+const AIAutomationUAEBlog = () => {
   const faqs = [
     {
       question: "What does AI automation for business UAE actually mean?",
@@ -229,4 +229,4 @@ const AIAutomationUKBlog = () => {
   );
 };
 
-export default AIAutomationUKBlog;
+export default AIAutomationUAEBlog;

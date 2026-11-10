@@ -2,6 +2,15 @@ export const revalidate = 86400;
 import type { Metadata } from "next";
 import AboutPage from "@/views/AboutPage";
 import { services } from "@/data/servicesData";
+import {
+  ORG_ID,
+  SITE_URL,
+  WEBSITE_ID,
+  ORG_DESCRIPTION,
+  organizationSchema,
+  founderSchema,
+  breadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: { absolute: "About AIVized | AI, Automation & Digital Growth for UAE Businesses" },
@@ -26,39 +35,16 @@ const schema = {
   "@graph": [
     {
       "@type": "AboutPage",
-      "@id": "https://www.aivized.com/about",
+      "@id": `${SITE_URL}/about#aboutpage`,
       "name": "About AIVized",
-      "description":
-        "AIVized provides AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software development for UAE businesses.",
-      "url": "https://www.aivized.com/about",
-      "isPartOf": { "@id": "https://www.aivized.com/#website" },
-      "publisher": { "@id": "https://www.aivized.com/#organization" }
+      "description": ORG_DESCRIPTION,
+      "url": `${SITE_URL}/about`,
+      "isPartOf": { "@id": WEBSITE_ID },
+      "about": { "@id": ORG_ID },
+      "publisher": { "@id": ORG_ID }
     },
     {
-      "@type": "Organization",
-      "@id": "https://www.aivized.com/#organization",
-      "name": "AIVized",
-      "url": "https://www.aivized.com",
-      "email": "info@aivized.com",
-      "logo": { "@type": "ImageObject", "url": "https://www.aivized.com/favicon.png" },
-      "description":
-        "AIVized delivers AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software for UAE businesses.",
-      "foundingDate": "2025",
-      "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "info@aivized.com",
-        "availableLanguage": "English",
-        "areaServed": "AE"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/ai-vized/",
-        "https://twitter.com/aivized",
-        "https://www.facebook.com/aivized",
-        "https://www.instagram.com/aivized"
-      ],
-      "founder": { "@id": "https://www.aivized.com/#founder" },
+      ...organizationSchema,
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "AIVized Services",
@@ -69,27 +55,19 @@ const schema = {
             "@type": "Service",
             "name": service.title,
             "description": service.description,
-            "url": `https://www.aivized.com/services#${service.slug}`
+            "serviceType": service.title,
+            "provider": { "@id": ORG_ID },
+            "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
+            "url": `${SITE_URL}/services#${service.slug}`
           }
         }))
       }
     },
-    {
-      "@type": "Person",
-      "@id": "https://www.aivized.com/#founder",
-      "name": "Zuhaib Ahmed",
-      "jobTitle": "Founder",
-      "worksFor": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com" },
-      "url": "https://www.linkedin.com/in/zuhaibah/",
-      "sameAs": ["https://www.linkedin.com/in/zuhaibah/"]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.aivized.com/about" }
-      ]
-    }
+    founderSchema,
+    breadcrumbSchema([
+      { name: "Home", item: SITE_URL },
+      { name: "About", item: `${SITE_URL}/about` },
+    ])
   ]
 };
 

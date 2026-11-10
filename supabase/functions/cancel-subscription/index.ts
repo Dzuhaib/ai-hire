@@ -57,7 +57,7 @@ serve(async (req) => {
       await supabase.from("billing_history").insert({
         clerk_user_id: clerkUserId,
         amount: 0,
-        currency: "GBP",
+        currency: "USD",
         description: `${fullSub.plan_name} - Subscription Cancelled`,
         status: "cancelled",
         paid_at: new Date().toISOString(),

@@ -2,6 +2,7 @@ export const revalidate = 86400; // ISR: revalidate every 24 hours
 import type { Metadata } from "next";
 import BlogsPage from "@/views/BlogsPage";
 import { allBlogPosts } from "@/data/blogData";
+import { ORG_ID, SITE_URL, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "AI Chatbot Blog: Guides for UAE Businesses",
@@ -23,29 +24,28 @@ const blogIndexSchema = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://www.aivized.com/blog#collectionpage",
+      "@id": `${SITE_URL}/blog#collectionpage`,
       "name": "AI Chatbot Blog | UAE Business Insights",
       "description": "Expert insights on AI chatbots for UAE businesses. Learn about WhatsApp, website, and Instagram chatbots for lead generation and customer support.",
-      "url": "https://www.aivized.com/blog",
-      "publisher": { "@id": "https://www.aivized.com/#organization" },
+      "url": `${SITE_URL}/blog`,
+      "publisher": { "@id": ORG_ID },
+      "about": { "@id": ORG_ID },
       "mainEntity": {
         "@type": "ItemList",
+        "@id": `${SITE_URL}/blog#posts`,
         "numberOfItems": allBlogPosts.length,
-        "itemListElement": allBlogPosts.slice(0, 9).map((post, i) => ({
+        "itemListElement": allBlogPosts.map((post, i) => ({
           "@type": "ListItem",
           "position": i + 1,
-          "url": `https://www.aivized.com/blog/${post.slug}`,
+          "url": `${SITE_URL}/blog/${post.slug}`,
           "name": post.title
         }))
       }
     },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aivized.com/blog" }
-      ]
-    }
+    breadcrumbSchema([
+      { name: "Home", item: SITE_URL },
+      { name: "Blog", item: `${SITE_URL}/blog` },
+    ])
   ]
 };
 

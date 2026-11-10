@@ -1,6 +1,8 @@
 export const revalidate = 86400;
 import type { Metadata } from "next";
 import SocialMediaAutomationPage from "@/views/services/SocialMediaAutomationPage";
+import { socialMediaAutomationFaqs } from "@/data/serviceFaqs";
+import { ORG_ID, SITE_URL, breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "AI Agency for Social Media Automation | UAE Business Automation",
@@ -16,32 +18,38 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: ["https://www.aivized.com/og-image.png"] },
 };
 
+const URL_PATH = `${SITE_URL}/services/social-media-automation`;
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Service",
-      "name": "AI Agency for Social Media Automation | AIVized",
-      "description": "AI agency offering fully managed social media automation for UAE small businesses. AIVized automates DM responses, content scheduling, and engagement across Instagram, Facebook, and LinkedIn.",
-      "provider": { "@type": "Organization", "name": "AIVized", "url": "https://www.aivized.com", "email": "info@aivized.com" },
-      "serviceType": "Social Media Automation",
-      "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
-      "url": "https://www.aivized.com/services/social-media-automation",
-      "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "info@aivized.com" }
+      ...serviceSchema({
+        name: "AI Agency for Social Media Automation | AIVized",
+        description: "AI agency offering fully managed social media automation for UAE small businesses. AIVized automates DM responses, content scheduling, and engagement across Instagram, Facebook, and LinkedIn.",
+        url: URL_PATH,
+        serviceType: "Social Media Automation",
+      }),
+      "provider": { "@id": ORG_ID },
+      "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "info@aivized.com" },
     },
     {
       "@type": "WebPage",
-      "url": "https://www.aivized.com/services/social-media-automation",
+      "@id": `${URL_PATH}#webpage`,
+      "url": URL_PATH,
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "about": { "@id": ORG_ID },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead", "h2"] }
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aivized.com" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.aivized.com/services/social-media-automation" },
-        { "@type": "ListItem", "position": 3, "name": "Social Media Automation", "item": "https://www.aivized.com/services/social-media-automation" }
-      ]
-    }
+      ...breadcrumbSchema([
+        { name: "Home", item: SITE_URL },
+        { name: "Services", item: `${SITE_URL}/services` },
+        { name: "Social Media Automation", item: URL_PATH },
+      ]),
+      "@id": `${URL_PATH}#breadcrumb`,
+    },
+    faqPageSchema(socialMediaAutomationFaqs, `${URL_PATH}#faq`),
   ]
 };
 

@@ -46,7 +46,7 @@ serve(async (req) => {
     switch (type) {
       case "trial_ending": {
         if (!subscription?.trial_ends_at) throw new Error("No trial ending date");
-        const endDate = new Date(subscription.trial_ends_at).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+        const endDate = new Date(subscription.trial_ends_at).toLocaleDateString("en-AE", { day: "numeric", month: "long", year: "numeric" });
 
         await Promise.allSettled([
           sendEmail({
@@ -65,7 +65,7 @@ serve(async (req) => {
 
       case "subscription_expiring": {
         if (!subscription?.expires_at) throw new Error("No expiry date");
-        const expDate = new Date(subscription.expires_at).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+        const expDate = new Date(subscription.expires_at).toLocaleDateString("en-AE", { day: "numeric", month: "long", year: "numeric" });
 
         await Promise.allSettled([
           sendEmail({
