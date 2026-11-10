@@ -73,7 +73,7 @@ const ServicesPage = () => {
                   transition={{ duration: 0.5, delay: index * 0.06 }}
                 >
                   <Link
-                    href={`#${service.slug}`}
+                    href={`/services/${service.slug}`}
                     className="group flex h-full flex-col rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:border-primary/40 hover:shadow-[var(--shadow-lift)]"
                   >
                     <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
@@ -142,12 +142,20 @@ const ServicesPage = () => {
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                    >
-                      Discuss {service.title} <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <div className="flex flex-wrap items-center gap-5">
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                      >
+                        View {service.title} page <ArrowRight className="w-4 h-4" />
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                      >
+                        Discuss {service.title} <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </motion.article>
