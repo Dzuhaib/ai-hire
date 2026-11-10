@@ -151,7 +151,7 @@ const LocationPage = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-                AI, Automation &amp; Digital Growth in {location.city}
+                AI Automation Services in {location.city}
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">

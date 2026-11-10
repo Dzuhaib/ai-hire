@@ -59,7 +59,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "restaurants",
     industry: "Restaurants & Hospitality",
     tagline: "AI & Digital Growth for Restaurants",
-    heroTitle: "AI, Automation & Digital Growth for Restaurants in the UAE",
+    heroTitle: "AI Automation Services for Restaurants in the UAE",
     heroSubtitle:
       "AIVized helps restaurants, cafés, and hospitality groups connect AI systems, automations, SEO & GEO, digital marketing, web development, and desktop software into one practical growth roadmap.",
     description:
@@ -136,7 +136,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "real-estate",
     industry: "Real Estate & Property",
     tagline: "AI & Digital Growth for Real Estate",
-    heroTitle: "AI, Automation & Digital Growth for Real Estate in the UAE",
+    heroTitle: "AI Automation Services for Real Estate in the UAE",
     heroSubtitle:
       "AIVized helps estate agents, developers, and property managers connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software around the way property deals actually move.",
     description:
@@ -213,7 +213,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "ecommerce",
     industry: "E-Commerce & Retail",
     tagline: "AI & Digital Growth for E-Commerce",
-    heroTitle: "AI, Automation & Digital Growth for E-Commerce in the UAE",
+    heroTitle: "AI Automation Services for E-Commerce in the UAE",
     heroSubtitle:
       "AIVized helps online retailers and DTC brands connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software to turn more visitors into repeat customers.",
     description:
@@ -290,7 +290,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "healthcare",
     industry: "Healthcare & Clinics",
     tagline: "AI & Digital Growth for Healthcare",
-    heroTitle: "AI, Automation & Digital Growth for Healthcare in the UAE",
+    heroTitle: "AI Automation Services for Healthcare in the UAE",
     heroSubtitle:
       "AIVized helps clinics, dental practices, and healthcare groups connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software while keeping patient communication safe and clear.",
     description:
@@ -367,7 +367,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "legal",
     industry: "Legal & Law Firms",
     tagline: "AI & Digital Growth for Law Firms",
-    heroTitle: "AI, Automation & Digital Growth for Law Firms in the UAE",
+    heroTitle: "AI Automation Services for Law Firms in the UAE",
     heroSubtitle:
       "AIVized helps law firms connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software so client intake, visibility, and case administration work together.",
     description:
@@ -444,7 +444,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "fitness",
     industry: "Fitness & Gyms",
     tagline: "AI & Digital Growth for Fitness",
-    heroTitle: "AI, Automation & Digital Growth for Gyms & Studios in the UAE",
+    heroTitle: "AI Automation Services for Gyms & Studios in the UAE",
     heroSubtitle:
       "AIVized helps gyms, studios, and personal training businesses connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software to grow memberships and reduce admin.",
     description:
@@ -521,7 +521,7 @@ export const industries: Record<string, IndustryData> = {
     slug: "travel",
     industry: "Travel & Tourism",
     tagline: "AI & Digital Growth for Travel",
-    heroTitle: "AI, Automation & Digital Growth for Travel & Tourism in the UAE",
+    heroTitle: "AI Automation Services for Travel & Tourism in the UAE",
     heroSubtitle:
       "AIVized helps travel agencies and tour operators connect AI systems, automations, SEO & GEO, digital marketing, web development, and custom software to capture enquiries and run bookings more smoothly.",
     description:

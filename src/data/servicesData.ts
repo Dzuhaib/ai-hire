@@ -11,6 +11,7 @@ import {
 export interface Service {
   slug: string;
   title: string;
+  h1: string;
   tagline: string;
   description: string;
   features: string[];
@@ -22,6 +23,7 @@ export const services: Service[] = [
   {
     slug: "ai-systems",
     title: "AI Systems",
+    h1: "AI Chatbot for Website UAE",
     tagline: "Custom AI that works like part of your team",
     description:
       "We design, build, and manage bespoke AI systems: customer-facing assistants, internal knowledge bases, lead qualification engines, and decision-support tools trained on your business and connected to the software you already use.",
@@ -37,6 +39,7 @@ export const services: Service[] = [
   {
     slug: "automations",
     title: "Automations",
+    h1: "AI Automation Agency Dubai",
     tagline: "Remove repetitive work from your week",
     description:
       "We map the manual processes holding your team back, then automate them end to end. From lead follow-up and customer onboarding to invoicing, reminders, reporting, and internal handoffs, the repetitive work runs itself.",
@@ -52,6 +55,7 @@ export const services: Service[] = [
   {
     slug: "seo-geo",
     title: "SEO & GEO",
+    h1: "AI SEO Abu Dhabi",
     tagline: "Be found on Google and cited by AI search",
     description:
       "We combine technical SEO, content strategy, and Generative Engine Optimisation (GEO) so your business ranks in traditional search results and gets referenced by AI tools like ChatGPT, Perplexity, and Google AI Overviews.",
@@ -67,6 +71,7 @@ export const services: Service[] = [
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
+    h1: "Digital Marketing Dubai",
     tagline: "Campaigns that turn attention into revenue",
     description:
       "We plan and run paid and organic campaigns across Google, Meta, LinkedIn, and email. Every campaign is tied to a clear commercial goal, with tracking and reporting that show what is actually working.",
@@ -82,6 +87,7 @@ export const services: Service[] = [
   {
     slug: "web-development",
     title: "Web Development",
+    h1: "Web Development Dubai",
     tagline: "Fast, conversion-focused websites and apps",
     description:
       "We build modern, responsive websites and web applications that load quickly, rank well, and make it easy for customers to buy, book, or get in touch. From marketing sites to e-commerce and custom portals.",
@@ -97,6 +103,7 @@ export const services: Service[] = [
   {
     slug: "desktop-software-development",
     title: "Desktop Software Development",
+    h1: "Desktop Software Development Dubai",
     tagline: "Custom tools built around how your team works",
     description:
       "We design and develop desktop applications for Windows and macOS, including internal business tools, data-heavy workflows, reporting dashboards, and offline-capable software. Built to fit your processes, not the other way around.",

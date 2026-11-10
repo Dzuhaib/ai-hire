@@ -26,7 +26,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
               <span className="text-sm font-medium text-primary">Service</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              {service.title}
+              {service.h1}
             </h1>
             <p className="text-lg md:text-xl text-primary font-medium mb-4">{service.tagline}</p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">

@@ -27,7 +27,7 @@ const IndustryServicePage = ({ industry, service }: IndustryServicePageProps) =>
               <span className="text-sm font-medium text-primary">Industry &amp; Service</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
-              {industry.industry} + {service.title}
+              {industry.industry} + {service.title} in the UAE
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
               {service.description}

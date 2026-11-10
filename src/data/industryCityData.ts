@@ -60,7 +60,7 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "restaurants",
     industryName: "Restaurants & Hospitality",
-    h1Template: "AI, Automation & Digital Growth for Restaurants in {city}",
+    h1Template: "AI Automation Services for Restaurants in {city}",
     metaTitleTemplate: "AI, Automation & Digital Growth for Restaurants in {city} | AIVized",
     metaDescTemplate:
       "AIVized helps restaurants in {city} with AI systems, automations, SEO & GEO, digital marketing, web development, and custom software. One connected partner for guest enquiries, operations, and growth.",
@@ -73,7 +73,7 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "real-estate",
     industryName: "Real Estate & Property",
-    h1Template: "AI, Automation & Digital Growth for Real Estate in {city}",
+    h1Template: "AI Automation Services for Real Estate in {city}",
     metaTitleTemplate: "AI, Automation & Digital Growth for Real Estate in {city} | AIVized",
     metaDescTemplate:
       "AIVized helps property businesses in {city} with AI lead qualification, workflow automations, SEO & GEO, digital marketing, web development, and custom software. One connected growth partner.",
@@ -86,7 +86,7 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "ecommerce",
     industryName: "E-Commerce & Retail",
-    h1Template: "AI, Automation & Digital Growth for E-Commerce in {city}",
+    h1Template: "AI Automation Services for E-Commerce in {city}",
     metaTitleTemplate: "AI, Automation & Digital Growth for E-Commerce in {city} | AIVized",
     metaDescTemplate:
       "AIVized helps online retailers in {city} with AI product assistants, order automations, SEO & GEO, digital marketing, e-commerce development, and custom software. One connected growth partner.",
@@ -99,7 +99,7 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "healthcare",
     industryName: "Healthcare & Clinics",
-    h1Template: "AI, Automation & Digital Growth for Healthcare in {city}",
+    h1Template: "AI Automation Services for Healthcare in {city}",
     metaTitleTemplate: "AI, Automation & Digital Growth for Healthcare in {city} | AIVized",
     metaDescTemplate:
       "AIVized helps clinics in {city} with administrative patient AI, appointment automations, SEO & GEO, digital marketing, web development, and custom software. Administrative support only.",
@@ -112,7 +112,7 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "legal",
     industryName: "Legal & Law Firms",
-    h1Template: "AI, Automation & Digital Growth for Law Firms in {city}",
+    h1Template: "AI Automation Services for Law Firms in {city}",
     metaTitleTemplate: "AI, Automation & Digital Growth for Law Firms in {city} | AIVized",
     metaDescTemplate:
       "AIVized helps law firms in {city} with AI client intake, workflow automations, SEO & GEO, digital marketing, web development, and custom software. Clear AI safeguards, no legal advice.",
@@ -125,7 +125,7 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "fitness",
     industryName: "Fitness & Gyms",
-    h1Template: "AI, Automation & Digital Growth for Gyms and Fitness in {city}",
+    h1Template: "AI Automation Services for Gyms and Fitness in {city}",
     metaTitleTemplate: "AI, Automation & Digital Growth for Gyms in {city} | AIVized",
     metaDescTemplate:
       "AIVized helps gyms and studios in {city} with AI membership support, booking automations, SEO & GEO, digital marketing, web development, and custom software. One connected growth partner.",
@@ -138,7 +138,7 @@ const industryConfigs: IndustryCityConfig[] = [
   {
     industrySlug: "travel",
     industryName: "Travel & Tourism",
-    h1Template: "AI, Automation & Digital Growth for Travel Agents in {city}",
+    h1Template: "AI Automation Services for Travel Agents in {city}",
     metaTitleTemplate: "AI, Automation & Digital Growth for Travel Agents in {city} | AIVized",
     metaDescTemplate:
       "AIVized helps travel businesses in {city} with AI enquiry handling, booking automations, SEO & GEO, digital marketing, web development, and custom software. One connected growth partner.",
