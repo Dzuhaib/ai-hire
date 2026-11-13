@@ -10,7 +10,6 @@ import { ServicesSection } from "@/components/ServicesSection";
 import {
   PainSkeleton,
   AIShowcaseSkeleton,
-  AITiersSkeleton,
   IndustriesSkeleton,
   HowItWorksSkeleton,
   WhyChooseUsSkeleton,
@@ -26,10 +25,6 @@ const PainSection = dynamic(
 const AIShowcaseSection = dynamic(
   () => import("@/components/AIShowcaseSection").then(m => m.AIShowcaseSection),
   { loading: () => <AIShowcaseSkeleton /> }
-);
-const AITiersSection = dynamic(
-  () => import("@/components/AITiersSection").then(m => m.AITiersSection),
-  { loading: () => <AITiersSkeleton /> }
 );
 const IndustriesSection = dynamic(
   () => import("@/components/IndustriesSection").then(m => m.IndustriesSection),
@@ -92,7 +87,6 @@ const Index = () => {
         <PainSection />
         <ServicesSection />
         <AIShowcaseSection />
-        <AITiersSection />
         <HowItWorksSection />
         <IndustriesSection />
         <WhyChooseUsSection />
