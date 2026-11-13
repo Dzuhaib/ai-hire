@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle2, Quote } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FinalCTASection } from "@/components/FinalCTASection";
+import { ConnectedStackVisual, ServiceVisual } from "@/components/visuals/LandingVisuals";
 import { services } from "@/data/servicesData";
 
 const ServicesPage = () => {

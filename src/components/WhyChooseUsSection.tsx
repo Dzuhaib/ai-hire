@@ -9,6 +9,7 @@ import {
   KeyRound,
   Headphones,
 } from "lucide-react";
+import { SupportVisual } from "./visuals/LandingVisuals";
 
 const reasons = [
   {
@@ -65,38 +66,47 @@ export const WhyChooseUsSection = ({ variant = "homepage" }: WhyChooseUsSectionP
   return (
     <section
       id={isAbout ? undefined : "why-choose-us"}
-      className={`section-padding ${isAbout ? "" : "bg-secondary/20"}`}
+      className="section-padding"
     >
       <div className="container-narrow">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16 max-w-2xl mx-auto"
-        >
-          <p className="label-tag mb-4">Why AIVized</p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-5">
-            Why UAE Businesses{" "}
-            <span className="text-gradient">Choose AIVized</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Plenty of agencies can build one thing. We combine strategy, delivery, and ongoing support
-            across the systems your business actually depends on.
-          </p>
-        </motion.div>
+        <div className="grid lg:grid-cols-[1fr_0.78fr] gap-12 lg:gap-16 items-center mb-14 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="editorial-rule mb-5">Why AIVized</p>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-5 leading-tight">
+              Why UAE Businesses{" "}
+              <span className="text-primary">Choose AIVized</span>
+            </h2>
+            <p className="text-muted-foreground leading-relaxed max-w-xl">
+              Plenty of agencies can build one thing. We combine strategy, delivery, and ongoing support
+              across the systems your business actually depends on.
+            </p>
+          </motion.div>
 
-        {/* Stats bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.08 }}
+            className="relative"
+          >
+            <SupportVisual />
+          </motion.div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="grid grid-cols-3 gap-4 mb-14 rounded-2xl bg-card border border-border p-6 md:p-8"
+          className="grid grid-cols-3 border-y border-border/70 divide-x divide-border/70 py-7 md:py-8 mb-12"
         >
           {statItems.map((stat) => (
-            <div key={stat.label} className="text-center">
+            <div key={stat.label} className="text-center px-2">
               <p className="text-3xl md:text-4xl font-serif font-bold text-primary mb-1">
                 {stat.value}
               </p>
@@ -105,7 +115,6 @@ export const WhyChooseUsSection = ({ variant = "homepage" }: WhyChooseUsSectionP
           ))}
         </motion.div>
 
-        {/* Reasons grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((reason, index) => (
             <motion.div
@@ -113,11 +122,16 @@ export const WhyChooseUsSection = ({ variant = "homepage" }: WhyChooseUsSectionP
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.08 + index * 0.07 }}
-              className="group bg-card border border-border rounded-xl p-7 flex flex-col gap-4 hover:border-primary/35 hover:shadow-[var(--shadow-lift)] transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.06 + index * 0.06 }}
+              className="group rounded-xl border border-border bg-card p-7 flex flex-col gap-4 transition-all duration-300 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]"
             >
-              <div className="w-11 h-11 rounded-lg bg-primary/8 border border-border flex items-center justify-center shrink-0">
-                <reason.icon className="w-5 h-5 text-primary" />
+              <div className="flex items-center justify-between">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface-warm">
+                  <reason.icon className="w-4 h-4 text-primary" />
+                </div>
+                <span className="font-serif text-[0.68rem] font-semibold tracking-[0.14em] text-muted-foreground/60 tabular-nums">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
               <div>
                 <h3 className="font-serif font-semibold text-lg mb-2 leading-snug">

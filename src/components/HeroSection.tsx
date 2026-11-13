@@ -1,8 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { MagneticButton } from "./MagneticButton";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { HeroSystemVisual } from "./visuals/LandingVisuals";
+import { ArrowRight, MapPin } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0 },
+};
 
 export const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -11,77 +18,77 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-16">
-      {/* Hairline top rule - editorial detail */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-border" />
+    <section className="relative overflow-hidden surface-warm border-b border-border/60">
+      <div className="absolute inset-x-0 top-0 h-px bg-border" />
 
-      {/* Quiet tinted background - no blob, no glow */}
-      <div className="absolute inset-0 bg-background" />
-      {/* Very subtle warm tint in the upper half */}
       <div
-        className="absolute top-0 left-0 right-0 h-2/3 pointer-events-none"
-        style={{ background: "hsl(16 60% 46% / 0.025)" }}
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-40 top-24 h-[420px] w-[420px] rounded-full border border-primary/10"
       />
 
-      <div className="container-narrow relative z-10">
-        {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-8 md:mb-10">
-          <div className="h-px w-8 bg-primary" />
-          <span className="label-tag">AI Systems, Automation & Digital Growth - UAE</span>
-        </div>
-
-        {/* Main heading */}
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-8 max-w-4xl text-balance">
-          We Build{" "}
-          <em className="not-italic text-primary">AI Systems</em>{" "}
-          That Grow Your Business
-        </h1>
-
-        {/* Subheading */}
-        <p className="lead text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed">
-          AIVized is a UAE AI and digital agency. We design, build, and manage AI systems, automations, SEO and GEO, digital marketing, web development, and desktop software - so your business runs smarter and grows faster.
-        </p>
-
-        <p className="text-sm text-muted-foreground/75 max-w-xl mb-12">
-          One partner for strategy, build, and ongoing support. Serving businesses across{" "}
-          <Link href="/locations" className="text-primary hover:underline">
-            the UAE
-          </Link>
-          .
-        </p>
-
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-16">
-          <Link href="/contact">
-            <MagneticButton className="btn-primary group">
-              Book a Free Consultation
-              <ArrowRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover:translate-x-1" />
-            </MagneticButton>
-          </Link>
-
-          <button
-            onClick={() => scrollToSection("#services")}
-            className="btn-secondary"
+      <div className="container-narrow relative pt-28 md:pt-36 pb-16 md:pb-24">
+        <div className="grid lg:grid-cols-[1.02fr_0.98fr] gap-12 lg:gap-14 xl:gap-20 items-center">
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={{ show: { transition: { staggerChildren: 0.09, delayChildren: 0.1 } } }}
           >
-            Explore Our Services
-          </button>
-        </div>
+            <motion.p variants={fadeUp} transition={{ duration: 0.5 }} className="editorial-rule mb-7">
+              AI systems · Automation · Digital growth
+            </motion.p>
 
-        {/* Trust strip */}
-        <div className="pt-8 border-t border-border/50">
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {[
-              "Strategy, build & support",
-              "Direct access to specialists",
-              "Fixed-scope projects",
-              "Security-conscious delivery",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
-                {item}
-              </div>
-            ))}
-          </div>
+            <motion.h1
+              variants={fadeUp}
+              transition={{ duration: 0.6 }}
+              className="font-serif text-4xl sm:text-5xl xl:text-[3.9rem] leading-[1.02] tracking-[-0.03em] max-w-[15ch] text-balance"
+            >
+              We Build <span className="text-primary">AI Systems</span> That Grow Your Business
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              transition={{ duration: 0.6 }}
+              className="mt-6 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed"
+            >
+              AIVized designs, builds, and manages the AI, automation, and digital systems your
+              business runs on.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              transition={{ duration: 0.6 }}
+              className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3"
+            >
+              <Link href="/contact">
+                <MagneticButton className="btn-primary group">
+                  Book a Free Consultation
+                  <ArrowRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover:translate-x-1" />
+                </MagneticButton>
+              </Link>
+
+              <button onClick={() => scrollToSection("#services")} className="btn-secondary">
+                Explore Our Services
+              </button>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              transition={{ duration: 0.6 }}
+              className="mt-7 flex items-center gap-2 text-sm text-muted-foreground"
+            >
+              <MapPin className="w-4 h-4 text-accent" />
+              <span>Dubai · Abu Dhabi · Sharjah · Across the UAE</span>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
+            className="relative mx-auto w-full max-w-[560px] lg:max-w-none lg:ml-auto"
+          >
+            <HeroSystemVisual />
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from "next/link";
-const painHero = "/assets/pain-section-hero.png";
+import { ArrowUpRight } from "lucide-react";
+import { PainSystemsVisual } from "./visuals/LandingVisuals";
 
 const painPoints = [
   "Your team spends hours every week on work software should be doing.",
@@ -11,49 +11,53 @@ const painPoints = [
 
 export const PainSection = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-padding">
       <div className="container-narrow">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image Column */}
-          <div className="relative order-2 lg:order-1">
-            <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
-              <Image
-                src={painHero}
-                alt="Business owner frustrated by disconnected systems and manual work"
-                width={1200}
-                height={675}
-                className="w-full object-cover"
-              />
-              <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-lg bg-card/95 border border-border/80">
-                <span className="text-sm font-medium text-destructive">Disconnected systems hold growing businesses back</span>
-              </div>
-            </div>
+        <div className="mx-auto mb-10 max-w-2xl text-center md:mb-12">
+          <p className="editorial-rule mb-5 justify-center">The problem</p>
+
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold leading-tight">
+            Growth Gets Stuck When Your{" "}
+            <span className="text-primary">Systems Do Not Scale</span>
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-16 items-center">
+          <div className="relative">
+            <PainSystemsVisual />
           </div>
 
-          {/* Text Column */}
-          <div className="order-1 lg:order-2">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary/70 mb-6">The Problem</p>
-
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-10">
-              Growth Gets Stuck When Your{" "}
-              <span className="text-gradient">Systems Do Not Scale</span>
-            </h2>
-
-            <div className="space-y-6">
+          <div>
+            <div className="border-y border-border/70 divide-y divide-border/70">
               {painPoints.map((point, index) => (
-                <p key={index} className="text-xl md:text-2xl font-serif text-muted-foreground leading-relaxed">
-                  {point}
-                </p>
+                <div key={index} className="flex gap-5 py-5">
+                  <span className="font-serif text-xs font-semibold text-primary/70 pt-1 tabular-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-muted-foreground leading-relaxed">{point}</p>
+                </div>
               ))}
             </div>
 
-            <p className="mt-8 text-lg text-muted-foreground">
-              We fix the gaps across AI, automation, search, marketing, and software - so the business runs
-              better as a whole, not just one channel at a time. Explore our{" "}
-              <Link href="/services" className="text-primary hover:underline">services</Link> or see how we
-              work with{" "}
-              <Link href="/industries" className="text-primary hover:underline">your industry</Link>.
+            <p className="mt-7 text-muted-foreground leading-relaxed">
+              We fix the gaps across AI, automation, search, marketing, and software - so the business
+              runs better as a whole, not just one channel at a time.
             </p>
+
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+              >
+                Explore our services <ArrowUpRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/industries"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              >
+                See your industry <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

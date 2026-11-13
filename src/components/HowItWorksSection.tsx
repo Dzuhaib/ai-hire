@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import Link from "next/link";
 import { Compass, ClipboardList, Rocket, BarChart3, ArrowRight } from "lucide-react";
-const howItWorksHero = "/assets/how-it-works-hero.png";
+import { RoadmapVisual } from "./visuals/LandingVisuals";
 
 const steps = [
   {
@@ -9,7 +8,7 @@ const steps = [
     title: "Discovery Call",
     description: "We learn how your business works, where time is being lost, and what growth actually looks like for you.",
     icon: Compass,
-    link: { text: "Book a call", href: "/contact" },
+    link: { text: "Book a free call", href: "/contact" },
   },
   {
     number: "02",
@@ -36,76 +35,62 @@ const steps = [
 
 export const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="section-padding bg-secondary/20">
+    <section id="how-it-works" className="section-padding">
       <div className="container-narrow">
-        {/* Section Header with Image */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-16 items-center mb-16 md:mb-20">
           <div>
-            <p className="label-tag mb-4">Simple Process</p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6">
+            <p className="editorial-rule mb-5">Simple process</p>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-5 leading-tight">
               How We Turn Your Goals Into{" "}
-              <span className="text-gradient">Working Systems</span>
+              <span className="text-primary">Working Systems</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground leading-relaxed max-w-xl">
               No jargon, no endless discovery documents. We start with a conversation, agree on the
               outcome, and get to work.
             </p>
           </div>
 
-          <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
-            <Image
-              src={howItWorksHero}
-              alt="Team reviewing a digital growth strategy on a tablet"
-              width={1200}
-              height={675}
-              className="w-full object-cover"
-            />
-            <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-lg bg-card/95 border border-border/80">
-              <Rocket className="w-4 h-4 text-primary flex-shrink-0" />
-              <span className="text-sm font-medium">From first call to launch, without the agency runaround</span>
-            </div>
+          <div className="relative">
+            <RoadmapVisual />
           </div>
         </div>
 
-        {/* Steps Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative group">
-              <div className="h-full bg-card border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-primary/8 border border-border flex items-center justify-center">
-                    <step.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-5xl font-serif font-bold text-foreground/6 leading-none select-none">
+        <div className="border-t border-border/70 pt-10 md:pt-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+            {steps.map((step) => (
+              <div key={step.number} className="relative">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="font-serif text-xs font-semibold tracking-[0.14em] text-primary tabular-nums">
                     {step.number}
                   </span>
-                </div>
-
-                <h3 className="text-xl font-serif font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4 text-sm">{step.description}</p>
-                <Link href={step.link.href} className="text-sm text-primary hover:underline inline-flex items-center gap-1">
-                  {step.link.text}
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-
-              {/* Connector arrow for desktop */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 translate-x-full z-10">
-                  <div className="w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center">
-                    <ArrowRight className="w-3 h-3 text-muted-foreground" />
+                  <span className="h-px flex-1 bg-border" />
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card">
+                    <step.icon className="w-4 h-4 text-primary" />
                   </div>
                 </div>
-              )}
-            </div>
-          ))}
+
+                <h3 className="text-lg font-serif font-semibold mb-2.5">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  {step.description}
+                </p>
+                <Link
+                  href={step.link.href}
+                  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                >
+                  {step.link.text}
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom note */}
-        <div className="mt-14 text-center">
-          <p className="text-sm text-muted-foreground">
-            <span className="font-medium text-foreground">One partner</span> across AI, automation, search, marketing, and software
-          </p>
+        <div className="mt-12 flex items-center gap-3 text-sm text-muted-foreground">
+          <span className="h-px w-8 bg-primary/60" />
+          <span>
+            <span className="font-medium text-foreground">One partner</span> across AI, automation,
+            search, marketing, and software
+          </span>
         </div>
       </div>
     </section>

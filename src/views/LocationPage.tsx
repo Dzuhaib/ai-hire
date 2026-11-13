@@ -167,7 +167,7 @@ const LocationPage = () => {
                 </Button>
                 <Link href="/contact">
                   <Button variant="outline" size="lg">
-                    Book a Consultation
+                    Book a Free Consultation
                   </Button>
                 </Link>
               </div>
@@ -583,7 +583,7 @@ const LocationPage = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Link href="/contact">
                 <Button size="lg" className="btn-primary group">
-                  Book a Consultation
+                  Book a Free Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>

@@ -7,18 +7,21 @@ const commitments = [
     title: "Direct communication",
     description:
       "You speak to the people doing the work, not a call centre or a chain of account managers. Questions get answered by someone who knows your project.",
+    meta: "Direct line",
   },
   {
     icon: FileCheck2,
     title: "Clear scope and pricing",
     description:
       "Every project starts with a written scope, timeline, and price. You know what is included before work begins, and changes are agreed in writing.",
+    meta: "Written upfront",
   },
   {
     icon: LifeBuoy,
     title: "Support after launch",
     description:
       "We do not disappear after handover. Optional support and managed partnerships keep the work maintained, monitored, and improving.",
+    meta: "Ongoing cover",
   },
 ];
 
@@ -33,38 +36,40 @@ const businessTypes = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding surface-warm">
       <div className="container-narrow">
-        <div className="text-center mb-14">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="label-tag mb-3"
-          >
-            How We Work
-          </motion.p>
+        <div className="grid lg:grid-cols-[1fr_0.75fr] gap-8 lg:gap-16 items-end mb-12 md:mb-14">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="editorial-rule mb-5"
+            >
+              How we work
+            </motion.p>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold"
-          >
-            A Partner You Can <span className="text-gradient">Actually Reach</span>
-          </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold leading-tight max-w-2xl"
+            >
+              A Partner You Can <span className="text-primary">Actually Reach</span>
+            </motion.h2>
+          </div>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-muted-foreground max-w-2xl mx-auto mt-4"
+            className="text-muted-foreground leading-relaxed lg:pb-1"
           >
-            We do not publish invented reviews or borrow the names of other businesses. Named client stories
-            are shared only with permission. Here is what working with us looks like.
+            We do not publish invented reviews or borrow the names of other businesses. Named client
+            stories are shared only with permission. Here is what working with us looks like.
           </motion.p>
         </div>
 
@@ -75,14 +80,23 @@ export const TestimonialsSection = () => {
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 + index * 0.08 }}
-              className="bg-card border border-border rounded-xl p-8 flex flex-col hover:border-primary/30 hover:shadow-[var(--shadow-lift)] transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.08 + index * 0.08 }}
+              className="flex flex-col rounded-xl border border-border bg-card p-7 transition-all duration-300 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]"
             >
-              <div className="w-11 h-11 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
-                <item.icon className="w-5 h-5 text-primary" />
+              <div className="mb-5 flex items-center justify-between">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface-warm">
+                  <item.icon className="w-4 h-4 text-primary" />
+                </div>
+                <span className="font-serif text-[0.65rem] font-semibold tracking-[0.14em] text-muted-foreground/60 tabular-nums">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
               <h3 className="font-serif font-semibold text-lg mb-2">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">{item.description}</p>
+              <div className="mt-auto flex items-center gap-2 border-t border-border/60 pt-3 text-[0.62rem] uppercase tracking-[0.14em] text-muted-foreground">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                {item.meta}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -92,25 +106,21 @@ export const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 rounded-2xl border border-border bg-card p-6 md:p-8"
+          className="mt-10 flex flex-col gap-4 rounded-xl border border-border bg-card px-6 py-5 md:flex-row md:items-center"
         >
-          <div className="flex flex-col md:flex-row md:items-center gap-5">
-            <div className="flex items-center gap-3 shrink-0">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                <Building2 className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="font-serif font-semibold">Businesses we work with</h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {businessTypes.map((type) => (
-                <span
-                  key={type}
-                  className="px-3 py-1.5 text-xs rounded-full bg-secondary text-muted-foreground border border-border/60"
-                >
-                  {type}
-                </span>
-              ))}
-            </div>
+          <div className="flex items-center gap-2.5 shrink-0">
+            <Building2 className="w-4 h-4 text-primary" />
+            <h3 className="font-serif text-sm font-semibold">Businesses we work with</h3>
+          </div>
+          <div className="flex flex-wrap gap-2 md:ml-auto">
+            {businessTypes.map((type) => (
+              <span
+                key={type}
+                className="rounded-full border border-border/70 bg-surface-warm px-2.5 py-1 text-[0.65rem] text-muted-foreground"
+              >
+                {type}
+              </span>
+            ))}
           </div>
         </motion.div>
       </div>

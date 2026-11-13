@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['SUSE', 'system-ui', 'sans-serif'],
-        serif: ['SUSE Mono', 'ui-monospace', 'monospace'],
-        mono: ['SUSE Mono', 'ui-monospace', 'monospace'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",

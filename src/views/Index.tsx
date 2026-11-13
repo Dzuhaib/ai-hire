@@ -9,11 +9,9 @@ import { InternalLinksSection } from "@/components/InternalLinksSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import {
   PainSkeleton,
-  AIShowcaseSkeleton,
   IndustriesSkeleton,
   HowItWorksSkeleton,
   WhyChooseUsSkeleton,
-  TestimonialsSkeleton,
   FAQSkeleton,
   FinalCTASkeleton,
 } from "@/components/skeletons/SectionSkeletons";
@@ -21,10 +19,6 @@ import {
 const PainSection = dynamic(
   () => import("@/components/PainSection").then(m => m.PainSection),
   { loading: () => <PainSkeleton /> }
-);
-const AIShowcaseSection = dynamic(
-  () => import("@/components/AIShowcaseSection").then(m => m.AIShowcaseSection),
-  { loading: () => <AIShowcaseSkeleton /> }
 );
 const IndustriesSection = dynamic(
   () => import("@/components/IndustriesSection").then(m => m.IndustriesSection),
@@ -37,14 +31,6 @@ const HowItWorksSection = dynamic(
 const WhyChooseUsSection = dynamic(
   () => import("@/components/WhyChooseUsSection").then(m => m.WhyChooseUsSection),
   { loading: () => <WhyChooseUsSkeleton /> }
-);
-const TestimonialsSection = dynamic(
-  () => import("@/components/TestimonialsSection").then(m => m.TestimonialsSection),
-  { loading: () => <TestimonialsSkeleton /> }
-);
-const CaseStudiesSection = dynamic(
-  () => import("@/components/CaseStudiesSection").then(m => m.CaseStudiesSection),
-  { loading: () => <TestimonialsSkeleton /> }
 );
 const FAQSection = dynamic(
   () => import("@/components/FAQSection").then(m => m.FAQSection),
@@ -86,12 +72,9 @@ const Index = () => {
         <HeroSection />
         <PainSection />
         <ServicesSection />
-        <AIShowcaseSection />
         <HowItWorksSection />
         <IndustriesSection />
         <WhyChooseUsSection />
-        <CaseStudiesSection />
-        <TestimonialsSection />
         <FAQSection />
         <InternalLinksSection />
         <FinalCTASection />

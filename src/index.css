@@ -33,16 +33,22 @@
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
+    --border: 34 18% 88%;
+    --input: 34 18% 88%;
     --ring: 16 60% 46%;
 
-    --radius: 0.5rem;
+    /* Warm editorial surfaces — derived from the existing palette */
+    --surface: 38 38% 97%;
+    --surface-strong: 34 28% 94%;
+    --surface-ink: 215 22% 12%;
+
+    --radius: 0.75rem;
 
     /* Flat tokens — no gradients */
-    --shadow-card: 0 1px 3px hsl(215 22% 12% / 0.05), 0 4px 12px hsl(215 22% 12% / 0.04);
-    --shadow-lift: 0 6px 28px hsl(215 22% 12% / 0.10);
-    --shadow-primary: 0 4px 20px hsl(16 60% 46% / 0.22);
+    --shadow-card: 0 1px 2px hsl(215 22% 12% / 0.03), 0 12px 30px -18px hsl(215 22% 12% / 0.12);
+    --shadow-lift: 0 2px 4px hsl(215 22% 12% / 0.03), 0 28px 60px -28px hsl(215 22% 12% / 0.2);
+    --shadow-primary: 0 10px 30px -14px hsl(16 60% 46% / 0.45);
+    --shadow-frame: 0 1px 1px hsl(215 22% 12% / 0.03), 0 18px 44px -24px hsl(215 22% 12% / 0.24);
   }
 
   .dark {
@@ -54,6 +60,8 @@
     --muted-foreground: 40 8% 58%;
     --border: 215 14% 19%;
     --input: 215 14% 19%;
+    --surface: 215 18% 12%;
+    --surface-strong: 215 16% 15%;
   }
 }
 
@@ -66,18 +74,27 @@
     scroll-behavior: smooth;
   }
 
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
+  }
+
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'SUSE', system-ui, sans-serif;
+    font-family: 'Manrope', system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.65;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'SUSE Mono', ui-monospace, monospace;
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
     font-weight: 500;
     line-height: 1.15;
     letter-spacing: -0.01em;
+    text-wrap: balance;
   }
 }
 
@@ -118,15 +135,20 @@
 
   /* ── Cards ── */
   .card-premium {
-    @apply relative overflow-hidden rounded-xl border border-border/70 transition-all duration-300;
+    @apply relative overflow-hidden rounded-2xl border border-border/70 transition-all duration-300;
     background: hsl(var(--card));
     box-shadow: var(--shadow-card);
   }
 
   .card-premium:hover {
-    border-color: hsl(var(--primary) / 0.35);
-    transform: translateY(-3px);
+    border-color: hsl(var(--primary) / 0.3);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lift);
+  }
+
+  .visual-panel {
+    @apply rounded-xl border border-border/50;
+    background-color: hsl(var(--surface));
   }
 
   /* ── Underline link animation ── */
@@ -145,11 +167,37 @@
 
   /* ── Layout ── */
   .section-padding {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-20 md:py-28 lg:py-32;
   }
 
   .container-narrow {
     @apply max-w-6xl mx-auto px-6 md:px-8;
+  }
+
+  .surface-warm {
+    background-color: hsl(var(--surface));
+  }
+
+  .surface-paper {
+    background-color: hsl(var(--surface-strong));
+  }
+
+  .image-frame {
+    @apply relative overflow-hidden rounded-xl border border-border bg-card;
+    box-shadow: var(--shadow-card);
+  }
+
+  .image-frame img {
+    @apply w-full h-full object-cover;
+  }
+
+  .editorial-rule {
+    @apply flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-primary/80;
+  }
+
+  .editorial-rule::before {
+    content: "";
+    @apply h-px w-8 bg-primary/60;
   }
 
   /* ── Small section label ── */
