@@ -9,7 +9,7 @@ export const AIShowcaseSection = () => {
         <div className="text-center mb-12">
           <p className="label-tag mb-3">Connected Expertise</p>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
+          <h2 className="text-2xl md:text-4xl font-serif font-semibold mb-6">
             One Team Behind Your <span className="text-gradient">Whole Digital Stack</span>
           </h2>
 

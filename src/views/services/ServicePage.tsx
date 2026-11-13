@@ -25,7 +25,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
               <Icon className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Service</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
               {service.h1}
             </h1>
             <p className="text-lg md:text-xl text-primary font-medium mb-4">{service.tagline}</p>
@@ -52,7 +52,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
 
       <section className="section-padding bg-background border-b border-border/50">
         <div className="container-narrow max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">What {service.title} Delivers</h2>
+          <h2 className="text-2xl font-serif font-semibold mb-6">What {service.title} Delivers</h2>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{service.outcome}</p>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
             Delivered by a dedicated AI automation agency in Dubai, this work combines AI automation services with
@@ -65,7 +65,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
         <div className="container-narrow">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">What Is Included</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Everything in {service.title}</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">Everything in {service.title}</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {service.features.map((feature, idx) => (
@@ -89,7 +89,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
         <div className="container-narrow">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Where We Deliver It</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">{service.title} Across the UAE</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">{service.title} Across the UAE</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {uaeLocations.map((location) => (
@@ -108,7 +108,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
 
       <section className="section-padding bg-muted/30 border-t border-b border-border/50">
         <div className="container-narrow text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Ready to Start with {service.title}?</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Ready to Start with {service.title}?</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Tell us about your business and we will scope the {service.title.toLowerCase()} work that fits — a
             focused alternative to generic AI tools such as Levora AI.

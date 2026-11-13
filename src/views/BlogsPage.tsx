@@ -87,7 +87,7 @@ const BlogsPage = () => {
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Blog & Insights
             </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
+            <h1 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
               AI Chatbot Blog & Insights for UAE Businesses
             </h1>
             <p className="blog-description text-lg text-muted-foreground max-w-2xl mx-auto">

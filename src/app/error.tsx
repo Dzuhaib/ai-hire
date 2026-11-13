@@ -21,7 +21,7 @@ export default function Error({
       <Header />
       <main className="flex-1 flex items-center justify-center px-4 pt-32 pb-20">
         <div className="text-center max-w-md">
-          <h1 className="text-3xl font-serif font-semibold mb-4">Something went wrong</h1>
+          <h1 className="text-2xl font-serif font-semibold mb-4">Something went wrong</h1>
           <p className="text-muted-foreground mb-6">
             An unexpected error occurred. Please try again or return to the homepage.
           </p>

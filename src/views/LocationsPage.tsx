@@ -52,7 +52,7 @@ const LocationsPage = () => {
               <span className="text-sm font-medium text-primary">UAE-Wide Coverage</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
               AI Automation Services Across the UAE
             </h1>
 
@@ -89,7 +89,7 @@ const LocationsPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Our Locations</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               Digital Services by <span className="text-gradient">City</span>
             </h2>
           </motion.div>
@@ -167,7 +167,7 @@ const LocationsPage = () => {
               <span className="text-sm font-medium text-primary">Six connected services</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
               Don&apos;t See Your City?
             </h2>
 

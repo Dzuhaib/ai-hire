@@ -18,7 +18,7 @@ export default function GlobalError({
       <body>
         <div className="min-h-screen flex items-center justify-center px-4 bg-background text-foreground">
           <div className="text-center max-w-md">
-            <h1 className="text-3xl font-semibold mb-4">Something went wrong</h1>
+            <h1 className="text-2xl font-semibold mb-4">Something went wrong</h1>
             <p className="text-muted-foreground mb-8">
               An unexpected error occurred. Please try again or return to the homepage.
             </p>

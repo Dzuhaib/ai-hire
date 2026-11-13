@@ -52,7 +52,7 @@ export const InternalLinksSection = () => {
           className="text-center mb-12"
         >
           <p className="label-tag mb-3">Explore AIVized</p>
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold">
             Find the Right <span className="text-gradient">Service for Your Goal</span>
           </h2>
         </motion.div>

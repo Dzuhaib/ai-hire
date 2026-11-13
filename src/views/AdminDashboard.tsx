@@ -278,7 +278,7 @@ const AdminDashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl font-serif font-semibold mb-2">Admin Dashboard</h1>
+          <h1 className="text-2xl font-serif font-semibold mb-2">Admin Dashboard</h1>
           <p className="text-muted-foreground mb-8">Manage users and subscriptions</p>
 
           {/* Stats Cards */}

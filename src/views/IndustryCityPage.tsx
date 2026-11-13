@@ -119,7 +119,7 @@ const IndustryCityPage = () => {
               <span className="text-sm font-medium text-primary">{cityData.cityName}</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
               {cityData.h1}
             </h1>
 
@@ -186,7 +186,7 @@ const IndustryCityPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl font-serif font-semibold mb-6">
               Empowering {cityData.cityName} {parentIndustry.industry} with Premium AI &amp; Growth Solutions
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
@@ -218,7 +218,7 @@ const IndustryCityPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Key Features</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               What Your {cityData.cityName} {parentIndustry.industry} Business Gets
             </h2>
           </motion.div>
@@ -248,7 +248,7 @@ const IndustryCityPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Value Comparison</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               Managed AI &amp; Automation vs. Alternatives
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -313,7 +313,7 @@ const IndustryCityPage = () => {
       <section className="section-padding bg-muted/30">
         <div className="container-narrow max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
               {parentIndustry.industry} businesses in {cityData.cityName} and why AIVized fits
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
@@ -334,7 +334,7 @@ const IndustryCityPage = () => {
               className="text-center mb-12"
             >
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Market Context</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                 {parentIndustry.industry} in {cityData.cityName}
               </h2>
             </motion.div>
@@ -358,7 +358,7 @@ const IndustryCityPage = () => {
               className="text-center mb-12"
             >
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">The Case for AI</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                 Why {cityData.cityName} {parentIndustry.industry} Businesses Need AIVized
               </h2>
             </motion.div>
@@ -391,7 +391,7 @@ const IndustryCityPage = () => {
               className="text-center mb-12"
             >
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Benefits</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                 What {cityData.cityName} Businesses Gain
               </h2>
             </motion.div>
@@ -481,7 +481,7 @@ const IndustryCityPage = () => {
             className="text-center mb-16"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How It Works</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               Delivering Your AI &amp; Automation Stack in 4 Steps
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -566,7 +566,7 @@ const IndustryCityPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               Common Questions About AI &amp; Automation for {parentIndustry.industry} in {cityData.cityName}
             </h2>
           </motion.div>
@@ -593,7 +593,7 @@ const IndustryCityPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">More Cities</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               {parentIndustry.industry} AI &amp; Automation in <span className="text-gradient">Other UAE Cities</span>
             </h2>
           </motion.div>
@@ -616,7 +616,7 @@ const IndustryCityPage = () => {
       <section className="section-padding bg-secondary/20">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
               Ready to Get Your {cityData.cityName} {parentIndustry.industry} AI &amp; Growth Solution?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">

@@ -69,7 +69,7 @@ const WhatsAppChatbotBlog = () => {
             <span className="inline-block px-4 py-2 rounded-full bg-green-500/10 text-green-500 text-sm font-medium mb-6">
               WhatsApp
             </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6 leading-tight">
               WhatsApp Chatbot for UAE Businesses: 24/7 AI Messaging
             </h1>
             <div className="flex items-center gap-6 text-muted-foreground mb-8">
@@ -162,7 +162,7 @@ const WhatsAppChatbotBlog = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-16 pt-12 border-t border-border"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+            <h2 className="text-2xl font-serif font-semibold mb-8">
               Frequently Asked Questions
             </h2>
             <Accordion type="single" collapsible className="w-full">

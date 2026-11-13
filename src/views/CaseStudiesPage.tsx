@@ -22,7 +22,7 @@ const CaseStudiesPage = () => {
             className="max-w-3xl mx-auto"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Example Engagements</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
               How We Approach AI, Automation &amp; Digital Projects
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -129,7 +129,7 @@ const CaseStudiesPage = () => {
 
           {/* CTA */}
           <div className="mt-16 text-center bg-secondary/10 p-8 rounded-xl border border-border/50 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4">
               Have a Similar Challenge?
             </h2>
             <p className="text-muted-foreground mb-6">

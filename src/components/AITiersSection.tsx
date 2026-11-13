@@ -45,7 +45,7 @@ export const AITiersSection = () => {
         <div className="text-center mb-14">
           <p className="label-tag mb-3">Ways To Work With Us</p>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-semibold mb-6">
+          <h2 className="text-2xl md:text-4xl font-serif font-semibold mb-6">
             Choose the <span className="text-gradient">Engagement Model</span> That Fits
           </h2>
 

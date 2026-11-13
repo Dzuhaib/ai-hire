@@ -36,7 +36,7 @@ const SocialMediaAutomationPage = () => {
               </div>
               <span className="text-sm text-primary font-medium tracking-wide uppercase">Managed Service</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl font-serif font-semibold leading-tight mb-6">
               Social Media Automation for UAE Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
@@ -51,7 +51,7 @@ const SocialMediaAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">Platforms We Automate</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-8">Platforms We Automate</h2>
             <div className="grid sm:grid-cols-3 gap-5">
               {[
                 { icon: Instagram, name: "Instagram", desc: "Automate DM responses, story replies, and comment management. Never miss an enquiry from a potential customer." },
@@ -76,7 +76,7 @@ const SocialMediaAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">What Is Included</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-6">What Is Included</h2>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
               {[
                 "AI-powered DM automation trained on your business",
@@ -101,7 +101,7 @@ const SocialMediaAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who It Is For</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-6">Who It Is For</h2>
             <p className="text-muted-foreground max-w-2xl mb-6">
               Social media automation is most valuable for UAE small businesses that receive regular DMs or enquiries on social media but do not have dedicated staff to respond promptly. This includes:
             </p>
@@ -128,7 +128,7 @@ const SocialMediaAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+            <h2 className="text-2xl font-serif font-semibold mb-8">
               Frequently Asked Questions
             </h2>
             <Accordion type="single" collapsible className="w-full max-w-2xl space-y-4">

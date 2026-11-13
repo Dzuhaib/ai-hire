@@ -29,7 +29,7 @@ const AboutPage = () => {
                 <div className="h-px w-8 bg-primary" />
                 <span className="text-sm text-primary font-medium tracking-wide uppercase">About AIVized</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl font-serif font-semibold leading-tight mb-6">
                 AI, Automation &amp; Digital Growth for UAE Businesses
               </h1>
               <p className="lead text-xl text-muted-foreground leading-relaxed">
@@ -46,7 +46,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="mb-16"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">What AIVized Does</h2>
+              <h2 className="text-2xl font-serif font-semibold mb-6">What AIVized Does</h2>
               <p className="text-muted-foreground mb-6 max-w-2xl">
                 Most businesses do not have one problem. They have a website that underperforms, manual
                 processes that eat time, search visibility that has slipped, and disconnected tools that
@@ -87,7 +87,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-16"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">How We Work</h2>
+              <h2 className="text-2xl font-serif font-semibold mb-6">How We Work</h2>
               <div className="grid md:grid-cols-3 gap-5 max-w-4xl">
                 {[
                   {
@@ -124,7 +124,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-4"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who We Serve</h2>
+              <h2 className="text-2xl font-serif font-semibold mb-6">Who We Serve</h2>
               <p className="text-muted-foreground mb-6 max-w-2xl">
                 We work with UAE small and medium-sized businesses that want to grow without proportionally
                 growing their headcount, as well as larger organisations that need custom systems, software,
@@ -184,7 +184,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mb-16"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who Runs AIVized</h2>
+              <h2 className="text-2xl font-serif font-semibold mb-6">Who Runs AIVized</h2>
               <div className="flex items-start gap-5 p-6 rounded-2xl bg-card border border-border">
                 <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
                   <span className="text-xl font-serif font-bold text-primary">ZA</span>
@@ -217,7 +217,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mb-16"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">What Makes a Good Fit</h2>
+              <h2 className="text-2xl font-serif font-semibold mb-6">What Makes a Good Fit</h2>
               <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
                 {[
                   "You have a clear business problem, not just a vague interest in AI",
@@ -242,7 +242,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mb-16"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Contact Us</h2>
+              <h2 className="text-2xl font-serif font-semibold mb-6">Contact Us</h2>
               <p className="text-muted-foreground mb-6 max-w-2xl">
                 If you have a question about our services, want a second opinion on a project, or need help
                 working out what to prioritise, get in touch directly.

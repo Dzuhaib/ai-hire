@@ -55,7 +55,7 @@ const InstagramChatbotBlog = () => {
 
           <motion.header initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-pink-500/10 text-pink-500 text-sm font-medium mb-6">Instagram</span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6 leading-tight">
               Instagram Chatbot for UAE Businesses: Automate DMs and Capture Leads 24/7
             </h1>
             <div className="flex items-center gap-6 text-muted-foreground mb-8">
@@ -135,7 +135,7 @@ const InstagramChatbotBlog = () => {
           </motion.div>
 
           <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 pt-12 border-t border-border">
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-8">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>

@@ -76,7 +76,7 @@ const ContactPage = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Contact</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
               Get In Touch
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">

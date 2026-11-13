@@ -25,7 +25,7 @@ const TermsOfService = () => {
               Back to Home
             </Link>
 
-            <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-8">
+            <h1 className="text-3xl md:text-4xl font-serif font-semibold mb-8">
               Terms of Service
             </h1>
             

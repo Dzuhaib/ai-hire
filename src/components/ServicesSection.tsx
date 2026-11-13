@@ -15,7 +15,7 @@ export const ServicesSection = () => {
           className="text-center mb-14"
         >
           <p className="label-tag mb-3">What We Do</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-4">
             Six Services, <span className="text-gradient">One Growth Partner</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

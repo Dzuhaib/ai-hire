@@ -26,7 +26,7 @@ const IndustryServicesSection = ({
       <div className="container-narrow">
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">{eyebrow}</p>
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold">
             {title ?? `Every Service We Build for ${industryName ?? "Your Business"}`}
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">

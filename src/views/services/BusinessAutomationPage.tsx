@@ -36,7 +36,7 @@ const BusinessAutomationPage = () => {
               </div>
               <span className="text-sm text-primary font-medium tracking-wide uppercase">Managed Service</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl font-serif font-semibold leading-tight mb-6">
               Business Process Automation for UAE Small Businesses
             </h1>
             <p className="lead text-xl text-muted-foreground leading-relaxed">
@@ -51,7 +51,7 @@ const BusinessAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">Workflows We Automate</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-8">Workflows We Automate</h2>
             <div className="grid sm:grid-cols-2 gap-5">
               {[
                 { icon: MessageSquare, name: "Lead Follow-Up", desc: "Automatically follow up with new enquiries via email or WhatsApp, immediately when they arrive and again after 24 and 48 hours if there is no reply." },
@@ -77,7 +77,7 @@ const BusinessAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">What Is Included</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-6">What Is Included</h2>
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
               {[
                 "Full workflow setup with no technical skills required from you",
@@ -102,7 +102,7 @@ const BusinessAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Who It Is For</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-6">Who It Is For</h2>
             <p className="text-muted-foreground max-w-2xl mb-6">
               Business process automation is most useful for UAE small businesses where repetitive admin tasks consume significant time each week. It is particularly effective for:
             </p>
@@ -129,7 +129,7 @@ const BusinessAutomationPage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+            <h2 className="text-2xl font-serif font-semibold mb-8">
               Frequently Asked Questions
             </h2>
             <Accordion type="single" collapsible className="w-full max-w-2xl space-y-4">

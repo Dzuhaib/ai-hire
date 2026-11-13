@@ -42,7 +42,7 @@ export const HowItWorksSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <p className="label-tag mb-4">Simple Process</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6">
               How We Turn Your Goals Into{" "}
               <span className="text-gradient">Working Systems</span>
             </h2>

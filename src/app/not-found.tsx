@@ -9,7 +9,7 @@ export default function NotFound() {
       <main className="flex-1 flex items-center justify-center px-4 pt-32 pb-20">
         <div className="text-center max-w-lg">
           <p className="text-8xl font-serif font-bold text-primary/20 mb-4">404</p>
-          <h1 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
+          <h1 className="text-2xl md:text-3xl font-serif font-semibold mb-4">
             Page not found
           </h1>
           <p className="text-muted-foreground mb-8 leading-relaxed">

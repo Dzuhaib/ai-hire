@@ -150,7 +150,7 @@ const LocationPage = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
                 AI Automation Services in {location.city}
               </h1>
 
@@ -218,7 +218,7 @@ const LocationPage = () => {
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
               One partner, six services
             </p>
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl font-serif font-semibold mb-6">
               A joined-up approach for {location.city} businesses
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -241,7 +241,7 @@ const LocationPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">What We Deliver</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               Services available in {location.city}
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -289,7 +289,7 @@ const LocationPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Where We Usually Start</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               Three common starting points
             </h2>
           </motion.div>
@@ -336,7 +336,7 @@ const LocationPage = () => {
               viewport={{ once: true }}
             >
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Why AIVized</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
                 Why {location.city} businesses work with us
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -385,7 +385,7 @@ const LocationPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How It Works</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">A clear four-step process</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">A clear four-step process</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -415,7 +415,7 @@ const LocationPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Areas We Serve</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4">
                 Supporting businesses across {location.city}
               </h2>
               <p className="text-muted-foreground mb-6">
@@ -470,7 +470,7 @@ const LocationPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">UAE Coverage</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Services across the UAE</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">Services across the UAE</h2>
           </motion.div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
@@ -514,7 +514,7 @@ const LocationPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               Working with AIVized in {location.city}
             </h2>
           </motion.div>
@@ -572,7 +572,7 @@ const LocationPage = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6">
               Ready to improve how your {location.city} business runs and grows?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">

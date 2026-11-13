@@ -80,7 +80,7 @@ const CityWebsiteChatbotBlog = () => {
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               {data.city} • Website Chatbot
             </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6 leading-tight">
               Website Chatbot That Runs 24/7{" "}
               <span className="text-gradient">{data.city}</span>
             </h1>
@@ -192,7 +192,7 @@ const CityWebsiteChatbotBlog = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mt-16 pt-12 border-t border-border"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+              <h2 className="text-2xl font-serif font-semibold mb-8">
                 The {data.city} Market: A Deep Analysis
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -211,7 +211,7 @@ const CityWebsiteChatbotBlog = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mt-16 pt-12 border-t border-border"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+              <h2 className="text-2xl font-serif font-semibold mb-8">
                 AI Trends Shaping {data.city}'s Business Landscape
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -230,7 +230,7 @@ const CityWebsiteChatbotBlog = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="mt-16 pt-12 border-t border-border"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+              <h2 className="text-2xl font-serif font-semibold mb-8">
                 {data.city}'s AI Customer Service Landscape
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -249,7 +249,7 @@ const CityWebsiteChatbotBlog = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="mt-16 pt-12 border-t border-border"
             >
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+              <h2 className="text-2xl font-serif font-semibold mb-8">
                 Why {data.city} Businesses Choose AIVized
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -267,7 +267,7 @@ const CityWebsiteChatbotBlog = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-16 pt-12 border-t border-border"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+            <h2 className="text-2xl font-serif font-semibold mb-8">
               Frequently Asked Questions About Website Chatbots in {data.city}
             </h2>
             <Accordion type="single" collapsible className="w-full">

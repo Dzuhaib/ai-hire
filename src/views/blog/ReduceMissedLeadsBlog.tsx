@@ -62,7 +62,7 @@ const ReduceMissedLeadsBlog = () => {
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Lead Generation
             </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6 leading-tight">
               How to Reduce Missed Leads from Your Website{" "}
               <span className="text-gradient">with AI Chatbots</span>
             </h1>
@@ -158,7 +158,7 @@ const ReduceMissedLeadsBlog = () => {
 
           {/* FAQ Section */}
           <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 pt-12 border-t border-border">
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-8">
+            <h2 className="text-2xl font-serif font-semibold mb-8">
               Frequently Asked Questions
             </h2>
             <Accordion type="single" collapsible className="w-full">

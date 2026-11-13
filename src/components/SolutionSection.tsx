@@ -15,7 +15,7 @@ export const SolutionSection = () => {
           <div>
             <p className="label-tag mb-4">The Solution</p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold leading-tight mb-8">
               Stop Losing Leads. Start With{" "}
               <span className="text-gradient">AIVized</span>
             </h2>

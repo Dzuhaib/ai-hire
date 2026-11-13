@@ -27,7 +27,7 @@ const ServicesPage = () => {
                 <span className="w-2 h-2 rounded-full bg-primary" />
                 <span className="text-sm font-medium text-primary">Our Services</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
                 AI, Automation &amp; Digital Growth{" "}
                 <span className="text-gradient">Under One Roof</span>
               </h1>
@@ -119,7 +119,7 @@ const ServicesPage = () => {
                       </div>
                       <span className="label-tag">Service {String(index + 1).padStart(2, "0")}</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-3">
+                    <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-3">
                       {service.title}
                     </h2>
                     <p className="text-primary font-medium mb-5">{service.tagline}</p>
@@ -168,7 +168,7 @@ const ServicesPage = () => {
           <div className="container-narrow">
             <div className="text-center mb-12">
               <p className="label-tag mb-3">How We Work</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                 A Simple, <span className="text-gradient">Accountable Process</span>
               </h2>
             </div>

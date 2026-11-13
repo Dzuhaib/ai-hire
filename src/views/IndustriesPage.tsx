@@ -57,7 +57,7 @@ const IndustriesPage = () => {
               <span className="text-sm font-medium text-primary">Industry Solutions</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
               AI Automation Services for Every UAE Industry
             </h1>
 
@@ -93,7 +93,7 @@ const IndustriesPage = () => {
             className="text-center mb-12"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Our Industries</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Digital Solutions by <span className="text-gradient">Industry</span></h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">Digital Solutions by <span className="text-gradient">Industry</span></h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -160,7 +160,7 @@ const IndustriesPage = () => {
               <span className="text-sm font-medium text-primary">Ready to scope?</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Tell us where the friction is</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Tell us where the friction is</h2>
             <p className="text-lg text-muted-foreground mb-8">
               Share the enquiries, processes, or visibility gaps slowing your team down. We&apos;ll review them and come back with a scoped plan across the services that fit.
             </p>

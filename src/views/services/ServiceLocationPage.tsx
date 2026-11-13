@@ -26,7 +26,7 @@ const ServiceLocationPage = ({ service, city }: ServiceLocationPageProps) => {
               <Zap className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Service &amp; Location</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
               {service.title} in {city.city}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
@@ -55,7 +55,7 @@ const ServiceLocationPage = ({ service, city }: ServiceLocationPageProps) => {
 
       <section className="section-padding bg-background border-b border-border/50">
         <div className="container-narrow max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
+          <h2 className="text-2xl font-serif font-semibold mb-6">
             Why {service.title} Matters in {city.city}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
@@ -68,7 +68,7 @@ const ServiceLocationPage = ({ service, city }: ServiceLocationPageProps) => {
         <div className="container-narrow">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Service Deliverables</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               What the {service.title} Includes
             </h2>
           </div>
@@ -89,7 +89,7 @@ const ServiceLocationPage = ({ service, city }: ServiceLocationPageProps) => {
         <div className="container-narrow max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQ</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Questions About {service.title} in {city.city}</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">Questions About {service.title} in {city.city}</h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, idx) => (
@@ -104,7 +104,7 @@ const ServiceLocationPage = ({ service, city }: ServiceLocationPageProps) => {
 
       <section className="section-padding bg-muted/30 border-t border-b border-border/50">
         <div className="container-narrow text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Ready for {service.title} in {city.city}?</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Ready for {service.title} in {city.city}?</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Tell us about your {city.city.toLowerCase()} business and we will scope the {service.title.toLowerCase()} work that fits.
           </p>

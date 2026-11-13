@@ -62,7 +62,7 @@ const AIAgencyDubai = () => {
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               AI Agency
             </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6 leading-tight">
               Why Dubai Businesses Need an AI Agency in 2026
             </h1>
 

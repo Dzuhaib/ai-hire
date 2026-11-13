@@ -93,7 +93,7 @@ const AuthPage = () => {
 
             {/* Header */}
             <div className="mb-8">
-              <h1 className="text-3xl font-serif font-semibold text-foreground mb-2">
+              <h1 className="text-2xl font-serif font-semibold text-foreground mb-2">
                 {isSignUp ? "Create your account" : "Welcome back"}
               </h1>
               <p className="text-muted-foreground text-sm">

@@ -31,7 +31,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Main heading */}
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-8 max-w-4xl text-balance">
+        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-8 max-w-4xl text-balance">
           We Build{" "}
           <em className="not-italic text-primary">AI Systems</em>{" "}
           That Grow Your Business

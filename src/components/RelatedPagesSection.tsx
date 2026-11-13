@@ -82,7 +82,7 @@ export const RelatedPagesSection = ({
           <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
             {title}
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold">
             Discover Our <span className="text-gradient">AI Chatbot Solutions</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">

@@ -111,7 +111,7 @@ const IndustryPage = () => {
                 <span className="text-sm font-medium text-primary">{industry.tagline}</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
                 {industry.heroTitle}
               </h1>
 
@@ -176,7 +176,7 @@ const IndustryPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl font-serif font-semibold mb-6">
               One Partner for AI, Automation &amp; Digital Growth in {industry.industry}
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -197,7 +197,7 @@ const IndustryPage = () => {
               className="text-center mb-12"
             >
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Industry Overview</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                 The {industry.industry} Sector in the UAE
               </h2>
             </motion.div>
@@ -215,7 +215,7 @@ const IndustryPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Real Challenges, Real Solutions</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Problems {industry.industry} Businesses Face</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">Problems {industry.industry} Businesses Face</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -267,7 +267,7 @@ const IndustryPage = () => {
             <div className="order-1 lg:order-2">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
                 <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Powerful Features</p>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold">Built for {industry.industry}</h2>
+                <h2 className="text-2xl md:text-3xl font-serif font-semibold">Built for {industry.industry}</h2>
                 <p className="text-muted-foreground mt-4">Every feature designed specifically for the unique challenges of {industry.industry.toLowerCase()} businesses.</p>
               </motion.div>
 
@@ -302,7 +302,7 @@ const IndustryPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Perfect For</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Who Uses AIVized for {industry.industry}?</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">Who Uses AIVized for {industry.industry}?</h2>
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-3">
@@ -328,7 +328,7 @@ const IndustryPage = () => {
                 className="text-center mb-12"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Deep Dive</p>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                   {industry.industry} Businesses: What You Need to Know
                 </h2>
               </motion.div>
@@ -359,7 +359,7 @@ const IndustryPage = () => {
                 className="text-center mb-12"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Key Benefits</p>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                   What {industry.industry} Businesses Gain with AIVized
                 </h2>
               </motion.div>
@@ -392,7 +392,7 @@ const IndustryPage = () => {
             className="text-center mb-16"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">How It Works</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">
               A Scoped Plan in 4 Steps
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -477,7 +477,7 @@ const IndustryPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">Common Questions About AI, Automation &amp; Growth for {industry.industry}</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">Common Questions About AI, Automation &amp; Growth for {industry.industry}</h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
@@ -499,7 +499,7 @@ const IndustryPage = () => {
           <div className="container-narrow">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
               <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">By City</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold">
                 {industry.industry} AI &amp; Automation <span className="text-gradient">Across the UAE</span>
               </h2>
             </motion.div>
@@ -524,7 +524,7 @@ const IndustryPage = () => {
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Explore More</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold">AI Solutions for Other Industries</h2>
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold">AI Solutions for Other Industries</h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -545,7 +545,7 @@ const IndustryPage = () => {
       <section id="contact-cta" className="section-padding bg-secondary/20">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6">
               Ready to Transform Your {industry.industry} Business?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">

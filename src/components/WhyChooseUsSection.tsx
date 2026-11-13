@@ -77,7 +77,7 @@ export const WhyChooseUsSection = ({ variant = "homepage" }: WhyChooseUsSectionP
           className="text-center mb-16 max-w-2xl mx-auto"
         >
           <p className="label-tag mb-4">Why AIVized</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-5">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-5">
             Why UAE Businesses{" "}
             <span className="text-gradient">Choose AIVized</span>
           </h2>

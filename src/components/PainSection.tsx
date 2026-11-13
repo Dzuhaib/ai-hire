@@ -34,7 +34,7 @@ export const PainSection = () => {
           <div className="order-1 lg:order-2">
             <p className="text-sm uppercase tracking-[0.2em] text-primary/70 mb-6">The Problem</p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-10">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-10">
               Growth Gets Stuck When Your{" "}
               <span className="text-gradient">Systems Do Not Scale</span>
             </h2>
