@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowLeft, CheckCircle2, Smartphone, MessageCircle, Clock3 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlogInlineImage } from "@/components/BlogInlineImage";
@@ -197,20 +198,7 @@ const AIPersonalAssistantBlog = () => {
               </Accordion>
             </section>
 
-            <div className="mt-16 p-8 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
-              <h3 className="text-2xl font-serif font-semibold mb-4">
-                Ready to Get Your AI Personal Assistant?
-              </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                AIVized provides managed AI personal assistants for UAE businesses across all industries. We handle installation, training, monitoring, and updates.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-              >
-                Get in Touch
-              </Link>
-            </div>
+            <FinalCTASection />
           </motion.div>
           <AuthorBio />
         </article>

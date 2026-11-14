@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowLeft, CheckCircle2, MessageCircle, Globe, Smartphone, TrendingUp } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlogInlineImage } from "@/components/BlogInlineImage";
@@ -230,21 +231,7 @@ const AIChatbotGuideBlog = () => {
               </Accordion>
             </section>
 
-            {/* CTA */}
-            <div className="mt-16 p-8 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
-              <h3 className="text-2xl font-serif font-semibold mb-4">
-                Ready to Get Your AI Chatbot?
-              </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join UAE small businesses already using AI chatbots to capture more leads, provide 24/7 customer support, and grow faster. Get in touch to see how we can help.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-              >
-                Get in Touch
-              </Link>
-            </div>
+            <FinalCTASection />
           </motion.div>
                   <AuthorBio />
         </article>

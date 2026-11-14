@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo } from "react";
@@ -18,46 +17,11 @@ import { industryExpandedContent } from "@/data/industryContent";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import IndustryServicesSection from "@/components/IndustryServicesSection";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import { ConnectedStackVisual, IndustryVisual } from "@/components/visuals/LandingVisuals";
+import { industryVisualVariant } from "@/lib/visualVariants";
 
 import NotFound from "./NotFound";
-
-// Hero images
-const aiRestaurantHero = "/assets/industries/ai-restaurant-hero.png";
-const aiRealEstateHero = "/assets/industries/ai-realestate-hero.png";
-const aiEcommerceHero = "/assets/industries/ai-ecommerce-hero.png";
-const aiHealthcareHero = "/assets/industries/ai-healthcare-hero.png";
-const aiLegalHero = "/assets/industries/ai-legal-hero.png";
-const aiFitnessHero = "/assets/industries/ai-fitness-hero.png";
-const aiTravelHero = "/assets/industries/ai-travel-hero.png";
-
-// Scene images
-const restaurantScene = "/assets/industries/restaurant-scene.png";
-const realestateScene = "/assets/industries/realestate-scene.png";
-const ecommerceScene = "/assets/industries/ecommerce-scene.png";
-const healthcareScene = "/assets/industries/healthcare-scene.png";
-const legalScene = "/assets/industries/legal-scene.png";
-const fitnessScene = "/assets/industries/fitness-scene.png";
-const travelScene = "/assets/industries/travel-scene.png";
-
-const heroImages: Record<string, string> = {
-  restaurants: aiRestaurantHero,
-  "real-estate": aiRealEstateHero,
-  ecommerce: aiEcommerceHero,
-  healthcare: aiHealthcareHero,
-  legal: aiLegalHero,
-  fitness: aiFitnessHero,
-  travel: aiTravelHero,
-};
-
-const sceneImages: Record<string, string> = {
-  restaurants: restaurantScene,
-  "real-estate": realestateScene,
-  ecommerce: ecommerceScene,
-  healthcare: healthcareScene,
-  legal: legalScene,
-  fitness: fitnessScene,
-  travel: travelScene,
-};
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Bot, Workflow, Search, Megaphone, Code2, MonitorSmartphone,
@@ -67,16 +31,6 @@ const IndustryPage = () => {
   const { industry: industrySlug } = useParams();
   const industry = industrySlug ? getIndustryBySlug(industrySlug) : undefined;
   const industryCities = useMemo(() => industrySlug ? getCitiesForIndustry(industrySlug) : [], [industrySlug]);
-
-  const heroImage = useMemo(() => {
-    if (!industrySlug) return aiRestaurantHero;
-    return heroImages[industrySlug] || aiRestaurantHero;
-  }, [industrySlug]);
-
-  const sceneImage = useMemo(() => {
-    if (!industrySlug) return restaurantScene;
-    return sceneImages[industrySlug] || restaurantScene;
-  }, [industrySlug]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -147,8 +101,10 @@ const IndustryPage = () => {
               className="relative flex justify-center"
             >
               <div className="relative">
-                <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
-                  <Image src={heroImage} alt={`AI and digital services for ${industry.industry}`} width={600} height={500} priority className="w-full max-w-md object-cover" />
+                <div className="relative rounded-xl overflow-hidden border border-border bg-secondary/30 shadow-[var(--shadow-lift)]">
+                  <div className="p-3 pb-20">
+                    <IndustryVisual variant={industryVisualVariant(industry.slug)} />
+                  </div>
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -254,8 +210,10 @@ const IndustryPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative order-2 lg:order-1">
               <div className="relative">
-                <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
-                  <Image src={sceneImage} alt={`AI and digital systems for ${industry.industry}`} width={1200} height={675} className="w-full object-cover" />
+                <div className="relative rounded-xl overflow-hidden border border-border bg-secondary/30 shadow-[var(--shadow-lift)]">
+                  <div className="p-3 pb-20">
+                    <ConnectedStackVisual />
+                  </div>
                   <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 px-4 py-3 rounded-xl bg-card/95 border border-border/80">
                     <Layers3 className="w-5 h-5 text-primary" />
                     <span className="text-sm font-medium">Connected {industry.industry.toLowerCase()} systems</span>
@@ -541,40 +499,10 @@ const IndustryPage = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section id="contact-cta" className="section-padding bg-secondary/20">
-        <div className="container-narrow">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6">
-              Ready to Transform Your {industry.industry} Business?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-                Join UAE {industry.industry.toLowerCase()} businesses using AIVized to deliver faster, more consistent customer service.
-            </p>
+      <div id="contact-cta">
+        <FinalCTASection />
+      </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <Link href="/contact">
-                <Button size="lg" className="btn-primary group">
-                  Get in Touch <Zap className="w-4 h-4 ml-2 " />
-                </Button>
-              </Link>
-              <a href="mailto:info@aivized.com">
-                <Button variant="outline" size="lg">
-                  Contact Sales <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </a>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />Fully managed</span>
-              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />No long-term contracts</span>
-              <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" />24-hour setup</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      
       <Footer />
     </div>
   );

@@ -17,6 +17,7 @@ import {
   MessageSquare,
   MonitorSmartphone,
   Search,
+  ShieldCheck,
   ShoppingBag,
   TrendingUp,
   Users,
@@ -24,6 +25,8 @@ import {
   AlertCircle,
   Link2Off,
   MapPin,
+  MapPinned,
+  Plane,
   Star,
   Building2,
   Dumbbell,
@@ -31,6 +34,7 @@ import {
   Scale,
   Target,
   Utensils,
+  type LucideIcon,
 } from "lucide-react";
 import type { IndustryVisualVariant } from "@/lib/visualVariants";
 
@@ -694,6 +698,71 @@ export const IndustryVisual = ({ variant }: { variant: IndustryVisualVariant }) 
     );
   }
 
+  if (variant === "travel") {
+    return (
+      <VisualFrame label="trip enquiries" meta="Live" className="h-full">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="visual-panel p-3 mb-2.5"
+        >
+          <div className="flex items-center justify-between mb-2">
+            <MicroLabel>Itinerary request</MicroLabel>
+            <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[0.6rem] font-medium text-primary">
+              New
+            </span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
+              <Plane className="h-4 w-4 text-primary" />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="text-[0.7rem] font-medium">Dubai to Bali</p>
+              <p className="text-[0.62rem] text-muted-foreground">2 travellers · 7 nights</p>
+            </div>
+            <MapPinned className="h-3.5 w-3.5 text-muted-foreground" />
+          </div>
+        </motion.div>
+        <div className="grid grid-cols-2 gap-2">
+          <motion.div
+            variants={reveal}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="visual-panel p-2.5"
+          >
+            <MicroLabel>Quote</MicroLabel>
+            <p className="mt-1 font-serif text-sm font-semibold leading-none">AED 8,400</p>
+          </motion.div>
+          <motion.div
+            variants={reveal}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="visual-panel p-2.5"
+          >
+            <MicroLabel>Follow-up</MicroLabel>
+            <p className="mt-1 text-[0.68rem] font-medium">Automated</p>
+          </motion.div>
+        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.35, duration: 0.4 }}
+          className="mt-2.5 flex items-center justify-between border-t border-border/60 pt-2"
+        >
+          <span className="flex items-center gap-1.5 text-[0.62rem] text-muted-foreground">
+            <MapPin className="h-3 w-3 text-primary" /> Visa checklist
+          </span>
+          <span className="text-[0.62rem] font-medium text-accent">Sent</span>
+        </motion.div>
+      </VisualFrame>
+    );
+  }
+
   if (variant === "professional") {
     return (
       <VisualFrame label="pipeline" meta="This week" className="h-full">
@@ -1072,7 +1141,15 @@ export const ProofVisual = () => (
   </VisualFrame>
 );
 
-export const EngagementVisual = ({ variant }: { variant: "retail" | "consulting" | "hospitality" }) => {
+export type EngagementVisualVariant =
+  | "retail"
+  | "consulting"
+  | "hospitality"
+  | "healthcare"
+  | "homeware"
+  | "advisory";
+
+export const EngagementVisual = ({ variant }: { variant: EngagementVisualVariant }) => {
   if (variant === "retail") {
     return (
       <VisualFrame label="storefront" meta="Live" className="h-full">
@@ -1116,6 +1193,117 @@ export const EngagementVisual = ({ variant }: { variant: "retail" | "consulting"
               <span className="mt-1.5 block text-[0.6rem] font-medium text-accent">Recovered</span>
             </motion.div>
           </div>
+        </motion.div>
+      </VisualFrame>
+    );
+  }
+
+  if (variant === "healthcare") {
+    return (
+      <VisualFrame label="patient enquiries" meta="Live" className="h-full">
+        <div className="mb-3 flex items-center justify-between">
+          <MicroLabel>Appointment requests</MicroLabel>
+          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[0.6rem] font-medium text-primary">
+            4 waiting
+          </span>
+        </div>
+        <motion.div
+          variants={listStagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="space-y-2"
+        >
+          {[
+            { label: "New patient", time: "09:30", status: "Routed" },
+            { label: "Follow-up", time: "11:00", status: "Booked" },
+            { label: "Prescription question", time: "14:15", status: "Escalated" },
+          ].map((row) => (
+            <motion.div
+              key={row.label}
+              variants={reveal}
+              className="flex items-center justify-between visual-panel px-3 py-2.5"
+            >
+              <div className="flex items-center gap-2">
+                <HeartPulse className="h-3.5 w-3.5 text-primary" />
+                <span className="text-[0.7rem] font-medium">{row.label}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-serif text-[0.64rem] text-muted-foreground">{row.time}</span>
+                <span className="rounded-full bg-card px-2 py-0.5 text-[0.56rem] font-medium text-accent">
+                  {row.status}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.4 }}
+          className="mt-3 flex items-center justify-between border-t border-border/60 pt-2.5"
+        >
+          <span className="text-[0.62rem] text-muted-foreground">Clinical escalation</span>
+          <span className="flex items-center gap-1 text-[0.6rem] font-medium text-accent">
+            <ShieldCheck className="h-3 w-3" /> Safe
+          </span>
+        </motion.div>
+      </VisualFrame>
+    );
+  }
+
+  if (variant === "homeware") {
+    return (
+      <VisualFrame label="product support" meta="Live" className="h-full">
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="visual-panel p-3"
+        >
+          <div className="flex items-center gap-2 rounded-md bg-card px-2.5 py-2">
+            <Search className="h-3 w-3 text-muted-foreground" />
+            <span className="text-[0.7rem] text-muted-foreground">ceramic dinner set</span>
+            <span className="ml-auto text-[0.58rem] uppercase tracking-[0.1em] text-muted-foreground/60">
+              Search
+            </span>
+          </div>
+          <div className="mt-3 grid grid-cols-3 gap-2">
+            {[1, 2, 3].map((tile) => (
+              <div key={tile} className="rounded-md bg-card p-1.5">
+                <div className={`mb-1.5 aspect-square rounded-sm ${tile === 2 ? "bg-accent/20" : "bg-primary/10"}`} />
+                <div className="h-1 w-full rounded-full bg-border mb-1" />
+                <div className="h-1 w-2/3 rounded-full bg-border/70" />
+              </div>
+            ))}
+          </div>
+        </motion.div>
+        <motion.div
+          variants={reveal}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mt-2.5 flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2"
+        >
+          <MessageSquare className="h-3.5 w-3.5 text-primary" />
+          <span className="min-w-0 flex-1 truncate text-[0.66rem] text-muted-foreground">
+            Sizing, materials and returns
+          </span>
+          <span className="text-[0.58rem] font-medium text-accent">AI reply</span>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.45, duration: 0.4 }}
+          className="mt-2.5 flex items-center justify-between border-t border-border/60 pt-2"
+        >
+          <span className="flex items-center gap-1.5 text-[0.62rem] text-muted-foreground">
+            <ShoppingBag className="h-3 w-3 text-primary" /> Post-purchase updates
+          </span>
+          <span className="text-[0.62rem] font-medium text-accent">Automated</span>
         </motion.div>
       </VisualFrame>
     );
@@ -1170,6 +1358,74 @@ export const EngagementVisual = ({ variant }: { variant: "retail" | "consulting"
           <span className="text-[0.62rem] text-muted-foreground">CRM activity</span>
           <span className="flex items-center gap-1 text-[0.6rem] font-medium text-accent">
             <Check className="h-3 w-3" /> Synced
+          </span>
+        </motion.div>
+      </VisualFrame>
+    );
+  }
+
+  if (variant === "advisory") {
+    return (
+      <VisualFrame label="client intake" meta="This week" className="h-full">
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="visual-panel p-3"
+        >
+          <div className="flex items-center justify-between">
+            <MicroLabel>Intake form</MicroLabel>
+            <FileSpreadsheet className="h-3.5 w-3.5 text-primary" />
+          </div>
+          <div className="mt-2.5 space-y-1.5">
+            {[
+              { label: "Company", value: "Northline Advisory" },
+              { label: "Service", value: "Client onboarding" },
+              { label: "Budget", value: "AED 25k - 40k" },
+            ].map((field) => (
+              <div
+                key={field.label}
+                className="flex items-center justify-between rounded-md border border-border bg-card px-2.5 py-1.5"
+              >
+                <span className="text-[0.58rem] uppercase tracking-[0.1em] text-muted-foreground">
+                  {field.label}
+                </span>
+                <span className="text-[0.64rem] font-medium">{field.value}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+        <motion.div
+          variants={listStagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mt-2.5 grid grid-cols-3 gap-1.5"
+        >
+          {[
+            { stage: "New", count: "6" },
+            { stage: "Qualified", count: "4" },
+            { stage: "Won", count: "2" },
+          ].map((column) => (
+            <motion.div key={column.stage} variants={reveal} className="rounded-md bg-surface-warm p-2">
+              <p className="text-[0.56rem] uppercase tracking-[0.1em] text-muted-foreground">
+                {column.stage}
+              </p>
+              <p className="mt-0.5 font-serif text-sm font-semibold">{column.count}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.45, duration: 0.4 }}
+          className="mt-2.5 flex items-center justify-between border-t border-border/60 pt-2"
+        >
+          <span className="text-[0.62rem] text-muted-foreground">Follow-up consistency</span>
+          <span className="flex items-center gap-1 text-[0.6rem] font-medium text-accent">
+            <Check className="h-3 w-3" /> 100%
           </span>
         </motion.div>
       </VisualFrame>
@@ -1234,42 +1490,57 @@ export const EngagementVisual = ({ variant }: { variant: "retail" | "consulting"
   );
 };
 
-export const LocationVisual = ({ city = "UAE" }: { city?: string }) => (
-  <VisualFrame label={`${city.toLowerCase()} / local presence`} meta="Live" className="h-full">
-    <div className="grid grid-cols-[1.1fr_0.9fr] gap-2.5">
+export const LocationHubVisual = () => (
+  <VisualFrame label="uae coverage" meta="7 emirates" className="h-full">
+    <div className="grid gap-2.5 sm:grid-cols-[1.15fr_0.85fr]">
       <div className="visual-panel p-3">
         <div className="flex items-center justify-between">
-          <MicroLabel>Service area</MicroLabel>
-          <MapPin className="h-3 w-3 text-primary" />
+          <MicroLabel>Delivery map</MicroLabel>
+          <MapPinned className="h-3 w-3 text-primary" />
         </div>
-        <div className="relative mt-2 h-24 overflow-hidden rounded-lg border border-border/50 bg-card">
+        <div className="relative mt-2 h-28 overflow-hidden rounded-lg border border-border/50 bg-card">
           <div className="absolute inset-0 grid grid-cols-4 grid-rows-3">
             {Array.from({ length: 12 }).map((_, cell) => (
               <div key={cell} className="border-b border-r border-border/30 last:border-r-0" />
             ))}
           </div>
-          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <span className="absolute -inset-2 rounded-full border border-primary/25" />
-            <span className="absolute -inset-4 rounded-full border border-primary/10" />
-            <MapPin className="relative h-4 w-4 text-primary" />
-          </span>
+          {[
+            { city: "Dubai", left: "62%", top: "54%" },
+            { city: "Abu Dhabi", left: "34%", top: "70%" },
+            { city: "Sharjah", left: "69%", top: "38%" },
+            { city: "Ajman", left: "71%", top: "29%" },
+            { city: "RAK", left: "76%", top: "18%" },
+            { city: "Fujairah", left: "84%", top: "48%" },
+            { city: "UAQ", left: "64%", top: "24%" },
+          ].map((pin) => (
+            <span
+              key={pin.city}
+              title={pin.city}
+              className="absolute -translate-x-1/2 -translate-y-1/2"
+              style={{ left: pin.left, top: pin.top }}
+            >
+              <span className="absolute -inset-1.5 rounded-full border border-primary/20" />
+              <MapPin className="relative h-3 w-3 text-primary" />
+            </span>
+          ))}
           <span className="absolute bottom-1.5 left-2 text-[0.54rem] font-medium uppercase tracking-[0.14em] text-muted-foreground">
-            {city}
+            UAE
           </span>
         </div>
       </div>
 
       <div className="space-y-2">
         <div className="visual-panel p-2.5">
-          <MicroLabel>Local rank</MicroLabel>
-          <div className="mt-0.5 flex items-end justify-between">
-            <p className="font-serif text-2xl font-semibold leading-none">01</p>
-            <TrendingUp className="h-3.5 w-3.5 text-accent" />
-          </div>
+          <MicroLabel>Coverage</MicroLabel>
+          <p className="mt-0.5 font-serif text-lg font-semibold leading-none">7 emirates</p>
         </div>
         <div className="visual-panel p-2.5">
-          <MicroLabel>Reply</MicroLabel>
-          <p className="mt-0.5 font-serif text-lg font-semibold leading-none">4 min</p>
+          <MicroLabel>Delivery</MicroLabel>
+          <p className="mt-0.5 text-[0.66rem] font-medium">Remote + on-site</p>
+        </div>
+        <div className="visual-panel p-2.5">
+          <MicroLabel>Team</MicroLabel>
+          <p className="mt-0.5 text-[0.66rem] font-medium">One partner</p>
         </div>
       </div>
     </div>
@@ -1281,13 +1552,183 @@ export const LocationVisual = ({ city = "UAE" }: { city?: string }) => (
       transition={{ delay: 0.35, duration: 0.4 }}
       className="mt-2.5 flex items-center justify-between border-t border-border/60 pt-2"
     >
-      <span className="text-[0.62rem] text-muted-foreground">Google Business</span>
+      <span className="flex items-center gap-1.5 text-[0.62rem] text-muted-foreground">
+        <Globe className="h-3 w-3 text-primary" /> UAE-wide
+      </span>
       <span className="flex items-center gap-1 text-[0.6rem] font-medium text-accent">
-        <Check className="h-3 w-3" /> Updated
+        <Check className="h-3 w-3" /> Coverage active
       </span>
     </motion.div>
   </VisualFrame>
 );
+
+interface LocationVisualProfile {
+  pin: { left: string; top: string };
+  metricLabel: string;
+  metric: string;
+  metricNote: string;
+  detailLabel: string;
+  detail: string;
+  status: string;
+  icon: LucideIcon;
+}
+
+const locationProfile = (city: string): LocationVisualProfile => {
+  switch (city) {
+    case "Abu Dhabi":
+      return {
+        pin: { left: "36%", top: "66%" },
+        metricLabel: "Enquiries",
+        metric: "24",
+        metricNote: "This week",
+        detailLabel: "Follow-up",
+        detail: "100%",
+        status: "Synced",
+        icon: Building2,
+      };
+    case "Sharjah":
+      return {
+        pin: { left: "69%", top: "38%" },
+        metricLabel: "Retail leads",
+        metric: "18",
+        metricNote: "This month",
+        detailLabel: "Reply",
+        detail: "5 min",
+        status: "Verified",
+        icon: ShoppingBag,
+      };
+    case "Ajman":
+      return {
+        pin: { left: "71%", top: "29%" },
+        metricLabel: "Bookings",
+        metric: "32",
+        metricNote: "This week",
+        detailLabel: "Reminders",
+        detail: "Automated",
+        status: "Updated",
+        icon: HeartPulse,
+      };
+    case "Ras Al Khaimah":
+      return {
+        pin: { left: "78%", top: "18%" },
+        metricLabel: "Tourism leads",
+        metric: "12",
+        metricNote: "This month",
+        detailLabel: "Response",
+        detail: "7 min",
+        status: "Live",
+        icon: Plane,
+      };
+    case "Fujairah":
+      return {
+        pin: { left: "84%", top: "48%" },
+        metricLabel: "Routes",
+        metric: "6",
+        metricNote: "Active",
+        detailLabel: "Dispatch",
+        detail: "Updated",
+        status: "Synced",
+        icon: Workflow,
+      };
+    case "Umm Al Quwain":
+      return {
+        pin: { left: "64%", top: "24%" },
+        metricLabel: "Local profile",
+        metric: "01",
+        metricNote: "Google Maps",
+        detailLabel: "Reviews",
+        detail: "4.8",
+        status: "Verified",
+        icon: Star,
+      };
+    case "Al Ain":
+      return {
+        pin: { left: "46%", top: "76%" },
+        metricLabel: "Pipeline",
+        metric: "9",
+        metricNote: "This week",
+        detailLabel: "Follow-up",
+        detail: "Synced",
+        status: "Updated",
+        icon: Users,
+      };
+    default:
+      return {
+        pin: { left: "62%", top: "54%" },
+        metricLabel: "Local rank",
+        metric: "01",
+        metricNote: "Google Maps",
+        detailLabel: "Reply",
+        detail: "4 min",
+        status: "Updated",
+        icon: TrendingUp,
+      };
+  }
+};
+
+export const LocationVisual = ({ city = "UAE" }: { city?: string }) => {
+  const profile = locationProfile(city);
+  const ProfileIcon = profile.icon;
+
+  return (
+    <VisualFrame label={`${city.toLowerCase()} / local presence`} meta="Live" className="h-full">
+      <div className="grid grid-cols-[1.1fr_0.9fr] gap-2.5">
+        <div className="visual-panel p-3">
+          <div className="flex items-center justify-between">
+            <MicroLabel>Service area</MicroLabel>
+            <MapPin className="h-3 w-3 text-primary" />
+          </div>
+          <div className="relative mt-2 h-24 overflow-hidden rounded-lg border border-border/50 bg-card">
+            <div className="absolute inset-0 grid grid-cols-4 grid-rows-3">
+              {Array.from({ length: 12 }).map((_, cell) => (
+                <div key={cell} className="border-b border-r border-border/30 last:border-r-0" />
+              ))}
+            </div>
+            <span
+              className="absolute -translate-x-1/2 -translate-y-1/2"
+              style={{ left: profile.pin.left, top: profile.pin.top }}
+            >
+              <span className="absolute -inset-2 rounded-full border border-primary/25" />
+              <span className="absolute -inset-4 rounded-full border border-primary/10" />
+              <MapPin className="relative h-4 w-4 text-primary" />
+            </span>
+            <span className="absolute bottom-1.5 left-2 text-[0.54rem] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+              {city}
+            </span>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <div className="visual-panel p-2.5">
+            <MicroLabel>{profile.metricLabel}</MicroLabel>
+            <div className="mt-0.5 flex items-end justify-between">
+              <p className="font-serif text-2xl font-semibold leading-none">{profile.metric}</p>
+              <ProfileIcon className="h-3.5 w-3.5 text-accent" />
+            </div>
+            <p className="mt-0.5 text-[0.54rem] text-muted-foreground">{profile.metricNote}</p>
+          </div>
+          <div className="visual-panel p-2.5">
+            <MicroLabel>{profile.detailLabel}</MicroLabel>
+            <p className="mt-0.5 font-serif text-lg font-semibold leading-none">{profile.detail}</p>
+          </div>
+        </div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.35, duration: 0.4 }}
+        className="mt-2.5 flex items-center justify-between border-t border-border/60 pt-2"
+      >
+        <span className="text-[0.62rem] text-muted-foreground">Google Business</span>
+        <span className="flex items-center gap-1 text-[0.6rem] font-medium text-accent">
+          <Check className="h-3 w-3" /> {profile.status}
+        </span>
+      </motion.div>
+    </VisualFrame>
+  );
+};
 
 export const AboutVisual = () => (
   <VisualFrame label="one accountable team" meta="In-house" className="h-full">
@@ -1340,6 +1781,7 @@ export const IndustryHubVisual = () => (
         { label: "Healthcare", icon: HeartPulse },
         { label: "Legal", icon: Scale },
         { label: "Fitness", icon: Dumbbell },
+        { label: "Travel", icon: Plane },
       ].map((item, index) => (
         <motion.div
           key={item.label}
@@ -1347,7 +1789,9 @@ export const IndustryHubVisual = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: index * 0.05, duration: 0.35 }}
-          className="flex items-center gap-2 visual-panel px-2.5 py-2"
+          className={`flex items-center gap-2 visual-panel px-2.5 py-2 ${
+            index === 6 ? "col-span-2" : ""
+          }`}
         >
           <item.icon className="h-3.5 w-3.5 text-primary" />
           <span className="truncate text-[0.64rem] font-medium">{item.label}</span>

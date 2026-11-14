@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, ChevronLeft, ChevronRight as ChevronRightIcon } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
 
 import { allBlogPosts } from "@/data/blogData";
 import { BlogCardsSkeleton } from "@/components/skeletons/SectionSkeletons";
@@ -195,6 +196,8 @@ const BlogsPage = () => {
           )}
         </div>
       </main>
+
+      <FinalCTASection />
       
       <Footer />
     </div>

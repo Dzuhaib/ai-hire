@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   MapPin,
@@ -23,22 +22,10 @@ import { getLocationFaqs } from "@/data/locationContent";
 import { services } from "@/data/servicesData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import { LocationVisual } from "@/components/visuals/LandingVisuals";
 
 import NotFound from "./NotFound";
-
-// Shared hero image for UAE city pages until city-specific imagery is available
-const cityHeroImage = "/assets/locations/ai-support.png";
-
-const cityImages: Record<string, string> = {
-  dubai: cityHeroImage,
-  "abu-dhabi": cityHeroImage,
-  sharjah: cityHeroImage,
-  ajman: cityHeroImage,
-  "ras-al-khaimah": cityHeroImage,
-  fujairah: cityHeroImage,
-  "umm-al-quwain": cityHeroImage,
-  "al-ain": cityHeroImage,
-};
 
 const growthPaths = [
   {
@@ -110,11 +97,6 @@ const LocationPage = () => {
   const city = Array.isArray(params.city) ? params.city[0] : params.city;
   const location = city ? getLocationBySlug(city) : undefined;
 
-  const heroImage = useMemo(() => {
-    if (!city) return cityHeroImage;
-    return cityImages[city] || cityHeroImage;
-  }, [city]);
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [city]);
@@ -179,14 +161,10 @@ const LocationPage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative flex justify-center"
             >
-              <div className="relative rounded-xl overflow-hidden border border-border shadow-[var(--shadow-lift)]">
-                <Image
-                  src={heroImage}
-                  alt={`Digital services for businesses in ${location.city}`}
-                  width={1200}
-                  height={675}
-                  className="w-full object-cover"
-                />
+              <div className="relative rounded-xl overflow-hidden border border-border bg-secondary/30 shadow-[var(--shadow-lift)]">
+                <div className="p-3 pb-20">
+                  <LocationVisual city={location.city} />
+                </div>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -563,54 +541,7 @@ const LocationPage = () => {
         </section>
       )}
 
-      {/* Final CTA */}
-      <section className="section-padding bg-secondary/20">
-        <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-6">
-              Ready to improve how your {location.city} business runs and grows?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Tell us what is slowing the business down. We will recommend the right mix of services and give
-              you a clear next step, with no obligation.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <Link href="/contact">
-                <Button size="lg" className="btn-primary group">
-                  Book a Free Consultation
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button variant="outline" size="lg">
-                  View All Services
-                </Button>
-              </Link>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                Fixed written scope
-              </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                Remote delivery across the UAE
-              </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                Optional ongoing support
-              </span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <FinalCTASection />
 
       <Footer />
     </div>

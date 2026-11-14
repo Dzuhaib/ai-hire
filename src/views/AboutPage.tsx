@@ -6,6 +6,8 @@ import { CheckCircle2, Mail, ArrowRight, Compass, Layers3, Target } from "lucide
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import { AboutVisual, RoadmapVisual } from "@/components/visuals/LandingVisuals";
 import { services } from "@/data/servicesData";
 
 const AboutPage = () => {
@@ -19,25 +21,35 @@ const AboutPage = () => {
           <div className="container-narrow">
 
             {/* Hero */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-16 max-w-3xl"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-8 bg-primary" />
-                <span className="text-sm text-primary font-medium tracking-wide uppercase">About AIVized</span>
-              </div>
-              <h1 className="text-3xl md:text-4xl font-serif font-semibold leading-tight mb-6">
-                AI, Automation &amp; Digital Growth for UAE Businesses
-              </h1>
-              <p className="lead text-xl text-muted-foreground leading-relaxed">
-                AIVized helps UAE businesses design, build, and run the systems they depend on - from custom
-                AI and automation to search visibility, marketing, websites, and desktop software. We combine
-                strategy, delivery, and ongoing support in one accountable team.
-              </p>
-            </motion.div>
+            <div className="mb-16 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="max-w-3xl"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-px w-8 bg-primary" />
+                  <span className="text-sm text-primary font-medium tracking-wide uppercase">About AIVized</span>
+                </div>
+                <h1 className="text-3xl md:text-4xl font-serif font-semibold leading-tight mb-6">
+                  AI, Automation &amp; Digital Growth for UAE Businesses
+                </h1>
+                <p className="lead text-xl text-muted-foreground leading-relaxed">
+                  AIVized helps UAE businesses design, build, and run the systems they depend on - from custom
+                  AI and automation to search visibility, marketing, websites, and desktop software. We combine
+                  strategy, delivery, and ongoing support in one accountable team.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="hidden lg:block"
+              >
+                <AboutVisual />
+              </motion.div>
+            </div>
 
             {/* What we do */}
             <motion.section
@@ -114,6 +126,9 @@ const AboutPage = () => {
                     <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
                   </div>
                 ))}
+              </div>
+              <div className="mt-8 max-w-3xl">
+                <RoadmapVisual />
               </div>
             </motion.section>
 
@@ -263,30 +278,10 @@ const AboutPage = () => {
               </div>
             </motion.section>
 
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="p-8 rounded-2xl bg-secondary/40 border border-primary/20 text-center"
-            >
-              <h3 className="text-2xl font-serif font-semibold mb-4">
-                Ready to Get Started?
-              </h3>
-              <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-                Book a free consultation. We will listen to the problem, recommend the right mix of
-                services, and give you a clear next step.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-              >
-                Book a Free Consultation
-              </Link>
-            </motion.div>
-
           </div>
         </div>
+
+        <FinalCTASection />
       </main>
 
       <Footer />

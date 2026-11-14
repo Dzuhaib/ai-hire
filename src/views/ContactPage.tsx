@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin, Mail, Clock, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ProjectBriefVisual } from "@/components/visuals/LandingVisuals";
 import { Button } from "@/components/ui/button";
 
 const SUBJECTS = [
@@ -69,20 +70,31 @@ const ContactPage = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-secondary/20">
-        <div className="container-narrow relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Contact</p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
-              Get In Touch
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to improve how your business runs and grows? We would love to hear from you.
-            </p>
-          </motion.div>
+        <div className="container-narrow relative z-10">
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Contact</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
+                Get In Touch
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+                Ready to improve how your business runs and grows? We would love to hear from you.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="hidden lg:block"
+            >
+              <ProjectBriefVisual />
+            </motion.div>
+          </div>
         </div>
       </section>
 

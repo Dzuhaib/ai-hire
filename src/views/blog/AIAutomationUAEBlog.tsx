@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowLeft, CheckCircle2, Zap, Settings, BarChart3, Cpu } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlogInlineImage } from "@/components/BlogInlineImage";
@@ -205,20 +206,7 @@ const AIAutomationUAEBlog = () => {
               </Accordion>
             </section>
 
-            <div className="mt-16 p-8 rounded-2xl bg-secondary/40 border border-primary/20 text-center">
-              <h3 className="text-2xl font-serif font-semibold mb-4">
-                Get Started with AI Automation for Business UAE Today
-              </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                AIVized provides fully managed AI automation for business UAE across all industries. We handle installation, training, monitoring, and updates. Get in touch to discuss what your business needs.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-              >
-                Get in Touch
-              </Link>
-            </div>
+            <FinalCTASection />
           </motion.div>
           <AuthorBio />
         </article>

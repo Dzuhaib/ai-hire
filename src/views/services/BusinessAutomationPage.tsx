@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle2, Zap, Mail, Bell, UserCheck, RefreshCw, MessageSquare } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Zap, Bell, UserCheck, RefreshCw, MessageSquare } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import { ServiceVisual } from "@/components/visuals/LandingVisuals";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { businessAutomationFaqs as faqs } from "@/data/serviceFaqs";
 
@@ -24,25 +26,35 @@ const BusinessAutomationPage = () => {
           </nav>
 
           {/* Hero */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-16 max-w-3xl"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-primary" />
+          <div className="mb-16 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-3xl"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-primary" />
+                </div>
+                <span className="text-sm text-primary font-medium tracking-wide uppercase">Managed Service</span>
               </div>
-              <span className="text-sm text-primary font-medium tracking-wide uppercase">Managed Service</span>
-            </div>
-            <h1 className="text-3xl md:text-4xl font-serif font-semibold leading-tight mb-6">
-              Business Process Automation for UAE Small Businesses
-            </h1>
-            <p className="lead text-xl text-muted-foreground leading-relaxed">
-              AIVized automates the repetitive workflows that drain your team&apos;s time: lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. We handle the setup and keep it running so you don&apos;t have to.
-            </p>
-          </motion.div>
+              <h1 className="text-3xl md:text-4xl font-serif font-semibold leading-tight mb-6">
+                Business Process Automation for UAE Small Businesses
+              </h1>
+              <p className="lead text-xl text-muted-foreground leading-relaxed">
+                AIVized automates the repetitive workflows that drain your team&apos;s time: lead follow-up sequences, appointment reminders, customer onboarding, and internal notifications. We handle the setup and keep it running so you don&apos;t have to.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="hidden lg:block"
+            >
+              <ServiceVisual slug="automations" />
+            </motion.div>
+          </div>
 
           {/* Workflow types */}
           <motion.section
@@ -142,29 +154,9 @@ const BusinessAutomationPage = () => {
             </Accordion>
           </motion.section>
 
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="p-8 md:p-10 rounded-2xl bg-secondary/40 border border-primary/20 text-center"
-          >
-            <h3 className="text-2xl font-serif font-semibold mb-4">
-              Want to Automate Your Business Workflows?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Email us with a description of the repetitive tasks you want to automate. We will respond within one working day.
-            </p>
-            <a
-              href="mailto:info@aivized.com"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-            >
-              <Mail className="w-4 h-4" />
-              info@aivized.com
-            </a>
-          </motion.div>
-
         </div>
+
+        <FinalCTASection />
       </main>
 
       <Footer />

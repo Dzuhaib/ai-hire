@@ -17,13 +17,14 @@ const ServicesPage = () => {
       <main>
         {/* Hero */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-secondary/20">
-          <div className="container-narrow relative z-10 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto"
-            >
+          <div className="container-narrow relative z-10">
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center lg:text-left"
+              >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary" />
                 <span className="text-sm font-medium text-primary">Our Services</span>
@@ -36,7 +37,7 @@ const ServicesPage = () => {
                 Six connected services for businesses that want to grow without adding more manual work.
                 Use one service or combine several - we scope the work around your goals.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <Link href="/contact" className="btn-primary text-sm">
                   Book a Free Consultation
                   <ArrowRight className="w-4 h-4 ml-2 inline-block" />
@@ -45,7 +46,16 @@ const ServicesPage = () => {
                   See Client Results
                 </Link>
               </div>
-            </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="hidden lg:block"
+              >
+                <ConnectedStackVisual />
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -77,6 +87,9 @@ const ServicesPage = () => {
                     href={`/services/${service.slug}`}
                     className="group flex h-full flex-col rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:border-primary/40 hover:shadow-[var(--shadow-lift)]"
                   >
+                    <div className="-mx-7 -mt-7 mb-5 rounded-t-2xl border-b border-border bg-secondary/30 p-3">
+                      <ServiceVisual slug={service.slug} />
+                    </div>
                     <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
                       <service.icon className="w-5 h-5 text-primary" />
                     </div>

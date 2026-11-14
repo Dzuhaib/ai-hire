@@ -1,43 +1,23 @@
 "use client";
 
-import Image from 'next/image';
 import Link from "next/link";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Layers3, ArrowRight, Layers, MapPin, Workflow } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
 import IndustryServicesSection from "@/components/IndustryServicesSection";
+import { IndustryHubVisual, IndustryVisual } from "@/components/visuals/LandingVisuals";
+import { industryVisualVariant } from "@/lib/visualVariants";
 
 import { allIndustries } from "@/data/industryData";
-
-const aiRestaurantHero = "/assets/industries/ai-restaurant-hero.png";
-const aiRealEstateHero = "/assets/industries/ai-realestate-hero.png";
-const aiEcommerceHero = "/assets/industries/ai-ecommerce-hero.png";
-const aiHealthcareHero = "/assets/industries/ai-healthcare-hero.png";
-const aiLegalHero = "/assets/industries/ai-legal-hero.png";
-const aiFitnessHero = "/assets/industries/ai-fitness-hero.png";
-const aiTravelHero = "/assets/industries/ai-travel-hero.png";
 
 const IndustriesPage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
-
-  const industryImages = useMemo<Record<string, string>>(
-    () => ({
-      restaurants: aiRestaurantHero,
-      "real-estate": aiRealEstateHero,
-      ecommerce: aiEcommerceHero,
-      healthcare: aiHealthcareHero,
-      legal: aiLegalHero,
-      fitness: aiFitnessHero,
-      travel: aiTravelHero,
-    }),
-    [],
-  );
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -46,40 +26,50 @@ const IndustriesPage = () => {
       {/* Hero */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-secondary/20">
         <div className="container-narrow relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-              <Layers3 className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Industry Solutions</span>
-            </div>
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
+                <Layers3 className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Industry Solutions</span>
+              </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
-              AI Automation Services for Every UAE Industry
-            </h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
+                AI Automation Services for Every UAE Industry
+              </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Six connected services, scoped around how your industry actually operates: AI Systems, Automations, SEO &amp; GEO, Digital Marketing, Web Development, and Desktop Software Development.
-            </p>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                Six connected services, scoped around how your industry actually operates: AI Systems, Automations, SEO &amp; GEO, Digital Marketing, Web Development, and Desktop Software Development.
+              </p>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <Layers className="w-4 h-4 text-primary" />
-                Six connected services
-              </span>
-              <span className="flex items-center gap-2">
-                <Workflow className="w-4 h-4 text-primary" />
-                Built around your workflows
-              </span>
-              <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-primary" />
-                UAE-based team
-              </span>
-            </div>
-          </motion.div>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-muted-foreground">
+                <span className="flex items-center gap-2">
+                  <Layers className="w-4 h-4 text-primary" />
+                  Six connected services
+                </span>
+                <span className="flex items-center gap-2">
+                  <Workflow className="w-4 h-4 text-primary" />
+                  Built around your workflows
+                </span>
+                <span className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-primary" />
+                  UAE-based team
+                </span>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="hidden lg:block"
+            >
+              <IndustryHubVisual />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -111,8 +101,8 @@ const IndustriesPage = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
                 >
                   <div className="relative h-full card-premium overflow-hidden transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[var(--shadow-lift)]">
-                    <div className="relative h-48 overflow-hidden">
-                      <Image src={industryImages[industry.slug] || aiRestaurantHero} alt={`AI and digital services for ${industry.industry} businesses`} width={600} height={400} className="w-full object-cover" />
+                    <div className="relative h-48 overflow-hidden bg-secondary/30 p-3">
+                      <IndustryVisual variant={industryVisualVariant(industry.slug)} />
                       <div className="absolute bottom-3 left-3 flex items-center gap-2">
                         <span className="px-2 py-1 text-xs rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">
                           {industry.tagline}
@@ -146,42 +136,7 @@ const IndustriesPage = () => {
         description="Whatever your industry, we can help with AI Systems, Automations, SEO & GEO, Digital Marketing, Web Development, and Desktop Software Development. Start with the priority that removes the biggest bottleneck, then expand."
       />
 
-      {/* CTA */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-              <Layers className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Ready to scope?</span>
-            </div>
-
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">Tell us where the friction is</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Share the enquiries, processes, or visibility gaps slowing your team down. We&apos;ll review them and come back with a scoped plan across the services that fit.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="btn-primary">
-                  Get in Touch
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-              <Link href="/#contact">
-                <Button variant="outline" size="lg">
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
+      <FinalCTASection />
 
       <Footer />
     </div>

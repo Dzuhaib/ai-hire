@@ -7,6 +7,8 @@ import { getIndustryCityExpandedContent } from "@/data/industryCityContent";
 import type { LocationData } from "@/data/locationData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import { ServiceVisual } from "@/components/visuals/LandingVisuals";
 
 interface IndustryServiceCityPageProps {
   industry: IndustryData;
@@ -26,33 +28,38 @@ const IndustryServiceCityPage = ({ industry, service, city, industryCitySlug }: 
 
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-secondary/20">
         <div className="container-narrow relative z-10">
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Industry + Service + Location</span>
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
+                <Zap className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Industry + Service + Location</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
+                {industry.industry} + {service.title} in {city.city}
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                {service.description}
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
+                {city.heroSubtext}
+              </p>
+              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
+                <Link href="/contact">
+                  <Button size="lg" className="btn-primary group">
+                    Get Started Today
+                    <Zap className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+                <Link href={`/industries/${industry.slug}`}>
+                  <Button variant="outline" size="lg">
+                    All {industry.industry} Services
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
-              {industry.industry} + {service.title} in {city.city}
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              {service.description}
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
-              {city.heroSubtext}
-            </p>
-            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="btn-primary group">
-                  Get Started Today
-                  <Zap className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-              <Link href={`/industries/${industry.slug}`}>
-                <Button variant="outline" size="lg">
-                  All {industry.industry} Services
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
+            <div className="hidden lg:block">
+              <ServiceVisual slug={service.slug} />
             </div>
           </div>
         </div>
@@ -109,21 +116,7 @@ const IndustryServiceCityPage = ({ industry, service, city, industryCitySlug }: 
         </div>
       </section>
 
-      <section className="section-padding bg-muted/30 border-t border-b border-border/50">
-        <div className="container-narrow text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
-            Ready for {service.title} for {industry.industry} in {city.city}?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Tell us about your {city.city.toLowerCase()} business and we will scope the {service.title.toLowerCase()} work that fits.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="btn-primary group">
-              Get in Touch <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <FinalCTASection />
 
       <Footer />
     </div>

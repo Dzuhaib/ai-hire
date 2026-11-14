@@ -4,13 +4,15 @@ export type IndustryVisualVariant =
   | "ecommerce"
   | "realestate"
   | "healthcare"
-  | "fitness";
+  | "fitness"
+  | "travel";
 
 export const industryVisualVariant = (slug?: string): IndustryVisualVariant => {
   switch (slug) {
     case "restaurants":
-    case "travel":
       return "hospitality";
+    case "travel":
+      return "travel";
     case "real-estate":
       return "realestate";
     case "ecommerce":

@@ -5,7 +5,30 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, ShieldCheck } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import {
+  EngagementVisual,
+  ProofVisual,
+  type EngagementVisualVariant,
+} from "@/components/visuals/LandingVisuals";
 import { engagementExamples } from "@/data/caseStudiesData";
+
+const engagementVariant = (slug: string): EngagementVisualVariant => {
+  switch (slug) {
+    case "fashion-retailer-fujairah":
+      return "retail";
+    case "consultancy-abu-dhabi":
+      return "consulting";
+    case "hospitality-group-dubai":
+      return "hospitality";
+    case "clinic-ajman":
+      return "healthcare";
+    case "homeware-brand-sharjah":
+      return "homeware";
+    default:
+      return "advisory";
+  }
+};
 
 const CaseStudiesPage = () => {
   return (
@@ -14,31 +37,41 @@ const CaseStudiesPage = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-secondary/20">
-        <div className="container-narrow relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
-          >
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Example Engagements</p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
-              How We Approach AI, Automation &amp; Digital Projects
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              These examples show the types of businesses we work with and how we structure engagements.
-              They are illustrative: client names and specific performance figures are withheld.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary text-sm">
-                Discuss Your Project
-                <ArrowRight className="w-4 h-4 ml-2 inline-block" />
-              </Link>
-              <Link href="/services" className="btn-secondary text-sm">
-                Explore Our Services
-              </Link>
-            </div>
-          </motion.div>
+        <div className="container-narrow relative z-10">
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Example Engagements</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
+                How We Approach AI, Automation &amp; Digital Projects
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
+                These examples show the types of businesses we work with and how we structure engagements.
+                They are illustrative: client names and specific performance figures are withheld.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <Link href="/contact" className="btn-primary text-sm">
+                  Discuss Your Project
+                  <ArrowRight className="w-4 h-4 ml-2 inline-block" />
+                </Link>
+                <Link href="/services" className="btn-secondary text-sm">
+                  Explore Our Services
+                </Link>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="hidden lg:block"
+            >
+              <ProofVisual />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -70,6 +103,9 @@ const CaseStudiesPage = () => {
                 transition={{ delay: idx * 0.08 }}
                 className="card-premium p-6 flex flex-col scroll-mt-28"
               >
+                <div className="-mx-6 -mt-6 mb-5 rounded-t-2xl border-b border-border bg-secondary/30 p-3">
+                  <EngagementVisual variant={engagementVariant(example.slug)} />
+                </div>
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
                     {example.industry}
@@ -127,26 +163,10 @@ const CaseStudiesPage = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 text-center bg-secondary/10 p-8 rounded-xl border border-border/50 max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4">
-              Have a Similar Challenge?
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Tell us what is slowing your business down. We will recommend the right mix of AI, automation,
-              search, marketing, and software, and give you a clear next step.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary inline-block text-center">
-                Book a Free Consultation
-              </Link>
-              <Link href="/services" className="btn-outline inline-block text-center">
-                View All Services
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
+
+      <FinalCTASection />
 
       <Footer />
     </div>

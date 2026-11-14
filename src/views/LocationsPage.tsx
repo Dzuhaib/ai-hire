@@ -1,30 +1,16 @@
 "use client";
 
-import Image from 'next/image';
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight, Sparkles, Users, Clock, Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MapPin, ArrowRight, Users, Clock, Shield } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import { LocationHubVisual, LocationVisual } from "@/components/visuals/LandingVisuals";
 
 import { uaeLocations } from "@/data/locationData";
 import { LocationCardsSkeleton } from "@/components/skeletons/SectionSkeletons";
-
-// Shared hero image for UAE city cards until city-specific imagery is available
-const cityHeroImage = "/assets/locations/ai-support.png";
-
-const cityImages: Record<string, string> = {
-  dubai: cityHeroImage,
-  "abu-dhabi": cityHeroImage,
-  sharjah: cityHeroImage,
-  ajman: cityHeroImage,
-  "ras-al-khaimah": cityHeroImage,
-  fujairah: cityHeroImage,
-  "umm-al-quwain": cityHeroImage,
-  "al-ain": cityHeroImage,
-};
 
 const LocationsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,41 +27,51 @@ const LocationsPage = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-secondary/20">
         <div className="container-narrow relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">UAE-Wide Coverage</span>
-            </div>
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">UAE-Wide Coverage</span>
+              </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
-              AI Automation Services Across the UAE
-            </h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
+                AI Automation Services Across the UAE
+              </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              From Dubai to Abu Dhabi, get one partner for AI systems, automations, SEO and GEO, digital
-              marketing, web development, and desktop software.
-            </p>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                From Dubai to Abu Dhabi, get one partner for AI systems, automations, SEO and GEO, digital
+                marketing, web development, and desktop software.
+              </p>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-primary" />
-                UAE-wide coverage
-              </span>
-              <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
-                Remote delivery
-              </span>
-              <span className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-primary" />
-                UAE data protection
-              </span>
-            </div>
-          </motion.div>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-muted-foreground">
+                <span className="flex items-center gap-2">
+                  <Users className="w-4 h-4 text-primary" />
+                  UAE-wide coverage
+                </span>
+                <span className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-primary" />
+                  Remote delivery
+                </span>
+                <span className="flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-primary" />
+                  UAE data protection
+                </span>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="hidden lg:block"
+            >
+              <LocationHubVisual />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -112,14 +108,9 @@ const LocationsPage = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
                 >
                   <div className="relative h-full card-premium overflow-hidden transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-xl group-hover:shadow-primary/10">
-                    {/* Image */}
-                    <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={cityImages[location.slug] || cityHeroImage}
-                        alt={`Digital services for businesses in ${location.city}`}
-                        fill
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      />
+                    {/* Visual */}
+                    <div className="relative h-48 overflow-hidden bg-secondary/30 p-3">
+                      <LocationVisual city={location.city} />
                       <div className="absolute bottom-3 left-3 flex items-center gap-2">
                         <span className="px-2 py-1 text-xs rounded-md bg-card/90 text-foreground/80 font-medium border border-border/60">
                           {location.region}
@@ -153,50 +144,7 @@ const LocationsPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Six connected services</span>
-            </div>
-
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-6">
-              Don&apos;t See Your City?
-            </h2>
-
-            <p className="text-lg text-muted-foreground mb-8">
-              We work with businesses across the UAE. Whether you are in a major city or a smaller emirate,
-              we can scope the right mix of AI, automation, search, marketing, and software for your goals.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="btn-primary">
-                  Book a Free Consultation
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button variant="outline" size="lg">
-                  Explore Services
-                </Button>
-              </Link>
-            </div>
-
-            <p className="text-sm text-muted-foreground mt-6">
-              Fixed written scope &middot; Remote delivery &middot; Optional ongoing support
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
+      <FinalCTASection />
 
       <Footer />
     </div>

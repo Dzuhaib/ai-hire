@@ -7,6 +7,7 @@ import { Calendar, Clock, ArrowLeft, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FinalCTASection } from "@/components/FinalCTASection";
 
 import { BlogInlineImage } from "@/components/BlogInlineImage";
 import {
@@ -179,25 +180,7 @@ const WhatsAppChatbotBlog = () => {
             </Accordion>
           </motion.section>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-16 p-8 md:p-12 rounded-2xl bg-secondary/40 border border-border text-center"
-          >
-            <h3 className="text-2xl font-serif font-semibold mb-4">
-              Ready to Get Your WhatsApp Chatbot?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              AIVized manages everything: connection, training, and monitoring. No technical skills required.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-            >
-              Get in Touch
-            </Link>
-          </motion.div>
+          <FinalCTASection />
           <AuthorBio />
         </article>
       </main>
