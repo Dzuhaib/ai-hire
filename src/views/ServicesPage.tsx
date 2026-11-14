@@ -30,8 +30,8 @@ const ServicesPage = () => {
                 <span className="text-sm font-medium text-primary">Our Services</span>
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight mb-6">
-                AI, Automation &amp; Digital Growth{" "}
-                <span className="text-gradient">Under One Roof</span>
+                AI, Automation &amp; Digital Growth Under One Roof for{" "}
+                <span className="text-gradient">UAE Businesses</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
                 Six connected services for businesses that want to grow without adding more manual work.

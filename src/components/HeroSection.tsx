@@ -42,7 +42,8 @@ export const HeroSection = () => {
               transition={{ duration: 0.6 }}
               className="font-serif text-4xl sm:text-5xl xl:text-[3.9rem] leading-[1.02] tracking-[-0.03em] max-w-[15ch] text-balance"
             >
-              We Build <span className="text-primary">AI Systems</span> That Grow Your Business
+              AI Systems, Automation &amp; Digital Growth for{" "}
+              <span className="text-primary">UAE Businesses</span>
             </motion.h1>
 
             <motion.p
